@@ -1,0 +1,28 @@
+
+.autoSearchComplete_search_content {
+	float:left;	
+}
+.autoSearchComplete_search_cancel {
+    float: left;
+    cursor: pointer;
+    cursor: hand;
+    width: 16px;
+    height: 16px;
+    background-image: url('icon-close_wev8.gif');
+    display: none;
+}
+.autoSearchComplete_search {
+    float: right;
+    width: 16px;
+    height: 16px;
+    background-image: url('icon-search_wev8.gif');
+	cursor:hand;
+}
+.autoSearchComplete_search_content input {
+	font-size:11px;	
+	padding:2px;
+	
+}
+
+
+

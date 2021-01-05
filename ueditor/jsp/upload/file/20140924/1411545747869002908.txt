@@ -1,0 +1,16 @@
+
+VotingQuestion 问卷问题新增字段
+
+//问题类型
+questiontype 0 单选 1组合选 2 说明
+
+//所属页码
+pagenum
+
+
+
+VotingOption  问卷选项新增字段
+roworcolumn   0 行标签, 1 列标签
+
+
+

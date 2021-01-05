@@ -1,0 +1,11 @@
+<requestinfo>
+	<id>$id$</id>
+	<input1>$field001$</input1>
+	<input2>$field002$</input2>
+	$grouphead1$
+	<detail>
+		<dinput1>$field003$</dinput1>
+		<dinput2>$field004$</dinput2>
+	</detail>
+	$grouptail1$
+</requestinfo>

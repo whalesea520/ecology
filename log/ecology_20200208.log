@@ -1,0 +1,401 @@
+2020-02-08 13:59:50,784 ERROR weaver.general.BaseBean  - ------是否开启字符转码----0---是否开启sql参数化解析-----0----nativepool----ecology
+2020-02-08 13:59:51,528 ERROR weaver.general.BaseBean  - ExecuteSqlLogger start log write to file thread success...
+2020-02-08 13:59:51,680 INFO  weaver.common.SystemInitialized  - System Initialized OK.
+2020-02-08 13:59:51,892 INFO  weaver.general.InitServer  - System Init Message:mainControlIp= localIp:[192.168.1.109, 192.168.25.1, 192.168.149.1]
+2020-02-08 13:59:51,892 INFO  weaver.general.InitServer  - init ioc container...
+2020-02-08 13:59:53,630 ERROR com.weaver.upgrade.FunctionUpgrade  - OS.name+++++++++++++++++++++:Windows 10
+2020-02-08 13:59:53,630 ERROR com.weaver.upgrade.FunctionUpgrade  - srcfilePath+++++++++++++++++++++:D:\WEAVER\ecology\upgrade\src
+2020-02-08 13:59:53,642 ERROR com.weaver.upgrade.FunctionUpgrade  - 本地Ip++++++++++：192.168.25.1
+2020-02-08 13:59:53,642 ERROR com.weaver.upgrade.FunctionUpgrade  - 主节点MainControlIP++++++++++：
+2020-02-08 13:59:53,926 INFO  weaver.general.InitServer  - end ioc container init...
+2020-02-08 13:59:53,926 INFO  weaver.general.InitServer  - SystemUpgrade Start.....
+2020-02-08 13:59:53,958 INFO  weaver.general.InitServer  - SystemUpgrade End.....
+2020-02-08 13:59:53,958 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread Start.....
+2020-02-08 13:59:54,002 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread End.....
+2020-02-08 13:59:54,040 ERROR weaver.system.HtmlFieldToClob  - isrun:1
+2020-02-08 13:59:54,040 ERROR weaver.system.HtmlFieldToClob  - isrun1:1
+2020-02-08 13:59:54,070 ERROR weaver.conn.RecordSet  - WFVersionAdd insert Waiting...
+2020-02-08 13:59:54,741 ERROR weaver.general.BaseBean  - 启动日志压缩线程....
+2020-02-08 13:59:56,070 ERROR weaver.conn.RecordSet  - WFVersionAdd insert Waiting...
+2020-02-08 13:59:56,320 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息...
+2020-02-08 13:59:56,555 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息成功...
+2020-02-08 13:59:58,072 ERROR weaver.conn.RecordSet  - WFVersionAdd insert Waiting...
+2020-02-08 13:59:59,837 INFO  weaver.general.InitServer  - end.....
+2020-02-08 14:00:00,119 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun:1
+2020-02-08 14:00:00,119 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun1:1
+2020-02-08 14:00:03,441 ERROR weaver.page.PageManager  - 清空二维码扫描缓存记录表
+2020-02-08 14:00:03,707 ERROR weaver.cpt.util.CptInitManager  - weaver.cpt.util.CptInitManager is running start...
+2020-02-08 14:00:03,756 ERROR weaver.formmode.cuspage.cpt.CptGenmenu4mode  - weaver.formmode.cuspage.cpt.CptGenmenu4mode is running start...
+2020-02-08 14:00:03,835 ERROR weaver.formmode.cuspage.cpt.CptGenmenu4mode  - weaver.formmode.cuspage.cpt.CptGenmenu4mode is running end...
+2020-02-08 14:00:04,116 ERROR weaver.cpt.util.CptInitManager  - weaver.cpt.util.CptInitManager is running end...
+2020-02-08 14:00:06,203 ERROR org.directwebremoting.util.LogErrorHandler  - Line=52 Element type "filter" must be declared.
+2020-02-08 14:00:06,203 ERROR org.directwebremoting.util.LogErrorHandler  - Line=53 The content of element type "allow" must match "(create|convert)*".
+2020-02-08 14:00:06,990 ERROR weaver.conn.RecordSet  - select t1.* from  uf_zzzxx t1 where t1.formmodeid=50  and ( DATEDIFF(ss,t1.jzrq+' '+'23:55:50',getDate())>=(-1*60*60*24*30) and DATEDIFF(ss, CONVERT(varchar(10), GETDATE(), 120) +' '+'00:00:00',t1.jzrq+' '+'23:55:50')>=(-1*60*60*24*30) and t1.jzrq is not null and t1.jzrq<> '' )  and not exists(select 1 from mode_reminddata_all t2 where t2.remindjobid=1 and t2.billid=t1.id and lastdate= CONVERT(varchar(10), GETDATE(), 120)  and isnull(isRemindWorkflow,0)=1 )
+2020-02-08 14:00:07,005 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: datediff 函数导致溢出。用于分隔两个日期/时间实例的日期部分的数字太大。请尝试使用日期部分精度较低的 datediff。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:196)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet$FetchBuffer.nextRow(SQLServerResultSet.java:4700)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.fetchBufferNext(SQLServerResultSet.java:1683)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.next(SQLServerResultSet.java:956)
+	at weaver.conn.RecordSet.parseResultSet(RecordSet.java:1656)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:916)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.formmode.task.action.TaskAction.doRemind(TaskAction.java:247)
+	at weaver.formmode.task.action.WorkflowMessageTaskAction.doIt(WorkflowMessageTaskAction.java:33)
+	at weaver.formmode.task.action.TaskAction.execute(TaskAction.java:34)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:529)
+2020-02-08 14:00:08,489 ERROR weaver.system.MonitorThreadManager  - >>>>MonitorThreadManager>>单独的预警关闭控制：isThreadWarningStart(zt)=0<<<<
+2020-02-08 14:00:09,431 ERROR weaver.general.BaseBean  - 初始化微信推送扫描线程成功，扫描间隔1分钟---------
+2020-02-08 14:00:14,331 ERROR weaver.general.BaseBean  - 销毁微信推送扫描定时器完成---------
+2020-02-08 14:00:14,378 ERROR weaver.general.BaseBean  - 初始化云桥httpclient连接池成功，DEFAULT_MAX_PER_ROUTE：500---MAX_TOTAL_CONNECTIONS：500---------
+2020-02-08 14:02:30,040 ERROR weaver.general.BaseBean  - ------是否开启字符转码----0---是否开启sql参数化解析-----0----nativepool----ecology
+2020-02-08 14:02:30,505 ERROR weaver.general.BaseBean  - ExecuteSqlLogger start log write to file thread success...
+2020-02-08 14:02:30,561 INFO  weaver.common.SystemInitialized  - System Initialized OK.
+2020-02-08 14:02:30,937 INFO  weaver.general.InitServer  - System Init Message:mainControlIp= localIp:[192.168.1.109, 192.168.25.1, 192.168.149.1]
+2020-02-08 14:02:30,938 INFO  weaver.general.InitServer  - init ioc container...
+2020-02-08 14:02:31,876 ERROR com.weaver.upgrade.FunctionUpgrade  - OS.name+++++++++++++++++++++:Windows 10
+2020-02-08 14:02:31,877 ERROR com.weaver.upgrade.FunctionUpgrade  - srcfilePath+++++++++++++++++++++:D:\WEAVER\ecology\upgrade\src
+2020-02-08 14:02:31,878 ERROR com.weaver.upgrade.FunctionUpgrade  - 本地Ip++++++++++：192.168.25.1
+2020-02-08 14:02:31,878 ERROR com.weaver.upgrade.FunctionUpgrade  - 主节点MainControlIP++++++++++：
+2020-02-08 14:02:31,973 INFO  weaver.general.InitServer  - end ioc container init...
+2020-02-08 14:02:31,974 INFO  weaver.general.InitServer  - SystemUpgrade Start.....
+2020-02-08 14:02:31,985 INFO  weaver.general.InitServer  - SystemUpgrade End.....
+2020-02-08 14:02:31,985 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread Start.....
+2020-02-08 14:02:31,992 ERROR weaver.general.BaseBean  - 启动日志压缩线程....
+2020-02-08 14:02:31,994 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread End.....
+2020-02-08 14:02:31,998 ERROR weaver.system.HtmlFieldToClob  - isrun:1
+2020-02-08 14:02:32,000 ERROR weaver.system.HtmlFieldToClob  - isrun1:1
+2020-02-08 14:02:32,002 ERROR weaver.conn.RecordSet  - WFVersionAdd insert Waiting...
+2020-02-08 14:02:32,632 INFO  weaver.general.InitServer  - end.....
+2020-02-08 14:02:32,832 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息...
+2020-02-08 14:02:32,859 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息成功...
+2020-02-08 14:02:33,208 ERROR weaver.page.PageManager  - 清空二维码扫描缓存记录表
+2020-02-08 14:02:33,239 ERROR weaver.cpt.util.CptInitManager  - weaver.cpt.util.CptInitManager is running start...
+2020-02-08 14:02:33,240 ERROR weaver.formmode.cuspage.cpt.CptGenmenu4mode  - weaver.formmode.cuspage.cpt.CptGenmenu4mode is running start...
+2020-02-08 14:02:33,248 ERROR weaver.formmode.cuspage.cpt.CptGenmenu4mode  - weaver.formmode.cuspage.cpt.CptGenmenu4mode is running end...
+2020-02-08 14:02:33,293 ERROR weaver.cpt.util.CptInitManager  - weaver.cpt.util.CptInitManager is running end...
+2020-02-08 14:02:34,015 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun:1
+2020-02-08 14:02:34,016 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun1:1
+2020-02-08 14:02:34,510 ERROR org.directwebremoting.util.LogErrorHandler  - Line=52 Element type "filter" must be declared.
+2020-02-08 14:02:34,512 ERROR org.directwebremoting.util.LogErrorHandler  - Line=53 The content of element type "allow" must match "(create|convert)*".
+2020-02-08 14:02:35,907 ERROR weaver.conn.RecordSet  - select t1.* from  uf_zzzxx t1 where t1.formmodeid=50  and ( DATEDIFF(ss,t1.jzrq+' '+'23:55:50',getDate())>=(-1*60*60*24*30) and DATEDIFF(ss, CONVERT(varchar(10), GETDATE(), 120) +' '+'00:00:00',t1.jzrq+' '+'23:55:50')>=(-1*60*60*24*30) and t1.jzrq is not null and t1.jzrq<> '' )  and not exists(select 1 from mode_reminddata_all t2 where t2.remindjobid=1 and t2.billid=t1.id and lastdate= CONVERT(varchar(10), GETDATE(), 120)  and isnull(isRemindWorkflow,0)=1 )
+2020-02-08 14:02:35,908 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: datediff 函数导致溢出。用于分隔两个日期/时间实例的日期部分的数字太大。请尝试使用日期部分精度较低的 datediff。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:196)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet$FetchBuffer.nextRow(SQLServerResultSet.java:4700)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.fetchBufferNext(SQLServerResultSet.java:1683)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.next(SQLServerResultSet.java:956)
+	at weaver.conn.RecordSet.parseResultSet(RecordSet.java:1656)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:916)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.formmode.task.action.TaskAction.doRemind(TaskAction.java:247)
+	at weaver.formmode.task.action.WorkflowMessageTaskAction.doIt(WorkflowMessageTaskAction.java:33)
+	at weaver.formmode.task.action.TaskAction.execute(TaskAction.java:34)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:529)
+2020-02-08 14:02:36,865 ERROR weaver.system.MonitorThreadManager  - >>>>MonitorThreadManager>>单独的预警关闭控制：isThreadWarningStart(zt)=0<<<<
+2020-02-08 14:02:36,995 ERROR weaver.general.BaseBean  - 初始化微信推送扫描线程成功，扫描间隔1分钟---------
+2020-02-08 14:05:00,123 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20200208140500&sign=e8f47aa878f83a5a8a5ce929dee8f6f2
+2020-02-08 14:05:04,625 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2020-02-08 14:05:04,625 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2020-02-08 14:05:04,625 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20200208140500&sign=e8f47aa878f83a5a8a5ce929dee8f6f2
+2020-02-08 14:05:04,693 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2020-02-08 14:05:04,694 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2020-02-08 14:05:04,694 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20200208140500&sign=e8f47aa878f83a5a8a5ce929dee8f6f2
+2020-02-08 14:05:04,773 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2020-02-08 14:05:04,773 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2020-02-08 14:05:04,773 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20200208140500&sign=e8f47aa878f83a5a8a5ce929dee8f6f2
+2020-02-08 14:05:04,845 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-02-08 14:05:04,845 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2020-02-08 14:05:04,846 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20200208140500&sign=e8f47aa878f83a5a8a5ce929dee8f6f2
+2020-02-08 14:05:04,930 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2020-02-08 14:05:04,930 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2020-02-08 14:05:04,930 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20200208140500&sign=e8f47aa878f83a5a8a5ce929dee8f6f2
+2020-02-08 14:05:04,995 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-02-08 14:10:00,017 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20200208141000&sign=b95e993c5f314e66831bf5579581665d
+2020-02-08 14:10:00,093 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2020-02-08 14:10:00,093 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2020-02-08 14:10:00,094 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20200208141000&sign=b95e993c5f314e66831bf5579581665d
+2020-02-08 14:10:00,163 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2020-02-08 14:10:00,164 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2020-02-08 14:10:00,164 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20200208141000&sign=b95e993c5f314e66831bf5579581665d
+2020-02-08 14:10:00,240 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2020-02-08 14:10:00,240 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2020-02-08 14:10:00,240 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20200208141000&sign=b95e993c5f314e66831bf5579581665d
+2020-02-08 14:10:00,310 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-02-08 14:10:00,311 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2020-02-08 14:10:00,311 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20200208141000&sign=b95e993c5f314e66831bf5579581665d
+2020-02-08 14:10:00,383 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2020-02-08 14:10:00,384 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2020-02-08 14:10:00,384 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20200208141000&sign=b95e993c5f314e66831bf5579581665d
+2020-02-08 14:10:00,456 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-02-08 14:15:00,020 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20200208141500&sign=2c21dcce0de50bc877c5f01c005ad638
+2020-02-08 14:15:00,104 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2020-02-08 14:15:00,104 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2020-02-08 14:15:00,105 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20200208141500&sign=2c21dcce0de50bc877c5f01c005ad638
+2020-02-08 14:15:00,173 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2020-02-08 14:15:00,173 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2020-02-08 14:15:00,173 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20200208141500&sign=2c21dcce0de50bc877c5f01c005ad638
+2020-02-08 14:15:00,247 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2020-02-08 14:15:00,247 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2020-02-08 14:15:00,248 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20200208141500&sign=2c21dcce0de50bc877c5f01c005ad638
+2020-02-08 14:15:00,318 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-02-08 14:15:00,318 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2020-02-08 14:15:00,318 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20200208141500&sign=2c21dcce0de50bc877c5f01c005ad638
+2020-02-08 14:15:00,389 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2020-02-08 14:15:00,389 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2020-02-08 14:15:00,389 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20200208141500&sign=2c21dcce0de50bc877c5f01c005ad638
+2020-02-08 14:15:00,465 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-02-08 14:18:58,980 ERROR weaver.systeminfo.menuconfig.MenuUtil  - 菜单查询sql:select * from (select isnull(c.isopen,m.infoid+(324855)+1) as isopen,m.* from ( ( SELECT t1.id as infoId, t1.labelId , t1.isCustom, t1.refersubid,t1.iconUrl,t1.TopIconUrl,t1.linkAddress ,t1.baseTarget,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,case when t1.isCustom=2 then t1.topmenuname else t2.topmenuname end topmenuname,case when t1.isCustom=2 then t1.topname_e else t2.topname_e end topname_e,case when t1.isCustom=2 then t1.topname_t else t2.topname_t end topname_t ,allt.c as  allParent,curt.c as curParent  FROM leftmenuinfo t1  left join (select count(0) c,parentId from leftmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from leftmenuinfo it1 inner join leftmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1 group by it1.parentId)curt on t1.id=curt.parentId , leftmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=1 and t2.resourceid =1) or (t2.resourcetype=3 and t2.resourceid=1)) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id in (SELECT infoid FROM menushareinfo WHERE (  CASE WHEN (sharetype = 1 AND sharevalue in (0,-2)  and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 3 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 5 AND sharevalue = 1) THEN  1 ELSE 0 END   = 1   OR  CASE WHEN (sharetype = 6 AND sharevalue in (0,-4) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR CASE WHEN (sharetype = 7 AND sharevalue = 0  and   ( case when jobtitlelevel=1  Then 1 else 0 end = 1     or       case when (jobtitlelevel=2 and ( '%,'+jobtitlesharevalue+',%' like '%,0,%'  or  '%,'+jobtitlesharevalue+',%' like '%,-2,%' ) ) Then 1 else 0 end = 1        or       case when (jobtitlelevel=3 and ( '%,'+jobtitlesharevalue+',%' like '%,0,%'  or  '%,'+jobtitlesharevalue+',%' like '%,-4,%' ) ) Then 1 else 0 end = 1    )) THEN  1 ELSE 0 END   = 1   OR    CASE WHEN (sharetype = 2 AND sharevalue IN ( select roleid  from hrmrolemembers role WHERE rolelevel <=role.rolelevel AND role.resourceid =1 ) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1  )  and resourcetype=1 and resourceid =1 and menutype='left' ) and (t1.parentid=0 or  t1.parentid is null or t1.parentid='')  ) union ( SELECT t1.id as infoId, t1.labelId , t1.isCustom, t1.refersubid,t1.iconUrl,t1.TopIconUrl,t1.linkAddress ,t1.baseTarget,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,case when t1.isCustom=2 then t1.topmenuname else t2.topmenuname end topmenuname,case when t1.isCustom=2 then t1.topname_e else t2.topname_e end topname_e,case when t1.isCustom=2 then t1.topname_t else t2.topname_t end topname_t ,allt.c as  allParent,curt.c as curParent  FROM leftmenuinfo t1  left join (select count(0) c,parentId from leftmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from leftmenuinfo it1 inner join leftmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1 group by it1.parentId)curt on t1.id=curt.parentId , leftmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=1 and t2.resourceid =1) or (t2.resourcetype=3 and t2.resourceid=1)) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id not in (SELECT infoid FROM menushareinfo where menutype='left'  and resourcetype=1 and resourceid =1 ) and (t1.parentid=0 or  t1.parentid is null or t1.parentid='')  ) ) m left join menucontrollist c on m.infoid+324789=c.menuid and c.type='left') a where a.isopen=a.infoid+(324855)+1 ORDER BY ISNULL(a.parentId,0),a.viewIndex,a.infoId
+2020-02-08 14:19:02,364 ERROR weaver.systeminfo.menuconfig.MenuUtil  - 菜单查询sql:select * from (select isnull(c.isopen,m.infoid+(324855)+1) as isopen,m.* from ( ( SELECT t1.id as infoId, t1.labelId , t1.isCustom, t1.refersubid,t1.iconUrl,t1.TopIconUrl,t1.linkAddress ,t1.baseTarget,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,case when t1.isCustom=2 then t1.topmenuname else t2.topmenuname end topmenuname,case when t1.isCustom=2 then t1.topname_e else t2.topname_e end topname_e,case when t1.isCustom=2 then t1.topname_t else t2.topname_t end topname_t ,allt.c as  allParent,curt.c as curParent  FROM leftmenuinfo t1  left join (select count(0) c,parentId from leftmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from leftmenuinfo it1 inner join leftmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1 group by it1.parentId)curt on t1.id=curt.parentId , leftmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=1 and t2.resourceid =1) or (t2.resourcetype=3 and t2.resourceid=1)) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id in (SELECT infoid FROM menushareinfo WHERE (  CASE WHEN (sharetype = 1 AND sharevalue in (0,-2)  and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 3 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 5 AND sharevalue = 1) THEN  1 ELSE 0 END   = 1   OR  CASE WHEN (sharetype = 6 AND sharevalue in (0,-4) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR CASE WHEN (sharetype = 7 AND sharevalue = 0  and   ( case when jobtitlelevel=1  Then 1 else 0 end = 1     or       case when (jobtitlelevel=2 and ( '%,'+jobtitlesharevalue+',%' like '%,0,%'  or  '%,'+jobtitlesharevalue+',%' like '%,-2,%' ) ) Then 1 else 0 end = 1        or       case when (jobtitlelevel=3 and ( '%,'+jobtitlesharevalue+',%' like '%,0,%'  or  '%,'+jobtitlesharevalue+',%' like '%,-4,%' ) ) Then 1 else 0 end = 1    )) THEN  1 ELSE 0 END   = 1   OR    CASE WHEN (sharetype = 2 AND sharevalue IN ( select roleid  from hrmrolemembers role WHERE rolelevel <=role.rolelevel AND role.resourceid =1 ) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1  )  and resourcetype=1 and resourceid =1 and menutype='left' )  ) union ( SELECT t1.id as infoId, t1.labelId , t1.isCustom, t1.refersubid,t1.iconUrl,t1.TopIconUrl,t1.linkAddress ,t1.baseTarget,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,case when t1.isCustom=2 then t1.topmenuname else t2.topmenuname end topmenuname,case when t1.isCustom=2 then t1.topname_e else t2.topname_e end topname_e,case when t1.isCustom=2 then t1.topname_t else t2.topname_t end topname_t ,allt.c as  allParent,curt.c as curParent  FROM leftmenuinfo t1  left join (select count(0) c,parentId from leftmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from leftmenuinfo it1 inner join leftmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1 group by it1.parentId)curt on t1.id=curt.parentId , leftmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=1 and t2.resourceid =1) or (t2.resourcetype=3 and t2.resourceid=1)) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id not in (SELECT infoid FROM menushareinfo where menutype='left'  and resourcetype=1 and resourceid =1 )  ) ) m left join menucontrollist c on m.infoid+324789=c.menuid and c.type='left') a where a.isopen=a.infoid+(324855)+1 ORDER BY ISNULL(a.parentId,0),a.viewIndex,a.infoId
+2020-02-08 14:20:00,021 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20200208142000&sign=9db4f329d137b71d55ad87264fd27aa9
+2020-02-08 14:20:01,028 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2020-02-08 14:20:01,029 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2020-02-08 14:20:01,029 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20200208142000&sign=9db4f329d137b71d55ad87264fd27aa9
+2020-02-08 14:20:01,097 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2020-02-08 14:20:01,097 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2020-02-08 14:20:01,097 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20200208142000&sign=9db4f329d137b71d55ad87264fd27aa9
+2020-02-08 14:20:01,189 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2020-02-08 14:20:01,189 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2020-02-08 14:20:01,189 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20200208142000&sign=9db4f329d137b71d55ad87264fd27aa9
+2020-02-08 14:20:01,258 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-02-08 14:20:01,258 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2020-02-08 14:20:01,258 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20200208142000&sign=9db4f329d137b71d55ad87264fd27aa9
+2020-02-08 14:20:01,321 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2020-02-08 14:20:01,321 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2020-02-08 14:20:01,321 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20200208142000&sign=9db4f329d137b71d55ad87264fd27aa9
+2020-02-08 14:20:01,390 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-02-08 14:20:16,226 ERROR weaver.mobile.plugin.ecology.service.PushNotificationService  - 消息推送失败!
+java.lang.IllegalStateException: unsupported protocol: '114.55.246.39'
+	at org.apache.commons.httpclient.protocol.Protocol.lazyRegisterProtocol(Protocol.java:149)
+	at org.apache.commons.httpclient.protocol.Protocol.getProtocol(Protocol.java:117)
+	at org.apache.commons.httpclient.HttpHost.<init>(HttpHost.java:107)
+	at org.apache.commons.httpclient.HttpMethodBase.setURI(HttpMethodBase.java:280)
+	at org.apache.commons.httpclient.HttpMethodBase.<init>(HttpMethodBase.java:220)
+	at org.apache.commons.httpclient.methods.ExpectContinueMethod.<init>(ExpectContinueMethod.java:93)
+	at org.apache.commons.httpclient.methods.EntityEnclosingMethod.<init>(EntityEnclosingMethod.java:119)
+	at org.apache.commons.httpclient.methods.PostMethod.<init>(PostMethod.java:106)
+	at weaver.mobile.plugin.ecology.service.PushNotificationService.pushByUserid(PushNotificationService.java:193)
+	at weaver.mobile.webservices.workflow.soa.RequestPreProcessing.preprocessingStatus(RequestPreProcessing.java:197)
+	at weaver.mobile.webservices.workflow.soa.RequestPreProcessing.run(RequestPreProcessing.java:101)
+	at java.lang.Thread.run(Thread.java:748)
+2020-02-08 14:20:27,968 ERROR com.cloudstore.api.dao.Dao_OrgImpl  - in new selecthave
+2020-02-08 14:20:33,878 ERROR weaver.conn.RecordSet  - WorkflowViewSignMore.jsp  workflowId=250,log_nodeid=1904
+2020-02-08 14:20:33,879 INFO  weaver.odoc.workflow.workflow.utils.FormSignatureConfigUtil  - getFormSignatureConfig() workflowId=250,nodeId=1904,userId=1,language=7
+2020-02-08 14:20:34,188 ERROR weaver.conn.RecordSet  - WorkflowSignInput.jsp requestId=38150,workflowId=253,nodeId=1934
+2020-02-08 14:20:34,190 INFO  weaver.odoc.workflow.workflow.utils.FormSignatureConfigUtil  - getFormSignatureConfig() workflowId=253,nodeId=1934,userId=1,language=7
+2020-02-08 14:20:34,277 ERROR weaver.conn.RecordSet  - WorkflowViewSignMore.jsp  workflowId=250,log_nodeid=1902
+2020-02-08 14:20:34,277 INFO  weaver.odoc.workflow.workflow.utils.FormSignatureConfigUtil  - getFormSignatureConfig() workflowId=250,nodeId=1902,userId=1,language=7
+2020-02-08 14:20:34,411 ERROR weaver.conn.RecordSet  - WorkflowViewSignMore.jsp  workflowId=250,log_nodeid=2001
+2020-02-08 14:20:34,411 INFO  weaver.odoc.workflow.workflow.utils.FormSignatureConfigUtil  - getFormSignatureConfig() workflowId=250,nodeId=2001,userId=1,language=7
+2020-02-08 14:20:34,463 ERROR weaver.conn.RecordSet  - WorkflowViewSignMore.jsp  workflowId=250,log_nodeid=2034
+2020-02-08 14:20:34,463 INFO  weaver.odoc.workflow.workflow.utils.FormSignatureConfigUtil  - getFormSignatureConfig() workflowId=250,nodeId=2034,userId=1,language=7
+2020-02-08 14:20:34,499 ERROR weaver.conn.RecordSet  - WorkflowViewSignMore.jsp  workflowId=250,log_nodeid=2034
+2020-02-08 14:20:34,501 INFO  weaver.odoc.workflow.workflow.utils.FormSignatureConfigUtil  - getFormSignatureConfig() workflowId=250,nodeId=2034,userId=1,language=7
+2020-02-08 14:20:34,522 ERROR weaver.conn.RecordSet  - WorkflowViewSignMore.jsp  workflowId=250,log_nodeid=1901
+2020-02-08 14:20:34,522 INFO  weaver.odoc.workflow.workflow.utils.FormSignatureConfigUtil  - getFormSignatureConfig() workflowId=250,nodeId=1901,userId=1,language=7
+2020-02-08 14:20:34,558 ERROR weaver.conn.RecordSet  - WorkflowViewSignMore.jsp  workflowId=250,log_nodeid=2269
+2020-02-08 14:20:34,558 INFO  weaver.odoc.workflow.workflow.utils.FormSignatureConfigUtil  - getFormSignatureConfig() workflowId=250,nodeId=2269,userId=1,language=7
+2020-02-08 14:20:34,581 ERROR weaver.conn.RecordSet  - WorkflowViewSignMore.jsp  workflowId=250,log_nodeid=2269
+2020-02-08 14:20:34,581 INFO  weaver.odoc.workflow.workflow.utils.FormSignatureConfigUtil  - getFormSignatureConfig() workflowId=250,nodeId=2269,userId=1,language=7
+2020-02-08 14:20:34,639 ERROR weaver.conn.RecordSet  - WorkflowViewSignMore.jsp  workflowId=250,log_nodeid=2030
+2020-02-08 14:20:34,639 INFO  weaver.odoc.workflow.workflow.utils.FormSignatureConfigUtil  - getFormSignatureConfig() workflowId=250,nodeId=2030,userId=1,language=7
+2020-02-08 14:20:34,681 ERROR weaver.conn.RecordSet  - WorkflowViewSignMore.jsp  workflowId=250,log_nodeid=1898
+2020-02-08 14:20:34,681 INFO  weaver.odoc.workflow.workflow.utils.FormSignatureConfigUtil  - getFormSignatureConfig() workflowId=250,nodeId=1898,userId=1,language=7
+2020-02-08 14:20:36,077 ERROR com.cloudstore.api.dao.Dao_OrgImpl  - in new selecthave
+2020-02-08 14:20:39,503 ERROR com.cloudstore.app.no0000012.dao.Dao_WfDetailImplSqlserver  - getlist sql is :select * from (select d.hfkh,d.fwbdl,d.jgd,d.ys2,d.ccz,d.cc,d.ccc,d.mc,d.pfj,d.lsj,d.ccj,d.scsj,d.lysl,d.fwbcb,d.fwbzcbje,d.cksl,d.ckje,d.ssrq,d.fwbbm,d.fwbtm,d.cytm,d.fwbmc,d.ys,d.sh,d.ccz1,d.hfkhwb,d.ys1,d.sspp,d.bys,d.xl,d.sqje,d.qyj,d.qyjbl,d.htmxb,d.qyjid,d.id,isnull((select top 1 x.dbKey from no0000012_wfdetailkey x where x.dbId=d.id and x.dn=1 and x.requestid=m.requestid),0) as dbKey,isnull((select top 1 x.fDbKey from no0000012_wfdetailkey x where x.dbId=d.id and x.dn=1 and x.requestid=m.requestid),0) as fDbKey,ROW_NUMBER() OVER(order by d.id asc) as rn from formtable_main_197 m,formtable_main_197_dt1 d where m.id = d.mainid and m.requestid=56155) as tmp where 1=1 order by tmp.id asc 
+2020-02-08 14:20:39,868 ERROR com.cloudstore.app.no0000012.dao.Dao_WfDetailImplSqlserver  - getlist sql is :select * from (select d.fltm,d.flmc,d.bsqskjh,d.hfkh,d.sh,d.ys,d.hgzys,d.ccz,d.cc,d.hgzcc,d.mc,d.nf,d.jj,d.ssrq,d.pfj,d.lsj,d.ccj,d.flcb,d.lysl,d.scsl,d.cksl,d.flzcbje,d.ckje,d.hfkhwb,d.tm,d.shwb,d.ccwb,d.id,isnull((select top 1 x.dbKey from no0000012_wfdetailkey x where x.dbId=d.id and x.dn=1 and x.requestid=m.requestid),0) as dbKey,isnull((select top 1 x.fDbKey from no0000012_wfdetailkey x where x.dbId=d.id and x.dn=1 and x.requestid=m.requestid),0) as fDbKey,ROW_NUMBER() OVER(order by d.id asc) as rn from formtable_main_198 m,formtable_main_198_dt1 d where m.id = d.mainid and m.requestid=38150) as tmp where 1=1 order by tmp.id asc 
+2020-02-08 14:21:21,421 ERROR weaver.general.BaseBean  - 查询系统设置每页显示记录数据sql：select pagenumber from mode_customsearch where id=96
+2020-02-08 14:21:37,065 ERROR weaver.general.BaseBean  - 查询系统设置每页显示记录数据sql：select pagenumber from mode_customsearch where id=96
+2020-02-08 15:10:57,523 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20200208151057&sign=c8e690f70c4bad92f8753deccc354dd4
+2020-02-08 15:10:57,546 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - e错误： {"@type":"java.lang.NullPointerException","stackTrace":[{"className":"com.shxiv.hfwh.rest.http.HttpServiceImpl","fileName":"HttpServiceImpl.java","lineNumber":65,"methodName":"addMessage","nativeMethod":false},{"className":"com.shxiv.hfwh.rest.http.HttpServiceImpl","fileName":"HttpServiceImpl.java","lineNumber":23,"methodName":"execute","nativeMethod":false},{"className":"weaver.interfaces.schedule.WeaverJob","fileName":"WeaverJob.java","lineNumber":32,"methodName":"execute","nativeMethod":false},{"className":"org.quartz.core.JobRunShell","fileName":"JobRunShell.java","lineNumber":202,"methodName":"run","nativeMethod":false},{"className":"org.quartz.simpl.SimpleThreadPool$WorkerThread","fileName":"SimpleThreadPool.java","lineNumber":529,"methodName":"run","nativeMethod":false}],"suppressed":[]}
+2020-02-08 15:15:00,022 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20200208151500&sign=084b96108c987e1476ab87c219daa9ee
+2020-02-08 15:15:00,159 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2020-02-08 15:15:00,159 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2020-02-08 15:15:00,159 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20200208151500&sign=084b96108c987e1476ab87c219daa9ee
+2020-02-08 15:15:00,228 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2020-02-08 15:15:00,228 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2020-02-08 15:15:00,228 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20200208151500&sign=084b96108c987e1476ab87c219daa9ee
+2020-02-08 15:15:00,305 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2020-02-08 15:15:00,305 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2020-02-08 15:15:00,305 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20200208151500&sign=084b96108c987e1476ab87c219daa9ee
+2020-02-08 15:15:00,370 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-02-08 15:15:00,370 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2020-02-08 15:15:00,370 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20200208151500&sign=084b96108c987e1476ab87c219daa9ee
+2020-02-08 15:15:00,437 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2020-02-08 15:15:00,437 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2020-02-08 15:15:00,437 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20200208151500&sign=084b96108c987e1476ab87c219daa9ee
+2020-02-08 15:15:00,505 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-02-08 15:20:00,021 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20200208152000&sign=5764cd51229cdea7a36881accb22052c
+2020-02-08 15:20:00,094 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2020-02-08 15:20:00,094 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2020-02-08 15:20:00,094 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20200208152000&sign=5764cd51229cdea7a36881accb22052c
+2020-02-08 15:20:00,156 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2020-02-08 15:20:00,156 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2020-02-08 15:20:00,156 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20200208152000&sign=5764cd51229cdea7a36881accb22052c
+2020-02-08 15:20:00,223 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2020-02-08 15:20:00,223 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2020-02-08 15:20:00,223 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20200208152000&sign=5764cd51229cdea7a36881accb22052c
+2020-02-08 15:20:00,286 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-02-08 15:20:00,286 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2020-02-08 15:20:00,286 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20200208152000&sign=5764cd51229cdea7a36881accb22052c
+2020-02-08 15:20:00,342 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2020-02-08 15:20:00,342 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2020-02-08 15:20:00,343 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20200208152000&sign=5764cd51229cdea7a36881accb22052c
+2020-02-08 15:20:00,405 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-02-08 15:21:01,630 ERROR weaver.general.BaseBean  - 销毁微信推送扫描定时器完成---------
+2020-02-08 15:21:01,642 ERROR weaver.general.BaseBean  - 初始化云桥httpclient连接池成功，DEFAULT_MAX_PER_ROUTE：500---MAX_TOTAL_CONNECTIONS：500---------
+2020-02-08 15:21:06,914 INFO  weaver.filter.SecurityFilter  - Initializing filter 'SecurityFilter'
+2020-02-08 15:21:09,069 INFO  weaver.filter.SecurityFilter  - Filter 'SecurityFilter' configured successfully
+2020-02-08 15:21:09,097 INFO  weaver.filter.XssFilter  - Initializing filter 'XssFilter'
+2020-02-08 15:21:09,113 INFO  weaver.filter.XssFilter  - Filter 'XssFilter' configured successfully
+2020-02-08 15:21:09,478 ERROR weaver.general.BaseBean  - log4j reset thread start success...
+2020-02-08 15:21:09,844 ERROR weaver.general.BaseBean  - ------是否开启字符转码----0---是否开启sql参数化解析-----0----nativepool----ecology
+2020-02-08 15:21:09,855 ERROR weaver.general.BaseBean  - ExecuteSqlLogger start log write to file thread success...
+2020-02-08 15:21:09,877 INFO  weaver.common.SystemInitialized  - System Initialized OK.
+2020-02-08 15:21:09,955 INFO  weaver.general.InitServer  - System Init Message:mainControlIp= localIp:[192.168.1.109, 192.168.25.1, 192.168.149.1]
+2020-02-08 15:21:09,955 INFO  weaver.general.InitServer  - init ioc container...
+2020-02-08 15:21:10,440 ERROR com.weaver.upgrade.FunctionUpgrade  - OS.name+++++++++++++++++++++:Windows 10
+2020-02-08 15:21:10,440 ERROR com.weaver.upgrade.FunctionUpgrade  - srcfilePath+++++++++++++++++++++:D:\WEAVER\ecology\upgrade\src
+2020-02-08 15:21:10,442 ERROR com.weaver.upgrade.FunctionUpgrade  - 本地Ip++++++++++：192.168.25.1
+2020-02-08 15:21:10,442 ERROR com.weaver.upgrade.FunctionUpgrade  - 主节点MainControlIP++++++++++：
+2020-02-08 15:21:10,532 INFO  weaver.general.InitServer  - end ioc container init...
+2020-02-08 15:21:10,533 INFO  weaver.general.InitServer  - SystemUpgrade Start.....
+2020-02-08 15:21:10,557 INFO  weaver.general.InitServer  - SystemUpgrade End.....
+2020-02-08 15:21:10,557 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread Start.....
+2020-02-08 15:21:10,570 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread End.....
+2020-02-08 15:21:10,582 ERROR weaver.system.HtmlFieldToClob  - isrun:1
+2020-02-08 15:21:10,599 ERROR weaver.system.HtmlFieldToClob  - isrun1:1
+2020-02-08 15:21:10,583 ERROR weaver.conn.RecordSet  - WFVersionAdd insert Waiting...
+2020-02-08 15:21:10,582 ERROR weaver.general.BaseBean  - 启动日志压缩线程....
+2020-02-08 15:21:11,105 INFO  weaver.general.InitServer  - end.....
+2020-02-08 15:21:11,494 ERROR weaver.page.PageManager  - 清空二维码扫描缓存记录表
+2020-02-08 15:21:11,575 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息...
+2020-02-08 15:21:11,607 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息成功...
+2020-02-08 15:21:11,649 ERROR weaver.cpt.util.CptInitManager  - weaver.cpt.util.CptInitManager is running start...
+2020-02-08 15:21:11,652 ERROR weaver.formmode.cuspage.cpt.CptGenmenu4mode  - weaver.formmode.cuspage.cpt.CptGenmenu4mode is running start...
+2020-02-08 15:21:11,657 ERROR weaver.formmode.cuspage.cpt.CptGenmenu4mode  - weaver.formmode.cuspage.cpt.CptGenmenu4mode is running end...
+2020-02-08 15:21:11,730 ERROR weaver.cpt.util.CptInitManager  - weaver.cpt.util.CptInitManager is running end...
+2020-02-08 15:21:12,640 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun:1
+2020-02-08 15:21:12,641 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun1:1
+2020-02-08 15:21:12,745 WARN  net.sf.ehcache.DiskStorePathManager  - diskStorePath 'java.io.tempdir' is already used by an existing CacheManager either in the same VM or in a different process.
+The diskStore path for this CacheManager will be set to java.io.tempdir\ehcache_auto_created189879579023055810diskstore.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.
+2020-02-08 15:21:12,746 WARN  net.sf.ehcache.store.disk.DiskStorageFactory  - Data in persistent disk stores is ignored for stores from automatically created directories.
+Remove diskPersistent or resolve the conflicting disk paths in cache configuration.
+Deleting data file D:\WEAVER\Resin\java.io.tempdir\ehcache_auto_created189879579023055810diskstore\formmodecache.data
+2020-02-08 15:21:13,421 ERROR org.directwebremoting.util.LogErrorHandler  - Line=52 Element type "filter" must be declared.
+2020-02-08 15:21:13,422 ERROR org.directwebremoting.util.LogErrorHandler  - Line=53 The content of element type "allow" must match "(create|convert)*".
+2020-02-08 15:21:13,656 ERROR weaver.conn.RecordSet  - select t1.* from  uf_zzzxx t1 where t1.formmodeid=50  and ( DATEDIFF(ss,t1.jzrq+' '+'23:55:50',getDate())>=(-1*60*60*24*30) and DATEDIFF(ss, CONVERT(varchar(10), GETDATE(), 120) +' '+'00:00:00',t1.jzrq+' '+'23:55:50')>=(-1*60*60*24*30) and t1.jzrq is not null and t1.jzrq<> '' )  and not exists(select 1 from mode_reminddata_all t2 where t2.remindjobid=1 and t2.billid=t1.id and lastdate= CONVERT(varchar(10), GETDATE(), 120)  and isnull(isRemindWorkflow,0)=1 )
+2020-02-08 15:21:13,657 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: datediff 函数导致溢出。用于分隔两个日期/时间实例的日期部分的数字太大。请尝试使用日期部分精度较低的 datediff。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:196)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet$FetchBuffer.nextRow(SQLServerResultSet.java:4700)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.fetchBufferNext(SQLServerResultSet.java:1683)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.next(SQLServerResultSet.java:956)
+	at weaver.conn.RecordSet.parseResultSet(RecordSet.java:1656)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:916)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.formmode.task.action.TaskAction.doRemind(TaskAction.java:247)
+	at weaver.formmode.task.action.WorkflowMessageTaskAction.doIt(WorkflowMessageTaskAction.java:33)
+	at weaver.formmode.task.action.TaskAction.execute(TaskAction.java:34)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:529)
+2020-02-08 15:21:14,756 ERROR weaver.system.MonitorThreadManager  - >>>>MonitorThreadManager>>单独的预警关闭控制：isThreadWarningStart(zt)=0<<<<
+2020-02-08 15:21:14,861 ERROR weaver.general.BaseBean  - 初始化微信推送扫描线程成功，扫描间隔1分钟---------
+2020-02-08 15:25:00,019 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20200208152500&sign=aef31ee53e396c5bb45f1ee1f66fd987
+2020-02-08 15:25:00,096 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2020-02-08 15:25:00,096 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2020-02-08 15:25:00,096 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20200208152500&sign=aef31ee53e396c5bb45f1ee1f66fd987
+2020-02-08 15:25:00,182 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2020-02-08 15:25:00,182 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2020-02-08 15:25:00,182 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20200208152500&sign=aef31ee53e396c5bb45f1ee1f66fd987
+2020-02-08 15:25:00,248 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2020-02-08 15:25:00,248 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2020-02-08 15:25:00,248 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20200208152500&sign=aef31ee53e396c5bb45f1ee1f66fd987
+2020-02-08 15:25:00,317 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-02-08 15:25:00,318 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2020-02-08 15:25:00,318 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20200208152500&sign=aef31ee53e396c5bb45f1ee1f66fd987
+2020-02-08 15:25:00,385 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2020-02-08 15:25:00,385 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2020-02-08 15:25:00,385 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20200208152500&sign=aef31ee53e396c5bb45f1ee1f66fd987
+2020-02-08 15:25:00,464 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-02-08 15:26:56,021 ERROR weaver.systeminfo.menuconfig.MenuUtil  - 菜单查询sql:select * from (select isnull(c.isopen,m.infoid+(324855)+1) as isopen,m.* from ( ( SELECT t1.id as infoId, t1.labelId , t1.isCustom, t1.refersubid,t1.iconUrl,t1.TopIconUrl,t1.linkAddress ,t1.baseTarget,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,case when t1.isCustom=2 then t1.topmenuname else t2.topmenuname end topmenuname,case when t1.isCustom=2 then t1.topname_e else t2.topname_e end topname_e,case when t1.isCustom=2 then t1.topname_t else t2.topname_t end topname_t ,allt.c as  allParent,curt.c as curParent  FROM leftmenuinfo t1  left join (select count(0) c,parentId from leftmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from leftmenuinfo it1 inner join leftmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1 group by it1.parentId)curt on t1.id=curt.parentId , leftmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=1 and t2.resourceid =1) or (t2.resourcetype=3 and t2.resourceid=1)) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id in (SELECT infoid FROM menushareinfo WHERE (  CASE WHEN (sharetype = 1 AND sharevalue in (0,-2)  and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 3 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 5 AND sharevalue = 1) THEN  1 ELSE 0 END   = 1   OR  CASE WHEN (sharetype = 6 AND sharevalue in (0,-4) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR CASE WHEN (sharetype = 7 AND sharevalue = 0  and   ( case when jobtitlelevel=1  Then 1 else 0 end = 1     or       case when (jobtitlelevel=2 and ( '%,'+jobtitlesharevalue+',%' like '%,0,%'  or  '%,'+jobtitlesharevalue+',%' like '%,-2,%' ) ) Then 1 else 0 end = 1        or       case when (jobtitlelevel=3 and ( '%,'+jobtitlesharevalue+',%' like '%,0,%'  or  '%,'+jobtitlesharevalue+',%' like '%,-4,%' ) ) Then 1 else 0 end = 1    )) THEN  1 ELSE 0 END   = 1   OR    CASE WHEN (sharetype = 2 AND sharevalue IN ( select roleid  from hrmrolemembers role WHERE rolelevel <=role.rolelevel AND role.resourceid =1 ) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1  )  and resourcetype=1 and resourceid =1 and menutype='left' ) and (t1.parentid=0 or  t1.parentid is null or t1.parentid='')  ) union ( SELECT t1.id as infoId, t1.labelId , t1.isCustom, t1.refersubid,t1.iconUrl,t1.TopIconUrl,t1.linkAddress ,t1.baseTarget,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,case when t1.isCustom=2 then t1.topmenuname else t2.topmenuname end topmenuname,case when t1.isCustom=2 then t1.topname_e else t2.topname_e end topname_e,case when t1.isCustom=2 then t1.topname_t else t2.topname_t end topname_t ,allt.c as  allParent,curt.c as curParent  FROM leftmenuinfo t1  left join (select count(0) c,parentId from leftmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from leftmenuinfo it1 inner join leftmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1 group by it1.parentId)curt on t1.id=curt.parentId , leftmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=1 and t2.resourceid =1) or (t2.resourcetype=3 and t2.resourceid=1)) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id not in (SELECT infoid FROM menushareinfo where menutype='left'  and resourcetype=1 and resourceid =1 ) and (t1.parentid=0 or  t1.parentid is null or t1.parentid='')  ) ) m left join menucontrollist c on m.infoid+324789=c.menuid and c.type='left') a where a.isopen=a.infoid+(324855)+1 ORDER BY ISNULL(a.parentId,0),a.viewIndex,a.infoId
+2020-02-08 15:26:56,971 ERROR weaver.systeminfo.menuconfig.MenuUtil  - 菜单查询sql:select * from (select isnull(c.isopen,m.infoid+(324855)+1) as isopen,m.* from ( ( SELECT t1.id as infoId, t1.labelId , t1.isCustom, t1.refersubid,t1.iconUrl,t1.TopIconUrl,t1.linkAddress ,t1.baseTarget,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,case when t1.isCustom=2 then t1.topmenuname else t2.topmenuname end topmenuname,case when t1.isCustom=2 then t1.topname_e else t2.topname_e end topname_e,case when t1.isCustom=2 then t1.topname_t else t2.topname_t end topname_t ,allt.c as  allParent,curt.c as curParent  FROM leftmenuinfo t1  left join (select count(0) c,parentId from leftmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from leftmenuinfo it1 inner join leftmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1 group by it1.parentId)curt on t1.id=curt.parentId , leftmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=1 and t2.resourceid =1) or (t2.resourcetype=3 and t2.resourceid=1)) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id in (SELECT infoid FROM menushareinfo WHERE (  CASE WHEN (sharetype = 1 AND sharevalue in (0,-2)  and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 3 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 5 AND sharevalue = 1) THEN  1 ELSE 0 END   = 1   OR  CASE WHEN (sharetype = 6 AND sharevalue in (0,-4) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR CASE WHEN (sharetype = 7 AND sharevalue = 0  and   ( case when jobtitlelevel=1  Then 1 else 0 end = 1     or       case when (jobtitlelevel=2 and ( '%,'+jobtitlesharevalue+',%' like '%,0,%'  or  '%,'+jobtitlesharevalue+',%' like '%,-2,%' ) ) Then 1 else 0 end = 1        or       case when (jobtitlelevel=3 and ( '%,'+jobtitlesharevalue+',%' like '%,0,%'  or  '%,'+jobtitlesharevalue+',%' like '%,-4,%' ) ) Then 1 else 0 end = 1    )) THEN  1 ELSE 0 END   = 1   OR    CASE WHEN (sharetype = 2 AND sharevalue IN ( select roleid  from hrmrolemembers role WHERE rolelevel <=role.rolelevel AND role.resourceid =1 ) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1  )  and resourcetype=1 and resourceid =1 and menutype='left' )  ) union ( SELECT t1.id as infoId, t1.labelId , t1.isCustom, t1.refersubid,t1.iconUrl,t1.TopIconUrl,t1.linkAddress ,t1.baseTarget,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,case when t1.isCustom=2 then t1.topmenuname else t2.topmenuname end topmenuname,case when t1.isCustom=2 then t1.topname_e else t2.topname_e end topname_e,case when t1.isCustom=2 then t1.topname_t else t2.topname_t end topname_t ,allt.c as  allParent,curt.c as curParent  FROM leftmenuinfo t1  left join (select count(0) c,parentId from leftmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from leftmenuinfo it1 inner join leftmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1 group by it1.parentId)curt on t1.id=curt.parentId , leftmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=1 and t2.resourceid =1) or (t2.resourcetype=3 and t2.resourceid=1)) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id not in (SELECT infoid FROM menushareinfo where menutype='left'  and resourcetype=1 and resourceid =1 )  ) ) m left join menucontrollist c on m.infoid+324789=c.menuid and c.type='left') a where a.isopen=a.infoid+(324855)+1 ORDER BY ISNULL(a.parentId,0),a.viewIndex,a.infoId
+2020-02-08 15:30:00,017 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20200208153000&sign=401dee2f927fd5b52a8818ec515d9694
+2020-02-08 15:30:01,151 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2020-02-08 15:30:01,152 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2020-02-08 15:30:01,152 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20200208153000&sign=401dee2f927fd5b52a8818ec515d9694
+2020-02-08 15:30:01,216 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2020-02-08 15:30:01,216 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2020-02-08 15:30:01,216 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20200208153000&sign=401dee2f927fd5b52a8818ec515d9694
+2020-02-08 15:30:01,283 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2020-02-08 15:30:01,284 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2020-02-08 15:30:01,284 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20200208153000&sign=401dee2f927fd5b52a8818ec515d9694
+2020-02-08 15:30:01,352 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-02-08 15:30:01,353 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2020-02-08 15:30:01,353 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20200208153000&sign=401dee2f927fd5b52a8818ec515d9694
+2020-02-08 15:30:01,419 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2020-02-08 15:30:01,419 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2020-02-08 15:30:01,419 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20200208153000&sign=401dee2f927fd5b52a8818ec515d9694
+2020-02-08 15:30:01,486 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-02-08 15:31:37,714 ERROR weaver.email.MailTimingDateReceive  - 自动接收邮件定时任务开始--单线程
+2020-02-08 15:31:37,716 ERROR weaver.email.MailTimingDateReceive  - 自动接收邮件定时任务结束--没有开启外部邮件或者自动接收功能--单线程
+2020-02-08 15:32:21,722 ERROR weaver.systeminfo.menuconfig.MenuUtil  - 菜单查询sql:select * from (select isnull(c.isopen,m.infoid+(324855)+1) as isopen,m.* from ( ( SELECT t1.id as infoId, t1.labelId , t1.isCustom, t1.refersubid,t1.iconUrl,t1.TopIconUrl,t1.linkAddress ,t1.baseTarget,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,case when t1.isCustom=2 then t1.topmenuname else t2.topmenuname end topmenuname,case when t1.isCustom=2 then t1.topname_e else t2.topname_e end topname_e,case when t1.isCustom=2 then t1.topname_t else t2.topname_t end topname_t ,allt.c as  allParent,curt.c as curParent  FROM leftmenuinfo t1  left join (select count(0) c,parentId from leftmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from leftmenuinfo it1 inner join leftmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1 group by it1.parentId)curt on t1.id=curt.parentId , leftmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=1 and t2.resourceid =1) or (t2.resourcetype=3 and t2.resourceid=1)) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id in (SELECT infoid FROM menushareinfo WHERE (  CASE WHEN (sharetype = 1 AND sharevalue in (0,-2)  and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 3 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 5 AND sharevalue = 1) THEN  1 ELSE 0 END   = 1   OR  CASE WHEN (sharetype = 6 AND sharevalue in (0,-4) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR CASE WHEN (sharetype = 7 AND sharevalue = 0  and   ( case when jobtitlelevel=1  Then 1 else 0 end = 1     or       case when (jobtitlelevel=2 and ( '%,'+jobtitlesharevalue+',%' like '%,0,%'  or  '%,'+jobtitlesharevalue+',%' like '%,-2,%' ) ) Then 1 else 0 end = 1        or       case when (jobtitlelevel=3 and ( '%,'+jobtitlesharevalue+',%' like '%,0,%'  or  '%,'+jobtitlesharevalue+',%' like '%,-4,%' ) ) Then 1 else 0 end = 1    )) THEN  1 ELSE 0 END   = 1   OR    CASE WHEN (sharetype = 2 AND sharevalue IN ( select roleid  from hrmrolemembers role WHERE rolelevel <=role.rolelevel AND role.resourceid =1 ) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1  )  and resourcetype=1 and resourceid =1 and menutype='left' ) and (t1.parentid=0 or  t1.parentid is null or t1.parentid='')  ) union ( SELECT t1.id as infoId, t1.labelId , t1.isCustom, t1.refersubid,t1.iconUrl,t1.TopIconUrl,t1.linkAddress ,t1.baseTarget,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,case when t1.isCustom=2 then t1.topmenuname else t2.topmenuname end topmenuname,case when t1.isCustom=2 then t1.topname_e else t2.topname_e end topname_e,case when t1.isCustom=2 then t1.topname_t else t2.topname_t end topname_t ,allt.c as  allParent,curt.c as curParent  FROM leftmenuinfo t1  left join (select count(0) c,parentId from leftmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from leftmenuinfo it1 inner join leftmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1 group by it1.parentId)curt on t1.id=curt.parentId , leftmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=1 and t2.resourceid =1) or (t2.resourcetype=3 and t2.resourceid=1)) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id not in (SELECT infoid FROM menushareinfo where menutype='left'  and resourcetype=1 and resourceid =1 ) and (t1.parentid=0 or  t1.parentid is null or t1.parentid='')  ) ) m left join menucontrollist c on m.infoid+324789=c.menuid and c.type='left') a where a.isopen=a.infoid+(324855)+1 ORDER BY ISNULL(a.parentId,0),a.viewIndex,a.infoId
+2020-02-08 15:32:22,161 ERROR weaver.systeminfo.menuconfig.MenuUtil  - 菜单查询sql:select * from (select isnull(c.isopen,m.infoid+(324855)+1) as isopen,m.* from ( ( SELECT t1.id as infoId, t1.labelId , t1.isCustom, t1.refersubid,t1.iconUrl,t1.TopIconUrl,t1.linkAddress ,t1.baseTarget,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,case when t1.isCustom=2 then t1.topmenuname else t2.topmenuname end topmenuname,case when t1.isCustom=2 then t1.topname_e else t2.topname_e end topname_e,case when t1.isCustom=2 then t1.topname_t else t2.topname_t end topname_t ,allt.c as  allParent,curt.c as curParent  FROM leftmenuinfo t1  left join (select count(0) c,parentId from leftmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from leftmenuinfo it1 inner join leftmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1 group by it1.parentId)curt on t1.id=curt.parentId , leftmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=1 and t2.resourceid =1) or (t2.resourcetype=3 and t2.resourceid=1)) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id in (SELECT infoid FROM menushareinfo WHERE (  CASE WHEN (sharetype = 1 AND sharevalue in (0,-2)  and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 3 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 5 AND sharevalue = 1) THEN  1 ELSE 0 END   = 1   OR  CASE WHEN (sharetype = 6 AND sharevalue in (0,-4) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR CASE WHEN (sharetype = 7 AND sharevalue = 0  and   ( case when jobtitlelevel=1  Then 1 else 0 end = 1     or       case when (jobtitlelevel=2 and ( '%,'+jobtitlesharevalue+',%' like '%,0,%'  or  '%,'+jobtitlesharevalue+',%' like '%,-2,%' ) ) Then 1 else 0 end = 1        or       case when (jobtitlelevel=3 and ( '%,'+jobtitlesharevalue+',%' like '%,0,%'  or  '%,'+jobtitlesharevalue+',%' like '%,-4,%' ) ) Then 1 else 0 end = 1    )) THEN  1 ELSE 0 END   = 1   OR    CASE WHEN (sharetype = 2 AND sharevalue IN ( select roleid  from hrmrolemembers role WHERE rolelevel <=role.rolelevel AND role.resourceid =1 ) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1  )  and resourcetype=1 and resourceid =1 and menutype='left' )  ) union ( SELECT t1.id as infoId, t1.labelId , t1.isCustom, t1.refersubid,t1.iconUrl,t1.TopIconUrl,t1.linkAddress ,t1.baseTarget,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,case when t1.isCustom=2 then t1.topmenuname else t2.topmenuname end topmenuname,case when t1.isCustom=2 then t1.topname_e else t2.topname_e end topname_e,case when t1.isCustom=2 then t1.topname_t else t2.topname_t end topname_t ,allt.c as  allParent,curt.c as curParent  FROM leftmenuinfo t1  left join (select count(0) c,parentId from leftmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from leftmenuinfo it1 inner join leftmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1 group by it1.parentId)curt on t1.id=curt.parentId , leftmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=1 and t2.resourceid =1) or (t2.resourcetype=3 and t2.resourceid=1)) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id not in (SELECT infoid FROM menushareinfo where menutype='left'  and resourcetype=1 and resourceid =1 )  ) ) m left join menucontrollist c on m.infoid+324789=c.menuid and c.type='left') a where a.isopen=a.infoid+(324855)+1 ORDER BY ISNULL(a.parentId,0),a.viewIndex,a.infoId
+2020-02-08 15:35:00,014 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20200208153500&sign=1741377e95ba45e1f544a337df3f443b
+2020-02-08 15:35:00,134 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2020-02-08 15:35:00,134 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2020-02-08 15:35:00,135 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20200208153500&sign=1741377e95ba45e1f544a337df3f443b
+2020-02-08 15:35:00,203 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2020-02-08 15:35:00,203 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2020-02-08 15:35:00,203 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20200208153500&sign=1741377e95ba45e1f544a337df3f443b
+2020-02-08 15:35:00,268 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2020-02-08 15:35:00,268 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2020-02-08 15:35:00,268 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20200208153500&sign=1741377e95ba45e1f544a337df3f443b
+2020-02-08 15:35:00,331 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-02-08 15:35:00,331 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2020-02-08 15:35:00,331 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20200208153500&sign=1741377e95ba45e1f544a337df3f443b
+2020-02-08 15:35:00,400 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2020-02-08 15:35:00,400 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2020-02-08 15:35:00,400 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20200208153500&sign=1741377e95ba45e1f544a337df3f443b
+2020-02-08 15:35:00,482 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-02-08 15:40:00,021 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20200208154000&sign=d976945fae5e2f926aa56254862df498
+2020-02-08 15:40:00,089 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2020-02-08 15:40:00,089 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2020-02-08 15:40:00,089 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20200208154000&sign=d976945fae5e2f926aa56254862df498
+2020-02-08 15:40:00,158 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2020-02-08 15:40:00,158 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2020-02-08 15:40:00,158 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20200208154000&sign=d976945fae5e2f926aa56254862df498
+2020-02-08 15:40:00,233 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2020-02-08 15:40:00,233 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2020-02-08 15:40:00,233 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20200208154000&sign=d976945fae5e2f926aa56254862df498
+2020-02-08 15:40:00,299 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-02-08 15:40:00,299 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2020-02-08 15:40:00,299 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20200208154000&sign=d976945fae5e2f926aa56254862df498
+2020-02-08 15:40:00,361 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2020-02-08 15:40:00,361 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2020-02-08 15:40:00,362 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20200208154000&sign=d976945fae5e2f926aa56254862df498
+2020-02-08 15:40:00,433 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-02-08 15:45:00,021 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20200208154500&sign=87dd535ffdf9326dfcf7d019a22d3983
+2020-02-08 15:45:00,233 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2020-02-08 15:45:00,234 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2020-02-08 15:45:00,234 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20200208154500&sign=87dd535ffdf9326dfcf7d019a22d3983
+2020-02-08 15:45:00,302 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2020-02-08 15:45:00,303 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2020-02-08 15:45:00,303 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20200208154500&sign=87dd535ffdf9326dfcf7d019a22d3983
+2020-02-08 15:45:00,372 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2020-02-08 15:45:00,372 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2020-02-08 15:45:00,372 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20200208154500&sign=87dd535ffdf9326dfcf7d019a22d3983
+2020-02-08 15:45:00,437 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-02-08 15:45:00,438 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2020-02-08 15:45:00,438 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20200208154500&sign=87dd535ffdf9326dfcf7d019a22d3983
+2020-02-08 15:45:00,507 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2020-02-08 15:45:00,508 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2020-02-08 15:45:00,508 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20200208154500&sign=87dd535ffdf9326dfcf7d019a22d3983
+2020-02-08 15:45:00,575 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-02-08 18:35:41,530 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20200208183541&sign=3d1f3a4e0d00f462d62a0f475ccc34d3
+2020-02-08 18:35:41,564 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - e错误： {"@type":"java.lang.NullPointerException","stackTrace":[{"className":"com.shxiv.hfwh.rest.http.HttpServiceImpl","fileName":"HttpServiceImpl.java","lineNumber":65,"methodName":"addMessage","nativeMethod":false},{"className":"com.shxiv.hfwh.rest.http.HttpServiceImpl","fileName":"HttpServiceImpl.java","lineNumber":23,"methodName":"execute","nativeMethod":false},{"className":"weaver.interfaces.schedule.WeaverJob","fileName":"WeaverJob.java","lineNumber":32,"methodName":"execute","nativeMethod":false},{"className":"org.quartz.core.JobRunShell","fileName":"JobRunShell.java","lineNumber":202,"methodName":"run","nativeMethod":false},{"className":"org.quartz.simpl.SimpleThreadPool$WorkerThread","fileName":"SimpleThreadPool.java","lineNumber":529,"methodName":"run","nativeMethod":false}],"suppressed":[]}
+2020-02-08 18:35:45,095 ERROR weaver.general.BaseBean  - 销毁微信推送扫描定时器完成---------
+2020-02-08 18:35:45,353 ERROR weaver.general.BaseBean  - 初始化云桥httpclient连接池成功，DEFAULT_MAX_PER_ROUTE：500---MAX_TOTAL_CONNECTIONS：500---------

@@ -1,0 +1,30 @@
+<!-- 请把以下内容（不包含此行）添加到同目录下的web.xml文件中，位置filter-mapping和servlet中间。重启服务清空缓存。-->
+
+<filter>
+	<filter-name>WStatic</filter-name>
+	<filter-class>weaver.filter.WStaticFilter</filter-class>
+	<init-param>
+		<max-age>86400</max-age>
+	</init-param>
+</filter>
+
+<filter-mapping>
+	<filter-name>WStatic</filter-name>
+	<url-pattern>*.gif</url-pattern>
+</filter-mapping>
+<filter-mapping>
+	<filter-name>WStatic</filter-name>
+	<url-pattern>*.jpg</url-pattern>
+</filter-mapping>
+<filter-mapping>
+	<filter-name>WStatic</filter-name>
+	<url-pattern>*.png</url-pattern>
+</filter-mapping>
+<filter-mapping>
+	<filter-name>WStatic</filter-name>
+	<url-pattern>*.css</url-pattern>
+</filter-mapping>
+<filter-mapping>
+	<filter-name>WStatic</filter-name>
+	<url-pattern>*.js</url-pattern>
+</filter-mapping>

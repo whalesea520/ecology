@@ -1,0 +1,4 @@
+﻿/*! jQuery UI - v1.10.3 - 2013-05-03
+* http://jqueryui.com
+* Copyright 2013 jQuery Foundation and other contributors; Licensed MIT */
+jQuery(function(e){e.datepicker.regional.is={closeText:"Loka",prevText:"&#x3C; Fyrri",nextText:"N忙sti &#x3E;",currentText:"脥 dag",monthNames:["Jan煤ar","Febr煤ar","Mars","Apr铆l","Ma铆","J煤n铆","J煤l铆","脕g煤st","September","Okt贸ber","N贸vember","Desember"],monthNamesShort:["Jan","Feb","Mar","Apr","Ma铆","J煤n","J煤l","脕g煤","Sep","Okt","N贸v","Des"],dayNames:["Sunnudagur","M谩nudagur","脼ri冒judagur","Mi冒vikudagur","Fimmtudagur","F枚studagur","Laugardagur"],dayNamesShort:["Sun","M谩n","脼ri","Mi冒","Fim","F枚s","Lau"],dayNamesMin:["Su","M谩","脼r","Mi","Fi","F枚","La"],weekHeader:"Vika",dateFormat:"dd/mm/yy",firstDay:0,isRTL:!1,showMonthAfterYear:!1,yearSuffix:""},e.datepicker.setDefaults(e.datepicker.regional.is)});

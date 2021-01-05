@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<special-non>
+		<urls>
+			<url>
+				<value>/formmode/data/modedataoperation.jsp</value>
+				<params>
+					<param>
+						<value>viewfrom</value>
+						<rules>
+							<rule>##CONST:LETTERS##</rule>
+						</rules>
+					</param>
+				</params>
+			</url>
+			<url>
+				<value>/car/carinfomaintenanceiframe.jsp</value>
+				<params>
+					<param>
+						<value>flowTitle2</value>
+						<rules>
+							<rule>##CONST:NAMETITLE##</rule>
+						</rules>
+					</param>
+				</params>
+			</url>
+			<url>
+				<value>/formmode/search/customsearchbysimpleiframe.jsp</value>
+				<params>
+					<param>
+						<value>treesqlwhere1</value>
+						<rules>
+							<rule>##CONST:SQLWHERE##</rule>
+						</rules>
+					</param>
+				</params>
+			</url>
+			<url>
+				<value>/hrm/company/deptFieldOperation.jsp</value>
+				<params>
+					<param>
+						<value>definebroswerType</value>
+						<rules>
+							<rule>##CONST:NAMETITLE##</rule>
+						</rules>
+					</param>
+				</params>
+			</url>
+			<url>
+				<value>/cpt/capital/CapitalBlankTab.jsp</value>
+				<params>
+					<param>
+						<value>url</value>
+						<rules>
+							<rule>##CONST:NAMETITLE##</rule>
+						</rules>
+					</param>
+				</params>
+			</url>
+		</urls>
+	</special-non>
+	
+
+</root>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<webservice-list>
+		<webservice>/system/MobileLicenseOperation.jsp</webservice>
+		<webservice>/system/PluginLicenseOperation.jsp</webservice>
+		<webservice>/system/InPluginLicense.jsp</webservice>
+		<webservice>/system/InMobileLicense.jsp</webservice>
+	</webservice-list>
+</root>

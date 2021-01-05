@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>example for FCKEditorExt</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="robots" content="noindex, nofollow" />
+	<style type="text/css">
+	body{font-size:9pt;}
+	</style>
+	<script type="text/javascript" language="javascript" src="checkFlashVideo.jsp"></script>
+	<script type="text/javascript" language="javascript" src="fckeditor_wev8.js"></script>
+	<script type="text/javascript" language="javascript" src="FCKEditorExt_wev8.js"></script>
+	<script type="text/javascript" language="javascript" src="swfobject_wev8.js"></script>
+	<script language="javascript" type="text/javascript">
+	window.onload=function(){
+		//FCKEditorExt.flvBrowserUrl="/uploadflv/UploadFlv.jsp";
+		FCKEditorExt.initEditor('form1','txt1',true);
+		FCKEditorExt.checkText(textSpanId);
+		FCKEditorExt.toolbarExpand(false);
+	};
+	function chk(){
+		//FCKEditorExt.updateContent();//更新编辑的文本内容
+		//alert(document.getElementById("txt1").value);
+		return true;
+	}
+	function getHtml(){
+		alert(FCKEditorExt.getHtml());
+	}
+	function setHtml(){
+		alert(FCKEditorExt.setHtml("<b>asd中国gag</b>as<p>dgsg</p>"));
+	}
+	function abc(){
+		FCKEditorExt.updateContent();
+		alert('html:'+FCKEditorExt.getHtml());
+	}
+	function abcd(){
+		var sUrl="/UploadFlv.jsp";
+		var ret=window.showModalDialog(sUrl,"");
+		alert("ret:"+ret);
+	}
+	</script>
+	<style type="text/css">
+		.codeText{padding-left:40px;}
+		.codeComment{color:blue;}
+		.codeExample{padding:4px;border:1px solid green;width:80%;height:100px;}
+	.STYLE1 {color: #CC6600}
+    .STYLE2 {color: #CC6633}
+    </style>
+</head>
+
+<body>
+	<h2>
+		example01
+	</h2>
+<b>使用示例：</b>
+<div class="codeExample">
+  &lt;html&gt;<br />
+&lt;head&gt;<br />
+<span class="STYLE2">&lt;script type="text/javascript" language="javascript" src="checkFlashVideo.jsp"&gt;&lt;/script&gt;</span><span class="codeComment">&lt;!--检测是否有服务器Flash视频浏览
+--&gt;</span><span class="STYLE2"> <br />
+&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot; src=&quot;fckeditor.js&quot;&gt;&lt;/script&gt;<br />
+&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot; src=&quot;FCKEditorExt.js&quot;&gt;&lt;/script&gt;</span>
+  <br />
+  &lt;script language=&quot;javascript&quot; type=&quot;text/javascript&quot;&gt;<br />
+  window.onload=function(){
+	<br />
+&nbsp;	<span class="STYLE1">FCKEditorExt.initEditor('form1','txt1');</span><br />
+&nbsp;&nbsp;<span class="STYLE1">FCKEditorExt.checkText();</span>//检测是否必填这段选项<br />
+&nbsp;&nbsp;<span class="STYLE1">FCKEditorExt.toolbarExpand(false);</span>//false表示折叠工具栏<br />
+  };<br />
+  <br />
+  function chk(){<br />
+  	&nbsp;&nbsp;<span class="STYLE1">FCKEditorExt.updateContent();<br />
+  	&nbsp;&nbsp;if(FCKEditorExt.getText()!=&quot;&quot;)<br />
+  	&nbsp;&nbsp;&nbsp;&nbsp;return true; <br />
+  	&nbsp;&nbsp;else<br />
+  	&nbsp;&nbsp;&nbsp;&nbsp;return false; <br /></span>
+  } <br />
+  &lt;/script&gt;
+  <br />
+  &lt;/head&gt;<br />
+  <br />
+  &lt;body&gt;<br />
+  &nbsp;&lt;form name=&quot;form1&quot; id=&quot;form1&quot; onsubmit=&quot;return chk()&quot;&gt;<br />
+&nbsp;&nbsp;&lt;textarea id=&quot;txt1&quot; style=&quot;width:400px;height:250px;&quot; &gt;需要修改的内容&lt;/textarea&gt;
+&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&lt;input type=&quot;submit&quot; name=&quot;submti&quot; value=&quot;submit&quot;/&gt; <br />
+&nbsp;&lt;/form&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;</div>
+<p>&nbsp;</p>
+<b>API参考</b>
+<div class="codeExample">
+  <p><span class="codeComment">/** 初始化并调用编辑器<br />
+  &nbsp;*@param formName (required)<br />
+  &nbsp;*@param textAreaName (required)<br />
+  &nbsp;*@param isEnglish (optional) default false {</span><span class="STYLE1">&lt;%=user.getLanguage()%&gt;</span><span class="codeComment">} <br />
+&nbsp;*@param imageBtn (optional) {</span><span class="STYLE1">FCKEditorExt.DEFAULT <strong>|</strong> FCKEDitorExt.NO_IMAGE
+  <strong>|</strong> FCKEditorExt.WEB_IMAGE</span><span class="codeComment">} <br />
+&nbsp;**/</span>
+    <br />
+    FCKEditorExt.initEditor('formName','textAreaName');
+    <br />
+    <br />
+    <span class="codeComment">//确定是否需要对编辑器内的文本进行必要性检查，自动添加红叹号并检测，真正数据保存前还需用户自定义调用getText()以判断</span><br />
+FCKEditorExt.checkText();<br />
+    <br />
+    FCKEditorExt.toolbarExpand(true|false)<span class="codeComment">//展开工具栏，默认为展开true</span><br />
+    <br />
+    FCKEditorExt.getHtml();<span class="codeComment">//获取HTML内容</span><br />
+    <br />
+    FCKEditorExt.getText();<span class="codeComment">//获取编辑器内的纯文本内容（过滤掉HTML标记）</span><br />
+    <br />
+    FCKEditorExt.setHtml(sVar);<span class="codeComment">//重置编辑器的内容为sVar文本</span><br />
+    <br />   
+    FCKEditorExt.updateContent();<span class="codeComment">//更新编辑的内容至TextArea</span><br />
+     <br />
+    FCKEditorExt.switchEditMode();<span class="codeComment">//切换源码和可视化编辑的视图</span><br />
+    <br />
+    FCKEditorExt.switchTextMode();<span class="codeComment">//切换编辑器至纯文本模式</span><br />
+    <br />
+    FCKEditorExt.FullScreen();<span class="codeComment">//切换编辑器全屏</span><br />
+  </p>
+
+</div>
+<hr /> 
+<form enctype="multipart/form-data" action="http://localhost/TestWeaverEditor.asp" method="post" name="form1" target="_blank" onsubmit="return chk()">
+Title:<input name="sTitle" /><br />
+<textarea name="txt1" id="txt1" rows="10" cols="80" style="width:80%; height: 200px">
+This is some &lt;strong&gt;sample text&lt;/strong&gt;. You are using &lt;a href="http://www.fckeditor.net/"&gt;FCKeditor&lt;/a&gt;.
+
+</textarea><span id="textSpanId"><img src="/images/BacoError_wev8.gif" align="absMiddle"></span>
+<br />
+<input type="submit" name="btnSubmit" value="Save" />
+</form>
+<input type="button" name="btn1" onclick="getHtml();" value="getHtml()"/><br />
+<input type="button" name="btn1" onclick="abcd();" value="abcd()"/>
+
+<hr />
+
+<div>
+<p>This is some <strong>sample text</strong>. You are using <a href="http://www.fckeditor.net/">FCKeditor</a>.</p>
+<p>asd<img class="editorFlashVideo" style="width: 230px; height: 202px" height="96" alt="" width="96" _flashurl="http://localhost:8080/FCKEditor/video.flv" src="/FCKEditor/FlashVideo_wev8.jpg" /> g</p>
+<p>&nbsp;</p>
+<script id="_initFlashVideoId">initFlashVideo();</script>
+</div>
+<!--
+<input type="button" name="btn1" onclick="getHtml()" value="获取Html文本内容"/>
+<input type="button" name="btn1" onclick="setHtml()" value="设置文本内容"/>
+<input type="button" name="btn1" onclick="FCKEditorExt.switchTextMode()" value="切换文本模式"/>&nbsp;&nbsp;
+<input type="button" name="btn1" onclick="FCKEditorExt.switchEditMode()" value="切换HTML模式"/>
+<input type="button" name="btn1" onclick="FCKEditorExt.showFlashDialog()" value="FlashVideo"/><br />
+
+<input type="button" name="btn1" onclick="abc()" value="FCKEditorExt.updateContent()"/><br />
+-->
+
+</body>
+</html>

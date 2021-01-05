@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEC>
+	<id>Timelinr</id>	<!-- id 插件唯一标识 -->
+	<text>128112</text>  <!-- 时间轴 -->
+	<type>1</type>	<!-- 类型，方便对插件进行区分，目前已有：1.普通功能插件，2.表单插件 -->
+	<isEnabled>1</isEnabled>	<!-- 是否启用，1或者不填写为启用，0或者其他非1值为禁用 -->
+	<order>8</order>	<!-- 插件显示顺序，值越小则显示越靠前，不填写或者无此标签将为整数的最大值 -->
+	
+	<!-- 插件设计信息配置 -->
+	<design>
+		<unique>0</unique> <!-- 是否唯一，如果值为1则在自定义页面设计时一个页面最多只能添加一个这种控件，不为1或者不填写此属性则没有此限制 -->
+		<resources>	<!-- 依赖资源 -->
+			<resource type="js">/mobilemode/js/mec/handler/Timelinr_wev8.js?v=2016031701</resource>
+			<resource type="css">/mobilemode/css/mec/run/Timelinr_wev8.css</resource>
+			<resource type="css">/mobilemode/css/mec/handler/Timelinr_wev8.css</resource>
+		</resources>
+	</design>
+	
+	<!-- 插件运行信息配置 -->
+	<run java="com.weaver.formmodel.mobile.mec.handler.Timelinr">
+		<resources>	<!-- 依赖资源 -->
+			<resource type="js">/mobilemode/js/mec/run/Timelinr_wev8.js?v=1</resource>
+			<resource type="css">/mobilemode/css/mec/run/Timelinr_wev8.css</resource>
+		</resources>
+	</run>
+	
+	<!-- 内容模板 -->
+	<contentTemplate>
+		<![CDATA[
+			<div id="NMEC_${theId}" class="timelinrContainerWrap">
+				<table id="timelinr${theId}" class="timelinrContainer">
+					$mec_forstart$
+					<tr>
+						<td class="timePart" style="display:${timePartDisplay};">
+							<div class="timearraw"></div>
+							<div class="timeRowWrap">
+								<div class="year">${year}</div>
+								<div class="monthday">${monthday}</div>
+							</div>
+						</td>
+						<td class="fieldPart">
+							<div class="arrow"></div>
+							<div class="contentPart">
+								$mec_timelinr_group_forstart$
+								<div class="timelinrGroupWrap">
+									<div class="titleRowWrap" onclick="${action}">
+										${titlefield}
+									</div>
+									
+									$mec_timelinr_row_forstart$
+									<div class="rowWrap">
+										$mec_timelinr_col_forstart$
+										<div class="colWrap">
+											${colfield}
+										</div>
+										$mec_timelinr_col_forend$
+									</div>
+									$mec_timelinr_row_forend$
+								</div>
+								<div class="line"></div>
+								$mec_timelinr_group_forend$
+							</div>
+						</td>
+					</tr>
+					$mec_forend$
+				</table>
+				
+				${loadMore}
+			</div>
+		]]>
+	</contentTemplate>
+</MEC>

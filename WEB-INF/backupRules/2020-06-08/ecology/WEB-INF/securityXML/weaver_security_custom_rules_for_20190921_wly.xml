@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<special-non>
+		<urls>
+			<url>
+				<value>/formmode/browser/CommonSingleBrowser.jsp</value>
+				<params>
+				  <param>
+					<value>sqlwhere</value>
+					<rules>
+					  <rule>##sqlkeyword1##</rule>
+					</rules>
+				  </param>
+				</params>
+			  </url>
+			  <url>
+				<value>/formmode/search/CustomSearchBySimpleIframe.jsp</value>
+				<params>
+				  <param>
+					<value>treesqlwhere</value>
+					<rules>
+					  <rule>##sqlkeyword1##</rule>
+					</rules>
+				  </param>
+				</params>
+			  </url>
+		</urls>
+	</special-non>
+</root>

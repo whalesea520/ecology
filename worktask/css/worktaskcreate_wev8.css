@@ -1,0 +1,594 @@
+body{
+    font-family: '微软雅黑';
+    font-size: 12px;
+	overflow:hidden;
+}
+#worktaskdesign{
+   /** padding:5px;**/
+}
+
+#worktaskdesign input{
+    font-size:12px;
+	border:none;
+}
+
+ .placeholder { color: #aaa; font-size:12px;}
+
+#worktaskdesign .splitline{
+    display: inline-block;
+    height: 50%;
+    border-left: 1px solid #ccc;
+    vertical-align: middle;
+}
+
+#worktaskdesign  .lf {
+    float: left;
+    height: 100%;
+}
+
+#worktaskdesign  .rf {
+    float: right;
+    height: 100%;
+}
+
+#worktaskdesign  img {
+    vertical-align: middle;
+	position: relative;
+    z-index: 10;
+}
+
+#worktaskdesign  span {
+    display: inline-block;
+    vertical-align: middle
+}
+
+#worktaskdesign .topbutton{
+	padding: 3px 12px;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+#worktaskdesign .topbutton:hover{
+	background: #30B5FF;
+	color:#fff;
+	border: 1px solid #30B5FF;
+}
+
+
+#worktaskdesign  span.middlehelper {
+    height: 100%;
+}
+
+span.normal{
+    height: 10px;
+    width: 10px;
+    border: 1px solid #f2f2f2;
+	display: inline-block;
+	background-color:#fff;
+}
+span.important{
+    height: 10px;
+    width: 10px;
+    border: 1px solid #ccc;
+	display: inline-block;
+	background-color:rgb(242, 169, 91);
+}
+span.urge{
+    height: 10px;
+    width: 10px;
+    border: 1px solid #ccc;
+	display: inline-block;
+	background-color:rgb(242, 91, 91);
+}
+#worktaskdesign .datepic{
+   cursor:pointer;
+}
+#worktaskdesign .chargername{
+   margin-left:-21px;
+}
+
+/*附件描述信息*/
+#worktaskdesign  .filedes{
+  vertical-align: middle;
+  padding: 3px 5px;
+  background: #eee;
+  border-radius: 10px;
+  margin-right: 3px;
+}
+#worktaskdesign .filecontainer{
+  display:inline-block;
+  padding:10px 5px;
+  margin-right: 10px;
+}
+
+#worktaskdesign .fileclose:hover{
+  color:#008ff3;
+  cursor:pointer;
+}
+
+/**-----行头css--- **/
+#worktaskdesign .worktask_base {
+    height: 30px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+#worktaskdesign .worktask_base img.datepic {
+    margin-left: 15px;
+	cursor:pointer;
+}
+
+#worktaskdesign .worktask_base img.trace {
+    margin-right: 10px;
+}
+
+#worktaskdesign .worktask_base img.opmenu {
+    margin-right: 10px;
+}
+
+#worktaskdesign .worktask_base img.saveitem {
+    margin-right: 10px;
+}
+
+#worktaskdesign .worktask_base img.closeitem {
+    margin-left: 10px;
+    margin-right: 8px;
+}
+#worktaskdesign .worktask_base span.dutyman {
+
+}
+
+#worktaskdesign .resourceselection .e8_innerShow_button {
+   display:none;
+}
+#worktaskdesign .resourceselection  .e8_outScroll{
+   border-left:none;
+}
+#worktaskdesign .resourceselection .e8_innerShowContent{
+  border:none;
+}
+#worktaskdesign .resourceselection{
+   margin-left:-21px;
+}
+
+/**任务单详细信息**/
+.worktask_detaillist{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#worktaskdesign .worktask_detailinfo{
+	 overflow-x: hidden;
+}
+
+#worktaskdesign .worktask_detailinfo .headinfo{
+    height: 40px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+#worktaskdesign .worktask_detailinfo .fieldinfo{
+	border-bottom: 1px solid #f2f2f2;
+	padding-left: 32px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	position:relative;
+}
+
+.fieldinfo .taskcontent{
+   padding-bottom: 0px;
+}
+
+#worktaskdesign .worktask_detailinfo .taskcontentdes{
+	width:99%;
+}
+
+#worktaskdesign .worktask_detailinfo .fieldinfo .label{
+    margin-right: 30px;
+	width: 80px;
+}
+/*任务清单信息*/
+#worktaskdesign .worktasklist .head{
+    width: 99%;
+    margin: 0 auto;
+    height: 40px;
+    text-align: center;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+#worktaskdesign .worktasklist .head .addpaddingbottom{
+    vertical-align: bottom;
+    padding-bottom: 5px;
+    padding-right: 5px;
+	cursor:pointer;
+	padding-left: 7px;
+}
+#worktaskdesign .worktasklist .listbody table{
+    table-layout: fixed;
+    width: 100%;
+}
+#worktaskdesign .worktasklist .listbody table tr{
+    height: 35px;
+	width:100%;
+}
+#worktaskdesign .worktasklist .listbody table td{
+    padding-left: 10px;
+}
+#worktaskdesign .worktasklist span.normal{
+    margin-right: 10px;
+}
+
+#worktaskdesign .worktasklist input{
+  margin-left: 3px;
+  width: 195px
+}
+
+/**任务相关信息面板**/
+#worktaskdesign  .worktasktabs{
+	margin-top: 40px;
+	margin-bottom: 100px;
+}
+
+#worktaskdesign  .worktasktabs .tabheader{
+	list-style-type: none;
+	overflow: hidden;
+	background-color: #F5F9FC;
+}
+
+#worktaskdesign  .tabheader li{
+	display: inline-block;
+	width: 85px;
+	padding: 10px 12px;
+	text-align: center;
+	border-top: 2px solid #F5f9fc;
+	cursor:pointer;
+}
+#worktaskdesign  .worktasktabs li.firsttabselected{
+	border-top: 2px solid #5DB8F1;
+	border-right: 1px solid #ccc;
+	background-color: #ffffff;
+	border-bottom:1px solid #ffffff;
+}
+#worktaskdesign  .worktasktabs li.tabselected{
+	border-top: 2px solid #5DB8F1;
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	background-color: #ffffff;
+	border-bottom:1px solid #ffffff;
+}
+#worktaskdesign  .worktasktabs  .headlinetop{
+	height:0px;
+	width:100%;
+    border-top:1px solid #F1F2F4;
+}
+#worktaskdesign  .worktasktabs  .headlinebottom{
+	height:0px;
+	width:100%;
+    border-top:1px solid #F1F2F4;
+	margin-top:-1px;
+}
+#worktaskdesign  .worktasktabs   .panel{
+   display:none;
+   position:relative;
+}
+
+/*任务交流*/
+#worktaskdesign  #taskexchange ul{
+  list-style-type:none;
+  margin-bottom: 100px;
+}
+#worktaskdesign  #taskexchange li{
+  overflow:auto;
+  width:100%;
+  position:relative;
+  min-height: 30px;
+  padding: 5px;
+}
+#worktaskdesign  #taskexchange .timeinfo{
+	padding-bottom: 7px;
+	color: #B6B6B6;
+}
+
+#worktaskdesign  #taskexchange .cdate{
+   margin-right: 10px;
+}
+
+#worktaskdesign  #taskexchange .lcommentcontainer{
+	  float:left;
+	  /**width:80%;**/
+	  clear: both;
+}
+
+#worktaskdesign  #taskexchange .lcommentinfo{
+    display: inline-block;
+	float: left;
+	padding: 10px; 
+	color: #999;
+}
+#worktaskdesign  #taskexchange .lcomment{ 
+   overflow:auto;
+   padding: 12px; 
+   position:relative;
+   padding-left: 0;
+}
+#worktaskdesign  #taskexchange .bluepoint{
+    position: absolute;
+	top: 18px;
+	left: 1px;
+}
+#worktaskdesign  #taskexchange .limgpointerholder{
+  float: left;
+  display:inline-block;
+  width:8px;
+  height:8px;
+}
+#worktaskdesign  #taskexchange  .lcommentdetail{
+    overflow: auto;
+	padding-top: 7px;
+	padding-left: 14px;
+	padding-right: 14px;
+	border: 1px solid #BEE8FF;
+	border-radius: 5px;
+	word-break: break-all;
+	margin-right: 53px;
+}
+
+#worktaskdesign  #taskexchange .rcommentcontainer{
+	  float:right;
+	  /**width:80%;**/
+	  clear: both;
+}
+#worktaskdesign  #taskexchange .rcommentinfo{
+    display: inline-block;
+	float: right;
+	padding: 12px; 
+	color: #999;
+	padding-right: 18px;
+}
+#worktaskdesign  #taskexchange .rcomment{ 
+   overflow:auto;
+   padding: 12px; 
+   position:relative;
+   padding-right: 1px;
+}
+
+#worktaskdesign  #taskexchange .greypoint{ 
+    position: absolute;
+	top: 18px;
+	right: 2px;
+}
+
+#worktaskdesign  #taskexchange .rimgpointerholder{
+  float: right;
+  display:inline-block;
+  width:8px;
+  height:8px;
+}
+#worktaskdesign  #taskexchange  .rcommentdetail{
+    overflow: auto;
+	padding-top: 7px;
+	padding-left: 14px;
+	padding-right: 14px;
+	border: 1px solid #bde9ff;
+	border-radius: 5px;
+	word-break: break-all;
+	margin-left: 52px;
+}
+
+/*相关资源*/
+#worktaskdesign  #taskresource  table{
+   table-layout:fixed;
+   width:100%;
+   border-collapse: collapse;
+} 
+#worktaskdesign  #taskresource .resourcecontainer{
+   padding:10px;
+}
+#worktaskdesign  #taskresource  table td{
+  padding:8px 10px;
+}
+
+#worktaskdesign  #taskremind .remindtable{
+  table-layout:fixed;
+  border-collapse: collapse;
+  width:100%;
+}
+#worktaskdesign  #taskremind  table td{
+  padding:8px 10px;
+}
+#worktaskdesign  #taskremind .remindcontainer{
+  padding:10px;
+}
+#worktaskdesign  #taskremind input{
+ border:1px solid #E9E9E2;
+}
+
+#worktaskmsg{
+width: 100%;
+/* height: 100%; */
+position: absolute;
+left: 0px;
+top: 0px;
+bottom: 0px;
+text-align: center;
+background: #fff;
+z-index: 10010;
+padding-top: 15%;
+display:none
+}
+
+/*操作日志*/
+#worktaskdesign  #tasklog  {
+   min-height:50px;
+   position:relative;
+}
+#worktaskdesign  #tasklog  table{
+   table-layout:fixed;
+   width:100%;
+   border-collapse: collapse;
+   margin-top: 10px;
+} 
+#worktaskdesign  #tasklog  table td{
+  padding:8px 28px;
+  text-align: left;
+  vertical-align: middle;
+}
+#worktaskdesign  #tasklog  tr:hover{
+  background:#F5F9FC;
+}
+/*
+ 轨迹样式
+*/
+ .taskitems{
+    position: relative;
+ }
+ .taskitems .taskvline{
+     position: absolute;
+     top: 20px;
+     bottom: 32px;
+     border-left: 1px solid #ccc;
+     left: 30px;
+ }
+ .taskitems .taskitem{
+     height: 50px;
+     padding: 15px 5px;
+     position: relative;
+ }
+ .taskitems .middlehelper{
+     height: 100%;
+     display: inline-block;
+     vertical-align: middle;
+ }
+
+
+
+ .taskitems .taskitem .taskbegin{
+      vertical-align: middle;
+      display: inline-block;
+      background-image: url(../images/linebegin_wev8.png);
+      height: 15px;
+      width: 15px;
+      margin-left: 14px;
+      background-color: #fff;
+  }
+
+ .taskitems .taskitem .taskmiddle{
+      vertical-align: middle;
+      display: inline-block;
+      background-image: url(../images/linemiddle_wev8.png);
+      height: 15px;
+      width: 15px;
+      margin-left: 14px;
+      background-color: #fff;
+  }
+
+ .taskitems .taskitem .tasknow{
+      vertical-align: middle;
+      display: inline-block;
+      background-image: url(../images/linenow_wev8.png);
+      height: 42px;
+      width: 42px;
+      background-color: #fff;
+      text-align: center;
+      line-height: 42px;
+      color: #fff;
+  }
+
+ .taskitems .taskitem .tasklinenow{
+      width: 17px;
+      border-bottom: 1px solid #ccc;
+      vertical-align: middle;
+      display: inline-block;
+
+
+  }
+ .taskitems .taskitem .taskline{
+     width: 30px;
+     border-bottom: 1px solid #ccc;
+     vertical-align: middle;
+     display: inline-block;
+
+ }
+
+ .taskitems .taskmargin{
+     margin-left: -3px;
+ }
+
+ .taskitems .taskitem .taskinfo{
+     display: inline-block;
+     vertical-align: middle;
+     height: 100%;
+     border: 1px solid #ccc;
+     width: 150px;
+     border-radius: 5px;
+ }
+ .taskitems .taskitem .taskinfo > div{
+     padding: 3px;
+ }
+ .taskitems .taskitem .taskuser{
+     display: inline-block;
+     vertical-align: middle;
+ }
+ .taskitems .taskitem .tasksplitline{
+     display: inline-block;
+     vertical-align: middle;
+ }
+ .taskitems .taskitem .taskstatus{
+     display: inline-block;
+     vertical-align: middle;
+     color:#00A9FF;
+ }
+ .taskitems .taskitem .taskdate{
+     display: inline-block;
+     vertical-align: middle;
+
+ }
+ .taskitems .taskitem .tasktime{
+     display: inline-block;
+     vertical-align: middle;
+     color: #9B9B9B;
+     margin-left: 5px;
+ }
+ 
+ #urgelevellist{
+   display: none;
+   background: #fff;
+}
+
+.urgelevellist_ul{
+   border: 1px solid #fef2f2;
+}
+
+.urgelevellist_ul li {
+	line-height: 25px;
+	color: #B9B9B9;
+	font-size: 12px;
+}
+
+.urgelevellist_ul li:hover {
+	background: #f4fafc;
+	cursor: pointer;
+}
+
+.remindmsg{
+   width: 100%;
+	padding-left: 9px;
+	border-bottom: 1px solid #f2f2f2;
+	font-weight: bold;
+	padding-top: 4px;
+	height: 23px;
+}
+ 
+ .wtshare{
+		position: fixed;
+		right: 10px;
+		bottom: 45px;
+		font-size: 30px;
+		background-color: #AEDBF8;
+		color: #fff;
+		height: 40px;
+		cursor: pointer;
+		line-height: 40px;
+		width: 35px;
+		border-radius: 10px;
+		text-align: center;
+		z-index: 10010;
+}

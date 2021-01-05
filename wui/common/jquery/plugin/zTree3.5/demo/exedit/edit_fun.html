@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> ZTREE DEMO - addNodes / editName / removeNode / removeChilds</TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../../css/demo.css" type="text/css">
+	<link rel="stylesheet" href="../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="../../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ztree.core-3.0.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ztree.excheck-3.0.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ztree.exedit-3.0.js"></script>
+	<SCRIPT LANGUAGE="JavaScript">
+		<!--
+		var setting = {
+			view: {
+				selectedMulti: false
+			},
+			edit: {
+				enable: true,
+				showRemoveBtn: false,
+				showRenameBtn: false
+			},
+			data: {
+				keep: {
+					parent:true,
+					leaf:true
+				},
+				simpleData: {
+					enable: true
+				}
+			},
+			callback: {
+				beforeDrag: beforeDrag,
+				beforeRename: beforeRename
+			}
+		};
+
+		var zNodes =[
+			{ id:1, pId:0, name:"鐖惰妭鐐?", open:true},
+			{ id:11, pId:1, name:"鍙跺瓙鑺傜偣11"},
+			{ id:12, pId:1, name:"鍙跺瓙鑺傜偣12"},
+			{ id:13, pId:1, name:"鍙跺瓙鑺傜偣13"},
+			{ id:2, pId:0, name:"鐖惰妭鐐?", open:true},
+			{ id:21, pId:2, name:"鍙跺瓙鑺傜偣21"},
+			{ id:22, pId:2, name:"鍙跺瓙鑺傜偣22"},
+			{ id:23, pId:2, name:"鍙跺瓙鑺傜偣23"},
+			{ id:3, pId:0, name:"鐖惰妭鐐?", open:true },
+			{ id:31, pId:3, name:"鍙跺瓙鑺傜偣31"},
+			{ id:32, pId:3, name:"鍙跺瓙鑺傜偣32"},
+			{ id:33, pId:3, name:"鍙跺瓙鑺傜偣33"}
+		];
+		function beforeDrag(treeId, treeNodes) {
+			return false;
+		}
+		function beforeRename(treeId, treeNode, newName) {
+			if (newName.length == 0) {
+				alert("鑺傜偣鍚嶇О涓嶈兘涓虹┖.");
+				return false;
+			}
+			return true;
+		}
+
+		var newCount = 1;
+		function add(e) {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			isParent = e.data.isParent,
+			nodes = zTree.getSelectedNodes(),
+			treeNode = nodes[0];
+			if (treeNode) {
+				treeNode = zTree.addNodes(treeNode, {id:(100 + newCount), pId:treeNode.id, isParent:isParent, name:"new node" + (newCount++)});
+			} else {
+				treeNode = zTree.addNodes(null, {id:(100 + newCount), pId:0, isParent:isParent, name:"new node" + (newCount++)});
+			}
+			if (treeNode) {
+				zTree.editName(treeNode[0]);
+			} else {
+				alert("鍙跺瓙鑺傜偣琚攣瀹氾紝鏃犳硶澧炲姞瀛愯妭鐐?);
+			}
+		};
+		function edit() {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			nodes = zTree.getSelectedNodes(),
+			treeNode = nodes[0];
+			if (nodes.length == 0) {
+				alert("璇峰厛閫夋嫨涓€涓妭鐐?);
+				return;
+			}
+			zTree.editName(treeNode);
+		};
+		function remove(e) {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			nodes = zTree.getSelectedNodes(),
+			treeNode = nodes[0];
+			if (nodes.length == 0) {
+				alert("璇峰厛閫夋嫨涓€涓妭鐐?);
+				return;
+			}
+			zTree.removeNode(treeNode);
+		};
+		function clearChilds(e) {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			nodes = zTree.getSelectedNodes(),
+			treeNode = nodes[0];
+			if (nodes.length == 0 || !nodes[0].isParent) {
+				alert("璇峰厛閫夋嫨涓€涓埗鑺傜偣");
+				return;
+			}
+			zTree.removeChilds(treeNode);
+		};
+		
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			$("#addParent").bind("click", {isParent:true}, add);
+			$("#addLeaf").bind("click", {isParent:false}, add);
+			$("#edit").bind("click", edit);
+			$("#remove").bind("click", remove);
+			$("#clearChilds").bind("click", clearChilds);
+		});
+		//-->
+	</SCRIPT>
+</HEAD>
+
+<BODY>
+<h1>鐢?zTree 鏂规硶 澧?/ 鍒?/ 鏀?鑺傜偣</h1>
+<h6>[ 鏂囦欢璺緞锛歞emo/exedit/edit_fun.html ]</h6>
+<div class="content_wrap">
+	<div class="zTreeDemoBackground left">
+		<ul id="treeDemo" class="ztree"></ul>
+	</div>
+	<div class="right">
+		<ul class="info">
+			<li class="title"><h2>1銆乤ddNodes / editName / removeNode / removeChilds 鏂规硶鎿嶄綔璇存槑</h2>
+				<ul class="list">
+				<li>鍒╃敤 addNodes /  / editName / removeNode / removeChilds 鏂规硶涔熷彲浠ュ疄鐜?澧?/ 鍒?/ 鏀?鑺傜偣鐨勭洰鐨勶紝杩欓噷绠€鍗曟紨绀轰娇鐢ㄦ柟娉?/li>
+				<li>cancelEditName 鏂规硶浠呬粎鏄湪鑺傜偣杩涘叆鍚嶇О缂栬緫鐘舵€佹椂鏈夋晥锛岃鍦ㄥ繀瑕佹椂浣跨敤锛孌emo 涓嶈繘琛屾鏂规硶鐨勬紨绀?/li>
+				<li class="highlight_red">鍒╃敤 setting.data.keep.parent / leaf 灞炴€?瀹炵幇浜嗙埗鑺傜偣銆佸彾瀛愯妭鐐圭殑鐘舵€侀攣瀹?/li>
+				<li><p>瀵硅妭鐐硅繘琛?澧?/ 鍒?/ 鏀癸紝璇曡瘯鐪嬶細<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;[ <a id="addParent" href="#" title="澧炲姞鐖惰妭鐐? onclick="return false;">澧炲姞鐖惰妭鐐?/a> ]
+					&nbsp;&nbsp;&nbsp;&nbsp;[ <a id="addLeaf" href="#" title="澧炲姞鍙跺瓙鑺傜偣" onclick="return false;">澧炲姞鍙跺瓙鑺傜偣</a> ]
+					&nbsp;&nbsp;&nbsp;&nbsp;[ <a id="edit" href="#" title="淇敼鑺傜偣" onclick="return false;">淇敼鑺傜偣</a> ]<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;[ <a id="remove" href="#" title="鍒犻櫎鑺傜偣" onclick="return false;">鍒犻櫎鑺傜偣</a> ]
+					&nbsp;&nbsp;&nbsp;&nbsp;[ <a id="clearChilds" href="#" title="娓呯┖瀛愯妭鐐? onclick="return false;">娓呯┖瀛愯妭鐐?/a> ]<br/>
+				<li class="highlight_red">浣跨敤 zTreeObj.addNodes / cancelEditName / editName / removeNode / removeChilds 鏂规硶锛岃缁嗚鍙傝 API 鏂囨。涓殑鐩稿叧鍐呭</li>
+				</ul>
+			</li>
+			<li class="title"><h2>2銆乻etting 閰嶇疆淇℃伅璇存槑</h2>
+				<ul class="list">
+				<li>鍚?"鍩烘湰 澧?/ 鍒?/ 鏀?鑺傜偣"</li>
+				<li class="highlight_red">淇濇寔 鐖?/ 鍙跺瓙 鑺傜偣鐘舵€侊紝闇€瑕佽缃?setting.data.keep.parent / leaf 灞炴€э紝璇︾粏璇峰弬瑙?API 鏂囨。涓殑鐩稿叧鍐呭</li>
+				</ul>
+			</li>
+			<li class="title"><h2>3銆乼reeNode 鑺傜偣鏁版嵁璇存槑</h2>
+				<ul class="list">
+				<li>鍚?"鍩烘湰 澧?/ 鍒?/ 鏀?鑺傜偣"</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+</BODY>
+</HTML>

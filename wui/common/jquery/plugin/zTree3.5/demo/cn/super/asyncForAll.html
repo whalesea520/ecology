@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> ZTREE DEMO - async for All</TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../../../css/demo.css" type="text/css">
+	<link rel="stylesheet" href="../../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="../../../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../../js/jquery.ztree.core-3.5.js"></script>
+	<!--<script type="text/javascript" src="../../../js/jquery.ztree.excheck-3.5.js"></script>
+	<script type="text/javascript" src="../../../js/jquery.ztree.exedit-3.5.js"></script>-->
+	<SCRIPT type="text/javascript">
+		<!--
+		var demoMsg = {
+			async:"姝ｅ湪杩涜寮傛鍔犺浇锛岃绛変竴浼氬効鍐嶇偣鍑?..",
+			expandAllOver: "鍏ㄩ儴灞曞紑瀹屾瘯",
+			asyncAllOver: "鍚庡彴寮傛鍔犺浇瀹屾瘯",
+			asyncAll: "宸茬粡寮傛鍔犺浇瀹屾瘯锛屼笉鍐嶉噸鏂板姞杞?,
+			expandAll: "宸茬粡寮傛鍔犺浇瀹屾瘯锛屼娇鐢?expandAll 鏂规硶"
+		}
+		var setting = {
+			async: {
+				enable: true,
+				url:"../asyncData/getNodes.php",
+				autoParam:["id", "name=n", "level=lv"],
+				otherParam:{"otherParam":"zTreeAsyncTest"},
+				dataFilter: filter,
+				type: "get"
+			},
+			callback: {
+				beforeAsync: beforeAsync,
+				onAsyncSuccess: onAsyncSuccess,
+				onAsyncError: onAsyncError
+			}
+		};
+
+		function filter(treeId, parentNode, childNodes) {
+			if (!childNodes) return null;
+			for (var i=0, l=childNodes.length; i<l; i++) {
+				childNodes[i].name = childNodes[i].name.replace(/\.n/g, '.');
+			}
+			return childNodes;
+		}
+
+		function beforeAsync() {
+			curAsyncCount++;
+		}
+		
+		function onAsyncSuccess(event, treeId, treeNode, msg) {
+			curAsyncCount--;
+			if (curStatus == "expand") {
+				expandNodes(treeNode.children);
+			} else if (curStatus == "async") {
+				asyncNodes(treeNode.children);
+			}
+
+			if (curAsyncCount <= 0) {
+				if (curStatus != "init" && curStatus != "") {
+					$("#demoMsg").text((curStatus == "expand") ? demoMsg.expandAllOver : demoMsg.asyncAllOver);
+					asyncForAll = true;
+				}
+				curStatus = "";
+			}
+		}
+
+		function onAsyncError(event, treeId, treeNode, XMLHttpRequest, textStatus, errorThrown) {
+			curAsyncCount--;
+
+			if (curAsyncCount <= 0) {
+				curStatus = "";
+				if (treeNode!=null) asyncForAll = true;
+			}
+		}
+
+		var curStatus = "init", curAsyncCount = 0, asyncForAll = false,
+		goAsync = false;
+		function expandAll() {
+			if (!check()) {
+				return;
+			}
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+			if (asyncForAll) {
+				$("#demoMsg").text(demoMsg.expandAll);
+				zTree.expandAll(true);
+			} else {
+				expandNodes(zTree.getNodes());
+				if (!goAsync) {
+					$("#demoMsg").text(demoMsg.expandAll);
+					curStatus = "";
+				}
+			}
+		}
+		function expandNodes(nodes) {
+			if (!nodes) return;
+			curStatus = "expand";
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+			for (var i=0, l=nodes.length; i<l; i++) {
+				zTree.expandNode(nodes[i], true, false, false);
+				if (nodes[i].isParent && nodes[i].zAsync) {
+					expandNodes(nodes[i].children);
+				} else {
+					goAsync = true;
+				}
+			}
+		}
+
+		function asyncAll() {
+			if (!check()) {
+				return;
+			}
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+			if (asyncForAll) {
+				$("#demoMsg").text(demoMsg.asyncAll);
+			} else {
+				asyncNodes(zTree.getNodes());
+				if (!goAsync) {
+					$("#demoMsg").text(demoMsg.asyncAll);
+					curStatus = "";
+				}
+			}
+		}
+		function asyncNodes(nodes) {
+			if (!nodes) return;
+			curStatus = "async";
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+			for (var i=0, l=nodes.length; i<l; i++) {
+				if (nodes[i].isParent && nodes[i].zAsync) {
+					asyncNodes(nodes[i].children);
+				} else {
+					goAsync = true;
+					zTree.reAsyncChildNodes(nodes[i], "refresh", true);
+				}
+			}
+		}
+
+		function reset() {
+			if (!check()) {
+				return;
+			}
+			asyncForAll = false;
+			goAsync = false;
+			$("#demoMsg").text("");
+			$.fn.zTree.init($("#treeDemo"), setting);
+		}
+
+		function check() {
+			if (curAsyncCount > 0) {
+				$("#demoMsg").text(demoMsg.async);
+				return false;
+			}
+			return true;
+		}
+
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting);
+			$("#expandAllBtn").bind("click", expandAll);
+			$("#asyncAllBtn").bind("click", asyncAll);
+			$("#resetBtn").bind("click", reset);
+		});
+		//-->
+	</SCRIPT>
+</HEAD>
+
+<BODY>
+<h1>寮傛鍔犺浇妯″紡涓嬪叏閮ㄥ睍寮€</h1>
+<h6>[ 鏂囦欢璺緞: super/asyncForAll.html ]</h6>
+<div class="content_wrap">
+	<div class="zTreeDemoBackground left">
+		<ul id="treeDemo" class="ztree"></ul>
+	</div>
+	<div class="right">
+		<ul class="info">
+			<li class="title"><h2>瀹炵幇鏂规硶璇存槑</h2>
+				<ul class="list">
+				<li>鍒╃敤 onAsyncSuccess / onAsyncError 鍥炶皟鍑芥暟 鍜?reAsyncChildNodes 鎴?expandNode 鏂规硶鍙互瀹炵幇鍏ㄩ儴鍔熻兘銆?/li>
+				<li class="highlight_red">濡傛灉鐖惰妭鐐规暟閲忓緢澶э紝璇锋敞鎰忓埄鐢ㄥ欢鏃惰繘琛屾帶鍒讹紝閬垮厤寮傛杩涚▼杩囧銆?/li>
+				<li class="highlight_red">寤鸿锛氭紨绀烘椂璇峰埄鐢ㄨ皟璇曞伐鍏锋煡鐪?network 鐨?ajax 鍔犺浇杩囩▼銆?/li>
+				<li>婕旂ず鎿嶄綔
+					<br/><br/>
+				[ <a id="expandAllBtn" href="#" onclick="return false;">鍏ㄩ儴灞曞紑</a> ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				[ <a id="asyncAllBtn" href="#" onclick="return false;">鍚庡彴鑷姩鍏ㄩ儴鍔犺浇</a> ]<br/><br/>
+				[ <a id="resetBtn" href="#" onclick="return false;">Reset zTree</a> ]<br/><br/>
+				<p class="highlight_red" id="demoMsg"></p>
+				</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+</BODY>
+</HTML>

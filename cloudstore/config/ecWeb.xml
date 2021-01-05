@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<web-app>
+	<filter>
+		<filter-name>CloudStore</filter-name>
+		<filter-class>com.cloudstore.api.util.Util_MyFilter</filter-class>
+	</filter>
+	<filter-mapping>
+	<filter-name>CloudStore</filter-name>
+		<url-pattern>/cloudstore/app/*</url-pattern>
+	</filter-mapping>
+	<servlet>
+		<servlet-name>CloudStoreInit</servlet-name>
+		<servlet-class>com.cloudstore.api.util.Util_InitSys</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<filter>
+		<filter-name>CloudStoreCompatible</filter-name>
+		<filter-class>com.cloudstore.api.util.Util_CompatibleFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CloudStoreCompatible</filter-name>
+		<url-pattern>/workflow/request/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CloudStoreCompatible</filter-name>
+		<url-pattern>/formmode/view/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CloudStoreCompatible</filter-name>
+		<url-pattern>*.svg</url-pattern>
+	</filter-mapping>
+		
+	
+	<!-- <filter bef-node="filter" bef-sub-node="filter-name"  bef-sub-node-cont="ConnFastFilter" >
+		<filter-name>CloudStoreMobileFilter</filter-name>
+		<filter-class>com.cloudstore.api.util.Util_MobileFilter</filter-class>
+	</filter> 
+	
+	<filter-mapping bef-node="filter" bef-sub-node="filter-name"  bef-sub-node-cont="ConnFastFilter">
+		<filter-name>CloudStoreMobileFilter</filter-name>
+		<url-pattern>/cloudstore/*</url-pattern>
+	</filter-mapping>
+	-->
+	
+	
+	<servlet>
+		<servlet-name>restservlet</servlet-name>
+		<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+		<init-param>
+			<param-name>com.sun.jersey.config.property.packages</param-name>
+			<param-value>com.cloudstore;com.api</param-value>
+		</init-param>
+	<!--<load-on-startup>1</load-on-startup> -->
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>restservlet</servlet-name>
+		<url-pattern>/api/*</url-pattern>
+	</servlet-mapping>
+
+	
+	
+	<filter-mapping bef-node="filter-mapping" bef-sub-node="url-pattern"  bef-sub-node-cont="/mobile/plugin/*">
+		<filter-name>Mobile</filter-name>
+		<url-pattern>/cloudstore/*</url-pattern>
+	</filter-mapping>
+</web-app>

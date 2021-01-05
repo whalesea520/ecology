@@ -1,0 +1,11 @@
+{
+  "name": "easydropdown",
+  "version": "2.1.3",
+  "main": "src/jquery.easydropdown.js",
+  "scripts": [
+  	"src/jquery.easydropdown.js"
+  ],
+  "styles": [
+  	"themes/easydropdown.css"
+  ]
+}

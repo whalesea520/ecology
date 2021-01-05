@@ -1,0 +1,97 @@
+.noButton{
+	color: #bbb;
+	font-size: 14px;
+	font-family: 'Microsoft Yahei',Arial, Helvetica, sans-serif;
+	padding: 9px 5px 9px 22px;
+}
+.buttonContainer{
+	padding: 3px;
+	overflow: hidden;
+}
+.buttonContainer .mecButton{
+	font-size: 15px;
+	font-weight: 400;
+	font-family: 'Microsoft Yahei',Arial, Helvetica, sans-serif;
+	cursor: pointer !important;
+	border: 1px solid #017afd;
+	border-radius: 3px;
+	color: #017afd;
+	filter:alpha(opacity=100);
+    opacity: 1;
+	padding: 5px 10px 5px 10px;
+	height:22px;
+}
+.buttonContainer .fixedButton{
+	float: left;
+	margin-right: 10px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	position: relative;
+}
+.buttonContainer .relativeButtonFrame{
+	position:relative;
+	display: table-cell;
+	width: 1%;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-tap-highlight-color: transparent;
+	box-sizing: border-box;
+}
+.buttonContainer .relativeButton{
+	display: block;
+	margin: 3px;
+	position: relative;
+}
+.buttonContainer .mecButton:active{
+	box-shadow: 0 0 3px #017afd;
+}
+
+.buttonContainer .Button_NumRemind{
+	position: absolute;
+	background-color: red;
+	width:22px;
+	height:22px;
+	line-height:22px;
+	border-radius:22px;
+	color:#fff;
+	top:0px;
+	right:0px;
+	text-align: center;
+	font-size:10px;
+}
+.buttonContainer .fixedButton .Button_NumRemind{
+	top:-5px;
+	right:-6px;
+}
+.buttonContainer .Button_image{
+	line-height:0;
+	width:18px;
+	height:18px;
+	vertical-align: middle;
+	border:none;
+	margin: 0 5px;
+}
+.buttonContainer .mecButton span{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    border: 0;
+}
+.buttonContainer .mecButton span.image{
+    width:20px;
+    height:20px;
+    padding:0 5px;
+}
+.buttonContainer .mecButton span img{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 0;
+}
+
+
+
+
+
+

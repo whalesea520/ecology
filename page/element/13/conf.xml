@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<id>13</id>  <!--只能是唯一的英文字母-->
+	<title>未读协作</title>
+	<titleEN>Unread Cooperation</titleEN>
+	<desc>未读协作</desc>
+	<icon>resource/image/13_wev8.gif</icon>
+	<linkMode>2</linkMode>
+	<loginView>0</loginView>
+	<type>1</type>
+	<perpage>5</perpage>
+	<private>
+		<jsList> 
+		</jsList>
+	</private>
+	<public>
+		<jsIdList>  
+		</jsIdList>
+		<cssIdList>
+		</cssIdList>
+	</public>
+	<view>
+		<url>/page/element/compatible/view.jsp</url>
+		<method>getNewCworkSppb</method>
+	</view>
+	<setting>
+		<url>/page/element/compatible/setting.jsp</url>
+		<method>getCworkSettingStr</method>
+	</setting>
+	<more>
+		<url>/page/element/compatible/more.jsp</url>
+		<method>getNoReadCword</method>
+	</more>
+	<operation>/page/element/compatible/operation.jsp</operation>
+</root>

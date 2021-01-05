@@ -1,0 +1,51 @@
+.wea-input-normal {
+    min-height: 28px;
+    font-size: 12px;
+    color: #000;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.wea-input-normal .text {
+    display: inline-block;
+    height: 100%;
+}
+
+.wea-input-normal .ant-input {
+    height: inherit;
+    min-height: 28px;
+    font-size: inherit;
+    padding: 0;
+    padding-left: 5px;
+    border-radius: 0px;
+}
+
+.wea-input-normal .ant-input-wrapper {
+    width: 100%;
+    display: inline-block;
+    height: inherit;
+}
+
+.wea-input-normal .passwordStrength-wrap {
+    position: absolute;
+    right: -260px;
+    top: 0;
+    width: 250px;
+    height: 34px;
+    background-color: #FDFFEA;
+    border: 1px solid #D2EA00;
+    color: #333333;
+    padding: 2px 5px;
+}
+
+.wea-input-normal .passwordStrength-tip {
+    position: absolute;
+    top: 3px;
+    line-height: normal;
+}
+
+.wea-input-normal .passwordStrength-item {
+    position: absolute;
+    bottom: 3px;
+}

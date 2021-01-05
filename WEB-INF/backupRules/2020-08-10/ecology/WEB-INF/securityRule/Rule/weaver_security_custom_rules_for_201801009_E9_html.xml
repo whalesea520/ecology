@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<special-non>
+		<urls>
+				  <url>
+					<value>/api/cube/mode/mode/savePageExpendList</value>
+					<params>
+					   <param>
+						<is-dynamic-param>0</is-dynamic-param>
+						<value>hreftarget</value>
+						<rules>
+						  <rule>##CONST:CODE##</rule>
+						</rules>
+					  </param>
+					</params>
+				 </url>
+				  <url>
+					<value>/api/cube/mode/list/checkfileAddress</value>
+					<params>
+					   <param>
+						<is-dynamic-param>0</is-dynamic-param>
+						<value>hreftarget</value>
+						<rules>
+						  <rule>##CONST:CODE##</rule>
+						</rules>
+					  </param>
+					</params>
+				 </url>
+				
+		</urls>
+		</special-non>
+</root>

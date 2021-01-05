@@ -1,0 +1,67 @@
+alter table fnaFeeWfInfo add overStandardTips VARCHAR(4000)
+GO
+
+ALTER TABLE fnaFeeWfInfoField ADD fieldValue VARCHAR(4000)
+GO
+
+ALTER TABLE fnaFeeWfInfoField ADD fieldValType int
+GO
+
+ALTER TABLE fnaFeeWfInfoField ADD fcsGuid1 char(32)
+GO
+
+
+
+
+create table FnaCostStandard(
+  guid1 char(32) PRIMARY KEY, 
+  name VARCHAR(100), 
+  paramtype int, 
+  browsertype int, 
+  compareoption1 int, 
+  enabled int, 
+  orderNumber DECIMAL(5, 2), 
+  Description VARCHAR(4000) 
+)
+GO
+
+CREATE NONCLUSTERED INDEX [idx_fcs_2] ON [FnaCostStandard](
+	[name] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+GO
+CREATE NONCLUSTERED INDEX [idx_fcs_3] ON [FnaCostStandard](
+	[enabled] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+GO
+
+
+create table FnaCostStandardDefi(
+  guid1 char(32) PRIMARY KEY, 
+  fcsdName VARCHAR(500), 
+  csAmount VARCHAR(4000), 
+  orderNumber DECIMAL(5, 2) 
+)
+GO
+
+CREATE NONCLUSTERED INDEX [idx_fcsd_2] ON [FnaCostStandardDefi](
+	[fcsdName] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+GO
+
+
+create table FnaCostStandardDefiDtl(
+  guid1 char(32) PRIMARY KEY, 
+  fcsGuid1 char(32), 
+  fcsdGuid1 char(32), 
+  valChar VARCHAR(4000)
+)
+GO
+
+CREATE NONCLUSTERED INDEX [idx_fcsdd_2] ON [FnaCostStandardDefiDtl](
+	[fcsGuid1] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+GO
+CREATE NONCLUSTERED INDEX [idx_fcsdd_3] ON [FnaCostStandardDefiDtl](
+	[fcsdGuid1] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+GO

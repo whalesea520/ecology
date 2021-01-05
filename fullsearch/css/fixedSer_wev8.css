@@ -1,0 +1,454 @@
+@charset "utf-8";
+/* CSS Document */
+
+.fixListHead{
+padding-bottom:0px;
+}
+.fixListHeadDiv{
+border-top: 0px;
+border-bottom: 1px solid #cad1d7;
+height:30px;
+text-align:left;
+background-color:RGB(236,229,248);
+}
+
+.instructionName{
+color:black;
+}
+
+.rectangular{
+background:url(/fullsearch/img/rectangularlabel.png);
+height:50px;
+width:100px;
+}
+
+.taskmaintable{
+   width: 100%;
+   height: 100%;
+   margin-left:20px;
+   margin-top:25px;
+   border: 1px solid #cad1d7;
+}
+
+.taskmaintable1{
+   width: 100%;
+   height: 100%;
+   cellpadding: 0px;
+   cellspacing: 0px;
+   border:1px soldi;
+   border-width: 1px 0 0 1px;
+}
+
+.taskmaintable1 tr{
+border: none;
+}
+
+.taskmaintable1 th{
+text-align:center;
+background:rgb(42,144,255);
+border:1px solid;
+border-color:black;
+padding:10px;
+color:white;
+border-width:1px 1px 1px 1px;
+font-weight:normal;
+}
+
+.taskmaintable1 td{
+text-align:center;
+border:1px solid;
+padding:10px;
+border-width:0 1px 1px 1px;
+}
+
+.taskmaindiv{
+   width: 100%;
+   height: 100%;
+   margin-left:20px;
+   margin-top:25px;
+   border: 1px solid #cad1d7;
+}
+
+#taskstatuslist{
+   width: 110px;
+   height: 100%;
+   border-right: 1px solid #cad1d7;
+   float:left;
+}
+
+.taskstatusobj{
+    margin:0px;
+    padding:0px;
+    height: 50px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.taskselect{
+	color: #abb7c2;
+	background: #f4fafc;
+}
+.taskcurrentselect{
+    background:rgb(254,251,239);
+}
+.tasklistselect{
+	background: #f4fafc;
+}
+
+.taskunselect{
+	color: #abb7c2;
+	background: #fff;
+}
+
+.tasklistunselect{
+	background: #fff;
+}
+
+.taskstatusnum{
+    width: 22px;
+	color: #fff;
+	height: 22px;
+	line-height: 22px;
+	border-radius: 67%;
+	position: relative;
+	right: -74px;
+	top: -58px;
+	float: left;
+	text-align: center;
+}
+
+.taskstatusline{
+   height: 1px;
+	border-bottom: 1px solid #f2f2f2;
+	margin-top: -1px;
+}
+
+.orderFullLine{
+   height: 1px;
+    width: 100%;
+    border-bottom: 1px solid #f2f2f2;
+    margin-top: -1px;
+}
+
+.taskstatusline1{
+   height: 1px;
+    width: 100%;
+    border-bottom: 1px solid #cad1d7;
+    margin-top: -1px;
+}
+
+#tasklist{
+   width: 100%;
+	height: 100%;
+	line-height:100%;
+	border-right: 1px solid #cad1d7;
+	 overflow-y: auto;
+}
+
+.file-box{ position:relative;width:340px} 
+.btn{ background-color:#FFF; border:1px solid rgb(39,173,255);color:rgb(48,181,255)} 
+.file{ position:absolute; filter:alpha(opacity:0);opacity: 0;width:48px } 
+
+#tasklisttitle{
+   width: 100%;
+	border-bottom: 1px solid #f0f3f3;
+	text-align: center;
+	font-size: 16px;
+	clear: both;
+}
+
+#tasklisttypenum{
+   width: 22px;
+	color: #fff;
+	height: 22px;
+	line-height: 22px;
+	border-radius: 50%;
+	background: #3FA969;
+	text-align: center;
+	margin: 0 auto;
+	display: inline-block;
+	font-size: 12px;
+}
+
+#tasklisttypename{
+	margin: 0 auto;
+	width: 68px;
+	text-align:left;
+	line-height: 50px;
+	height: 50px;
+	font-size: 15px;
+}
+
+.taskobjlist{
+	height: 66px;
+	width: 100%;
+	cursor: pointer;
+}
+
+
+.taskobjlisttop{
+  height: 40px;
+padding-left: 15px;
+padding-right: 15px;
+
+}
+
+.taskobjlisttop_title{
+  float: left;
+  padding-top: 7px;
+  padding-left: 5px;
+  width: 70%;
+  height: 20px;
+  overflow: hidden;
+}
+
+.taskobjlisttop_creater{
+  float: right;
+  padding-top:10px;
+}
+
+.taskobjlistbottom{
+  clear: both;
+	height: 25px;
+	margin-left: 15px;
+	margin-right: 15px;
+	border-bottom: 1px solid #f2f2f2;
+}
+
+.taskobjlistbottom_person{
+  float: left;
+  padding-left: 9px;
+  vertical-align: bottom;
+}
+
+.taskobjlistbottom_person span {
+  vertical-align: bottom;
+  display: inline-block;
+  width:80px;
+}
+
+.taskobjlistbottom_person span a{
+  vertical-align: bottom;
+  display: inline;
+}
+
+.taskobjlistbottom_complete{
+   float: right;
+}
+
+.taskobjlistbottom_complete span {
+  vertical-align: bottom;
+  display: inline-block;
+  width: 65px;
+}
+
+#tasklistdetail{
+ overflow-y: auto;
+ width: 100%;
+}
+
+#loadmsg{
+  display: none;
+  background: url(/express/task/images/bg_ahp_wev8.png);
+  position: fixed;
+  text-align: center;
+	font-weight: bold;
+	padding-top: 100px;
+	z-index: 1000;
+}
+
+#taskstatisticslist{
+  width: 100%;
+  height: 100%;
+  border-left: 1px solid #cad1d7;
+}
+
+#taskstatisticslist_top{
+   height: 95px;
+	width: 100%;
+	border-bottom: 1px solid #f2f2f2;
+	margin-left: 1px;
+}
+
+.taskstatisticslistobj{
+  width: 33%;
+  color: rgb(30, 138, 152);
+font-size: 14px;
+text-align:center;
+float:left;
+cursor: pointer;
+height: 75px;
+padding-top: 10px;
+padding-bottom: 10px;
+}
+
+.taskstatisticslist_line{
+  height: 45px;
+float: left;
+border-right: 1px solid #f2f2f2;
+margin-top: 25px;
+float:left
+}
+
+.taskstatisticslistobj_img{
+font-size: 36px;
+padding-right: 26px;
+}
+
+.taskstatisticslistobj_txt{
+padding-top: 5px;
+padding-left: 5px;
+position: fixed;
+}
+
+
+#scrollDiv{ 
+  overflow:auto;
+  margin-top: 45px;
+}
+.scrollText{
+  width: 90%;
+  height:125px;
+  min-height:25px;
+  line-height:25px;
+  overflow:hidden;
+  margin: 0 auto;
+}
+.scrollText li{
+   height:25px;
+   padding-left:10px;
+}
+
+#chartdata{
+   width: 98%;
+   max-height: 400px;
+   margin-top: 20px;
+}
+
+.worktaskorderselect{
+	display: inline;
+	width: 40px;
+	height: 50px;
+	line-height: 45px;
+	border-left: 1px solid #f2f2f2;
+	float: right;
+	border-bottom: 1px solid #fff;
+	cursor: pointer;
+}
+
+.worktaskorderunselect{
+	display: inline;
+	width: 40px;
+	height: 50px;
+	line-height: 45px;
+	float: right;
+	cursor: pointer;
+}
+
+#floatorder_list{
+   display: none;
+   background: #fff;
+}
+
+.floatorder_list_ul{
+   border: 1px solid #e5e5e5;
+   border-top: none;
+   min-height: 100px;
+   border-right: none;
+}
+
+.floatorder_list_ul li {
+	line-height: 30px;
+	border-top: none;
+	text-align: left;
+    padding-left: 27px;
+}
+
+.floatorder_liselected {
+	background: #f4fafc;
+	color: #1097e4;
+	cursor: pointer;
+}
+
+.floatorder_list_ul li:hover {
+	background: #f4fafc;
+	color: #1097e4;
+	cursor: pointer;
+}
+
+.floatorder_list_ul li a{
+	cursor: pointer;
+}
+
+#worktasksearch{
+	display: inline;
+	float: left;
+	height: 50px;
+	line-height: 47px;
+	width: 50px;
+	cursor: pointer;
+}
+
+#worktasksearchname{
+	display: inline;
+	float: left;
+	height: 50px;
+	line-height: 47px;
+	margin-left: -44px;
+	visibility: hidden;
+	width:120px
+}
+
+#worktaskdetail{
+   width: 525px;
+	z-index: 10004;
+	position: absolute;
+	right: -544px;
+	background: #fff;
+	color: #000;
+	height: 100%;
+	top: 0px;
+	border: 1px solid #BAD8EA;
+	border-top: none;
+}
+
+#childedittask{
+   width: 525px;
+	z-index: 10004;
+	position: absolute;
+	right: -544px;
+	background: #fff;
+	color: #000;
+	height: 100%;
+	top: 0px;
+	border: 1px solid #BAD8EA;
+	border-top: none;
+}
+
+#worktaskdetailmsg{
+  width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+background: #fff;
+position: absolute;
+text-align: center;
+padding-top: 100px;
+font-size: 14px;
+font-weight: bold;
+}
+
+#childedittaskmsg{
+  width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+background: #fff;
+position: absolute;
+text-align: center;
+padding-top: 100px;
+font-size: 14px;
+font-weight: bold;
+}
+
+

@@ -1,0 +1,90 @@
+#maindiv {
+	position: fixed;height: 100%;width: 100%;top: 0px;left: 0px;right: 0px;bottom: 0px;z-index: -100;min-width:500px;
+}
+#topbar {
+	z-index:-10;
+	width: 100%;
+	height: 32px;
+	cursor: pointer;
+	overflow: hidden;
+	border-bottom:2px solid #CCC;
+	border-top:0px;
+	padding-top: 10px;
+	background:#3eaf0e  repeat-x;
+}
+.topbar_text{
+	COLOR: #fff; MARGIN-LEFT: 20px; FONT-SIZE: 15px; FONT-WEIGHT: bold;
+}
+.commSet{
+    width: 100%;
+    margin-top: 10px;
+	overflow: hidden;
+}
+.commtitle {
+    width: 100%;
+	padding: 0px 6px 0px 10px;
+	height: 34px;
+	border-left: 1px solid #DCE4EB;
+	border-right: 1px solid #DCE4EB;
+	background: url('../images/bg/atte-list-bg_wev8.png');
+	padding-top: 10px;
+}
+.commtitle_text{
+    MARGIN-LEFT: 20px;MARGIN-TOP: 0px; FONT-SIZE: 14px;FONT-WEIGHT: bold;float: left;
+}
+.content{
+	border-bottom: 1px solid #E4E9ED;
+	border-left: 1px solid #E4E9ED;
+	border-right: 1px solid #E4E9ED;
+	min-height: 40px;
+	padding-top: 10px;
+	padding-left: 40px;
+    padding-bottom: 10px;
+}
+.content_text{
+    MARGIN-LEFT: 20px; FONT-SIZE: 13px;
+}
+.btnbase{
+      z-index:9999;position: relative;margin-right: 30px;float: right;font-size: 13px;cursor: pointer;margin-top: 0px;height: 20px;width:66px;
+}
+
+.coBarClose {
+    background: url(../images/bg/extentd-down_wev8.png) no-repeat;
+    cursor: pointer;
+}
+
+.coBarOpen {
+    background: url(../images/bg/extentd-up_wev8.png) no-repeat;
+    cursor: pointer;
+}
+
+.footbar {
+    width: 100%;
+	padding: 0px 6px 0px 10px;
+	height: 34px;
+	border-left: 1px solid #DCE4EB;
+	border-right: 1px solid #DCE4EB;
+	background: url('../images/bg/atte-list-bg_wev8.png');
+	padding-top: 7px;
+}
+
+
+.btnclass{
+      z-index:9999;margin-right: 10px;font-size: 13px;cursor: pointer;margin-top: 0px;height: 20px;width:80px;display:inline-block;float: right;
+}
+.btnleft {
+    background: url(../images/bg/btn_new_wev8.png) no-repeat transparent;
+	background-position: top left;
+    height: 21px;
+    cursor: pointer;
+	float: left;
+	padding-left: 26px;padding-top: 2px;padding-right: 26px;
+}
+
+.btnright {
+    background: url(../images/bg/btn_new_wev8.png) no-repeat transparent;
+    background-position: top right;
+    height: 23px;
+    width: 2px;
+	float: right;
+}

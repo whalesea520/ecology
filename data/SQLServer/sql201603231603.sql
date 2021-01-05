@@ -1,0 +1,56 @@
+ALTER PROCEDURE DocSecCategoryShare_Ins_G (
+	@secid INT,
+	@sharetype INT,
+	@seclevel tinyint,
+	@rolelevel tinyint,
+	@sharelevel tinyint,
+	@userid INT,
+	@subcompanyid INT,
+	@departmentid INT,
+	@roleid INT,
+	@foralluser tinyint,
+	@crmid INT,
+	@orgGroupId INT,
+	@downloadlevel INT,
+	@operategroup CHAR (10),
+	@orgid CHAR (10),
+	@seclevelmax CHAR (10),
+	@includesub CHAR (10),
+	@custype CHAR (10),
+	@isolddate CHAR (10),
+	@jobids CHAR (10),
+	@joblevel CHAR (10),
+	@jobdepartment CHAR (10),
+	@jobsubcompany CHAR (10),
+	@flag INT OUTPUT,
+	@msg VARCHAR (4000) OUTPUT
+) AS INSERT INTO DocSecCategoryShare (
+	seccategoryid,
+	sharetype,
+	seclevel,
+	rolelevel,
+	sharelevel,
+	userid,
+	subcompanyid,
+	departmentid,
+	roleid,
+	foralluser,
+	crmid,
+	orgGroupId,
+	downloadlevel,
+	operategroup,
+	orgid,
+	seclevelmax,
+	includesub,
+	custype,
+	isolddate,
+	jobids,
+	joblevel,
+	jobdepartment,
+	jobsubcompany
+)
+VALUES
+	(
+		@secid ,@sharetype ,@seclevel ,@rolelevel ,@sharelevel ,@userid ,@subcompanyid ,@departmentid ,@roleid ,@foralluser ,@crmid ,@orgGroupId ,@downloadlevel ,@operategroup ,@orgid ,@seclevelmax ,@includesub ,@custype ,@isolddate,@jobids,@joblevel,@jobdepartment,@jobsubcompany
+	)
+GO

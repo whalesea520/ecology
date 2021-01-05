@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<id>login</id>  <!--只能是唯一的英文字母-->
+	<title>登录系统</title>
+	<titleEN>Login</titleEN>
+	<desc>登录系统</desc>
+	<icon>resource/image/login_wev8.gif</icon>
+	<linkMode>2</linkMode>
+	<loginView>1</loginView>
+	<type>2</type>
+	<perpage>-1</perpage>
+	<private>
+    <jsList>
+      <js>resource/js/jquery.media.pack_wev8.js</js>
+      <js>resource/js/swfobject_wev8.js</js>
+    </jsList>
+    </private>
+	<public>
+		<jsIdList>  
+			<jsId>jquery</jsId>
+		</jsIdList>
+		<cssIdList>
+		</cssIdList>
+	</public>
+	<view>
+		<url>login.jsp</url>
+		<method></method>
+	</view>
+	<setting>
+		<url>Setting.jsp</url>
+		<method></method>
+	</setting>
+	<more>
+		<url></url>
+		<method></method>
+	</more>
+	<operation>Operation.jsp</operation>
+</root> 

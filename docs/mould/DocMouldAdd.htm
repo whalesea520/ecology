@@ -1,0 +1,714 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0284)http://server-weaver/test/docs/BDDocEdit.asp?Action=0&Group=2&Category=Relationship&SubCategory=Weaver%20News&IsTemplate=True&ReturnTo=BDMaintTemplate.asp?Action%3DVIEW%26GroupID%3D2%26Category%3DRelationship%26SubCategory%3DWeaver%2BNews%26FilterLanguageKey%3D%26FilterDivisionKey%3D -->
+<HTML><HEAD><TITLE></TITLE>
+<META http-equiv=Content-Type content="text/html; charset=UTF-8"><LINK 
+href="../css/BacoSystem_wev8.css" type=text/css rel=stylesheet><LINK 
+href="../css/DHTML_wev8.css" type=text/css rel=stylesheet>
+<SCRIPT language=javascript src="../js/BDDHTMLEditInc_wev8.js">
+</SCRIPT>
+
+<SCRIPT language=javascript event=DisplayChanged for=tbContentElement>
+	return tbContentElement_DisplayChanged()
+</SCRIPT>
+
+<SCRIPT language=javascript event=ShowContextMenu for=tbContentElement>
+	return tbContentElement_ShowContextMenu()
+</SCRIPT>
+
+<SCRIPT language=javascript event=ContextMenuAction(itemIndex) 
+for=tbContentElement>
+	return tbContentElement_ContextMenuAction(itemIndex)
+</SCRIPT>
+
+<SCRIPT language=VBS>
+Function BacoURLEncode(ByVal s)
+   Dim i, c, res
+   For i = 1 To Len(s)
+      c = Mid(s, i, 1)
+      Select Case c
+      Case " "
+         res = res & "+"
+      Case "#", "%", "&", "?", """", "'", ">", "+"
+         res = res & "%" & Right("00" & Hex(Asc(c)), 2)
+      Case Else
+         res = res & c
+      End Select
+   Next
+   BacoURLEncode = res
+End Function
+</SCRIPT>
+
+<SCRIPT language=VBS>
+Function DoParse(ByVal El1, ByVal El2)
+	On Error Resume Next
+	Err.Clear
+	DoParse = HTMLParser.ParseHtml(El1, El2)
+	If Err.number <> 0 then
+		If Len(Err.Description)>0 Then
+			DoParse = Err.description
+		Else
+			DoParse = "Unknown error in DoParse : " & Err.number
+		End If
+	End If
+End Function
+
+Sub Group_OnChange()
+	baco.BCValidate.Value = 1
+	baco.NewGroup.Value = 1
+	Call bacoOnSubmit()
+	baco.Submit
+End Sub
+
+Sub Category_OnChange()
+	baco.BCValidate.Value = 1
+	baco.NewCategory.Value = 1
+	Call bacoOnSubmit()
+	baco.submit
+End Sub
+
+
+Sub SubCategory_OnChange()
+	Func_DisplaySubject()
+End Sub
+
+
+Sub Func_DisplaySubject()
+	Dim sSubject
+	sSubject = baco.Group.options(baco.Group.selectedIndex).text & ", " & baco.Category.value & ", " & baco.SubCategory.value
+	
+	If (LanguageName.innerText <> "") Then
+		sSubject = sSubject & " - " & LanguageName.innerText
+	End If
+	
+	SpanSubjectName.innerText = sSubject
+	baco.Subject.innerText = sSubject
+End Sub
+
+Sub Class_01_OnChange()
+	baco.BCValidate.Value = 1
+	Call bacoOnSubmit()
+	baco.submit
+End Sub
+
+Sub Type_OnChange()
+	baco.BCValidate.Value = 1
+	Call bacoOnSubmit()
+	baco.submit
+End Sub
+
+Sub onSaveArchive()
+	baco.Status.Value = 100
+	baco.DoNew.Value = 2
+	If bacoParse() Then
+		baco.submit()
+	End If
+End Sub
+Sub onSaveNew()
+	baco.DoNew.Value = 2
+	baco.Status.Value = 50
+	'baco.Status.Value = 10
+	'Call bacoParse()
+	If bacoParse() Then
+		baco.submit()
+	End If
+End Sub
+Sub onSaveDraft()
+	baco.Status.Value = 10
+	baco.DoNew.Value = 3
+	'Call bacoParse()
+	If bacoParse() Then
+		baco.submit()
+	End If
+	
+End Sub
+
+Sub onSave()
+	baco.Status.Value = 20
+	'Call bacoParse()
+	'baco.submit()
+	If bacoParse() Then
+		baco.submit()
+	End If
+End Sub
+Function DoUrl()
+	On Error Resume Next
+	HTMLParser.StorageURL = "http://server-weaver/test/Docs/BDBlob.asp"
+	if Err.number <> 0 then
+		Response.write "<p><h1>" & Err.description & "</h1></p>"
+		Response.End
+		'location = "BacoDocumentsErr0001.htm"
+	Else
+		DoUrl = True
+	End If
+End Function
+
+Sub RemoveTag(ByRef sText, Byval sSearchTag, ByVal sEndTag)
+	' will remove unnecesary tags in a piece of text
+	' if sEdnTag isn't filled, '>' will be presumed as endtag,
+	' all text between the tags will be deleted
+	'Client side script
+	Dim iPos, sOut
+	If sEndTag="" Then
+		sEndTag = ">"
+	End If
+
+	iPos = Instr(UCase(sText), UCase(sSearchTag))
+	If iPos = 0 Then
+		Exit Sub
+	End If
+
+	While iPos > 0
+		If iPos > 1 Then
+			sOut = Left(sText, iPos - 1)
+		Else
+			sOut = ""
+		End If
+		sText = Mid(sText, iPos + Len(sSearchTag))
+		sText = Mid(sText, Instr(UCase(sText), UCase(sEndTag)) + Len(sEndTag))
+		sOut = sOut & sText
+		sText = sOut
+		iPos = Instr(UCase(sText), UCase(sSearchTag))
+	Wend
+End Sub
+
+
+'Sub bacoParse()
+Function bacoParse()
+	' test connection to host
+	Dim blobenable : blobenable = True
+	Dim imgText
+			
+	bacoParse = TRUE
+	'msgbox "Parse!!"
+	If Not DoUrl() Then
+		MainForm_OnSubmit = False
+		'msgbox "No connection to http://server-weaver/test/Docs/BDBlob.asp"
+		bacoParse = FALSE
+		blobenable = False
+		'Exit Function
+	End If
+
+If blobenable = False Then
+'Can edit document even without HTMLParser Class installed on client
+'But images must be removed prior to server upload.
+	bacoParse= True
+	MainForm_OnSubmit = True
+	If tbText.style.display = "none" Then tbTextArea.innerText = tbContentElement.DocumentHTML
+	
+	baco.tbUpload.innerText = tbTextArea.innerText
+	imgText = baco.tbUpload.innerText
+	RemoveTag imgText, "<IMG", ">"
+	baco.tbUpload.innerText = imgText
+	
+Else	
+	' fill textarea if html view is used
+	If tbText.style.display = "none" Then tbTextArea.innerText = tbContentElement.DocumentHTML
+		
+		If baco.File.Value <> "" Then
+		'If the user attach a GIF, JPG,JPEG,PNG file as attachment, move it to the main document body.
+		'Then append the picture to the end of the document, before the closing tags
+			If  LCase(Right(baco.File.Value,3)) = "gif" _
+			Or LCase(Right(baco.File.Value,3)) = "jpg" _
+			Or LCase(Right(baco.File.Value,4)) = "jpeg" _
+			Or LCase(Right(baco.File.Value,3)) = "png" _
+			Or LCase(Right(baco.File.Value,3)) = "bmp" 	Then
+			
+				tbTextArea.value = Replace(tbTextArea.value, "</BODY>","")
+				tbTextArea.value = Replace(tbTextArea.value, "</HTML>","")
+				tbTextArea.value = tbTextArea.value & vbCrLf & "<BR><IMG src=""" & Baco.File.Value & """>"
+				tbTextArea.value = tbTextArea.value & vbCrLf & "</BODY></HTML>"
+				baco.File.Value=""
+			End If
+		End If
+	
+	Msg = DoParse(tbTextArea, baco.tbUpload)
+
+
+	If Len(msg) > 0 And Msg <> "!NOHTML" Then
+		msgbox "Error in uploading : " & msg
+		bacoParse = FALSE
+	End If
+
+	If baco.File.Value <> "" Then
+		Msg = DoParse(baco.File, tbParser)
+		If Msg = "!NOHTML" Then
+			' just a non text upload ..
+			' do not do anything
+		Else
+			If Len(msg) > 0 And Msg <> "!NOHTML" Then
+				msgbox "Error in uploading : " & msg
+				bacoParse = FALSE
+			Else
+				baco.tbUpload.innertext = tbParser.InnerText
+				baco.File.value = ""
+			End If
+		End If
+	End If
+End If
+	
+End Function
+'End Sub
+
+Sub bacoOnSubmit()
+	' fill textarea if html view is used
+	If tbText.style.display = "none" Then
+		baco.tbUpload.innerText = tbContentElement.DocumentHTML
+	Else
+		baco.tbUpload.innerText = tbTextArea.innerText
+	End If
+End Sub
+Sub onReply()
+	location = "BDDocEdit.asp?action=0&ParentID={904436D1-764B-4F51-BDD7-304D84CFC37C}"
+End Sub
+Sub ShowEdit()
+	If VwNormal.innerHTML = "<U>2</U>-Normal" Then
+		Dim s: s = tbTextArea.innerText
+		If Len(s) > 0 Then tbContentElement.DocumentHTML = s Else tbContentElement.NewDocument()
+		tbToolbar.style.display = "block": tbDHTML.style.display = "block"
+		tbText.style.display = "none"
+		VwNormal.innerHTML = "<U>2</U>-HTML"
+		baco.ShowHtml.innertext = "0"
+	Else
+		tbText.style.display = "block"
+		tbTextArea.innerText = tbContentElement.DocumentHTML
+		tbToolbar.style.display = "none": tbDHTML.style.display = "none"
+		VwNormal.innerHTML = "<U>2</U>-Normal"
+		baco.ShowHtml.innertext = "1"
+	End If
+	Call window_onresize()
+End Sub
+Sub ShowHeader
+	If baco.ShowHeader.value = 1 Then
+		'VwHeader.innerHTML = "<U>H</U>-<%=SystemEnv.getHtmlLabelName(89,user.getLanguage())%>: <%=SystemEnv.getHtmlLabelName(224,user.getLanguage())%>"
+		
+		VwHeader.innerHTML = "<U>3</U>-<%=SystemEnv.getHtmlLabelName(224,user.getLanguage())%>"
+		
+		tblHeader.style.display = "none"
+		'baco.ShowHeader.innertext = "0"
+		baco.ShowHeader.value = "0"
+	Else
+		
+		VwHeader.innerHTML = "<U>3</U>-<%=SystemEnv.getHtmlLabelName(224,user.getLanguage())%>"
+		
+		tblHeader.style.display = "block"
+		'baco.ShowHeader.innertext = "1"
+		baco.ShowHeader.value = "1"
+	End If
+	Call window_onresize()
+End Sub
+Sub SecurityLevel_OnChange()
+	If Not IsNumeric(baco.SecurityLevel.value) Then
+		baco.SecurityLevel.value = 10
+	Else
+		If baco.SecurityLevel.value <= 10 Then
+			baco.JobLevelCombo.value = baco.SecurityLevel.value
+		Else
+			If baco.SecurityLevel.value = 100 Then
+				baco.JobLevelCombo.value = 100
+			ElseIf baco.SecurityLevel.value < 100 Then
+				baco.JobLevelCombo.value = 10
+			Else
+				baco.JobLevelCombo.value = 10
+				baco.SecurityLevel.value = 10
+			End If
+		End If
+	End If
+End Sub
+Sub JobLevelCombo_OnChange()
+	baco.SecurityLevel.value = baco.JobLevelCombo.Value
+End Sub
+Sub window_onresize()
+	Dim h
+	h = document.body.ClientHeight - 95
+	If tblHeader.style.display = "block" Then
+		h = h - tblHeader.clientHeight
+	End If
+
+	h = h - trPublish.clientHeight
+
+	h = h - tblExtra.clientHeight
+	h = h - tblTopHeader.clientHeight
+	h = h - trButtons.clientHeight
+	If h <= 180 Then
+		h = 180
+	End if
+	document.all("tbTextArea").style.height = h + 25 ' 25 = height of dhtml buttonbar ..
+	document.all("tbContentElement").style.height = h
+End Sub
+Sub window_onload()
+	DocumentReadyEvent()	'The document.onreadystatechange process.
+	InitializeDHTML()		' Initialize Editor
+	window_onresize			' Make sure to resize
+	' Load DHTML editor
+	Dim s: s = tbTextArea.innerText
+	s = AddBaseHref(s)
+	Call EnableButtons
+	
+	
+	If Len(s) > 0 Then 
+		Dim nTagS, nTagE, sBetText, sBetChar, sTextChar, bStartCheck
+		nTagS = InStr(1, s, "<HEAD", 1)
+		Do While nTagS > 0
+			nTagS = nTagS + 5
+			bStartCheck = TRUE
+			Do While nTagS < Len(s)
+				sBetChar = Mid(s, nTagS,1)
+				Select Case sBetChar
+				Case """", "'" 
+					If bStartCheck Then
+						sTextChar = sBetChar
+						bStartCheck = FALSE
+					Else
+						If sTextChar = sBetChar Then
+							bStartCheck = TRUE
+						End If
+					End If
+				Case ">"
+					If bStartCheck Then
+						Exit Do
+					End If
+				Case "<"
+					If bStartCheck Then
+						s = Left(s,(nTagS-1)) & ">" & Mid(s,nTagS)
+						Exit Do
+					End If
+				End Select
+				nTagS = nTagS + 1
+			Loop
+			nTagS = InStr(nTagS, s, "<HEAD", 1)
+		Loop
+		tbContentElement.DocumentHTML = s 
+	Else 
+		tbContentElement.NewDocument()
+	End If
+
+	Call SecurityLevel_OnChange()
+	'Call EnableButtons
+End Sub
+Sub EnableButtons
+	Save.disabled = False
+	SaveDraft.disabled = False
+	SaveNew.disabled = False
+	VwNormal.disabled = False
+	VwHeader.disabled = False
+
+	Info.disabled = False
+
+End Sub
+
+Sub KillFile()
+	Dim rv
+	rv = MsgBox("This will delete the attachement and saves the document. There is no recovery possible." & vbCrLf & vbCrLf & "Do you want to continue?", vbYesNo + vbDefaultButton2)
+	If vbYes = rv Then
+		baco.KillAttachement.value = 1
+		baco.Status.Value = 10
+		'Call bacoParse()
+		'baco.submit()
+		If bacoParse() Then
+			baco.submit()
+		End If
+	End If
+End Sub
+Sub DocInfo()
+      DIm id, url
+      url = "BDDocEditInfo.asp?ID={904436D1-764B-4F51-BDD7-304D84CFC37C}" 
+      url = url & "&Owner=" & Baco.Owner.value
+      url = url & "&OwnerType=" & Baco.OwnerType.value
+      url = url & "&OwnerTypeValue=" & Baco.OwnerTypeValue.value
+      url = url & "&Creator=administrator"
+      id = window.showModalDialog(url,window,"dialogWidth:450px;dialogHeight:220px;resizable:yes")
+      If Not IsArray(id) Then
+		If IsNull(id) Then
+			baco.Owner.value = Empty
+			baco.OwnerType.Value = Empty
+			baco.OwnerTypeValue.Value = Empty
+		End If
+      Else
+         Baco.Owner.value = id(0)
+         Baco.OwnerType.Value = id(1)
+         Baco.OwnerTypeValue.Value = id(2)
+         
+      End If
+End Sub
+
+Function AddBaseHref (sTextBlock)
+'Add <BASE HREF> tag after the <HEAD> tag of a HTML document
+'Date: 04/sep/2001
+Dim iChars, i, tempPath, sBaseHref
+tempPath = location.href 
+
+	For i = Len(tempPath) To 1 Step -1
+		
+		If (Mid(tempPath, i, 1) = "/") Then 
+			iChars = Len(tempPath) - i
+			Exit For
+		End if
+	Next
+	
+	If (iChars <> 0) Then	
+		sBaseHref = sBaseHref & Left(tempPath, Len(tempPath) - iChars)
+	Else
+		sBaseHref = sBaseHref & "/"
+	End If
+	
+AddBaseHref =  Replace (sTextBlock, "<HEAD>", "<HEAD>" & vbCrlf & "<BASE HREF=""" & sBaseHref & """ />", 1,1,1)
+End Function
+
+</SCRIPT>
+
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY>
+<B STYLE="color:red"> 
+<DIV class=HdrTitle>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD align=left width=55><IMG height=24 src="../images/hdDOC_wev8.gif"></TD>
+      <TD align=left><SPAN id=BacoTitle 
+      style="FONT-WEIGHT: bold; FONT-SIZE: medium"><%=SystemEnv.getHtmlLabelName(365,user.getLanguage())%>: <%=SystemEnv.getHtmlLabelName(58,user.getLanguage())%> - <%=SystemEnv.getHtmlLabelName(64,user.getLanguage())%></SPAN></TD>
+    <TD align=right><%=SystemEnv.getHtmlLabelName(81,user.getLanguage())%>: <A 
+      href="http://server-weaver/test/docs/BDInstalls.asp">MS Office 
+    Add-In</A></TD>
+    <TD width=5></TD>
+    <TD align=middle width=24><BUTTON language=VBS class=btnHelp 
+      onclick='window.open "BacoHelp.asp?Title=%D0%C2%3A+%B0%E6%CA%BD+%2D+%CE%C4%B5%B5&amp;Topic=BDDocEdit.asp&amp;TopicFilter=BACO", null, "width=800,height=500,resizable=yes,scrollbars=yes,status=yes,toolbar=yes,menubar=no,location=no"'></BUTTON></TD></TR></TBODY></TABLE></DIV>
+<TABLE class=form id=tblTopHeader cols=3 border=0>
+  <DIV class=HdrProps>
+  </DIV>
+  <TBODY></TBODY></TABLE>
+<BUTTON class=btnSave id=Save 
+title="The save function will store this document in the central e-Documents base. If the document category has an approval step, it will only be visible after approval" 
+disabled accessKey=S onclick=onSave() name=Save><U>S</U>-<%=SystemEnv.getHtmlLabelName(86,user.getLanguage())%></BUTTON><BUTTON 
+class=btn id=SaveDraft disabled accessKey=0 onclick=onSaveDraft() 
+name=SaveDraft><U>0</U>-<%=SystemEnv.getHtmlLabelName(220,user.getLanguage())%></BUTTON><BUTTON 
+class=btn id=VwNormal accessKey=2 onclick=ShowEdit() 
+name=VwNormal><U>2</U>-HTML</BUTTON><BUTTON 
+class=btn id=TagsHelp accessKey=5 onclick=ShowHelp() 
+name=TagsHelp><U>5</U>-<%=SystemEnv.getHtmlLabelName(275,user.getLanguage())%></BUTTON> 
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR id=trButtons>
+    <TD></TD></TR>
+  <TR>
+    <TD><TEXTAREA id=tbParser style="DISPLAY: none" name=tbParser></TEXTAREA> 
+      <FORM id=Baco style="MARGIN-TOP: 3px; MARGIN-BOTTOM: 0px" 
+      action=BDDocEdit.asp?Action=2&amp;ID={904436D1-764B-4F51-BDD7-304D84CFC37C} 
+      method=post encType=multipart/form-data><INPUT type=hidden value=0 
+      name=BCValidate> <INPUT type=hidden value=0 name=DoNew> <!-- What to do after safe? --><INPUT type=hidden value=20 name=Status> 
+      <INPUT type=hidden value=0 name=NewGroup> <!-- Used to indicate a change of group --><INPUT type=hidden value=0 
+      name=NewCategory> <!-- Used to indicate a change of category --><INPUT 
+      type=hidden value=0 name=NewReplyDoc> <!-- Used to indicate a change of category --><INPUT type=hidden value=0 
+      name=KillAttachement> <!-- Used to indicate that attachement should be removed --><INPUT 
+      type=hidden 
+      value=BDMaintTemplate.asp?Action=VIEW&amp;GroupID=2&amp;Category=Relationship&amp;SubCategory=Weaver+News&amp;FilterLanguageKey=&amp;FilterDivisionKey= 
+      name=ReturnTo> <!-- Used to indicate that attachement should be removed --><INPUT 
+      type=hidden value=0 name=EditAction> <INPUT type=hidden name=ParentID> 
+      <INPUT type=hidden value=0 name=Owner> <INPUT type=hidden value=0 
+      name=OwnerType> <INPUT type=hidden name=OwnerTypeValue> <INPUT type=hidden 
+      value=1 name=ShowHeader> <INPUT type=hidden value=0 name=ShowHTML> <TEXTAREA id=tbUpload style="DISPLAY: none" name=tbUpload></TEXTAREA> 
+      <TABLE class=Form id=tb1 width="100%" border=0>
+        <COLGROUP>
+        <COL width=150>
+        <TBODY>
+        <TR id=trPublish><!--<TD><INPUT type=hidden value=0 name=Newstype id=Newstype></TD><TD></TD>--></TR></TBODY></TABLE>
+        <TABLE class=Form id=tblHeader style="DISPLAY: block" width="100%" 
+      border=0>
+          <COLGROUP> <COL width="49%"> <COL width=12> <COL width="49%"> <TBODY> 
+          
+          </TBODY> 
+        </TABLE>
+        <TABLE class=Form id=tblExtra width="100%" border=0>
+          <COLGROUP> <COL width=140> <TBODY> 
+          <INPUT type=hidden size=70 name=File>
+          <TR class=Separator> 
+            <TD colSpan=2>
+              <table class=Form>
+                <tbody> 
+                <tr class=Section> 
+                  <th colspan=4><%=SystemEnv.getHtmlLabelName(1361,user.getLanguage())%></th>
+                </tr>
+                <tr class=separator> 
+                  <td class=Sep1 colspan=2></td>
+                </tr>
+                <tr> 
+                  <td>ID</td>
+                  <td class=Field>1</td>
+                </tr>
+                <tr> 
+                  <td><%=SystemEnv.getHtmlLabelName(85,user.getLanguage())%></td>
+                  <td class=Field>
+                    <input class=saveHistory maxlength=60 size=50 name=Description>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </TD>
+          </TR>
+          </TBODY>
+        </TABLE>
+      </FORM></TD></TR>
+  <TR height="100%">
+    <TD>
+      <TABLE class=Form id=tb1 height="100%" width="100%" border=0>
+        <TBODY>
+        <TR id=tbText style="DISPLAY: none">
+          <TD vAlign=top colSpan=3><TEXTAREA id=tbTextArea style="WIDTH: 100%; HEIGHT: 50px" name=tbTextArea>[BACO_DOC Content]&lt;BR&gt;[BACO_DOC Header]</TEXTAREA> 
+          </TD></TR></TBODY></TABLE></TD></TR>
+  <TR id=tbHTMLEditor height="100%">
+    <TD><!-- Make sure NOT to put the HTML Editor in a Form -->
+      <TABLE style="WIDTH: 100%" height="100%" cellSpacing=0 cellPadding=0 
+      border=0>
+        <TBODY>
+        <TR id=tbToolbar style="DISPLAY: block">
+          <TD vAlign=top height=28><!-- Make a toolbar --><SPAN 
+            class=tbToolbar id=FormatToolbar width="100%">
+            <SELECT 
+            language=javascript class=tbGeneral id=ParagraphStyle 
+            title="Paragraph Format" style="WIDTH: 90px" 
+            onchange="return ParagraphStyle_onchange()">
+              <OPTION value=Normal 
+              selected>Normal
+              <OPTION value="Heading 1">Heading 1
+              <OPTION 
+              value="Heading 2">Heading 2
+              <OPTION value="Heading 3">Heading 3
+              <OPTION value="Heading 4">Heading 4
+              <OPTION 
+              value="Heading 5">Heading 5
+              <OPTION value="Heading 6">Heading 6
+              <OPTION value=Address><%=SystemEnv.getHtmlLabelName(110,user.getLanguage())%>
+              <OPTION 
+            value=Formatted>Formatted</OPTION>
+            </SELECT>
+             
+            <SELECT 
+            language=javascript class=tbGeneral id=FontName title="Font Name" 
+            style="WIDTH: 120px" onchange="return FontName_onchange()">
+              <OPTION value=Arial selected>Arial</OPTION>
+              <OPTION 
+              value="Courier New">Courier New</OPTION>
+              <OPTION 
+              value="Times New Roman">Times New Roman</OPTION>
+              <OPTION 
+              value=Tahoma>Tahoma</OPTION>
+              <OPTION 
+              value="Trebuchet MS">Trebuchet MS</OPTION>
+              <OPTION 
+              value=Verdana>Verdana</OPTION>
+              <OPTION 
+              value=Wingdings>Wingdings</OPTION>
+            </SELECT>
+             
+            <SELECT 
+            language=javascript class=tbGeneral id=FontSize title="Font Size" 
+            style="WIDTH: 33px" onchange="return FontSize_onchange()">
+              <OPTION 
+              value=1 selected>1</OPTION>
+              <OPTION value=2>2</OPTION>
+              <OPTION 
+              value=3>3</OPTION>
+              <OPTION value=4>4</OPTION>
+              <OPTION 
+              value=5>5</OPTION>
+              <OPTION value=6>6</OPTION>
+              <OPTION 
+              value=7>7</OPTION>
+            </SELECT> 
+            <DIV language=javascript class=tbButton id=DECMD_BOLD title=Bold 
+            onclick="return DECMD_BOLD_onclick()" tbtype="toggle"><IMG 
+            class=tbIcon height=22 src="../images/bold_wev8.gif" width=23> </DIV>
+            <DIV language=javascript class=tbButton id=DECMD_ITALIC title=Italic 
+            onclick="return DECMD_ITALIC_onclick()" tbtype="toggle"><IMG 
+            class=tbIcon height=22 src="../images/italic_wev8.gif" width=23> </DIV>
+            <DIV language=javascript class=tbButton id=DECMD_UNDERLINE 
+            title=Underline onclick="return DECMD_UNDERLINE_onclick()" 
+            tbtype="toggle"><IMG class=tbIcon height=22 
+            src="../images/under_wev8.gif" width=23> </DIV>
+            <DIV class=tbSeparator></DIV>
+            <DIV language=javascript class=tbButton id=DECMD_SETFORECOLOR 
+            title="Foreground Color" 
+            onclick="return DECMD_SETFORECOLOR_onclick()"><IMG class=tbIcon 
+            height=22 src="../images/fgcolor_wev8.gif" width=23> </DIV>
+            <DIV language=javascript class=tbButton id=DECMD_SETBACKCOLOR 
+            title="Background Color" 
+            onclick="return DECMD_SETBACKCOLOR_onclick()"><IMG class=tbIcon 
+            height=22 src="../images/bgcolor_wev8.gif" width=23> </DIV>
+            <DIV class=tbSeparator></DIV>
+            <DIV language=javascript class=tbButton id=DECMD_JUSTIFYLEFT 
+            title="Align Left" onclick="return DECMD_JUSTIFYLEFT_onclick()" 
+            tbtype="radio" name="Justify"><IMG class=tbIcon height=22 
+            src="../images/left_wev8.gif" width=23> </DIV>
+            <DIV language=javascript class=tbButton id=DECMD_JUSTIFYCENTER 
+            title=Center onclick="return DECMD_JUSTIFYCENTER_onclick()" 
+            tbtype="radio" name="Justify"><IMG class=tbIcon height=22 
+            src="../images/center_wev8.gif" width=23> </DIV>
+            <DIV language=javascript class=tbButton id=DECMD_JUSTIFYRIGHT 
+            title="Align Right" onclick="return DECMD_JUSTIFYRIGHT_onclick()" 
+            tbtype="radio" name="Justify"><IMG class=tbIcon height=22 
+            src="../images/right_wev8.gif" width=23> </DIV>
+            <DIV class=tbSeparator></DIV>
+            <DIV language=javascript class=tbButton id=DECMD_ORDERLIST 
+            title="Numbered List" onclick="return DECMD_ORDERLIST_onclick()" 
+            tbtype="toggle"><IMG class=tbIcon height=22 
+            src="../images/numlist_wev8.gif" width=23> </DIV>
+            <DIV language=javascript class=tbButton id=DECMD_UNORDERLIST 
+            title="Bulletted List" onclick="return DECMD_UNORDERLIST_onclick()" 
+            tbtype="toggle"><IMG class=tbIcon height=22 
+            src="../images/bullist_wev8.gif" width=23> </DIV>
+            <DIV class=tbSeparator></DIV>
+            <DIV language=javascript class=tbButton id=DECMD_OUTDENT 
+            title="Decrease Indent" 
+            onclick="return DECMD_OUTDENT_onclick()"><IMG class=tbIcon height=22 
+            src="../images/deindent_wev8.gif" width=23> </DIV>
+            <DIV language=javascript class=tbButton id=DECMD_INDENT 
+            title="Increase Indent" onclick="return DECMD_INDENT_onclick()"><IMG 
+            class=tbIcon height=22 src="../images/inindent_wev8.gif" width=23> </DIV>
+            <DIV class=tbSeparator></DIV>
+            <DIV language=javascript class=tbButton id=DECMD_HYPERLINK 
+            title=Link onclick="return DECMD_HYPERLINK_onclick()"><IMG 
+            class=tbIcon height=22 src="../images/link_wev8.gif" width=23> </DIV>
+            <DIV language=javascript class=tbButton id=DECMD_IMAGE 
+            title="Insert Image" onclick="return DECMD_IMAGE_onclick()"><IMG 
+            class=tbIcon height=22 src="../images/image_wev8.gif" width=23> </DIV>
+            <DIV class=tbSeparator></DIV>
+            <DIV language=javascript class=tbButton id=DECMD_INSERTTABLE 
+            title="Insert Table" 
+            onclick="return TABLE_INSERTTABLE_onclick()"><IMG class=tbIcon 
+            height=22 src="../images/instable_wev8.gif" width=23> </DIV>
+            <DIV language=javascript class=tbButton id=DECMD_INSERTROW 
+            title="Insert Row" onclick="return TABLE_INSERTROW_onclick()"><IMG 
+            class=tbIcon height=22 src="../images/insrow_wev8.gif" width=23> </DIV>
+            <DIV language=javascript class=tbButton id=DECMD_DELETEROWS 
+            title="Delete Rows" onclick="return TABLE_DELETEROW_onclick()"><IMG 
+            class=tbIcon height=22 src="../images/delrow_wev8.gif" width=23> </DIV>
+            <DIV language=javascript class=tbButton id=DECMD_INSERTCOL 
+            title="Insert Column" 
+            onclick="return TABLE_INSERTCOL_onclick()"><IMG class=tbIcon 
+            height=22 src="../images/inscol_wev8.gif" width=23> </DIV>
+            <DIV language=javascript class=tbButton id=DECMD_DELETECOLS 
+            title="Delete Columns" 
+            onclick="return TABLE_DELETECOL_onclick()"><IMG class=tbIcon 
+            height=22 src="../images/delcol_wev8.gif" width=23> </DIV>
+            <DIV language=javascript class=tbButton id=DECMD_INSERTCELL 
+            title="Insert Cell" onclick="return TABLE_INSERTCELL_onclick()"><IMG 
+            class=tbIcon height=22 src="../images/inscell_wev8.gif" width=23> </DIV>
+            <DIV language=javascript class=tbButton id=DECMD_DELETECELLS 
+            title="Delete Cells" 
+            onclick="return TABLE_DELETECELL_onclick()"><IMG class=tbIcon 
+            height=22 src="../images/delcell_wev8.gif" width=23> </DIV>
+            <DIV language=javascript class=tbButton id=DECMD_MERGECELLS 
+            title="Merge Cells" onclick="return TABLE_MERGECELL_onclick()"><IMG 
+            class=tbIcon height=22 src="../images/mrgcell_wev8.gif" width=23> </DIV>
+            <DIV language=javascript class=tbButton id=DECMD_SPLITCELL 
+            title="Split Cells" onclick="return TABLE_SPLITCELL_onclick()"><IMG 
+            class=tbIcon height=22 src="../images/spltcell_wev8.gif" width=23> </DIV>
+            </SPAN></TD></TR>
+        <TR id=tbDHTML style="DISPLAY: block">
+          <TD>
+            <OBJECT class=tbContentElement id=tbContentElement 
+            style="WIDTH: 100%; HEIGHT: 70px" 
+            classid=clsid:2D360201-FFF5-11D1-8D03-00A0C959BC0A 
+            VIEWASTEXT></OBJECT>
+            <OBJECT id=ObjTableInfo 
+            classid=clsid:47B0DFC7-B7A3-11D1-ADC5-006008A5848C 
+            VIEWASTEXT></OBJECT></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></b></BODY></HTML>

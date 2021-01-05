@@ -1,0 +1,216 @@
+.MADDataDetail_title{
+	color: rgb(164, 169, 174);
+	border-bottom: 1px solid rgb(223, 223, 223);
+	font-family: 'Microsoft Yahei',Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 0px 0px 6px 10px;
+	position: relative;
+}
+.DataDetail_title_add{
+	padding-left: 16px;
+	padding-right: 14px;
+	background:url('/mobilemode/images/blue_add_wev8.png') no-repeat left center;
+	color: #5d9cec;
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: normal;
+	position: relative;
+	float:right;
+}
+.DataDetail_title_submit, .DataDetail_title_edit, .DataDetail_title_cancel{
+	padding-right: 14px;
+	color: #5d9cec;
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: normal;
+	position: relative;
+	float:right;
+}
+.DataDetail_title_submit_style8, .DataDetail_title_edit_style8, .DataDetail_title_cancel_style8{
+	padding-right: 23px;
+}
+.DataDetail_title_submit2_style8{
+	padding-right: 0px;
+}
+.DataDetail_title_submit span, .DataDetail_title_edit span{
+	background-image:url("/mobilemode/images/mec/lego_icon_d5b6388_wev8.png");
+	background-position:25px -50px;
+	cursor: pointer;
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	right: 40px;
+	bottom: 2px;
+}
+.DataDetail_empty_tip{
+	color: #ccc;
+	font-size: 14px;
+	font-family: 'Microsoft Yahei',Arial, Helvetica, sans-serif;
+	padding: 9px 5px 9px 10px;	
+	border: 1px dashed #ccc;
+}
+.MADDataDetail_BaseInfo{
+	padding-left: 10px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+.MADDataDetail_BaseInfo_Label{
+	width: 75px;
+	color: rgb(166,167,171);
+	margin-right: 6px;
+	text-align: left;
+}
+.MADDataDetail_Textarea{
+	border: 1px solid rgb(223, 223, 223);
+	width: 250px;
+	height: 106px;
+	font-family: 'Microsoft Yahei',Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	padding: 3px 3px 3px 10px;
+	overflow: auto;
+}
+.MADDataDetail_Text{
+	-webkit-appearance: none;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+	-webkit-rtl-ordering: logical;
+	-webkit-user-select: text;
+	-webkit-writing-mode: horizontal-tb;
+	border: 1px solid rgb(223, 223, 223);
+	background-color: rgb(255, 255, 255);
+	border-image-outset: 0px;
+	border-image-repeat: stretch;
+	border-image-slice: 100%;
+	border-image-source: none;
+	border-image-width: 1;
+	box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+	box-sizing: border-box;
+	cursor: auto;
+	display: inline-block;
+	font-family: 'Microsoft Yahei',Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	height: 26px;
+	letter-spacing: normal;
+	line-height: 19px;
+	margin: 0px;
+	outline-color: rgb(0, 0, 255);
+	outline-style: none;
+	outline-width: 0px;
+	padding: 3px;
+	text-align: start;
+	text-indent: 7px;
+	text-shadow: none;
+	text-transform: none;
+	width: 265px;
+	word-spacing: 0px;
+	writing-mode: lr-tb;
+	zoom: 1;	
+}
+.MADDataDetail_Textarea_Focus{
+	border: 1px solid #5D9CEC;
+}
+.MADDataDetail_Select{
+	border: 1px solid rgb(204, 204, 204);
+	height: 25px;
+	max-width:105px;
+	min-width:60px;
+}
+
+.MADDataDetail_style .cbboxEntry{
+	display: inline-block;
+	position: relative;
+}
+.MADDataDetail_style .cbboxLabel{
+	color: #999;
+	font-size: 11px;
+	position: absolute;
+	top:2px;
+	left:20px;
+}
+.MADDataDetail_Content{
+	padding: 10px 10px 0px 10px;
+}
+.MADDataDetail_Content ul{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+.MADDataDetail_Content ul li{
+	padding: 0px 0px;
+}
+.MADDataDetail_Content ul li .DataDetail_table_wrap{
+	padding: 5px 0px;
+	border-bottom: 1px dashed #ccc;
+}
+.MADDataDetail_Content ul li .DataDetail_table_wrap table{
+	width: 100%;
+	border-collapse: collapse;
+}
+.MADDataDetail_Content ul li .DataDetail_table_wrap table td{
+	vertical-align: middle;
+}
+.MADDataDetail_Content > ul table td.bemove{
+	background: url("/mobilemode/images/tr_move2_wev8.png") no-repeat;
+	background-position: left center;
+	cursor: move;
+}
+.DataDetail_entry_name{
+	padding-left: 3px;
+	max-width: 100px;
+	overflow: hidden; 
+	white-space: nowrap; 
+	text-overflow: ellipsis;
+}
+.DataDetail_entry_content{
+	padding-left: 3px;
+	max-width: 150px;
+	overflow: hidden; 
+	white-space: nowrap; 
+	text-overflow: ellipsis;
+}
+.DataDetail_btn_del, .DataDetail_btn_edit{
+	display: inline-block;
+	background: url("/mobilemode/images/mec/lego_icon_d5b6388_wev8.png") no-repeat;
+	cursor: pointer;
+	margin-bottom: -2px;
+}
+.DataDetail_btn_del{
+	width: 12px;
+	height: 12px;
+	background-position: -10px -12px;
+}
+.DataDetail_btn_edit{
+	width: 11px;
+	height: 12px;
+	background-position: -15px -26px;
+	margin-left: 5px;
+}
+
+.MADDataDetail_Bottom{
+	padding: 10px 10px 0px 10px;
+	margin-bottom: 20px;
+}
+.MADDataDetail_SaveBtn{
+	background-color: rgb(107, 163, 237);
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	box-sizing: border-box;
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+	display: block;
+	font-family: 'Microsoft Yahei', Arial, sans-serif;
+	font-size: 14px;
+	height: 28px;
+	line-height: 28px;
+	margin: 0px;
+	text-align: center;
+	zoom: 1;
+}
+.MADDataDetail_loading{
+	z-index: 10000;
+	background-image: url('/images/messageimages/loading_wev8.gif');
+	background-repeat: no-repeat;
+	background-position: center center;
+}

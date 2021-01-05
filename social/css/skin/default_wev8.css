@@ -1,0 +1,69 @@
+.imMainbox .imRightdiv,
+.chatdiv .chatbottom .chatSend,.chatdiv .chatbottom .chatSendType,
+.headtoolbar .toolbar-right .nav-group-box,
+#sysMenuRoot li:hover,
+.btn-radius-small,
+.imMainbox .imDiscussSetting .dsTitle,
+.opItem .savebtn,
+.imDiscussSetting .dsBody .dsBottom .dsDelToQuit,
+.titlebar .btnGroup .sendBtn:hover{
+	background-color: #5cb5d8 !important;
+}
+
+.headtoolbar .toolbar-right .nav-group-box{
+	border: 1px solid #4da5c8 !important;
+}
+
+.imMainbox .imInputdiv,
+.imMainbox .imSearchdiv,
+.pc-imOnTopBtn:hover,.pc-imMinBtn:hover,.pc-imMaxBtn:hover,.pc-imMaxBtn-re:hover{
+	background-color: #7cc3e0 !important;
+}
+
+.imMainbox .imSearchdiv{
+	border-bottom: 1px solid #7bc5df !important;
+}
+
+.imRightdiv .adddiscussDiv{
+	background: #7bc4e0 url('/social/images/im_add_group_wev8.png') no-repeat 10px center !important;
+}
+.imRightdiv .adddiscussDiv:hover{
+    background: #80cceb url('/social/images/im_add_group_wev8.png') no-repeat 10px center !important;
+}
+.imRightdiv .rightNavbox:hover,
+.imDiscussSetting .dsBody .dsBottom .dsDelToQuit:hover{
+	background-color: #7bc4e0 !important;
+}
+
+#recentListdiv,#searchResultListDiv,.imMainbox .imLeftdiv,
+.imToptab,.imSearchInputdiv,.conTabs,.imMainbox .imDiscussSetting .dsBody,
+#contactListdiv,#discussListdiv,.arrow-up,#imDefaultdiv{
+	background-color:#f4f9f8 !important;
+}
+.chatIMTabs .chatIMTabActiveItem {
+	background-color: #a7d6e8 !important;
+}
+
+.leftMenudiv .activeChatItem{
+	background-color: #e7ecee !important;
+}
+
+.chatdiv .chatbottom .chatSend:hover{background:#75cdf0 !important;}
+.chatdiv .chatbottom .chatSendType:hover{
+	background:#75cdf0 !important;
+	background-image : url('/social/images/arrow_up_wev8.png')!important;
+	background-repeat : no-repeat!important;
+	background-position :center !important
+	}
+.pcontop .pcontopItme:hover,.chatdiv .chatbottom .sendtypeItme:hover,.chatdiv .chatbottom .screenshotItme:hover {
+    background-color: #0084ff !important;
+}
+
+.headtoolbar .toolbar-right .nav-group-box{
+	border: 1px solid #4da5c8 !important;
+}
+.imDiscussSetting .dsBody .dsBottom .dsDelToQuit:active,.chatdiv .chatbottom .chatSend:active,.chatdiv .chatbottom .chatSendType:active,.imRightdiv .adddiscussDiv:active,.imRightdiv .rightNavbox:active,
+.opItem .savebtn:active,.opItem .savebtn:active,.pc-imOnTopBtn:active,.pc-imMinBtn:active,.pc-imMaxBtn:active,.pc-imMaxBtn-re:active {
+    background-color: #419DC2 !important;
+}
+

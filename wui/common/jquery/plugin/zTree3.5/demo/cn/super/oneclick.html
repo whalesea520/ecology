@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> ZTREE DEMO - one click</TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../../../css/demo.css" type="text/css">
+	<link rel="stylesheet" href="../../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="../../../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../../js/jquery.ztree.core-3.5.js"></script>
+	<!--  <script type="text/javascript" src="../../../js/jquery.ztree.excheck-3.5.js"></script>
+	  <script type="text/javascript" src="../../../js/jquery.ztree.exedit-3.5.js"></script>-->
+	<SCRIPT type="text/javascript">
+		<!--
+		var setting = {
+			view: {
+				dblClickExpand: false,
+				showLine: false
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			callback: {
+				onClick: onClick
+			}
+		};
+
+		var zNodes =[
+			{ id:1, pId:0, name:"鏍?Root", open:true},
+			{ id:11, pId:1, name:"鐖惰妭鐐?1-1", open:true},
+			{ id:111, pId:11, name:"鍙跺瓙鑺傜偣 1-1-1"},
+			{ id:112, pId:11, name:"鍙跺瓙鑺傜偣 1-1-2"},
+			{ id:113, pId:11, name:"鍙跺瓙鑺傜偣 1-1-3"},
+			{ id:114, pId:11, name:"鍙跺瓙鑺傜偣 1-1-4"},
+			{ id:12, pId:1, name:"鐖惰妭鐐?1-2", open:true},
+			{ id:121, pId:12, name:"鍙跺瓙鑺傜偣 1-2-1"},
+			{ id:122, pId:12, name:"鍙跺瓙鑺傜偣 1-2-2"},
+			{ id:123, pId:12, name:"鍙跺瓙鑺傜偣 1-2-3"},
+			{ id:124, pId:12, name:"鍙跺瓙鑺傜偣 1-2-4"},
+			{ id:13, pId:1, name:"鐖惰妭鐐?1-3", open:true},
+			{ id:131, pId:13, name:"鍙跺瓙鑺傜偣 1-3-1"},
+			{ id:132, pId:13, name:"鍙跺瓙鑺傜偣 1-3-2"},
+			{ id:133, pId:13, name:"鍙跺瓙鑺傜偣 1-3-3"},
+			{ id:134, pId:13, name:"鍙跺瓙鑺傜偣 1-3-4"}
+		];
+
+		function onClick(e,treeId, treeNode) {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+			zTree.expandNode(treeNode);
+		}
+
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+		});
+		//-->
+	</SCRIPT>
+	<style type="text/css">
+.ztree li button.switch {visibility:hidden; width:1px;}
+.ztree li button.switch.roots_docu {visibility:visible; width:16px;}
+.ztree li button.switch.center_docu {visibility:visible; width:16px;}
+.ztree li button.switch.bottom_docu {visibility:visible; width:16px;}
+	</style>
+ </HEAD>
+
+<BODY>
+<h1>鍗曞嚮灞曞紑/鎶樺彔鑺傜偣</h1>
+<h6>[ 鏂囦欢璺緞: super/oneclick.html ]</h6>
+<div class="content_wrap">
+	<div class="zTreeDemoBackground left">
+		<ul id="treeDemo" class="ztree"></ul>
+	</div>
+	<div class="right">
+		<ul class="info">
+			<li class="title"><h2>瀹炵幇鏂规硶璇存槑</h2>
+				<ul class="list">
+				<li>zTree 榛樿涓嶆彁渚涘崟鍑诲睍寮€鑺傜偣鐨勫姛鑳斤紝浣嗗彲浠ュ埄鐢?onClick 浜嬩欢鍥炶皟鍑芥暟杞绘澗瀹炵幇姝ゅ姛鑳?/li>
+				<li class="highlight_red">涓轰簡閬垮厤涓庡弻鍑诲姛鑳藉啿绐侊紝寤鸿鍏抽棴鍙屽嚮灞曞紑鑺傜偣鐨勫姛鑳斤紝璇疯缃?setting.view.dblClickExpand = false </li>
+				<li class="highlight_red">鍙互灏嗘墍鏈夌殑 +/- 寮€鍏抽殣钘忥紝璇锋煡鐪嬫湰椤甸潰婧愮爜锛屾煡鐪?css 璁剧疆 </li>
+				<li class="highlight_red">鐢变簬 +/- 寮€鍏充笌 鑺傜偣杩炴帴绾挎槸閰嶅鐨勶紝鎵€浠ュ鏋滀笉鏄剧ず +/- 寮€鍏崇殑璇濓紝閭ｄ箞璇疯缃?setting.view.showLine = false 闅愯棌杩炴帴绾?</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+</BODY>
+</HTML>

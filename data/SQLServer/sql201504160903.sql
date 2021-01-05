@@ -1,0 +1,4 @@
+drop procedure Bill_Meetingroom_SelectByID
+GO
+drop procedure SMS_Message_SelectAll
+GO

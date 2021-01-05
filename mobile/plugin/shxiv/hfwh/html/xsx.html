@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>红纺文化</title>
+<link rel="stylesheet" href="/mobile/plugin/shxiv/hfwh/css/qietu.css">
+<link rel="stylesheet" href="/mobile/plugin/shxiv/hfwh/css/swiper.min.css">
+<link rel="stylesheet" href="/mobile/plugin/shxiv/hfwh/css/style.css">
+</head>
+<body>
+<!--头部-->
+<div class="header">
+	<div class="header-logo">
+		<a href="#"><img src="/mobile/plugin/shxiv/hfwh/imgs/logo.png"/></a>
+	</div>
+	<div class="header-nav">
+		<ul>
+			<li class="header-nav-item"><a href="javascript:void(0)" onclick="openSy()" >首页</a></li>
+			<li class="header-nav-item"><a href="javascript:void(0)" onclick="openTk()" >图库</a></li>
+			<li class="header-nav-item"><a href="javascript:void(0)" onclick="openSc()" >图库收藏</a></li>
+		</ul>
+		<div class="icon-quit"></div>
+	</div>
+</div>
+<!--//头部-->
+
+<div class="wrapper m-wrapper">
+	<!--搜索-->
+	<!--<div class="m-search">
+		<input class="text" type="text" name="" value="" placeholder="IP" />
+	</div>-->
+	<!--//搜索-->
+	
+	<div class="m-hd">
+		<div class="m-breadcrumb">
+			<i class="ico-line"></i> <span class="big">paulfrank</span>
+		</div>
+	</div>
+	
+	
+	<!--选择-->
+	<div class="m-choose" id="xsId">
+		<!--<ul>
+			<li>
+				<a href="tkb.html">
+					<div class="img">
+						<img src="/mobile/plugin/shxiv/hfwh/imgs/img15.jpg"/>
+					</div>
+					<div class="txt">线   上</div>
+				</a>
+			</li>
+			<li>
+				<a href="tkb.html">
+					<div class="img">
+						<img src="/mobile/plugin/shxiv/hfwh/imgs/img16.jpg"/>
+					</div>
+					<div class="txt">线   下</div>
+				</a>
+			</li>
+		</ul>-->
+	</div>
+	<!--//选择-->
+</div>
+
+
+<script type="text/javascript" src="/mobile/plugin/shxiv/hfwh/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/mobile/plugin/shxiv/hfwh/js/swiper.min.js"></script>
+<script type="text/javascript" src="/mobile/plugin/shxiv/hfwh/js/script.js"></script>
+
+</body>
+<script type="text/javascript">
+
+    let userId;
+    jQuery(document).ready(function(){
+        getCookie();
+        getMsg();
+        parseURL(window.location.href);
+    });
+
+    function parseURL(url){
+        var url = url.split("?")[1];
+        alert(url);
+        var para = url.split("&");
+        var len = para.length;
+        var res = {};
+        var arr = [];
+        for(var i=0;i<len;i++){
+            arr = para.split("=");
+            res[arr[0]] = arr[1];
+        }
+        return res;
+    }
+
+    function getMsg() {
+        jQuery.ajax({
+            url : "/mobile/plugin/shxiv/hfwh/servlet/XsxMsg.jsp",
+            type : "post",
+            processData : false,
+            async: false,
+            data : "userId="+userId+"&name="+name,
+            dataType: "json",
+            error:function (XMLHttpRequest, textStatus, errorThrown) {
+
+            } ,
+            success:function (data, textStatus) {
+                if(data!=null&&data!=""){
+                    let htm = "<ul>";
+                    if(data==0){
+                        htm+="<li>"+
+                            "<a href='tkb.html'>"+
+                            "<div class='img'><img src='/mobile/plugin/shxiv/hfwh/imgs/img15.jpg'/></div>"+
+                            "<div class='txt'>线   上</div></a></li>";
+                    }
+                    if(data==1){
+                        htm+="<li>"+
+                            "<a href='tkb.html'>"+
+                            "<div class='img'><img src='/mobile/plugin/shxiv/hfwh/imgs/img16.jpg'/></div>"+
+                            "<div class='txt'>线   下</div></a></li>";
+                    }
+                    if(data==2){
+                        htm+="<li>"+
+                            "<a href='tkb.html'>"+
+                            "<div class='img'><img src='/mobile/plugin/shxiv/hfwh/imgs/img15.jpg'/></div>"+
+                            "<div class='txt'>线   上</div></a></li>";
+
+                        htm+="<li>"+
+                            "<a href='tkb.html'>"+
+                            "<div class='img'><img src='/mobile/plugin/shxiv/hfwh/imgs/img16.jpg'/></div>"+
+                            "<div class='txt'>线   下</div></a></li>";
+                    }
+
+                    htm+="</ul>";
+                    jQuery("#xsId").html(htm);
+                }
+            }
+        });
+
+    }
+
+    function getCookie(){
+        try{
+            let cookieData = new String(document.cookie);
+            const cookieHeader = "loginidweaver=";
+            let cookieStart = cookieData.indexOf(cookieHeader) + cookieHeader.length;
+            let cookieEnd = cookieData.indexOf(";", cookieStart);
+            if(cookieEnd==-1){
+                cookieEnd = cookieData.length;
+            }
+            if(cookieData.indexOf(cookieHeader)!=-1){
+                userId = cookieData.substring(cookieStart, cookieEnd);
+            }
+        }catch(e){}
+    }
+
+    function openSy() {
+        window.location.href="/docs/news/NewsDsp.jsp";
+    }
+
+    function openTk() {
+        window.location.href="/mobile/plugin/shxiv/hfwh/servlet/mainTk.jsp";
+    }
+
+    function openSc() {
+        window.location.href="/mobile/plugin/shxiv/hfwh/html/scb.html";
+    }
+
+</script>
+</html>
+

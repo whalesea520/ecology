@@ -1,0 +1,55 @@
+.outertable{
+	border-collapse:collapse !important;
+	border-style:solid !important;
+	border-color: #FF0000 !important;
+	border-width:0px !important;
+}
+.reqname{
+	color:#FF0000 !important;
+	font-size:16pt !important;
+	font-weight:bold !important;
+}
+.maintable{
+	border-collapse:collapse !important;
+	text-align: left;
+}
+.fname{
+	height: 20px !important;
+	background-color: #FFFFFF !important;
+	font-size:10pt !important;
+	color:#ff0000 !important;
+	border-style:solid !important;
+	border-color: #FF0000 !important;
+	border-width:1px !important;
+}
+.fvalue{
+	height: 20px !important;
+	background-color: #FFFFFF !important;
+	border-style:solid !important;
+	border-color: #FF0000 !important;
+	border-width:1px !important;
+}
+.fvalue td{
+	background-color: #FFFFFF !important;
+}
+.detailtable{
+	border-collapse:collapse !important;
+	border-style:solid !important;
+	border-color: #FF0000 !important;
+	border-width:1px !important;
+}
+.detailtitle{
+	color:#FF0000  !important;
+	height: 20px !important;
+	font-size:10pt !important;
+	background-color: #FFFFFF !important;
+	border-style:solid !important;
+	border-color: #FF0000 !important;
+	border-width:1px !important;
+}
+.detailfield{
+	background-color: #FFFFFF !important;
+	border-style:solid !important;
+	border-color: #FF0000 !important;
+	border-width:1px !important;
+}

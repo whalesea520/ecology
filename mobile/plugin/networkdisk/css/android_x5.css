@@ -1,0 +1,46 @@
+.diskHeader,
+.operateContent,
+.diskFoot .diskTab,
+.diskFoot .diskFootOperate,
+.publicContent li,
+.systemDocTab ul,
+.operate,
+.replyPopHead,
+.docOwner,
+.replyInfo,
+.flexClass
+{
+	display:flex;
+	display: -webkit-box; 
+	display: -moz-box; 
+	display: -ms-flexbox;
+}
+.replyPop .replyPopHead{
+	display:block;
+	position:relative;
+	padding:.2rem .8rem;
+}
+.replyPopClose, .replyPopCommit{
+	position:absolute;
+	top:.2rem;
+}
+.replyPopClose{
+	left:.2rem;
+}
+.replyPopCommit{
+	right:.2rem;
+}
+.operate table{
+	width:100%;
+	border-spacing:0px;
+}
+.operate td.replyList{
+	padding-left:15px;
+}
+.operate td.replyList,.operate td.praise{
+	width:65px;
+	margin-left:0px;
+}
+.operate td.collute,.operate td.more{
+	width:35px;
+}

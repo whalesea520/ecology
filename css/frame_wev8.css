@@ -1,0 +1,84 @@
+body {  font-size: 12px; FONT-FAMILY: "宋体";  color: #ffffff; MARGIN: 0px; scrollbar-base-color:#EFF3F7; scrollbar-face-color:#EFF3F7; SCROLLBAR-HIGHLIGHT-COLOR: #f5f9ff; SCROLLBAR-SHADOW-COLOR: #D6D3D6; SCROLLBAR-3DLIGHT-COLOR: #D6D3D6; SCROLLBAR-ARROW-COLOR: #797979; SCROLLBAR-TRACK-COLOR: #EFF3F7; SCROLLBAR-DARKSHADOW-COLOR: #ffffff}
+.stedit { BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid;  border-color: #4A3163; FONT-SIZE: 12px; COLOR: #040cad; background-COLOR: #ffffff}
+td {font-size:12px }
+.wenhou {font-size:12px ; FONT-FAMILY: "宋体"; color: #333333}
+.shuxian {font-size:12px ; FONT-FAMILY: "宋体"; color: #000000}
+.submit { BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; FONT-SIZE: 9pt; BORDER-LEFT: #000000 1px solid; COLOR: #000000; BORDER-BOTTOM: #000000 1px solid; BACKGROUND-COLOR: #fffff0}
+A.lm {
+	COLOR: #ffffff; FONT-FAMILY: "宋体"; FONT-SIZE: 12px; FONT-STYLE: normal;  TEXT-DECORATION: none
+}
+A.lm:hover {
+	COLOR: #00DE64; FONT-FAMILY: "宋体"; FONT-SIZE: 12px; FONT-STYLE: normal;  TEXT-DECORATION: underline
+}
+
+A.lm:link {
+	TEXT-DECORATION: none
+}
+A.lm:visited {
+	TEXT-DECORATION: none}
+A.lm1 {
+	COLOR: #00DE64; FONT-FAMILY: "宋体"; FONT-SIZE: 12px; FONT-STYLE: normal;  TEXT-DECORATION: none
+}
+A.lm1:hover {
+	COLOR: #ffffff; FONT-FAMILY: "宋体"; FONT-SIZE: 12px; FONT-STYLE: normal;  TEXT-DECORATION: underline
+}
+
+A.lm1:link {
+	TEXT-DECORATION: none
+}
+A.lm1:visited {
+	TEXT-DECORATION: none}
+A.zlm {
+	COLOR: #d4d5d6; FONT-FAMILY: "宋体"; FONT-SIZE: 12px; FONT-STYLE: normal;  TEXT-DECORATION: none
+}
+A.zlm:hover {
+	COLOR: #ffffff !important; FONT-FAMILY: "宋体"; FONT-SIZE: 12px; FONT-STYLE: normal;  TEXT-DECORATION: underline
+}
+
+A.zlm:link { TEXT-DECORATION: none }
+A.zlm:visited {	TEXT-DECORATION: none}
+
+.onmouseout {}
+.onmouseover {background:#646d7d;color:#fff}
+@font-face {
+  font-family: 'iconfont';
+  src: url('iconfont/iconfont.eot');
+  src: url('iconfont/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('iconfont/iconfont.woff') format('woff'),
+  url('iconfont/iconfont.ttf') format('truetype'),
+  url('iconfont/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  color:#c4c4c4;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.iconfont_white{
+	color:#ffffff !important;
+	}
+.icon_right{
+	text-align:right
+	}
+.icon_button{
+	font-size:16px;font-style:normal;
+  color:#fff;
+}
+.icon_out{
+    font-size:19px;font-style:normal;
+  color:#fff;
+}
+.search_btn{
+	/*background-color:#027cda;color:#fff;border:none;*/
+	}
+.search_btn option{
+  /*background-color:yellow;height:30px;color:#fff;border:none;*/
+    }
+.search_btn_p {
+    height: 33px;
+    line-height: 33px;
+    background-color: #0782e4;
+    margin-top: 2px;
+}

@@ -1,0 +1,45 @@
+.item_margin{
+	margin:10px 30px;
+}
+.step_image{
+	text-align:center;
+	margin:auto;
+	width:704px;
+	height:100px;
+}
+.tab_box {
+	height: 100%;
+	width:100%;
+	margin : 0;
+	padding : 0;
+	list-style : none;
+}
+.tab_menu {
+	overflow: hidden;
+	padding: 0px;
+	margin: 0px 0px;
+}
+.tab_menu li {
+	float:left;
+    padding:5px 0px 0px 10px;
+    cursor: pointer;
+}
+.tab_menu li.current {
+	color: #1264B5;
+	background:url(/appres/hrm/image/line_wev8.png) no-repeat 10px bottom;
+}
+.n_title{
+	color:#0D9BF2;
+}
+.Mcontainer{
+	position:relative;
+}
+.Msearch{
+	background-image:url(/appres/hrm/image/attendance/img002.png);
+	position:absolute;
+	width:20px;
+	height:20px;
+	top:1px;
+	left:100px;
+	z-index:999;
+}

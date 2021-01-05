@@ -1,0 +1,2 @@
+UPDATE leftmenuinfo SET  linkaddress = replace(linkaddress,'/workflow/request/requesthandled.jsp','/workflow/request/RequestHandled.jsp') WHERE linkaddress like '%/workflow/request/requesthandled.jsp%'
+GO

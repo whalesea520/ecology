@@ -1,0 +1,81 @@
+#browserContainer{
+	position: absolute;
+    left:0px;
+    top:0px;
+    z-index: 20001;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+#browserContainer .browserMask{
+	height: 100%;
+    width: 100%;
+	background-color: #ccc;
+	opacity: 0.3;
+}
+
+#browserContainer .browserContent{
+	position: absolute;
+	left:10px;
+    top:10px;
+    width: 300px; 
+    background-color: #fff;
+    border: 1px solid #eee;
+}
+#browserContainer .browserContent .title{
+	background-color: rgb(13,147,246);
+	height: 30px;
+	line-height: 30px;
+	padding-left: 10px;
+	color: #fff;
+	font-size: 13px;
+	text-shadow: none;
+	font-weight: bold;
+	font-family: 'Microsoft Yahei', Arial;
+}
+#browserContainer .browserContent .frameWrap{
+	width: 100%;
+	height: 350px;
+	position: relative;
+}
+#browserContainer .browserContent .frameWrap .frameMask{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background: url("/mobilemode/images/mobile_loading_wev8.gif") no-repeat;
+	background-position: center center;
+	background-color: #fff;
+	display: none;
+}
+#browserContainer .browserContent .frameWrap .frame{
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+#browserClose{
+	background: url("/images/ecology8/16_close_wev8.png") no-repeat;
+	background-position: center center;
+	float: right;
+	width: 30px;
+	height: 30px;
+	margin: 0px;
+	cursor: pointer;
+}
+
+.browserName{
+	padding: 8px 16px 0px 0px;
+	position: relative;
+}
+
+.browserName .delBrowser{
+	width: 16px;
+	height: 18px;
+	position: absolute;
+	top: 4px;
+	right: 0px;
+	background: url("/images/delete_wev8.gif") no-repeat;
+	background-position: -3px -3px;
+	cursor: pointer;
+}

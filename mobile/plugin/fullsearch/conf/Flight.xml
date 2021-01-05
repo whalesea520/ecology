@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 航班查询,请指定defaultV -->
+<workflow workflowId="">
+	<!-- name. 传递的参数,name不能修改.   column="CrossDomain" 表示跨域.默认空  url对应的defaultV 是ajax请求页面
+	 -->
+	<field name="url" column="" defaultV="" defaultN="航班查询"></field>
+	<field name="begindate" column="begindate"></field>
+	<field name="begintime" column="begintime"></field>
+	<field name="enddate" column="enddate"></field>
+	<field name="endtime" column="endtime"></field>
+	<field name="startLoc" column="startLoc"></field>
+	<field name="endLoc" column="endLoc"></field>
+	
+	<!--直接包含返回的json中. 返回值判断,默认空.即为msg. 0标识成功. -->
+	<field name="return_flag" column="SuccessF" defaultV="result" defaultN="成功标识"></field>
+	<field name="return_flag" column="SuccessV" defaultV="1" defaultN="成功值"></field>
+	<!-- 错误信息显示 -->
+	<field name="return_flag" column="ErrMsg" defaultV="" defaultN="错误信息"></field>
+	
+	<!-- 返回列表字段 -->
+	<field name="return_" column="id" defaultV="ID" defaultN="唯一值"></field>
+	<field name="return_" column="price" defaultV="PRICE" defaultN="价格"></field>
+	<field name="return_" column="cfsj" defaultV="{cfsj}" defaultN="出发时间"></field>
+	<field name="return_" column="ddsj" defaultV="{ddsj}" defaultN="达到时间"></field>
+	<field name="return_" column="cfjc" defaultV="{cfjc}" defaultN="出发机场"></field>
+	<field name="return_" column="ddjc" defaultV="{ddjc}" defaultN="达到机场"></field>
+	<field name="return_" column="hkgs,hb,jx" defaultV="{hkgs}#x20;{hb}#x20;|#x20;{jx}" defaultN="机型"></field>
+	
+</workflow>

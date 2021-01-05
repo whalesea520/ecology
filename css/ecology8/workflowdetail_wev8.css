@@ -1,0 +1,7 @@
+.wfdetailrowblock TD{
+	border-bottom:1px solid #E6E6E6!important;
+}
+
+Table.ListStyle TR.Selected td {
+	background:#f5fafb;
+}

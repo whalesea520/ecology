@@ -1,0 +1,99 @@
+html,body{margin: 0;padding: 0;width: 100%;height: 100%;over-flow:hidden;}
+   #panel{
+	    position: absolute;
+	    font-size: 10px;
+	    border: 1px solid #e8e8e8;
+	    background-color: #fff;
+	    box-shadow: 0 1px 4px rgba(0,0,0,.27),inset 0 0 40px rgba(0,0,0,.08);
+	    border-radius: 4px;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	    width: auto;
+	    height: auto;
+	    margin: 0;
+	}
+   #panel_title{
+	    transform: rotate(90deg);
+	    -ms-transform: rotate(90deg);
+	    -moz-transform: rotate(90deg);
+	    -webkit-transform: rotate(90deg);
+	    -o-transform: rotate(90deg);
+	    position: absolute;
+	    height: 40px;
+	    text-align: center;
+	    line-height: 2;
+	    font-size: 20px;
+	    background-color: #038ef6;
+	    font-family: "microsoft yahei";
+	    color: #fff;
+	}
+	#panel_content{
+	    position: absolute;
+	    left: 40px;
+	    right: 40px;
+	    top: 0;
+	    bottom: 0;
+	}
+	#panel_bottom {
+	    transform: rotate(90deg);
+	    -ms-transform: rotate(90deg);
+	    -moz-transform: rotate(90deg);
+	    -webkit-transform: rotate(90deg);
+	    -o-transform: rotate(90deg);
+	    position: absolute;
+	    height: 40px;
+	    text-align: center;
+	    border: 1px solid #dfdfdf;
+	}
+	#panel_bottom .button{
+	    background-color: #038ef6;
+	   /* border-top: 1px solid #038ef6;*/
+	    line-height: 2;
+	    color: #fff;
+	    width: 65px;
+	    border: none;
+	    margin-top: 5px;
+	    margin-right: 5px;
+	}
+	#mask{
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background: rgba(204,204,204,0.6);
+		display: none;
+	}
+	#mask #mask_tip{
+		width: 170px;
+		height: 108px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: -85px;
+		margin-top: -54px;
+		background: #fff;
+		border-radius: 5px;
+		transform: rotate(90deg);
+	}
+	#mask #mask_tip .mask_info{
+		width: 100%;
+		height: 25px;
+		line-height: 25px;
+		font-size: 16px;
+		text-align: center;
+		margin-top: 30px;
+		font-family: "microsoft yahei";
+	}
+	#mask #mask_tip .mask_sure{
+		background-color: #038ef6;
+	    color: #fff;
+	    border: none;
+	    position: absolute;
+	    right: 10px;
+	    bottom: 10px;
+	    font-family: "microsoft yahei";
+	   
+	}

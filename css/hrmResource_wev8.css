@@ -1,0 +1,38 @@
+
+#tab-left{
+	width:6px;height:28px;line-height:28px;
+}
+#tab-left .tab-left-selected{
+	background:url(/wui/skins/default/tab/style2/tab-left-selected_wev8.png) no-repeat right top ；
+} 
+#tab-left .tab-left-unselected{
+	background:url(/wui/skins/default/tab/style2/tab-left_wev8.png) no-repeat right top ;
+}
+
+#tab-center{
+	padding:0;
+	width:100%;height:28px;background:url(/wui/skins/default/tab/style2/bg-center_wev8.png) repeat-x top;
+}
+#tab-right{
+	width:6px;height:28px;background:url(/wui/skins/default/tab/style2/tab-right_wev8.png) no-repeat left top;
+}
+#tab-center ul{
+	margin:0;
+	padding:0;
+	height:28px;
+	line-height:28px;
+	list-style:none;
+}
+#tab-center ul li{
+	float:left;
+	background:url(/wui/skins/default/tab/style2/tab-spllite_wev8.png) no-repeat right;
+	}
+
+#tab-center .tab-item{
+	padding-left:6px;padding-right:6px;
+	margin-right:1px;
+}
+#tab-center .tab-selected{
+	background:url(/wui/skins/default/tab/style2/tab-selected_wev8.png) repeat-x;
+	
+}

@@ -1,0 +1,78 @@
+#divJingjiang{
+	width:100%;
+	margin:3,0,0,-15;	
+}
+
+#divJingjiang ul {
+	/*MARGIN: 0px;
+	PADDING: 0px;
+	BORDER: medium none; 
+	LINE-HEIGHT: normal; 
+	LIST-STYLE-TYPE: none;
+	text-align:left;
+    vertical-align: bottom;
+
+	border:1px solid #FF0000;*/
+	margin:0;
+	padding:0;
+	list-style:none;
+	FONT-WEIGHT: bold; 
+	
+	
+}
+
+
+#divJingjiang ul ul {
+	display:none;	
+	FONT-WEIGHT: normal ; 
+}
+
+
+#divJingjiang li {
+	
+	padding-left:16px;
+	vertical-align: bottom;
+} 
+#divJingjiang li div{
+	border-bottom:1px solid #DDDDDD; MARGIN: 0px;
+} 
+
+
+#divJingjiang  a {
+	/* PADDING:5px 0px 5px 15px;
+	DISPLAY: block;
+	WIDTH: 100%; */
+	
+	DISPLAY: block;
+	PADDING:5px;
+
+	TEXT-DECORATION: none;
+
+
+	COLOR: #8F8F8F; 
+}
+#divJingjiang li  div a:hover { 
+	/*COLOR: #fff;*/ 
+	COLOR: #660033;	
+}
+
+
+#divJingjiang  .spanLeft{
+	/*border:1px solid #660066;*/	
+	cursor:hand;
+	float:Left;	
+	width:67%;
+} 
+#divJingjiang   .spanRight{
+	/*border:1px solid #D1D1D1;*/
+	
+	cursor:hand;
+	float:right;
+	font-family:webdings;	
+} 
+#divJingjiang   .spanRightNone{	
+	cursor:hand;
+	display:none;
+	float:right;
+	font-family:webdings;	
+} 

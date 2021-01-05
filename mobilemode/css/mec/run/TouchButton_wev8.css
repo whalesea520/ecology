@@ -1,0 +1,150 @@
+#touchBtn{
+	position: absolute;
+    right:0px;
+    top:10px;
+    z-index: 90112;
+    width: 55px;
+    height: 55px;
+    background: url("/mobile/plugin/task/images/list_wev8.png") no-repeat;
+    background-position: center center;
+    background-color: #000;
+    background-size: 42px;
+    opacity: 0.3;
+    border-radius: 8px;
+    -webkit-tap-highlight-color:transparent;
+}
+#touchBtn.custom-active{
+	opacity: 0.7;
+}
+
+#touchContainer{
+	position:fixed;
+	z-index: 90111;
+	left:0px;
+    top:0px;
+    height: 100%;
+    width: 100%;
+	background: transparent;
+	display: none;
+}
+#touchBlockWrap{
+	position:fixed;
+	left: -100%;
+	top: 0px;
+	height: 300px;
+	width: 100%;
+	border: none;
+	border-collapse: collapse;
+	background: transparent;
+}
+#touchBlockWrap ._c{
+	padding: 0px 20px;
+	background: transparent;
+	height: 100%;
+}
+#touchBlockWrap .touchBlock{
+	vertical-align: middle;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	border-collapse: collapse;
+	position: relative;
+}
+#touchMask{
+	width: 100%;
+	height: 0%;
+	z-index: 100;
+	background-color:#000;
+	border-radius:15px;
+	opacity: 0.3;
+}
+#touchPageWrap{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 200;
+	background: transparent;
+}
+#touchBlockWrap .touchBlock .touchPage{
+	width: 100%;
+	height: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+	overflow: hidden;
+	display: none;
+}
+#touchBlockWrap .touchBlock .touchPage tr{
+	height: 100px;
+}
+#touchBlockWrap .touchBlock .touchPage td{
+	
+}
+
+#touchBlockWrap .touchBlock .touchPage td .touchEntry{
+	width: 60px; 
+	overflow: hidden;
+	-webkit-tap-highlight-color:transparent;
+	position: relative;
+	padding-top: 3px;
+}
+#touchBlockWrap .touchBlock .touchPage td .touchEntry .icon{
+}
+#touchBlockWrap .touchBlock .touchPage td .touchEntry .icon img{
+	width: 48px;
+	height: 48px;
+}
+#touchBlockWrap .touchBlock .touchPage td .touchEntry .text{
+	height: 32px;
+	line-height: 38px;
+	color: #fff;
+	font-size: 13px;
+    font-family: 'Microsoft Yahei', Arial, sans-serif;
+}
+#touchBlockWrap .touchBlock .touchPage td .touchBackEntry{
+	background: url("/mobilemode/images/icon_arrow_left_wev8.png") no-repeat;
+	background-position: center center;
+	height: 100%;
+	width: 100%;
+	cursor: pointer;
+}
+#touchLocker{
+	position: fixed;
+    left:0px;
+    top:0px;
+    z-index: 90211;
+    height: 100%;
+    width: 100%;
+	background: transparent;
+	display: none;
+}
+
+#touchContainer .MEC_NumberRemind{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 22px;
+	width: 22px;
+	line-height: 24px;
+	overflow: hidden;
+    background: none repeat scroll 0 0 red;
+    text-align: center;
+	border-radius: 2.25em;
+    color: #FFFFFF;
+	font-family: arial;
+	font-size: 12px;
+}
+
+#touchContainer .MEC_NumberRemind1{
+	font-size: 14px;
+}
+#touchContainer .MEC_NumberRemind2{
+	font-size: 12px;
+}
+#touchContainer .MEC_NumberRemind3{
+	font-size: 10px;
+}
+#touchContainer .MEC_NumberRemind4{
+	font-size: 8px;	
+}

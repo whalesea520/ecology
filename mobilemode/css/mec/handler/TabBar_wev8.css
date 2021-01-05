@@ -1,0 +1,139 @@
+.tabBarContainer {
+	display: none !important;
+	visibility: hidden;
+}
+#content_editor_bottom .tabBarContainer{
+	visibility: visible;
+	display: table !important;
+}
+.MADTabBar_Title{
+	color: rgb(164, 169, 174);
+	border-bottom: 1px solid rgb(223, 223, 223);
+	font-family: 'Microsoft Yahei',Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 0px 0px 6px 10px;
+	position: relative;
+}
+.tabbar_root_add{
+	padding-left: 16px;
+	padding-right: 14px;
+	background:url('/mobilemode/images/blue_add_wev8.png') no-repeat left center;
+	color: #5d9cec;
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: normal;
+	position: absolute;
+	right: 0px;
+	bottom: 6px;
+}
+.MADTabBar_Content{
+	padding: 10px 10px 0px 10px;	
+}
+.MADTabBar_Content ul{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	padding-left: 20px;
+}
+.MADTabBar_Content ul.tabbar_ul_root{
+	padding-left: 0px;
+}
+.MADTabBar_Content ul li{
+	padding: 0px 0px;
+	border-left: 1px dashed #ccc;
+}
+.MADTabBar_Content ul li .tabbar_table_wrap{
+	padding: 5px 0px;
+	padding-left: 5px;
+	border-bottom: 1px dashed #ccc;
+	
+}
+.MADTabBar_Content ul.tabbar_ul_root > li{
+	border-left:none;
+}
+.MADTabBar_Content ul.tabbar_ul_root > li > .tabbar_table_wrap{
+	padding-left: 0px;
+	border-left:none;	
+}
+.MADTabBar_Content ul li .tabbar_table_wrap table{
+	width: 100%;
+	border-collapse: collapse;
+}
+.MADTabBar_Content ul li .tabbar_table_wrap table td{
+	vertical-align: middle;
+}
+.MADTabBar_Content ul li .tabbar_table_wrap table tr td:FIRST-CHILD{
+	background: url("/mobilemode/images/tr_move2_wev8.png") no-repeat;
+	background-position: left center;
+
+}
+.MADTabBar_Content ul li .tabbar_table_wrap table tr td.bemove{
+	cursor: move;
+}
+.tabbar_dis_icon{
+	width: 16px;
+	height: 16px;
+	margin-bottom: -3px;
+}
+.tabbar_dis_showname{
+	padding-left: 3px;
+}
+.tabbar_dis_sourcecontent{
+	padding-left: 3px;
+	max-width: 130px;overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+}
+.tabbar_btn_del,.tabbar_btn_edit,.tabbar_btn_add{
+	display: inline-block;
+	background: url("/mobilemode/images/mec/lego_icon_d5b6388_wev8.png") no-repeat;
+	cursor: pointer;
+	margin-bottom: -2px;
+}
+.tabbar_btn_del{
+	width: 12px;
+	height: 12px;
+	background-position: -10px -12px;
+}
+.tabbar_btn_edit{
+	width: 11px;
+	height: 12px;
+	background-position: -15px -26px;
+	margin-right: 3px;
+}
+.tabbar_btn_add{
+	width: 12px;
+	height: 12px;
+	background-position: -13px 0px;
+	margin-left: 3px;
+}
+.tabbar_empty_tip{
+	color: #ccc;
+	font-size: 14px;
+	font-family: 'Microsoft Yahei',Arial, Helvetica, sans-serif;
+	padding: 9px 5px 9px 10px;	
+	border: 1px dashed #ccc;
+	display: none;
+}
+.MADTabBar_Bottom{
+	padding: 10px 0px 0px 10px;
+	margin-bottom: 20px;		
+}
+.MADTabBar_SaveBtn{
+	background-color: rgb(107, 163, 237);
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	box-sizing: border-box;
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+	display: block;
+	font-family: 'Microsoft Yahei', Arial, sans-serif;
+	font-size: 14px;
+	height: 28px;
+	line-height: 28px;
+	margin: 0px;
+	text-align: center;
+	width: 348px;
+	zoom: 1;	
+}

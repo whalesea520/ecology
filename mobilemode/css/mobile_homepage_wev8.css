@@ -1,0 +1,260 @@
+html {
+	-ms-touch-action: none;
+}
+html,body{
+	margin: 0;
+	background-color: #ffffff;
+	overflow:hidden;
+}
+body{
+	font-size:16px;
+	overflow: hidden;
+}
+a.phone-number{
+	text-decoration: none;color: #017afd;
+}
+a.chinese-address{
+	text-decoration: none;color: #017afd;
+	background-image: url(/mobilemode/images/position.png);
+	background-repeat: no-repeat;
+	background-position: 0px center;
+	background-size: 14px;
+    padding-left: 14px;
+}
+.ui-shadow, .ui-shadow-inset{
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper{
+	text-shadow: none;
+}
+legend, .ui-input-text input, .ui-input-search input{
+	text-shadow: none;
+	font-size: 12px !important;
+}
+.ui-body-a, .ui-page-theme-a .ui-body-inherit, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit, html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a{
+	text-shadow: none;
+}
+.ui-corner-all{
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+.ui-loader{
+	top:auto;bottom:200px;background:none;
+}
+
+.ui-input-search{
+	border: none;
+	border-radius: 2.25em;
+	background-color: #fff !important;
+}
+.ui-input-search input{
+	padding-top: 0.6em;
+	padding-bottom: 0.6em;
+}
+#page_view{
+	position: absolute; top:0px; left: 0px; bottom:0px; width: 100%; overflow:hidden;
+}
+#center_view{
+	position: absolute; top:0px; left: 0px; bottom:0px; width: 100%;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+#right_view{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	width: 100%;
+	background: #fff;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transform: translate3d(100%, 0, 0);
+	transform: translate3d(100%, 0, 0);
+	overflow-y: auto;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling:touch;
+}
+.right_view_open #center_view{
+	-webkit-transform: translate3d(-100%, 0, 0);
+	transform: translate3d(-100%, 0, 0);	
+}
+
+.right_view_open #right_view{
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);	
+}
+
+/* /mobilemode/css/mec/mec_wev8.css 
+start--------------------------------------------------------------------------------------------------------------*/
+
+#homepageContainer{
+	position: relative;		
+}
+/*列表页面扩展按钮*/
+.ui-filterable{
+	position: relative;
+}
+.expandBtnDiv{
+	border: 1px solid rgb(221, 221, 221);
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	right: 10px;
+	height: 26px;
+	line-height: 26px;
+	background-color: #fff;
+	font-family: 'Microsoft Yahei', Arial;
+	font-size: 12px;
+}
+.expandBtnDivHasMore{
+	padding-right: 25px;
+}
+.expandBtnDiv .text{
+	padding: 0px 8px 0px 8px;
+	display: inline-block;
+	cursor: pointer;
+}
+.expandBtnDiv .moreFlag{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 25px;
+	height: 26px;
+	display: none;
+	background-image: url("/mobilemode/images/homepage/homepage_bottom_wev8.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	cursor: pointer;
+}
+.expandBtnDivHasMore .moreFlag{ 
+	display: block;
+}
+.expandBtnDivMore{
+	background-color: #fff;
+	border: 1px solid rgb(221, 221, 221);
+	position: absolute;
+	z-index: 1000;
+	top:35px;
+	right: 10px;
+	display: none;
+}
+.expandBtnDivMore ul{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+.expandBtnDivMore ul li{
+	height: 32px;
+	padding: 0px 33px 0px 8px;
+	line-height: 32px;
+	border-bottom: 1px solid rgb(221, 221, 221);
+	cursor: pointer;
+	font-family: 'Microsoft Yahei', Arial;
+	font-size: 12px;
+}
+.expandBtnDivMore ul li:HOVER {
+	background-color: rgb(93, 156, 236);
+	color: #fff;
+}
+/*ProgressBar*/
+.csProgressBar{ 
+	position: relative;
+	width: 100px;
+	border: 1px solid #eee; 
+	padding: 1px; 
+} 
+.csProgressBar div{ 
+	display: block; 
+	position: relative;
+	height: 18px;
+	background-color: #99b433;
+}
+.csProgressBar div span{ 
+	position: absolute; 
+	width: 100px;
+	text-align: center; 
+	font: 10px Verdana;
+	line-height: 18px;
+	color: #000;
+}
+
+.mec_refresh_loading{
+}
+
+.spinner {
+  margin: 10px auto 10px;
+  text-align: center;
+}
+ 
+.spinner > div {
+  width: 10px;
+  height: 10px;
+  background-color: rgb(0, 122, 251);
+ 
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+ 
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+ 
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+ 
+@-webkit-keyframes bouncedelay {
+  00%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+ 
+@keyframes bouncedelay {
+  00%, 80%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
+/*uniScroll_wev8.css*/
+#scroll_wrapper {
+	position:absolute; 
+	z-index:1;
+	top:0px; 
+	bottom:0px; 
+	left:0;
+	width:100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling:touch;
+	
+	background:transparent;
+	background-color: rgb(240, 240, 240);
+}
+
+#scroll_scroller {
+	width:100%;
+}
+
+#scroll_footer {
+	position:absolute; z-index:2;
+	bottom:0; left:0;
+	width:100%;
+	background-color: #fafafa;
+	display: none;
+}
+
+#pullDown {
+	display: none;
+}

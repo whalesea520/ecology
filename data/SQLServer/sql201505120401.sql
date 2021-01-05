@@ -1,0 +1,2 @@
+INSERT INTO HtmlLabelInfo VALUES(-8220,'ÙÖÃÈÕÆÚ',9)
+GO

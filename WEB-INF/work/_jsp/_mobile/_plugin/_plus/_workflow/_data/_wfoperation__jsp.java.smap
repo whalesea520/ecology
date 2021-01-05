@@ -1,0 +1,22 @@
+SMAP
+_wfoperation__jsp.java
+JSP
+*S JSP
+*F
++ 1 wfOperation.jsp
+mobile/plugin/plus/workflow/data/wfOperation.jsp
++ 2 initNoCache.jsp
+page/maint/common/initNoCache.jsp
+*L
+302#1,32:30
+333#1:62,20
+1#1:81
+9#2,12:82
+2#1:94
+10#1,2:95,7
+11#1,2:108
+12#1:110,6
+12#1,290:115
+301#1:405
+333#1:406
+*E

@@ -1,0 +1,366 @@
+body {
+    overflow: hidden;
+}
+
+.can-drag {
+    -webkit-app-region: drag;
+}
+.no-drag {
+    -webkit-app-region: no-drag;
+}
+.none-select {
+    -webkit-user-select: none;
+}
+
+.pc-clear {
+    clear: both;
+}
+.pc-toolbar {
+    float: right;
+    padding-right: 1px;
+    font-size: 12px;
+}
+.pc-imOnTopBtn{
+	width: 26px;
+    height: 26px;
+    float: left;
+    background: url("/social/images/arrow_down_wev8.png") no-repeat center;
+    cursor:pointer;
+}
+.pcontop {
+    position: absolute;
+    right: 22px;
+    top: 35px;
+    z-index: 1000;
+    border: 1px solid #e3e6f0;
+    background: #fff;
+    width: 117px
+}
+.pcontop .checkpane {
+    width: 25px;
+    height: 31px;
+    background-color: #f2f2f2 !important;
+    margin-left: 0;
+    position: absolute;
+    z-index: -1
+}
+.pcontop .pcontopItme {
+    height: 25px;
+    line-height: 26px;
+    padding-left: 5px;
+    padding-right: 8px;
+    cursor: pointer;
+	color: #000000
+}
+.pcontop .pcontopItme:hover {
+    background-color: #0084ff;
+    color: #ffffff;
+    opacity: .6;
+    filter: alpha(opacity=60)
+}
+.pcontop .topnarrow{
+	height:10px;
+	width:15px;
+	left: 41px;
+	z-index:101;
+	top: -9px;
+	position:absolute;
+	background: url("/social/images/topnarrow.png") no-repeat
+}
+.pcontop .active{
+	  background: url("/social/images/sendtype_ok_wev8.png") no-repeat;
+	  background-position: center center;
+}
+.pcontop span{
+	margin-left:25px
+}
+.pc-imMinBtn {
+    width: 26px;
+    height: 26px;
+    float: left;
+    background: url("/social/images/im/pc_min.png") 0 0 no-repeat;
+    cursor:pointer;
+}
+.pc-imOnTopBtn:hover,.pc-imMinBtn:hover,.pc-imMaxBtn:hover,.pc-imMaxBtn-re:hover {
+    background-color:#7cc3e0;
+}
+.pc-imOnTopBtn:active,.pc-imMinBtn:active,.pc-imMaxBtn:active,.pc-imMaxBtn-re:active {
+    background-color: #419DC2;
+}
+
+.pc-imMaxBtn {
+    width: 26px;
+    height: 26px;
+    float: left;
+    background: url("/social/images/im/pc_max.png") 0 0 no-repeat;
+    cursor:pointer;
+}
+
+.pc-imMaxBtn-re {
+    width: 26px;
+    height: 26px;
+    float: left;
+    background: url("/social/images/im/pc_max_re.png") 0 0 no-repeat;
+    cursor:pointer;
+}
+
+.pc-imCoseBtn {
+    width: 26px;
+    height: 26px;
+    float: left;
+    background: url("/social/images/im/pc_close.png") 0 0 no-repeat;
+    cursor:pointer;
+}
+.pc-imCoseBtn:hover {
+    background: url("/social/images/im/pc_close1.png") 0 0 no-repeat;
+}
+.pc-imCoseBtn:active {
+    background: url("/social/images/im/pc_close2.png") 0 0 no-repeat;
+}
+
+
+.pc-imChatMinBtn {
+    width: 28px;
+    height: 28px;
+    float: right;
+    background: url("/social/images/newChatWin/Min.png") center center no-repeat;
+    cursor:pointer;
+}
+.pc-imChatOnTopBtn:hover,.pc-imChatMinBtn:hover,.pc-imChatMaxBtn:hover,.pc-imChatMaxBtn-re:hover {
+    background-color:#f0f0f0;
+}
+.pc-imChatOnTopBtn:active,.pc-imChatMinBtn:active,.pc-imChatMaxBtn:active,.pc-imChatMaxBtn-re:active {
+    background-color: #f0f0f0;
+}
+
+.pc-imChatMaxBtn {
+    width: 28px;
+    height: 28px;
+    float: right;
+    background: url("/social/images/newChatWin/Max1.png") center center no-repeat;
+    cursor:pointer;
+}
+
+.pc-imChatMaxBtn-re {
+    width: 28px;
+    height: 28px;
+    float: right;
+    background: url("/social/images/newChatWin/Max2.png") center center no-repeat;
+    cursor:pointer;
+}
+
+.pc-imChatCoseBtn {
+    width: 28px;
+    height: 28px;
+    float: right;
+    background: url("/social/images/newChatWin/Close.png") center center no-repeat;
+    cursor:pointer;
+}
+.pc-imChatCoseBtn:hover {
+	background: #DA4951 url("/social/images/newChatWin/CloseWhite.png") center center no-repeat;
+}
+.pc-imChatCoseBtn:active {
+	background: #DA4951 url("/social/images/newChatWin/CloseWhite.png") center center no-repeat;
+}
+
+.pc-recon{
+    display: none;
+    height: 610px;
+    width: 1099px;
+    position: absolute;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    font-size: 12px;
+}
+.pc-recon-message{
+    width: 350px;
+    height: 210px;
+    position: absolute;
+    background-color: #fff;
+    top: 35%;
+    left: 35%;
+    border-radius: 5px;
+}
+
+.pc-recon-message > .header {
+    height: 30px;
+    background-color: #439ae4;
+    text-indent: 10px;
+    line-height: 30px;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.pc-recon-message > .center {
+}
+.pc-recon-message > .center > .center-img {
+    height: 36px;
+    text-align: center;
+    margin: 15px 0;
+}
+.pc-recon-message > .center > .center-msg {
+    height: 50px;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.pc-recon-message > .center > .center-msg-hand {
+    line-height: 50px;
+}
+.pc-recon-message > .center > .center-msg > span{
+    color: #E95126;
+}
+
+.pc-recon-message > .footer {
+    text-align: center;
+    margin: 10px 0;
+}
+.pc-recon-message > .footer > .task-relink {
+    border: 0;
+    width: 80px;
+    height: 32px;
+    color: #fff;
+    background-color: #3e9dee;
+    cursor: pointer;
+}
+.pc-recon-message > .footer > .task-relink:hover {
+    background-color: #288bdf;
+}
+.pc-recon-message > .footer > .task-relink:active {
+    background-color: #297ac0;
+}
+.pc-recon-message > .footer > .task-close {
+    border: 1px solid #ccd1d5;
+    width: 80px;
+    height: 32px;
+    color: #000;
+    background-color: #fff;
+    margin-left: 34px;
+    cursor: pointer;
+}
+.pc-recon-message > .footer > .task-close:hover {
+    color: #fff;
+    background-color: #D35466;
+}
+.pc-recon-message > .footer > .task-close:active {
+    color: #fff;
+    background-color: #BE4455;
+}
+.pc-recon-message > .footer > input.pc-disabled {
+    cursor: not-allowed;
+    background-color: #cdd1d4;
+}
+.pc-recon-message > .footer > input.pc-disabled:hover {
+    cursor: not-allowed;
+    background-color: #cdd1d4;
+}
+.pc-fileDlBar {
+    display: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom : 5px;
+}
+.pc-fileDlBar > div.pc-progress {
+    float: none;
+    width : 100%;
+    height : 6px;
+    margin : 0;
+}
+.pc-openfile {
+    padding-right: 15px;
+    cursor: pointer;
+}
+
+.rong-task-close {
+    border: 1px solid #ccd1d5;
+    width: 80px;
+    height: 32px;
+    color: #000;
+    background-color: #fff;
+    cursor: pointer;
+}
+.rong-task-close:hover {
+    color: #fff;
+    background-color: #D35466;
+}
+.rong-task-close:active {
+    color: #fff;
+    background-color: #BE4455;
+}
+.quitdialog {
+    padding-top: 20px;
+}
+.quitdialog .noLongerRemind {
+    padding-top: 20px;
+}
+.pcSysSetTab {
+    color: #6d717c;
+    font-size: 12px;
+}
+.pcSysSetTab > .sysItems {
+    padding: 0;
+    margin: 0;
+    width: 147px;
+    height: 1000px;
+    background-color: #ededed;
+    float: left;
+}
+.pcSysSetTab > .sysItems > li {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 30px;
+    cursor: pointer;
+    overflow: hidden;   
+    text-overflow:ellipsis;   
+    white-space: nowrap;
+    max-width:117px;  
+}
+.sysItems > .active {
+    background-color: #fff;
+}
+
+
+.pcSysSetTab > .sysSetContent {
+    float: left;
+    padding-top: 10px;
+    padding-left: 30px;
+}
+.pcSysSetTab > .sysSetContent > div {
+    display: none;
+}
+
+.pcSysSetTab > .sysSetContent .contentTitle {
+    height: 30px;
+    line-height: 30px;
+}
+
+.pcSysSetTab > .sysSetContent .contentInfo {
+    padding-left: 15px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.pcSysSetTab .DlpathBtn {
+	background: #fff;
+    border: 1px solid #30B5FF;
+    color: #30B5FF;
+    width: 66px;
+    height: 24px;
+    margin-left: 10px;
+    font-size: 12px;
+    line-height: 12px;
+    cursor: pointer;
+}
+
+.pcSysSetTab .DlpathBtn:hover {
+	color: #fff;
+	background: #03A996;
+}
+
+.pcSysSetTab .DlpathInput {
+	width: 288px;
+}

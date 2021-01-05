@@ -1,0 +1,368 @@
+#Reply, #Reply span{
+	width: 45px;
+}
+.Design_Reply_Container{
+	width: 94%;
+	background-color: rgb(235,236,238);
+	border-top: 1px rgb(192,193,194) solid;
+	border-bottom: 1px rgb(192,193,194) solid;
+	padding: 10px 0px 10px 20px;
+}
+.Design_Reply_Content{
+	font-size: 12px;
+	width: 70%;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	font-family: 'Microsoft Yahei', Arial;
+	font-size: 14px !important;
+	background-color: white;
+	padding: 8px 0px 8px 10px;
+	color: #999;
+}
+.Design_Reply_Btn{
+	max-height: 35px;
+	max-width: 40px;
+	border: 1px rgb(192,193,194) solid;
+	border-radius: 4px;
+	font-size: 14px !important;
+	cursor:pointer;
+	text-align:center;
+	padding: 8px 10px;
+	overflow: hidden; 
+	white-space: nowrap; 
+	text-overflow: ellipsis;
+	position: absolute;
+	top: 11px;
+	right: 20px;
+}
+.MADReply_Title{
+	border-bottom: 1px solid rgb(223, 223, 223);
+	font-size: 12px;
+	color: rgb(164, 169, 174);
+	font-weight: bold;
+	padding: 0px 0px 6px 10px;	
+	margin-bottom: 10px;
+}
+.MADReply_BaseInfo{
+	padding-left: 10px;
+	margin-bottom: 10px;
+	color: rgb(166, 167, 171);	
+}
+.MADReply_BaseInfo .MADReply_BaseInfo_Label{
+	width: 60px;
+	display: inline-block;
+	text-align: right;
+	margin-right: 6px;
+}
+.MADReply_BaseInfo .MADReply_BaseInfo_Label_style8{
+	width: 200px;
+	display: block;
+	text-align: left;
+}
+.MADReply_BaseInfo .MADReply_BaseInfo_Label1_style8{
+	width: 89px;
+	text-align: left;
+}
+.MADReply_BaseInfo .MADReply_Textarea_Label{
+	width: 60px;
+	display: inline-block;
+	text-align: right;
+	position: absolute;
+	top: 0;
+	left: 10px;
+}
+.MADReply_BaseInfo textarea{
+	overflow: auto;
+	-webkit-appearance: none;
+	-webkit-rtl-ordering: logical;
+	-webkit-user-select: text;
+	border: 1px solid rgb(223, 223, 223);
+	background-color: rgb(255, 255, 255);
+	border-image-outset: 0px;
+	border-image-repeat: stretch;
+	border-image-slice: 100%;
+	border-image-source: none;
+	border-image-width: 1;
+	box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+	box-sizing: border-box;
+	cursor: auto;
+	display: inline-block;
+	font-family: 'Microsoft Yahei',Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	height: 80px;
+	letter-spacing: normal;
+	line-height: 19px;
+	margin-bottom: 0px;
+	margin-left: 6px;
+	margin-right: 0px;
+	margin-top: 0px;
+	outline-color: rgb(0, 0, 255);
+	outline-style: none;
+	outline-width: 0px;
+	padding-bottom: 3px;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-top: 3px;
+	text-align: start;
+	text-shadow: none;
+	text-transform: none;
+	width: 205px;
+	word-spacing: 0px;
+	zoom: 1;	
+}
+
+.MADReply_Text{
+	-webkit-appearance: none;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+	-webkit-rtl-ordering: logical;
+	-webkit-user-select: text;
+	-webkit-writing-mode: horizontal-tb;
+	border: 1px solid rgb(223, 223, 223);
+	background-color: rgb(255, 255, 255);
+	border-image-outset: 0px;
+	border-image-repeat: stretch;
+	border-image-slice: 100%;
+	border-image-source: none;
+	border-image-width: 1;
+	box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+	box-sizing: border-box;
+	cursor: auto;
+	display: inline-block;
+	font-family: 'Microsoft Yahei',Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	height: 26px;
+	letter-spacing: normal;
+	line-height: 19px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	outline-color: rgb(0, 0, 255);
+	outline-style: none;
+	outline-width: 0px;
+	padding-bottom: 3px;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-top: 3px;
+	text-align: start;
+	text-shadow: none;
+	text-transform: none;
+	width: 205px;
+	word-spacing: 0px;
+	writing-mode: lr-tb;
+	zoom: 1;	
+}
+.MADReply_Bottom{
+	padding: 10px 0px 0px 10px;
+	margin-bottom: 10px;		
+}
+.MADReply_SaveBtn{
+	background-color: rgb(107, 163, 237);
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	box-sizing: border-box;
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+	display: block;
+	font-family: 'Microsoft Yahei', Arial, sans-serif;
+	font-size: 14px;
+	height: 28px;
+	line-height: 28px;
+	margin: 0px;
+	text-align: center;
+	width: 97%;
+	zoom: 1;	
+}
+
+
+.MADReply_Title span{
+	color: rgb(164, 169, 174);
+	cursor: pointer;
+	display: inline-block;
+	font-size: 12px;
+	height: 17px;
+	line-height: 17px;
+}
+.MADReply_Title span.leftBtnSpan{
+	border-right: 1px solid rgb(164, 169, 174);
+	padding-right: 10px;
+}
+.MADReply_Title span.rightBtnSpan{
+	padding-left: 10px;
+}
+.MADReply_Title span.checked{
+	color: rgb(93, 156, 236);
+	font-weight: bold;
+}
+
+
+.MADReply_Auto_Container{
+	margin-bottom: 10px;
+}
+.MADReply_Auto_Container .MADReply_Field_Container{
+	padding: 0 15px;
+}
+.MADReply_Field_Container .MADReply_Text{
+	margin-left: 10px;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	color: rgb(166, 167, 171);
+}
+.MADReply_Field_Container .MADReply_Text_style8{
+	margin-left:30px;
+}
+.MADReply_Params_Container{
+	padding: 0 10px;
+}
+.MADReply_Params_Container ul, .MADReply_Field_Container ul{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+.MADReply_Params_Container ul  li, .MADReply_Field_Container ul  li{
+	border-bottom: 1px dashed #ccc;
+	padding-right: 5px;
+}
+.MADReply_Params_Container ul li table, .MADReply_Field_Container ul li table{
+	width: 100%;	
+	border-collapse: collapse;
+}
+.MADReply_Params_Container ul li table td, .MADReply_Field_Container ul li table td{
+	height: 26px;
+	vertical-align: middle;
+}
+.MADReply_Params_desc{
+	padding-left:6px;
+	color:rgb(166, 167, 171);
+}
+
+.params_btn_del,.params_btn_edit{
+	display: inline-block;
+	background: url("/mobilemode/images/mec/lego_icon_d5b6388_wev8.png") no-repeat;
+	cursor: pointer;
+	margin-bottom: -2px;
+}
+.params_btn_del{
+	width: 12px;
+	height: 12px;
+	background-position: -10px -12px;
+}
+.params_btn_edit{
+	width: 11px;
+	height: 12px;
+	background-position: -15px -26px;
+	margin-right: 3px;
+}
+.params_btn_add{
+	padding-left: 16px;
+	padding-right: 2px;
+	background:url('/mobilemode/images/blue_add_wev8.png') no-repeat left center;
+	color: #5d9cec;
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: normal;
+	position: absolute;
+	right: 5px;
+	top: 0;
+}
+.MADReply_Field_Title{
+	position: relative;
+	height: 20px;
+	font-size: 12px;
+	color: rgb(164, 169, 174);
+	border-bottom: 1px dashed #ccc;
+}
+.MADReply_Field_Title span{
+	display: inline-block;
+	padding: 0 60px 0 1px;
+}
+.MADReply_Field_Title .fieldspan{
+	padding: 0 60px 0 4px;
+}
+.MADReply_Field_Title .fieldspan_style8{
+	padding: 0 20px 0 4px;
+}
+
+.MADReply_loading{
+	position: absolute;top: 0px;right: 0px;
+	z-index: 10000;
+	padding: 3px 10px 3px 20px; 
+	vertical-align:middle; 
+	background-image: url('/images/messageimages/loading_wev8.gif');
+	background-repeat: no-repeat;
+	background-position: 0px center;
+	color: #aaa;
+	display: none;
+}
+.MADReply_SourceSearch{
+	border: 1px solid rgb(223, 223, 223);
+	height: 20px;
+	width:125px;
+	background-image: url('/formmode/images/btnSearch_wev8.png');background-repeat: no-repeat;background-position: 108px center;
+}
+.MADReply_SourceSearchTip{
+	position: absolute;left: 5px;top: 4px;color: #ccc;font: 12px Microsoft YaHei;font-style: italic;
+}
+
+.MADReply_SourceSearchResult{
+	position: absolute;
+	top: 192px;
+	right: 5px;
+	z-index: 100001;
+	margin: 0px;
+	padding: 3px 5px;
+	height: 97px;
+	width: 160px;
+	overflow: auto;
+	background-color: #fff;
+	border: 1px solid #e9e9e9;
+	display: none;
+}
+.MADReply_SourceSearchResult_style8{
+	top: 255px;
+	right: 78px;
+}
+.MADReply_SourceSearchResult ul{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+.MADReply_SourceSearchResult ul li{
+	border-bottom: #eee 1px dotted;
+}
+.MADReply_SourceSearchResult ul li a{
+	padding: 2px 0px 2px 2px;
+	text-decoration: none;
+	color: #333;
+	display: block;
+}
+.MADReply_SourceSearchResult ul li a:hover{
+	background-color: #0072C6;
+	color: #fff;
+}
+.MADReply_SourceSearchResult ul li .tip{
+	padding: 2px 0px 2px 2px;
+	color: #ccc;
+}
+.MADReply_Select{
+	border: 1px solid rgb(204, 204, 204);
+	height: 25px;
+	width:130px;
+}
+.MADReply_Reloadbutton{
+	border: 1px solid rgb(223, 223, 223);
+	height: 24px;
+	width:125px;
+	background-color: rgb(107, 163, 237);
+	color: rgb(255, 255, 255);
+	cursor:pointer;
+	margin-left:10px;
+}
+.MADReply_Tip{
+	padding: 3px 0px 0px 10px;
+	color: rgb(166, 167, 171);
+	line-height: 20px;	
+}

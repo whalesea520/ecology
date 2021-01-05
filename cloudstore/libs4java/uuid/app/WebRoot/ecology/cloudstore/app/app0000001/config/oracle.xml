@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sql>
+<statement key="0">
+create user $appkey$ identified by scott account unlock
+</statement>
+</sql>

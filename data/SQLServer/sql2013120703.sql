@@ -1,0 +1,4 @@
+alter table meeting_decision alter column hrmid02 varchar(10)
+GO
+ALTER PROCEDURE Meeting_Decision_Insert (@meetingid [int] , @requestid [int] , @coding varchar(100) ,	@subject varchar(255) ,	@hrmid01 varchar(255) , @hrmid02 varchar(10), @begindate varchar (10)  , @begintime varchar (8)  , @enddate varchar (10)  , @endtime varchar (8) , @flag integer output, @msg varchar(80) output) AS INSERT INTO [Meeting_Decision] ( [meetingid] ,[requestid] , coding, subject, hrmid01, hrmid02, begindate, begintime, enddate, endtime )  VALUES ( @meetingid , @requestid , @coding, @subject, @hrmid01, @hrmid02, @begindate, @begintime, @enddate, @endtime  ) set @flag = 1 set @msg = 'OK!' 
+GO

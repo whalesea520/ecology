@@ -1,0 +1,172 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  overflow:hidden;
+}
+
+*{
+    font-family: 'Î¢ÈíÑÅºÚ';
+    font-size: 12px;
+}
+
+.matrix_content{
+   margin: 0px auto;
+   height:100%; 
+   position:absolute; 
+   width:100%;
+   overflow: auto;
+}
+
+
+.matrix_newaddlist{
+   background: url(/matrixmanage/images/004_wev8.png)  center no-repeat;
+   height: 120px;
+   width: 230px;
+   text-align: center;
+   line-height: 102px;
+   color: #c5c5c5;
+   cursor: pointer;
+   float: left;
+   margin: 24px;
+}
+
+.matrix_newaddlist:hover{
+   background: url(/matrixmanage/images/004_wev8.png)  center no-repeat;
+}
+
+.matrix_list{
+   background: url(/matrixmanage/images/001_wev8.png)  center no-repeat;
+   height: 120px;
+   width: 230px;
+   color: #c5c5c5;
+   float: left;
+   margin: 24px;
+}
+
+.matrix_list:hover{
+   background: url(/matrixmanage/images/002_wev8.png)  center no-repeat;
+}
+
+.matrix_list .leftnumicon{
+   background: url(/matrixmanage/images/005_wev8.png)  center no-repeat;
+   height: 26px;
+   width: 26px;
+   line-height: 26px;
+   text-align: center;
+   color: #ff7300;
+   cursor: pointer;
+   margin-left: -8px;
+   margin-top: -8px;
+   font-weight: bold;
+   float: left;
+   cursor: default;
+}
+
+.matrix_list .rightopicon{
+   float: right;
+   margin: 5px;
+}
+
+.matrix_list .rightopicon div{
+   height: 16px;
+   width: 16px;
+   line-height: 16px;
+   float: left;
+   margin: 5px;
+   cursor: pointer;
+}
+
+.rightopicon .matrix_edit{
+   background: url(/matrixmanage/images/007_wev8.png)  center no-repeat;
+   
+}
+
+.rightopicon .matrix_maint{
+   background: url(/matrixmanage/images/013_wev8.png)  center no-repeat;
+}
+
+.rightopicon .matrix_field{
+   background: url(/matrixmanage/images/009_wev8.png)  center no-repeat;
+}
+
+.rightopicon .matrix_del{
+   background: url(/matrixmanage/images/011_wev8.png)  center no-repeat;
+}
+
+.rightopicon .matrix_edit:hover{
+   background: url(/matrixmanage/images/008_wev8.png)  center no-repeat;
+   
+}
+
+.rightopicon .matrix_data:hover{
+   background: url(/matrixmanage/images/010_wev8.png)  center no-repeat;
+}
+
+.rightopicon .matrix_del:hover{
+   background: url(/matrixmanage/images/012_wev8.png)  center no-repeat;
+}
+
+.rightopicon .matrix_maint:hover{
+   background: url(/matrixmanage/images/014_wev8.png)  center no-repeat;
+}
+
+.matrix_list .title{
+	margin-top: 40px;
+	margin-bottom: 10px;
+	margin-left: 25px;
+	font-size: 14px;
+    font-weight: 600;
+    color: #79808d;
+    cursor: pointer;
+}
+
+.matrix_list .title span{
+	color: #408ff1;
+	font-size: 14px;
+    font-weight: 600;
+}
+
+.matrix_list .descr{
+	margin-left: 25px;
+	font-size: 14px;
+    font-weight: 600;
+    color: #79808d;
+    word-break:break-all; 
+    width:192px;
+    overflow:hidden;
+    height: 43px;
+}
+
+.matrix_infomation{
+   font-size: 12px;
+   height: 200px;
+   width: 200px;
+   text-align: center;
+   color: rgb(255,187,14);
+   position:relative;
+   left:50%;
+   top: 40%;
+   margin-top: -60px;
+   margin-left: -105px;
+   cursor: pointer;
+}
+
+.matrix_newadd{
+   background: url(/matrixmanage/images/004_wev8.png)  center no-repeat;
+   font-size: 58px;
+   height: 120px;
+   width: 230px;
+   text-align: center;
+   line-height: 102px;
+   color: #c5c5c5;
+   position:relative;
+   left:50%;
+   top: 50%;
+   margin-top: -60px;
+   margin-left: -115px;
+   cursor: pointer;
+}
+
+.matrix_newadd:hover{
+   background: url(/matrixmanage/images/004_wev8.png)  center no-repeat;
+}

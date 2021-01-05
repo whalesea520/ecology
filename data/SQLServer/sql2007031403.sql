@@ -1,0 +1,15 @@
+
+drop procedure MainMenuConfig_InsertByUserId
+GO
+drop procedure MainMenuConfig_Insert_All
+GO
+drop procedure MainMenuConfig_U_ByInfoInsert
+GO
+drop procedure MMConfig_U_ByInfoInsert
+GO
+drop trigger Tri_UMainMenuConfig_ByInfo
+GO
+drop trigger Tri_UMMInfo_ByHrmResource
+GO
+drop trigger Tri_UMMInfo_ByHrmResourceManager
+GO

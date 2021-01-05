@@ -1,0 +1,106 @@
+#wBox .wBox_b {
+	filter:alpha(opacity=80);
+    -moz-opacity:0.8;
+    opacity: 0.8;
+ background-image:url(wbox_wev8.gif);
+
+}
+
+#wBox {
+  position: absolute;
+  top:50;
+  left:200;
+  z-index: 9999;
+  text-align: left;
+  border:1px solid #3787D0;
+}
+
+#wBox .wBox_popup {
+  position: relative;
+}
+
+#wBox table {
+	
+	border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#wBox td {
+  border-bottom: 0;
+  padding: 0;
+}
+
+#wBox .wBox_body {
+  background-color:#ffffff;
+ 
+}
+
+#wBox img {
+  border: 0;
+  margin: 0;
+}
+#wBox .wBox_title {
+  height:25px;
+  width:100%;
+  background:url(titleBG_wev8.png) repeat-x;
+}
+#wBox .wBox_title .wBox_itemTitle{
+    padding-left:5px;
+    overflow:hidden;
+    font-weight:bold;
+}
+#wBox .wBox_title .wBox_close{
+    background:url(close_wev8.png) no-repeat 0 0;
+    height:14px;
+    width:14px;
+    overflow:hidden;
+    cursor:pointer;
+}
+#wBox .wBox_title .on{
+    background-position:0 -14px;
+}
+#wBox .wBox_tl, #wBox .wBox_tr, #wBox .wBox_bl, #wBox .wBox_br {
+  height: 5px;
+  width: 5px;
+  overflow: hidden;
+  background-image:url(wbox_wev8.gif);
+  padding: 0;
+  filter:alpha(opacity=80);
+    -moz-opacity:0.8;
+    opacity: 0.8;
+}
+
+#wBox #wBoxContent{
+	padding:3px;
+}
+#wBox_overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height:100%;
+  width:100%;
+}
+#wBox .wBox_load{
+	width:270px;
+}
+.wBox_hide {
+  z-index:-100;
+}
+
+.wBox_overlayBG {
+  background-color: #FFF;
+  z-index: 99;
+  -moz-opacity:0.3; /*for ff*/  
+  opacity:0.3; /*for ff3.5+ css3.0标准的*/  
+  filter:alpha(opacity=30);  
+}
+.wBox_overlayBG_form {
+  background-color: #FFF;
+  z-index: 99999;
+  -moz-opacity:0.3; /*for ff*/  
+  opacity:0.3; /*for ff3.5+ css3.0标准的*/  
+  filter:alpha(opacity=30);  
+}
+#wBox #wBox_loading{
+	width:32px;height:32px;margin:0 auto;
+}

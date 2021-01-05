@@ -1,0 +1,299 @@
+.clear{clear:both;}
+.left{float:left;}
+.right{float:right;}
+
+.m-t-10{margin-top:10px}
+.m-t-5{margin-top:5px}
+html, body {
+	margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei"!important;
+    font-size: 12px;
+    color: #3e4350;
+}
+
+.bMain{
+	position:absolute;top:0px;bottom:0px;left:0px;right:0px;
+}
+
+.bMain .bleft{
+	position:absolute;left:0px;top:0px;bottom: 0px;border-right:1px solid #e4e4e4;width:275px;
+}
+
+.bright{
+	position:absolute;left:276px;top:0px;bottom: 0px;right:0px;;
+}
+ 	
+.bMain .bSearchdiv{
+	 display: table;
+	 height: 30px;
+	 line-height: 30px;
+	 position: relative;
+	 border: 1px solid #e9e9e9;
+	 background-color: #fff;
+	 float: left;
+	 margin-top: 5px;
+	 margin-left: 5px;
+}
+.bMain .bSearchdiv .keyword{
+	width: 130px;
+	height: 30px;
+	line-height: 30px;
+	border: none;
+	padding: 0 5px;
+}
+.bMain .bingBtn{
+  display: inline-block;
+  width: 75px;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 10px;
+  background-color: #e4e4e4;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 5px;
+  border-radius:5px;
+}
+
+.bMain .bingBtn:hover{
+  background: #4BA9DF;
+  color: #FFF;
+}
+ 	
+.btn2{
+  text-align: center;
+  cursor: pointer;
+  height: 25px;
+  line-height: 25px;
+  border-radius:5px;
+  border: 1px solid #e4e4e4;
+  color:#4ba9df;
+}
+.btn2:hover{
+	  background:#4baadd;
+	  color:#fff;
+}
+
+.btabs{
+	border-bottom: 1px solid #e4e4e4;
+}
+.btabs .btabitem{
+	float:left;
+	width:91.5px;
+	text-align:center;
+	height:30px;
+	line-height:30px;
+	cursor:pointer;
+}
+.btabs .bactive{
+	color:#4baadf;
+	border-bottom: 2px solid #4baadf;
+}
+.bingList .bitem{
+	border-bottom: #eeeeee 1px solid;
+	padding-left: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+	cursor:pointer;
+}
+
+.bingList .bitemActive{
+	background: #f0fbff;
+}
+
+.bingList .bitem .btitle{
+	/*height: 24px;*/
+	line-height: 20px;
+	word-break: break-all;
+}
+.bingList .bitem .btime{
+	height: 24px;
+	line-height: 24px;
+	color: #8e9598;
+}
+.bingList .bitem .bcomment{
+	background: url('/rdeploy/bing/images/b_msg_wev8.png') no-repeat left center;
+	padding-left: 20px;
+	color: #8e9598;
+	float: left;
+	margin-top: 20px;
+}
+.bingList .bitem .bok{
+ 	background: url('/rdeploy/bing/images/b_ok_wev8.png') no-repeat center center;width:45px;height:45px;
+	float: right;
+}
+ 	
+.bdetailtop{
+	padding-left: 20px;
+	border-bottom: 1px solid #e4e4e4;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+}
+
+.confirmBar{
+	border-bottom:1px solid #91d38d;
+	left: 0px;
+	top: 68px;
+	z-index:1;
+	display:none;
+	float: left;
+}
+
+.unConfirmBar{
+	border-bottom:1px solid #e4e4e4;
+	right: 0px;
+	top: 68px;
+	z-index:1;
+	display:inline-block;
+	float: right;
+}
+ 	
+.bdetailtop .btitleName{
+	font-size: 16px;
+	margin-top: 5px;
+	word-break: break-all;
+	/*
+	height: 30px;
+	line-height: 30px;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    */
+    width: 90%;
+}
+ 	
+.bdetailtop .bcreatetime{
+	height: 30px;
+	line-height: 30px;
+	color: #8e9598;
+}
+ 	
+.bdetailtop .bcount{
+	height: 30px;
+	line-height: 30px;
+	color: #8e9598;
+	margin-right:10px;
+}
+
+.breplyList{
+	top: 65px;
+	bottom: 70px;
+	left: 0px;
+	right: 0px;
+}
+
+.breplyitem{
+	border-bottom: #eeeeee 1px solid;
+	padding-left: 20px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.breplyitem .bheaddiv{
+	float: left;
+}
+.breplyitem .breplyright{
+	float: left;
+	margin-left: 10px;
+	max-width: 85%;
+}
+
+.breplyitem .breplytime{
+	color: #8e9598;
+}
+
+.breplyitem .breplycontent{
+	 margin-top: 5px;
+	 word-break: break-all;
+}
+
+.replybox{
+	background: #f7f7f7;
+	padding: 10px;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	border-top: #eeeeee 1px solid;
+}
+
+.head35{width:35px;height:35px;;-webkit-border-radius:30px;-moz-border-radius:30px;border-radius:30px;cursor:pointer;}
+
+.confirmstatus{
+	float: right;
+  	color: #8e9598;
+  	margin-top: 20px;
+  	margin-right: 5px;
+}
+.b_extend{
+	background: url('/rdeploy/bing/images/b_extend.png') no-repeat left center;
+	width:10px;
+	height:10px;
+	margin-right: 10px;
+  	margin-top: 10px;
+  	cursor:pointer;
+}
+
+.statusDetail {
+	border: 0;
+  	box-shadow: 0 7px 21px rgba(0,0,0,0.25);
+  	width:0px;
+  	display:none;
+  	position: absolute;
+  	z-index: 9995;
+  	right:0px;
+  	top: 0px;
+  	bottom:0px;
+  	background-color: #fff;
+  	font-size: 12px;
+}
+
+
+.bCloseBtn {
+	position: absolute;
+  	top: 5px;
+  	right: 10px;
+ 	color: #fff;
+  	font-size: 18px;
+  	font-weight: bold;
+  	cursor: pointer;
+}
+
+.bCloseBtn:hover {
+	color:#fe4643;
+}
+
+.dCloseBtn {
+	position: absolute;
+  	top: 5px;
+  	right: 10px;
+ 	color: #B8B4B4;
+  	font-size: 24px;
+  	font-weight: bold;
+  	cursor: pointer;
+  	z-index: 1;
+}
+
+.dCloseBtn:hover {
+	color:#fe4643;
+}
+
+.nodata1{
+	margin-left:90px;
+}
+.bnew{
+	background:url('/rdeploy/bing/images/b_new.png') no-repeat;width:10px;height:10px;position:absolute;top:0px;right:0px;
+}
+.input-group-btn {
+    display: table-cell;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 30px;
+    text-align:center;
+    background:url(/rdeploy/assets/img/cproj/searchbtn.png) center center no-repeat;
+    cursor:pointer;
+}

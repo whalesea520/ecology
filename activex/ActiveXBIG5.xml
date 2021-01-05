@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<activexs>
+	<activex groupid="">
+		<name>文件上傳控件</name>
+		<clsid>CBD79B8A-7975-4DD7-AF00-7E5ED70F7485</clsid>
+		<progid>WeaverOcx.file</progid>
+		<clsname>WeaverOcx.file</clsname>
+		<version>2.0.0.0</version>
+        <install>
+			<url>/weaverplugin/fileupload.exe</url>
+			<size>110K</size>
+		</install>
+		<explain>用於附件上傳和控制上傳文件大小。</explain>
+		<checkpageurl>/activex/TestByFile.jsp</checkpageurl>
+		<ismust>1</ismust>
+	</activex>
+	<activex groupid="">
+		<name>Office 控件</name>
+		<clsid>23739A7E-5741-4D1C-88D5-D50B18F7C347</clsid>
+		<progid>iWebOffice2003.iWebOffice</progid>
+		<clsname>iWebOffice Control</clsname>
+		<version>8.8.7.28</version>
+        <install>
+			<url>/weaverplugin/iWebOffice.exe</url>
+			<size>0.98M</size>
+		</install>
+		<explain>用於知識管理中Office文檔的顯示，編輯。</explain>
+		<checkpageurl>/activex/TestByOffice.jsp</checkpageurl>
+		<ismust>1</ismust>
+	</activex>
+	<activex groupid="">
+		<name>圖形化流程控件</name>
+		<clsid>15261F9B-22CC-4692-9089-0C40ACBDFDD8</clsid>
+		<progid>CHINAEXCELWEB.FormvwCtrl.1</progid>
+		<clsname>ChinaExcelWeb Control</clsname>
+		<version>4.0.0.0</version>
+		<install>
+			<url>/weaverplugin/chinaexcel_tw.exe</url>
+			<size>2.54M</size>
+		</install>
+		<explain>用於流程模板模式的展現和模板的設計。</explain>
+		<checkpageurl>/activex/TestByChinaExcel.jsp</checkpageurl>
+		<ismust>1</ismust>
+	</activex>
+	
+	<group id="1">
+		<name>E-cology控件</name>
+		<version>1.0.0.0</version>
+		<install>
+			<url>/weaverplugin/Ecologyplugin_tw.exe</url>
+			<size>2.64M</size>
+		</install>
+		<explain>包含圖形化流程控件、Office控件、文件上傳控件、報表控件等E-cology用到的所有控件，可以重複安裝。</explain>
+	</group>
+</activexs>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sql>
+<statement key="0">
+create table cloudstore_sqlrun (
+keyStr varchar2(512),
+appNo varchar2(512)
+)
+</statement>
+<statement key="1">
+create table cloudstore_role (
+id integer not null,
+rolename varchar2(512) not null,
+rolecode varchar2(512) not null,
+roledesc varchar2(512) not null,
+appcode varchar2(512) not null,
+del integer default 1
+)
+</statement>
+<statement key="1.1">
+create sequence cloudstore_role_seq
+minvalue 1
+maxvalue 99999999
+start with 1
+increment by 1
+nocache
+order
+</statement>
+<statement key="2">
+create table cloudstore_rolemember (
+id integer not null,
+roleid integer not null,
+membertype integer not null,
+memberobj integer not null,
+rolelevel integer not null,
+roleobj integer not null,
+del integer default 1
+)
+</statement>
+<statement key="2.1">
+create sequence cloudstore_rolemember_seq
+minvalue 1
+maxvalue 99999999
+start with 1
+increment by 1
+nocache
+order
+</statement>
+
+<statement key="3">
+create table cloudstore_cdSerializeNo(
+id varchar(50),
+curNo varchar(300),
+supNo varchar(300),
+no1 varchar(300)
+)
+</statement>
+<statement key="3.1">
+create table cloudstore_tocstoken (
+token varchar2(512) not null,
+license varchar2(512) not null
+)
+</statement>
+<statement key="3.2">
+alter table cloudstore_tocstoken  add loginconfig varchar2(512) default 0
+</statement>
+<statement key="3.3">
+create table cloudstore_checkforuuid(
+id varchar(300) not null,
+uuid varchar(300) not null,
+type varchar(300) not null
+)
+</statement>
+<statement key="3.4">
+alter table cloudstore_checkforuuid  add counts integer 
+</statement>
+<statement key="3.5">
+alter table cloudstore_checkforuuid  add name varchar(300) 
+</statement>
+<statement key="3.6">
+create table cloudstore_checkforuuidtimes(
+id integer not null,
+uuid varchar(300) not null,
+updates Date,
+count integer not null,
+counts integer not null,
+type varchar(300) not null,
+urls varchar(300)
+)
+</statement>
+<statement key="3.7">
+create sequence cloudstore_checkfut_seq
+minvalue 1
+maxvalue 99999999
+start with 1
+increment by 1
+nocache
+order
+</statement>
+<statement key="3.80">
+create table cloudstore_checkforky(
+kyinit integer default '1' not null 
+)
+</statement>
+<statement key="3.81">
+insert into cloudstore_checkforky (kyinit) values (1)
+</statement>
+<statement key="3.9">
+create table cloudstore_checkforuuidtypes(
+id integer not null,
+license varchar(300) not null,
+type varchar(300) not null
+)
+</statement>
+<statement key="3.91">
+create sequence cloudstore_checkfuts_seq
+minvalue 1
+maxvalue 99999999
+start with 1
+increment by 1
+nocache
+order
+</statement>
+<statement key="4.0">
+create table cloudstore_checkforuuiddb(
+id integer not null,
+fid varchar(300) not null,
+type varchar(300) not null ,
+enname varchar(300) not null ,
+chname varchar(300) not null ,
+dbname varchar(300) ,
+dbtitle varchar(500) ,
+url varchar(300),
+dborder integer 
+)
+</statement>
+<statement key="5">
+create table cloudstore_appdb(
+serialNumber varChar(30) not null,
+uuid varchar(100) not null
+)
+</statement>
+<statement key="7">
+create table app_license(
+  code varchar(40) not null
+)
+</statement>
+<statement key="8.1">
+create table cloudstore_sdfcol(
+id  integer not null,
+uuid varchar(1000)  not null,
+pageuid varchar(1000)  not null,
+key varchar(1000)  not null,
+display integer ,
+orders varchar(1000) ,
+orderkey varchar(1000) ,
+text varchar(1000)
+)
+</statement>
+<statement key="8.2">
+create table cloudstore_defcol(
+id  integer not null,
+sysid varchar(1000)  not null,
+userid varchar(1000)  not null,
+pageuid varchar(1000)  not null,
+orders varchar(1000) ,
+display integer 
+)
+</statement>
+<statement key="8.3">
+create sequence cloudstore_sdfcol_seq
+minvalue 1
+maxvalue 99999999
+start with 1
+increment by 1
+nocache
+order
+</statement>
+<statement key="8.4">
+create sequence cloudstore_defcol_seq
+minvalue 1
+maxvalue 99999999
+start with 1
+increment by 1
+nocache
+order
+</statement>
+
+<statement key="8.5">
+  alter table cloudstore_checkforuuiddb  add isshow varchar(10) default 0
+</statement>
+</sql>
+<!-- 
+drop table cloudstore_sqlrun
+/
+commit
+/
+drop table cloudstore_role
+/
+commit
+/
+drop sequence cloudstore_role_seq
+/
+commit
+/
+drop table cloudstore_rolemember
+/
+commit
+/
+drop sequence cloudstore_rolemember_seq
+/
+commit
+/
+<statement key="4.2">
+create table cloudstore_defcol(
+id Integer not null,
+systemid varchar(300) not null default 0,
+col_base_id varchar(300) ,
+pageid varchar(300)  ,
+pageuid varchar(300)  ,
+userid varchar(300)  ,
+orders varchar(300) ,
+onlyWidth varchar(300) ,
+width_ varchar(300) 
+)
+</statement>
+<statement key="4.21">
+create sequence cloudstore_defcolseq
+minvalue 1
+maxvalue 99999999
+start with 1
+increment by 1
+nocache
+order
+</statement>
+<statement key="1.2">
+create trigger cloudstore_role_tri
+  before insert on cloudstore_role
+  for each row
+declare
+  nextid number;
+begin
+  IF :new.id IS NULLor :new.id=0 THEN
+    select cloudstore_role_seq.nextval
+    into nextid
+    from sys.dual;
+    :new.id:=nextid;
+  end if;
+end cloudstore_role_tri
+</statement>
+
+<statement key="2.2">
+create or replace trigger cloudstore_rolemember_tri
+  before insert on cloudstore_rolemember
+  for each row
+declare
+  nextid number;
+begin
+  IF :new.id IS NULLor :new.id=0 THEN
+    select cloudstore_rolemember_seq.nextval
+    into nextid
+    from sys.dual;
+    :new.id:=nextid;
+  end if;
+end cloudstore_rolemember_tri
+</statement>
+
+1、参开配置如下：
+<sql>
+<statement>
+create table ...
+</statement>
+</sql>
+2、系统打开后会自动按顺序执行statement，如果有错误会在xml中体现，执行完成会有如下提示，也可以手动标记executed="true"达到不执行的效果，如果有错误会出现error标签
+<sql>
+<statement executed="true" error="">
+create table ...
+</statement>
+</sql>
+3、开发者在语句错误的时候直接获取此文件即可
+ -->

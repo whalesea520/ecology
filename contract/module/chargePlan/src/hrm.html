@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<head>
+		<title></title>
+		<script type="text/javascript">
+		//用户语言
+		var languageid = '7'
+		</script>
+		<script type="text/javascript" src="/js/messagejs/highslide/highslide-full_wev8.js"></script>
+		<script type="text/javascript" src="/js/messagejs/simplehrm_wev8.js"></script>
+		<script type="text/javascript" src="/js/messagejs/messagejs_wev8.js"></script>
+		<script type="text/javascript" src="/js/weaver_wev8.js"></script>
+		<script src="/wui/common/jquery/jquery.min_wev8.js"></script>
+		
+		<!--<script src="./jquery/jquery-1.11.1.min.js"></script>-->
+		<!--[if IE]> 
+		<script src="/qrcode/js/html5shiv_wev8.js"></script>
+		<script src="/qrcode/js/excanvas.compiled_wev8.js"></script>
+		<![endif]-->
+
+<style type="text/css">
+.STYLE4 {
+	FONT-FAMILY: Verdana;
+	font-size: 14px;
+	cursor: hand;
+	color:#038ef6;
+	vertical-align: middle;
+}
+
+.STYLE6 {
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 12px;
+}
+
+.STYLE61 {
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 12px;
+	color: #000000;
+}
+
+.simplehrmhead {
+	vertical-align:baseline;
+}
+#mainsupports {
+	position: absolute;
+	font-size: 12px;
+	color: #929393;
+	display: block;
+	z-index: 1;
+}
+
+#closetext {
+	float: right;
+	margin-right: 20px;
+}
+
+#mainsupports li a:link {
+	color: #2a788e;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+#mainsupports li a:visited {
+	color: #227086;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+#mainsupports li a:hover {
+	color: #FFFFFF;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+#resourceimg {
+	width: 198px;
+	height: 293px;
+	margin-top: 0px;
+}
+
+</style>
+	</head>
+	<body>
+
+<!-- 这里改了z-index(+2),因为UE编辑器会遮住弹窗 -->
+<div id="mainsupports" style="z-index:1999;background-color:#e4e4e4;">
+	<table width="455px" height="293px" border="0" align="center" style="vertical-align: middle;" cellpadding="0" cellspacing="0">
+		<tr>
+			<td width="198px" valign="top">
+				<a id='resourceimghref' href="javascript:void(0);" onclick="return getImageResult(this);" onFocus="this.blur()">
+					<img id='resourceimg'  border=0 width="100%" height="100%" onError="initSrc()">
+				</a>
+				<div style="position:absolute;top: 243px;background-image:url('/images/messageimages/temp/divbg_wev8.png');">
+					<table style="width: 198px;height: 50px;text-align: center;vertical-align: middle;background: grey;">
+						<tr>
+							<td><img src="../../images/emessage_wev8.png" onmouseover="javascript:this.src='../../images/emessage_wev8.png';" onmouseout="javascript:this.src='../../images/emessage_wev8.png';" onclick="javascript:openmessage();" title="发送短信"></td>
+							
+							<td><img src="../../images/msn_wev8.png" onmouseover="javascript:this.src='../../images/msn_wev8.png';" onmouseout="javascript:this.src='../../images/msn_wev8.png';" onclick="javascript:openmessage();" title="发送短信"></td>
+							
+							<td><img src="../../images/email_wev8.png" onmouseover="javascript:this.src='../../images/email_wev8.png';" onmouseout="javascript:this.src='../../images/email_wev8.png';" onclick="javascript:openemail();" title="发送邮件"></td>
+							
+							<td><img src="../../images/workplan_wev8.png" onmouseover="javascript:this.src='../../images/workplan_wev8.png';" onmouseout="javascript:this.src='../../images/workplan_wev8.png';" onclick="javascript:doAddWorkPlan();" title="新建日程"></td>
+							
+						</tr>
+					</table>
+				</div>
+			</td>
+			<td valign="top">
+				<div style="position:absolute;top: -17px;left: 438px">
+					<!--<img id="closetext" style="cursor: hand;"src="../images/closeicno_wev8.png" onclick="javascript:closediv();"/>-->
+				</div>
+				<div id="showSQRCodeDiv" style="text-align: left;position:absolute;top: -20px;left: 350px; " onclick="createQCode()"></div>	
+				<table width="257px" height="293px" border="0" style="padding-left: 16px;padding-top: 0px" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0">
+					<tr height="40px">
+						<td>
+							<div>
+								<img id="isonline" src="../../images/offline_wev8.png" width="19" height="19" style="vertical-align:middle;">&nbsp;
+									<span class="STYLE4" id="result1"></span>&nbsp;
+									<span class="STYLE6" id="result2"></span> &nbsp;
+									<span class="STYLE6" id="result13"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+								<!--<img src="../images/qcode_wev8.png" width="19" height="19" style="vertical-align:middle;cursor: hand;" onclick="createQCode()">-->
+							</div>
+						</td>
+					</tr>
+					<tr style="height:1px!important;" class="Spacing">
+						<td><div class="intervalDivClass"></div></td>
+					</tr>
+					<tr style="height:4px!important;">
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<table height="203px">
+								<tr>
+									<td style="WORD-WRAP: break-word;TEXT-VALIGN: left;word-break:break-all;">
+										<span class="STYLE6">部门&nbsp;:&nbsp;&nbsp;&nbsp;</span>
+										<span class="STYLE61" id="result6"></span>
+									</td>
+								</tr>
+								<tr>
+									<td style="WORD-WRAP: break-word;TEXT-VALIGN: left;word-break:break-all;">
+										<span class="STYLE6">分部&nbsp;:&nbsp;&nbsp;&nbsp;</span>
+										<span class="STYLE61" id="result9"></span>
+									</td>
+								</tr>
+								<tr>
+									<td style="WORD-WRAP: break-word;TEXT-VALIGN: left;word-break:break-all;">
+										<span class="STYLE6">岗位&nbsp;:&nbsp;&nbsp;&nbsp;</span>
+										<span class="STYLE61" id="result10"></span>
+									</td>
+								</tr>
+								<tr>
+									<td style="WORD-WRAP: break-word;TEXT-VALIGN: left;word-break:break-all;">
+										<span class="STYLE6">上级&nbsp;:&nbsp;&nbsp;&nbsp;</span>
+										<span class="STYLE61" id="result7"></span>
+									</td>
+								</tr>
+								<tr>
+									<td style="WORD-WRAP: break-word;TEXT-VALIGN: left;word-break:break-all;">
+										<span class="STYLE6">状态&nbsp;:&nbsp;&nbsp;&nbsp;</span>
+										<span class="STYLE61" id="result11"></span>
+									</td>
+								</tr>
+								<tr>
+									<td style="WORD-WRAP: break-word;TEXT-VALIGN: left;word-break:break-all;">
+										<span class="STYLE6">手机&nbsp;:&nbsp;&nbsp;&nbsp;</span>
+										<span class="STYLE61" id="result3"></span>
+									</td>
+								</tr>
+								<tr>
+									<td style="WORD-WRAP: break-word;TEXT-VALIGN: left;word-break:break-all;">
+										<span class="STYLE6">电话&nbsp;:&nbsp;&nbsp;&nbsp;</span>
+										<span class="STYLE61" id="result4"></span>
+									</td>
+								</tr>
+								<tr>
+									<td style="WORD-WRAP: break-word;TEXT-VALIGN: left;word-break:break-all;">
+										<span class="STYLE6">邮件&nbsp;:&nbsp;&nbsp;&nbsp;</span>
+										<span class="STYLE61" id="result5"></span>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr height="42px">
+						<td align="right" valign="middle" style="padding-right: 12px">
+							<span class="STYLE6" id="result0"></span>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</div>
+	<script>
+		window.onload = function (){
+			//console.log(window.location.search);
+			var src = "/contract/base/getHrmInfo.jsp"+window.location.search;
+			var result ='';
+			jQuery.ajax({  
+           		type:"post",  
+           		url:src,  
+           		dataType:"json", 
+           		async:false,
+           		success:function (data) { 
+                	   result = data;               
+           		}, 
+           		failure:function () {  
+               		 result =  "";  
+	           }  
+	       	}) ;
+//	       	result = [{"managername":"张亮",
+//		       	"subcompanyname":"维森集团ZZF11",
+//		       	"sex":"1",
+//		       	"jobtitlename":"总经理",
+//		       	"email":"685255@weaver.om","status":"1",
+//		       	"name":"杨文元-zzf",
+//		       	"departmentname":"总经办",
+//		       	"managerid":"0",
+//		       	"telephone":"010-68958565-6014",
+//		       	"mobile":"18654854124","pic":''}];
+		    if(!result[0].pic){
+		    	result[0].pic = result[0].sex = 1 ? "../../images/man_wev8.png" : "../../images/women_wev8.png";
+		    }
+		     
+		//获取到内容
+			$('#result1').html(result[0].name);//姓名
+			$('#result2').html('('+(result[0].sex = 1 ? "男" : "女")+')');//性别
+			$('#result6').html(result[0].subcompanyname);//部门
+			$('#result9').html(result[0].departmentname);//分布
+			$('#result10').html(result[0].jobtitlename);//岗位
+			$('#result7').html(result[0].managername);//上级
+			$('#result11').html(result[0].status=1 ? "正式":"试用");//状态
+			$('#result3').html(result[0].telephone);//手机
+			$('#result4').html(result[0].mobile);//电话
+			$('#result5').html(result[0].email);//邮件
+			//src="../../images/women_wev8.png"
+			$('#resourceimg').attr('src',result[0].pic);
+		}
+	</script>
+		<script type="text/javascript">
+			function getImageResult(o)
+			{
+				hs.graphicsDir = '/js/messagejs/highslide/graphics/';
+				hs.outlineType = 'rounded-white';
+				hs.fadeInOut = true;
+				hs.headingEval = 'this.a.title';
+				var hrefimg = document.getElementById("resourceimghref").href;
+				if(hrefimg.indexOf("javascript")!=-1)
+				{
+					void(0);
+					return false;
+				}
+				else
+				{
+					return hs.expand(o);
+				}
+			}
+		
+		function createQCode(){
+			if(jQuery("#showSQRCodeDiv").is(":hidden"))
+				jQuery("#showSQRCodeDiv").show();
+			else
+				jQuery("#showSQRCodeDiv").hide();
+		}
+		
+		function initSrc(){
+			if(jQuery("#result2").html()=="（男）"){
+				jQuery("#resourceimg").attr("src","/images/messageimages/temp/man_wev8.png");	
+				jQuery("#resourceimg").parent().attr("href","/images/messageimages/temp/man_wev8.png");
+			}else if(jQuery("#result2").html()=="（女）"){
+				jQuery("#resourceimg").attr("src","/images/messageimages/temp/women_wev8.png");	
+				jQuery("#resourceimg").parent().attr("href","/images/messageimages/temp/women_wev8.png");
+			}
+		}
+		</script>
+	</body>
+	
+</html>

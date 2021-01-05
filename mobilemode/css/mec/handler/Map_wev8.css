@@ -1,0 +1,98 @@
+.MADM_Title{
+	border-bottom: 1px solid rgb(223, 223, 223);
+	font-size: 12px;
+	color: rgb(164, 169, 174);
+	font-weight: bold;
+	padding: 0px 0px 6px 10px;	
+	margin-bottom: 10px;
+}
+.MADM_BaseInfo{
+	padding-left: 10px;
+	margin-bottom: 15px;
+	color: rgb(166, 167, 171);	
+}
+.MADM_BaseInfo div{
+	margin-bottom: 10px;	
+}
+.MADM_BaseInfo .MADM_BaseInfo_Label{
+	width: 60px;
+	display: inline-block;
+	text-align: right;
+	margin-right: 6px;
+}
+.MADM_BaseInfo .MADM_BaseInfo_Label_style8{
+	width: 200px;
+	display: block;
+	text-align: left;
+}
+.MADM_Text{
+	-webkit-appearance: none;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+	-webkit-rtl-ordering: logical;
+	-webkit-user-select: text;
+	-webkit-writing-mode: horizontal-tb;
+	border: 1px solid rgb(223, 223, 223);
+	background-color: rgb(255, 255, 255);
+	border-image-outset: 0px;
+	border-image-repeat: stretch;
+	border-image-slice: 100%;
+	border-image-source: none;
+	border-image-width: 1;
+	box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+	box-sizing: border-box;
+	cursor: auto;
+	display: inline-block;
+	font-family: 'Microsoft Yahei',Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	height: 26px;
+	letter-spacing: normal;
+	line-height: 19px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	outline-color: rgb(0, 0, 255);
+	outline-style: none;
+	outline-width: 0px;
+	padding-bottom: 3px;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-top: 3px;
+	text-align: start;
+	text-indent: 7px;
+	text-shadow: none;
+	text-transform: none;
+	width: 280px;
+	word-spacing: 0px;
+	writing-mode: lr-tb;
+	zoom: 1;	
+}
+
+.MADM_Bottom{
+	padding: 0px 9px 0px 9px;
+	margin-bottom: 5px;		
+}
+.MADM_SaveBtn{
+	background-color: rgb(107, 163, 237);
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	box-sizing: border-box;
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+	display: block;
+	font-family: 'Microsoft Yahei', Arial, sans-serif;
+	font-size: 14px;
+	height: 28px;
+	line-height: 28px;
+	margin: 0px;
+	text-align: center;
+	width: 100%
+	zoom: 1;	
+}
+.MADM_Tip{
+	padding: 3px 0px 0px 10px;
+	color: rgb(166, 167, 171);
+	line-height: 20px;	
+}

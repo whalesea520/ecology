@@ -1,0 +1,28 @@
+.tabpanel{width: 100%;height: 34px;border-bottom:1px #ECECEC solid;font-size: 14px;font-weight: bold;margin-bottom: 10px;margin-top: 0px;}
+.tab{width: 55px;float: left;line-height: 26px;text-align: center;cursor: pointer;font-size: 13px;margin-top: 0px;color: #333333;
+		border-top: 1px #DBDBDB solid;border-bottom: 1px #DBDBDB solid;border-left: 1px #DBDBDB solid;background: #FAFAFA;}
+.tab_click{background: #4F95E4;color: #fff;border-color: #4F95E4;}
+.tab2{width: 35px;float: left;line-height: 28px;text-align: center;cursor: pointer;font-size: 12px;border: 0px;color:#626262;font-weight: normal;}
+.tab2_panel{height: 28px;width: auto;background: url('../images/tab_bg.png') repeat-x;
+		border-left: 1px #DBDBDB solid;border-right: 1px #DBDBDB solid;float: left;}
+.tab2_click{color: #fff;background: #75ACEA}
+.yearpanel{width: 85px;line-height: 26px;height: 26px;border: 1px #ECECEC solid;margin-right: 10px;cursor: pointer;
+		background: url('../images/btn_down.png') right center no-repeat;float: left;font-size: 13px;}
+.yearselect{width: 85px;height:auto;border: 1px #ECECEC solid;position: absolute;display: none;background: #fff;z-index: 100;}
+.yearoption{width: 100%;line-height: 22px;font-size: 13px;}
+.yearoption_hover{background: #0080C0;color: #fff;}
+.maintitle{float: left;line-height: 28px;color: #999999;font-size: 12px;margin-left: 10px;}
+
+.weekselect{width: 302px;height:auto;border: 1px #ECECEC solid;position: absolute;display: none;background: #fff;z-index: 100;overflow:hidden;}
+.weekoption{width: 50px;line-height:22px;text-align:center;float:left;color:#999999;}
+.weekoption_current{background: #F8EFEF;}
+.weekoption_hover,.weekoption_select{background: #0080C0;color: #fff;}
+
+.week_txt{float: left;line-height: 28px;width: 56px;text-align: center;margin: 0px;padding: 0px;font-weight: normal;font-size: 12px;cursor: pointer;}
+.week_btn1{float: left;width: 16px;height: 28px;;margin: 0px;padding: 0px;background: url('../images/prev.png') center no-repeat;}
+.week_prev{cursor: pointer;}
+.week_prev_hover{background: url('../images/prev_hover.png') center no-repeat;}
+.week_btn2{float: left;width: 16px;height: 28px;;margin: 0px;padding: 0px;background: url('../images/next.png') center no-repeat;}
+.week_next{cursor: pointer;}
+.week_next_hover{background: url('../images/next_hover.png') center no-repeat;}
+.week_show{width: 160px;line-height: 28px;text-align: center;color: #969696;float: right;font-weight: normal;font-size: 12px;}

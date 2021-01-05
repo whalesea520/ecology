@@ -1,0 +1,22 @@
+SMAP
+_customerlistnew__jsp.java
+JSP
+*S JSP
+*F
++ 1 CustomerListNew.jsp
+CRM/customer/CustomerListNew.jsp
++ 2 initNoCache.jsp
+page/maint/common/initNoCache.jsp
+*L
+1#1:43
+9#2,12:44
+3#1:56
+5#1,2:57,7
+6#1,2:70
+7#1:72,6
+7#1:77
+9#1,62:78
+70#1,2:140
+71#1:142,9
+71#1,2:150,4
+*E

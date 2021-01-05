@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<id>10</id>  <!--只能是唯一的英文字母-->
+	<title>我的项目</title>
+	<titleEN>My Projects</titleEN>
+	<desc>我能看到的审批通过并且还没有结束的项目</desc>
+	<icon>resource/image/10_wev8.gif</icon>
+	<linkMode>2</linkMode>
+	<loginView>0</loginView>
+	<type>1</type>
+	<perpage>5</perpage>
+	<private>
+		<jsList> 
+		</jsList>
+	</private>
+	<public>
+		<jsIdList>  
+		</jsIdList>
+		<cssIdList>
+		</cssIdList>
+	</public>
+	<view>
+		<url>/page/element/compatible/view.jsp</url>
+		<method>getProjectSppb</method>
+	</view>
+	<setting>
+		<url>/page/element/compatible/setting.jsp</url>
+		<method/>
+	</setting>
+	<more>
+		<url>/page/element/compatible/more.jsp</url>
+		<method>getNewProj</method>
+	</more>
+	<operation>/page/element/compatible/operation.jsp</operation>
+</root>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<url-encoding-except>
+		<url>/weaver/weaver.org.layout.DownloadDeptLayoutServlet</url>
+		<url>/classbean/weaver/workflow/layout/WorkflowEditor.class</url>
+		<url>/login/LoginSSO.jsp</url>
+		<url>/login/LoginSSO2.jsp</url>
+		<url>synccache.jsp</url>
+		<url>/classbean/weaver/org/layout/</url>
+		<url>/email/new/MailInboxList.jsp</url>
+		<url>/weaver/weaver.workflow.layout.WorkflowXmlParser</url>
+	</url-encoding-except>
+</root>

@@ -1,0 +1,34 @@
+<debugconfig>
+    <filter>
+        <!--
+        value can be muti value  eg. /workflow/request/RequestOperation.jsp,/xx/xxx.jsp,/yy/yyy.jsp
+        -->
+        <urls>
+			<url>
+				<path>/workflow/request/RequestOperation.jsp</path>
+				<!--param>workflowid=1440,403</param-->
+				<alias>A</alias>
+			</url>
+			<url>
+				<path>/workflow/request/RemarkOperate.jsp</path>
+				<alias>B</alias>
+			</url>
+			<url>
+				<path>/mobile/plugin/1/RequestOperation.jsp</path>
+				<alias>C</alias>
+			</url>
+		</urls>
+        
+        <!--user>sysadmin,wk</user-->
+        
+    </filter>
+    <!-- 
+    #{path} = workflow_request_RequestOperation
+	#{date} = current date
+    #{time} = 20120922_1643_555
+    #{user} = current user loginid
+	#{alias} = current url alias
+    ${...} = from request params
+     -->
+    <log-file-name>wfsubmit/#{date}/#{alias}#{time}_#{user}_${requestid}</log-file-name>
+</debugconfig>

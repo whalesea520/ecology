@@ -1,0 +1,278 @@
+    *{
+      font-family: "微软雅黑";
+	}
+	body,div,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,code,form,fieldset,legend,button,input,textarea,th,td{
+		margin:0;
+		padding:0;
+	}
+	body,button,input,select,textarea{font:12px/1.5 tahoma,arial,\5b8b\4f53,sans-serif;}
+
+	h1,h2,h3,h4,h5,h6{font-size:100%; font-weight:normal;}
+
+	table{border-collapse:collapse; border-spacing:0;}
+
+	table,td,tr,th{font-size:inherit;font:100%}
+
+	ul,ol{list-style:none;}
+
+	li{list-style-type:none;}
+
+	html,body {
+		height: 100%;
+		padding: 0;
+		margin: 0;
+	}
+	#contaienr{
+		width: 100%;
+		height: 100%;
+	}
+
+	.formarea{
+		width: 100%;
+		float: left;
+		height: 100%;
+	}
+
+    .switch{
+	
+		position: absolute;
+		right: -18px;
+		top: 205px;
+		cursor: pointer;
+		z-index: 10;
+		width: 20px;
+		height: 20px;
+	
+	}
+	.switch img{
+	 
+	 margin-left: 8px;
+     margin-top: 6px;
+	
+	}
+
+	.formtable{
+
+		margin-right: 230px;
+		padding-left: 10px;
+		padding-top: 8px;
+		position: relative;
+		background: #ffffff;
+	}
+	  .connectlist{
+		  width: 220px;
+		  float: left;
+		  margin-left: -220px;
+		  height: 100%;
+	  }
+	.titleinfo{
+		display: inline-block;
+		padding-right: 15px;
+	}
+	
+	.formtable table tr{
+	   height: 35px;
+	}
+	.formtable table td{
+		vertical-align: middle;
+		text-align: left;
+	}
+
+
+	.titleinfo input[type='radio']
+	{
+		vertical-align: middle;
+		margin-top: -1px;
+	}
+	.appendtools li{
+	
+	    display: inline-block;
+		line-height: 30px;
+		height: 30px;
+		margin-right: 10px;
+
+	
+	}
+	.appenditem{
+	
+	  display:inline-block;
+	  margin-left:2px;
+	  cursor:pointer;
+	
+	}
+	.swfup{
+	  display:inline-block;
+	  position: relative;
+	  width: 45px;
+	}
+	.swfwrapper{
+	  position: absolute;
+      top:-15px;
+	
+	}
+	table.ke-toolbar {
+	width: 100%;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	border-collapse: separate;
+	background: white;
+	}
+	.ke-icon {
+	display: block;
+	border: 1px solid #ffffff;
+	background-color: transparent; 
+	padding: 1px 2px;
+	margin: 1px;
+	cursor: pointer;
+	}
+	.ke-icon-selected {
+	border: 1px solid #5690D2 !important;
+	background-color: #E9EFF6;
+	}
+	.ke-icon-on{
+	border: 1px solid #5690D2 !important;
+	background-color: #E9EFF6;
+	}
+	.connectusers {
+	border: 1px solid #e7e7e7;
+	width: 200px;
+	margin-top: 8px;
+	margin-left: 8;
+	margin-right:-20px;
+	height: 442px;
+	background:rgb(251, 251, 251)
+    }
+    
+    .connectusers  .nav{
+        background-color:#f7f7f7;
+        border-bottom: 1px solid #e7e7e7;
+        color: #aaa;
+    }
+    
+	.connectusers  .nav  li{
+
+		display: inline-block;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		
+		cursor: pointer;
+		width: 97.5px;
+		
+	}
+
+	.connectusers  .nav  li.itemselected
+	{
+	  border-bottom:none;
+	}
+
+	.connectusers  .nav  li.itemunselected
+	{
+	  background:#f5f5f5;
+	}
+	.definewf{
+
+	    display: inline-block;
+		background: #f1f1f1;
+		height: 25px;
+		color: #ffffff;
+		cursor:pointer;
+        border:1px solid #e7e7e7;
+        margin-right:2px;
+	}
+
+	.formtable .tdfirst{
+
+	padding-left:25px;
+	background: #f7f7f7;
+
+	}
+	.addfreewftable .tdfirst{
+	
+	 padding-left:10px;
+	 background: #f7f7f7;
+
+	}
+
+    .commonusersitem ol{
+	 margin-top: 0px;
+	 
+	}
+
+	.commonusersitem ol li{
+	
+	 height: 30px;
+	 line-height: 30px;
+	 padding-left: 10px;
+	 color: #616161;
+	 cursor:pointer;
+	
+	}
+
+	.mutiselect{
+	
+	 cursor:pointer;
+	 color: blue;
+	
+	}
+
+	.acceptperson{
+	   
+	   cursor:pointer;
+	   color:"#000" !important;
+
+	}
+
+	.userselected{
+	
+	  background:#eff7ff;
+	  
+	}
+
+	.zDialog_div_bottom{
+	 
+	 padding-bottom: 10px!important;
+	
+	}
+
+	.sbHolder {
+
+	background-color: #ffffff;
+	border: 1px solid #f7f7f2!important;
+	font-weight: normal;
+	position: relative;
+	outline: none;
+	display: inline-block;
+  }
+
+  .formtable a:link {
+   
+	COLOR: #123885; 
+ 
+ }
+
+ .formtable a:hover {
+   
+	color:red !important;
+ 
+ }
+
+ #mainsupports{
+
+   border: 1px solid #ccc;
+
+ }
+  .tditem{
+  
+       border:1px solid  #e6e6e6;
+	   padding-left: 5px;
+ }
+
+input, select, textarea {
+border: #e7e7e7 1px solid;
+}
+
+.formmodules  .sbHolder {
+top: -1px;
+}

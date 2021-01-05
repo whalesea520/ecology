@@ -1,0 +1,72 @@
+.thumbbox{
+	width: 71px;
+	height: 71px;
+	border: 1px solid #c9c9c9;
+	margin: 0 8px 8px 8px;
+	cursor: pointer;
+	overflow: hidden;
+	display: inline-block !important;
+	position: relative;
+}
+.thumbbox>img{
+	width: 100%;
+	height: 100%;
+}
+.thumbbox>.boxClose{
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	border-radius: 8px;
+	background: #fff;
+	right: 2px;
+	top: 2px;
+	display: none;
+	text-align: center;
+	line-height: 16px;
+	font-size: 16px;
+}
+.thumbbox:hover .boxClose{
+	display:block;
+}
+.thumbbox>.boxProgress{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 50%;
+	top: 50%;
+	margin-left: -15px;
+	margin-top: -15px;
+}
+.thumbbox>.boxErrMsg{
+	position: absolute;
+	width: 100%;
+	height: 16px;
+	text-align: center;
+}
+.leftbox{
+	margin-left: 0;
+}
+.addbox{
+	position: relative;
+}
+.addbox:hover{
+	background: #eee;
+}
+#imgAddInput{
+	position: absolute;
+	left: 0;
+}
+.addInputLayer{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: #fff;
+	background-image: url(res/addimg_wev8.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.addInputLayer:hover{
+	background-image:url(res/addimg_h_wev8.png);
+}

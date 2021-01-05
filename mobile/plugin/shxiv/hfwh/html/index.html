@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>红纺文化</title>
+<link rel="stylesheet" href="/mobile/plugin/shxiv/hfwh/css/qietu.css">
+<link rel="stylesheet" href="/mobile/plugin/shxiv/hfwh/css/swiper.min.css">
+<link rel="stylesheet" href="/mobile/plugin/shxiv/hfwh/css/style.css">
+</head>
+<body>
+<!--头部-->
+<div class="header">
+	<div class="header-logo">
+		<a href="#"><img src="/mobile/plugin/shxiv/hfwh/imgs/logo.png"/></a>
+	</div>
+	<div class="header-nav">
+		<ul>
+			<li class="header-nav-item"><a href="index.html" >首页</a></li>
+			<li class="header-nav-item"><a  href="javascript:void(0)" onclick="openTk()" >图库</a></li>
+			<li class="header-nav-item"><a href="javascript:void(0)" onclick="openSc()" >图库收藏</a></li>
+		</ul>
+		<div class="icon-quit" onclick="window.location='/login/Logout.jsp'"></div>
+	</div>
+</div>
+<!--//头部-->
+
+<div class="wrapper">
+	<div class="content-wrap-inner">
+
+	</div>
+</div>
+
+
+<script type="text/javascript" src="/mobile/plugin/shxiv/hfwh/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/mobile/plugin/shxiv/hfwh/js/swiper.min.js"></script>
+<script type="text/javascript" src="/mobile/plugin/shxiv/hfwh/js/script.js"></script>
+
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+        /*jQuery('.content-wrap-inner').html('');
+        jQuery('.content-wrap-inner').load("http://localhost:8093/workflow/search/WFSearchResult.jsp");*/
+        window.location.href="http://localhost:8093/docs/news/NewsDsp.jsp";
+    });
+
+
+
+    function openTk() {
+        window.location.href="/mobile/plugin/shxiv/hfwh/servlet/mainTk.jsp";
+    }
+
+    function openSc() {
+        window.location.href="/mobile/plugin/shxiv/hfwh/html/scb.html";
+    }
+
+</script>
+
+
+</body>
+</html>
+

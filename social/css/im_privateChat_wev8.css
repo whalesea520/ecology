@@ -1,0 +1,171 @@
+* {
+    font-size: 12px
+}
+.titlebar{
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+    text-align: left;
+    position: relative;
+    background: #fff;
+    border-bottom: 1px solid #d0d3d8;
+    padding-left: 20px;
+    width:95%;
+}
+.titlebar .btnGroup{
+    float: right;
+    font-size: 12px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.titlebar .btnGroup .sendBtn{
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    line-height: 32px;
+    margin: 13px 0;
+    background-color: #e4e4e4;
+    border-radius: 3px;
+}
+.titlebar .btnGroup .sendBtn:hover{
+    background-color: #bebebe; 
+}
+.titlebar .btnGroup .sendBtn:active{
+    background-color: #989494;
+}
+.head35 {
+    /*
+    * 头像
+     */
+    width: 35px;
+    height: 35px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    cursor: pointer
+}
+#privateRecentListdiv{
+    background-color:#f4f9f8 !important;
+    height:83%;
+}
+.left {
+    float: left
+}
+.right {
+    float: right
+}
+.leftMenudiv .chatItem {
+    border-bottom: 1px solid #e1e8f5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    padding-left: 15px;
+    overflow: hidden;
+    width: 95%;
+}
+
+.leftMenudiv .activeChatItem {
+    background-color: #e7ecee
+}
+
+.leftMenudiv .chatItem .itemleft {
+    float: left;
+    width: 70px
+}
+.leftMenudiv .chatItem .itemleft .leftItem{
+    float: left;
+    margin-top: 8px;
+    width: 20px;
+    height: 20px;
+}
+.leftMenudiv .chatItem .itemleft .rightItem{
+    float: right;
+}
+.leftMenudiv .chatItem .itemcenter {
+    float: left;
+    margin-right: 10px;
+    width: 110px
+}
+
+.leftMenudiv .chatItem .itemright {
+    float: left;
+    width: 110px
+}
+
+.leftMenudiv .chatItem .itemconverright {
+    float: right;
+    width: 86%;
+}
+
+.leftMenudiv .chatItem .latestTime {
+    color: #b4c2d5;
+    text-align: right
+}
+
+.leftMenudiv .chatItem .deptname {
+    color: #b4c2d5;
+    width: 300px
+}
+
+.leftMenudiv .chatItem .targetName {
+    color: #384560;
+}
+
+.leftMenudiv .chatItem .targetName .signatures{
+	color: #b4c2d5;
+	overflow: hidden;   
+    text-overflow:ellipsis;   
+    white-space: nowrap;
+    max-width:120px;
+    padding-left:5px;
+}
+
+.leftMenudiv .chatItem .msgcount {
+    text-align: center;
+    min-width: 20px;
+    max-width: 30px;
+    padding: 0 2px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: red;
+    color: #fff;
+    line-height: 20px;
+    display: none
+}
+.footbar{
+    font-size: 16px;
+    text-align: left;
+    position: relative;
+    background: #fff;
+    border-top: 1px solid #d0d3d8;
+    padding-left: 18px;
+    width:95%;
+}
+.footbar .leftItem{
+    float: left;
+    margin-top: 13px;
+    width: 90px;
+    height: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.footbar .rightItem{
+    float: right;
+    margin-top: 7px;
+    width: 76px;
+    height: 28px;
+    text-align: center;
+    color: #fff;
+    background: #42b0dc;
+    line-height: 27px;
+    cursor: pointer;
+}
+.selected {
+    background:url("/social/images/select_wev8.png") no-repeat;
+}
+.unselected {
+    background:url("/social/images/unselected_wev8.png") no-repeat;
+}

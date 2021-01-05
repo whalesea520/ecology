@@ -1,0 +1,9 @@
+
+
+CREATE PROCEDURE [HrmSchedule_Select_Default]
+	(@flag                             integer output,
+         @msg                             varchar(80) output
+        )
+AS 
+select * from HrmSchedule where scheduletype ='0'
+GO

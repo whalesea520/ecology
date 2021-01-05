@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<id>11</id>  <!--只能是唯一的英文字母-->
+	<title>最新客户</title>
+	<titleEN>New Customers</titleEN>
+	<desc>对于我来说最新的客户</desc>
+	<icon>resource/image/11_wev8.gif</icon>
+	<linkMode>2</linkMode>
+	<loginView>0</loginView>
+	<type>1</type>
+	<perpage>5</perpage>
+	<private>
+		<jsList> 
+		</jsList>
+	</private>
+	<public>
+		<jsIdList>  
+		</jsIdList>
+		<cssIdList>
+		</cssIdList>
+	</public>
+	<view>
+		<url>/page/element/compatible/view.jsp</url>
+		<method>getNewCrmSppb</method>
+	</view>
+	<setting>
+		<url>/page/element/compatible/setting.jsp</url>
+		<method/>
+	</setting>
+	<more>
+		<url>/page/element/compatible/more.jsp</url>
+		<method>getNewCrmMore</method>
+	</more>
+	<operation>/page/element/compatible/operation.jsp</operation>
+</root>

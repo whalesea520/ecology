@@ -1,0 +1,1360 @@
+<public:component>
+
+<public:attach event="onclick" onevent="Click()" />
+<public:attach event="onmousedown" onevent="MouseDown()" />
+<public:attach event="onmouseover" onevent="MouseOver()" />
+<public:attach event="onmouseout" onevent="MouseOut()" />
+<public:attach event="onmouseup" onevent="MouseUp()" />
+<public:attach event="onselectstart" onevent="SelectStart()" />
+<public:attach event="onDblClick" onevent="onDblClick()" />
+
+<public:method name="movenext" />
+<public:method name="moveprevious" />
+<public:method name="Sync" />
+<public:method name="init" />
+<public:method name="HighlightNode" />
+<public:method name="ExpandNode" />
+<public:property name="test" />
+<script language="JScript">
+
+var objLI_Current = null;
+var strRootPath = "";
+var oConfig = null;
+var showTitle = null;
+var showStatus = null;
+var strXSLSrc = "/css/deepTree.xsl";  // part of deeptree, probably should be hard-coded into htc
+objXSLDoc = new ActiveXObject("Microsoft.XMLDOM");
+objXSLDoc.async = false;
+objXSLDoc.load( strXSLSrc );
+
+var m_iMaxCalls = 1024;
+var m_aoCalls   = new Array();
+var m_iLastCall = 0;
+var m_iMasterIdx = null;
+var m_bSyncFailed = false;
+
+var m_sTempNodeStart = "<div class='clsItem' type='leaf'><span class='clsSpace' type='img'><span class='clsLeaf'>.</span></span><span class='clsLabel' type='label'><span class='clsUnavailable'>";
+//var m_sTempNodeStart = "<div class='clsItem' type='leaf'><span class='clsLabel' type='label'><span class='clsUnavailable'>";
+var m_sTempNodeEnd = "</span></span></div>";
+
+var m_sUnavailableText = "(无)";
+var m_sLoadingText = "正在载入数据...";
+
+
+
+//-----------------------------------------------
+// GetXML(strXMLSrc, strXSLsrc)
+//-----------------------------------------------
+
+function GetXML( strXMLSrc , oEl , oElClass , oSync,top )
+{
+    var aryXMLNodes;
+    var i = 0;
+    var strRetVal = "";
+    
+    var iCall = fnAllocCall();
+    var objXMLDoc = new ActiveXObject("MSXML.DomDocument");
+    objXMLDoc.async = true;
+    m_aoCalls[iCall] = new CallObject( objXMLDoc , oEl , oElClass , oSync );
+    
+    objXMLDoc.onreadystatechange = Function( "fnLoadComplete( " + iCall +","+top+" );" );
+    var xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");  
+    xmlHttp.open("GET", strXMLSrc, false);	// async
+    
+    xmlHttp.onreadystatechange = function () {
+		if (xmlHttp.readyState == 4) {
+	         //alert(xmlHttp.responseText);
+			 objXMLDoc.load( xmlHttp.responseXML );
+			 return iCall;
+		}
+	};
+	// call in new thread to allow ui to update
+	window.setTimeout(function () {
+		xmlHttp.send(null);
+	}, 10);
+	
+   
+}
+
+
+//-------------------------------------------------------------------------------------------------
+//                                     EVENT HANDLERS
+//-------------------------------------------------------------------------------------------------
+
+//-----------------------------------------------
+// Init()
+//-----------------------------------------------
+function init0(){
+var strHTML;
+    var objLI;
+    window.deeptree = element;
+    // Set up global tree accessors.
+    //   TODO:: check that these have not been overridden by
+    //          another consuming application.
+    //   TODO:: encapsulate global accessors in other functionality
+    //          as well (dtbar,searchtab,contentbar should set themselves,
+    //          rather than doing it here)
+    oConfig = new Config();//guxi
+    element.type = "container";
+    m_iMasterIdx = GetXML( oConfig.sTopXmlSrc , element , element.className,null,true );
+    window.document.body.attachEvent("onkeydown",KeyDown);
+}
+
+function init(url)
+{
+    var strHTML;
+    var objLI;
+    window.deeptree = element;
+    // Set up global tree accessors.
+    //   TODO:: check that these have not been overridden by
+    //          another consuming application.
+    //   TODO:: encapsulate global accessors in other functionality
+    //          as well (dtbar,searchtab,contentbar should set themselves,
+    //          rather than doing it here)
+    oConfig = new Config();//guxi
+    element.type = "container";
+    m_iMasterIdx = GetXML( url , element , element.className ,null,true);
+    window.document.body.attachEvent("onkeydown",KeyDown);
+    
+}
+
+//-----------------------------------------------
+// Click()
+//-----------------------------------------------
+
+function Click()
+{
+	var objUnknown;
+	var objLI;
+
+	objUnknown = window.event.srcElement;
+
+	if (objUnknown.type != "checkbox" && objUnknown.type != "radio"){
+		window.event.cancelBubble = true;
+		window.event.returnValue = false;
+	}
+	window.document.body.focus();
+	
+	//alert(objUnknown);//guxi
+	
+ 	if( objUnknown.tagName.toUpperCase() == "A" )
+	{  
+		objLI = objUnknown.parentElement.parentElement;
+		SelectNode(objLI, false, false);
+		ExpandNode(objLI);
+		//ToggleNode(objLI);////guxi 8-28 展开节点
+	}
+	else if (objUnknown.type == "checkbox" || objUnknown.type == "radio")
+	{
+	}
+	else if( null != objUnknown.parentElement && objUnknown.parentElement.type == "img" )
+	{
+    		objLI = objUnknown.parentElement.parentElement;
+		if ( objLI.type == "leaf" )
+		{
+			SelectNode( objLI, false, false );
+		}
+		else
+		{
+			ToggleNode(objLI);
+		}
+	}
+	else if( objUnknown.type == "img" )
+	{
+		objLI = objUnknown.parentElement;
+		if ( objLI.type == "leaf" )
+		{
+			//SelectNode( objLI, false, false );//guxi 8-28
+		}
+		else
+		{
+			ToggleNode(objLI);
+		}
+	}
+	else if( objUnknown.type == "label" )
+	{
+		objLI = objUnknown.parentElement;
+		SelectNode(objLI, false, false );
+		ToggleNode(objLI);
+	}
+	else
+	{
+		SelectNode(objLI_Current, true, false);
+	}
+}
+
+//-----------------------------------------------
+// KeyDown()
+//-----------------------------------------------
+
+function KeyDown()
+  {
+  var blnRetVal = false
+  var objLI;
+
+  if (window.event.ctrlKey == false && window.event.altKey == false)
+    {
+
+    window.event.cancelBubble = true;
+    window.event.returnValue = false;
+
+    switch (window.event.keyCode)
+      {
+
+      case 9 : // tab key
+        if (window.event.shiftKey == true)
+          {
+          MovePrevious();
+          }
+        else
+          {
+          MoveNext();
+          }
+        break;
+
+      case 13 : // enter key
+        objLI = window.event.srcElement.parentElement;
+        LoadNodeContent(objLI);
+        break;
+
+      case 37 : // left key
+        MoveLeft()
+        break;
+
+      case 38 : // up key
+        MoveUp()
+        break;
+
+      case 39 : // right key
+        MoveRight()
+        break;
+
+      case 40 : // down key
+        MoveDown()
+        break;
+          
+      case 188 : // "<" key
+        MovePrevious();
+        break;
+
+      case 190 : // ">" key
+        MoveNext();
+        break;
+
+      default :
+        window.event.cancelBubble = false;
+        window.event.returnValue = true;
+        blnRetVal = true;
+        break;
+      }
+    }
+  else
+    {
+    window.event.cancelBubble = false;
+    window.event.returnValue = true;
+    blnRetVal = true;
+    }
+      
+  return blnRetVal;
+  }
+
+//-----------------------------------------------
+// MouseDown()
+//-----------------------------------------------
+
+function MouseDown()
+{
+	var objUnknown;
+	var id;
+	var url;
+	objUnknown = window.event.srcElement;
+
+	////////////////// Right guxi 7-24 //////////////////////
+	var button = window.event.button;
+	if(button!=2)
+	{
+		//deleted by liumz
+                //hidden();
+		if (objUnknown.tagName.toUpperCase() == "A")
+		{
+			objUnknown = objUnknown.parentElement;
+		}
+
+		if (objUnknown.type == "label")
+		{
+			objUnknown.className = 'clsMouseDown';
+		}
+		
+		
+	}
+	/////////////// show Right guxi 7-24///////////////
+	else
+	{
+	 //var objLI = window.event.srcElement.parentElement;
+	 ////var id = objUnknown.parentElement.id; //
+	 ////var url =  objUnknown.href;
+	 ////var nodeType =  objUnknown.parentElement.nodeType;
+	 //delete by liumz
+	 //showMenu(id,url,nodeType);
+	}
+	////////////////////////////////////////
+	return true;
+}
+
+//-----------------------------------------------
+// MouseOut()
+//-----------------------------------------------
+
+function MouseOut()
+{
+	var objUnknown;
+	var objLI;
+	var i = 0;
+
+	objUnknown = window.event.srcElement;
+
+	if (objUnknown.tagName.toUpperCase() == "A")
+	{
+		objUnknown = objUnknown.parentElement;
+	}
+
+	if (objUnknown.type == "label" )
+	{
+		objUnknown.className = objUnknown.classType;
+	}
+	
+	return true;
+}
+
+//-----------------------------------------------
+// MouseOver()
+//-----------------------------------------------
+
+function MouseOver()
+{
+	var objUnknown;
+	var strStatus;
+
+	objUnknown = window.event.srcElement;
+
+	if (objUnknown.tagName.toUpperCase() == "A")
+	{
+		objUnknown = objUnknown.parentElement;
+	}
+
+	if (objUnknown.type == "label")
+	{
+		objUnknown.className = 'clsMouseOver';
+		
+		
+	}
+
+	return true;
+}
+
+//-----------------------------------------------
+// MouseUp()
+//-----------------------------------------------
+
+function MouseUp()
+{
+	var objUnknown;
+	var objLI;
+	var i = 0;
+
+	objUnknown = window.event.srcElement;
+
+	if (objUnknown.tagName.toUpperCase() == "A")
+	{
+		objUnknown = objUnknown.parentElement;
+	}
+
+	if (objUnknown.type == "label")
+	{
+		objUnknown.className = 'clsMouseOver';
+	}
+	
+	return true;
+}
+
+//-----------------------------------------------
+// SelectStart()
+//-----------------------------------------------
+
+function SelectStart()
+{
+	window.event.cancelBubble = true;
+	window.event.returnValue = false;
+	return false;
+}
+
+//-------------------------------------------------------------------------------------------------
+//                                     PUBLIC METHODS
+//-------------------------------------------------------------------------------------------------
+
+//-----------------------------------------------
+// MoveNext()
+//-----------------------------------------------
+
+function MoveNext()
+{
+	var objLI_Temp;
+	var objLI_New;
+	if( null == objLI_Current ) objLI_Current = GetHtmlElement( element , "div" );
+	
+	if( null == objLI_Current ) return;
+	
+	if ( objLI_Current.state == "shown")
+	{
+		objLI_New = GetFirstChild(objLI_Current);
+		if (objLI_New != null)
+		{
+			SelectNode(objLI_New, false, true);
+		}
+	}
+	else
+	{
+		if (objLI_Current.type != "leaf" )
+		{
+			var bLoad = ExpandNode(objLI_Current);
+			if( bLoad )
+			{
+				objLI_Current.selectChild = true;
+			}
+			else
+			{
+				objLI_New = GetFirstChild(objLI_Current);
+				if (objLI_New != null)
+				{
+					SelectNode(objLI_New, false, true);
+				}
+			}		
+		}
+		else
+		{
+			objLI_Temp = objLI_Current;
+			objLI_New = GetNextSibling(objLI_Temp);
+			while (objLI_New == null)
+			{
+				objLI_Temp = GetParent(objLI_Temp);
+				if (objLI_Temp == null)
+				{
+					objLI_New = objLI_Current;
+				}
+				else
+				{
+					objLI_New = GetNextSibling(objLI_Temp);
+				}
+			}
+			SelectNode(objLI_New, false, true);
+		}
+	}
+}
+
+//-----------------------------------------------
+// MovePrevious()
+//-----------------------------------------------
+
+function MovePrevious()
+{
+	if( null == objLI_Current ) return;
+	if( null == objLI_Current ) objLI_Current = GetHtmlElement( element , "div" );
+	
+	var objLI_New;
+	objLI_New = GetPreviousSibling(objLI_Current);
+
+	if (objLI_New != null)
+	{
+		SelectNode(objLI_New, false, true);
+	}
+	else
+	{
+		objLI_New = GetParent(objLI_Current);
+		if (objLI_New != null)
+		{
+			SelectNode(objLI_New, false, true);
+		}
+	}
+}
+
+//-----------------------------------------------
+// MoveLeft()
+//-----------------------------------------------
+
+function MoveLeft()
+{
+	var objLI_New;
+	
+	if( null == objLI_Current ) objLI_Current = GetHtmlElement( element , "div" );
+	
+	if (objLI_Current.state == "shown")
+	{
+		CollapseNode(objLI_Current);
+	}
+	else
+	{
+		objLI_New = GetParent(objLI_Current);
+		if (objLI_New != null)
+		{
+			SelectNode(objLI_New, false, true);
+		}
+	}
+}
+
+//-----------------------------------------------
+// MoveUp()
+//-----------------------------------------------
+
+function MoveUp()
+{
+	var objLI_New;
+	
+	if( null == objLI_Current ) objLI_Current = GetHtmlElement( element , "div" );
+	
+	objLI_New = GetPreviousSibling(objLI_Current);
+	
+	if (objLI_New != null)
+	{
+		while (objLI_New.state == "shown")
+		{
+			objLI_New = GetLastChild(objLI_New);
+		}
+		SelectNode(objLI_New, false, true);
+	}
+	else
+	{
+		objLI_New = GetParent(objLI_Current);
+	    if (objLI_New != null)
+		{
+			SelectNode(objLI_New, false, true);
+		}
+	}
+}
+
+//-----------------------------------------------
+// MoveRight()
+//-----------------------------------------------
+
+function MoveRight()
+{
+	var objLI_New;
+	if( null == objLI_Current ) objLI_Current = GetHtmlElement( element , "div" );
+	if( objLI_Current.state == "shown")
+	{
+		objLI_New = GetFirstChild(objLI_Current);
+		if (objLI_New != null)
+		{
+			SelectNode(objLI_New, false, true);
+		}
+	}
+	else if( objLI_Current.type != "leaf" )
+	{
+		ExpandNode(objLI_Current);
+	}
+}
+
+//-----------------------------------------------
+// MoveDown()
+//-----------------------------------------------
+
+function MoveDown()
+{
+	var objLI_New;
+	var objLI_Temp;
+	
+	if( null == objLI_Current ) objLI_Current = GetHtmlElement( element , "div" );
+	
+	if (objLI_Current.state == "shown")
+	{
+		objLI_New = GetFirstChild(objLI_Current);
+		SelectNode(objLI_New, false, true);
+	}
+	else
+	{
+		objLI_Temp = objLI_Current;
+		objLI_New = GetNextSibling(objLI_Temp);
+
+		while (objLI_New == null)
+		{
+			objLI_Temp = GetParent(objLI_Temp);
+
+			if (objLI_Temp == null)
+			{
+				objLI_New = objLI_Current;
+			}
+			else
+			{
+				objLI_New = GetNextSibling(objLI_Temp);
+			}
+		}
+		SelectNode(objLI_New, false, true);
+	}
+}
+
+//-----------------------------------------------
+// Sync(xml)同步
+//-----------------------------------------------
+
+function SyncAsync( oSync )
+{
+    if( null != oSync.oLi )
+    {
+        oSync.oLastLi = oSync.oLi;
+    }
+    if( null == oSync.oContextList ) return false;
+    var oElementId = oSync.oContextList.item( oSync.iCurrentIdx ).getAttribute( "id" );/////guxi
+    var oEl = window.document.all( oElementId );
+    if( !oSync.bBadIds && null != oEl && "object" == typeof( oEl ) )
+    {
+
+        oSync.oLi = oEl.parentElement;
+    }
+    else
+    {
+        oSync.bBadIds = true;
+        var sTitle = oSync.oContextList.item( oSync.iCurrentIdx ).getAttribute( "label" );
+        oEl = GetNodeFromTitle( sTitle , oSync.oLastLi );
+        if( null != oEl )
+        {
+            oSync.oLi = oEl.parentElement;
+        }
+        
+    }
+    oSync.iCurrentIdx++;
+    if( oSync.iCurrentIdx == oSync.oContextList.length )
+    {
+        
+        ExpandNode( oSync.oLi , null );
+        SelectNode( oSync.oLi , true, true );
+        
+    }
+    else
+    {
+        ExpandNode( oSync.oLi , oSync );
+    }
+    if( oSync.oLi == null ) return false;
+    return true;
+}
+
+function SyncObject( oContextList )
+{
+    this.oContextList = oContextList;
+    this.oLi = null;
+    this.oLastLi = null;
+    this.bBadIds = false;
+    this.iCurrentIdx = 0;
+}
+
+function Sync( sNodeId )
+{
+    try
+    {
+        if( top.content.document.body.readyState != "complete" )
+        {
+            return;
+        }
+        var oContextXml = top.content.xmlPageContext;
+        oContextXml = oContextXml.selectNodes( "//item[@id]" );
+        var oSync = new SyncObject( oContextXml );
+        if( !SyncAsync( oSync ) )
+        {
+            m_bSyncFailed = true;
+        }
+
+    }
+    catch(e)
+    {
+		m_bSyncFailed = true;
+    }
+}
+
+//-------------------------------------------------------------------------------------------------
+//                                     PRIVATE METHODS
+//-------------------------------------------------------------------------------------------------
+
+function GetNodeFromTitle( sTitle , oParentEl )
+{
+    var oList = null;
+    var oNode = null;
+    var oTmpNode = null;
+    if( oParentEl == null )
+    {
+        oList = element.children;
+    }
+    else
+    {
+        var oList = GetChildren( oParentEl );
+    }
+    
+    for( var i = 0; i < oList.length; i++ )
+    {
+        oTmpNode = GetHtmlElement( oList[i] , "SPAN" , "label" )
+        if( null != oTmpNode && "object" == typeof( oTmpNode ) && oTmpNode.title == sTitle ) 
+        {
+            oNode = oTmpNode;
+            break;
+        }
+    }
+    return oNode;
+}
+
+//-----------------------------------------------
+// ToggleNode(objLI)
+//-----------------------------------------------
+
+function ToggleNode(objLI)
+{     
+        
+	if (objLI.type == "parent")
+	{
+		if (objLI.state == "shown")
+		{
+			CollapseNode(objLI);
+		}
+		else
+		{
+			ExpandNode(objLI);
+		}
+	}
+}
+
+//-----------------------------------------------
+// CollapseNode(objLI)
+//-----------------------------------------------
+
+function CollapseNode(objLI)
+{
+	var i = 0;
+	var objUL;
+	var objIMG;
+
+	objUL = GetHtmlElement(objLI,"DIV","container");
+
+	if (objUL != null)
+	{
+		objIMG = GetHtmlElement(objLI,"SPAN","img");
+		if (objUL != null)
+		{
+			objLI.state = "hidden";
+			objUL.className = "hide";
+			//objIMG.innerHTML = "<span class='clsCollapse'>+</span>";
+			objIMG.innerHTML = "<img src='/images/treeimages/expand_xp.gif'>";
+                       
+			if (IsChild(objLI_Current, objLI) == true)
+			{
+				SelectNode(objLI, false, false);
+			}
+		}
+	}
+}
+
+//-----------------------------------------------
+// ExpandNode(objLI)
+//-----------------------------------------------
+
+function ExpandNode( objLI , oSync )
+{       
+	var i = 0;
+	var objUL;
+	var objIMG;
+	var objSPAN;
+
+	objUL = GetHtmlElement(objLI,"DIV","container");
+	
+	if (objUL != null)
+	{
+		objIMG = GetHtmlElement(objLI,"SPAN","img");
+                
+		if (objIMG != null)
+		{       
+			objSPAN = GetHtmlElement(objLI,"SPAN","label");
+
+			objUL.className = "shown";
+			//objIMG.innerHTML = "<span class='clsExpand'>-</span>";
+			objIMG.innerHTML = "<img src='/images/treeimages/collapse_xp.gif'>";
+			
+			objLI.state = "shown";
+			return LoadChildren( objLI , oSync );
+		}
+	}
+}
+
+//-----------------------------------------------
+// SelectNode(objLI, bSuppressLink)
+//-----------------------------------------------
+
+function SelectNode( objLI, bSupressLink, bForceIntoView )
+{
+    var objA;
+    var objSPAN;
+	if( null == objLI ) objLI = GetHtmlElement( element , "div" );
+	if( objLI.type == "none" )
+	{
+		objLI_Parent = GetParent( objLI );
+		objLI_Next = GetNextSibling( objLI_Parent );
+	}
+	
+    if( bSupressLink != true ) 
+    {
+        LoadNodeContent(objLI);
+    }
+    HighlightNode(objLI);
+    ExpandAncestors( objLI );
+    ScrollIntoView( objLI, bForceIntoView );
+    UpdateMessages( objLI );
+
+    try
+    {
+		if( "object" == typeof( top.contentbar ) && "object" == typeof( top.contentbar.document.all("showtoc") ) )
+		{
+			top.contentbar.document.all("showtoc").style.display = "none";
+		}
+	}
+	catch(e)
+	{
+	}
+}
+
+//-----------------------------------------------
+// HighlightNode(objLI)
+//-----------------------------------------------
+
+function UpdateMessages( objLI )
+{
+    objSPAN = GetHtmlElement(objLI,"SPAN","label");
+    if( null != objSPAN )
+    {
+    	if(showTitle=="Y"||showTitle=="y"){
+    		top.document.title = objSPAN.title;
+    	}
+    	//if(showStatus=="Y"||showTitle=="y"){
+        //		window.defaultStatus = objSPAN.title;
+	//}
+    }
+}
+
+
+function ScrollIntoView( objLI, bScroll )
+{
+    if( bScroll )
+    {
+    	var iY = objLI.offsetTop - window.document.body.clientHeight/2;
+    	var iX = objLI.offsetLeft - 15;
+        window.scrollTo( iX , iY );
+	}	
+    return;
+}
+
+
+function ExpandAncestors( objLI )
+{
+    while( objLI = GetParent( objLI ) )
+    {
+        if( objLI.state != "shown" ) ExpandNode( objLI );
+    }
+}
+
+function HighlightNode(objLI)
+{
+  var i = 0;
+  var objSPAN;
+  var objSPAN_Current;
+
+  objSPAN = GetHtmlElement(objLI,"SPAN","label");
+  
+  if (objSPAN != null)
+    {
+    if (objSPAN.classType != "clsUnavailable")
+      {
+      objSPAN.className = "clsCurrentHasFocus";
+      objSPAN.classType = "clsCurrentHasFocus";
+
+      if (objLI != objLI_Current)
+        {
+        if (objLI_Current != "")
+          {
+          objSPAN_Current = GetHtmlElement(objLI_Current,"SPAN","label");
+          
+          if (objSPAN_Current != null)
+            {
+            objSPAN_Current.className = "";
+            objSPAN_Current.classType = "";
+            }
+          }
+        }
+      }
+    objLI_Current = objLI;
+    }
+  }
+
+//-----------------------------------------------
+// LoadNodeContent(objLI)
+//-----------------------------------------------
+
+function LoadNodeContent(objLI)
+{
+    var objSPAN;
+    var objA;
+
+    objSPAN = GetHtmlElement(objLI,"SPAN","label");
+
+    if (objSPAN != null)
+    {
+        objA = GetHtmlElement(objSPAN,"A")
+        if (objA != null)
+        {
+
+            var sTmpArray = new Array();
+            var sHref = String( objA.href );
+            var sQuery = "";
+            var sHash = "";
+            if( "undefined" != sHref )
+            {
+                sTmpArray = sHref.split( "#" );
+                if( sTmpArray.length > 1 )
+                {
+                    sHref = sTmpArray[0];
+                    sHash = sTmpArray[1];
+                }
+                
+                sTmpArray = sHref.split( "?" );
+                sHref = sTmpArray[0];
+                for( var i = 1; i < sTmpArray.length; i++ )
+                {
+                    sQuery += "?" + sTmpArray[i];
+                }
+                if( sQuery.indexOf( "frame=" ) == -1 && objA.target == oConfig.sTarget )
+                {
+                    sQuery = sQuery.length > 0 ? sQuery + "&frame=true" : "?frame=true";
+                }
+                else
+                {
+                    sQuery = sQuery.length > 0 ? sQuery : "";
+                }
+                sHash = sHash.length > 0 ? "#" + sHash : "";
+            }
+
+            var sLocation =  sHref + sQuery + sHash;
+
+            if( objA.target )
+            {
+                //alert( objA.target );
+                window.open( sLocation , objA.target );
+            }
+            else
+            {
+               top.content.location = sLocation;//guxi 8-28
+            }
+        }
+    }
+}
+//-----------------------------------------------
+// LoadConfig()
+//-----------------------------------------------
+
+function Config()
+{
+    var strCfgXMLSrc = "";
+    var sPath = "";
+    strCfgXMLSrc = element.CfgXMLSrc;
+    if (strCfgXMLSrc != "")
+    {
+        var objXMLDoc = new ActiveXObject("Microsoft.XMLDOM");
+        objXMLDoc.async = false;
+        objXMLDoc.load( strCfgXMLSrc );
+
+        if (objXMLDoc.xml != "")
+        {
+            var oTopXmlSrc = objXMLDoc.documentElement.selectSingleNode("//TopXMLSrc");
+            showTitle = objXMLDoc.documentElement.selectSingleNode("//ShowTitle").text;
+	    showStatus = objXMLDoc.documentElement.selectSingleNode("//ShowStatus").text;
+            if ( null != oTopXmlSrc )
+            {
+                this.sTopXmlSrc = String( oTopXmlSrc.text );
+            }
+            else
+            {
+                // Error: Invalid TopXMLSrc in Config.xml
+            }
+
+            var oTarget = objXMLDoc.documentElement.selectSingleNode("//ContentTarget");
+            if ( null != oTarget )
+            {
+                this.sTarget = oTarget.text;
+            }
+            else
+            {
+                //Error: Invalid Target in Config.xml
+            }
+        }
+    }
+}
+
+//-----------------------------------------------
+// LoadChildren(objLI)
+//-----------------------------------------------
+
+function LoadChildren( objLI , oSync )
+{
+    var strXMLSrc = "";
+    var strHTML = "";
+    var objSPAN;
+    var objUL;
+
+    objUL = GetHtmlElement(objLI,"DIV","container");
+    if (objUL != null)
+    {
+		objSPAN = GetHtmlElement(objLI,"SPAN","label")
+	    if ( objUL.children.length == 0 ) 
+        {
+            objUL.innerHTML = m_sTempNodeStart + m_sLoadingText + m_sTempNodeEnd;
+            
+            if (objSPAN != null)
+            {
+                strXMLSrc += strRootPath + objSPAN.xmlsrc;
+                GetXML( strXMLSrc , objUL , "shown" , oSync,false );
+				// Indicate that an asyncronous load is taking place
+				return true;
+            }
+            
+        }
+        else if( null != oSync )
+        {
+            SyncAsync( oSync );
+        }
+    }
+    return false;
+}
+
+//-------------------------------------------------------------------------------------------------
+//                                     GET FUNCTIONS
+//-------------------------------------------------------------------------------------------------
+
+//-----------------------------------------------
+// GetHtmlElement(objParent,strChildTagName)
+//-----------------------------------------------
+
+function GetHtmlElement(objParent,strChildTagName,strType)
+  {
+  var i = 0;
+  var objRetVal = null;
+  var oChildren = null;
+  if( null != objParent )
+  {
+    oChildren = objParent.children;
+  }
+  for (i = 0; oChildren != null && i < oChildren.length; i++)
+    {
+    if (oChildren[i].tagName.toUpperCase() == strChildTagName.toUpperCase() && ( oChildren[i].type == strType || strType == null ) )
+      {
+      objRetVal = oChildren[i];
+      break;
+      }
+    }
+    
+  return objRetVal;
+  }
+
+//-----------------------------------------------
+// GetNextSibling(objLI)
+//-----------------------------------------------
+
+function GetNextSibling(objLI)
+{
+	var i = 0;
+	var arySiblings;
+	var objRetVal = null;
+
+	arySiblings = GetSiblings(objLI);
+
+	if (arySiblings != null)
+	{
+		for (i = 0; i < arySiblings.length; i++)
+		{
+			if ((arySiblings[i] == objLI) && (i < (arySiblings.length - 1)))
+			{
+				objRetVal = arySiblings[i+1];
+				break;
+			}
+		}
+	}
+	
+	return objRetVal;
+}
+
+//-----------------------------------------------
+// GetPreviousSibling(objLI)
+//-----------------------------------------------
+
+function GetPreviousSibling(objLI)
+{
+	var j = 0;
+	var arySiblings;
+	var objRetVal = null;
+
+	arySiblings = GetSiblings(objLI);
+
+	if (arySiblings != null)
+	{
+		for (j = 0; j < arySiblings.length; j++)
+		{
+			if (arySiblings[j] == objLI && j > 0)
+			{
+				objRetVal = arySiblings[j-1];
+				break;
+			}
+		}
+	}
+	
+	return objRetVal;
+}
+
+//-----------------------------------------------
+// GetFirstChild(objLI)
+//-----------------------------------------------
+
+function GetFirstChild(objLI)
+{
+	var aryChildren;
+	var objRetVal = null;
+
+	aryChildren = GetChildren(objLI);
+	objRetVal = aryChildren[0];
+
+	return objRetVal;
+}
+
+//-----------------------------------------------
+// GetLastChild(objLI)
+//-----------------------------------------------
+
+function GetLastChild(objLI)
+{
+	var aryChildren;
+	var objRetVal = null;
+
+	aryChildren = GetChildren(objLI);
+	objRetVal = aryChildren[aryChildren.length-1];
+
+	return objRetVal;
+}
+
+//-----------------------------------------------
+// GetParent(objLI)
+//-----------------------------------------------
+
+function GetParent(objLI)
+{
+	var objRetVal = null;
+
+	if( objLI != null && objLI.parentElement != null )
+	{
+		objRetVal = objLI.parentElement.parentElement;
+	}
+
+	if ( null != objRetVal && objRetVal.type != "parent" )
+	{
+		objRetVal = null;
+	}
+	
+	return objRetVal;
+}
+
+//-----------------------------------------------
+// GetSiblings(objLI)
+//-----------------------------------------------
+
+function GetSiblings(objLI)
+{
+	var objUL;
+	var aryRetVal = null;
+
+	objUL = objLI.parentElement;
+
+	if ( objUL != null && objUL.type == "container" )
+	{
+		aryRetVal = objUL.children
+	}
+
+	return aryRetVal;
+}
+
+//-----------------------------------------------
+// GetChildren(objLI)
+//-----------------------------------------------
+
+function GetChildren(objLI)
+{
+	var objUL;
+	var aryRetVal =  null;
+
+	objUL = GetHtmlElement( objLI , "DIV" , "container" );
+	if( null != objUL )
+	{
+		aryRetVal = objUL.children;
+	}
+
+	return aryRetVal;
+}
+
+
+
+
+//-----------------------------------------------
+// IsChild(objLI_Child, objLI_Parent)
+//-----------------------------------------------
+
+  function IsChild(objLI_Child, objLI_Parent)
+    {
+    var objLI_Temp;
+    var blnRetVal = false;
+        
+    objLI_Temp = GetParent(objLI_Child);
+        
+    while (objLI_Temp != null)
+      {
+      if (objLI_Temp == objLI_Parent)
+        {
+        blnRetVal = true;
+        break;
+        }
+      objLI_Temp = GetParent(objLI_Temp);
+      }
+    return blnRetVal;
+    }
+
+
+//-------------------------------------------------------------------------------------------------
+//                                     ASYNCRONOUS LOAD HANDLERS
+//-------------------------------------------------------------------------------------------------
+
+
+function fnAllocCall()
+{
+    var iReturn = null;
+    for (var i = 0; i < m_iMaxCalls && m_aoCalls[m_iLastCall] != null; i++)
+    {
+        m_iLastCall = (m_iLastCall + 1) % m_iMaxCalls;
+    }
+    
+    if (i < m_iMaxCalls)
+    {
+        iReturn = m_iLastCall;
+    }
+    return iReturn;
+}
+
+function fnDeAllocCall( iCallIdx )
+{
+    m_aoCalls[iCallIdx] = null;
+}
+
+
+
+function CallObject( oXml , oEl , sElClass , oSync )
+{
+    this.oXml = oXml;
+    this.oSync = oSync;
+    this.oEl = oEl;
+    this.sElClass = sElClass;
+}
+
+function fnLoadComplete( iIndex ,needtop)
+{
+    
+    if( iIndex == null ) return;
+    var oCall = m_aoCalls[ iIndex ];
+    try
+    {
+        var iReadyState = oCall.oXml.readyState;
+    }
+    catch(e)
+    {
+        return;
+    }
+    
+    if(  iReadyState != 4 ) return;
+ 
+  
+    if( oCall != null && oCall.oXml.xml != "" )
+    {
+        aryXMLNodes = oCall.oXml.documentElement.selectNodes("//TreeRef[@NodeXmlSrc]");
+		for (i = 0; i < aryXMLNodes.length; i++)
+        {
+            var objXMLDoc_Child = new ActiveXObject("Microsoft.XMLDOM");
+            objXMLDoc_Child.async = false;
+            objXMLDoc_Child.load(strRootPath + aryXMLNodes[i].getAttribute("NodeXmlSrc"));
+
+
+            if( null != objXMLDoc_Child.documentElement )
+            {
+                aryXMLNodes[i].parentNode.replaceChild(objXMLDoc_Child.documentElement, aryXMLNodes[i]);
+            }
+            objXMLDoc_Child = null;
+        }
+        
+        bFixLoad = oCall.oEl.contains( objLI_Current );
+        
+        if (objXSLDoc.xml != "")
+        {
+            var sHtml = oCall.oXml.transformNode( objXSLDoc );
+        } 
+
+        if ( sHtml != null && sHtml != "" )
+        {
+            oCall.oEl.innerHTML = sHtml;
+            oCall.oEl.className = oCall.sElClass;
+        }
+        else
+        {
+            oCall.oEl.innerHTML = m_sTempNodeStart + m_sUnavailableText + m_sTempNodeEnd;
+        }
+        
+        if( bFixLoad )
+        {
+			SelectNode( oCall.oEl.children[0] );
+        }
+        
+        if( iIndex == m_iMasterIdx && m_bSyncFailed == true )
+        {
+            Sync();
+        }
+        
+        if( oCall.oSync != null )
+        {
+            SyncAsync( oCall.oSync );
+        }
+        if( null != objLI_Current && objLI_Current.selectChild ) MoveNext();
+        fnDeAllocCall( iIndex );
+    }
+    else
+    {
+        oCall.oEl.innerHTML = m_sTempNodeStart + m_sUnavailableText + m_sTempNodeEnd;
+    }
+    
+    showcom(oCall.oEl);
+    if(oCall.oEl.parentElement.getElementsByTagName("INPUT").length>0)
+    check(oCall.oEl.parentElement.getElementsByTagName("INPUT")[0].previousSibling);
+    if(needtop){
+      try{
+    top();
+     }catch(e){
+    }
+    }
+    
+    
+    return;
+
+}
+//-----------------------------------------------
+// dubleclick
+//-----------------------------------------------
+function onDblClick()
+{
+	alert("doubleclick me!!");
+}
+
+
+</script>
+
+</public:component>

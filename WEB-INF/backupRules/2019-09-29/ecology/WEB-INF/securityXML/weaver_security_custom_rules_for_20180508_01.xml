@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+			<special-reg>
+		<urls>
+				  <url>
+					<value>__someCommonParamsRule__</value>
+					<params>
+					   <param>
+						<is-dynamic-param>0</is-dynamic-param>
+						<value>^__multilangpre_[a-z0-9_A-Z]*?$</value>
+						<rules>
+						  <rule>##CONST:NAMETITLE##</rule>
+						</rules>
+					  </param>
+					</params>
+				 </url>
+		</urls>
+	</special-reg>
+</root>

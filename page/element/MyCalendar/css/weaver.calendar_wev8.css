@@ -1,0 +1,142 @@
+.LDay td{
+    height: 30px;
+    text-align: center;
+    font-family: "微软雅黑";
+    font-size: 12px;
+}
+.ChineseDay td{
+	height: 40px;
+}
+
+.LDay div{
+    cursor:pointer;
+    width: 25px;
+    line-height: 25px;
+    margin:0 auto;
+}
+.title{
+	color:#5FB5FE;
+	width: 14%;
+	height: 30px !important;
+}
+.currentDay{
+	font-family: "微软雅黑";
+          font-size: 36px;
+          color: #E52355;
+}
+.currentWeekDay{
+          font-size: 12px;
+          color: #BCB8B9;
+          font-weight: bold;
+}
+
+.LeftArrow{
+	float:left;
+	width: 7px;
+	height: 10px;
+	background-image: url(../img/left_wev8.png) ;
+	background-repeat:no-repeat;
+	text-align: center;
+	margin: 10px;
+	margin-right: 8px;
+	cursor:pointer;
+}
+.LeftArrow2{
+	float:left;
+	width: 7px;
+	height: 10px;
+	background-image: url(../img/left_hot_wev8.png) ;
+	background-repeat:no-repeat;
+	text-align: center;
+	margin: 10px;
+	margin-right: 8px;
+	cursor:pointer;
+}
+.changeMonth{
+	float:left;
+	font-size: 16px;
+	color: #E52355;
+	height: 28px;
+	line-height: 28px;
+}
+.RightArrow{
+	float:left;
+	width: 7px;
+	height: 10px;
+	background-image: url(../img/right_wev8.png) ;
+	background-repeat:no-repeat;
+	text-align: center;
+	margin: 10px;
+	margin-left: 8px;
+	cursor:pointer;
+}
+.RightArrow2{
+	float:left;
+	width: 7px;
+	height: 10px;
+	background-image: url(../img/right_hot_wev8.png) ;
+	background-repeat:no-repeat;
+	text-align: center;
+	margin: 10px;
+	margin-left: 8px;
+	cursor:pointer;
+}
+.notSelectMonthDay{
+	color: #BCB8B9;
+}
+.hand{
+	cursor:pointer;
+}
+.hashPlanDiv{
+	background-image: url(../img/green_circle_wev8.png) ;
+	background-repeat:no-repeat;
+	text-align: center;
+	color:#fff !important;
+}
+.currentCalendar{
+	background-image: url(../img/blue_circle_wev8.png) ;
+	background-repeat:no-repeat;
+	text-align: center;
+	color:#fff !important;
+}
+.currentSelect{
+	background-image: url(../img/blue_ring_wev8.png) ;
+	background-repeat:no-repeat;
+	text-align: center;
+	color:#000 !important;
+}
+.planDataEvent{
+	height:100px;
+	width: 100%;
+	overflow-y: hidden;
+	position: relative;
+}
+.dataEvent{			
+	line-height: 30px;
+	border-width: 0px;
+	border-bottom: 1px;
+	border-style: solid;
+	border-color: #F3F2F2;
+	float: left;
+	height: 30px;
+	width: 100%;
+}
+
+.dateTerm{
+	width: 25px;
+}
+
+.solarTerm {
+  color: #bfbfbf !important;
+  line-height: 8px !important;
+  -webkit-text-size-adjust: none;
+  font-size: 8px !important;
+  -webkit-transform: scale(0.74,0.74);
+  width: 40px !important;
+}
+		
+.paddingLeft0 {
+   padding: 0px!important;
+   height: 1px!important;
+   background-color: #E6E6E6 !important;
+}

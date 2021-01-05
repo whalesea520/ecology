@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script language="javascript" src="/js/JSCookTree_wev8.js"></script>
+<script type="text/javascript" src="/wui/common/jquery/jquery_wev8.js"></script>
+<script type="text/javascript" src="/js/jquery/plugins/client/jquery.client_wev8.js"></script>
+<style type="text/css">
+body{
+	height100%;
+	scrollbar-base-color:!important; 
+	scrollbar-face-color:!important;  
+	SCROLLBAR-HIGHLIGHT-COLOR: !important; 
+	SCROLLBAR-SHADOW-COLOR: !important;
+	SCROLLBAR-3DLIGHT-COLOR: !important; 
+	SCROLLBAR-ARROW-COLOR: !important; 
+	SCROLLBAR-TRACK-COLOR: !important; 
+	SCROLLBAR-DARKSHADOW-COLOR: !important;
+}
+
+html{
+	height: 100%;
+}
+
+</style>
+<script language="javascript"> 
+if (jQuery.client.version> 6) {
+	addCssByStyle(".ThemeXPTable { font-family:微软雅黑!important;}");
+}
+
+
+function addCssByStyle(cssString){
+	var doc=document;
+	var style=doc.createElement("style");
+	style.setAttribute("type", "text/css");
+
+	if(style.styleSheet){// IE
+		style.styleSheet.cssText = cssString;
+	} else {// w3c
+		var cssText = doc.createTextNode(cssString);
+		style.appendChild(cssText);
+	}
+
+	var heads = doc.getElementsByTagName("head");
+	if(heads.length) {
+		heads[0].appendChild(style);
+	} else {
+		doc.documentElement.appendChild(style);
+	}
+}
+</script> 
+<link rel="stylesheet" type="text/css" href="/LeftMenu/ThemeXP/theme_wev8.css">
+</head>
+<body oncontextmenu="javascript:return false;"></body>
+</html>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<no-access-freq-urls>
+		<url>/services</url>
+		<url>/security/page/</url>
+		<url>/weaver/weaver.security.access</url>
+		<url>synccache.jsp</url>
+	</no-access-freq-urls>
+</root>

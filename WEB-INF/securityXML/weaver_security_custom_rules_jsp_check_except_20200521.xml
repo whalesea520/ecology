@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<forbbiden-jsp-except-urls>
+		<url>/wui/secCheck.jsp</url>	
+	</forbbiden-jsp-except-urls>
+	<check-jsp-except-urls>
+		<url>/wui/secCheck.jsp</url>
+	</check-jsp-except-urls>
+</root>

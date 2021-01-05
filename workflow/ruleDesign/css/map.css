@@ -1,0 +1,290 @@
+@CHARSET "UTF-8";
+body {
+  background-color: #F9F9F9;
+  font: "微软雅黑", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  width:839px;
+  height:57px;
+  padding: 15px 0;
+  margin-top: 50px;;
+  margin-left: -421px;;
+  border-radius: 5px;
+  border-top: solid 2px #6CADFF;
+  border-bottom: solid 2px #E3E3E3;
+  border-right: solid 2px #E3E3E3;
+  border-left: solid 2px #E3E3E3;
+  background-color: #FFFFFF;
+  opacity:0.8;
+  filter: alpha(opacity=80);
+  position: absolute;
+  left: 50%;
+  z-index: 999;
+}
+
+button.ok {
+  width:120px;
+  height:35px;
+  color:#FFFFFF;
+  background-color: #3F8EF1;
+  border-radius: 3px;
+  border: none;
+}
+
+#iCenter{
+  height: 650px;
+}
+
+.infoWin {
+  height: 140px;
+  width: 330px;
+  padding-left: 10px;
+  border-top: solid 2px #6CAEFF;
+  background-color: #FFFFFF;
+  color: #787E8D;
+  box-shadow: 2px 2px 2px rgba(0,0,0,.3);
+}
+
+button.ok {
+  width:100px;
+  height:35px;
+  color:#FFFFFF;
+  background-color: #3F8EF1;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+}
+
+div.close{
+  height: 12px;
+  width: 12px;
+  margin: 10px;
+  float: right;
+  cursor: pointer;
+  background-image: url('/workflow/ruleDesign/images/amap/closeSmall.png');
+  background-repeat: no-repeat;
+}
+
+div.close:hover {
+  background-image: url('/workflow/ruleDesign/images/amap/close-hover.png');
+  background-repeat: no-repeat;
+}
+
+div.field{
+  height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.attnameWarp {
+  display: inline-block;
+  width:183px;
+  height:21px;
+  line-height: 21px;
+  position: relative;
+  padding-left: 5px;
+  border: solid 1px #E3E3E3;
+  color: #B4B4B4;
+}
+
+.attname {
+  width: 185px;
+  margin: 0;
+  border: 0;
+  padding-left: 5px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: transparent;
+  outline: none;
+}
+
+.rightMenu {
+  width: 165px;
+  height: 120px;
+  background-color: #FFFFFF;
+  list-style-type: none;
+  padding: 15px 0;
+  font-size: 12px;
+  box-shadow: 3px 3px 3px rgba(0,0,0,.5);
+  color: #424B59;
+}
+
+li.item {
+  height: 35px;
+  line-height: 35px;
+  padding-left: 50px;
+  background-position: 20px center;
+  cursor: pointer;
+}
+
+li.item:hover {
+  background-color: #F1F4F6;
+}
+
+li.setting {
+  background-image: url('/workflow/ruleDesign/images/amap/position.png');
+  background-repeat: no-repeat;
+}
+
+li.setting:hover {
+  background-image: url('/workflow/ruleDesign/images/amap/position-hover.png');
+  background-repeat: no-repeat;
+}
+
+li.zoomOut{
+  background-image: url('/workflow/ruleDesign/images/amap/plus-small-1.png');
+  background-repeat: no-repeat;
+}
+
+li.zoomOut:hover{
+  background-image: url('/workflow/ruleDesign/images/amap/plus-small-1-hover.png');
+  background-repeat: no-repeat;
+}
+
+li.zoomIn{
+  background-image: url('/workflow/ruleDesign/images/amap/minu.png');
+  background-repeat: no-repeat;
+}
+
+li.zoomIn:hover{
+  background-image: url('/workflow/ruleDesign/images/amap/minu-hover.png');
+  background-repeat: no-repeat;
+}
+
+li.zoomCenter{
+  background-image: url('/workflow/ruleDesign/images/amap/center.png');
+  background-repeat: no-repeat;
+}
+
+li.zoomCenter:hover {
+  background-image: url('/workflow/ruleDesign/images/amap/center-hover.png');
+  background-repeat: no-repeat;
+}
+
+li .line{
+  border-top: solid 1px #D5D9DF;
+  margin: 5px 5px;
+}
+
+#keyword {
+  width:280px;
+  height:22px;
+  border: solid 1px #E3E3E3;
+  padding-left: 10px;
+}
+
+#result {
+  overflow: auto;
+  white-space: nowrap;
+  border: 1px solid gray;
+  display: none;
+  position: absolute;
+  top: 58px;
+  left: 85px;
+  width: 299px;
+  z-index: 1000;
+  background-color: #FFFFFF;
+}
+
+#result div.searchItem {
+  font-size: 13px;
+  cursor:pointer;
+  padding:5px;
+  height: 20px;
+  line-height: 20px;
+}
+
+#result div.searchItem:hover {
+  background-color: #CAE1FF;
+}
+
+div#showSearch {
+  float:right;
+  width: 21px;
+  height: 21px;
+  cursor: pointer;
+  border-radius: 2px;
+  background-color: #85BBFF;
+  background-image: url('/workflow/ruleDesign/images/amap/search_blank.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+div#showSearch:hover {
+  background-color: #408EF0;
+}
+
+.addrLeft{
+  height: 45px;
+  width: 2px;
+  float: left;
+  background: url(/workflow/ruleDesign/images/amap/addrLeft.png) no-repeat;
+  position: absolute;
+  left: 0px;
+}
+
+.addrMiddle{
+  height: 45px;
+  /* width: 100%; */
+  float: left;
+  background: url(/workflow/ruleDesign/images/amap/addrMiddle.png) repeat 0px 0px;
+  /* position: absolute; */
+  /* left: 2px; */
+  padding: 0px 5px;
+  line-height: 41px;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.addrRight{
+height: 45px;
+  width: 7px;
+  float: right;
+  background: url(/workflow/ruleDesign/images/amap/addrRight.png) no-repeat;
+  position: absolute;
+  right: -7px;
+}
+
+.addrPoint{
+  height: 21px;
+  width: 21px;
+  float: left;
+  background: url(/workflow/ruleDesign/images/amap/addrPoint.png) no-repeat;
+  position: absolute;
+  top: 38px;
+  left: 50%;
+  margin-left:-12px;
+}
+
+#inputClear{
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  width: 27px;
+  height: 33px;
+  top: 2px;
+  display:none;
+  background: url(/workflow/ruleDesign/images/amap/deleteInput.png) no-repeat center center  #fff;
+}
+#searchButton {
+  pointer-events: auto;
+  background: url(/workflow/ruleDesign/images/amap/search.png) no-repeat center center #3385ff;
+  width: 57px;
+  height: 38px;
+  float: left;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 0 2px 2px 0;
+  box-shadow: 1px 2px 1px rgba(0,0,0,.15);
+  position: absolute;
+  top: 20px;
+  left: 385px;
+}

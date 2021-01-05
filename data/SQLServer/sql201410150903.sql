@@ -1,0 +1,2 @@
+update Workflow_TriDiffWfSubWfField set isCreateAttachmentAgain=isCreateDocAgain
+GO

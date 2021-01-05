@@ -1,0 +1,135 @@
+<HEAD>
+<LINK REL='stylesheet' HREF='winedit_wev8.css'>
+<SCRIPT src="../winman/winxtra_wev8.js"></SCRIPT>
+<SCRIPT>
+function Describe (a)
+{
+	var x=GetRef('Desc'+a);
+	var y=GetRef('_dr'+a);
+	if (x!=null && y!=null)
+		if (x.style.display=='')
+		{
+			x.style.display='none';
+			y.src='right_wev8.gif';
+		} else {
+			x.style.display='';
+			y.src='down_wev8.gif';
+		}
+}
+function GetRef(l)
+{
+	return document.getElementById(l);
+}
+function x(event){
+  if (window.event!=null&&window.event.keyCode!=null&&window.event.keyCode==13) actionWinLIKE_("F3_()", event);
+  if (event!=null&&event.which==13) actionWinLIKE_("F3_()", event);
+}
+</SCRIPT>
+</HEAD>
+<BODY onKeyUp=x(event) onLoad='actionWinLIKE_("f7_()", event)'>
+<TABLE style="position:absolute;left:14" width=310px border=0 cellpadding=0px cellspacing=2px onSelectStart='self.event.returnValue=true; window.event.cancelBubble=true;'>
+	<TR>
+		<TD width=155px><P class=LR>Title</P></TD>
+		<TD width=20px><IMG class=HA src='right_wev8.gif' onclick='Describe("Ttl");' id=_drTtl></TD>
+		<TD width=160px><INPUT class=LI id="Ttl" TYPE=text></TD>
+	</TR>
+	<TR class=DE id=DescTtl style="display:none">
+		<TD width=335px colspan=3><P class=DE><B>Label</B> of the window in the titlebar. You may use HTML tags (cf. <A HREF="../../49_develop_title.html"  TARGET=_blank>49_develop_title.html</A>)</P></TD>
+	</TR>
+	<TR>
+		<TD><P class=LR>Skin</P></TD>
+		<TD><IMG class=HA src='right_wev8.gif' onclick='Describe("Ski");' id=_drSki></TD>
+		<TD><INPUT class=LI id="Ski" TYPE=text></TD>
+	</TR>
+	<TR class=LR id=DescSki style="display:none">
+		<TD width=335px colspan=3><P class=DE><B>Layout setting</B>. Defines  the sub folder of <i>/skins</i>, in which the layout information
+		(pictures and wm-window.html) for the window class is situated (e.g. <I>default</I> or <I>light</I>).
+		</P></TD>
+	</TR>
+	<TR>
+		<TD><P class=LR>Content</P></TD>
+		<TD><IMG class=HA src='down_wev8.gif' onclick='Describe("Adr");' id=_drAdr></TD>
+		<TD><INPUT class=LI id="Adr" TYPE=text></TD>
+	</TR>
+	<TR class=DE id=DescAdr style="display:">
+		<TD width=335px colspan=3><P class=DE><B>Relative URL</B> of the content file that should be displayed in the window (e.g. <I>samples/test.html</I>).</P></TD>
+	</TR>
+	<TR>
+		<TD><P class=LR>Name</P></TD>
+		<TD><IMG class=HA src='right_wev8.gif' onclick='Describe("Nam");' id=_drNam></TD>
+		<TD><INPUT class=LI id="Nam" TYPE=text></TD>
+	</TR>
+	<TR class=LR id=DescNam style="display:none">
+		<TD width=335px colspan=3><P class=DE>The <B>target name</B> of the window.
+		A link with that name as target value will open the referred page in a window of that window class with the
+		corresponding properties such as the skin, size etc. (see also <A HREF="../../02_tutorial_content.html" TARGET=_blank>02_tutorial_content.html</A> and <A HREF="../../41_develop_links.html" TARGET=_blank>41_develop_links.html</A>)</P></TD>
+	</TR>
+	<TR>
+		<TD><P class=LR>In front</P></TD>
+		<TD><IMG class=HA src='right_wev8.gif' onclick='Describe("Fro");' id=_drFro></TD>
+		<TD><INPUT class=LI id="Fro" TYPE=CHECKBOX></TD>
+	</TR>
+	<TR class=LR id=DescFro style="display:none">
+	  <TD width=335px colspan=3><P class=DE>Defines whether the window is always in the <B>foreground</B>.</P></TD>
+	</TR>
+	<TR>
+		<TD><P class=LR>Window visibility</P></TD>
+		<TD><IMG class=HA src='right_wev8.gif' onclick='Describe("Vis");' id=_drVis></TD>
+		<TD><INPUT class=LI id="Vis" TYPE=CHECKBOX></TD>
+	</TR>
+	<TR class=LR id=DescVis style="display:none">
+		<TD width=335px colspan=3><P class=DE><B>Visibility of the whole window</B>.
+		Invisible windows are not created when calling the website. They will only be visible when content
+		is loaded into this window and the window is being created. In these editor these windows can also be viewed through the window list.
+		</P></TD>
+	</TR>
+	<TR>
+		<TD><P class=LR>Titlebar visibility</P></TD>
+		<TD><IMG class=HA src='right_wev8.gif' onclick='Describe("Tit");' id=_drTit></TD>
+		<TD><INPUT class=LI id="Tit" TYPE=CHECKBOX></TD>
+	</TR>
+	<TR class=LR id=DescTit style="display:none">
+		<TD width=335px colspan=3><P class=DE><B>Visibility of the titlebar</B>. If the title bar is invisible, the window can be moved by the status bar at the bottom.
+		</P></TD>
+	</TR>
+	<TR>
+		<TD><P class=LR>Min/Max visibility</P></TD>
+		<TD><IMG class=HA src='right_wev8.gif' onclick='Describe("Min");' id=_drMin></TD>
+		<TD><INPUT class=LI id="Min" TYPE=CHECKBOX></TD>
+	</TR>
+	<TR class=LR id=DescMin style="display:none">
+		<TD width=335px colspan=3>
+			<P class=DE>Visibility of the <B>minimize/maximize icon</B> of the titlebar</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD><P class=LR>Close icon visibility</P></TD>
+		<TD><IMG class=HA src='right_wev8.gif' onclick='Describe("Cls");' id=_drCls></TD>
+		<TD><INPUT class=LI id="Cls" TYPE=CHECKBOX></TD>
+	</TR>
+	<TR class=LR id=DescCls style="display:none">
+		<TD width=335px colspan=3><P class=DE>Visibility of the <B>close icons</B> of the titlebar. If it is invisible, the user cannot close the window.</P></TD>
+	</TR>
+	<TR>
+		<TD><P class=LR>Moveable</P></TD>
+		<TD><IMG class=HA src='right_wev8.gif' onclick='Describe("Mov");' id=_drMov></TD>
+		<TD><INPUT class=LI id="Mov" TYPE=CHECKBOX></TD>
+	</TR>
+	<TR class=LR id=DescMov style="display:none">
+		<TD width=335px colspan=3><P class=DE>Sets or checks whether the window is <B>moveable</B> or not.</P></TD>
+	</TR>
+	<TR>
+		<TD><P class=LR>Resizeable</P></TD>
+		<TD><IMG class=HA src='right_wev8.gif' onclick='Describe("Siz");' id=_drSiz></TD>
+		<TD><INPUT class=LI id="Siz" TYPE=CHECKBOX></TD>
+	</TR>
+	<TR class=LR id=DescSiz style="display:none">
+	  <TD width=335px colspan=3><P class=DE>Sets whether the window can be <B>enlarged</B> or <B>reduced</B> with the size grip at the right corner at the bottom of the window.</P></TD>
+	</TR>
+	<TR class=LR>
+		<TD colspan=3><IMG class=HA src='ok_wev8.gif' onClick=actionWinLIKE_("F3_()",event)><p>
+					<p class=DE style="">See <b><a href=hlp-scripting.html target=WinLIKE_quick>Properties API</a></b> for further window properties.</P>
+		</TD>
+	</TR>
+</TABLE>
+</BODY>

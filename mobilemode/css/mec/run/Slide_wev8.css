@@ -1,0 +1,114 @@
+/* Swipe 2 required styles */
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap > div {
+  float:left;
+  width:100%;
+  position: relative;
+}
+.swipe-wrap .slide-overlay{
+	background-color: rgba(0,0,0,1);
+}
+
+@keyframes loading {
+	 0.1% {
+	   -webkit-transform: rotate(0deg) scale(1); transform: rotate(0deg) scale(1); 
+	 } 50% {
+	   -webkit-transform: rotate(180deg) scale(1);transform: rotate(180deg) scale(1); 
+	 } 100% {
+	   -webkit-transform: rotate(360deg) scale(1); transform: rotate(360deg) scale(1); 
+	 }
+}
+@-webkit-keyframes loading {
+	0.1% {
+	  -webkit-transform: rotate(0deg) scale(1);
+	} 50% {
+	  -webkit-transform: rotate(180deg) scale(1);
+	} 100% {
+	  -webkit-transform: rotate(360deg) scale(1);
+	}
+}
+.swipe-wrap .slide-overlay .circle{
+	position:absolute;
+	top:10px;
+	left:10px;
+	right:10px;
+	bottom:10px;
+	background-color: #fff;
+    border-radius: 100%;
+    margin: auto;
+    border: 2px solid #fff;
+    border-bottom-color: transparent;
+    height: 35px;
+    width: 35px;
+    background: transparent !important;
+    -webkit-animation: loading 0.75s 0.01s infinite linear;
+    animation: loading 0.75s 0.01s infinite linear;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    z-index:999;
+}
+.swipe-wrap .slide-overlay{
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	width:100%;
+	height:100%;
+}
+
+/* END required styles */
+.slide .swipe-wrap{
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+}
+.slide .swipe-wrap > div {
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+}
+.slide img.pic{
+	width: 100%;
+	height: 100%;
+}
+.slide .desc{
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	color: #fff;
+	font-family: 'Microsoft Yahei', Arial, sans-serif;
+	font-size: 12px;
+	padding: 10px 10px;
+}
+.slide .slide-point{
+	position: absolute;
+	right: 10px;
+	bottom: 8px;
+}
+.slide .slide-point b{
+	background-color: #fff;
+	border-radius: 3px;
+	display: inline-block;
+	height: 5px;
+	margin-right: 2px;
+	width: 5px;
+}
+.slide .slide-point b:last-child{
+	margin-right: 0px;
+}
+.slide .slide-point b.currPoint{
+	background-color: #007AFB;
+}
+.slideWarn{
+	font-size: 16px;
+	color: #999;
+	padding: 5px;
+	text-align: center;
+}

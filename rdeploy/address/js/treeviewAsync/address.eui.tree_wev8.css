@@ -1,0 +1,119 @@
+.treeview, .treeview ul { 
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.treeview ul {
+	/*background-color: white;*/
+	margin-top: 4px;
+}
+
+.treeview .hitarea {
+	/*background: url(tree/treeview-default_wev8.gif) -64px -25px no-repeat;*/
+	background: url(/images/xp_none/Lminus_wev8.png);
+	height: 16px;
+	width: 16px;
+	margin-left: -16px;
+	float: left;
+	cursor: pointer;
+}
+/* fix for IE6 */
+* html .hitarea {
+	display: inline;
+	float:none;
+}
+
+.treeview li { 
+	margin: 0;
+	padding: 3px 0pt 3px 16px;
+}
+
+.treeview a.selected {
+	background-color: #eee;
+}
+
+#treecontrol { margin: 1em 0; display: none; }
+
+.treeview .hover { color: red; cursor: pointer; }
+
+.treeview li { /*background: url(tree/treeview-default-line_wev8.gif) 0 0 no-repeat;*/ }
+.treeview li.collapsable, .treeview li.expandable { background-position: 0 -176px; }
+
+.treeview .expandable-hitarea { background-image:url(/images/xp_none/Lplus_wev8.png); }
+
+.treeview li.last { background-position: 0 -1766px }
+.treeview li.lastCollapsable, .treeview li.lastExpandable { /*background-image: url(tree/treeview-default_wev8.gif);*/ }  
+.treeview li.lastCollapsable { background-position: 0 -111px }
+.treeview li.lastExpandable { background-position: -32px -67px }
+
+.treeview div.lastCollapsable-hitarea, .treeview div.lastExpandable-hitarea { background-position: 0; }
+
+.treeview-red li { background-image: url(tree/treeview-red-line_wev8.gif); }
+.treeview-red .hitarea, .treeview-red li.lastCollapsable, .treeview-red li.lastExpandable { background-image: url(tree/treeview-red_wev8.gif); } 
+
+.treeview-black li { background-image: url(tree/treeview-black-line_wev8.gif); }
+.treeview-black .hitarea, .treeview-black li.lastCollapsable, .treeview-black li.lastExpandable { background-image: url(tree/treeview-black_wev8.gif); }  
+
+.treeview-gray li { background-image: url(tree/treeview-gray-line_wev8.gif); }
+.treeview-gray .hitarea, .treeview-gray li.lastCollapsable, .treeview-gray li.lastExpandable { background-image: url(tree/treeview-gray_wev8.gif); } 
+
+.treeview-famfamfam li { background-image: url(tree/treeview-famfamfam-line_wev8.gif); }
+.treeview-famfamfam .hitarea, .treeview-famfamfam li.lastCollapsable, .treeview-famfamfam li.lastExpandable { background-image: url(tree/treeview-famfamfam_wev8.gif); } 
+
+
+.treeview-none li { background-image: url(tree/treeview-famfamfam-line_wev8.gif); }
+.treeview-none .hitarea, .treeview-none li.lastCollapsable, .treeview-none li.lastExpandable { background-image: url(tree/treeview-none_wev8.gif); } 
+
+
+.filetree li { padding: 3px 0 2px 16px; }
+.filetree span.folder, .filetree span.file { padding: 1px 0 1px 16px; display: block; }
+.filetree span.folder { background: url(tree/folder_wev8.gif) 0 0 no-repeat; }
+.filetree li.expandable span.folder { background: url(tree/folder-closed_wev8.gif) 0 0 no-repeat; }
+.filetree span.file { background: url(tree/file_wev8.gif) 0 0 no-repeat; }
+
+ 
+.leftMenuTree li { padding: 3px 0 2px 16x; }
+.leftMenuTree span.folder, .leftMenuTree span.file { padding: 1px 0 1px 16px; display: block; }
+.leftMenuTree span.folder { background: url(tree/leftMenuTree/bookopen_wev8.png) 0 0 no-repeat; }
+.leftMenuTree li.expandable span.folder { background: url(tree/leftMenuTree/book_wev8.png) 0 0 no-repeat; }
+.leftMenuTree span.file { background: url(tree/leftMenuTree/page_wev8.png) 0 0 no-repeat; }
+
+.leftMenuTree a{
+	color:#4181C1;
+	text-decoration: none;
+}
+.leftMenuTree a:hover,.leftMenuTree a:active{
+	color:red;
+}
+
+.hrmOrg li { padding: 3px 0px 2px 16px;position: relative; }
+.hrmOrg span.company, .hrmOrg span.subcompany ,.hrmOrg span.department,.hrmOrg span.person{ padding: 1px 0 1px 20px; display: block; }
+.hrmOrg span.company { background: url(/rdeploy/address/img/addr_global_wev8.png) 0 0 no-repeat; }
+.hrmOrg span.subcompany { background: url(/rdeploy/address/img/addr_home_wev8.png) 0 0 no-repeat; }
+.hrmOrg span.department { background: url(/rdeploy/address/img/addr_subcompany_close_wev8.png) 0 center no-repeat; }
+.hrmOrg span.person { background: url(/rdeploy/address/img/addr_person_wev8.png) 0 0 no-repeat; }
+
+.hrmOrg ,.hrmOrg a{
+	font-size:12px; 
+	/*color:#4181C1;*/
+	text-decoration: none;
+}
+.hrmOrg a:hover,.hrmOrg a:active{
+	color:red;
+}
+
+.hrmGroup li { padding: 3px 0 2px 16x; position: relative;}
+.hrmGroup span.file{padding: 1px 0 1px 3px; display: block;}
+.hrmGroup span.publicgroup,.hrmGroup span.privategroup,.hrmGroup span.allgroup,
+.hrmGroup span.person,.hrmGroup span.discuss,.hrmGroup span.department{ padding: 1px 0 1px 20px; display: block; }
+.hrmGroup span.person { background: url(/rdeploy/address/img/addr_person_wev8.png) 0 0 no-repeat; }
+.hrmGroup span.discuss {background: url(/rdeploy/address/img/addr_discuss_wev8.png) 0 0 no-repeat;}
+.hrmGroup span.publicgroup {background: url(/rdeploy/address/img/addr_subcompany_close_wev8.png) 0 0 no-repeat;}
+.hrmGroup span.privategroup {background: url(/rdeploy/address/img/hrmtree_privategroup_wev8.png) 0 0 no-repeat;}
+.hrmGroup span.allgroup {background: url(/rdeploy/address/img/addr_global_wev8.png) 0 0 no-repeat;}
+.hrmGroup span.department{background: url(/rdeploy/address/img/addr_subcompany_close_wev8.png) 0 0 no-repeat;}
+
+ .hrmGroup .hrmBlueStyle, .hrmOrg .hrmBlueStyle {
+ 	color:#4181C1;
+ }

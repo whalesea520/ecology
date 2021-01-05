@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<special-non>
+		<urls>
+				  <url>
+					<value>/security/getCache.jsp</value>
+					<params>
+					   <param>
+						<is-dynamic-param>0</is-dynamic-param>
+						<value>key</value>
+						<rules>
+						  <rule>##CONST:NAMETITLE##</rule>
+						</rules>
+					  </param>
+					   <param>
+						<is-dynamic-param>0</is-dynamic-param>
+						<value>url</value>
+						<rules>
+						  <rule>##CONST:NAMETITLE##</rule>
+						</rules>
+					  </param>
+					   <param>
+						<is-dynamic-param>0</is-dynamic-param>
+						<value>param</value>
+						<rules>
+						  <rule>##CONST:NAMETITLE##</rule>
+						</rules>
+					  </param>
+					</params>
+				 </url>
+				
+		</urls>
+		</special-non>
+</root>

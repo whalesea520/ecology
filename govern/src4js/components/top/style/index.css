@@ -1,0 +1,223 @@
+﻿body {
+	line-height: normal;
+	overflow: hidden;
+}
+html, body, #root {
+  height: 100%;
+}
+.Dblist .ant-steps-item {
+  margin-right: 4px;
+}
+.Dblist .ant-steps-small .ant-steps-item-title{
+  padding-right: 4px;
+}
+.Dblist .ant-card-body{
+  padding : 0px;
+}
+.DB-menu .ant-menu-dark.ant-menu-horizontal {
+  border-bottom-color: #108ee9;
+}
+.ant-menu-dark .ant-menu-sub, .eim-menu .ant-menu-dark {
+  background-color: #108ee9;
+}
+.ant-menu-dark .ant-menu-sub, .eim-menu .ant-menu-dark {
+  background-color: #108ee9;
+}
+.ant-menu-dark, .ant-menu-dark .ant-menu-sub {
+  background: #108ee9;
+}
+.ant-menu-item{
+  font-size:15px;
+}
+.ant-menu-submenu-horizontal.ant-menu-submenu{
+  font-size:15px;
+}
+.DB-menu-title{
+  float: left;
+  color:#108ee9;
+  width: 120px;
+  height: 65px;
+  margin-left: -20px;
+  background: #009bee  url("/govern/image/logo.png") no-repeat center;
+}
+.DB-tab .ant-tabs-bar {
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.ant-layout-header{
+    background: #108ee9;
+}
+.DB-wapper{
+  height: 100%;
+  padding-top: 128px;
+  position: relative;
+}
+.DB-top{
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #eaeaea;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.DB-body{
+    width: 100%;
+    overflow: auto;
+    background-color: #f1f1f1;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.DB-tab .ant-tabs.ant-tabs-top.ant-tabs-card.ant-tabs-editable-card{
+   background: #F1F1F1 !important;
+}
+/*.DB-tab .ant-tabs-tab{
+   padding: 0px !important;
+}
+.DB-tab .ant-tabs-tab-inner{
+   padding-top:5px !important;
+   padding-left:16px !important;
+   padding-right:16px !important;
+}
+.DB-tab .ant-tabs.ant-tabs-card>.ant-tabs-bar .ant-tabs-tab:hover .anticon-cross {
+   opacity: 1 !important;
+}
+.DB-tab .ant-tabs.ant-tabs-card>.ant-tabs-bar .ant-tabs-tab-active .anticon-cross, .ant-tabs.ant-tabs-card>.ant-tabs-bar .ant-tabs-tab:hover .anticon-cross, 
+.ant-tabs.ant-tabs-card>.ant-tabs-bar .ant-tabs-tab-inner .anticon-cross{
+    color: rgba(0,0,0,.43);
+    transition: all .3s;
+    display: inline-block;
+    font-size: 12px;
+    font-size: 10px\9;
+    transform: scale(.83333333) rotate(0deg);
+    zoom: 1;
+    margin-right: 0;
+    opacity: 0;
+    position: absolute;
+    right: 3px;
+    top: 50%;
+    margin-top: -5px;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 2px;
+    width: 14px;
+    height: 14px;
+    line-height: 1;
+    cursor: pointer;
+    white-space: nowrap;
+}*/
+
+.wea-new-top-req-content-none-content{
+  background: url(/govern/image/04.jpg)
+}
+.DB-tab .ant-tabs.ant-tabs-top.ant-tabs-card.ant-tabs-editable-card.ant-tabs-no-animation{
+   background: #F1F1F1 !important;
+}
+.DB-tab .ant-tabs-bar{
+  background: #F1F1F1;
+  margin-bottom: 0px;
+}
+.DB-tab .ant-tabs.ant-tabs-card > .ant-tabs-bar .ant-tabs-tab{
+  border:0px;
+  background: #F1F1F1;
+}
+.DB-tab .ant-tabs.ant-tabs-card > .ant-tabs-bar .ant-tabs-tab-active{
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  border-bottom: 0px;
+}
+
+/****************门户相关样式*********************/
+.opDiv {
+	height: 26px;
+	margin: 10px auto;
+	width: 200px;
+}
+.btnOpDiv {
+	float: left;
+	margin: 0 10px;
+	background: #586ba2;
+	color: #fff;
+	padding: 5px 10px;
+	font-size: 12px;
+	cursor: pointer;
+}
+.btnOpDiv:hover {
+	background: #4c6ece;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    font-family: "Microsoft YaHei"!important;
+}
+
+.icon {
+    background-size: 100% 100%;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    left: 20px;
+    top: 20px;
+}
+.dot {
+    position: relative;
+    height: 20px;
+    font-size: 30px;
+    top: -20px;
+    text-align: center;
+    color: white;
+    float: right;
+    margin-right: 20px;
+    display: none;
+    display: block;
+}
+.name {
+    font-family: "Microsoft YaHei"!important;
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 75%;
+    font-size: 20px;
+}
+.cover {
+    height: 100%;
+    width: 100%;
+    background-color: whitesmoke;
+    opacity: 0.8;
+    position: fixed;
+    top: 0;
+    opacity: 0.0;
+}
+.Dblist a{
+    text-decoration: none!important;
+    outline: none;
+}
+.ant-menu-item.menu_line{
+  padding: 0px;
+  margin-top: 15px;
+  width: 1px;
+  height: 30px;
+  background: #2fb1f6
+}
+.nav_txt {
+  overflow: hidden;
+  text-align: center;
+  font-weight: 300;
+  display: block;
+  height: 30px;
+  width: 80px;
+  line-height: 30px;
+  font-size: 15px;
+  color: #fff;
+}
+.nav_ico {
+  margin-top: -28px;
+  height: 30px;
+}
+.topDiv .ant-spin.ant-spin-spinning.ant-spin-show-text{
+  top: 30%;
+  color:black;
+}

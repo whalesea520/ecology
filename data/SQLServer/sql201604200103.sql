@@ -1,0 +1,2 @@
+insert into MailErrorHint(errorName,errorHint,solution,keyword,isVariable) values('com.sun.mail.smtp.SMTPSendFailedException','邮件大小超过服务器邮件最大限制','邮箱服务器设置问题，邮件太大，超过服务器限制','Message size exceeds fixed maximum message size','0')
+go

@@ -1,0 +1,4 @@
+﻿/*! jQuery UI - v1.10.3 - 2013-05-03
+* http://jqueryui.com
+* Copyright 2013 jQuery Foundation and other contributors; Licensed MIT */
+jQuery(function(t){t.datepicker.regional.az={closeText:"Ba臒la",prevText:"&#x3C;Geri",nextText:"陌r蓹li&#x3E;",currentText:"Bug眉n",monthNames:["Yanvar","Fevral","Mart","Aprel","May","陌yun","陌yul","Avqust","Sentyabr","Oktyabr","Noyabr","Dekabr"],monthNamesShort:["Yan","Fev","Mar","Apr","May","陌yun","陌yul","Avq","Sen","Okt","Noy","Dek"],dayNames:["Bazar","Bazar ert蓹si","脟蓹r艧蓹nb蓹 ax艧am谋","脟蓹r艧蓹nb蓹","C眉m蓹 ax艧am谋","C眉m蓹","艦蓹nb蓹"],dayNamesShort:["B","Be","脟a","脟","Ca","C","艦"],dayNamesMin:["B","B","脟","小","脟","C","艦"],weekHeader:"Hf",dateFormat:"dd.mm.yy",firstDay:1,isRTL:!1,showMonthAfterYear:!1,yearSuffix:""},t.datepicker.setDefaults(t.datepicker.regional.az)});

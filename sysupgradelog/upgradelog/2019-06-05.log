@@ -1,0 +1,70 @@
+###[2019-06-05 12:07:16]:upgreadStatus:2--pagestatus:2
+###[2019-06-05 12:09:28]:upgreadStatus:0--pagestatus:1
+###[2019-06-05 12:09:28]:ThreadPool size :3
+###[2019-06-05 12:09:28]:upgreadStatus:0--pagestatus:1--currentFile:0
+###[2019-06-05 12:09:28]:SystemUpgrade Thread isinrunnable:true
+###[2019-06-05 12:09:28]:-------##########------
+###[2019-06-05 12:09:28]:upgreadStatus:2--pagestatus:1
+###[2019-06-05 12:09:28]:正在执行sql201709150103.sql,第(1)个脚本，共(5)个。
+###[2019-06-05 12:09:28]:正在执行sql201709190601.sql,第(2)个脚本，共(5)个。
+###[2019-06-05 12:09:28]:正在执行sql201709190800.sql,第(3)个脚本，共(5)个。
+###[2019-06-05 12:09:28]:正在执行sql201709290202.sql,第(4)个脚本，共(5)个。
+###[2019-06-05 12:09:28]:正在执行upgrade020_up.sql,第(5)个脚本，共(5)个。
+###[2019-06-05 12:09:29]:ThreadPool size :3
+###[2019-06-05 12:09:29]:upgreadStatus:2--pagestatus:1--currentFile:5
+###[2019-06-05 12:09:29]:SystemUpgrade Thread isinrunnable:true
+###[2019-06-05 12:09:29]:-------currentFile:5-------
+###[2019-06-05 12:09:29]:upgreadStatus:0--pagestatus:0
+###[2019-06-05 12:09:29]:&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&自动配置开始 : 2019-06-05 12:09:29&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+###[2019-06-05 12:09:30]:upgreadStatus:0--pagestatus:0
+###[2019-06-05 12:09:31]:&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&自动配置结束 : 2019-06-05 12:09:31&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+###[2019-06-05 12:09:37]:ThreadPool size :3
+###[2019-06-05 12:09:37]:upgreadStatus:0--pagestatus:0--currentFile:5
+###[2019-06-05 12:09:37]:SystemUpgrade Thread isinrunnable:false
+###[2019-06-05 12:09:37]:-------##########------
+###[2019-06-05 12:09:42]:ThreadPool size :3
+###[2019-06-05 12:09:42]:upgreadStatus:0--pagestatus:0--currentFile:5
+###[2019-06-05 12:09:42]:SystemUpgrade Thread isinrunnable:false
+###[2019-06-05 12:09:42]:-------##########------
+###[2019-06-05 12:09:47]:ThreadPool size :3
+###[2019-06-05 12:09:47]:upgreadStatus:0--pagestatus:0--currentFile:5
+###[2019-06-05 12:09:47]:SystemUpgrade Thread isinrunnable:false
+###[2019-06-05 12:09:47]:-------##########------
+###[2019-06-05 12:09:51]:ThreadPool size :3
+###[2019-06-05 12:09:51]:upgreadStatus:0--pagestatus:0--currentFile:5
+###[2019-06-05 12:09:51]:SystemUpgrade Thread isinrunnable:false
+###[2019-06-05 12:09:51]:-------##########------
+###[2019-06-05 12:09:56]:ThreadPool size :3
+###[2019-06-05 12:09:56]:upgreadStatus:0--pagestatus:0--currentFile:5
+###[2019-06-05 12:09:56]:SystemUpgrade Thread isinrunnable:false
+###[2019-06-05 12:09:56]:-------##########------
+###[2019-06-05 12:10:02]:ThreadPool size :3
+###[2019-06-05 12:10:02]:upgreadStatus:0--pagestatus:0--currentFile:5
+###[2019-06-05 12:10:02]:SystemUpgrade Thread isinrunnable:false
+###[2019-06-05 12:10:02]:-------##########------
+###[2019-06-05 12:10:08]:ThreadPool size :3
+###[2019-06-05 12:10:08]:upgreadStatus:0--pagestatus:0--currentFile:5
+###[2019-06-05 12:10:08]:SystemUpgrade Thread isinrunnable:false
+###[2019-06-05 12:10:08]:-------##########------
+###[2019-06-05 12:10:13]:ThreadPool size :3
+###[2019-06-05 12:10:13]:upgreadStatus:0--pagestatus:0--currentFile:5
+###[2019-06-05 12:10:13]:SystemUpgrade Thread isinrunnable:false
+###[2019-06-05 12:10:13]:-------##########------
+###[2019-06-05 12:10:18]:ThreadPool size :3
+###[2019-06-05 12:10:18]:upgreadStatus:0--pagestatus:0--currentFile:5
+###[2019-06-05 12:10:18]:SystemUpgrade Thread isinrunnable:false
+###[2019-06-05 12:10:18]:-------##########------
+###[2019-06-05 12:10:23]:ThreadPool size :3
+###[2019-06-05 12:10:23]:upgreadStatus:0--pagestatus:0--currentFile:5
+###[2019-06-05 12:10:23]:SystemUpgrade Thread isinrunnable:false
+###[2019-06-05 12:10:23]:-------##########------
+###[2019-06-05 12:10:29]:ThreadPool size :3
+###[2019-06-05 12:10:29]:upgreadStatus:0--pagestatus:0--currentFile:5
+###[2019-06-05 12:10:29]:SystemUpgrade Thread isinrunnable:false
+###[2019-06-05 12:10:29]:-------##########------
+###[2019-06-05 18:08:03]:upgreadStatus:2--pagestatus:1
+###[2019-06-05 18:08:03]:正在执行sql201709150103.sql,第(1)个脚本，共(4)个。
+###[2019-06-05 18:08:03]:正在执行sql201709190601.sql,第(2)个脚本，共(4)个。
+###[2019-06-05 18:08:03]:正在执行sql201709190800.sql,第(3)个脚本，共(4)个。
+###[2019-06-05 18:08:03]:正在执行sql201709290202.sql,第(4)个脚本，共(4)个。
+###[2019-06-05 18:08:04]:upgreadStatus:0--pagestatus:0

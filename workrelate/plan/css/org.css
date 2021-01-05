@@ -1,0 +1,14 @@
+.tabpanel{width: 100%;height: 40px;border-bottom:1px #ECECEC solid;font-size: 14px;font-weight: bold;margin-bottom: 10px;margin-top: 0px;}
+.tab{width: 55px;float: left;line-height: 26px;text-align: center;cursor: pointer;font-size: 13px;margin-top: 0px;color: #333333;
+		border-top: 1px #DBDBDB solid;border-bottom: 1px #DBDBDB solid;border-left: 1px #DBDBDB solid;background: #FAFAFA;}
+.tab_click{background: #4F95E4;color: #fff;border-color: #4F95E4;}
+.tab2{width: 35px;float: left;line-height: 28px;text-align: center;cursor: pointer;font-size: 12px;border: 0px;}
+.tab2_panel{height: 28px;width: auto;background: url('../images/tab_bg.png') repeat-x;
+		border-left: 1px #DBDBDB solid;border-right: 1px #DBDBDB solid;float: left;}
+.tab2_click{color: #fff;background: #75ACEA}
+.yearpanel{width: 85px;line-height: 26px;height: 26px;border: 1px #ECECEC solid;margin-right: 10px;cursor: pointer;
+		background: url('../images/btn_down.png') right center no-repeat;float: left;font-size: 13px;}
+.yearselect{width: 85px;height:auto;border: 1px #ECECEC solid;position: absolute;display: none;background: #fff;z-index: 100;}
+.yearoption{width: 100%;line-height: 22px;font-size: 13px;}
+.yearoption_hover{background: #0080C0;color: #fff;}
+.maintitle{float: right;line-height: 28px;color: #333333;}

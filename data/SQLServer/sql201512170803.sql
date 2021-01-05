@@ -1,0 +1,2 @@
+drop index IX_CRM_ShareInfo_relateitem on CRM_ShareInfo
+GO

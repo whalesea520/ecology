@@ -1,0 +1,28 @@
+.leftmenubottomnavtbl {
+    border-right : 1px solid #4dbbd1!important;
+    border-bottom : 1px solid #4dbbd1!important;
+    border-top : 1px solid #6dd8e9!important;
+    border-left : 1px solid #4dbbd1!important;
+}
+.leftmenubottomnavdiv {
+    border-top : 1px solid #4dbbd1!important;
+}
+#drillcrumb {
+    border-right : 1px solid #4dbbd1!important;
+    background : #52c6de!important;
+    border-bottom : 1px solid #4dbbd1!important;
+    border-top : 1px solid #6dd8e9!important;
+    border-left : 1px solid #4dbbd1!important;
+}
+.leftmenutopnavdiv {
+    border-top : 1px solid #4dbbd1!important;
+}
+.leftMenuBottomNavDiv {
+    background : #52c6de!important;
+}
+#leftmenu-bottom {
+    background-color : #cfe8ec!important;
+}
+#leftmenucontainer {
+    background : #b1d4d8!important;
+}

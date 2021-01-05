@@ -1,0 +1,4 @@
+create index workflow_monitor_detail_infoid on workflow_monitor_detail(infoid,workflowid)
+GO
+create index workflow_base_activeversionid on workflow_base(activeVersionID)
+GO

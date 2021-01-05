@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<mx:TitleWindow xmlns:mx="http://www.adobe.com/2006/mxml" layout="horizontal" width="700" height="385" horizontalAlign="center" showCloseButton="true" close="closeWin();" initialize="initApp()">
+	
+
+	<mx:Script>
+	<![CDATA[  
+		import com.adobe.serialization.json.JSON;
+		
+		import common.StaticObj;
+		import mx.collections.ArrayCollection;
+		import mx.collections.ICollectionView;
+		import mx.collections.XMLListCollection;
+		import mx.controls.Alert;
+		import mx.core.Application;
+		import mx.managers.PopUpManager;
+		import mx.resources.ResourceManager;
+		import mx.rpc.events.FaultEvent;
+		import mx.rpc.events.ResultEvent;
+		import mx.rpc.http.HTTPService;
+		import mx.utils.StringUtil;
+		var staticObj :StaticObj=Application.application.staticObj;
+		
+	private function initApp():void{
+		
+		
+		var http:HTTPService = new HTTPService;
+		
+		http.url="/companygroup/manage/companyoperation.jsp?method=queryCompanyForSelect";
+		http.addEventListener(ResultEvent.RESULT,bindData);
+		http.addEventListener(FaultEvent.FAULT,myFaultErrorEvent);
+		
+		//http.url="/companygroup/manage/companyoperation.jsp"
+		http.method = "post";
+		http.resultFormat = "text";
+		//http.makeObjectsBindable=true;
+		var val:URLVariables = new URLVariables;
+		val.key = "all";
+		val.groupid = staticObj.groupid;
+		val.random = Math.random();
+		http.send(val);
+		
+		var http02:HTTPService = new HTTPService;
+		http02.url="/companygroup/manage/companyoperation.jsp?method=getAB_Time";
+		http02.addEventListener(ResultEvent.RESULT,bindABtime);
+		http02.method = "post";
+		http02.resultFormat = "text";
+		http02.send();
+		
+	
+		var http03:HTTPService = new HTTPService;
+		http03.url="/companygroup/manage/companyoperation.jsp?method=getUserLanguage";
+		http03.addEventListener(ResultEvent.RESULT,setUserLanguage);
+		http03.method = "post";
+		http03.resultFormat = "text";
+		http03.send()
+		
+		//添加回车监听
+		this.addEventListener(KeyboardEvent.KEY_DOWN,KeyboardListener);
+		
+	}  
+		
+	//监听enter事件
+	private function KeyboardListener(event:KeyboardEvent):void{
+		if(event.keyCode==Keyboard.ENTER){
+			doSearch();
+		}
+	}
+	
+	public function setUserLanguage(event:ResultEvent):void{
+		var UserLanguage:String=ResultEvent.RESULT;
+		if(UserLanguage=="7"){
+			//简体中文
+			ResourceManager.getInstance().localeChain=["zh_CN"]; 		
+			
+		}else if(UserLanguage=="8"){
+			//英文
+			ResourceManager.getInstance().localeChain=["en_US"]; 		
+			
+		}else if(UserLanguage=="9"){
+			//繁体中文
+			ResourceManager.getInstance().localeChain=["zh_TW"]; 		
+		}
+		
+		
+		var s : String = resourceManager.getString("resources", 'LM001'); 
+		co_001.text=s;
+		//text="公司名称"
+		//text="A-B公司名称"
+		//label="确定"
+		//text="最后更新时间"
+		co_002.text="A-B"+s;
+		s = resourceManager.getString("resources", 'LM015'); 
+		co_003.label=s;
+		s = resourceManager.getString("resources", 'LM016'); 
+		ABgx.text=s;	
+		
+	}
+	private function bindABtime(resultContent:ResultEvent):void{
+	
+		var rawData:String = String(resultContent.result); 
+		var s : String = resourceManager.getString("resources", 'LM016'); 
+		//text="最后更新时间"
+		ABgx.text=s+rawData;
+	}		
+			
+	private function closeWin():void{
+		PopUpManager.removePopUp(this);
+	}
+	
+	private function bindData(resultContent:ResultEvent):void{
+		//Alert.show(resultContent.result as String)
+		var rawData:String = String(resultContent.result); 
+		//Alert.show(rawData);
+		var arr:Array = (JSON.decode(rawData) as Array); 
+		
+		var content:ArrayCollection = new ArrayCollection(arr); 
+		left.dataProvider=content;
+		right.dataProvider=[]; 
+		
+	}
+	public function myFaultErrorEvent(myFaultEvent:FaultEvent):void{    //异常处理函数   
+		//Alert.show("333");
+		trace(myFaultEvent.message);   
+	} 
+	private function toRight():void  
+	{  
+		var selectItems:Array = left.selectedItems;  
+		var selectIndexs:Array = left.selectedIndices;  
+		var bIsThere:Boolean;  
+		var rightArray:ArrayCollection=right.dataProvider as ArrayCollection; 
+		var leftArray:ArrayCollection=left.dataProvider as ArrayCollection; 
+		if(rightArray.length>=2){
+			return;
+		}
+		bIsThere=false;  
+		
+		var _yuan:Array = left.selectedItems;  
+		for(var i:Number = 0 ; i < leftArray.length ; i++ ){  
+			_yuan[i]=leftArray[i].data			
+		}
+		
+		if(rightArray.length>0){
+			var a=_yuan.length;
+			var deletea=0;
+			for(var i:Number = 0 ; i < selectItems.length ; i++ ){  
+				for(var j:Number=0; j < rightArray.length ; j++ ){ 
+					if(selectItems[i].data!=rightArray[j].data){  
+						if(rightArray.length<2){
+							var b:int=_yuan.indexOf(selectItems[i].data);
+							if(b<a){
+								a=b;//求得最少的下标
+								deletea=b;
+							}
+							//var jk:int=rightArray.length;
+							//Alert.show(i+"----"+selectItems[i].data+"--"+selectItems[i].label);
+							//rightArray.addItemAt(selectItems[i],jk);
+						}
+						//
+					}  
+				}  
+			}
+			if(a<_yuan.length){
+				rightArray.addItemAt(leftArray[a],1);
+				ArrayCollection(left.dataProvider).removeItemAt(deletea);   
+			}
+			
+		}else{
+			
+			if(selectItems.length==1){
+				for(var i:Number = 0 ; i < selectItems.length ; i++ ){  
+					var b:int=_yuan.indexOf(selectItems[i].data);
+					rightArray.addItemAt(leftArray[b],0);
+					ArrayCollection(left.dataProvider).removeItemAt(b);   
+				}
+			
+			}else{
+				var a=_yuan.length;
+				var aa=_yuan.length;
+				var deletea=0;
+				var deleteb=0;
+				//最后选中的项下标为0
+				//Alert.show(i+"----"+selectItems[i].data+"--"+selectItems[i].label);
+				for(var i:Number = 0 ; i < selectItems.length ; i++ ){  
+					var b:int=_yuan.indexOf(selectItems[i].data);
+					if(b<a){
+						a=b;//求得最少的下标
+						deletea=b;
+					}
+				}
+				if(a<_yuan.length){
+					//var jk:int=rightArray.length;
+					rightArray.addItemAt(leftArray[a],0);
+					if(selectItems.length>=1){
+						for(var i:Number = 0 ; i < selectItems.length ; i++ ){  
+							var b:int=_yuan.indexOf(selectItems[i].data);
+							if(b!=a&&b<aa){//排除最小下标，求得第2小下标
+								aa=b;
+								deleteb=b;
+							}
+						}
+						rightArray.addItemAt(leftArray[aa],1);
+					}
+					
+				}
+				if(deletea>deleteb){
+					ArrayCollection(left.dataProvider).removeItemAt(deletea);   
+					ArrayCollection(left.dataProvider).removeItemAt(deleteb);   
+				}else if(deletea<deleteb){
+					ArrayCollection(left.dataProvider).removeItemAt(deleteb);   
+					ArrayCollection(left.dataProvider).removeItemAt(deletea);
+				}	
+				
+			}
+			
+		}
+		
+			
+		
+		/*for(var i:Number = 0 ; i < selectItems.length ; i++ ){                 
+			for(var j:Number=0; j < rightArray.length ; j++ ){   
+				if(selectItems[i].data==rightArray[j].data){                             
+					bIsThere=true;  
+				}  
+			}  
+			if(!bIsThere)  {  
+				
+				var rightArray02:ArrayCollection=right.dataProvider as ArrayCollection; 
+				if(rightArray02.length<2){
+					ArrayCollection(right.dataProvider).addItem({label:selectItems[i].label,data:selectItems[i].data});   
+					ArrayCollection(left.dataProvider).removeItemAt(selectIndexs[i]);      
+				}else{
+					break;
+				}
+				               
+			}
+			
+			bIsThere=false;  
+		}  */
+	}  
+	
+	private function toLeft():void  
+	{  
+	//var selectItems:Array = right.selectedItems;  
+		var selectIndexs:Array = right.selectedIndices;  
+		var bIsThere:Boolean=false;  
+	
+		selectIndexs.sort(Array.DESCENDING);  
+		var rightArray:ArrayCollection=right.dataProvider as ArrayCollection;  
+		var leftArray:ArrayCollection=left.dataProvider as ArrayCollection;  
+	
+		for( var i:Number = 0 ; i < selectIndexs.length ; i++ )  
+		{  
+			var leftArray:ArrayCollection=left.dataProvider as ArrayCollection;  
+			for(var j:Number=0; j < leftArray.length ; j++ )     
+			{   
+			
+				if(rightArray[selectIndexs[i]].data==leftArray[j].data)   
+				{                             
+					bIsThere=true;  
+				}  
+			}  
+			if(!bIsThere)  
+			{  
+				ArrayCollection(left.dataProvider).addItem({label:rightArray[selectIndexs[i]].label,data:rightArray[selectIndexs[i]].data});    
+				ArrayCollection(right.dataProvider).removeItemAt(selectIndexs[i]);  
+			}else{
+				ArrayCollection(right.dataProvider).removeItemAt(selectIndexs[i]); 
+			}  
+		
+		}  
+	}
+		
+	private function onSelectSubmit():void{
+		var selectedids:String="";
+		var rightArray:ArrayCollection=right.dataProvider as ArrayCollection;  
+		var companyA:String="";
+		var companyB:String="";
+		//for( var i:Number = 0 ; i < rightArray.length ; i++ )  {
+			//selectedids+=rightArray[i].data+","
+		//}
+		var s : String = resourceManager.getString("resources", 'LM017'); 
+		if(rightArray.length!=2){
+			Alert.show(s+"！")
+			//PopUpManager.removePopUp(this); 
+			return;
+		}
+		companyA = rightArray[0].data;
+		companyB = rightArray[1].data;
+		var list:Array = selectedids.split(",");
+		//Alert.show(list.length+"");
+		showABCompany(companyA,companyB)
+		PopUpManager.removePopUp(this); 
+	
+	}
+
+	/**
+	 * 
+	 */ 
+	private function showABCompany(companyA:String,companyB:String):void{
+		var http:HTTPService = new HTTPService();
+		
+		http.addEventListener(ResultEvent.RESULT,reFresh);
+		http.addEventListener(FaultEvent.FAULT,myFaultErrorEvent);
+		
+		http.url="/companygroup/manage/companyoperation.jsp?method=getABGroupInfo"
+		http.method = "post";
+		http.resultFormat = "e4x";
+		//var list:Array = selectedids.split(",");
+		
+		var val:URLVariables = new URLVariables;
+		val.companyA = companyA;
+		val.companyB = companyB;
+		//val.value=keyword;
+		//Alert.show(companyA);
+		val.random = Math.random();
+		val.groupid = staticObj.groupid;
+		http.send(val);
+		
+	}
+	
+	private function reFresh(event:ResultEvent):void{
+		if(event.result != null && event.result is XML){
+			var result:XML = event.result as XML;
+			//orgTree.dataProvider = result;
+			
+			var data:ICollectionView = new XMLListCollection(new XMLList(result));
+			//Application.application.showCompanyPopUp();
+			Application.application.oc.dataProvider1 = data;
+			Application.application.oc.visible = true;
+		}
+	}
+		
+	private function doSearch(){
+		var keyword:String = StringUtil.trim(keyValue.text);
+		var key:String = region.selectedItem.data;
+		if(keyword==""){
+			key = "all";
+			
+		}
+		
+		//Alert.show(key);
+		var http:HTTPService = new HTTPService();
+		
+		http.addEventListener(ResultEvent.RESULT,bindDataNotClear);
+		http.addEventListener(FaultEvent.FAULT,myFaultErrorEvent);
+		
+		http.url="/companygroup/manage/companyoperation.jsp?method=queryCompanyForSelect"
+		http.method = "post";
+		http.resultFormat = "e4x";
+		
+		var val:URLVariables = new URLVariables;
+		val.key = key;
+		val.value=keyword;
+		val.groupid = staticObj.groupid;
+		val.random = Math.random();
+		
+		http.send(val);
+	
+	}
+	private function bindDataNotClear(resultContent:ResultEvent):void{
+			//Alert.show(resultContent.result as String)
+			left.dataProvider=[];
+			var rawData:String = String(resultContent.result); 
+			//Alert.show(rawData);
+			var arr:Array = (JSON.decode(rawData) as Array); 
+			
+			var content:ArrayCollection = new ArrayCollection(arr); 
+			left.dataProvider=content;
+			//right.dataProvider=[]; 
+			
+		}
+	
+	]]>  
+	</mx:Script>
+	<mx:Style>
+		TitleWindow{
+			background-repeat:repeat;
+			border-background-image:Embed(source='assets/centerbg.gif');
+		}
+		.titleLabel{
+			
+			fontWeight:bold;
+			fontSize:14;
+			color:#ffffff;
+		}
+		.title{
+			borderSkin:ClassReference( 'com.asfusion.skins.BoxModel' );
+			backgroundImage:Embed(source='assets/box-top.png');
+			backgroundRepeat: repeat-x;
+			
+		}
+		Panel {
+			borderStyle: none;
+			borderSkin:ClassReference( 'com.asfusion.skins.BoxModel' );
+			backgroundImage:Embed(source='assets/centerbg.gif');
+			backgroundRepeat: repeat-y;
+			
+		}
+		
+	</mx:Style>
+	<mx:HBox paddingTop="10">
+		
+		<mx:VBox>
+			<mx:HBox styleName="title" verticalAlign="middle" width="100%" height="33" paddingLeft="10">
+				<mx:Image id="btn" source="@Embed(source='assets/btn-icon.gif')"></mx:Image><mx:Label x="7" y="3"  styleName="titleLabel"  id="co_001"/>  
+			</mx:HBox>
+			<mx:HBox>
+				<mx:ComboBox id="region" dataProvider="{Application.application.searchType.searchTypeList}"  height="20">
+					
+				</mx:ComboBox>
+				<mx:TextInput id="keyValue" width="120">
+					
+				</mx:TextInput>
+				<mx:Image id="searchIcon" source="@Embed(source='assets/BI_16.jpg')" buttonMode="true" click="doSearch()">
+					
+				</mx:Image>
+				
+			</mx:HBox>
+			
+			<mx:List x="7" y="25" id="left" width="250" height="230" allowMultipleSelection="true"    fontSize="12"  
+					 dragEnabled="false" dropEnabled="true" dragMoveEnabled="true" doubleClickEnabled="true" itemDoubleClick="toRight()">   
+			</mx:List>
+		</mx:VBox>
+		
+		<mx:VBox paddingLeft="10" paddingRight="10" verticalAlign="middle" height="100%">
+			<!--右移-->
+			<mx:Image id="toright" source="@Embed(source='assets/toRight.png')" click="toRight()" />
+			<!--左移-->
+			<mx:Image id="toleft" source="@Embed(source='assets/toLeft.png')" click="toLeft()"/>
+		</mx:VBox>
+		<mx:VBox horizontalAlign="center">
+			
+			
+			<mx:HBox styleName="title" verticalAlign="middle" width="100%" height="20" paddingLeft="10">
+				<mx:Image id="tet" source="@Embed(source='assets/btn-icon.gif')"></mx:Image><mx:Label x="7" y="3"  styleName="titleLabel" id="co_002"/>  
+			</mx:HBox>
+			<mx:List x="261" y="32" id="right" width="250" height="222" allowMultipleSelection="true" fontSize="12"  
+					 dragEnabled="false" dropEnabled="true" dragMoveEnabled="true" doubleClickEnabled="true" itemDoubleClick="toLeft()">   
+			</mx:List>
+			<mx:Button  paddingLeft="20" paddingRight="20" height="20" click="onSelectSubmit()" id="co_003">
+				
+			</mx:Button>
+			<mx:Label   id="ABgx" /> 
+		</mx:VBox>
+		
+	</mx:HBox>
+	
+	
+</mx:TitleWindow>

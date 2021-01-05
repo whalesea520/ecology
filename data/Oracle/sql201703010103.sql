@@ -1,0 +1,23 @@
+CREATE TABLE RtxSyncDataLog(Id number(10) NOT NULL PRIMARY KEY,
+						   DataId varchar2(100) NOT NULL,
+						   DataType number(10) NOT NULL,
+						   OperType varchar2(10) NOT NULL,
+						   CreateDate  varchar2(10) NOT NULL,
+						   CreateTime  varchar2(8) NOT NULL 
+)
+/
+CREATE SEQUENCE RtxSyncDataLog_SEQ
+MINVALUE 1
+MAXVALUE 99999999999999999999
+START WITH 1
+INCREMENT BY 1
+CACHE 50
+ORDER
+/ 
+CREATE OR REPLACE TRIGGER RtxSyncDataLog_TRI
+BEFORE INSERT ON RtxSyncDataLog 
+FOR EACH ROW
+BEGIN 
+  SELECT RtxSyncDataLog_SEQ.NEXTVAL INTO :NEW.ID FROM DUAL; 
+  END;
+/

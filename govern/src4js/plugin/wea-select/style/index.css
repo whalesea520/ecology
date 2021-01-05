@@ -1,0 +1,112 @@
+.wea-select {
+    position: relative;
+}
+
+.wea-select .wea-required-e9 {
+    position: absolute;
+    right: -9px;
+    top: 50%;
+    height: 20px;
+    margin-top: -10px;
+}
+
+.wea-select .ant-select-arrow {
+    color: #666;
+    right: 3px;
+}
+
+.wea-select {
+	position: relative;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.wea-select .ant-select-arrow:before {
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 16px;
+    font-style: normal;
+}
+
+.wea-select .ant-select-arrow {
+    text-decoration: none !important;
+}
+
+.wea-search-group .wea-select {
+    width: 100%;
+}
+
+.wea-form-item .wea-select {
+    width: 100%;
+}
+
+.wea-select .ant-select-selection {
+	border-radius: 0px;
+}
+
+.wea-select .ant-checkbox-wrapper{
+	margin: 0;
+}
+
+.ant-select-dropdown-menu .ant-select-dropdown-menu-item{
+   min-height: 31.6px;
+   line-height: 1.2;
+}
+
+.wea-select .ant-select {
+    width: 100%;
+    color: inherit;
+    font-size: inherit;
+}
+
+.wea-select .ant-select .ant-select-selection {
+    width: 100%;
+}
+
+.wea-select .ant-select-selection--single {
+    height: auto;
+    min-height: 28px;
+}
+
+.wea-select .ant-select-selection--single .ant-select-selection__rendered {
+    height: auto;
+    line-height: normal;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 16px;
+    text-align: left;
+}
+
+.wea-select .ant-select-selection-selected-value {
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.wea-select-list {
+}
+
+.wea-select-list .wea-select-list-item {
+    margin-right: 8px;
+    float: left;
+    display: inline-block;
+    padding: 5px 6px;
+    line-height: 1;
+    border-radius: 4px;
+}
+
+.wea-select-list .wea-select-list-item.active {
+    background-color: #2db7f5;
+    color: #fff;
+}
+
+.wea-select-list .wea-select-list-item.active:hover {
+    color: #fff;
+}
+
+.wea-select-list .wea-select-list-item:last-child {
+    margin-right: 2px;
+}
+
+.wea-select-list .wea-select-list-item:hover {
+    color: #6799fd;
+}

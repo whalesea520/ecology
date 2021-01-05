@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules id="rule" version="1.0.0">
+    <path id="checkaction">D:\WEAVER\ecology\WEB-INF\service\action.xml</path>
+</rules>
+

@@ -1,0 +1,2 @@
+ALTER TABLE MobileAppBaseInfo ADD skin VARCHAR2(500)
+/

@@ -1,0 +1,37 @@
+TABLE.ViewForm TD.Line{
+	background-color: #C9C9C9!important;
+}
+TABLE.ViewForm TD.Line1 {
+    background-color: #C9C9C9!important;
+    background-repeat: repeat-x;
+    height: 2px;
+}
+TABLE.ListStyle TR.Header TH {
+    color: #EEEEEE;
+    text-align: left;
+}
+TABLE.ListStyle TR.HeaderForXtalbe TH, TABLE.ListStyle TR.header TH, TABLE.ListStyle TR.header TD {
+    background:#EEEEEE !important;
+    color: #4F6B72;
+    cursor: pointer;
+    height: 28px;
+    padding: 4px;
+}
+TABLE.ListStyle {
+    background-color: #C9C9C9;
+    margin: 10px 0 15px;
+    text-align: left;
+    width: 100%;
+}
+.listStyle td {
+    background-color: #FFFFFF!important;
+    color: #707070!important;
+    font-size: 12px!important;
+    height: 24px!important;
+    padding-left: 5px!important;
+    padding-right: 5px!important;
+
+}
+.listStyle {
+    background: none repeat scroll 0 0 #C9C9C9!important;
+}

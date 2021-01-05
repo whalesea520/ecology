@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!--Special encoding path-->
+	<dev-list>
+			<special>
+					<encoding>GBK</encoding>
+					<paths>
+							<path>/messager/GetUserIcon.jsp</path>
+							<path>/messager/GetUserIconOpreate.jsp</path>
+					</paths>
+			</special>
+	</dev-list>
+</root>

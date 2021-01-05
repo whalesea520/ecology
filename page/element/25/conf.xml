@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<id>25</id>  <!--只能是唯一的英文字母-->
+	<title>文档内容</title>
+	<titleEN>Document Content</titleEN>	
+	<desc>可以把文档内容显示出来的元素</desc>
+	<icon>resource/image/25_wev8.gif</icon>
+	<linkMode>-1</linkMode>
+	<loginView>0</loginView>
+	<type>2</type>
+	<perpage>-1</perpage>
+	<private>
+		<jsList> 
+		</jsList>
+	</private>
+	<public>
+		<jsIdList>  
+		</jsIdList>
+		<cssIdList>
+		</cssIdList>
+	</public>
+	<view>
+		<url>/page/element/25/DocContent.jsp</url>
+		<method/>
+	</view>
+	<setting>
+		<url>/page/element/compatible/setting.jsp</url>
+		<method>getDoccontentSettingStr</method>
+	</setting>
+	<more>
+		<url>#</url>
+		<method/>
+	</more>
+	<operation>/page/element/compatible/operation.jsp</operation>
+</root>

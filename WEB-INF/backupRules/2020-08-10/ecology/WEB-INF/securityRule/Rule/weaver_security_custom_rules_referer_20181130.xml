@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<ref-list>
+		<ref>http://127.0.0.1</ref>
+		<ref>https://127.0.0.1</ref>
+		<ref>http://localhost</ref>
+		<ref>https://localhost</ref>
+	</ref-list>
+	<host-list>
+		<host>127.0.0.1</host>
+		<host>127.0.0.1:80</host>
+		<host>localhost</host>
+		<host>localhost:80</host>
+	</host-list>
+	<check-jsp-except-urls>
+		<url>/join/monitorXOperation.jsp</url>
+	</check-jsp-except-urls>
+</root>

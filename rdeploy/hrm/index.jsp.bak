@@ -1,0 +1,416 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@taglib uri="/WEB-INF/weaver.tld" prefix="wea"%>
+<%@ include file="/systeminfo/init_wev8.jsp" %>
+<jsp:useBean id="RdeployTransMethod" class="weaver.rdeploy.hrm.RdeployTransMethod" scope="page" />
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+
+String modename = "成员";
+String modeurl = "/middlecenter/index.jsp";
+String sumcomId = RdeployTransMethod.createSubByCompany();
+
+
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  	<link href="/rdeploy/assets/css/index.css" rel="stylesheet" type="text/css">
+  	<LINK href="/css/Weaver_wev8.css" type=text/css rel=STYLESHEET>
+  	<script language="javascript" src="/wui/theme/ecology8/jquery/js/zDialog_wev8.js"></script>
+  	<script language="javascript" src="/rdeploy/assets/js/jquery.easing.1.3.js"></script>
+  </head>
+  <body  style="overflow: hidden;">
+  	<!-- 顶部 -->
+  	<%--
+	<jsp:include page="/rdeploy/indexTop.jsp" flush="false">
+		<jsp:param name="modename" value="<%=modename %>"/>
+		<jsp:param name="modeurl" value="<%=modeurl %>"/>
+	</jsp:include>  
+   --%>
+<div id="context" style="position: absolute;width: 380px;height: 100%	;z-index: 4; border: 2px solid #e9e9e2;left: 100%;background-color: white;display: ;">
+  <div style="width: 100%;height: 48px;background-color: #e9f2f2;"> 
+  	<span style="float: left;padding-left: 20px;font-size: 14px;color: #526268;margin-top: 13px;">人员信息</span>
+  	<span style="float: right;margin-right: 20px;margin-top: 13px;"><a href="javascript:closeInfo()"><img  src="/rdeploy/assets/img/hrm/deleteDept.png" width="12px;" onclick=""/></a></span>
+  </div>
+  <div id="resourceInfo" style="width: 380px;">
+  	<table width="320px" style="font-size: 13px;margin-left: 30px;">
+  	  <tr >
+  	  	<td width="100%" align="center" style="padding: 40px 0 10px 0;">
+  	  		<img id="image" src="" width="80px" onError="/messager/images/icon_m_wev8.jpg"/>
+  	  		<div style="background:url('/rdeploy/assets/img/hrm/bighead.png');position: absolute;top:90px;left:150px;height:80px;width:80px;"></div>
+  	  	</td>
+  	  </tr>
+  	  <tr >
+  	    <td align="center" ><span style="color: #313131;" id="name" align="center"></span><span id="sex" style="color: #526268;padding-left: 7px;"></span></td>
+  	  </tr>
+  	  <tr id="sta">
+  	    <td align="center" style="padding: 10px 0 0px 0px;"><span style="color: #526268;" id="states" align="center"></span></td>
+  	  </tr>
+  	  <tr >
+  	    <td></td>
+  	  </tr>
+  	  <tr id="dept" style="border-bottom: 1px solid #e9f2f2;">
+  	    <td align="left" style="color: #526268;padding: 20px 0 5px 0px;border-bottom: 1px solid #e9e9e2;">部门<span id="depName" style="margin-left: 50px;color: #313131;"></span></td>
+  	  </tr>
+  	  <tr id="job" style="border-bottom: 1px solid #e9f2f2;">
+  	    <td align="left" style="color: #526268;padding: 30px 0 5px 0;border-bottom: 1px solid #e9e9e2;">岗位<span id="jobName" style="margin-left: 50px;color: #313131;"></span></td>
+  	  </tr>
+  	  <tr id="manager" style="border-bottom: 1px solid #e9f2f2;">
+  	    <td align="left" style="color: #526268;padding: 30px 0 5px 0;border-bottom: 1px solid #e9e9e2;">直接上级<span id="managerName" style="margin-left: 24px;color: #313131;"></span></td>
+  	  </tr>
+  	  <tr id="mob" style="border-bottom: 1px solid #e9f2f2;">
+  	    <td align="left" style="color: #526268;padding: 30px 0 5px ;border-bottom: 1px solid #e9e9e2;">手机<span id="mobile" style="margin-left: 50px;color: #313131;"></span></td>
+  	  </tr>
+  	  <tr id="pho" style="border-bottom: 1px solid #e9f2f2;">
+  	    <td align="left" style="color: #526268;padding: 30px 0 5px 0;border-bottom: 1px solid #e9e9e2;">电话<span id="phone" style="margin-left: 50px;color: #313131;"></span></td>
+  	  </tr>
+  	  <tr id="eml" style="border-bottom: 1px solid #e9f2f2;">
+  	    <td align="left" style="color: #526268;padding: 30px 0 5px 0;border-bottom: 1px solid #e9e9e2;">邮箱<span id="email" style="margin-left: 50px;color: #313131;"></span></td>
+  	  </tr>
+  	  
+  	</table>
+	<div id="zDialog_div_bottom" class="zDialog_div_bottom" style="width: 380px;">
+		<wea:layout type="2col">
+	    	<wea:group context="">
+		    	<wea:item type="toolbar">
+		    		<input type="button" value="编辑" class="e8_btn_cancel" onclick="editHrmInfo()">
+		    		<input type="button" value="冻结" id="operate" class="e8_btn_cancel" onclick="freeze()">
+		    	</wea:item>
+		   	</wea:group>
+	  	</wea:layout>
+	</div>
+	
+  </div>
+</div>
+
+<input type="hidden" id="hrmSId"/>
+<input type="hidden" id="operateVal"/>
+
+		  <div style="text-align: center; width:100%;height: 50px;background-color: #f1f6f7;padding-top: -6px;border-bottom: 1px solid #d0dbe0;">
+		    <center>
+			  <div style="width: 820px;">
+				<span class="dbtn" style="float: right;margin: 7px;">
+					<input type="text" class="" height="" id="searchName" style="width:200px;height:30px; "/>
+					<span id="searchBox" class="" style="position:relative ; right: 38px;padding: 10px 0 3px 8px;height: 40px;width: 40px; background-color: ;top: 5px;" onclick="search()" onmouseover="addBackColor()" onmouseout="removeBackColor()">
+						<img id="searchImg" class="" src="/images/ecology8/request/search-input_wev8.png" >
+					</span>
+				</span>
+			  	<span class="dbtn bggreen" id="inadvancedmode" style="margin: 7px;" onclick="doHrmImport()">
+			  		<img src="/rdeploy/assets/img/hrm/import.png" width="14px" height="14px" align="absMiddle">批量导入
+			  	</span>
+			  	<span class="dbtn bgblue" id="inadvancedmode" onclick="doAdd()" style="margin: 7px;">
+			  		<img src="/rdeploy/assets/img/add.png" width="14px" height="14px" align="absMiddle" >添加成员
+			  	</span>
+			 </div>
+			 
+			</center>
+		 </div>
+<script language="JavaScript">
+
+//if (window.jQuery.client.browser == "Firefox"||window.jQuery.client.browser == "Chrome") {
+//		jQuery(document).ready(function () {
+//			jQuery("#leftframe,#middleframe,#contentframe").height(jQuery("#leftframe").parent().height());
+//			window.onresize = function () {
+//				jQuery("#leftframe,#middleframe,#contentframe").height(jQuery("#leftframe").parent().height());
+//			};
+//		});
+//	}
+
+	document.onkeydown=function(event){
+            var e = event || window.event || arguments.callee.caller.arguments[0];
+            if(e && e.keyCode==27){ // 按 Esc 
+                //要做的事情
+              }
+            if(e && e.keyCode==113){ // 按 F2 
+                 //要做的事情
+               }            
+             if(e && e.keyCode==13){ // enter 键
+                 search();
+            }
+        }; 
+	
+	function jsReloadTree(){
+		document.getElementById('leftframe').contentWindow.initTree(); 
+	}
+	
+	var selectDepId = "";
+	function setDepId(id){
+		selectDepId = id;
+	}
+	var dialog = new window.top.Dialog();
+		function closeDialog(){
+		if(dialog)
+			dialog.close();
+	}
+	function doAdd(){
+		if(dialog==null){
+			dialog = new window.top.Dialog();
+		}
+		dialog.currentWindow = window;
+		dialog.Title = "<%=SystemEnv.getHtmlLabelName(1421,user.getLanguage())%>人员";
+	    dialog.URL = "hrm/RdResourceAdd.jsp";
+		dialog.Width = 560;
+		dialog.Height = 200;
+		dialog.Drag = true;
+		dialog.textAlign = "center";
+		dialog.show();
+	}
+	
+	function showInfo(){
+		var dialog1;
+		if(dialog1==null){
+			dialog1 = new window.top.Dialog();
+		} 
+		window.top.Dialog.alert('人员添加成功！',null,null,null,null,{_autoClose:3});
+		dialog.close();
+	}
+	
+	function search(){
+	  
+	  jQuery("#contentframe").attr("src","HrmResourceList.jsp?name="+jQuery("#searchName").val().trim());
+	}
+	
+	function addBackColor(){
+	  jQuery("#searchBox").css("background-color","#d7d9e0");
+	  jQuery("#searchImg").attr("src","/rdeploy/assets/img/hrm/search.png");
+	  jQuery("#searchImg").attr("width","16");
+	}
+	function removeBackColor(){
+	  jQuery("#searchBox").css("background-color","");
+	  jQuery("#searchImg").attr("src","/images/ecology8/request/search-input_wev8.png");
+	}
+	
+var resourceInfo="";
+
+var wWidth= window.parent.innerWidth;
+	
+function floatTo(){
+	$("#context").animate({ 
+	  left: wWidth-380
+	},{ 
+	  duration: 1000, 
+	  easing: "swing", 
+	  complete: easeInOutBack1
+	}); 
+	//$("#context").animate({ 
+	//    left:[wWidth-380, 'easeInOutBack'],
+	//},1000); 
+	
+}
+function easeInOutBack1(){
+	getInfo();
+}
+
+function getInfo(){
+	if(resourceInfo == null){
+		setTimeOut("getInfo()",200);
+	}else{
+		jQuery("#resourceInfo").css("display","");
+		insertValue();
+	}
+}
+
+
+function insertValue(){
+		jQuery("#image").attr("src",resourceInfo.messageUrl);
+		jQuery("#name").html(resourceInfo.name);
+		if(resourceInfo.sex!=""){
+			jQuery("#sex").html(resourceInfo.sex=='0'?'(男)':'(女)');
+			jQuery("#sex").css("display","");
+		}else{
+			jQuery("#sex").css("display","none");
+		}
+		if(resourceInfo.states!=""){
+			jQuery("#states").html(resourceInfo.states);
+			jQuery("#sta").css("display","");
+		}else{
+			jQuery("#sta").css("display","none");
+		}
+		if(resourceInfo.depName!=""){
+			jQuery("#depName").html(resourceInfo.depName);
+			jQuery("#dept").css("display","");
+		}else{
+			jQuery("#dept").css("display","none");
+		}
+		if(resourceInfo.jobName!=""){
+			jQuery("#jobName").html(resourceInfo.jobName);
+			jQuery("#job").css("display","");
+		}else{
+			jQuery("#job").css("display","none");
+		}
+		if(resourceInfo.managerName!=""){
+			jQuery("#managerName").html(resourceInfo.managerName);
+			jQuery("#manager").css("display","");
+		}else{
+			jQuery("#manager").css("display","none");
+		}
+		if(resourceInfo.mobile!=""){
+			jQuery("#mobile").html(resourceInfo.mobile);
+			jQuery("#mob").css("display","");
+		}else{
+			jQuery("#mob").css("display","none");
+		}
+		if(resourceInfo.phone!=""){
+			jQuery("#phone").html(resourceInfo.phone);
+			jQuery("#pho").css("display","");
+		}else{
+			jQuery("#pho").css("display","none");
+		}
+		if(resourceInfo.email!=""){
+			jQuery("#email").html(resourceInfo.email);
+			jQuery("#eml").css("display","");
+		}else{
+			jQuery("#eml").css("display","none");
+		}
+		if(resourceInfo.type == "2"){
+			if(resourceInfo.canSend == "2"){
+				jQuery("#operate").val("发送激活短信");
+				jQuery("#operateVal").val("sendMsg");
+				jQuery("#operate").attr("disabled","");
+			}else if(resourceInfo.canSend == "1"){
+				jQuery("#operate").val("已发送激活短信");
+				jQuery("#operate").attr("disabled","disabled");
+				jQuery("#operate").attr("class","e8_btn_cancel");
+			}
+		}else{
+			if(resourceInfo.status=="7"){
+				jQuery("#operate").val("解冻");
+				jQuery("#operateVal").val("unfreeze");
+				
+			}else{
+				jQuery("#operate").val("冻结");
+				jQuery("#operateVal").val("freeze");
+			}
+		}
+}
+
+
+
+function closeInfo(){
+	jQuery("#context").hide();
+	jQuery("#context").css("left",wWidth);
+}
+
+function init(id){
+	resourceInfo ="";
+	if(jQuery("#hrmSId").val() != id || jQuery("#context").css("display") == "none"){
+		jQuery("#context").show();
+		jQuery("#context").css("left","100%");
+		jQuery("#resourceInfo").css("display","none");
+		jQuery("#hrmSId").val(id);
+		floatTo();
+	}
+}
+
+function editHrmInfo(){
+	dialog = new window.top.Dialog();
+	dialog.currentWindow = window;
+	var url = "";
+	dialog.Width = 600;
+	dialog.Height = 580;
+	dialog.Title = "编辑人员";
+	url = "hrm/RdResourceEdit.jsp?id="+jQuery("#hrmSId").val();
+	dialog.Drag = true;
+	dialog.URL = url;
+	dialog.show();
+}
+
+
+function editSuccess(id){
+  dialog.close();
+  $.ajax({
+		 data:{"id":id,"language":"<%=user.getLanguage()%>"},
+		 type: "post",
+		 cache:false,
+		 url:"RdResourceShow.jsp",
+		 dataType: 'json',
+		 async:true,
+		 success:function(data){
+		  resourceInfo=data;
+		  insertValue();
+		}	
+	   });
+	contentframe._table.reLoad();
+}
+var state;
+function freeze(){
+	var opt = jQuery("#operateVal").val();
+	if(opt =="sendMsg"){
+		 $.ajax({
+		 data:{"id":jQuery("#hrmSId").val(),"state":state,"method":opt},
+		 type: "post",
+		 cache:false,
+		 url:"RdResourceOptAjax.jsp",
+		 dataType: 'json',
+		 async:false,
+		 success:function(data){
+		 	if(data.result){
+		 		jQuery("#operate").val("已发送激活短信");
+				jQuery("#operate").attr("disabled","disabled");
+				jQuery("#operate").attr("class","e8_btn_cancel");
+		 		window.top.Dialog.alert('已发送激活短信，1小时后才可再次发送！',null,null,null,null,{_autoClose:3});
+		 	}else{
+		 		if(data.reason =="1"){
+			 		window.top.Dialog.alert('已发送激活短信，1小时后才可再次发送！',null,null,null,null,{_autoClose:3});
+			 		jQuery("#operate").val("已发送激活短信");
+					jQuery("#operate").attr("disabled","disabled");
+					jQuery("#operate").attr("class","e8_btn_cancel");
+		 		}else{
+			 		window.top.Dialog.alert('短信发送失败！',null,null,null,null,{_autoClose:3});
+		 		}
+		 	}
+		}	
+	   });
+	   return;
+	}
+
+	var msg = "";
+	if(opt =="freeze"){
+		msg = "冻结后，该人员将不能登录系统，是否确定冻结？";
+	}
+	if(opt =="unfreeze"){
+		msg = "解冻后，该人员可正常登录系统，是否确定解冻？";
+	}
+	window.top.Dialog.confirm(msg,function(){
+		 $.ajax({
+		 data:{"id":jQuery("#hrmSId").val(),"state":state,"method":opt},
+		 type: "post",
+		 cache:false,
+		 url:"RdResourceOptAjax.jsp",
+		 dataType: 'json',
+		 async:false,
+		 success:function(data){
+		 	if(data.result){
+		 		jQuery("#context").hide();
+			 	contentframe._table.reLoad();
+		 	}else{
+		 		window.top.Dialog.alert('操作失败！',null,null,null,null,{_autoClose:3});
+		 	}
+		}	
+	   });
+	});
+}
+</script>   
+<div style="position:absolute;width:100%;top:50px;bottom:0px;">
+<TABLE width=100% id=oTable1 height=100% cellpadding="0px" cellspacing="0px">
+
+  <TBODY>
+<tr><td  height=100% id=oTd1 name=oTd1 width="246px" style="border-right:0px;padding-top: 0px;" >
+<IFRAME name=leftmenuframe id=leftmenuframe src="HrmCompany_left.jsp?subcomid=<%=sumcomId %>&deptid=&nodeid=&rightStr=HrmResourceAdd:Add" style="vertical-align: top;" width="100%" height="100%" frameborder=no scrolling=no>
+</IFRAME>
+</td>
+<td height=100% id=oTd2 name=oTd2 width="*" id="tdcontent" valign="top" >
+<IFRAME name=contentframe id=contentframe  src="HrmResourceList.jsp?subCompanyId=<%=sumcomId %>" width="100%" height="100%" style="vertical-align: top;border-left:  1px solid #e9f2f2;"  frameborder=no scrolling=no>
+</IFRAME>
+</td>
+</tr>
+  </TBODY>
+</TABLE>
+</div>
+
+
+
+  </body>
+</html>

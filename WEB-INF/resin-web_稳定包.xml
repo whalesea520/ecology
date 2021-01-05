@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">  
+<web-app>
+   <servlet>
+        <servlet-name>InitMonitor</servlet-name>
+        <servlet-class>weaver.general.MonitorServer</servlet-class>
+        <init-param>
+         <param-name>serverName</param-name>
+         <param-value>ecology</param-value>
+       </init-param>
+	   <load-on-startup>2</load-on-startup>
+    </servlet>
+    <filter>
+		<filter-name>PFixFilterResinWeb</filter-name>
+		<filter-class>weaver.filter.PFixFilter</filter-class>
+  	</filter>
+  	<filter-mapping>
+		<filter-name>PFixFilterResinWeb</filter-name>
+		<url-pattern>*.jsp</url-pattern>
+  	</filter-mapping>
+  	
+	<session-config>
+        <session-max>409600</session-max>
+        <session-timeout>30</session-timeout>
+        <enable-cookies>true</enable-cookies>
+        <enable-url-rewriting>true</enable-url-rewriting>
+  		<file-store>WEB-INF/sessions</file-store>
+  		<always-save-session>true</always-save-session>
+  		<always-load-session>false</always-load-session>
+  		<ignore-serialization-errors>true</ignore-serialization-errors>
+    </session-config>
+</web-app>

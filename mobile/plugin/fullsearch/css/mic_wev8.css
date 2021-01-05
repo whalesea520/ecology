@@ -1,0 +1,297 @@
+@keyframes circleWave {
+	0% {
+		transform: scale(0);
+		opacity: 0.1;
+	}
+	20% {
+		transform: scale(0.8);
+		opacity: 0.3;
+	}
+	40% {
+		transform: scale(1);
+		opacity: 0.6;
+	}
+	60% {
+		transform: scale(1.1);
+		opacity: 0.9;
+	}
+	80% {
+		transform: scale(1.2);
+		opacity: 0.8;
+	}
+	100% {
+		transform: scale(1.1);
+		opacity: 0.3;
+	}
+}
+@-webkit-keyframes "circleWave" {
+	0% {
+		transform: scale(0);
+		opacity: 0.1;
+	}
+	20% {
+		transform: scale(0.8);
+		opacity: 0.3;
+	}
+	40% {
+		transform: scale(1);
+		opacity: 0.6;
+	}
+	60% {
+		transform: scale(1.1);
+		opacity: 0.9;
+	}
+	80% {
+		transform: scale(1.2);
+		opacity: 0.8;
+	}
+	100% {
+		transform: scale(1.1);
+		opacity: 0.3;
+	}
+}
+
+
+@keyframes circleWaveOut {
+	0% {
+		transform: scale(0);
+		opacity: 0.0;
+	}
+	20% {
+		transform: scale(0.8);
+		opacity: 0.2;
+	}
+	40% {
+		transform: scale(1);
+		opacity: 0.3;
+	}
+	60% {
+		transform: scale(1.1);
+		opacity: 0.4;
+	}
+	80% {
+		transform: scale(1.2);
+		opacity: 0.3;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 0.1;
+	}
+}
+@-webkit-keyframes "circleWaveOut" {
+	0% {
+		transform: scale(0);
+		opacity: 0.0;
+	}
+	20% {
+		transform: scale(0.8);
+		opacity: 0.2;
+	}
+	40% {
+		transform: scale(1);
+		opacity: 0.3;
+	}
+	60% {
+		transform: scale(1.1);
+		opacity: 0.4;
+	}
+	80% {
+		transform: scale(1.2);
+		opacity: 0.3;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 0.1;
+	}
+}
+
+
+@keyframes circleWave1 {
+	0% {
+		transform: scale(0);
+		opacity: 0.1;
+	}
+	20% {
+		transform: scale(0.8);
+		opacity: 0.3;
+	}
+	40% {
+		transform: scale(1.1);
+		opacity: 0.6;
+	}
+	60% {
+		transform: scale(1.4);
+		opacity: 0.9;
+	}
+	80% {
+		transform: scale(1.7);
+		opacity: 0.8;
+	}
+	100% {
+		transform: scale(1.4);
+		opacity: 0.3;
+	}
+}
+@-webkit-keyframes "circleWave1" {
+	0% {
+		transform: scale(0);
+		opacity: 0.1;
+	}
+	20% {
+		transform: scale(0.8);
+		opacity: 0.3;
+	}
+	40% {
+		transform: scale(1.1);
+		opacity: 0.6;
+	}
+	60% {
+		transform: scale(1.4);
+		opacity: 0.9;
+	}
+	80% {
+		transform: scale(1.7);
+		opacity: 0.8;
+	}
+	100% {
+		transform: scale(1.4);
+		opacity: 0.3;
+	}
+}
+
+
+@keyframes circleWaveOut1 {
+	0% {
+		transform: scale(0);
+		opacity: 0.0;
+	}
+	20% {
+		transform: scale(0.8);
+		opacity: 0.2;
+	}
+	40% {
+		transform: scale(1);
+		opacity: 0.3;
+	}
+	60% {
+		transform: scale(1.2);
+		opacity: 0.4;
+	}
+	80% {
+		transform: scale(1.4);
+		opacity: 0.3;
+	}
+	100% {
+		transform: scale(1.2);
+		opacity: 0.1;
+	}
+}
+@-webkit-keyframes "circleWaveOut1" {
+	0% {
+		transform: scale(0);
+		opacity: 0.0;
+	}
+	20% {
+		transform: scale(0.8);
+		opacity: 0.2;
+	}
+	40% {
+		transform: scale(1);
+		opacity: 0.3;
+	}
+	60% {
+		transform: scale(1.2);
+		opacity: 0.4;
+	}
+	80% {
+		transform: scale(1.4);
+		opacity: 0.3;
+	}
+	100% {
+		transform: scale(1.2);
+		opacity: 0.1;
+	}
+}
+
+/* 产生动画（向外扩散变大）的圆圈  */
+.pulse60 {
+	position: absolute;
+	width: 60px; 
+	height: 60px;
+	border: 12px solid #1C86FD;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
+	
+}
+/* 产生动画（向外扩散变大）的圆圈  */
+.pulse84 {
+	position: absolute;
+	width: 84px; 
+	height: 84px;
+	border: 12px solid #58A1FE;
+	-webkit-border-radius:100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
+}
+
+/* 产生动画（向外扩散变大）的圆圈  */
+.pulse120 {
+	position: absolute;
+	width: 120px; 
+	height: 120px;
+	border: 24px solid #1C86FD;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
+	
+}
+/* 产生动画（向外扩散变大）的圆圈  */
+.pulse168 {
+	position: absolute;
+	width: 168px; 
+	height: 168px;
+	border: 24px solid #58A1FE;
+	-webkit-border-radius:100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
+}
+
+
+.circleWave{
+	-webkit-animation: circleWave 1.2s ease-out;
+	-moz-animation: circleWave 1.2s ease-out;
+	animation: circleWave 1.2s ease-out;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+
+
+.circleWaveOut{
+	-webkit-animation: circleWaveOut 2.5s ease-out;
+	-moz-animation: circleWaveOut 2.5s ease-out;
+	animation: circleWaveOut 2.5s ease-out;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+
+.circleWave1{
+	-webkit-animation: circleWave1 1.2s ease-out;
+	-moz-animation: circleWave1 1.2s ease-out;
+	animation: circleWave1 1.2s ease-out;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+
+
+.circleWaveOut1{
+	-webkit-animation: circleWaveOut1 2.5s ease-out;
+	-moz-animation: circleWaveOut1 2.5s ease-out;
+	animation: circleWaveOut1 2.5s ease-out;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}

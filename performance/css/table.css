@@ -1,0 +1,34 @@
+.x-grid3-row{border-color: #fff;}
+.x-grid3-hd-row td{background: #F3F3F3;line-height: 18px;border-left-color: #E3E3E3;border-right: 0px;}
+.x-grid3-hd-row td.x-grid3-td-numberer{border-left:0px;}
+.x-grid3-hd-inner{height: 100%;background: #F3F3F3;}
+.x-grid3-hd-inner,.x-grid3-cell-inner{padding-left:4px !important;}
+.x-grid3-header-inner{background: #F3F3F3;}
+.x-toolbar-ct{height: 28px;}
+.xtb-text{font-size: 12px !important;font-family: '微软雅黑' !important;}
+.x-toolbar{border:0px !important;}
+.x-grid3-col{min-height:24px;}
+.x-grid3-col div{line-height:24px;}
+.x-grid3-header{background-image: none;background-color: #F3F3F3}
+.x-grid3-row-alt{background: #FCFCFC;border-color: #FCFCFC;}
+.x-grid3-cell-inner a.btn{display: block;width: 36px;line-height: 20px;float: left;text-align: center;background: #CCCCCC;margin-left: 2px;text-decoration: none;color: #000;}
+.x-grid3-cell-inner a.btn:link,.x-grid3-cell-inner a.btn:hover,.x-grid3-cell-inner a.btn:active,.x-grid3-cell-inner a.btn:visited{text-decoration: none;color:#000;}
+.x-grid3-cell-inner a.btn:hover{background: #D9733C;color: #fff;}
+.x-grid3-hd-over{background-color: #F3F3F3 !important;background-image: none !important;background: none !important;}
+.x-grid3-row-over {border-color:#F3F3F3;background-color:#F9F9F9;background-image:none;}
+.x-panel{border:1px #E9E9E9 solid;}
+.x-grid3-row-checker{height:100%;background-position-y:7px !important;}
+.x-grid3-hd-checker{height:24px;background-position-y:5px;}
+
+.searchtable{width:100%;border-collapse: collapse;margin-bottom:10px;}
+.searchtable td{line-height:30px;padding-left:4px !important;padding-right:4px !important;background:#fff;border:1px #E9E9E9 solid;}
+.searchtable td.title{background:#F3F3F3;color:#333333;}
+.searchtable td .input{background-image:none !important;padding-top:0px !important;}
+.innertable{width:auto;height:30px;float:left;}
+.innertable td{border:0px;padding:0px !important;}
+
+.btn1{width: 60px;line-height: 20px;height: 20px;text-align: center;border: 1px #B0B0B0 solid;cursor: pointer;margin-left: 5px;float: left;padding: 0px !important}
+.btn_hover{background: #5581DA;color: #fff;border-color: #5581DA;}	
+
+.operatespan{display: none;}
+.x-grid3-row-over .operatespan{display: inline;}

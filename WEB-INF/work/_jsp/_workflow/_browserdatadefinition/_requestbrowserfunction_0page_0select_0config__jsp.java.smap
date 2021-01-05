@@ -1,0 +1,17 @@
+SMAP
+_requestbrowserfunction_0page_0select_0config__jsp.java
+JSP
+*S JSP
+*F
++ 1 RequestBrowserfunction_page_select_config.jsp
+workflow/browserdatadefinition/RequestBrowserfunction_page_select_config.jsp
+*L
+1#1:38
+11#1,36:39
+46#1:75
+48#1,2:76,6
+49#1,2:83,3
+50#1,2:87,5
+51#1,2:93,5
+52#1:99,12
+*E

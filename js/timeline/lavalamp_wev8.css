@@ -1,0 +1,44 @@
+
+.lavaLampHead{
+	height: 30px;
+	width: 100%;
+	position: absolute;
+	top:37px;
+     }
+.lavaLamp{
+   /* position: relative;*/
+    padding: 5px 5px 22px;
+    margin: 0px;
+    border-bottom:2px solid #74a8d7 ; 
+    }
+.lavaLamp li{
+     float: left; /*--重要--*/
+     list-style: none;
+     *padding-top:2px; /*IE*/
+     width:45px;
+     }
+.lavaLamp li.back{
+     border-bottom: 3px solid #fe4902 ;
+     width: 9px; 
+     height: 20px; /*--较为重要--*/
+     z-index: 1; /*--较为重要--*/
+     position: absolute; /*--重要--*/
+	 *margin-top:6px; /*IE*/
+     }
+.lavaLamp li a{
+    z-index: 2; /*--重要--*/
+    font-variant:small-caps;
+    text-decoration:none !important;
+    position: relative; /*--重要--*/
+    margin: auto 10px;
+    color: #b8cce4!important;
+    font-size:14px;
+}
+
+.lavaLamp li .currentVersion {
+	color: #4F81BD!important;
+}
+
+.lavaLamp li .activeVersion{
+	color: red!important;
+}

@@ -1,0 +1,66 @@
+.dhtmlwindow{
+	position: absolute;
+	/*border: 1px solid #999999;
+	border-top:0px;*/
+	visibility: hidden;
+	background-color: white;
+
+	
+}
+
+.drag-handle{ /*CSS for Drag Handle*/
+	/*padding:7px;*/	
+
+	/*text-indent: 1px;*/
+	font: bold 13px ;
+	background-color:#5D5D5D;
+	height:29px;
+	background:url('/js/modalbox/handerbg_wev8.gif');
+	color: #FFFFFF;
+	cursor: move;
+	overflow: hidden;
+	width: auto;
+}
+
+.drag-handle .drag-controls{ /*CSS for controls (min, close etc) within Drag Handle*/
+	position: absolute;
+	right:0px;
+	top:0px;
+	cursor: hand;
+	cursor: pointer;
+	height:29px;
+}
+
+.spanTitle{
+	height:29px;
+}
+
+
+.drag-contentarea{ /*CSS for Content Display Area div*/
+	
+	background-color: white;
+	color: black;
+	height: 150px;
+	
+	overflow: auto;
+	
+    border-right:2px solid #555555;
+}
+
+.drag-statusarea{ /*CSS for Status Bar div (includes resizearea)*/
+	border-top: 1px solid gray;
+	background-color: #F8F8F8;
+	height: 13px; /*height of resize image*/
+	border-left:1px solid #888888;
+	border-bottom:2px solid #555555;
+	border-right:2px solid #555555;
+}
+
+
+.drag-resizearea{ /*CSS for Resize Area itself*/
+	float: right;
+	width: 13px; /*width of resize image*/
+	height: 13px; /*height of resize image*/
+	cursor: nw-resize;
+	font-size: 0;
+}

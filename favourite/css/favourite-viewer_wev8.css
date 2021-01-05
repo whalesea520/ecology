@@ -1,0 +1,326 @@
+/*
+ * Ext JS Library 2.1
+ * Copyright(c) 2006-2008, Ext JS, LLC.
+ * licensing@extjs.com
+ * 
+ * http://extjs.com/license
+ */
+
+html, body {
+	font: normal 12px tahoma, arial, verdana, sans-serif;
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+	overflow: hidden;
+	height: 100%;
+}
+.tabmenus {
+    background-image: url(/favourite/images/list-items_wev8.gif) !important;
+}
+.ext-el-mask {
+    background:#dadadb;
+}
+.x-grid3-td-title b {
+    font-family:tahoma, verdana;
+    display:block;
+    color:#333;
+}
+.x-grid3-td-title b i {
+    font-weight:normal;
+    font-style: normal;
+    color:#000;
+}
+.x-grid3-td-title .topic {
+    padding-left:20px;
+    background:transparent url(/favourite/images/post_wev8.gif) no-repeat 0 2px;
+}
+.x-grid3-td-title .x-grid3-cell-inner {
+    white-space:normal;
+}
+.x-grid3-td-title a {
+    color: #385F95;
+    text-decoration:none;
+}
+.x-grid3-td-title a:hover {
+    text-decoration:underline;
+}
+.details .x-btn-text {
+    background-image: url(/favourite/images/details_wev8.gif);
+}
+.msg-view {
+    background-image: url(../shared/icons/fam/application_view_list_wev8.png) !important;
+}
+.add-favourite {
+    background-image: url(/favourite/images/relateCwork_wev8.gif) !important;
+}
+
+.preview-bottom {
+    background-image: url(/favourite/images/preview-bottom_wev8.gif) !important;
+}
+.add-bottom {
+    background-image: url(/js/extjs/resources/images/default/dd/drop-add_wev8.gif) !important;
+}
+.addtab {
+    background-image: url(/favourite/images/addtab_wev8.gif) !important;
+}
+.preview-right {
+    background-image: url(/favourite/images/preview-right_wev8.gif) !important;
+}
+.preview-hide {
+    background-image: url(/favourite/images/preview-hide_wev8.gif) !important;
+}
+
+.tabs {
+    background-image: url( ../desktop/images/tabs_wev8.gif ) !important;
+}
+.summary {
+    background-image: url(/favourite/images/details_wev8.gif) !important;
+}
+.x-grid3-row-body p {
+    margin:5px 20px 10px 25px !important;
+    color:#555;
+}
+
+.post-date {
+    font-weight:bold;
+    color:#333;
+}
+
+.author {
+    color:#333;
+}
+
+.x-tree {
+    background:#fff !important;
+}
+.x-border-layout-ct {
+    background:transparent;
+}
+body.x-border-layout-ct {
+    background:#EBEBEB;
+}
+.x-layout-split {
+    background-color:transparent !important;
+}
+
+.x-tree-node div.favourites-node{
+    background:#eee url(/favourite/images/cmp-bg_wev8.gif) repeat-x;
+    height:100%;
+    margin-top:1px;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ccc;
+    padding-top:2px;
+    padding-bottom:1px;
+}
+.favourites-node .x-tree-node-icon {
+    display:none;
+}
+.forum-ct a span {
+    font-weight:bold;
+    color:#222;
+}
+.favourite {
+    border:1px solid #fff;
+    margin:3px;
+}
+.favourite .x-tree-ec-icon {
+    display:none;
+}
+.favourite-icon {
+    background-image:url(/images/btnFavorite_wev8.gif) !important;
+}
+.search-button {
+    background-image:url(/images_frame/search_dot_wev8.gif) !important;
+}
+.remind-button{
+	background-image:url(/images/remind_wev8.png) !important;
+}
+.new-tab {
+    background-image:url(/favourite/images/new_tab_wev8.gif) !important;
+}
+.new-win {
+    background-image:url(/favourite/images/go-to-post_wev8.gif) !important;
+}
+.delete-icon {
+    background-image:url(/favourite/images/delete_wev8.gif) !important;
+}
+.load-icon {
+    background-image:url(/favourite/images/rss_load_wev8.gif) !important;
+}
+.refresh-icon {
+    background-image:url(/favourite/images/refresh_wev8.gif) !important;
+}
+.copy-icon {
+    background-image:url(/favourite/images/copy_wev8.gif) !important;
+}
+.move-icon {
+    background-image:url(/favourite/images/submit_wev8.gif) !important;
+}
+.add-doc {
+    /**background-image:url(/wui/theme/ecology8/page/images/toolbar/docs_wev8.png) !important;*/
+    background-image:url(/images_face/ecologyFace_2/LeftMenuIcon/MyDoc_wev8.png) !important;
+}
+.add-workflow {
+    /**background-image:url(/wui/theme/ecology8/page/images/toolbar/wls_wev8.png) !important;*/
+    background-image:url(/images_face/ecologyFace_2/LeftMenuIcon/MyWorkflow_wev8.png) !important;
+}
+.add-project {
+    /**background-image:url(/wui/theme/ecology8/page/images/toolbar/p_wev8.png) !important;*/
+    background-image:url(/images_face/ecologyFace_2/LeftMenuIcon/MyProject_wev8.png) !important;
+}
+.add-custom {
+    /**background-image:url(/wui/theme/ecology8/page/images/toolbar/crm_wev8.png) !important;*/
+    background-image:url(/images_face/ecologyFace_2/LeftMenuIcon/MyCRM_wev8.png) !important;
+}
+.x-menu{
+	 background:white;
+}
+.x-menu-floating
+{
+	border:rgb(170,210,242) 1px solid;
+}
+.x-menu-item-text
+{
+	font:12px arial, tahoma, sans-serif;
+}
+.x-tree-selected {
+    border:1px dotted #a3bae9;
+    background:#DFE8F6;
+}
+.x-tree-node .x-tree-selected a span{
+	background:transparent;
+	color:#15428b;
+    font-weight:bold;
+}
+
+#topic-grid .x-panel-tbar .x-toolbar {
+   /* border-top:0 none; */
+}
+
+
+#main-tabs .x-tab-panel-body {
+    background:transparent;
+    border:0 none;
+}
+
+/* Preview classes */
+
+.preview .x-panel-body {
+    background:#fff;
+    color:#222;
+    font:normal 12px tahoma,verdana,arial,sans-serif;
+}
+
+.preview .x-panel-body p {
+    line-height:18px;
+    margin:8px 0;
+}
+
+.preview .x-panel-body ul {
+    margin-left:18px;
+}
+
+.preview .x-panel-body ul li {
+    display:list-item;
+    list-style-image:none !important;
+    list-style-position:outside !important;
+    list-style-type:disc !important;
+    margin-left:18px;
+}
+
+.preview .x-panel-body pre, #preview .x-panel-body code {
+    background:#f1f1f1;
+    display:block;
+}
+
+.preview .x-panel-body h4.post-author {
+    font-weight:normal;
+    color:#555;
+    font-size:11px;
+}
+.preview .x-panel-body span.post-date {
+    font-weight:normal;
+    color:#555;
+    float:right;
+    font-size:11px;
+}
+.preview .x-panel-body div.post-data {
+    background:#f1f2f4;
+    padding:5px;
+    border-bottom:1px solid #dadadb;
+}
+.preview .x-panel-body div.post-body {
+    padding:10px;
+}
+/*.single-preview .x-toolbar, #right-preview .preview .x-toolbar {
+    border-top:0 none;
+}*/
+.reading-menu .x-menu-item-checked {
+   border:1px dotted #a3bae9 !important;
+    background:#DFE8F6;
+	padding:0;
+}
+.x-tab-panel-header {
+    border-bottom-width:0 !important;
+}
+#suggested {
+    border-top:0 none;
+}
+#suggested a {
+    text-decoration:none;
+    font-size:11px;
+    color:#15428B;
+    display:block;
+    padding:3px;
+    float:right;
+    margin-right:4px;
+}
+#suggested a:hover {
+    text-decoration:underline;
+    color:#15428B;
+}
+.x-combo-list-item {
+    zoom:1;
+}
+.x-combo-list-item strong {
+    color:#777;
+    font-size:11px;
+    font-style: normal;
+    float:left;
+}
+.x-combo-list-item em {
+    color:#222;
+    font-size:12px;
+    font-style: normal;
+    float:left;
+    width:325px;
+}
+.x-node-ctx {
+    background:#eee !important;
+    border:1px solid #ccc !important;
+}
+.x-tree-node-anchor{
+    font-family:Verdana;
+    font-size:"12px";
+}
+.x-form-invalid-icon {
+    width:16px;
+    height:18px;
+    visibility:hidden;
+    position:absolute;
+    left:0;
+    top:0;
+    display:block;
+    background:transparent url(/images/BacoError_wev8.gif) no-repeat 0 2px;
+}
+.x-form-invalid{
+	background:#fff repeat-x bottom;
+	border: 1px solid #7caedc;
+}
+.x-tree-node-anchor{
+	FONT-FAMILY: Verdana;
+	zoom:1;
+}
+.x-btn-wrap{
+	height : 22px;
+}

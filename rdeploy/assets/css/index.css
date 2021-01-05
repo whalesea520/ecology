@@ -1,0 +1,144 @@
+* {
+	font-family:'Microsoft YaHei';
+}
+
+/* 按钮样式 */
+.dbtn {
+	float:right;line-height:35px;margin:10px;padding:0px 18px;color:#fff;cursor:pointer;font-size:14px;
+}
+.dbtn img {
+	margin-right:10px;
+}
+
+.bgblue {
+	background:#5e9eff;
+}
+.bgblue:hover {
+	background:#72aaff;
+}
+.bggreen {
+	background:#6abc50;
+}
+.bggreen:hover {
+	background:#74ce58;
+}
+
+.bgcc1 {
+	background:#8bce86;
+}
+.bgcc1:hover {
+	background:#74ce58;
+}
+
+/* 列表中按钮样式 */
+.dsbtn {
+		float:right;line-height:25px;margin:10px;padding:0px 10px;color:#fff;cursor:pointer;font-size:14px;
+}
+/* 灰色 */
+.bggray {
+	background:#b7bfc5; 
+}
+.bggray:hover {
+	background:#a2aab0; 
+}
+
+/* 蓝色 */
+.bgblue {
+	background:#5e9eff; 
+}
+.bgblue:hover {
+	background:#4b93ff; 
+}
+
+/* 橙色 */
+.bgorange {
+	background:#ebab6c; 
+}
+.bgorange:hover {
+	background:#eca054; 
+}
+
+/* 门户中中按钮样式 */
+.portalstbtn {
+	display:inline-block;line-height:30px;padding:0px 18px;color:#fff;cursor:pointer;font-size:12px;
+}
+
+/* 门户中中按钮样式 */
+.portalstbtn2 {
+	display:inline-block;height:35px;line-height:35px;padding:0px 18px;color:#fff;cursor:pointer;font-size:14px;
+}
+.dbtn img {
+	margin-right:10px;
+}
+
+.content {
+	margin:0px 5px;padding:10px;
+}
+.content .item {
+	float:left;width:185px;height:230px;margin:0px 38px;position:relative;
+}
+.content .item .itemtitle {
+	width:100%;height:50px;line-height:50px;text-align:center;font-size:14px;color:#546168;
+}
+.content .item .itemico {
+	width:100%;height:130px;text-align:center;
+}
+.content .item .itemico img {
+	cursor:pointer;
+}
+.content .item .itemico img {
+	width:135px;height:130px;	
+}
+
+.content .item .itemoperation {
+	width:100%;height:50px;text-align:center;padding-top:16px;display:none;
+}
+.content .item .itemoperation .operationspan {
+	display:inline-block;width:64px;height:30px;background:url('/rdeploy/assets/img/wf/start.png') 0 0 no-repeat;cursor:pointer;
+}
+
+.content .item .itemoperation .operationspan2 {
+	background:url('/rdeploy/assets/img/wf/stop.png') 0 0 no-repeat!important;
+}
+
+.content .item .itemclose {
+	position:absolute;width:25px;height:25px;right:10px;top:13px;display:none;cursor:pointer;
+}
+
+.HeaderForXtalbe {
+	height:45px!important;
+	background:#fff!important;
+}
+
+.HeaderForXtalbe TH {
+	background:#fff!important;
+	color:#95b1b5!important;
+	border-bottom:2px solid #ced9ea!important;
+}
+.ListStyle tr {
+	height:50px!important;
+}
+
+.ListStyle tr td:first-child {
+	border-left:2px solid #fff;
+}
+
+.ListStyle .Selected td {
+	background:#fffcf0!important;
+}
+
+.ListStyle .Selected td:first-child {
+	border-left:2px solid #5d9ffe!important;
+}
+
+.ListStyle tr td {
+	color:#546168!important;
+}
+
+.rdeploycommoncolor {
+	color:#546266!important;font-size:12px!important;
+}
+.rdeploycommoninputclass {
+	height:35px;width:265px;border:1px solid #d6dae0;	
+}
+

@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0445)http://server-weaver/test/docs/BDDocument.asp?Action=Content&NoHeader=2&ID={A132902C-F1B9-42FA-93AA-8D2696D27677}&ReturnTo=BDView%2Easp%3FView%3DDOCUMENTS%26Groupid%3D2%26Category%3DRelationship%26Status%3D30%26Source%3DMyDocuments%26Layout%3D3%26Threaded%3D%2D1%26ViewByMainCate%3D2%26ViewOwnerShip%3D1%26ViewDisplay%3D1%26ViewDisplayLevel%3D2%26ViewDocumentType%3D0%26ViewMyDocType%3D1%26OrderBy%3DModifiedDate%26OrderDesc%3DASC%26Zoomed%3DYes -->
+<!-- Start [BACO_DOC Content] --><HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=UTF-8">
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY>
+<TABLE width="100%">
+  <TBODY>
+  <TR>
+    <TD>
+      <P align=center><STRONG>Main news<BR></STRONG></P>
+      <HR>
+
+      <P>$DOC_Content<BR></P></TD></TR></TBODY></TABLE><!-- End [BACO_DOC Content] --><!-- TDID: -->
+<SCRIPT language=VBS>
+Sub Window_OnBeforePrint
+Dim img, w, h, p
+For each img in Document.All.Tags("IMG")
+          w = Replace(img.style.width,"px","")
+			 h = Replace(img.style.height,"px","")
+			 If Not w = "" Then
+            If w > 450 Then
+				p = (450/ w)
+				img.style.width = (w * p) & "px"
+				img.style.height = (h * p) & "px"
+End If
+End If
+Next
+End Sub
+</SCRIPT>
+</BODY></HTML>

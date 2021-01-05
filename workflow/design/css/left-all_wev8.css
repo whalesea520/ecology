@@ -1,0 +1,32 @@
+.left-top1{
+	background-color: #F3F3F3;
+	margin-left:4px;
+	text-align:left;
+	margin-top:6px;
+	font-size: 12px;
+	width:106px;
+	}
+.left-top2{
+	background-color: #F3F3F3;
+	margin-top:2px;
+	font-size: 12px;
+	width:100%;	
+}
+.default-tr{
+	height:90px;
+	width:226px;
+	}
+.right-top1{
+	background-color:#CAE8EA;
+	margin-left:5px;
+	text-align:left;
+	margin-top:6px;
+	font-size: 12px;
+	}
+.hover { 
+	background-color:#DFE8F6; 
+	color: White; 
+	}	
+.property-bar-style{
+	background-color: #F3F3F3;
+	}

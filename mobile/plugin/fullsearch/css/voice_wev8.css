@@ -1,0 +1,672 @@
+/*整体边距*/
+.ui-content {
+	padding: 0px;
+}
+
+/*整体背景,字体*/
+body {
+	background-color: #FFFFF;
+	max-width: 640px;
+	min-width: 320px;
+	font-size: 14px;
+}
+
+/*底部*/
+.voicefooter {
+	background-color: #f1f2f6 !important;
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+	height: 100px;
+	z-index: 999;
+}
+/*特效*/
+.WaveContainer{
+	width: 100%;
+	position: fixed;
+	bottom: -100px;
+	height: 70px;
+	background: #f1f2f6 !important;
+}
+
+/*按住提示语*/
+.microphoneTip{
+	color: #2478E9;
+    font-size: 10px;
+    width: 100%;
+    text-align: center;
+    margin-top: 6px;
+}
+
+/* 麦克风 */
+.microphone {
+	margin-top: 5px;
+	margin-bottom: 2px;
+	background-image: url(/mobile/plugin/fullsearch/img/microphone_wev8.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	display: inline-block;
+}
+
+.minMic {
+	width: 70px;
+	height: 70px;
+}
+
+.maxMic {
+	width: 100px;
+	height: 100px;
+}
+
+.microphonepressed {
+	background-image:
+		url(/mobile/plugin/fullsearch/img/microphonepressed_wev8.png);
+}
+
+.tooltipShow {
+	font-size: 24px;
+}
+
+.help {
+	position: absolute;
+	right: 20px;
+	bottom: 15px;
+	width: 30px;
+	height: 30px;
+	background-image: url(/mobile/plugin/fullsearch/img/help_wev8.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	display: inline-block;
+}
+
+.helphot {
+	background-image: url(/mobile/plugin/fullsearch/img/help_hot_wev8.png);
+}
+
+#start {
+	background-color: #FFFFFF !important;
+	background-image: none !important;
+}
+
+#main {
+	background-image: linear-gradient(#F1F2F6,#F1F2F6);
+	background-color: #F1F2F6;
+	background-image: none;
+}
+
+#scrollHelpContent{
+	background-color: white;
+}	
+
+#helpDetail{
+	background-color: #f1f2f6;
+}
+
+/*询问*/
+.ask {
+	text-align: right;
+	padding: 20px 15px 20px 15px;
+}
+
+.askCurrent {
+	background-color: white !important;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.ask .keyDiv {
+	padding-left: 60px;
+}
+
+.askCurrent .editKeyDiv {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	border: 0px;
+	outline: 0;
+	background-color: #f1f2f6;
+}
+
+.tapDiv {
+	color: #848484;
+	font-size: 12px;
+}
+
+/*答案*/
+.anser {
+	width: 100%;
+	text-align: left; //
+	padding-top: 5px; //
+	padding-bottom: 8px;
+	background: #FFFFFF !important;
+}
+
+.anserCurrent {
+	
+}
+
+.anser .tips {
+	line-height: 30px;
+	padding-left: 20px;
+	background: #F1F2F6;
+	color: #17181A;
+}
+
+.anser .tips2 {
+	color: #848484;
+}
+
+.askTip {
+	line-height: 30px;
+	padding-left: 20px;
+	background: #F1F2F6;
+	color: #17181A;
+	text-align: left;
+}
+
+/*答案与下一个询问的分隔间距*/
+.split {
+	height: 20px;
+}
+
+/*指令交互*/
+.instructTip{
+	line-height: 20px;
+	padding: 10px;
+	background: #F1F2F6;
+	color: #17181A;
+	text-align: left;
+}
+/*文字展示*/
+.ui-li-span {
+	font-size: 12px;
+	font-weight: 100 !important;
+	display: block;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	color: #848484;
+	float: left;
+	width: 40%
+}
+
+.ui-li-span-heading {
+	font-size: 14px;
+	color: #17181A;
+}
+
+.ui-li-span25 {
+	width: 25%
+}
+
+.ui-li-span80 {
+	width: 95%
+}
+
+.ui-li-span100 {
+	width: 100%
+}
+/*正文展示内容*/
+.ul-li-div {
+	float: left;
+	line-height: 23px;
+	margin-left: 65px;
+	margin-top: 2px;
+}
+
+.ul-li-div div {
+	height: 23px;
+}
+
+/*图标*/
+.ul-li-div-img {
+	float: left;
+	position: absolute;
+	left: 10px;
+}
+
+.ul-li-div-img img {
+	width: 46px;
+	height: 46px;
+}
+
+.RSC .ul-li-div-img img {
+	border-radius: 23px;
+}
+
+/*新建流程样式*/
+.WFTYPE {
+	height: 56px;
+	margin-top: 5px;
+}
+
+.WFTYPE .ul-li-div-addwf {
+	float: left;
+	line-height: 50px;
+	height: 50px;
+	text-align: center;
+	border: 1px dashed gray;
+	margin-left: 10px;
+}
+
+.WFTYPE .ul-li-div-addwf span {
+	float: left;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 80%;
+	text-align: left;
+}
+
+.WFTYPE  img {
+	width: 22px;
+	height: 22px;
+	margin: 15px;
+	float: left;
+}
+
+/*更多信息.. 分页点*/
+.otherInfo {
+	background-color: #f1f2f6;
+	text-align: center;
+	padding-top: 15px;
+}
+
+.morePage {
+	margin: auto;
+	height: 10px;
+}
+
+/*此处需要使用base64,不然导出聊天记录图片为空
+  /mobile/plugin/fullsearch/img/dot_wev8.png
+*/
+.dot {
+	width: 10px;
+	height: 10px;
+	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAUElEQVR42mNgIBXs378/ed++fSeB+CeIBvExFAEluoD4PxbchWySAVDgDw6Ff0DyMNOKcCiC4SKSFRrjsxokT5pnkBSnAfF5qAIQncZADgAA2dO240aSq/YAAAAASUVORK5CYII=");
+	float: left;
+	margin-left: 5px;
+}
+/*此处需要使用base64,不然导出聊天记录图片为空
+/mobile/plugin/fullsearch/img/dot_hot_wev8.png
+*/
+.currentDot {
+	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAWElEQVR42mNgIBV4eHgku7u7nwTinyAaxMdQ5Obm1gWU/I+OQeJwRa6urgZAwT/YFILEQfIwK4twKAJjkDxpCoHuMMZnNUieNM8gKU4DSp6HKjoP4jOQAwDsF2MZflIxHwAAAABJRU5ErkJggg==");
+}
+
+/*点击进一步搜索*/
+.rectangle {
+	border: 1px solid #b8b8b8;
+	color: #9B9B9B;
+	height: 25px;
+	line-height: 25px;
+	min-width: 160px;
+	max-width: 180px;
+	margin: 0 auto;
+	margin-top: 10px;
+	background-color: #EAEAEA;
+	font-size: 12px;
+}
+
+.rounded {
+	border-radius: 23px;
+}
+
+.currentMoreInfo {
+	background-color: #FFFFFF;
+	color: #848484;
+}
+
+/*客服*/
+.customerServiceOuter {
+	padding: 10px 0 10px 0;
+	background-color: #F1F2F6;
+}
+
+.customerServiceInner {
+	margin-top: 0px;
+}
+
+.currentCustomerService {
+	background-color: #FFFFFF;
+	color: #848484;
+}
+
+div {
+	display: block;
+	-webkit-overflow-scrolling: touch;
+}
+
+/*结果展示*/
+.result-ul {
+	position: absolute;
+	width: 100%;
+}
+
+.am-list-item {
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	padding-left: 5px;
+	min-height: 15px;
+	background-color: #fff;
+	vertical-align: middle;
+	overflow: hidden;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-transition: background-color .3s;
+	transition: background-color .3s;
+	border-bottom: 1px solid #E1E1E1;
+}
+
+.am-list-item-hover {
+	background-color: #ddd;
+}
+
+.am-list-item .am-list-line {
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-ms-grid-row-align: center;
+	align-items: center;
+}
+
+.am-list-item .am-list-line {
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	-ms-flex-item-align: stretch;
+	align-self: stretch;
+	overflow: hidden;
+	padding: 12px 5px 12px 0;
+}
+
+.am-list-item .am-list-line .am-list-content {
+	color: #000;
+	text-align: left;
+	width: 100%;
+}
+
+.am-list-item .am-list-line .am-list-arrow {
+	display: block;
+	background-image:
+		url("data:image/svg+xml;charset=utf-8,<svg width='16' height='27' viewBox='0 0 16 27' xmlns='http://www.w3.org/2000/svg'><path d='M15.533 13.041l.038-.038L2.57 0 0 2.569 10.472 13.04 0 23.513l2.569 2.569L15.57 13.079l-.038-.038z' fill='%23CCC'/></svg>")
+		;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	width: 15px;
+	height: 15px;
+}
+
+.faqResult{
+	background-color: #f1f2f6;
+}
+
+*,:after,:before {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.helpTip {
+	height: 50px;
+	line-height: 50px;
+	text-align: left;
+	background-color: white;
+	font-size: 16px;
+	color: #505d75;
+	padding-left: 20px;
+}
+
+.scrollTip {
+	height: 100px;
+	line-height: 100px;
+	font-size: 24px;
+	text-align: center;
+	padding-left: 0px;
+}
+
+#detailTip {
+	line-height: 60px;
+	margin: 10px 30px 10px 30px;
+	border-bottom: 1px solid #E1E1E1;
+	color: #58a1fe;
+	font-size: 16px;
+}
+
+.helpDetailDiv {
+	display: none;
+	color: #6f869c;
+}
+
+.helpDetailDiv div {
+	line-height: 30px;
+	margin-bottom: 10px;
+}
+
+.scroll {
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+}
+
+.scroll ul {
+	margin: 0px;
+	padding: 0px;
+	transform: translateY(0);
+}
+
+.animate {
+	-webkit-transition: all .5s ease-out;
+}
+
+.scroll li {
+	overflow: hidden;
+	display: -webkit-box;
+	color: #6f869c;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	white-space: normal;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+}
+
+li {
+	list-style: none;
+}
+
+.currentLi {
+	visibility: hidden;
+}
+
+
+/*日程新建确认框*/
+.Btn{
+	float: left;
+	width: 80px;
+    text-align: center;
+    height: 30px;
+    margin: 10px;
+    line-height: 30px;
+    border-radius: 15px;
+}
+
+.cancelBtn{
+    background-color: #F0F0F0;
+}
+
+.OkBtn{
+    background-color: #2E88E9;
+    color: white;
+    text-shadow: none;
+}
+
+.wkp_time{
+	width: 60px;
+    line-height: 40px;
+    text-align: center;
+}
+.wkp_content_parent{
+	height: 80px;
+	margin-left: 8px;
+	border-bottom: 1px solid #EBEBEB;
+}
+.wkp_content{
+	float: left;
+	height: 50px;
+	margin: 15px 0px 15px 5px;
+	border-left: 2px solid #40C2F4;
+	width: 245px;
+	background-color: #C9F0FF;
+}
+.wkp_content_inner{
+	margin: 5px;
+    overflow-y: auto;
+    height: 40px;
+    line-height: 20px;
+}
+.wkp_top{
+	position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left:8px;
+    min-height: 15px;
+    background-color: #fff;
+    vertical-align: middle;
+    overflow: hidden;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-bottom: 1px solid #E1E1E1;
+    height: 70px;
+}	
+
+.holidayDiv{
+	color:#777777;
+}
+
+.lineTips{
+	padding-left: 20px;
+    background: #f6f6f6;
+    color: #17181A;
+}
+.labelName{
+	padding-left: 20px;
+	width: 200px;
+    float: left;
+}
+.lineBottom{
+	border-bottom: 1px solid #F1F2F6;
+	height: 35px;
+}
+
+
+.crm_title{
+	padding: 6px 5px 5px 20px;
+    background-color: #F1F2F6;
+    height: 40px;
+    line-height: 20px;
+}
+
+.crm_address_child{
+	margin-left: 20px;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #E1E1E1;
+   
+}
+
+.crm_address{
+   -webkit-transition: background-color .3s;
+   transition: background-color .3s;
+}
+
+.crm_address-hover{
+	background-color: #ddd !important;
+}
+
+.crm_Location{
+	background-color: #FFFFFF;
+}
+
+
+
+.wf_top{
+	position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left:8px;
+    min-height: 15px;
+    vertical-align: middle;
+    overflow: hidden;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    border-bottom: 1px solid #E1E1E1;
+    height: 46px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.wf_content_parent{
+	margin-left: 8px;
+	border-bottom: 1px solid #4B7699;
+}
+.wf_content_item{
+	height: 50px;
+	line-height: 50px;
+	float: left;
+	width: 100%;
+	margin-bottom: 10px;
+}
+.wf_label{
+	padding-left:15px;
+	text-align:left;
+	width: 75px;
+	float: left;
+}
+.wf_label_font{
+	font-size: 14px;
+	width: 100%;
+}
+.wf_field{
+	float: left;
+}
+.wf_field_font{
+	color: #000000;
+	width: 100%;
+	font-size:14px;
+}
+.wf_datetime{
+	border-left: 2px solid #40C2F4;
+}
+.wf_time{
+	width: 140px;
+    line-height: 25px;
+    margin-left: 5px;
+}
+.wf_days{
+	float: right;
+    margin-right: 15px;
+}
+.wf_content{
+	float: left;
+	height: 50px;
+	width: 245px;
+	background-color: #C9F0FF;
+}
+.wf_content_inner{
+	margin: 5px;
+    overflow-y: auto;
+    height: 40px;
+    line-height: 20px;
+}
+
+.lastLi {
+	border-bottom: 0px;
+}

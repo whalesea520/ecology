@@ -1,0 +1,209 @@
+TABLE.calendarTableStyle{
+	width:100%;
+	text-align:center;
+	background-color:#FFFFFF;	
+	border-collapse:collapse;	
+	TABLE-LAYOUT: fixed;
+}
+
+/*============ 日周 日期标题显示Cell ============*/
+TABLE.calendarTableStyle TR.titleDate{		
+	color:#000099;
+ 	background-color:#C4DAFF;
+ 	height:30;
+}
+TABLE.calendarTableStyle TR.titleDate TD{
+	border-top:#C5C5C5 1pt solid;
+	border-bottom:#C5C5C5 1pt solid;
+	border-left:#C5C5C5 1pt solid;
+	border-right:#C5C5C5 1pt solid;	
+}
+
+/*============ 日周 时间标题显示Cell ============*/
+TABLE.calendarTableStyle TD.titleTimeHalfHour{
+	color:#000099;
+ 	background-color:#E7EDF9;
+ 	width:45;
+ 	height:30; 
+ 	
+ 	border-top:#C5C5C5 1pt solid;
+	border-bottom:#E7EDF9 1pt solid;
+	border-left:#C5C5C5 1pt solid;
+	border-right:#C5C5C5 1pt solid;	
+}
+TABLE.calendarTableStyle TD.titleTimeWholeHour{
+	color:#000099;
+ 	background-color:#E7EDF9;
+ 	width:45;
+ 	height:30; 
+ 	
+ 	border-top:#E7EDF9 1pt solid;
+	border-bottom:#C5C5C5 1pt solid;
+	border-left:#C5C5C5 1pt solid;
+	border-right:#C5C5C5 1pt solid;	
+}
+
+
+/*============ 日周 跨天显示Cell ============*/
+TABLE.calendarTableStyle TR.dataDay{
+	color:#000099;
+ 	background-color:#E7EDF9;
+ 	height:30;
+}
+TABLE.calendarTableStyle TR.dataDay TD{
+ 	border-top:#C5C5C5 1pt solid;
+	border-bottom:#C5C5C5 1pt solid;
+	border-left:#C5C5C5 1pt solid;
+	border-right:#C5C5C5 1pt solid;	
+}
+
+
+/*============ 日周 一日内显示Cell ============*/
+TABLE.calendarTableStyle TD.dataHalfHour{
+	color:#000000;
+ 	background-color:#FFFFFF;
+ 	height:30; 
+	
+ 	border-top:#FFFFFF 1pt solid;
+	border-bottom:#C5C5C5 1pt dashed;
+	border-left:#C5C5C5 1pt solid;
+	border-right:#C5C5C5 1pt solid;	
+}
+TABLE.calendarTableStyle TD.dataWholeHour{
+	color:#000000;
+ 	background-color:#FFFFFF;
+ 	height:30;
+	
+	border-top:#FFFFFF 1pt solid;
+	border-bottom:#C5C5C5 1pt solid;
+	border-left:#C5C5C5 1pt solid;
+	border-right:#C5C5C5 1pt solid;
+}
+
+
+/*============ 日周 当前日显示Cell ============*/
+TABLE.calendarTableStyle TD.dataHalfHourThisDate{
+	color:#000000;
+ 	background-color:#FEFECC;
+	height:30; 
+	
+ 	border-top:#FFFFFF 1pt solid;
+	border-bottom:#C5C5C5 1pt dashed;
+	border-left:#C5C5C5 1pt solid;
+	border-right:#C5C5C5 1pt solid;
+}
+TABLE.calendarTableStyle TD.dataWholeHourThisDate{ 
+	color:#000000;
+ 	background:#FEFECC;
+	height:30;
+		
+ 	border-top:#FFFFFF 1pt solid;
+	border-bottom:#C5C5C5 1pt solid;
+	border-left:#C5C5C5 1pt solid;
+	border-right:#C5C5C5 1pt solid;
+}
+
+
+
+
+
+/*============ 月 周几标题显示Cell ============*/
+TABLE.calendarTableStyle TR.titleDayMonth{		
+	color:#000099;
+ 	background-color:#C4DAFF;
+ 	height:30;
+}
+TABLE.calendarTableStyle TR.titleDayMonth TD{
+	border-top:#C5C5C5 1pt solid;
+	border-bottom:#C5C5C5 1pt solid;
+	border-left:#C5C5C5 1pt solid;
+	border-right:#C5C5C5 1pt solid;	
+}
+
+
+/*============ 月 日显示Cell ============*/
+TABLE.calendarTableStyle TD.dataDateMonth{
+	color:#000000;
+ 	background-color:#FFFFFF;
+ 	height:90; 
+	
+ 	border-top:#C5C5C5 1pt solid;
+	border-bottom:#C5C5C5 1pt solid;
+	border-left:#C5C5C5 1pt solid;
+	border-right:#C5C5C5 1pt solid;	
+}
+TABLE.calendarTableStyle TD.dataDateMonth A {
+	COLOR: blue; TEXT-DECORATION: underline
+}
+TABLE.calendarTableStyle TD.dataDateMonth A:hover {
+	COLOR: red; TEXT-DECORATION: underline
+}
+
+TABLE.calendarTableStyle TD.dataDateMonth A:link {
+	COLOR: blue; TEXT-DECORATION: underline
+}
+TABLE.calendarTableStyle TD.dataDateMonth A:visited {
+	TEXT-DECORATION: underline
+}
+
+/*============ 月 当前日期显示Cell ============*/
+TABLE.calendarTableStyle TD.dataThisDateMonth{
+	color:#000000;
+ 	background-color:#FEFECC;
+	height:90; 
+	
+ 	border-top:#C5C5C5 1pt solid;
+	border-bottom:#C5C5C5 1pt solid;
+	border-left:#C5C5C5 1pt solid;
+	border-right:#C5C5C5 1pt solid;
+}
+TABLE.calendarTableStyle TD.dataThisDateMonth A {
+	COLOR: blue; TEXT-DECORATION: underline
+}
+TABLE.calendarTableStyle TD.dataThisDateMonth A:hover {
+	COLOR: red; TEXT-DECORATION: underline
+}
+
+TABLE.calendarTableStyle TD.dataThisDateMonth A:link {
+	COLOR: blue; TEXT-DECORATION: underline
+}
+TABLE.calendarTableStyle TD.dataThisDateMonth A:visited {
+	TEXT-DECORATION: underline
+}
+
+
+
+/*============ 月 当月日期标题显示Cell ============*/
+TABLE.calendarTableStyle TD.titleDateMonth{
+	color:#000000;
+ 	background-color:#E7EDF9;
+ 	height:15;
+	cursor:default;
+	
+ 	border-top:#C5C5C5 1pt solid;
+	border-bottom:#C5C5C5 1pt solid;
+	border-left:#C5C5C5 1pt solid;
+	border-right:#C5C5C5 1pt solid;	
+}
+
+/*============ 月 非当月日期标题显示Cell ============*/
+TABLE.calendarTableStyle TD.titleDateMonthNotThisMonth{
+	color:#B8C0CB;
+ 	background-color:#E7EDF9;
+ 	height:15;
+	cursor:default;
+	
+ 	border-top:#C5C5C5 1pt solid;
+	border-bottom:#C5C5C5 1pt solid;
+	border-left:#C5C5C5 1pt solid;
+	border-right:#C5C5C5 1pt solid;	
+}
+
+/*============ 拖拉新建 Cell滤镜 ============*/
+.createCalendarItemMoveFilter{
+	filter: progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=70,finishOpacity=0);	
+}
+
+.createCalendarItemOverFilter{
+	filter: progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=100,finishOpacity=0);	
+}

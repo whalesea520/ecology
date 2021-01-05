@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<special-non>
+		<urls>
+				<url>
+					<value>__someCommonParamsRule__</value>
+					<params>
+					    <param>
+							<value>Referer</value>
+							<rules>
+							  <rule>##CONST:NAMETITLE##</rule>
+							</rules>
+						</param>
+					</params>
+				 </url>
+				 <url>
+					<value>/workflow/search/WFSearchTemp.jsp</value>
+					<params>
+					    <param>
+							<value>complete</value>
+							<rules>
+							  <rule>##CONST:LETTERS##</rule>
+							</rules>
+						</param>
+					</params>
+				 </url>
+			   
+		</urls>
+	</special-non>
+</root>

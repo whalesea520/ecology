@@ -1,0 +1,69 @@
+delete from HtmlLabelIndex where id=124842 
+/
+delete from HtmlLabelInfo where indexid=124842 
+/
+INSERT INTO HtmlLabelIndex values(124842,'(流程数量)－节点') 
+/
+INSERT INTO HtmlLabelInfo VALUES(124842,'(流程数量)－节点',7) 
+/
+INSERT INTO HtmlLabelInfo VALUES(124842,'(Number of process) - node',8) 
+/
+INSERT INTO HtmlLabelInfo VALUES(124842,'(流程數量)－節點',9) 
+/
+
+delete from HtmlLabelIndex where id=124843 
+/
+delete from HtmlLabelInfo where indexid=124843 
+/
+INSERT INTO HtmlLabelIndex values(124843,'具体流程耗时统计表') 
+/
+INSERT INTO HtmlLabelInfo VALUES(124843,'具体流程耗时统计表',7) 
+/
+INSERT INTO HtmlLabelInfo VALUES(124843,'Specific process time-consuming statistics',8) 
+/
+INSERT INTO HtmlLabelInfo VALUES(124843,'具體流程耗時統計表',9) 
+/
+
+
+delete from HtmlLabelIndex where id=124844 
+/
+delete from HtmlLabelInfo where indexid=124844 
+/
+INSERT INTO HtmlLabelIndex values(124844,'系统耗时') 
+/
+INSERT INTO HtmlLabelInfo VALUES(124844,'系统耗时',7) 
+/
+INSERT INTO HtmlLabelInfo VALUES(124844,'The system time-consuming',8) 
+/
+INSERT INTO HtmlLabelInfo VALUES(124844,'系統耗時',9) 
+/
+
+
+delete from HtmlLabelIndex where id=124845 
+/
+delete from HtmlLabelInfo where indexid=124845 
+/
+INSERT INTO HtmlLabelIndex values(124845,'正在添加...') 
+/
+INSERT INTO HtmlLabelInfo VALUES(124845,'正在添加...',7) 
+/
+INSERT INTO HtmlLabelInfo VALUES(124845,'Being added...',8) 
+/
+INSERT INTO HtmlLabelInfo VALUES(124845,'正在添加...',9) 
+/
+INSERT INTO HtmlLabelInfo VALUES(124845,'正在添加...',12) 
+/
+
+
+delete from HtmlNoteIndex where id=3655 
+/
+delete from HtmlNoteInfo where indexid=3655 
+/
+INSERT INTO HtmlNoteIndex values(3655,'点击可收缩/展开左侧菜单') 
+/
+INSERT INTO HtmlNoteInfo VALUES(3655,'点击可收缩/展开左侧菜单',7) 
+/
+INSERT INTO HtmlNoteInfo VALUES(3655,'Click to shrink / expand the left menu',8) 
+/
+INSERT INTO HtmlNoteInfo VALUES(3655,'點擊可收縮/展開左側菜單',9) 
+/

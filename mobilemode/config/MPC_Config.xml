@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MPC-Config>
+	<MPC>
+		<id>Photo</id>
+		<type>Photo</type>
+		<icon>/mobilemode/images/c01_wev8.png</icon>
+		<text>拍照</text>
+		<desc>调用移动设备拍照服务。</desc>
+		<isEnabled>1</isEnabled>
+		<resources>
+			<resource type="js_link">/mobilemode/js/mpc/photo_wev8.js</resource>
+			<resource type="css_link">/mobilemode/css/mpc/photo_wev8.css</resource>
+		</resources>
+		<editContent>
+			<![CDATA[
+				<input type="button" value="拍照" data-inline="true" data-theme="_p_photo"  onclick="_p_addPhoto(event, '${id}');"/>
+				<input type="hidden" name="field${id}" id="field${id}" value="${value}"/>
+				<input type="hidden" name="imageCount${id}" id="imageCount${id}" value="${imageCount}"/>
+				
+				<div id="photoContainer_${id}" class="photoContainer">
+					$mpc_forstart$
+					<div class="photoEntryWrap">
+						<div class="photoEntry">
+							<img src="${imageUrl}"/>
+							<input type="hidden" name="uploadname_${id}_${imageIndex}" value=""/>
+							<input type="hidden" name="uploaddata_${id}_${imageIndex}" value=""/>
+						</div>
+						<div class="photoDel" onclick="_p_addPhoto_remove(event, '${id}', '${imageUrl}');"></div>
+					</div>
+					$mpc_forend$
+				</div>
+			]]>
+		</editContent>
+		<viewContent>
+			<![CDATA[
+				<input type="hidden" name="field${id}" id="field${id}" value="${value}"/>
+				
+				<div id="photoContainer_${id}" class="photoContainer">
+					$mpc_forstart$
+					<div class="photoEntryWrap">
+						<div class="photoEntry">
+							<img src="${imageUrl}"/>
+						</div>
+					</div>
+					$mpc_forend$
+				</div>
+			]]>
+		</viewContent>
+	</MPC>
+	<MPC>
+		<id>LBS</id>
+		<type>LBS</type>
+		<icon>/mobilemode/images/c05_wev8.png</icon>
+		<text>LBS</text>
+		<desc>Location Based Services</desc>
+		<isEnabled>1</isEnabled>
+		<resources>
+			<resource type="js_link">/mobilemode/js/baidu/api_wev8.js</resource>
+			<resource type="js_link">/mobilemode/js/baidu/convertor_wev8.js</resource>
+			<resource type="css_link">/mobilemode/css/mpc/lbs_wev8.css?1</resource>
+			<resource type="js_link">/mobilemode/js/mpc/lbs_wev8.js</resource>
+		</resources>
+		<editContent>
+			<![CDATA[
+				<input type="hidden" name="field${id}" id="field${id}" value="${value}"/>
+				
+				<div id="lbsContainer_${id}" class="lbsContainer">
+					$mpc_valuenotempty_start$
+					<div class="lbsEntery">
+						<div class="lbsContent" onclick="openMap('${gpsstr}');">${addstr}</div>
+						<div class="lbsDelete" onclick="lbsDelete('${id}')"></div>
+					</div>	
+					$mpc_valuenotempty_end$
+				</div>
+				<input type="button" value="定位" data-inline="true" data-theme="_p_lbs"  onclick="_p_getLBS('${id}');"/>
+			]]>
+		</editContent>
+		<viewContent>
+			<![CDATA[
+				<input type="hidden" name="field${id}" id="field${id}" value="${value}"/>
+				
+				<div id="lbsContainer_${id}" class="lbsContainer">
+					$mpc_valuenotempty_start$
+					<div class="lbsEntery">
+						<div class="lbsContent" onclick="openMap('${gpsstr}');">${addstr}</div>
+					</div>	
+					$mpc_valuenotempty_end$
+				</div>
+			]]>
+		</viewContent>
+	</MPC>
+	<MPC>
+		<id>Speech</id>
+		<type>Speech</type>
+		<icon>/mobilemode/images/c08_wev8.png</icon>
+		<text>语音</text>
+		<desc>调用移动设备语音服务。</desc>
+		<isEnabled>0</isEnabled>
+		<editContent>
+			<![CDATA[
+			]]>
+		</editContent>
+		<viewContent>
+			<![CDATA[
+			]]>
+		</viewContent>
+	</MPC>
+	<MPC>
+		<id>QR_Code</id>
+		<type>QR_Code</type>
+		<icon>/mobilemode/images/c09_wev8.png</icon>
+		<text>二维码</text>
+		<desc>QR Code</desc>
+		<isEnabled>0</isEnabled>
+		<editContent>
+			<![CDATA[
+			]]>
+		</editContent>
+		<viewContent>
+			<![CDATA[
+			]]>
+		</viewContent>
+	</MPC>
+	<MPC>
+		<id>PersonnelBrowser</id>
+		<type>PersonnelBrowser</type>
+		<icon>/mobilemode/images/c02_wev8.png</icon>
+		<text>人员选择</text>
+		<desc>调用系统人力资源原生控件。</desc>
+		<isEnabled>0</isEnabled>
+		<editContent>
+			<![CDATA[
+			]]>
+		</editContent>
+		<viewContent>
+			<![CDATA[
+			]]>
+		</viewContent>
+	</MPC>
+</MPC-Config>

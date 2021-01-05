@@ -1,0 +1,57 @@
+/** Html **/
+.Design_Html_Container{
+	border-bottom: 1px solid #eee;	
+	min-height: 36px
+}
+.Design_Html_Empty{
+	color: #ccc;
+	font-size: 14px;
+	font-family: 'Microsoft Yahei',Arial, Helvetica, sans-serif;
+	padding: 9px 5px 9px 22px;	
+}
+/** MADH : MEC_Attr_Design_Html **/
+.MADH_Title{
+	color: rgb(164, 169, 174);
+	border-bottom: 1px solid rgb(223, 223, 223);
+	font-family: 'Microsoft Yahei',Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 0px 0px 6px 10px;
+}
+.MADH_Content{
+	padding: 10px 0px 0px 10px;	
+}
+.MADH_Htm{
+	border: 1px solid rgb(223, 223, 223);
+	width: 343px;
+	height: 106px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	overflow: auto;
+}
+.MADH_Htm_Focus{
+	border: 1px solid #5D9CEC;	
+}
+.MADH_Bottom{
+	padding: 10px 0px 0px 10px;
+	margin-bottom: 20px;		
+}
+.MADH_SaveBtn{
+	background-color: rgb(107, 163, 237);
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	box-sizing: border-box;
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+	display: block;
+	font-family: 'Microsoft Yahei', Arial, sans-serif;
+	font-size: 14px;
+	height: 28px;
+	line-height: 28px;
+	margin: 0px;
+	text-align: center;
+	width: 348px;
+	zoom: 1;	
+}

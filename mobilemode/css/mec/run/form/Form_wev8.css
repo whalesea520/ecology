@@ -1,0 +1,745 @@
+#scroll_wrapper{
+	background-color:#fff;
+}
+form.mobileform {
+	padding: 0px 15px;
+	margin-bottom: 15px;
+}
+.Form_Msg{
+	border-bottom-color: rgba(0, 0, 0, 0);
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-image-outset: 0px;
+	border-image-repeat: stretch;
+	border-image-slice: 100%;
+	border-image-source: none;
+	border-image-width: 1;
+	border-left-color: rgba(0, 0, 0, 0);
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-color: rgba(0, 0, 0, 0);
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-top-color: rgba(0, 0, 0, 0);
+	border-top-style: solid;
+	border-top-width: 1px;
+ 	-moz-border-radius: 4px;      /* Gecko browsers */
+    -webkit-border-radius: 4px;   /* Webkit browsers */
+    border-radius: 4px;            /* W3C syntax */
+	box-sizing: border-box;
+	color: rgb(255, 255, 255);
+	font-family: 'Microsoft Yahei', Arial, sans-serif;
+	font-size: 12px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	padding: 5px;
+	position: fixed;
+	text-align: center;
+	vertical-align: middle;
+	z-index: 1000;
+	zoom: 1;	
+	top: 5px;
+	left: 15px;
+	right: 15px;
+	transition: opacity 0.6s;
+	-webkit-transition: opacity 0.6s;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.Form_Msg_Err{
+	background-color: #F699B4;	
+	visibility: visible;
+}
+
+.Form_Msg_Info{
+	background-color: #56a845;
+	visibility: visible;
+}
+
+.Form_Msg.fadeIn{
+	opacity: 1;
+}
+
+.Formfield-Wrap {
+	border-bottom: 1px solid rgb(238, 238, 238);
+	position: relative;
+	display: table;
+	table-layout: fixed;
+    vertical-align: middle;
+    width:100%;
+}
+
+.Design_Field_Required:before, .Design_FTextarea_Field.Design_Field_Required .Formfield-Label,
+.Design_FFile_Container.Design_Field_Required .Formfield-Label,.Design_FPhoto_Container.Design_Field_Required .Formfield-Label,
+.Design_FCheckbox_Field.Design_Field_Required .Formfield-Label, .Design_FHandwriting_Container.Design_Field_Required .Formfield-Label{
+	background-image: url(/mobilemode/images/isman_wev8.png);
+    background-repeat: no-repeat;
+    background-size: 7px 6px;
+    background-position: -1px center;
+}
+.Formfield-Wrap:before{
+	display: table-cell;
+    height: 100%;
+    content: "";
+    width: 5px;
+}
+
+.Design_FPhoto_Container .Formfield-Label, .Design_FTextarea_Field .Formfield-Label, .Design_FFile_Container .Formfield-Label,
+.Design_FCheckbox_Field .Formfield-Label, .Design_FHandwriting_Container .Formfield-Label{
+	padding-left:5px;
+}
+.Design_FPhoto_Container.Design_Field_Required .Formfield-Label, .Design_FTextarea_Field.Design_Field_Required .Formfield-Label, 
+.Design_FFile_Container.Design_Field_Required .Formfield-Label, .Design_FCheckbox_Field.Design_Field_Required .Formfield-Label,
+.Design_FHandwriting_Container.Design_Field_Required .Formfield-Label{
+	padding-left:7px;
+}
+.Design_Field_Required .Formfield-Label{
+	padding-left:2px;
+}
+.Formfield-Label {
+	background: url("/mobilemode/images/mec/line_wev8.png") no-repeat;
+	background-position: 66px center;
+	width: 67px;
+	color: rgb(102, 102, 102);
+	font-size: 14px;
+	padding-top: 5px;
+    padding-bottom: 5px;
+	display: table-cell;
+	vertical-align: middle;
+	box-sizing: border-box;
+	word-break: break-all;
+}
+
+
+.Formfield-Content {
+	display: table-cell;
+    vertical-align: middle;
+    padding-left:5px;
+}
+
+/*FSelect*/
+.Design_FSelect_Fielddom {
+	overflow: hidden;
+	background: url("/mobilemode/images/mec/arrow_right_wev8.png") no-repeat;
+	background-position: right center;
+}
+.MADFS_Left_Select{
+	width: 100%;
+	border: none;
+	height: 40px;
+	font-size: 14px;
+	background: transparent;
+	-webkit-appearance: none;
+}
+
+/*FCheckbox*/
+.Design_FCheckbox_Fieldlabel {
+	position: static;
+	height: 28px;
+	background: none;
+	width: auto;
+}
+.Design_FCheckbox_Fielddom {
+	padding-left: 4px;
+}
+
+/*FCheck*/
+.Design_FCheck_Fielddom {
+	height: 34px;
+}
+.toggle {
+	cursor: pointer;
+	font-family: "Helvetica Neue",sans-serif;
+	font-size: 17px;
+	line-height: 21px;
+	box-sizing: border-box;
+	margin: 4px 0px;
+	position: relative;
+	display: block;
+	width: 62px;
+	height: 26px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 20px;
+	-webkit-transition-duration: .2s;
+	-moz-transition-duration: .2s;
+	transition-duration: .2s;
+	-webkit-transition-property: background-color, border;
+	-moz-transition-property: background-color, border;
+	transition-property: background-color, border;
+}
+.toggle .toggle-handle {
+	box-sizing: border-box;
+	position: absolute;
+	top: 0px;
+	left: -1px;
+	z-index: 2;
+	width: 24px;
+	height: 24px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 100px;
+	-webkit-transition-duration: .2s;
+	-moz-transition-duration: .2s;
+	transition-duration: .2s;
+	-webkit-transition-property: -webkit-transform, border, width;
+	-moz-transition-property:    -moz-transform, border, width;
+	transition-property:         transform, border, width;
+}
+.toggle:before {
+	position: absolute;
+	top: 2px;
+	right: 9px;
+	font-size: 13px;
+	color: #999;
+	text-transform: uppercase;
+	content: "Off";
+}
+.toggle.active {
+	background-color: #5cb85c;
+	border: 1px solid #5cb85c;
+}
+.toggle.active .toggle-handle {
+	left: -8px;
+	border-color: #5cb85c;
+	-webkit-transform: translate3d(44px, 0, 0);
+	-ms-transform: translate3d(44px, 0, 0);
+	transform: translate3d(44px, 0, 0);
+}
+.toggle.active:before {
+	right: auto;
+	left: 11px;
+	color: #fff;
+	content: "On";
+}
+
+/*FButton*/
+.fButtons{
+	padding: 0px 15px;
+	overflow: hidden;
+}
+.fButton{
+	font-family: 'Microsoft Yahei', Arial;
+	font-size: 15px;
+	border-radius: 5px;
+	float: left;
+	margin-right: 8px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	cursor:pointer;
+}
+.fSubmitButton{
+	background: url("/mobilemode/images/emobile/edit_wev8.png") no-repeat;
+	background-size: 18px 18px;
+	background-position: 10px center;
+	background-color: #017afd;
+	color: #fff;
+	padding: 10px 15px 10px 34px;
+}
+.fResetButton{
+	background: url("/mobilemode/images/clear_wev8.png") no-repeat;
+	background-size: 22px 22px;
+	background-position: 10px center;
+	background-color: #ddd;
+	color: #333;
+	padding: 10px 15px 10px 34px;
+}
+.fManualButton{
+	background-color: #017afd;
+	color: #fff;
+	padding: 10px 24px 10px 24px;
+}
+.noFButton{
+	color: #bbb;
+	font-size: 14px;
+	font-family: 'Microsoft Yahei',Arial, Helvetica, sans-serif;
+	padding: 9px 5px 9px 22px;	
+}
+.fButtons.disabled .fButton{
+	background-color: #eee;
+	color: #444;
+}
+/*FTextarea*/
+.Design_FTextarea_Field{
+	position:relative;
+}
+.Design_FTextarea_Fieldlabel {
+	width:100%;
+	display:block;
+	position: static;
+	background: none;
+}
+.Design_FTextarea_Fielddom textarea {
+	font-size: 14px;
+	width: 100%;
+	border: 0px solid #f0f0f0;
+	background-color: #f0f0f0;
+	overflow: auto;
+	padding: 5px;
+	box-sizing: border-box;
+	height: 80px;
+}
+/*FInputText*/
+.Design_FInputText_Fielddom input {
+	width: 100%;
+	height: 40px;
+	border: none;
+	line-height: 40px;
+	padding: 0px;
+	font-size: 14px;
+}
+.Design_FInputText_Fielddom input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+
+.Design_FInputText_Fielddom input::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+}
+
+.Design_FInputText_Fielddom .Design_FInputText_FieldSub{
+	background: url("/mobilemode/images/mec/lego_icon_del.png") no-repeat;
+	background-position: center;
+	background-size: 13px 12px;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 5px;
+	right: 0;
+	display: none;
+}
+.Design_FInputText_Number_AddMinus{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width:60px;
+	height:40px;
+}
+.Design_FInputText_Number_AddMinus span{
+	display: inline-block;
+	position:relative;
+	width:30px;
+	height:40px;
+	border:0;
+}
+.Design_FInputText_Number_Add:before,.Design_FInputText_Number_Minus:before{
+	position:absolute;
+	display: block;
+	width:20px;
+	height:20px;
+	color:#aaa;
+	vertical-align: middle;
+	border:1px solid #aaa;
+	border-radius:20px;
+	left:5px;
+	top:10px;
+	text-align: center;
+}
+.Design_FInputText_Number_Add:before{
+	content:"+";
+}
+.Design_FInputText_Number_Minus:before{
+	content:"－";
+}
+/*FSound*/
+.Design_FSound_Container{
+	border-bottom: 1px solid #eee;
+}
+.Design_FSound_Fieldlabel{
+	/*border-bottom: 1px solid #eee;*/
+}
+.Design_FSound_Entry{
+	/*padding: 2px 0px 2px 20px;*/
+	height: 45px;
+	line-height: 45px;
+}
+.Design_FSound_Record{
+	background-image: url("/mobilemode/images/voice_wev8.png");
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	height: 100%;
+	padding-left: 40px;
+}
+.Design_FSound_Record.link_active{
+	background-color: #eee;
+}
+.Design_FSound_Text_Record{
+	font-size: 16px !important;
+	font-family: 'Microsoft Yahei', Arial;
+	color: #333;
+	height: 100%;
+	/*
+	line-height: normal;
+	margin-left: 25px;
+	margin-top: 7px;
+	*/
+}
+.Design_FSound_Delete{
+	background-image: url("/mobilemode/images/voice_wev8.png");
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	position:relative;
+	height: 100%;
+	padding-left: 40px;
+	padding-right: 45px;
+	display: none;
+}
+.Design_FSound_Text_Delete{
+	font-size: 16px !important;
+	font-family: 'Microsoft Yahei', Arial;
+	color: #0095cc;
+	height: 100%;
+}
+.Design_FSound_Delete_Btn{
+	background-image: url("/mobilemode/images/mec/lego_icon_del.png");
+	background-repeat: no-repeat;
+	background-position: 20px center;
+	width: 45px;
+	height: 100%;
+	position:absolute;
+	top:0px;
+	right:0px;
+	-webkit-tap-highlight-color:transparent;
+}
+
+/*FLbs*/
+.Design_LBS_Container{
+	border-bottom: 1px solid #eee;	
+}
+.Design_LBS_Fieldlabel{
+	/*border-bottom: 1px solid #eee;*/
+}
+.Design_LBS_Entry{
+	/*padding: 2px 0px 2px 20px;*/
+	height: 45px;
+	line-height: 45px;
+}
+.Design_LBS_Location{
+	background-image: url('/mobilemode/images/emobile/lbs_wev8.png');
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	background-position: 5px center;
+	font-size: 14px;
+	font-family: 'Microsoft Yahei', Arial;
+	color: rgb(102, 102, 102);
+	/*padding: 9px 1px 0px 21px;*/
+	padding-left: 30px;
+}
+.Design_LBS_ShowText .Design_LBS_Location{
+	display: none;
+}
+.Design_LBS_Location.link_active{
+	background-color: #eee;
+}
+.Design_LBS_Delete{
+	background-image: url('/mobilemode/images/emobile/lbsdelete_wev8.png');
+	background-repeat: no-repeat;
+	background-size: 21px 20px;
+	background-position: 5px center;
+	-webkit-tap-highlight-color:transparent;
+	position: relative;
+	height: 100%;
+	padding-left: 30px;
+	padding-right: 45px;
+	display: none;
+}
+.Design_LBS_ShowText .Design_LBS_Delete{
+	display: block;
+}
+.Design_LBS_Delete_Text{
+	font-size: 14px;
+	font-family: 'Microsoft Yahei', Arial;
+	color: #017afd;
+	height: 100%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.Design_LBS_Delete_Btn{
+	background-image: url("/mobilemode/images/mec/lego_icon_del.png");
+	background-repeat: no-repeat;
+	background-position: 20px center;
+	width: 45px;
+	height: 100%;
+	position:absolute;
+	top:0px;
+	right:0px;
+	-webkit-tap-highlight-color:transparent;
+}
+.Design_LBS_Delete_Btn_Readonly{
+	display: none;
+}
+
+/*FPhoto*/
+.Design_FPhoto_Container{
+	border-bottom: 1px solid rgb(238, 238, 238);
+	padding-top: 7px;
+	padding-bottom: 12px;
+	position:relative;
+}
+.Design_FPhoto_Fieldlabel{
+	width:100%;
+	display:block;
+	position: relative;
+	background-image: none;
+}
+
+.Design_FPhoto_EntryWrap{
+	padding: 2px 0px 3px 5px;
+	overflow: hidden;
+}
+.Design_FPhoto_EntryBorder{
+	padding-top: 5px;
+	position: relative;
+	float: left;
+}
+.Design_FPhoto_Entry{
+	margin-right: 8px;
+	background: url("/mobilemode/images/loading_wev8.gif") no-repeat center center;
+    background-size: 20px 20px;
+}
+.Design_FPhoto_Entry img{
+	width: 53px;
+	height: 53px;
+	border-radius:3px;
+	border: 1px solid #ccc;
+}
+.Design_FPhoto_DeleteBtn{
+	width: 16px;
+	height: 18px;
+	position: absolute;
+	top: 0px;
+	right: 2px;
+	background: url("/images/delete_wev8.gif") no-repeat;
+	background-position: -3px -3px;
+	z-index: 99999;
+}
+.Design_FPhoto_EntryBtn{
+	margin-right: 8px;
+	background: url("/mobilemode/images/emobile/photo_wev8.png") no-repeat;
+	background-size: 54px 54px;
+}
+.Design_FPhoto_EntryBtn .upLoadFile{
+	position: absolute;
+	font-size: 20px;
+	width: 61px;
+	height: 61px;
+	bottom: 0px;
+	left: 0px;
+	filter: alpha(opacity=0);
+	opacity: 0;
+	cursor: pointer;
+}
+/*FHandwriting*/
+.Design_FHandwriting_Container{
+	padding-top: 7px;
+	padding-bottom: 12px;
+	position:relative;
+}
+.Design_FHandwriting_Fieldlabel{
+	width:100%;
+	display:block;
+	position: relative;
+	background-image: none;
+}
+.Design_FHandwriting_Wrap{
+	position: relative;
+    padding: 5px 3px 5px 2px;
+}
+
+.Design_FHandwriting_Wrap div{
+	width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    border: 1px dotted #ddd;
+    text-align: center;
+    font-size: 16px;
+    color: #999;
+    display: none;
+}
+.Design_FHandwriting_Wrap img{
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+	border: 1px dotted #ddd;
+}
+.Design_FHandwriting_Wrap.empty > div{
+	display: block;
+}
+    
+.Design_FHandwriting_Wrap.empty > img{
+	display: none;   
+}
+/*FFile*/
+.Design_FFile_Container{
+	border-bottom: 1px solid rgb(238, 238, 238);
+	padding-top: 7px;
+	padding-bottom: 12px;
+	position:relative;
+}
+.Design_FFile_Fieldlabel{
+	position: relative;
+	background-image: none;
+	width:100%;
+	display:block;
+}
+
+.Design_FFile_EntryWrap{
+	padding: 2px 0px 3px 5px;
+	overflow: hidden;
+}
+.Design_FFile_EntryBorder{
+	padding-top: 5px;
+	padding-right:20px;
+	position: relative;
+}
+.Design_FFile_EntryBorder_View{
+	width:100%;
+}
+
+.Design_FFile_DeleteBtn{
+	width: 16px;
+	height: 20px;
+	position: absolute;
+	top: 10px;
+	right: 2px;
+	background: url("/mobilemode/images/mec/lego_icon_del.png") no-repeat;
+	background-position: 1px 2px;
+	background-size: 13px 12px;
+	cursor:pointer;
+	z-index: 99999;
+}
+.Design_FFile_EntryBtn{
+	margin-right: 8px;
+	background: url("/mobilemode/images/emobile/photo_wev8.png") no-repeat;
+	background-size: 54px 54px;
+}
+.Design_FFile_EntryBtn .upLoadFile{
+	position: absolute;
+	font-size: 20px;
+	width: 61px;
+	height: 61px;
+	bottom: 0px;
+	left: 0px;
+	filter: alpha(opacity=0);
+	opacity: 0;
+	cursor: pointer;
+}
+.Design_FFile_EntryBorder .Design_FFile_Entry td.icon{
+	width: 24px;
+}
+.Design_FFile_EntryBorder .Design_FFile_Entry td.icon img{
+	position:relative;
+	top:2px;
+	width:18px;
+	height:18px;
+}
+.Design_FFile_EntryBorder .Design_FFile_Entry td.name{
+	font-size: 10pt;
+	padding:5px 0;
+	font-weight: bold;
+	width: 100%;
+	overflow: hidden;
+	display: inline-block;
+	white-space: nowrap;
+	word-break: break-all;
+	text-overflow: ellipsis;
+}
+.Design_FFile_EntryBorder .Design_FFile_Entry td.size{
+	width: 60px;
+	text-align: right;
+	color: #777;
+	font-size: 10pt;
+	white-space: nowrap;
+	word-break: break-all;
+	overflow: hidden;
+	vertical-align: middle;
+}
+.Design_FFile_EntryBorder .Design_FFile_Entry td.flag{
+	width: 20px;
+}
+
+.Design_FFile_EntryBorder .Design_FFile_Entry td.flag span{
+	display:inline-block;
+	width: 20px;
+	height: 20px;
+	background: url("/mobilemode/images/mec/right.png") no-repeat;
+	background-position: 5px 4px;
+	background-size: 7px 14px;
+	cursor:pointer;
+	z-index: 99999;
+}
+.Design_FFile_EntryBorder .Design_FFile_Entry td{
+	border: none !important;
+}
+/**FBrowser*/
+.Design_FBrowserText_Fielddom{
+	position: relative;
+	padding-right: 0;
+}
+.Design_FBrowserText_Fielddom .browser-name-wrap{
+	padding-right: 65px;
+	height: 40px;
+	position: relative;
+}
+.Design_FBrowserText_Fielddom .browser-name{
+	font-size: 14px;
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	width: 100%;
+	text-overflow: ellipsis;
+	overflow:hidden; 
+	white-space:nowrap;
+}
+.Design_FBrowserText_Fielddom .browser-name-wrap .browser-clear-btn{
+	position: absolute;
+	right: 30px;
+	top: 0px;
+	width: 30px;
+	height: 40px;
+	background: url("/mobilemode/images/mec/lego_icon_del.png") no-repeat;
+	background-position: 5px center;
+	background-size: 13px 12px;
+	cursor: pointer;
+	display: none;
+}
+.Design_FBrowserText_Fielddom .browser-name-wrap.hasValue .browser-clear-btn{
+	display: block;
+}
+.Design_FBrowserText_Fielddom .browser-name-wrap.read-view{
+	padding-right:0px;
+}
+.Design_FBrowserText_Fielddom .browser-flag{
+	background-image: url("/mobilemode/images/field_browsebtn_wev8.png");
+	background-repeat: no-repeat;
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	top: 2px;
+	right: 0px;
+	cursor: pointer;
+}
+.field-view-span{
+	font-size: 14px;
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	width: 100%;
+	text-overflow: ellipsis;
+	overflow:hidden; 
+	white-space:nowrap;
+}
+.Design_FTextarea_Field  .field-view-span{
+	min-height:22px;
+	height: auto;
+	word-break: break-all;
+	word-wrap: break-word;
+	white-space: normal;
+	line-height: 22px;
+	padding: 5px;
+	box-sizing: border-box;
+	background-color: #f0f0f0;
+}

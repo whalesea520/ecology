@@ -1,0 +1,4 @@
+﻿/*! jQuery UI - v1.10.3 - 2013-05-03
+* http://jqueryui.com
+* Copyright 2013 jQuery Foundation and other contributors; Licensed MIT */
+jQuery(function(e){e.datepicker.regional.lb={closeText:"F盲erdeg",prevText:"Zr茅ck",nextText:"Weider",currentText:"Haut",monthNames:["Januar","Februar","M盲erz","Abr毛ll","Mee","Juni","Juli","August","September","Oktober","November","Dezember"],monthNamesShort:["Jan","Feb","M盲e","Abr","Mee","Jun","Jul","Aug","Sep","Okt","Nov","Dez"],dayNames:["Sonndeg","M茅indeg","D毛nschdeg","M毛ttwoch","Donneschdeg","Freideg","Samschdeg"],dayNamesShort:["Son","M茅i","D毛n","M毛t","Don","Fre","Sam"],dayNamesMin:["So","M茅","D毛","M毛","Do","Fr","Sa"],weekHeader:"W",dateFormat:"dd.mm.yy",firstDay:1,isRTL:!1,showMonthAfterYear:!1,yearSuffix:""},e.datepicker.setDefaults(e.datepicker.regional.lb)});

@@ -1,0 +1,20 @@
+SMAP
+_getremindinfo__jsp.java
+JSP
+*S JSP
+*F
++ 1 getRemindInfo.jsp
+wui/theme/ecology8/page/getRemindInfo.jsp
+*L
+65#1,115:35
+179#1:150,19
+1#1:168
+22#1:169,7
+24#1,20:176
+43#1:196
+45#1,2:197,2
+46#1:200
+49#1,14:201
+62#1:215
+180#1:216
+*E

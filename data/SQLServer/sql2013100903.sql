@@ -1,0 +1,28 @@
+CREATE TABLE workflow_penetrateLog(
+    id int IDENTITY(1,1) primary key CLUSTERED, 
+	requestid int,
+	workflowid int,
+	nodeid int,
+	logtype char(1),
+	operatedate char(10) ,
+	operatetime char(8),
+	operator int ,
+	remark text ,
+	clientip char(15) ,
+	operatortype int ,
+	destnodeid int ,
+	receivedPersons text,
+	showorder int ,
+	agentorbyagentid int,
+	agenttype char(1),
+	LOGID int ,
+	annexdocids varchar(2000),
+	requestLogId int ,
+	operatorDept int,
+	signdocids varchar(500),
+	signworkflowids varchar(500),
+	isMobile char(1),
+	HandWrittenSign int,
+	SpeechAttachment int
+)
+GO

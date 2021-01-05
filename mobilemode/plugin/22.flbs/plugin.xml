@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEC>
+	<id>FLbs</id>	<!-- id 插件唯一标识 -->
+	<text>128155</text>  <!-- LBS -->
+	<type>2</type>	<!-- 类型，方便对插件进行区分，目前已有：1.普通功能插件，2.表单插件 -->
+	<isEnabled>1</isEnabled>	<!-- 是否启用，1或者不填写为启用，0或者其他非1值为禁用 -->
+	<order>22</order>	<!-- 插件显示顺序，值越小则显示越靠前，不填写或者无此标签将为整数的最大值 -->
+	
+	<!-- 插件设计信息配置 -->
+	<design>
+		<unique>0</unique> <!-- 是否唯一，如果值为1则在自定义页面设计时一个页面最多只能添加一个这种控件，不为1或者不填写此属性则没有此限制 -->
+		<resources>	<!-- 依赖资源 -->
+			<resource type="js">/mobilemode/js/mec/handler/form/FLbs_wev8.js?v=1</resource>
+			<resource type="css">/mobilemode/css/mec/handler/form/FLbs_wev8.css?v=201512301104</resource>
+		</resources>
+	</design>
+	
+	<!-- 插件运行信息配置 -->
+	<run java="com.weaver.formmodel.mobile.mec.handler.form.FLbs">
+		<resources>	<!-- 依赖资源 -->
+			<resource type="js">/mobilemode/js/mec/run/form/FLbs_wev8.js?v=2016122301</resource>
+		</resources>
+	</run>
+	
+	<!-- 内容模板 -->
+	<contentTemplate>
+		<edit>
+			<![CDATA[
+				<div class="Design_LBS_Container ${Design_Field_Required}" id="div${theId}">
+					<div class="Design_LBS_Fieldlabel">${fieldlabel}</div>
+					<div class="Design_LBS_Entry ${hasvalue}">
+						<div class="Design_LBS_Location" id="lbsLocation${theId}" mecid="${theId}">${lbslocation}</div>
+						<div class="Design_LBS_Delete" id="lbsDelete${theId}">
+							<div class="Design_LBS_Delete_Text" id="lbsText${theId}" gpsstr="${value}">${value}</div>
+							<div class="Design_LBS_Delete_Btn" id="deleteBtn${theId}"></div>
+						</div>
+						<input type="hidden" name="fieldname_${fieldname}" id="lbsField${theId}" isLbs="isLbs" value="${value}" require="${required}"/>
+					</div>
+				</div>
+			]]>
+		</edit>
+		<view>
+			<![CDATA[
+				<div class="Design_LBS_Container ${Design_Field_Required}" id="div${theId}">
+					<div class="Design_LBS_Fieldlabel">${fieldlabel}</div>
+					<div class="Design_LBS_Entry ${hasvalue}">
+						<div class="Design_LBS_Location" id="lbsLocation${theId}" mecid="${theId}">${lbslocation}</div>
+						<div class="Design_LBS_Delete" id="lbsDelete${theId}">
+							<div class="Design_LBS_Delete_Text" id="lbsText${theId}">${value}</div>
+							<div class="Design_LBS_Delete_Btn Design_LBS_Delete_Btn_Readonly" id="deleteBtn${theId}"></div>
+						</div>
+						<input type="hidden" name="fieldname_${fieldname}" id="lbsField${theId}" isLbs="isLbs" value="${value}" require="${required}"/>
+					</div>
+				</div>
+			]]>
+		</view>
+	</contentTemplate>
+</MEC>

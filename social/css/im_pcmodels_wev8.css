@@ -1,0 +1,453 @@
+* {
+    font-family:'Microsoft YaHei';
+}
+.rgba06 {
+    background: rgba(3,3,3,0.6);
+    filter: alpha(opacity=60); 
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)"; 
+    opacity: 0.6;
+}
+.headtoolbar {
+    //border: 1px solid red;
+    height: 76px;
+    color: #fff;
+}
+.headtoolbar img{
+    max-width: 20px;
+    max-height: 20px;
+}
+.headtoolbar .toolbar-left {    
+    width: 92px;
+    height: 70px;
+    //border: 1px solid white;
+    display: inline-block;
+    margin: 0px 0;
+}
+.headtoolbar .toolbar-left .head80{
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 50%;
+    height: 65px;
+    margin: 2px 6px 6px 14px;
+    /*border: 2px solid #8CCCE3;*/
+    cursor: pointer;
+}
+.headtoolbar .toolbar-right { 
+    display: inline-block;
+    margin: 0px 0;
+    height: 72px;
+    //border: 1px solid white;
+    /* vertical-align: top; */
+    position: absolute;
+    right: 0;
+    left: 83px;
+}
+.headtoolbar .toolbar-right>div{
+    height: 33%;    
+    /*display: flex;*/
+    /*align-items: center;*/
+    padding-left: 8px;
+    /*color: #eee;*/
+}
+
+.headtoolbar .toolbar-right ._userName
+{
+    margin-left: 2px;
+    letter-spacing: 1px;
+    /*text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 56px;*/
+    cursor: default;
+}
+
+.headtoolbar .toolbar-right ._userName>div {
+    cursor: pointer;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.headtoolbar .toolbar-right ._userName .edUserStatus
+{
+    vertical-align: middle;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background: url("/social/images/userStatus/top/online.png") no-repeat center center;
+}
+
+.headtoolbar .toolbar-right ._userName .edPersonInfo{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 43px;
+}
+
+.headtoolbar .toolbar-right ._userOrg {
+    margin-left: 2px;
+    letter-spacing: 1px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 82%;
+    cursor: default;
+}
+
+.headtoolbar .toolbar-right .nav-group-box{
+    position: absolute;
+    border: 1px solid #A2E4FF;
+    background: #5cb5d8;
+    box-shadow: 0px 0px 16px -6px #806a58;
+    height: auto;
+    right: 0;
+    left: 0;
+}
+.headtoolbar .toolbar-right .nav-group nav ul li{
+    list-style: none;
+    display: inline-block;
+    height: 100%;
+    /*line-height: 28px;*/
+    position: relative;
+    cursor: pointer;
+}
+
+.headtoolbar .toolbar-right .nav-group nav ul li .nav-icon{
+    display: inline-block;
+    vertical-align: middle;
+}
+.headtoolbar .toolbar-right .nav-group nav ul li.itemDrops {
+    margin: 6px 0px;
+}
+.headtoolbar .toolbar-right .nav-group nav ul li.itemHidden {
+    display: none;
+}
+.headtoolbar .toolbar-right .nav-group nav ul li.arrowDown {
+    width: 12px;
+    clear: both;
+}
+.headtoolbar .toolbar-right .nav-group nav ul li .nav-icon .dot{
+    position: absolute;
+    top: 3px;
+    left: 14px;
+    display: none;
+    width: 4px;
+    height: 4px;
+    background: red;
+    border-radius: 50%;
+    border: 1px solid;
+}
+.headtoolbar .justify{text-align: left !important;text-align-last: left !important;}
+.headtoolbar .toolbar-right .nav-group nav ul li .nav-labe{line-height: 20px;}
+.headtoolbar .toolbar-right .nav-group nav{height: 100%;width: 100%;}
+.headtoolbar .toolbar-right .nav-group nav ul {display: inline-block;min-width: 180px;max-width: 187px;text-align: justify;text-align-last: justify;}
+.footertoolbar {
+    //border: 1px solid red;
+    height: 30px;
+}
+.footertoolbar img{
+    max-width: 20px;
+    max-height: 20px;
+}
+.footertoolbar nav {    
+    display: inline-block;
+    width: 84%;
+    margin-left: 8px;
+}
+
+.footertoolbar nav ul li {
+    list-style: none;
+    display: inline-block;
+    cursor: pointer;
+    width: 25px;
+    text-align: center;
+}
+
+.footertoolbar nav,
+.footertoolbar .moreBtn,
+.footertoolbar nav ul,
+.footertoolbar nav ul li{height: 100%;}
+
+.footertoolbar nav ul li span {
+    display: inline-block;
+    height: 100%;
+    line-height: 43px;
+}
+
+.footertoolbar .moreBtn { 
+    width: 35px;
+    text-align: center;
+    float: right;
+    line-height: 44px;
+    cursor: pointer;
+}
+
+#pc-appmanager {
+    font-family:'Microsoft YaHei';
+    font-size:12px;
+    color: rgb(62, 67, 80);
+    height: 360px;
+}
+#pc-appmanager .title{
+    background-color:#f7f7f7;
+    height: 40px;
+    line-height: 40px;
+}
+
+#pc-appmanager .movebtn {
+    display:inline-block;
+    width:15px;height:15px;
+    background:url('/CRM/images/move_wev8.png') 0 0 no-repeat;
+    cursor:pointer;
+}
+#pc-appmanager .item {
+    position: relative;
+    background: #fff;
+}
+
+#pc-appmanager .itemico {
+    text-align: center;
+}
+#pc-appmanager .itembtnblock {
+    position:absolute;right:60px;top:16px;display:none;
+}
+#pc-appmanager .itemicoblock {
+    width: 30px;
+    height: 30px;
+    line-height: 36px;
+    border-radius: 15px;
+    background: #5CB3D7;
+    text-align: center;
+    display: inline-block;
+}
+#pc-appmanager .inrsplitline {
+    height: 1px!important;
+    margin: 0 20px;
+    background: #e4e4e4;
+}
+
+#pc-appmanager .btnStyleBlue {
+    background: #30b5ff;
+    color: #fff;
+    width: 75px;
+    height: 24px;
+    text-align: center;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+
+#pc-appmanager .margin-left-12{
+    margin-left: 12px;
+}
+
+#pc-signitemblock{
+    width: 65px;
+    height: 20px;
+    position: fixed;
+    z-index: 50;
+    right: 24px;
+    top: 40px;
+    color: #fff;
+    cursor: pointer;
+}
+#pc-signitemblock .icoblock {
+    text-align: right;
+    display: inline-block;
+    height: 18px;
+    vertical-align: top;
+}
+#pc-signitemblock .icoblockimg {
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+}
+#pc-signitemblock .signin {
+    background: url("/social/images/pcmodels/sign_in_wev8.png") no-repeat left center;
+}
+#pc-signitemblock .signin:hover{
+    background: url("/social/images/pcmodels/sign_in_h_wev8.png") no-repeat left center;
+}
+#pc-signitemblock .signout {
+    background: url("/social/images/pcmodels/sign_out_wev8.png") no-repeat left center;
+}
+#pc-signitemblock .signout:hover{
+    background: url("/social/images/pcmodels/sign_out_h_wev8.png") no-repeat left center;
+}
+#pc-accountswtichblock{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    z-index: 999;
+    /*right: 114px;
+    top: 40px;*/
+    color: #fff;
+    cursor: pointer;
+}
+
+#pc-accountswtichblock .icoblock{
+    text-align: center;
+    display: block;
+    height: 18px;
+    background: url("/social/images/pcmodels/acs_ico_wev8.png") no-repeat center center;
+}
+#pc-accountswtichblock .icoblock:hover{
+    background: url("/social/images/pcmodels/acs_ico_h_wev8.png") no-repeat center center;
+}
+#pc-skinitemblock,
+#pc-skinitemblock .itemblock{
+    width: 26px;
+    height: 26px;
+    color: #fff;
+    cursor: pointer;
+    float: left;
+}
+
+#pc-skinitemblock .itemblock{
+    background: url("/social/images/pcmodels/skin_wev8.png") no-repeat left center;
+    background-size: 16px;
+}
+
+#pc-skinitemblock .itemblock:hover{
+    background: url("/social/images/pcmodels/skin_h_wev8.png") no-repeat left center;
+    background-size: 16px;
+}
+
+#pc-skinitemblock .colorPane{
+    width: 140px;
+    height: 35px;
+    margin-top: 24px;
+    margin-left: -82px;
+    background: #fff;
+    box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.25);
+    padding: 3px;
+    border-radius: 3px;
+    display: none;
+    position: absolute;
+    z-index: 1000;
+}
+
+#pc-skinitemblock .colorPane > div{
+    float: left;
+    width: 35px;
+    height: 35px;
+}
+
+#pc-skinitemblock .colorPane .default{background: #5BB4D8;}
+#pc-skinitemblock .colorPane .green{background: #31A66B;}
+#pc-skinitemblock .colorPane .yellow{background: #E6A872;}
+#pc-skinitemblock .colorPane .pink{background: #F78EA7;}
+#pc-skinitemblock .colorPane .arrow{
+    position: absolute;
+    margin-top: -7px;
+    left: 81px;
+    width: 0px;
+    height: 0px;
+    border-left: 10px solid transparent;
+    border-bottom: 7px solid #fff;
+    border-right: 10px solid transparent;
+}
+
+#pc-skinitemblock .colorPane .selected{
+    background-image: url("/social/images/pcmodels/skin_sel_wev8.png");
+    background-position: 20px 1px;
+    background-repeat: no-repeat;
+}
+
+#pc-accountswtichblock .accoutList {
+    display:none;
+    padding-top:5px;
+    position:absolute;
+    top:30px;
+    z-index:100;
+    padding-bottom: 5px;
+}
+
+#pc-accountswtichblock .accountItem {
+    height:65px;
+    cursor:pointer;
+}
+
+#pc-accountswtichblock .accountItem .accountIcon {
+    width:20px;
+    height:20px;
+    right:5px;
+    position: absolute;
+    margin-top:-39px;
+}
+
+#pc-accountswtichblock .accountItem .accountText {
+    width:185px;
+    height: 56px;
+    margin-top:9px;
+    padding-left:5px;
+    line-height:28px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
+#pc-accountswtichblock .accoutListBox {
+    background: #ffffff;
+    border:1px solid #d4d4d4;
+    width:200px;
+    padding:0 5px;
+    top: -4px;
+    left: -96px;
+    position: absolute;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius:3px;
+}
+
+#pc-personeditblock {
+    box-shadow: 0 3px 9px rgba(0,0,0,0.25);
+    position: absolute;
+    z-index: 1000;
+    right: 281px;
+    background: #fff;
+    height: 260px;
+    width: 250px;
+    text-align: center;
+}
+
+#pc-personeditblock .top {
+    height: 50%;
+    padding-top: 35px;
+}
+#pc-personeditblock img {
+    cursor: pointer;
+    vertical-align: middle;
+}
+#pc-personeditblock .top>img{
+    border-radius: 50%;
+    height: 90%;
+}
+
+#pc-personeditblock .hoverBtn {
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    line-height: 138px;
+    color: #fff;
+    background-image: url('/social/images/pcmodels/per_head_edit_wev8.png');
+    background-repeat: no-repeat;
+    background-position: center 39px;
+    letter-spacing: 1px;
+    display: none;
+}
+#pc-personeditblock .middle {
+    font-size: 22px;
+    height: calc(25% - 13px);
+    letter-spacing: 1px;
+}
+
+#pc-personeditblock .bottom {
+    height: 25%;
+    display: block;
+}
+#pc-personeditblock .bottom>input[type=text] {
+    width: 80%;
+}
+#pc-personeditblock .bottom>input[type=text]:focus {
+    outline: none;
+    border: 1px solid #2db7f5; 
+}

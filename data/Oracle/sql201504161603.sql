@@ -1,0 +1,2 @@
+drop PROCEDURE Doc_DirAcl_InsertFromOldTable
+/

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> ZTREE DEMO - drag & drop</TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../../css/demo.css" type="text/css">
+	<link rel="stylesheet" href="../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="../../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ztree.core-3.0.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ztree.excheck-3.0.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ztree.exedit-3.0.js"></script>
+	<SCRIPT LANGUAGE="JavaScript">
+		<!--
+		var setting = {
+			edit: {
+				enable: true,
+				showRemoveBtn: false,
+				showRenameBtn: false
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			callback: {
+				beforeDrag: beforeDrag,
+				beforeDrop: beforeDrop
+			}
+		};
+
+		var zNodes =[
+			{ id:1, pId:0, name:"闅忔剰鎷栨嫿 鐖?, open:true},
+			{ id:11, pId:1, name:"闅忔剰鎷栨嫿 瀛?1"},
+			{ id:12, pId:1, name:"闅忔剰鎷栨嫿 瀛?2", open:true},
+			{ id:121, pId:12, name:"闅忔剰鎷栨嫿 瀛?1"},
+			{ id:122, pId:12, name:"闅忔剰鎷栨嫿 瀛?2"},
+			{ id:123, pId:12, name:"闅忔剰鎷栨嫿 瀛?3"},
+			{ id:13, pId:1, name:"绂佹鎷栨嫿 瀛?1", open:true, drag:false},
+			{ id:131, pId:13, name:"绂佹鎷栨嫿 瀛?1", drag:false},
+			{ id:132, pId:13, name:"绂佹鎷栨嫿 瀛?2", drag:false},
+			{ id:132, pId:13, name:"闅忔剰鎷栨嫿 瀛?4"},
+			{ id:2, pId:0, name:"闅忔剰鎷栨嫿 鐖?3", open:true},
+			{ id:21, pId:2, name:"闅忔剰鎷栨嫿 瀛?3"},
+			{ id:22, pId:2, name:"绂佹鎷栨嫿鍒版垜韬笂", open:true, drop:false},
+			{ id:221, pId:22, name:"闅忔剰鎷栨嫿 瀛?5"},
+			{ id:222, pId:22, name:"闅忔剰鎷栨嫿 瀛?6"},
+			{ id:223, pId:22, name:"闅忔剰鎷栨嫿 瀛?7"},
+			{ id:23, pId:2, name:"闅忔剰鎷栨嫿 瀛?4"}
+		];
+
+		function beforeDrag(treeId, treeNodes) {
+			for (var i=0,l=treeNodes.length; i<l; i++) {
+				if (treeNodes[i].drag === false) {
+					return false;
+				}
+			}
+			return true;
+		}
+		function beforeDrop(treeId, treeNodes, targetNode, moveType) {
+			return targetNode ? targetNode.drop !== false : true;
+		}
+		
+		function setCheck() {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			isCopy = $("#copy").attr("checked"),
+			isMove = $("#move").attr("checked"),
+			prev = $("#prev").attr("checked"),
+			inner = $("#inner").attr("checked"),
+			next = $("#next").attr("checked");
+			zTree.setting.edit.drag.isCopy = isCopy;
+			zTree.setting.edit.drag.isMove = isMove;
+			showCode(1, ['setting.edit.drag.isCopy = ' + isCopy, 'setting.edit.drag.isMove = ' + isMove]);
+
+			zTree.setting.edit.drag.prev = prev;
+			zTree.setting.edit.drag.inner = inner;
+			zTree.setting.edit.drag.next = next;
+			showCode(2, ['setting.edit.drag.prev = ' + prev, 'setting.edit.drag.inner = ' + inner, 'setting.edit.drag.next = ' + next]);
+		}
+		function showCode(id, str) {
+			var code = $("#code" + id);
+			code.empty();
+			for (var i=0, l=str.length; i<l; i++) {
+				code.append("<li>"+str[i]+"</li>");
+			}
+		}
+		
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			setCheck();
+			$("#copy").bind("change", setCheck);
+			$("#move").bind("change", setCheck);
+			$("#prev").bind("change", setCheck);
+			$("#inner").bind("change", setCheck);
+			$("#next").bind("change", setCheck);
+		});
+		//-->
+	</SCRIPT>
+</HEAD>
+
+<BODY>
+<h1>鎷栨嫿鑺傜偣鍩烘湰鎺у埗</h1>
+<h6>[ 鏂囦欢璺緞锛歞emo/exedit/drag.html ]</h6>
+<div class="content_wrap">
+	<div class="zTreeDemoBackground left">
+		<ul id="treeDemo" class="ztree"></ul>
+	</div>
+	<div class="right">
+		<ul class="info">
+			<li class="title"><h2>1銆乻etting 閰嶇疆淇℃伅璇存槑</h2>
+				<ul class="list">
+				<li>姝?Demo 浠呬粠鍔熻兘涓婃紨绀哄疄鐜版嫋鎷界殑鍩烘湰鏂规硶鍜岄厤缃弬鏁?/li>
+				<li class="highlight_red">1)銆佷娇鐢?鎷栨嫿鍔熻兘锛屽繀椤昏缃?setting.edit 涓殑鍚勪釜灞炴€э紝璇︾粏璇峰弬瑙?API 鏂囨。涓殑鐩稿叧鍐呭</li>
+				<li class="highlight_red">2)銆佷娇鐢?鎷栨嫿鍔熻兘鐨勪簨浠跺洖璋冨嚱鏁帮紝蹇呴』璁剧疆 setting.callback.beforeDrag / onDrag / beforeDrop / onDrop 绛夊睘鎬э紝璇︾粏璇峰弬瑙?API 鏂囨。涓殑鐩稿叧鍐呭</li>
+				<li><p>鍩烘湰鎷栨嫿璁剧疆锛?br/>
+						<input type="checkbox" id="copy" class="checkbox first" checked /><span>鍏佽澶嶅埗</span>
+						<input type="checkbox" id="move" class="checkbox " checked /><span>鍏佽绉诲姩</span><br/>
+						<ul id="code1" class="log" style="height:42px;"></ul></p>
+				</li>
+				<li><p>鎷栨嫿鐩稿浣嶇疆璁剧疆锛?br/>
+						<input type="checkbox" id="prev" class="checkbox first" checked /><span>prev</span>
+						<input type="checkbox" id="inner" class="checkbox " checked /><span>inner</span>
+						<input type="checkbox" id="next" class="checkbox " checked /><span>next</span><br/>
+						<ul id="code2" class="log" style="height:65px;"></ul></p>
+				</li>
+				</ul>
+			</li>
+			<li class="title"><h2>2銆乼reeNode 鑺傜偣鏁版嵁璇存槑</h2>
+				<ul class="list">
+				<li>瀵?鑺傜偣鏁版嵁 娌℃湁鐗规畩瑕佹眰锛岀敤鎴峰彲浠ユ牴鎹嚜宸辩殑闇€姹傛坊鍔犺嚜瀹氫箟灞炴€?/li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+</BODY>
+</HTML>

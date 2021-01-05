@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<id>19</id>  <!--只能是唯一的英文字母-->
+	<title>股票元素</title>
+	<titleEN>Stock</titleEN>
+	<desc>可以查看设定的股票信息</desc>
+	<icon>resource/image/19_wev8.gif</icon>
+	<linkMode>1</linkMode>
+	<loginView>1</loginView>
+	<type>2</type>
+	<perpage>-1</perpage>
+	<private>
+		<jsList> 
+		</jsList>
+	</private>
+	<public>
+		<jsIdList>  
+		</jsIdList>
+		<cssIdList>
+		</cssIdList>
+	</public>
+	<view>
+		<url>/page/element/19/Stock.jsp</url>
+		<method/>
+	</view>
+	<setting>
+		<url>/page/element/compatible/setting.jsp</url>
+		<method>getStockSettingStr</method>
+	</setting>
+	<more>
+		<url>#</url>
+		<method/>
+	</more>
+	<operation>/page/element/compatible/operation.jsp</operation>
+</root>

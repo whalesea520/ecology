@@ -1,0 +1,36 @@
+/*顶部按钮*/
+#leftSlidePage{
+	position:fixed;
+	top: 0%;
+	left: -70%;
+	width: 70%;
+	height:100%;
+	background-color:#2e3641;
+	z-index:1002;
+	overflow: hidden;
+}
+#rightSlidePage{
+	position:fixed;
+	top: 0%;
+	right: -70%;
+	width: 70%;
+	height:100%;
+	background-color:#2e3641;
+	z-index:1002;
+	overflow: hidden;
+}
+.slidePage .sildePageEntry{
+	height: 50px;
+	margin: 0 10px 0 30px;
+	padding: 0 0 10px 0;
+	font-size: 18px;
+	line-height: 60px;
+	color:#ffffff; 
+	font-weight:normal; 
+	font-family:'Microsoft Yahei', Arial;
+	border-bottom: 1px solid 343d49;
+}
+.slidePage .sildePageEntry img{
+	vertical-align:middle; padding-right:20px;
+	width: 30px;
+}

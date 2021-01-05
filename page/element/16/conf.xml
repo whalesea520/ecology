@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<id>16</id>  <!--只能是唯一的英文字母-->
+	<title>我的邮件</title>
+	<titleEN>My E-mail</titleEN>	
+	<desc>我的邮件</desc>
+	<icon>resource/image/16_wev8.gif</icon>
+	<linkMode>2</linkMode>
+	<loginView>0</loginView>
+	<type>2</type>
+	<perpage>5</perpage>
+	<private>
+		<jsList> 
+		</jsList>
+	</private>
+	<public>
+		<jsIdList>  
+		</jsIdList>
+		<cssIdList>
+		</cssIdList>
+	</public>
+	<view>
+		<url>/page/element/16/Mail.jsp</url>
+	</view>
+	<setting>
+		<url>/page/element/compatible/setting.jsp</url>
+		<method>getMailSettingStr</method>
+	</setting>
+	<more>
+		<url>/page/element/compatible/more.jsp</url>
+		<method>getMyMail</method>
+	</more>
+	<operation>/page/element/compatible/operation.jsp</operation>
+</root>

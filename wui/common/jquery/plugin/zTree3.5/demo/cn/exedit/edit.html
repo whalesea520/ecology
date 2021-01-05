@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> ZTREE DEMO - edit</TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../../../css/demo.css" type="text/css">
+	<link rel="stylesheet" href="../../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="../../../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../../js/jquery.ztree.core-3.5.js"></script>
+	<script type="text/javascript" src="../../../js/jquery.ztree.excheck-3.5.js"></script>
+	<script type="text/javascript" src="../../../js/jquery.ztree.exedit-3.5.js"></script>
+	<SCRIPT type="text/javascript">
+		<!--
+		var setting = {
+			edit: {
+				enable: true
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			callback: {
+				beforeDrag: beforeDrag
+			}
+		};
+
+		var zNodes =[
+			{ id:1, pId:0, name:"鐖惰妭鐐?1", open:true},
+			{ id:11, pId:1, name:"鍙跺瓙鑺傜偣 1-1"},
+			{ id:12, pId:1, name:"鍙跺瓙鑺傜偣 1-2"},
+			{ id:13, pId:1, name:"鍙跺瓙鑺傜偣 1-3"},
+			{ id:2, pId:0, name:"鐖惰妭鐐?2", open:true},
+			{ id:21, pId:2, name:"鍙跺瓙鑺傜偣 2-1"},
+			{ id:22, pId:2, name:"鍙跺瓙鑺傜偣 2-2"},
+			{ id:23, pId:2, name:"鍙跺瓙鑺傜偣 2-3"},
+			{ id:3, pId:0, name:"鐖惰妭鐐?3", open:true},
+			{ id:31, pId:3, name:"鍙跺瓙鑺傜偣 3-1"},
+			{ id:32, pId:3, name:"鍙跺瓙鑺傜偣 3-2"},
+			{ id:33, pId:3, name:"鍙跺瓙鑺傜偣 3-3"}
+		];
+
+		function beforeDrag(treeId, treeNodes) {
+			return false;
+		}
+		
+		function setEdit() {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			remove = $("#remove").attr("checked"),
+			rename = $("#rename").attr("checked"),
+			removeTitle = $.trim($("#removeTitle").get(0).value),
+			renameTitle = $.trim($("#renameTitle").get(0).value);
+			zTree.setting.edit.showRemoveBtn = remove;
+			zTree.setting.edit.showRenameBtn = rename;
+			zTree.setting.edit.removeTitle = removeTitle;
+			zTree.setting.edit.renameTitle = renameTitle;
+			showCode(['setting.edit.showRemoveBtn = ' + remove, 'setting.edit.showRenameBtn = ' + rename,
+				'setting.edit.removeTitle = "' + removeTitle +'"', 'setting.edit.renameTitle = "' + renameTitle + '"']);
+		}
+		function showCode(str) {
+			var code = $("#code");
+			code.empty();
+			for (var i=0, l=str.length; i<l; i++) {
+				code.append("<li>"+str[i]+"</li>");
+			}
+		}
+		
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			setEdit();
+			$("#remove").bind("change", setEdit);
+			$("#rename").bind("change", setEdit);
+			$("#removeTitle").bind("propertychange", setEdit)
+			.bind("input", setEdit);
+			$("#renameTitle").bind("propertychange", setEdit)
+			.bind("input", setEdit);
+		});
+		//-->
+	</SCRIPT>
+</HEAD>
+
+<BODY>
+<h1>鍩烘湰 澧?/ 鍒?/ 鏀?鑺傜偣</h1>
+<h6>[ 鏂囦欢璺緞: exedit/edit.html ]</h6>
+<div class="content_wrap">
+	<div class="zTreeDemoBackground left">
+		<ul id="treeDemo" class="ztree"></ul>
+	</div>
+	<div class="right">
+		<ul class="info">
+			<li class="title"><h2>1銆乻etting 閰嶇疆淇℃伅璇存槑</h2>
+				<ul class="list">
+				<li>姝?Demo 浠呬粠鍔熻兘涓婃紨绀虹紪杈戣妭鐐圭殑鍩烘湰鏂规硶鍜岄厤缃弬鏁?/li>
+				<li class="highlight_red">1)銆佷娇鐢?缂栬緫鍔熻兘锛屽繀椤昏缃?setting.edit 涓殑鍚勪釜灞炴€э紝璇︾粏璇峰弬瑙?API 鏂囨。涓殑鐩稿叧鍐呭</li>
+				<li class="highlight_red">2)銆佷娇鐢?缂栬緫鍔熻兘鐨勪簨浠跺洖璋冨嚱鏁帮紝蹇呴』璁剧疆 setting.callback.beforeRemove / onRemove / beforeRename / onRename 绛夊睘鎬э紝璇︾粏璇峰弬瑙?API 鏂囨。涓殑鐩稿叧鍐呭</li>
+				<li class="highlight_red">3)銆亃Tree 涓嶆彁渚涢粯璁ょ殑澧炲姞鎸夐挳锛屽闇€瀹炵幇璇峰埄鐢ㄨ嚜瀹氫箟鎺т欢鐨勬柟娉?addHoverDom / removeHoverDom 锛岃缁嗚鍙傝 API 鏂囨。涓殑鐩稿叧鍐呭锛涘彟澶栦篃鍙互鍙傝€?"楂樼骇 澧?/ 鍒?/ 鏀?鑺傜偣" 鐨?Demo</li>
+				<li><p>鍩烘湰缂栬緫鎸夐挳璁剧疆锛?br/>
+						<input type="checkbox" id="remove" class="checkbox first" checked /><span>鏄剧ず鍒犻櫎鎸夐挳</span>
+						<input type="checkbox" id="rename" class="checkbox " checked /><span>鏄剧ず缂栬緫鎸夐挳</span><br/>
+						remove 鎸夐挳鐨?title: <input type="text" id="removeTitle" value="remove" /><br/>
+						rename 鎸夐挳鐨?title: <input type="text" id="renameTitle" value="rename" />
+						<ul id="code" class="log" style="height:85px;"></ul></p>
+				</li>
+				</ul>
+			</li>
+			<li class="title"><h2>2銆乼reeNode 鑺傜偣鏁版嵁璇存槑</h2>
+				<ul class="list">
+				<li>瀵?鑺傜偣鏁版嵁 娌℃湁鐗规畩瑕佹眰锛岀敤鎴峰彲浠ユ牴鎹嚜宸辩殑闇€姹傛坊鍔犺嚜瀹氫箟灞炴€?/li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+</BODY>
+</HTML>

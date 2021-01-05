@@ -1,0 +1,2 @@
+ALTER TABLE ldapset ALTER COLUMN ldaparea VARCHAR(4000)
+GO

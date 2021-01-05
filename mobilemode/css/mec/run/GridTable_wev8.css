@@ -1,0 +1,602 @@
+/** List **/
+.listContainer{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	border-top: 1px solid #ddd;
+}
+.listContainer li{
+	border-bottom: 1px solid #ddd;
+	overflow: hidden;
+	padding: 0px 10px 0px 0px !important;
+	background: #fff;
+	line-height: 1.3;
+	position: relative;
+}
+
+.listContainer li > table{
+	width: 100%;
+}
+.listContainer li .imgPart{
+	width: 80px;
+	padding: 10px 0px 10px 10px;
+	font-family: 'Microsoft Yahei', Arial, sans-serif;
+	vertical-align: top;
+}
+.listContainer li .imgPart img{
+	border: 1px solid #eee;
+}
+.listContainer li .fieldPart{
+	padding: 10px 20px 10px 10px;
+	vertical-align: top;
+	background: url("/mobilemode/images/mec/arrow_right_wev8.png") no-repeat;
+	background-position: right center;
+}
+
+.listContainer li .fieldPart .titleRowWrap{
+	font-family: 'Microsoft Yahei', Arial, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	padding-top: 0px;
+	color: #333;
+}
+.listContainer li .fieldPart .rowWrap{
+	font-family: 'Microsoft Yahei', Arial, sans-serif;
+	font-size: 12px;
+	margin-top: 5px;
+	line-height: 18px;
+	color: #333;
+}
+.listContainer li .fieldPart .rowWrap .colWrap{
+	display: inline;
+	margin-right: 3px;
+}
+.moreData_btn{
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	text-align: center;
+	background: transparent;
+	color: #017afd;
+	border-radius:5px;
+	margin: 6px 8px;
+	display: block;
+	text-decoration: none;
+}
+.moreData_btn.click{
+	background-color: #aaa;
+	color: #fff;
+}
+.ui-input-search{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.ui-input-search input{
+	font-family: 'Microsoft Yahei', Arial, sans-serif;	
+	line-height: normal;
+	min-height: none;
+	font-size: 15px;
+}
+
+.gtSearch{
+	position: relative;
+	background-color: #C8C8CD;
+	height: 40px;
+	overflow: hidden;
+	/*
+	top: 43px;
+	left: 0px;
+	z-index: 2001;
+	width: 100%;*/
+}
+.gtSearch .gtHeader{
+	border: none;
+	padding-left: 24px;
+	position: absolute;
+	top: 6px;
+	bottom: 6px;
+	left: 8px;
+	right: 8px;	
+	overflow: hidden;
+	background-color: #fff;
+	border-radius: 5px;
+}
+.gtSearch .advancedSearch{
+	height: 100%;
+	width: 60px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background-color: rgba(255,255,255,0);
+	z-index: 1000;
+}
+.gtSearch .advancedSearch ul{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	float: right;
+	margin-right: 6px;
+	margin-top: 8px;
+}
+.gtSearch .advancedSearch li{
+	margin-bottom: 2px;
+	overflow: hidden;
+}
+.gtSearch .advancedSearch li div{
+	background: #a9a9a9;
+	float: left;
+}
+.gtSearch .advancedSearch .point{
+	height: 3px;
+	width: 3px;
+	border-radius: 2.25em;
+	display: none;
+	
+}
+.gtSearch .advancedSearch .line{
+	height: 1px;
+	width: 11px;
+	margin-left: 2px;
+	margin-top: 1px;
+}
+.gtSearch .advancedSearch .line.one{
+	width: 14px;
+}
+.gtSearch .advancedSearch .line.three{
+	width: 8px;
+}
+.gtSearch .searchKey{
+	border: none;
+	height: 100%;
+	width: 100%;
+	font-family: 'Microsoft Yahei', Arial;
+	font-size: 12px;
+	line-height: 22px;
+	height: 26px;
+	padding-left: 0px;
+}
+.gtSearch .searchBtn{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: block;
+	/*padding: 5px;*/
+	background-color: white;
+	height:100%;
+	width: 24px;
+}
+.gtSearch .searchBtn img{
+	position: absolute;
+	top: 6px;
+	left: 5px;
+	width: 16px;
+	height: 16px;
+}
+.gtSearch .gtBtnContainer{
+	position: absolute;
+	top: 6px;
+	right: 0px;
+}
+.gtSearch .gtBtnContainer .gtbtn_wrap{
+	padding-right: 8px;
+	background-color: transparent;
+}
+.gtSearch .gtBtnContainer .gtbtn_wrap .gtbtn{
+	height: 28px;
+	line-height: 28px;
+	background-color: #017afd;
+	color: #fff;
+	font-family: 'Microsoft Yahei', Arial;
+	font-size: 12px;
+	display: inline-block;
+	margin-right: 5px;
+	padding: 0px 8px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+.gtSearch .gtBtnContainer .gtbtn_wrap .gtbtn:last-child{
+	margin-right: 0px;
+}
+.gtWrap{
+	overflow-x:auto;
+	-webkit-overflow-scrolling:touch;
+}
+.gtContentWrap{
+	position: relative;
+	overflow-y: auto;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling:touch;
+}
+table.gtTitle{
+	table-layout: fixed;
+	border-collapse: collapse;
+}
+table.gtTitle td{
+	border: 1px solid #f0f0f0;
+	background-color: rgb(250, 250, 250);
+	font-size: 14px;
+	text-align: center;
+	color: #017afd;
+	border-bottom: 2px solid #B7E0FE;
+	padding: 8px 5px;
+}
+table.gtContent{
+	table-layout: fixed;
+	border-collapse: collapse;
+}
+table.gtContent td{
+	word-break: break-all; word-wrap: break-word;
+	border: 1px solid #f0f0f0;
+	background-color: #fff;
+	font-size: 14px;
+	padding: 8px 5px;
+}
+table.gtContent tr:FIRST-CHILD td{
+	border-top: none;
+}
+table.gtContent tr.groupsum_tr td{
+	background-color: #F9FBF5;
+	font-weight: bold;
+	text-align: center;
+}
+
+table.gtContent tr.content_tr td{
+	text-align: center;
+}
+
+.gtWrap table.gtTitle tr td.beFixedCol, .gtWrap table.gtContent tr td.beFixedCol{
+	visibility: hidden;
+}
+
+
+.listContainer > li.link_active{
+	background-color: #eee;
+}
+.tag{
+	text-align: center!important;
+	height:27px;
+	line-height:27px;
+	opacity:0.5;
+	font-size:12px;
+}
+.nodata_border{
+	background: #f6f6f6;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin: 8px 0;
+	text-shadow: 0 1px 0 #f3f3f3;
+	font-family: sans-serif;
+	color: #333;
+	font-weight: 700;
+	overflow: hidden;
+	cursor: pointer;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 4.96px;
+	border-color: #ddd;
+	box-shadow: none;
+}
+.nodata_content{
+	position: relative;
+	height: 22px;
+	line-height: 22px;
+	padding-left: 26px;
+	white-space: nowrap;
+	text-align: center;
+	width:150px;
+	margin:0 auto;
+	font-size: 16px;
+}
+.nodata_img{
+	position: absolute;
+	left: 0;
+	width: 22px;
+	height:22px;
+	background-color: rgba(0,0,0,.3);
+	border-radius: 1em;
+	background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22iso-8859-1%22%3F%3E%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20%20width%3D%2214px%22%20height%3D%2214px%22%20viewBox%3D%220%200%2014%2014%22%20style%3D%22enable-background%3Anew%200%200%2014%2014%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22M7%2C0C3.134%2C0%2C0%2C3.134%2C0%2C7s3.134%2C7%2C7%2C7s7-3.134%2C7-7S10.866%2C0%2C7%2C0z%20M7%2C2c0.552%2C0%2C1%2C0.447%2C1%2C1S7.552%2C4%2C7%2C4S6%2C3.553%2C6%2C3%20S6.448%2C2%2C7%2C2z%20M9%2C11H5v-1h1V6H5V5h3v5h1V11z%22%2F%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+	background-repeat: no-repeat;
+	background-position: 4px;
+}
+
+.as-container{
+	display: none;
+}
+.as-container.searching{
+	display: block;	
+}
+.as-container .as-title{
+	padding: 0 0 0 15px;
+	margin: 12px 0px;
+	border-left: 5px solid #017afd;
+}
+.as-container .as-title .as-title-big{
+	font-size: 16px;
+    color: #017afd;
+}
+.as-container .as-title .as-title-small{
+	font-size: 9px;
+	color: #999;
+}
+.as-container .as-content{
+	padding: 0px 15px;
+	margin-bottom: 15px;
+}
+.as-container .as-content .field-wrap{
+	border-bottom: 1px solid rgb(238, 238, 238);
+	position: relative;
+	display: table;
+    table-layout: fixed;
+    vertical-align: middle;
+    width: 100%;
+}
+.as-container .as-content .field-wrap .separater{
+	background-color: rgb(240,240,240);
+	width: 1px;
+	height:20px;
+	position: absolute;
+	top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+.as-container .as-content .field-wrap .field_range_separater{
+	background-color: rgb(180,180,180);
+	width: 12px;
+	height: 1px;
+}
+.as-container .as-content .field-label{
+	position: relative;
+	width: 67px;
+    color: #666;
+    font-size: 14px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: table-cell;
+    vertical-align: middle;
+    box-sizing: border-box;
+    word-break: break-all;
+}
+.as-container .as-content .field-content{
+	display: table-cell;
+    vertical-align: middle;
+    padding-left: 5px;
+}
+.as-container .as-content .date-field .field-content input,
+.as-container .as-content .time-field .field-content input
+{
+	width: 80%;
+	height: 40px;
+	border: none;	
+	line-height: 40px;
+	padding: 0px;
+	font-size: 14px;
+}
+.as-container .as-content .text-field .field-content input,
+.as-container .as-content .numb-field .field-content input,
+.as-container .as-content .thousandnumb-field .field-content input,
+.as-container .as-content .textarea-field .field-content input
+{
+	width: 100%;
+	height: 40px;
+	border: none;	
+	line-height: 40px;
+	padding: 0px;
+	font-size: 14px;
+}
+.rangeSearchTable{
+	width: 100%;
+	height:100%;
+	border-collapse: collapse;
+}
+.rangeSearchTable td{
+	padding:0px;
+}
+.rangeSearchTable td.rangeSearchcol1{
+	width:45%;
+	position: relative;
+}
+.rangeSearchTable td.rangeSearchcol1 .dataClean{
+	background: url("/mobilemode/images/mec/lego_icon_del.png") no-repeat;
+	background-position: center;
+	background-size: 13px 12px;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 10px;
+	right: 0;
+	display: none;
+}
+.rangeSearchTable td.rangeSearchcol2{
+	vertical-align: middle;
+}
+.rangeSearchTable td.rangeSearchcol3{
+	width:45%;
+	position: relative;
+}
+.rangeSearchTable td.rangeSearchcol3 .dataClean{
+	background: url("/mobilemode/images/mec/lego_icon_del.png") no-repeat;
+	background-position: center;
+	background-size: 13px 12px;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 10px;
+	right: 0;
+	display: none;
+}
+.as-container .as-content .select-field .field-content{
+   	overflow: hidden;
+   	background: url("/mobilemode/images/mec/arrow_right_wev8.png") no-repeat;
+   	background-position: right center;
+}
+.as-container .as-content .select-field .field-content select{
+	width: 100%;
+	border: none;
+	height: 40px;
+	font-size: 14px;
+	background: transparent;
+   	-webkit-appearance: none; 
+}
+.as-container .as-content .browser-field .field-content{
+	position: relative;
+	padding-right: 35px;
+}
+.as-container .as-content .browser-field .browser-name-wrap{
+	padding-right: 30px;
+	height: 40px;
+	position: relative;
+}
+.as-container .as-content .browser-field .browser-name{
+	font-size: 14px;
+	display: inline-block;
+	height: 100%;
+	line-height: 40px;
+	width: 100%;
+	text-overflow: ellipsis;
+	overflow:hidden; 
+	white-space:nowrap;
+}
+.as-container .as-content .browser-field .browser-name-wrap .browser-clear-btn{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 30px;
+	height: 40px;
+	background: url("/mobilemode/images/mec/lego_icon_del.png") no-repeat;
+	background-position: 5px center;
+	background-size: 13px 12px;
+	cursor: pointer;
+	display: none;
+}
+.as-container .as-content .browser-field .browser-name-wrap.hasValue .browser-clear-btn{
+	display: block;
+}
+.as-container .as-content .browser-field .browser-flag{
+	background-image: url("/mobilemode/images/field_browsebtn_wev8.png");
+	background-repeat: no-repeat;
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	top: 2px;
+	right: 0px;
+}
+.as-container .as-content .checkbox-field .field-content{
+	position: relative;
+	height:34px;
+}
+.as-container .as-content .checkbox-field .toggle {
+	cursor: pointer;
+	font-family: "Helvetica Neue",sans-serif;
+	font-size: 17px;
+	line-height: 21px;
+	box-sizing: border-box;
+	margin: 0px 0px;
+	display: block;
+	width: 62px;
+	height: 26px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 20px;
+	-webkit-transition-duration: .2s;
+	-moz-transition-duration: .2s;
+	transition-duration: .2s;
+	-webkit-transition-property: background-color, border;
+	-moz-transition-property: background-color, border;
+	transition-property: background-color, border;
+	position: relative;
+	left: 0px;
+}
+.as-container .as-content .checkbox-field .toggle .toggle-handle {
+	box-sizing: border-box;
+	position: absolute;
+	top: 0px;
+	left: -1px;
+	z-index: 2;
+	width: 24px;
+	height: 24px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 100px;
+	-webkit-transition-duration: .2s;
+	-moz-transition-duration: .2s;
+	transition-duration: .2s;
+	-webkit-transition-property: -webkit-transform, border, width;
+	-moz-transition-property:    -moz-transform, border, width;
+	transition-property:         transform, border, width;
+}
+.as-container .as-content .checkbox-field .toggle:before {
+	position: absolute;
+	top: 2px;
+	right: 9px;
+	font-size: 13px;
+	color: #999;
+	text-transform: uppercase;
+	content: "Off";
+}
+.as-container .as-content .checkbox-field .toggle.active {
+	background-color: #5cb85c;
+	border: 1px solid #5cb85c;
+}
+.as-container .as-content .checkbox-field .toggle.active .toggle-handle {
+	left: -8px;
+	border-color: #5cb85c;
+	-webkit-transform: translate3d(44px, 0, 0);
+	-ms-transform: translate3d(44px, 0, 0);
+	transform: translate3d(44px, 0, 0);
+}
+.as-container .as-content .checkbox-field .toggle.active:before {
+	right: auto;
+	left: 11px;
+	color: #fff;
+	content: "On";
+}
+.as-container .as-btn-wrap{
+	padding: 0px 15px;
+	overflow: hidden;
+	padding-bottom: 20px;
+}
+.as-container .as-btn{
+	padding: 10px 15px 10px 34px;
+	font-family: 'Microsoft Yahei', Arial;
+	font-size: 15px;
+	border-radius: 5px;
+	float: left;
+	margin-right: 8px;
+}
+.as-container .as-btn.search{
+	background: url("/mobilemode/images/emobile/model/14.png") no-repeat;
+	background-size: 20px 20px;
+	background-position: 10px center;
+	background-color: #017afd;
+	color: #fff;
+}
+
+.as-container .as-btn.clear{
+	background: url("/mobilemode/images/clear_wev8.png") no-repeat;
+	background-size: 22px 22px;
+	background-position: 10px center;
+	background-color: #ddd;
+	color: #333;
+}
+
+.fixedGtWrap{
+	position: absolute;
+	top: 0px;
+	left:0px;
+	z-index: 100;
+}
+.fixedGtContentWrap{
+	overflow-y: auto;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling:touch;
+}
+.fixedGtContentWrapMapping{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 99;
+}
+.fixedGtContentWrapMapping table.gtContent tr td.beFixedCol{
+	visibility: visible;
+}

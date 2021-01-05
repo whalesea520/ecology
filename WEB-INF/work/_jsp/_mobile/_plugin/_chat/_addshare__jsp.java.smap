@@ -1,0 +1,14 @@
+SMAP
+_addshare__jsp.java
+JSP
+*S JSP
+*F
++ 1 addShare.jsp
+mobile/plugin/chat/addShare.jsp
+*L
+1#1:39
+8#1,2:40,7
+9#1:54,17
+32#1:70,2
+34#1:72
+*E

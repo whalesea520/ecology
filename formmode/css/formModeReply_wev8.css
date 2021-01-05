@@ -1,0 +1,31 @@
+@CHARSET "UTF-8";
+html,body{height:auto;}
+.formModeReplyContent{margin:0px 5px 0px 5px !important;}
+.formModeReplyRelate{width: 99%;padding-bottom: 1px;height: 25px;margin: 2px 0px 2px 0px;}
+.formModeReplyRelate .firstDiv{padding: 0px 0px 3px 5px;}
+.firstDiv .externalDiv{float:right;padding-top:0px;}
+.externalDiv img{margin-right:-3px;margin-top:1px;cursor: pointer;}
+.formModeReplyBtnDiv{padding: 3px 2px 5px 0px;text-align: right;}
+.replySubmitButton{width: 50px;height: 25px;border: 0px;letter-spacing:4px;cursor: pointer;font-weight:bold;color:#fff;background-color:rgb(48, 181, 255);}
+.replycancelButton{width: 50px;height: 25px;border: 0px;letter-spacing:4px;cursor: pointer;color:#555555;display:none;}
+.formModeReplyExternal{margin: 3px 5px 0px 5px;display: none;padding-bottom:30px;padding-top:30px;}
+a.formModeExternalBtn:link,a.formModeExternalBtn:visited,a.formModeExternalBtn:hover{text-decoration: underline;color:#5C5C5C;font-size: 13px;margin-left: 5px}
+table.formModeReplyView {WIDTH: 100%;border:0;margin:0;border-collapse:collapse;}
+table.formModeReplyView A {COLOR: blue; TEXT-DECORATION: none}
+table.formModeReplyView A:hover {COLOR: red; TEXT-DECORATION: none}
+table.formModeReplyView A:link {COLOR: blue; TEXT-DECORATION: none}
+table.formModeReplyView A:visited {TEXT-DECORATION: none}
+table.formModeReplyView TR {height:29px;}
+table.formModeReplyView TR.Title TH {TEXT-INDENT: -1pt; TEXT-ALIGN: left;}
+table.formModeReplyView TR.Spacing {HEIGHT: 4px}
+table.formModeReplyView TD {padding:0 0 0 5px;font-size: 9pt;border: 1px solid #d8ecef;}
+table.formModeReplyView TD.formModeReplyName {BACKGROUND-COLOR:#F5FAFA;}
+table.formModeReplyView TD.formModeReplyValue {PADDING-RIGHT: 3px; PADDING-LEFT: 2px;word-break:break-all;}
+table.formModeReplyView TD.formModeReplyLine {BACKGROUND-COLOR: #D8ECEF; BACKGROUND-REPEAT: repeat-x; HEIGHT: 1px}
+table.formModeReplyView TD.Line1 {BACKGROUND-COLOR: #D8ECEF; BACKGROUND-REPEAT: repeat-x; HEIGHT: 2px}
+table.formModeReplyView TD.Line2 {BACKGROUND-COLOR: #D8ECEF; BACKGROUND-REPEAT: repeat-x; HEIGHT: 1px}
+table.formModeReplyView TR.Line {HEIGHT:1px;}
+table.formModeReplyView TR.Line1 {HEIGHT:1px;}
+table.formModeReplyView TR.Line2 {HEIGHT:1px;}
+.formModeReplyValue table,.formModeReplyValue td{border: none !important;}
+		

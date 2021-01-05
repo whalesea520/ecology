@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<special-non>
+		<urls>
+				 <url>
+					<value>/wui/common/page/changeLanguageInfo.jsp</value>
+					<params>
+					   <param>
+						<is-dynamic-param>0</is-dynamic-param>
+						<value>languageid</value>
+						<rules>
+						  <rule>##CONST:MULTINUMBER##</rule>
+						</rules>
+					  </param>
+					</params>
+				 </url>
+				
+		</urls>
+		</special-non>
+</root>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components>
+	<component desc="多行" type="1" ptype="2" client="pc" name="textarea">
+	   <params>
+	      <p name="" />	   
+	   </params>
+		<template>
+			<edit><content><![CDATA[
+			<TEXTAREA style="WIDTH: 80%; WORD-WRAP: break-word; WORD-BREAK: break-all" id=field${id} class="Inputstyle styled textarea" rows=4 
+onchange="checkinput2('field${id}','field${id}span',this.getAttribute('viewtype'));
+checkLength('field${id}','0','${label}','文本长度不能超过','1个中文字符等于2个长度')" cols=40 name=field${id} temptitle="${label}" viewtype="1" temptype="0" 
+jQuery${cmillis}="66">${value}</TEXTAREA> 
+<SPAN id=field${id}span><IMG align=absMiddle src="/images/BacoError_wev8.gif"></SPAN> 
+			               ]]></content></edit>
+			<view><content><![CDATA[
+			<SPAN style="WIDTH: 99%; WORD-WRAP: break-word; WORD-BREAK: break-all" id=field${id}span>${value}</SPAN>
+			]]></content></view>
+			<setting><content><![CDATA[<INPUT id="${fieldid}" class="InputStyle"  name="field${id}" value="${label}">]]></content></setting>
+		</template>
+	</component>
+	<component desc="多行"  type="1" ptype="2" client="mobile" name="textarea">
+		<params>
+		    <p name=""/>
+		</params>
+		<template>
+			<edit><content><![CDATA[
+			<textarea class="field_textarea" onblur="textLinkage('${id}');" rows="4" id="field${id}" name="field${id}" data-role="none" ismust="${must}" fieldname="${fieldname}">${value}</textarea>
+			]]></content></edit>
+			<view><content><![CDATA[
+			<SPAN id="field${id}span" class="field_textarea">${spanvalue}</SPAN><textarea style="display:none !important;" name=field${id} id=field${id} lablename="${label}" type="hidden">${value}</textarea>
+			]]></content></view>
+			<setting><content><![CDATA[<INPUT id="${fieldid}" class="InputStyle"  name="field${id}" value="${label}">]]></content></setting>
+			<hidden><content><![CDATA[<input value ="${value}" name=field${id} id=field${id} lablename="${label}" type="hidden">]]></content></hidden>
+		</template>
+	</component>
+</components>

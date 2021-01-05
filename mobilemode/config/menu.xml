@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menus>
+
+	<menu>
+		<icon>/mobilemode/images/emobile/model/10.png</icon>
+		<name>待办事宜</name>
+		<url></url>
+		<count>/mobile/plugin/ComponentCount.jsp?module=1</count>
+		<isEnabled>1</isEnabled>
+		<order>1</order>
+	</menu>
+	
+	<menu>
+		<icon>/mobilemode/images/emobile/model/11.png</icon>
+		<name>我的请求</name>
+		<url></url>
+		<count>/mobile/plugin/ComponentCount.jsp?module=9</count>
+		<isEnabled>1</isEnabled>
+		<order>2</order>
+	</menu>
+	
+	<menu>
+		<icon>/mobilemode/images/emobile/model/12.png</icon>
+		<name>已办事宜</name>
+		<url></url>
+		<count></count>
+		<isEnabled>1</isEnabled>
+		<order>3</order>
+	</menu>
+	
+	<menu>
+		<icon>/mobilemode/images/emobile/model/13.png</icon>
+		<name>办结事宜</name>
+		<url></url>
+		<count>/mobile/plugin/ComponentCount.jsp?module=7</count>
+		<isEnabled>1</isEnabled>
+		<order>4</order>
+	</menu>
+	
+	<menu>
+		<icon>/mobilemode/images/emobile/model/09.png</icon>
+		<name>抄送事宜</name>
+		<url></url>
+		<count>/mobile/plugin/ComponentCount.jsp?module=10</count>
+		<className>split</className>
+		<isEnabled>1</isEnabled>
+		<order>5</order>
+	</menu>
+	
+	<menu>
+		<icon>/mobilemode/images/emobile/model/07.png</icon>
+		<name>新闻中心</name>
+		<url></url>
+		<count>/mobile/plugin/ComponentCount.jsp?module=2</count>
+		<isEnabled>1</isEnabled>
+		<order>6</order>
+	</menu>
+	
+	<menu>
+		<icon>/mobilemode/images/emobile/model/04.png</icon>
+		<name>文档中心</name>
+		<url></url>
+		<count></count>
+		<className>split</className>
+		<isEnabled>1</isEnabled>
+		<order>7</order>
+	</menu>
+	
+	<menu>
+		<icon>/mobilemode/images/emobile/model/10.png</icon>
+		<name>任务</name>
+		<url></url>
+		<count></count>
+		<isEnabled>1</isEnabled>
+		<order>8</order>
+	</menu>
+	
+	<menu>
+		<icon>/mobilemode/images/emobile/model/14.png</icon>
+		<name>微搜</name>
+		<url></url>
+		<count></count>
+		<className>split</className>
+		<isEnabled>1</isEnabled>
+		<order>9</order>
+	</menu>
+	
+	<menu>
+		<icon>/mobilemode/images/emobile/model/06.png</icon>
+		<name>工作微博</name>
+		<url></url>
+		<count></count>
+		<isEnabled>1</isEnabled>
+		<order>10</order>
+	</menu>
+	
+	<menu>
+		<icon>/mobilemode/images/emobile/model/01.png</icon>
+		<name>协作</name>
+		<url></url>
+		<count>/mobile/plugin/cowork/count.jsp?module=14</count>
+		<className>split</className>
+		<isEnabled>1</isEnabled>
+		<order>11</order>
+	</menu>
+	
+	<menu>
+		<icon>/mobilemode/images/emobile/model/15.png</icon>
+		<name>会议</name>
+		<url></url>
+		<count></count>
+		<isEnabled>1</isEnabled>
+		<order>12</order>
+	</menu>
+	
+	<menu>
+		<icon>/mobilemode/images/emobile/model/16.png</icon>
+		<name>邮件</name>
+		<url></url>
+		<count>/mobile/plugin/email/EmailCount.jsp?module=13</count>
+		<isEnabled>1</isEnabled>
+		<order>13</order>
+	</menu>
+	
+	<menu>
+		<icon>/mobilemode/images/emobile/model/03.png</icon>
+		<name>日程</name>
+		<url></url>
+		<count></count>
+		<isEnabled>1</isEnabled>
+		<order>14</order>
+	</menu>
+</menus>

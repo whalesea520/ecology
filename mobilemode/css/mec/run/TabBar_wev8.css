@@ -1,0 +1,122 @@
+.tabBarContainer {
+	-webkit-font-smoothing: antialiased;
+	display: table;
+	width: 100%;
+	height: 50px;
+	padding: 0;
+	table-layout: fixed;
+	border-top: 1px solid #ddd;
+	border-bottom: 0;
+	background-color: white;
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
+	        box-sizing: border-box;
+	visibility: hidden;
+}
+#scroll_footer .tabBarContainer{
+	visibility: visible;
+}
+.tabBarContainer .tab-item {
+	display: table-cell;
+	width: 1%;
+	height: 50px;
+	color: #929292;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
+	box-sizing: border-box;
+}
+.tabBarContainer .tab-item.active, .tabBarContainer .tab-item:active {
+	color: #017afd;
+}
+.tabBarContainer .tab-item .icon {
+	position: relative;
+	top: 3px;
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	padding-top: 0;
+	padding-bottom: 0;
+	box-sizing: border-box;
+	z-index: 20;
+}
+.tabBarContainer .tab-item.noImg .icon{
+	display: none;
+}
+.tabBarContainer .tab-item .icon img{
+	width: 100%;
+	height: 100%;
+}
+.tabBarContainer .tab-item .icon img.icon-active{
+	display: none;
+}
+.tabBarContainer .tab-item.active .icon img.icon-active{
+	display: inline;	
+}
+.tabBarContainer .tab-item.active .icon img.icon-normal{
+	display: none;	
+}
+.tabBarContainer .tab-item.singleImg .icon img.icon-normal{
+	opacity: 0.5;	
+	-webkit-opacity: 0.5; 
+	-moz-opacity: 0.5; 
+	-khtml-opacity: 0.5; 
+	filter:alpha(opacity=50); 
+}
+
+.tabBarContainer .tab-item .icon ~ .tab-label {
+  display: block;
+  font-size: 11px;
+  box-sizing: border-box;
+}
+.tabBarContainer .tab-item .icon .MEC_NumberRemind {
+	position: absolute;
+	top: -4px;
+	right: -10px;
+	height: 20px;
+	width: 20px;
+	overflow: hidden;
+	background: none repeat scroll 0 0 red;
+	text-align: center;
+	line-height: 20px;
+	border-radius: 2.25em;
+	color: #FFFFFF;
+	font-family: arial;
+	font-size: 10px;
+}
+.tabBarContainer .tab-item .icon .MEC_NumberRemind1{
+	font-size: 14px;
+}
+.tabBarContainer .tab-item .icon .MEC_NumberRemind2{
+	font-size: 12px;
+}
+.tabBarContainer .tab-item .icon .MEC_NumberRemind3{
+	font-size: 10px;
+}
+.tabBarContainer .tab-item .icon .MEC_NumberRemind4{
+	font-size: 8px;	
+}
+.homepageFrame{
+	position: absolute;
+	top:0px;
+	left:0px;
+	border: none;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	-webkit-transition: -webkit-transform 0.0s;
+	transition: transform 0.0s;
+	visibility: visible;
+}
+.homepageFrame.hide{
+	-webkit-transform: translate3d(-100%, 0, 0);
+	transform: translate3d(-100%, 0, 0);
+	opacity: 0;
+	visibility: hidden;
+}
+.blankFrame{
+	background-image: url(/mobilemode/images/loading2.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+}

@@ -1,0 +1,331 @@
+.imMengban{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	opacity: 0.5;
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	-khtml-opacity: 0.5;
+	background: #0A0000;
+	display: none;
+	z-index: 9999;
+}
+.IMConfirm {
+	position: relative;
+	font-family: 微软雅黑 sans-serif;
+	font-size: 18px;
+}
+
+/*头*/
+.IMConfirm .imdlghead {
+  	width: 96%;
+  	height: 30px;
+  	font-size: 18px;
+  	line-height: 30px;
+  	padding: 2%;
+  	position: relative;
+  	border-bottom: 1px solid snow;
+  	text-align:left;
+}
+
+.IMConfirm .imdlghead span {
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.IMConfirm .imdlghead .iconClose {
+	position: absolute;
+	z-index: 1;
+	width: 26px;
+	height: 26px;
+	top: 7px;
+	right: 5px;
+	text-align: center;
+	line-height: 24px;
+	border-radius: 50%;
+	color: #ccc;
+	font-size: 24px;
+	/*过渡效果*/
+  	transition: background 1s,color 1s;
+	-moz-transition: background 1s,color 1s;	/* Firefox 4 */
+	-webkit-transition: background 1s,color 1s;	/* Safari 和 Chrome */
+	-o-transition: background 1s,color 1s;	/* Opera */
+}
+
+.IMConfirm .imdlghead .iconClose:hover {
+	cursor: pointer;
+	color: #FFF;
+	background: #DE553F;
+}
+
+/*按钮组*/
+.IMConfirm .bntgroup {
+	position: absolute;
+	width: 96%;
+	height: 40px;
+	padding: 2%;
+	bottom: 0px;
+	border-top: 1px solid snow;
+}
+
+.IMConfirm .bntgroup .centerlayout {
+	width: 68%;
+  	height: 40px;
+  	margin: 0px auto;
+    padding-left: 4%;
+}
+
+.IMConfirm .bntgroup .centerlayout .btn_ok,.IMConfirm .bntgroup .centerlayout .btn_cancel{
+	float: left;
+	cursor: pointer;
+  	padding: 3%;
+  	margin-right: 4%;
+  	min-width: 40%;
+  	text-align: center;
+  	border-radius: 5px;
+  	font-size: 14px;
+  	color: #FFF;
+}
+.IMConfirm .bntgroup .centerlayout .btn_ok{
+	background: #3CAF36;
+}
+.IMConfirm .bntgroup .centerlayout .btn_ok:hover{
+	background: #288323;
+}
+
+.IMConfirm .bntgroup .centerlayout .btn_cancel{
+	background:rgb(165, 162, 162);
+}
+.IMConfirm .bntgroup .centerlayout .btn_cancel:hover{
+	background:rgb(127, 125, 125);
+}
+
+
+/*自定义区域*/
+.IMConfirm .inner {
+	position: absolute;
+	padding-top:10px;
+	height: 70%;
+	width: 100%;
+	text-align: center;
+}
+
+.IMConfirm .inner img {
+	max-width: 90%;
+	max-height: 90%;
+}
+
+.IMConfirm .clear {
+	clear: right;
+}
+
+/*Toast显示区域*/
+.IMConfirm .loader-container {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	margin: auto;
+  	left: 0;
+  	right: 0;
+  	/*top: 0;*/
+  	bottom: -16px;
+  	display: none;
+}
+
+.ball-spin,.ball-spin>div{
+	position:relative;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box
+}
+.ball-spin{
+	display:block;
+	font-size:0;
+	color:#fff
+}
+.ball-spin.la-dark{
+	color:#333
+}
+.ball-spin>div{
+	display:inline-block;
+	float:none;
+	background-color:#5CB5D8;
+	border:0 solid #5CB5D8
+}
+.ball-spin{
+	width:32px;
+	height:32px
+}
+.ball-spin>div{
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:8px;
+	height:8px;
+	margin-top:-4px;
+	margin-left:-4px;
+	border-radius:100%;
+	-webkit-animation:ball-spin 1s infinite ease-in-out;
+	-moz-animation:ball-spin 1s infinite ease-in-out;
+	-o-animation:ball-spin 1s infinite ease-in-out;
+	animation:ball-spin 1s infinite ease-in-out
+}
+.ball-spin>div:nth-child(1){
+	top:5%;
+	left:50%;
+	-webkit-animation-delay:-1.125s;
+	-moz-animation-delay:-1.125s;
+	-o-animation-delay:-1.125s;
+	animation-delay:-1.125s
+}
+.ball-spin>div:nth-child(2){
+	top:18.1801948466%;
+	left:81.8198051534%;
+	-webkit-animation-delay:-1.25s;
+	-moz-animation-delay:-1.25s;
+	-o-animation-delay:-1.25s;
+	animation-delay:-1.25s
+}
+.ball-spin>div:nth-child(3){
+	top:50%;
+	left:95%;
+	-webkit-animation-delay:-1.375s;
+	-moz-animation-delay:-1.375s;
+	-o-animation-delay:-1.375s;
+	animation-delay:-1.375s
+}
+.ball-spin>div:nth-child(4){
+	top:81.8198051534%;
+	left:81.8198051534%;
+	-webkit-animation-delay:-1.5s;
+	-moz-animation-delay:-1.5s;
+	-o-animation-delay:-1.5s;
+	animation-delay:-1.5s
+}
+.ball-spin>div:nth-child(5){
+	top:94.9999999966%;
+	left:50.0000000005%;
+	-webkit-animation-delay:-1.625s;
+	-moz-animation-delay:-1.625s;
+	-o-animation-delay:-1.625s;
+	animation-delay:-1.625s
+}
+.ball-spin>div:nth-child(6){
+	top:81.8198046966%;
+	left:18.1801949248%;
+	-webkit-animation-delay:-1.75s;
+	-moz-animation-delay:-1.75s;
+	-o-animation-delay:-1.75s;
+	animation-delay:-1.75s
+}
+.ball-spin>div:nth-child(7){
+	top:49.9999750815%;
+	left:5.0000051215%;
+	-webkit-animation-delay:-1.875s;
+	-moz-animation-delay:-1.875s;
+	-o-animation-delay:-1.875s;
+	animation-delay:-1.875s
+}
+.ball-spin>div:nth-child(8){
+	top:18.179464974%;
+	left:18.1803700518%;
+	-webkit-animation-delay:-2s;
+	-moz-animation-delay:-2s;
+	-o-animation-delay:-2s;
+	animation-delay:-2s
+}
+.ball-spin.la-sm{
+	width:16px;
+	height:16px
+}
+.ball-spin.la-sm>div{
+	width:4px;
+	height:4px;
+	margin-top:-2px;
+	margin-left:-2px
+}
+.ball-spin.la-2x{
+	width:30px;
+	height:30px
+}
+.ball-spin.la-2x>div{
+	width:8px;
+	height:8px;
+	margin-top:-4px;
+	margin-left:-4px
+}
+.ball-spin.la-3x{
+	width:96px;height:96px
+}
+.ball-spin.la-3x>div{
+	width:24px;
+	height:24px;
+	margin-top:-12px;
+	margin-left:-12px
+}
+@-webkit-keyframes ball-spin{
+	0%,100%{
+		opacity:1;
+		-webkit-transform:scale(1);
+		transform:scale(1)
+	}
+	20%{
+		opacity:1
+	}
+	80%{
+		opacity:0;
+		-webkit-transform:scale(0);
+		transform:scale(0)
+	}
+}
+@-moz-keyframes ball-spin{
+	0%,100%{
+		opacity:1;
+		-moz-transform:scale(1);
+		transform:scale(1)
+	}
+	20%{
+		opacity:1
+	}
+	80%{
+		opacity:0;
+		-moz-transform:scale(0);
+		transform:scale(0)
+	}
+}
+@-o-keyframes ball-spin{
+	0%,100%{
+		opacity:1;
+		-o-transform:scale(1);
+		transform:scale(1)
+	}
+	20%{
+		opacity:1
+	}
+	80%{
+		opacity:0;
+		-o-transform:scale(0);
+		transform:scale(0)
+	}
+	}
+@keyframes ball-spin{
+	0%,100%{
+		opacity:1;
+		-webkit-transform:scale(1);
+		-moz-transform:scale(1);
+		-o-transform:scale(1);
+		transform:scale(1)
+	}
+	20%{
+		opacity:1
+	}
+	80%{
+		opacity:0;
+		-webkit-transform:scale(0);
+		-moz-transform:scale(0);
+		-o-transform:scale(0);
+		transform:scale(0)
+	}
+}

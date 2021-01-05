@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<title>Simple Tasks</title>
+	    <link rel="stylesheet" type="text/css" href="../../resources/css/ext-all_wev8.css" />
+	    <script type="text/javascript" src="../../adapter/ext/ext-base_wev8.js"></script>
+	    <script type="text/javascript" src="../../ext-all_wev8.js"></script>
+		
+		<script type="text/javascript" src="db/ext-db_wev8.js"></script>
+		<script type="text/javascript" src="gears_wev8.js"></script>
+		<script type="text/javascript" src="db/ext-gears-db_wev8.js"></script>
+	    
+		<script type="text/javascript" src="classes_wev8.js"></script>
+    	<script type="text/javascript" src="tasks_wev8.js"></script>
+		
+    	<link rel="stylesheet" type="text/css" href="tasks_wev8.css" />
+</head>
+<body>
+<span></span>
+<ul id="task-views" class="x-hidden">
+	<li>
+		<img src="images/s_wev8.gif" class="icon-show-all"/>
+		<a id="view-all" href="#">All tasks</a>
+	</li>
+	<li>
+		<img src="images/s_wev8.gif" class="icon-show-active"/>
+		<a id="view-active" href="#">Active tasks</a>
+	</li>
+	<li>
+		<img src="images/s_wev8.gif" class="icon-show-complete"/>
+		<a id="view-complete" href="#">Completed tasks</a>
+	</li>
+</ul>
+<ul id="task-actions" class="x-hidden">
+	<li id="new-task">
+		<img src="images/s_wev8.gif" class="icon-edit"/>
+		<a id="action-new" href="#">Add a new task</a>
+	</li>
+	<li style="display:none;">
+		<img src="images/s_wev8.gif" class="icon-complete"/>
+		<a id="action-complete" href="#">Mark selected task<span class="s">s</span> completed</a>
+	</li>
+	<li style="display:none;">
+		<img src="images/s_wev8.gif" class="icon-active"/>
+		<a id="action-active" href="#">Mark selected task<span class="s">s</span> active</a>
+	</li>
+	<li style="display:none;">
+		<img src="images/s_wev8.gif" class="icon-delete"/>
+		<a id="action-delete" href="#">Delete selected task<span class="s">s</span></a>
+	</li>
+</ul>
+<ul id="task-grouping" class="x-hidden">
+	<li>
+		<img src="images/s_wev8.gif" class="icon-by-date"/>
+		<a id="group-date" href="#">By Date</a>
+	</li>
+	<li>
+		<img src="images/s_wev8.gif" class="icon-by-category"/>
+		<a id="group-cat" href="#">By Category</a>
+	</li>
+	<li>
+		<img src="images/s_wev8.gif" class="icon-no-group"/>
+		<a id="no-group" href="#">No Grouping</a>
+	</li>
+</ul>
+</body>
+</html>

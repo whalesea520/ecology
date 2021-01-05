@@ -1,0 +1,166 @@
+*{
+			/*font-family: "Microsoft YaHei"!important;*/
+		}
+		.clear{clear:both;}
+		body{
+			/*padding: 0;*/
+			/*margin: 0;*/
+			/*font-size:12px;*/
+			/*background: #f5f5f5;*/
+			/*color:#374660;*/
+			/*overflow: hidden;*/
+		}
+		.titlebar{
+			height: 60px;
+    		line-height: 60px;
+		    font-size: 16px;
+		    text-align: left;
+		    position: relative;
+		    background: #fff;
+    		border-bottom: 1px solid #d0d3d8;
+    		padding-left: 20px;
+		}
+		.titlebar .btnGroup{
+			font-size: 12px;
+			height: 100%;
+		    min-width: 332px;
+		    position: absolute;
+		    right: 0;
+		    top: 0;
+		}
+		.titlebar .btnGroup .btnGroupItem{
+			height: 32px;
+    		line-height: 32px;
+    		margin: 13px 0;
+    		border: 1px solid #d0d3d8;
+		}
+		.titlebar .btnGroup .sendBtn{
+			display: inline-block;
+		    width: 52px;
+    		padding-left: 36px;
+		    float: left;
+		    background: url('/social/images/broadcast_send_wev8.png') no-repeat 10px center;
+		    cursor: pointer;
+		}
+		.titlebar .btnGroup .sendBtn:hover{
+			background: url('/social/images/broadcast_send_h_wev8.png') no-repeat 10px center;
+		    color: #fff;
+		}
+		.titlebar .btnGroup .advanceSearch{
+		    left: 96px;
+		    right: 16px;
+		    position: absolute;
+		}
+		.titlebar .btnGroup .closeBtn{
+			display: inline-block;
+		    width: 50%;
+		    height: 100%;
+		    color: #99A0A6;
+    		font-size: 22px;
+    		cursor: pointer;
+		}
+		.titlebar .btnGroup .advanceSearch .searchBox{
+		    display: inline-block;
+    		height: 32px;
+    		padding-left: 10px;
+    		margin-right: -10px;
+		}
+		.titlebar .btnGroup .advanceSearch .searchBox>input{
+		    border:none;
+		    display: inline-block;
+    		height: 24px;
+		}
+		.titlebar .btnGroup .advanceSearch .searchBtnBox {
+			display: inline-block;
+		    width: 32px;
+		    height: 32px;
+		    cursor: pointer;
+		    float: right;
+		}
+		.titlebar .btnGroup .advanceSearch .searchSubmit{
+			background: url("/social/images/search_wev8.png") no-repeat center center;
+		}
+		.titlebar .btnGroup .advanceSearch .searchFit{
+		    background: url("/social/images/broadcast_filt_wev8.png") no-repeat center center;
+		    border-left: 1px solid #d0d3d8;
+		    
+		}
+		.titlebar .btnGroup .advanceSearch .click{
+			
+		}
+		#searchFitPane{
+			position: absolute;
+		    top: 47px;
+		    width: 100%;
+		    //bottom: 0px;
+		    z-index: 1;
+		    display:none;
+		}
+		
+		#msgList{
+			position: absolute;
+		    bottom: 0px;
+		    top: 61px;
+		    right: 0;
+		    left: 0;
+		    height: auto;
+		    background: #f5f5f5;
+		}
+		
+		#msgList .msgItem{
+			border: 1px solid #ebebeb;
+		    width: 80%;
+		    margin: 0 auto;
+		    margin-top: 20px;
+		    background: #fff;
+		    color: #737373;
+		    padding: 0 12px;
+		    cursor:pointer;
+		}
+		
+		.msgItem .msgTitle{height: 45px; font-size: 16px;color:#374660;line-height: 45px;}
+		.msgItem .msgContent{}
+		.msgItem .msgContent .subject{}
+		.msgItem .msgContent .msgDetails{padding: 16px 0;}
+		.msgItem .msgOpt{height: 45px;line-height: 45px;overflow:hidden;text-align: right;}
+		.msgItem .titleHead{
+			vertical-align: top;
+		}
+		
+		.msgItem .splitHorLine{
+			border-top: 1px solid #ebebeb;
+		    width: auto;
+		}
+		
+		.msgItem .txtdiv{
+			padding: 6px 0 6px 0;
+    		line-height: 22px;
+    		word-wrap: break-word;
+		}
+		.msgItem .imgdiv{
+			width: 220px;
+		}
+		.msgItem .resdiv{
+			border-top: 1px solid #e3e3e3;
+			margin-top: 8px;
+			padding: 8px 0 0;
+		}
+		
+		#msgList .sendtime{
+			margin: 0 auto;
+		    width: 50%;
+		    text-align: center;
+		    height: 40px;
+		    line-height: 40px;
+		}
+		#msgList .bg{
+			text-align:center;
+		}
+		#msgList .bcEmptyBg{
+			background: url("/social/images/broadcast_empty_wev8.png") no-repeat center center;
+			min-height: 200px;
+			margin-top: 144px;
+		}
+		#msgList .bcEmptyBgText{
+			font-size: 16px;
+		}

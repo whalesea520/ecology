@@ -1,0 +1,170 @@
+/*
+
+Screen Stylesheet for jQuery Realistic Hover Effect
+Created by Adrian Pelletier
+http://www.adrianpelletier.com
+
+*/
+
+
+/* =Imports
+============================================================================== */
+
+	@import url("resets_wev8.css");
+
+
+/* =Base Structure
+============================================================================== */
+	
+	body {
+		font: 12px/1.5 Georgia, Palatino, "Palatino Linotype", serif;
+		background: #eaf5ff;
+		color: #555;
+		}
+
+	#content {
+		width: 100%;
+		margin: 100px auto;
+		}
+		
+	h1 {
+		font-size: 20px;
+		color: #7f2d2d;
+		text-align: center;
+		}
+		
+	p {
+		text-align: center;
+		}
+
+/* =Navigation
+============================================================================== */
+
+	/* =Reflection Nav
+	-------------------------------------------------------------------------- */
+		
+		#nav-reflection {
+			margin: 0 auto 50px auto;
+			padding: 50px 0 0 172px;
+			min-height: 130px;
+			list-style: none;
+			}
+			
+		#nav-reflection li {
+			margin-right: 15px;
+			width: 59px;
+			float: left;
+			}
+			
+		#nav-reflection a, #nav-reflection a:visited, #nav-reflection a:hover {
+			width: 59px;
+			height: 59px;
+			text-indent: -9999px;
+			overflow: hidden;
+			background: url(../images/icons_wev8.png) no-repeat;
+			display: block;
+			}
+			
+		#nav-reflection span {
+			margin-top: 1px;
+			width: 59px;
+			height: 34px;
+			text-align: center;
+			background: url(../images/icons-reflections_wev8.jpg) no-repeat;
+			display: block;
+			}
+			
+		/* Button Colors */
+		
+		#nav-reflection li.button-color-1 a {
+			background-position: -3px -3px;
+			}
+			
+		#nav-reflection li.button-color-2 a {
+			background-position: -92px -3px;
+			}
+			
+		#nav-reflection li.button-color-3 a {
+			background-position: -181px -3px;
+			}
+			
+		#nav-reflection li.button-color-4 a {
+			background-position: -270px -3px;
+			}
+			
+		/* Button Reflection Color */
+		
+		#nav-reflection li.button-color-1 span {
+			background-position: 0 0;
+			}
+			
+		#nav-reflection li.button-color-2 span {
+			background-position: -89px 0;
+			}
+			
+		#nav-reflection li.button-color-3 span {
+			background-position: -178px 0;
+			}
+			
+		#nav-reflection li.button-color-4 span {
+			background-position: -267px 0;
+			}
+			
+			
+	/* =Shadow Nav
+	-------------------------------------------------------------------------- */
+		
+		#nav-shadow {
+			margin: 0 auto 50px auto;
+			padding: 50px 0 0 127px;
+			min-height: 130px;
+			text-align: center;
+			list-style: none;
+			}
+			
+		#nav-shadow li {
+			margin-right: 15px;
+			width: 81px;
+			height: 72px;
+			position: relative;
+			float: left;
+			}
+			
+		#nav-shadow a, #nav-shadow a:visited, #nav-shadow a, #nav-shadow a:hover {
+			margin: 0 auto;
+			width: 59px;
+			height: 59px;
+			overflow: hidden;
+			background: url(../images/icons_wev8.png) no-repeat;
+			display: block;
+			position: relative;
+			z-index: 2;
+			}
+			
+		/* Button Colors */
+		
+		#nav-shadow li.button-color-1 a {
+			background-position: -3px -3px;
+			}
+			
+		#nav-shadow li.button-color-2 a {
+			background-position: -92px -3px;
+			}
+			
+		#nav-shadow li.button-color-3 a {
+			background-position: -181px -3px;
+			}
+			
+		#nav-shadow li.button-color-4 a {
+			background-position: -270px -3px;
+			}
+			
+		/* Button Shadow */
+		
+		#nav-shadow li img.shadow {
+			margin: 0 auto;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			z-index: 1;
+			}

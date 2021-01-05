@@ -1,0 +1,37 @@
+.Design_Reply_Container{
+	width: 100%;
+	background-color: rgb(235,236,238);
+	border-top: 1px rgb(192,193,194) solid;
+	border-bottom: 1px rgb(192,193,194) solid;
+	overflow: hidden;
+}
+.Design_Reply_Form{
+	padding: 10px 5px 10px 20px;
+	margin-right: 80px;
+	margin-bottom: 0px !important;
+}
+.Design_Reply_Content{
+	font-size: 12px;
+	width: 100%;
+	height: 34px;
+	border: none;
+	border-radius: 4px;
+	font-family: 'Microsoft Yahei', Arial;
+	font-size: 14px;
+}
+.Design_Reply_Btn{
+	max-height: 35px;
+	max-width: 40px;
+	border: 1px rgb(192,193,194) solid;
+	border-radius: 4px;
+	font-size: 14px !important;
+	cursor:pointer;
+	text-align:center;
+	padding: 9px 11px;
+	overflow: hidden; 
+	white-space: nowrap; 
+	text-overflow: ellipsis;
+	position: absolute;
+	top: 11px;
+	right: 16px;
+}

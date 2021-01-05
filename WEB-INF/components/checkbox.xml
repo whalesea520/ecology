@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components>
+	<component desc="checkbox" type="1" ptype="4" client="pc" name="checkbox">
+	   <params>
+	      <p name="" />	   
+	   </params>
+		<template>
+			<edit><content><![CDATA[<INPUT value="1" type="checkbox" id=field${id}  onchange="checkinput2('field${id}','field${id}span',this.getAttribute('viewtype'));changeKeyword();" maxLength=200 size=60 name=field${id} temptitle="${label}" viewtype="1" jQuery1384174822707="3"> 
+			<SPAN id=field${id}span><IMG align=absMiddle src="/images/BacoError_wev8.gif"></SPAN> 
+			               ]]></content></edit>
+			<view><content><![CDATA[<SPAN id=field${id}span>${value}</SPAN>]]></content></view>
+			<setting><content><![CDATA[<INPUT id="${fieldid}" class="InputStyle" name="field${id}" value="${label}">]]></content></setting>
+		</template>
+	</component>
+	<component desc="checkbox" type="1" ptype="4"  client="mobile" name="checkbox">
+		<params>
+		    <p name=""/>
+		</params>
+		<template>
+			<edit><content><![CDATA[
+			<select class="field_check" onchange="textLinkage('${id}');" lablename="${label}" data-role="slider" name="field${id}" id="field${id}" ismust="${must}" data-mini="true" fieldname="${fieldname}">
+				<option value="" ${selected0}>否</option>
+				<option value="1" ${selected1}>是</option>
+			</select>
+			]]></content></edit>
+			<view><content><![CDATA[<SPAN id="field${id}span" class="field_viewText">${spanvalue}</SPAN><input type="hidden" id="field${id}" name="field${id}" value="${value}"/>]]></content></view>
+			<setting><content><![CDATA[<INPUT id="${fieldid}" class="InputStyle" name="field${id}" value="${label}">]]></content></setting>
+			<hidden><content><![CDATA[<input type="hidden" id="field${id}" name="field${id}" value="${value}"/>]]></content></hidden>
+		</template>
+	</component>
+</components>

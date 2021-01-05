@@ -1,0 +1,88 @@
+.multi-lang-icon {
+    position: absolute;
+    display: none;
+    top: -9999px;
+    left: -9999px;
+    width: 18px;
+    height: 22px;
+    background-image: url("/mobilemode/js/multilang/img/multiNoSet_wev8.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.multi-lang-icon.active {
+    background-image: url("/mobilemode/js/multilang/img/multiSet_wev8.png");
+}
+.multi-lang-picker {
+    position: absolute;
+    z-index: 999;
+    display: none;
+    left: 210px;
+    top: 60px;
+    overflow: visible;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(225, 225, 225);
+    box-sizing: border-box;
+    min-width: 130px;
+}
+.multi-lang-picker .lang-content {
+    padding: 5px;
+}
+.multi-lang-picker .lang-content .lang-field {
+    position: relative;
+    margin-bottom: 3px;
+}
+.multi-lang-picker .lang-content .lang-field:last-child {
+    margin-bottom: 0;
+}
+.multi-lang-picker .lang-field img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.multi-lang-picker .lang-field > div {
+    width: 100%;
+    padding-left: 24px;
+    box-sizing: border-box;
+}
+.multi-lang-picker .lang-field input {
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-bottom: 1px solid rgb(233, 233, 226);
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    text-indent: 3px;
+}
+.multi-lang-picker .lang-field input:focus {
+    outline: none;
+}
+.multi-lang-picker .lang-footer {
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    background-color: rgb(248, 248, 248);
+    border-top: 1px solid rgb(225, 225, 225);
+}
+.multi-lang-picker .lang-btn {
+    background-color: transparent;
+    color: #007aff;
+    padding: 2px 18px;
+    word-wrap: normal;
+    cursor: pointer;
+    transition: .3s all ease;
+}
+.multi-lang-picker .lang-btn:hover {
+    background-color: #2690e3;
+    color: #fff;
+}
+.multi-lang-picker .lang-footer span {
+    margin-left: -3px;
+    font-size: 12px;
+    line-height: 30px;
+}
+.multi-lang-picker .lang-footer .lang-divide {
+    color: #ccc;
+}

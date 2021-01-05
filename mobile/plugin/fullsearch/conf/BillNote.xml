@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 航班查询,请指定defaultV -->
+<workflow workflowId="">
+	<!-- name. 传递的参数,name不能修改.   column="CrossDomain" 表示跨域.默认空  url对应的defaultV 是ajax请求页面-->
+	<field name="url" column="" defaultV="" defaultN="记一笔保存"></field>
+	<field name="amount" column="bxje"></field>
+	<field name="content" column="fysm"></field>
+	
+	<!--直接包含返回的json中. 返回值判断,默认空.即为msg. 0标识成功. -->
+	<field name="return_flag" column="SuccessF" defaultV="status" defaultN="成功标识"></field>
+	<field name="return_flag" column="SuccessV" defaultV="0" defaultN="成功值"></field>
+	
+</workflow>

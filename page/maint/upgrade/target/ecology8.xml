@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GBK"?>
+<conf>
+	<item>weaver.page.Upgrade.upgradeThemeToEcology8</item>
+	<item>weaver.page.Upgrade.upgradePortalRightToEcology8</item>
+	<item>weaver.page.Upgrade.upgradeElementUseInfo</item>
+	<item>weaver.page.Upgrade.upgradeHpinfoOrdernum</item>
+	<item>weaver.page.Upgrade.upgradeLayoutInfo</item>
+	<item>weaver.page.Upgrade.upgradeThemeSkinInfo</item>
+</conf>

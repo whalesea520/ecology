@@ -1,0 +1,22 @@
+/*自适应圆角投影*/
+.round_shade_box{width:1px; height:1px; font-size:0; display:none; _background:white; _border:1px solid #cccccc;z-index:9999;vertical-align: middle;position:absolute;}
+.round_shade_top{margin:0 12px 0 10px; background:url(../../images/preview/zxx_round_shade_wev8.png) repeat-x -20px -40px; _background:white; zoom:1;}
+.round_shade_topleft{width:11px; height:10px; background:url(../../images/preview/zxx_round_shade_wev8.png) no-repeat 0 0; _background:none; float:left; margin-left:-11px; position:relative;}
+.round_shade_topright{width:12px; height:10px; background:url(../../images/preview/zxx_round_shade_wev8.png) no-repeat -29px 0; _background:none; float:right; margin-right:-12px; position:relative;}
+.round_shade_centerleft{background:url(../../images/preview/zxx_round_shade_wev8.png) no-repeat 0 -1580px; _background:none;}
+.round_shade_centerright{background:url(../../images/preview/zxx_round_shade_wev8.png) no-repeat right -80px; _background:none;}
+.round_shade_center{font-size:14px; margin:0 12px 0 10px; padding:26px 15px 10px 12px; background:white; letter-spacing:1px; text-align:center;vertical-align: middle;overflow:auto;margin:0 auto;height:500px;width:500px;}
+.round_shade_center1{font-size:14px; _background:white; letter-spacing:1px; text-align:center;vertical-align: middle;overflow:auto;margin:0 auto;display: table-cell;}
+.round_shade_bottom{margin:0 12px 0 11px; background:url(../../images/preview/zxx_round_shade_wev8.png) repeat-x -20px bottom; _background:white; zoom:1;}
+.round_shade_bottomleft{width:11px; height:10px; background:url(../../images/preview/zxx_round_shade_wev8.png) no-repeat 0 -30px; _background:none; float:left; margin-left:-11px; position:relative;}
+.round_shade_bottomright{width:12px; height:10px; background:url(../../images/preview/zxx_round_shade_wev8.png) no-repeat -29px -30px; _background:none; float:right; margin-right:-12px; position:relative;}
+.round_shade_top:after,.round_shade_bottom:after,.zxx_zoom_box:after{display:block; content:"."; height:0; clear:both; overflow:hidden; visibility:hidden;}
+.round_box_close{padding:2px 5px; font-size:12px; color:#2a28fo; text-decoration:none; border:1px solid #cccccc; -moz-border-radius:4px; -webkit-border-radius:4px; background:#ffffff; opacity:0.8; filter:alpha(opacity=80); position:absolute; right:34px; top:10px;z-index:9999;}
+.round_box_right{padding:2px 5px; font-size:12px; color:#2a28fo; text-decoration:none; border:1px solid #cccccc; -moz-border-radius:4px; -webkit-border-radius:4px; background:#ffffff; opacity:0.8; filter:alpha(opacity=80); position:absolute;right:82px; top:10px;z-index:9999;}
+.round_box_left{padding:2px 5px; font-size:12px; color:#2a28fo; text-decoration:none; border:1px solid #cccccc; -moz-border-radius:4px; -webkit-border-radius:4px; background:#ffffff; opacity:0.8; filter:alpha(opacity=80); position:absolute;right:142px; top:10px;z-index:9999;}
+.round_box_add{padding:2px 5px; font-size:12px; color:#2a28fo; text-decoration:none; border:1px solid #cccccc; -moz-border-radius:4px; -webkit-border-radius:4px; background:#ffffff; opacity:0.8; filter:alpha(opacity=80); position:absolute;right:202px; top:10px;z-index:9999;}
+.round_box_minus{padding:2px 5px; font-size:12px; color:#2a28fo; text-decoration:none; border:1px solid #cccccc; -moz-border-radius:4px; -webkit-border-radius:4px; background:#ffffff; opacity:0.8; filter:alpha(opacity=80); position:absolute;right:250px; top:10px;z-index:9999;}
+.round_box_1{padding:2px 5px; font-size:12px; color:#2a28fo; text-decoration:none; border:1px solid #cccccc; -moz-border-radius:4px; -webkit-border-radius:4px; background:#ffffff; opacity:0.8; filter:alpha(opacity=80); position:absolute;right:298px; top:10px;z-index:9999;}
+.zoom_save{padding:2px 5px; font-size:12px; color:#2a28fo; text-decoration:none; border:1px solid #cccccc; -moz-border-radius:4px; -webkit-border-radius:4px; background:#ffffff; opacity:0.8; filter:alpha(opacity=80); position:absolute;right:339px; top:10px;z-index:9999;}
+.round_box_close:hover{opacity:0.95; filter:alpha(opacity=95);}
+/*自适应圆角投影结束*/

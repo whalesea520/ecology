@@ -1,0 +1,193 @@
+.wea-tab {
+	border-bottom: 1px solid #eaeaea;
+	position: relative;
+}
+.wea-tab .ant-tabs-bar {
+    margin-bottom:0px;
+    border-bottom:none;
+}
+.wea-tab .ant-tabs-tab-inner{
+	height: 48px;
+	line-height: 30px;
+	color: #484848;
+}
+.wea-tab .ant-tabs-tab-inner:hover,
+.wea-tab .ant-tabs-tab-active .ant-tabs-tab-inner{
+	color: #484848;
+}
+.wea-tab .ant-tabs-ink-bar{
+	color: #0695d9;
+	height: 3px;
+}
+.wea-tab .wea-search-tab{
+	height: 46px;
+	line-height: 46px;
+	padding-right: 10px;
+}
+
+.wea-tab .wea-search-tab .wea-input-focus .ant-input-wrapper>input{
+	width: 150px;
+    margin-right: -1px;
+}
+.wea-tab .wea-search-tab .ant-btn{
+	border-radius: 0;
+}
+
+.wea-tab .wea-advanced-search {
+    height: 28px;
+    text-align: center;
+    position: relative;
+    color: #474747;
+    transition: all 0s linear;
+    line-height: 1;
+}
+
+.wea-tab .wea-advanced-search:focus,
+.wea-tab .wea-advanced-search:hover{
+	color: #474747;
+	border: 1px solid #dadada;
+}
+/*消除波纹*/
+.wea-tab .ant-btn-clicked:after{
+	opacity: 0;
+}
+
+
+.wea-tab .wea-search-container {
+  width: 100%;
+  position: absolute;
+  top: 46px;
+  background-color: #fff;
+  z-index: 4;
+  border: solid 1px #dadada;
+  box-shadow: 0 0 2px #dadada;
+}
+
+.wea-tab .wea-search-container .wea-advanced-search{
+	height: 37px;
+	position: absolute;
+	right: 9px;
+	top: -37px;
+	border-bottom: 0;
+	border-radius: 0;
+	background-color: #fff;
+	box-shadow: 0px -1px 2px -1px #dadada;
+}
+.wea-tab .wea-search-container .wea-Drop-search{
+	display: block;
+	width: 45px;
+	height: 48px;
+	line-height: 48px;
+	padding-left: 15px;
+	font-size: 18px;
+	position: absolute;
+	right: 0;
+	top: -48px;
+	border-bottom: 0;
+	background-color: #fff;
+	border-left: 1px solid #dadada;
+	box-shadow: 0px -1px 2px -1px #dadada;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+.wea-tab .wea-search-container .wea-advanced-search>span{
+	position: relative;
+	top: -5px;
+}
+
+.wea-tab .wea-search-container .wea-search-group .wea-content{
+	padding-top: 15px;
+}
+.wea-tab .wea-search-container .wea-search-buttons{
+	border-top: 1px solid #dadada;
+	padding: 20px 0;
+}
+
+.wea-tab .wea-search-container .wea-search-buttons .ant-btn{
+	border-radius: 3px;
+	height: 28px;
+	width: 80px;
+}
+
+/*高级搜索 group*/
+.wea-tab .wea-search-container .wea-advanced-searchsAd {
+	max-height: 300px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.wea-tab .ant-menu{
+	background-color: #f4f4f4;
+}
+
+.wea-tab .ant-menu-horizontal {
+    border-bottom: 0;
+}
+
+.wea-tab .ant-menu-submenu-active,
+.wea-tab .ant-menu-submenu-title:hover {
+    background-color: transparent !important;
+}
+
+.wea-tab .mask-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: transparent;
+    height: 100%;
+    z-index: 3;
+}
+
+.wea-tab .mask-dark {
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    background-color: #787878;
+    filter:alpha(opacity=40);
+    -moz-opacity: .4;
+    -khtml-opacity: .4;
+    opacity: .4;
+}
+
+// editable-inline
+.wea-tab{
+  .wea-tab-edit {
+    .ant-tabs-new-tab {
+      display: none;
+    }
+    &>.ant-tabs-bar{
+      .ant-tabs-nav-container {
+        height: 47px;
+      }
+      .ant-tabs-ink-bar {
+        visibility: visible;
+      }
+      .ant-tabs-tab {
+        border: 0;
+        border-radius: 0;
+        background-color: transparent;
+      }
+      .wea-tab-edit-pane-nodel {
+        i.anticon-cross {
+          display: none;
+        }
+      }
+      .ant-tabs-tab-inner {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+      .ant-tabs-tab:not(.ant-tabs-tab-active):hover .ant-tabs-tab-inner,
+      .ant-tabs-tab-active .ant-tabs-tab-inner {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+      .wea-tab-edit-pane-nodel:not(.ant-tabs-tab-active):hover .ant-tabs-tab-inner,
+      .wea-tab-edit-pane-nodel.ant-tabs-tab-active .ant-tabs-tab-inner {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+
+    }
+  }
+}

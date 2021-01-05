@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<webservice-list>
+		<webservice>/services/</webservice>
+	</webservice-list>
+	<webservice-ip-list>
+		<ip>localhost</ip>
+		<ip>127.0.0.1</ip>
+		<ip>192.168.</ip>
+		<ip>10.</ip>
+		<ip>172.16.</ip>
+		<ip>172.17.</ip>
+		<ip>172.18.</ip>
+		<ip>172.19.</ip>
+		<ip>172.20.</ip>
+		<ip>172.21.</ip>
+		<ip>172.22.</ip>
+		<ip>172.23.</ip>
+		<ip>172.24.</ip>
+		<ip>172.25.</ip>
+		<ip>172.26.</ip>
+		<ip>172.27.</ip>
+		<ip>172.28.</ip>
+		<ip>172.29.</ip>
+		<ip>172.30.</ip>
+		<ip>172.31.</ip>
+	</webservice-ip-list>
+</root>

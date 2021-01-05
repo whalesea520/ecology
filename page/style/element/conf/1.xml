@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conf>
+	<id>1</id>
+<!--id与文件名需保持一至-->
+	<title>系统样式一</title>
+	<desc>系统样式一</desc>
+
+	<!--书写时请保证每行以下分号结尾-->
+	<css>.item{&#13;
+	background-color:#ffffff;&#13;
+}&#13;
+.header{&#13;
+	background-color:;&#13;
+	background-image:url('/images/homepage/style/style1/headBg_wev8.gif');&#13;
+	background-repeat:repeat-x;&#13;
+	background-position-x:left;&#13;
+	background-position-y:center;&#13;
+	border-top-style:none;&#13;
+	border-top-width:medium;&#13;
+	border-top-color:#C2D5FC;&#13;
+	border-bottom-style:none;&#13;
+	border-bottom-width:medium;&#13;
+	border-bottom-color:#ffffff;&#13;
+	border-left-style:none;&#13;
+	border-left-width:medium;&#13;
+	border-left-color:#C2D5FC;&#13;
+	border-right-style:none;&#13;
+	border-right-width:medium;&#13;
+	border-right-color:#C2D5FC;&#13;
+	height:28px;&#13;
+}&#13;
+.toolbar{&#13;
+	right:5px;&#13;
+	top:9px;&#13;
+}&#13;
+.toolbar ul{&#13;
+	margin:0px;&#13;
+	padding:0px;&#13;
+	list-style-type:none;&#13;
+}&#13;
+.toolbar ul li a{&#13;
+	float:left;&#13;
+	display:block;&#13;
+	padding-top:0px;&#13;
+	padding-bottom:0px;&#13;
+	padding-left:3px;&#13;
+	padding-right:3px;&#13;
+	text-decoration:underline;&#13;
+}&#13;
+.toolbar ul li{&#13;
+	float:left;&#13;
+	height:1px;&#13;
+}&#13;
+.toolbar ul li a{&#13;
+	height:0px;&#13;
+}&#13;
+.icon{&#13;
+	left:4px;&#13;
+	top:7px;&#13;
+}&#13;
+.title{&#13;
+	color:#000000;&#13;
+	font-style:normal;&#13;
+	font-size:12px;&#13;
+	font-weight:bold;&#13;
+	font-family:宋体;&#13;
+	left:27px;&#13;
+	top:8px;&#13;
+}&#13;
+.content{&#13;
+	background-color:;&#13;
+	background-image:url('');&#13;
+	background-repeat:repeat;&#13;
+	background-position-x:center;&#13;
+	background-position-y:center;&#13;
+	border-top-style:none;&#13;
+	border-top-width:medium;&#13;
+	border-top-color:#1d1616;&#13;
+	border-bottom-style:solid;&#13;
+	border-bottom-width:1px;&#13;
+	border-bottom-color:#C2D5FC;&#13;
+	border-left-style:solid;&#13;
+	border-left-width:1px;&#13;
+	border-left-color:#C2D5FC;&#13;
+	border-right-style:solid;&#13;
+	border-right-width:1px;&#13;
+	border-right-color:#C2D5FC;&#13;
+	overflow:auto;&#13;
+	padding-top:5px;&#13;
+	padding-bottom:5px;&#13;
+	padding-left:5px;&#13;
+	padding-right:5px;&#13;
+}&#13;
+.font{&#13;
+	color:#000000;&#13;
+	font-style:normal;&#13;
+	font-size:12px;&#13;
+	font-weight:normal;&#13;
+	font-family:Verdana;&#13;
+	text-decoration:none;&#13;
+}&#13;
+.sparator{&#13;
+	background-image:url('/images/homepage/style/style1/esparatorimg_wev8.gif');&#13;
+}&#13;
+.tab2{&#13;
+	background-image:url("/js/jquery/plugins/weavertabs2/tab2bg_wev8.gif");&#13;
+}&#13;
+.tab2unselected{&#13;
+	background-image:url("/js/jquery/plugins/weavertabs2/tab2bgtd_wev8.gif");&#13;
+	background-repeat:no-repeat;&#13;
+	cursor:pointer;&#13;
+	text-align:center;&#13;
+	padding-top:5px;&#13;
+	width:77px;&#13;
+	vertical-align:middle;
+	color:#000000;&#13;
+	font-style:normal;&#13;
+	font-family:宋体;&#13;
+	font-size:12px;&#13;
+	font-weight:normal;&#13;
+}&#13;
+.tab2selected{&#13;
+	background-image:url("/js/jquery/plugins/weavertabs2/tab2bgtdselected_wev8.gif");&#13;
+	background-repeat:no-repeat;&#13;
+	color:#ffffff;&#13;
+	font-style:normal;&#13;
+	font-size:12px;&#13;
+	font-family:宋体;&#13;
+	font-weight:normal;&#13;
+	text-align:center;&#13;
+	padding-top:5px;&#13;
+	width:77px;&#13;
+	cursor:pointer;&#13;
+	vertical-align:middle;
+}</css>
+	 <cornerTop>Right</cornerTop>
+	 <cornerBottom>Right</cornerBottom>	 
+	 <cornerTopRadian>8px</cornerTopRadian>
+	 <cornerBottomRadian>5px</cornerBottomRadian>	 
+	 <imgMode>page</imgMode>
+<!--flash page-->	 
+	 <titleState>show</titleState>
+<!--show hidden-->
+	 <settingState>show</settingState>
+<!--show hidden-->
+ <refreshIconState>show</refreshIconState>
+<!--show hidden-->
+ <settingIconState>show</settingIconState>
+<!--show hidden-->
+ <closeIconState>show</closeIconState>
+<!--show hidden-->
+	 <moreLocal>title</moreLocal>
+<!--show hidden-->
+
+	 <iconLogo>/images/homepage/element/stock_wev8.gif</iconLogo>
+	 <iconMenu/>
+	 <iconLock>/images/homepage/style/style1/lock1_wev8.gif</iconLock>
+	 <iconUnLock>/images/homepage/style/style1/unlock1_wev8.gif</iconUnLock>
+	 <iconRefresh>/images/homepage/style/style1/refresh1_wev8.gif</iconRefresh>
+	 <iconSetting>/images/homepage/style/style1/setting1_wev8.gif</iconSetting>
+	 <iconClose>/images/homepage/style/style1/close1_wev8.gif</iconClose>
+	 <iconMore>/images/homepage/style/style1/more1_wev8.gif</iconMore>
+	 <iconEsymbol>/images/homepage/style/style1/esymbol_wev8.gif</iconEsymbol>
+</conf>

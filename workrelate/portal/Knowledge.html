@@ -1,0 +1,589 @@
+<html>
+<head>
+<meta charset="GBK">
+<title></title>
+
+
+
+<script type="text/javascript" src="/wui/common/jquery/jquery.js"></script>
+<style>
+	
+body{
+	font-size: 12px;
+	font-family: "微软雅黑"	
+}
+.div1{
+	position: absolute;
+	display: none;
+	width:471px;height:427px;background: url('images/bg.png');
+}
+.div2{
+	margin-top: 20px;margin-left: 11px
+}
+.div3{
+ 	height:25px;
+	border-bottom: #C0C0C0 1px dashed;
+	margin-left: 8px;
+	margin-right: 5px;
+	padding-left: 5px;
+	padding-top: 10px;
+	padding-bottom: 1px;
+}
+.div4{
+	background: url('images/btnbg.png') no-repeat;
+	text-align: center;
+	float: right;
+	width: 47px;
+ 	height:18px;
+ 	margin-right: 4px;
+ 	cursor: pointer;
+}
+.close{
+	margin-top: 0px;margin-left: 423px;
+	background: url('images/icon-close.png') no-repeat;
+	width: 38px;
+	height: 20px;
+	cursor: pointer;
+}
+.div5{
+	height:355px;width:100%;overflow: auto;margin-top: 3px;margin-right: 8px;
+}
+.img1{
+	width:90%;
+	border: #fff 2px solid;
+}
+</style>
+<%@ include file="/secondwev/common/head.jsp" %>
+	</head>
+<body>
+<table border="0" align="center" style="width:100%;height: 100%;">
+<colgroup><col width="25%"/><col width="25%"/><col width="25%"/><col width="25%"/></colgroup>
+<tr>
+	<td>
+		<img class="img1" alt="" src="images/1.png" _index="1" onclick="doshow(1)" style="cursor: pointer;" title="标准 化工具">
+	</td>
+	<td>
+		<img class="img1" alt="" src="images/2.png" _index="2" onclick="doshow(2)" style="cursor: pointer;" title="解决方案">
+	</td>
+	<td>
+		<img class="img1" alt="" src="images/3.png" _index="3" onclick="doshow(3)" style="cursor: pointer;" title="客户案例">
+	</td>
+	<td>
+		<img class="img1" alt="" src="images/4.png" _index="4" onclick="doshow(4)" style="cursor: pointer;" title="构件库">
+	</td>
+</tr>
+<tr>
+	
+	<td>
+		<img class="img1" alt="" src="images/5.png" _index="5" _index="1" onclick="doshow(5)" style="cursor: pointer;" title="销售过程资料">
+	</td>
+	<td>
+		<img class="img1" alt="" src="images/6.png" _index="6" onclick="doshow(8)" style="cursor: pointer;" title="项目过程资料">
+	</td>
+	<td>
+		<img class="img1" alt="" src="images/7.png" _index="7" onclick="doshow(7)" style="cursor: pointer;" title="图片素材库">
+	</td>
+	<td>
+		<img class="img1" alt="" src="images/8.png" _index="8" onclick="doshow(0)" style="cursor: pointer;" title="知识分享">
+	</td>
+</tr>
+</table>
+
+	<div id="d1" class="div1">
+		<div class="close" onclick="dohide(1)" title="关闭"></div>
+		<div class="div2">
+			<img src="images/icon-title.png" align="absmiddle"/>新员工产品学习课件
+		</div>
+		<div style="height:355px;width:100%;overflow: auto;margin-top: 3px;margin-right: 8px;">
+		<div class="div3">
+			<div style="float: left;color:blue">产品专业知识类</div>
+		</div>
+		<div class="div3">
+			<div style="float: left;">1.销售新员工e-cology产品知识学习历程2011V2.0</div>
+			<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=990268&isOpenFirstAss=0')">查阅</div>
+		</div>
+		<div class="div3">
+			<div style="float: left;">2.泛微e-cology销售类新员工培训&学习指引2011V1.0</div>
+			<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=933245&isOpenFirstAss=0')">查阅</div>
+		</div>
+		<div class="div3">
+			<div style="float: left;">3.泛微培训课件之协同OA基础知识2011V1.0</div>
+			<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=933197&isOpenFirstAss=0')">查阅</div>
+		</div><div class="div3">
+			<div style="float: left;">4.泛微培训课件之e-cology销售过程客户常见问题(1000问)2012V1.0</div>
+			<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=1086795')">查阅</div>
+		</div><div class="div3">
+			<div style="float: left;">5.泛微协同办公应用平台e-cology卖点说明2012V1.0</div>
+			<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=1085963')">查阅</div>
+		</div><div class="div3">
+			<div style="float: left;">6.泛微协同办公应用平台(e-cology)产品演示脚本2012V1.0</div>
+			<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=1086033')">查阅</div>
+		</div>
+		<div class="div3">
+			<div style="float: left;">7.泛微e-cology产品演示脚本html版2011V1.0</div>
+			<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=933223&isOpenFirstAss=0')">查阅</div>
+		</div>	
+		<div class="div3">
+			<div style="float: left;">8.泛微培训课件之e-cology竞争对手分析2011V1.0</div>
+			<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=933225')">查阅</div>
+		</div>	
+		<div class="div3">
+			<div style="float: left;">9.泛微协同办公应用平台e-cology基本应用培训提纲和练习2011V1.0</div>
+			<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=946042&isOpenFirstAss=0')">查阅</div>
+		</div>	
+		<div class="div3">
+			<div style="float: left;">10.泛微协同办公应用平台e-cology产品自学指引2010V2.1</div>
+			<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=849428&isOpenFirstAss=0')">查阅</div>
+		</div>		
+		
+		<div class="div3">
+			<div style="float: left;color:blue">销售工作体系类</div>
+		</div>
+		<div class="div3">
+			<div style="float: left;">1.泛微分支机构发展培训课件2012V1.0</div>
+			<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=1086793')">查阅</div>
+		</div>
+		<div class="div3">
+			<div style="float: left;">2.泛微销售人员入职培训指导手册2012V1.0</div>
+			<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=1086794')">查阅</div>
+		</div>
+		<div class="div3">
+			<div style="float: left;">3.泛微销售代表每日工作体系2012V1.0</div>
+			<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=1086803')">查阅</div>
+		</div>
+		<div class="div3">
+			<div style="float: left;">4.泛微客户经理每日工作体系2012V1.0</div>
+			<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=1086801')">查阅</div>
+		</div>
+		<div class="div3">
+			<div style="float: left;">5.泛微销售管理之每日工作清单2012V1.0</div>
+			<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=1086798')">查阅</div>
+		</div>
+		<div class="div3">
+			<div style="float: left;">6.泛微销售管理之销售机会每日跟进表2012V1.0</div>
+			<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=1086800')">查阅</div>
+		</div>	
+		</div>
+		
+			
+	</div>
+	
+	<div id="d2" class="div1">
+		<div class="close" onclick="dohide(2)" title="关闭"></div>
+		<div class="div2">
+			<img src="images/icon-title.png" align="absmiddle"/>标准基础销售工具
+		</div>
+		<div class="div5">
+			<div class="div3">
+				<div style="float: left;">1.泛微销售标准化历程图2011V2.0--e-cology</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=1019654&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">2.泛微公司介绍(Introduction to Weaver Software)PPT版2011V2.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=1040776&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">3.泛微公司介绍word版2011V2.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=992841&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">4.上海泛微网络科技股份有限公司资质文件(word版)2011V6.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=1024739&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">5.2010泛微e-cology产品模块功能清单－final-2010.1.1</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?isrequest=1&id=881149&requestid=-1&desrequestid=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">6.泛微协同办公应用平台(e-cology)解决方案2011V1.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=948863&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">7.××协同办公OA平台项目解决方案书2010V1.0[通用模板][技术标]</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=636364&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">8.Introduction to Weaver e-cology--(泛微产品介绍英文版)</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=529985&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;color:blue">商务类：</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">1.泛微e-cology相关产品价格体系2011V1.0_最终客户版</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=953325&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">2.2010泛微协同办公系统(e-cology)报价书-标准模板-final-2010.1.1</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?isrequest=1&id=881155')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">3.2011泛微协同办公平台(e-cology)产品购买合同-标准模版-</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?isrequest=1&id=1028741&requestid=-1&desrequestid=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">4.2011泛微协同办公平台(e-cology)服务合同-标准模板--final-V2.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?isrequest=1&id=1028743&requestid=-1&desrequestid=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">5.2011泛微协同办公平台(e-cology)报价书-标准模板-final-V2.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?isrequest=1&id=1028737&requestid=-1&desrequestid=0')">查阅</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="d3" class="div1">
+		<div class="close" onclick="dohide(3)" title="关闭"></div>
+		<div class="div2">
+			<img src="images/icon-title.png" align="absmiddle"/>专题方案资料工具
+		</div>
+		<div class="div5">
+			<div class="div3">
+				<div style="float: left;color:blue">政务类：</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">1.泛微协同政务办公平台(e-cology)解决方案2011V1.0--ppt版</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=1019648')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">2.××协同政务办公平台项目解决方案书2010V1.0[通用模板][技术标]</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=648942&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;color:blue">专题类：</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">1.泛微软件_集团管控解决方案_培训课件_2011V1.2</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=959269&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">2.泛微软件_流程管理解决方案_培训课件_2011V1.2</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=959281&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">3.泛微软件_知识管理解决方案_培训课件_2011V1.2</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=959280&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">4.泛微软件_信息门户解决方案_培训课件_2011V1.2</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=959275&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">5.泛微协同管理-集成整合应用解决方案-培训课件2011V1.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=959262&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">6.泛微协同管理之合同&项目管理解决方案2010V1.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=891364&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">7.泛微信息整合门户c-Portal解决方案2010V1.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=884569&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">8.泛微协同流程管理c-WFM解决方案2010V1.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=853750&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">10.泛微协同知识管理c-KM解决方案2010V1.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=853746&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">11.泛微协同移动办公平台(e-mobile)解决方案2011V2.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=1040594&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">12.泛微ISO质量文件管理解决方案2009V1.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=357736&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;color:blue">集成类：</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">1.泛微协同OA(e-cology)集成应用解决方案2010V1.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=732812&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">2.泛微协同OA与SAP集成应用解决方案2010V1.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=879855&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">3.泛微协同OA与Oracle-EBS集成应用解决方案2010V1.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=879872&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">4.泛微协同OA(e-cology)与用友NC集成应用解决方案2010V1.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=847903&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">5.泛微协同OA(e-cology)与金蝶ERP(EAS)集成应用解决方案2009V1.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=470905&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">6.泛微协同OA与金蝶K3集成应用解决方案2011V1.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=1001596&isOpenFirstAss=0')">查阅</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="d4" class="div1">
+		<div class="close" onclick="dohide(4)" title="关闭"></div>
+		<div class="div2">
+			<img src="images/icon-title.png" align="absmiddle"/>行业方案资料工具
+		</div>
+		<div class="div5">
+			<div class="div3">
+				<div style="float: left;">泛微协同OA行业解决方案知识地图--new</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=1000550&isOpenFirstAss=0')">查阅</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="d5" class="div1">
+		<div class="close" onclick="dohide(5)" title="关闭"></div>
+		<div class="div2">
+			<img src="images/icon-title.png" align="absmiddle"/>成功客户的案例工具
+		</div>
+		<div class="div5">
+			<div class="div3">
+				<div style="float: left;">客户名录：泛微成功客户名单代表(20111031)</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=85463&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">简单案例：泛微协同办公应用平台e-cology应用案例介绍(按行业)</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=938849&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">详细案例：泛微成功客户详细案例汇总地图2012V1.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=1085111')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">集成案例：泛微协同办公应用平台e-cology集成应用代表案例2009V2.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=349367&isOpenFirstAss=0')">查阅</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="d6" class="div1">
+		<div class="close" onclick="dohide(6)" title="关闭"></div>
+		<div class="div2">
+			<img src="images/icon-title.png" align="absmiddle"/>竞争对手分析资料
+		</div>
+		<div class="div5">
+			<div class="div3">
+				<div style="float: left;color:red">1.泛微e-cology产品与竞争对手对比分析2012V1.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=1086216&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;color:red">2.OA应用效果客户名单汇总表20111228【含替换】---重要</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=1084865&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">3.泛微e-cology产品VS致远A8-M分析报告2012V1.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=1086220')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">4.泛微与蓝凌产品对比分析2012V1.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=1086218')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">5.泛微协同OA(e-cology)与金和C6对比分析报告2010V1.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=1060754')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">6.泛微协同OA(e-cology)与金和C6对比分析报告--概要2010V1.0.xls</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=1060231')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">7.泛微产品与源天比较分析报告2010V1.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=829379&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">8.泛微e-cology与万户ezoffice对比分析报告2010V2.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=867763&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">9.泛微e-office竞争对手产品对比分析汇总表2011V2.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=1045339&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">10.泛微培训课件之e-cology竞争对手分析2011V1.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=933225&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">11.泛微培训课件---竞争对手分析之通达科技2011V1.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=933194&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">12.泛微培训课件---竞争对手分析之金和软件2011V1.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=933195&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">13.泛微培训课件---竞争对手分析之致远协创2011V1.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=933192&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">14.协达C8协同管理平台产品及报价资料-竞争对手资料</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=607114&isOpenFirstAss=0')">查阅</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="d7" class="div1">
+		<div class="close" onclick="dohide(7)" title="关闭"></div>
+		<div class="div2">
+			<img src="images/icon-title.png" align="absmiddle"/>演示demo库资料
+		</div>
+		<div class="div5">
+			<div class="div3">
+				<div style="float: left;">1.泛微e-cology产品DEMO演示站点汇总表</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=1007460&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">2.泛微e-cology各Demo站点部署环境说明2011V1.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=798196&isOpenFirstAss=0')">查阅</div>
+			</div>
+		</div>
+		
+	</div>
+	
+	<div id="d8" class="div1">
+		<div class="close" onclick="dohide(8)" title="关闭"></div>
+		<div class="div2">
+			<img src="images/icon-title.png" align="absmiddle"/>产品技术类的资料
+		</div>
+		<div class="div5">
+			<div class="div3">
+				<div style="float: left;">1.泛微协同办公应用平台e-cology接口集成手册2010V1.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=845760&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">2.e-cology六维权限管控模型</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=570465&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">3.泛微协同办公应用平台e-cology应用部署方案2009V2.5</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=337030&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">4.泛微协同办公应用平台e-cology数据迁移方案2009V1.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=310799&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">5.泛微协同办公应用平台e-cology权限体系介绍</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=293561&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">6.泛微协同办公应用平台e-cology运行服务器配置要求及建议2009V1.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=291448&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">7.泛微协同办公应用平台e-cology性能测试报告2009V1.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=302914&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">8.泛微协同办公应用平台(e-cologyV5.0压力测试报告--VM版</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=876648&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">9.泛微协同办公应用平台e-cology系统安全解决方案2010V1.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=848721&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">10.泛微协同办公应用平台e-cology系统重装迁移方案2010V1.0</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=854531&isOpenFirstAss=0')">查阅</div>
+			</div>
+		</div>
+		
+	</div>
+	
+	
+	<div id="d9" class="div1">
+		<div class="close" onclick="dohide(9)" title="关闭"></div>
+		<div class="div2">
+			<img src="images/icon-title.png" align="absmiddle"/>产品基础性的资料
+		</div>
+		<div class="div5">
+			<div class="div3">
+				<div style="float: left;">1.泛微e-cology产品应用结构图</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=845219&isOpenFirstAss=0')">查阅</div>
+			</div>
+			<div class="div3">
+				<div style="float: left;">2.泛微协同办公应用平台e-cology产品自学指引2011V1.1</div>
+				<div class="div4" onclick="doclick('/docs/docs/DocDsp.jsp?id=1026404&isOpenFirstAss=0')">查阅</div>
+			</div>
+		</div>
+		
+	</div>
+
+
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		$(".img1").bind('mouseover',function(){
+			var _index = $(this).attr("_index");
+			$(this).attr('src','images/'+_index+''+_index+'.png');
+		}).bind('mouseout',function(){
+			var _index = $(this).attr("_index");
+			$(this).attr('src','images/'+_index+'.png');
+		});
+		
+		setwidth();
+	});
+	
+	$(window).resize(function(){
+		setwidth();
+	});
+	function setwidth(){
+		var w = Math.round($(window).width()/4*0.9);
+		$(".img1").width(w);
+	}
+	
+	
+	function doshow(index){
+		/**
+		var w = document.body.clientWidth/2-236 +"px";	
+		var h = document.body.clientHeight/2-214 +"px";
+		$(".div1").hide();
+		$("#d"+index).css("left",w);
+		$("#d"+index).css("top","65px");
+		$("#d"+index).slideDown(500);
+		*/
+		var url = "/knowledgeshare/data/DataMain.jsp?searchtype="+index;
+		if(index==7) url="/knowledgeshare/filelibrary/index.jsp";
+		openOperateWindow(url);
+	}
+	function openOperateWindow(url){
+		//openFullWindowHaveBar(url);
+		
+		  var redirectUrl = url ;
+		  var width = screen.width ;
+		  var height = screen.height ;
+		  var top = height/2 - 260;
+		  //alert(height+'-'+top);
+		  var left = width/2 - 455;
+		  var width = 910 ;
+		  var height = 500 ;
+		  var szFeatures = "" ;
+		  szFeatures +="top="+top+"," ; 
+		  szFeatures +="left="+left+"," ;
+		  szFeatures +="width="+width+"," ;
+		  szFeatures +="height="+height+"," ;
+		  //szFeatures +="directories=no," ;
+		  szFeatures +="status=yes,toolbar=no,location=no," ;
+		  //szFeatures +="menubar=no," ;
+		  szFeatures +="scrollbars=yes," ;
+		  szFeatures +="resizable=yes" ; 
+		  window.open(redirectUrl,"",szFeatures) ;
+		  
+	}
+	function dohide(index){
+		$("#d"+index).slideUp(200);
+	}
+	function doclick(urlstr){
+		window.open(urlstr);
+	}
+</script>
+</html>

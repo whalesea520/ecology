@@ -1,0 +1,2 @@
+alter table MAILRESOURCEFILE modify FILETYPE VARCHAR2(100)
+/

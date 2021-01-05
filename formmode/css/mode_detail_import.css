@@ -1,0 +1,41 @@
+
+TABLE.viewform {
+	WIDTH: 100%;
+	border:0;/**/
+	margin:0;
+}
+
+TABLE.viewform A {
+	COLOR: #123885; TEXT-DECORATION: none
+}
+TABLE.viewform A:hover {
+	COLOR: red!important; TEXT-DECORATION: none
+}
+
+TABLE.viewform A:link {
+	COLOR: #123885; TEXT-DECORATION: none
+}
+
+TABLE.viewform A:visited {
+	COLOR: #123885; TEXT-DECORATION: none}
+
+
+TABLE.viewform TR {
+	height:35px;
+}
+
+TABLE.viewform TR.Title TH {
+	TEXT-INDENT: -1pt; TEXT-ALIGN: left;
+}
+TABLE.viewform TR.Spacing {
+	HEIGHT: 0px
+}
+TABLE.viewform TD {
+	padding:0 0 0 5px;
+}
+
+TABLE.viewform TD.Line {
+	BACKGROUND-COLOR: rgb(216, 236, 239); 
+	BACKGROUND-REPEAT: repeat-x; 
+	HEIGHT: 1px
+}

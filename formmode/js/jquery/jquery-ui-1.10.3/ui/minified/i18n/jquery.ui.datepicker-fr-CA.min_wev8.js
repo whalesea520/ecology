@@ -1,0 +1,4 @@
+﻿/*! jQuery UI - v1.10.3 - 2013-05-03
+* http://jqueryui.com
+* Copyright 2013 jQuery Foundation and other contributors; Licensed MIT */
+jQuery(function(t){t.datepicker.regional["fr-CA"]={closeText:"Fermer",prevText:"Pr茅c茅dent",nextText:"Suivant",currentText:"Aujourd'hui",monthNames:["janvier","f茅vrier","mars","avril","mai","juin","juillet","ao没t","septembre","octobre","novembre","d茅cembre"],monthNamesShort:["janv.","f茅vr.","mars","avril","mai","juin","juil.","ao没t","sept.","oct.","nov.","d茅c."],dayNames:["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"],dayNamesShort:["dim.","lun.","mar.","mer.","jeu.","ven.","sam."],dayNamesMin:["D","L","M","M","J","V","S"],weekHeader:"Sem.",dateFormat:"yy-mm-dd",firstDay:0,isRTL:!1,showMonthAfterYear:!1,yearSuffix:""},t.datepicker.setDefaults(t.datepicker.regional["fr-CA"])});

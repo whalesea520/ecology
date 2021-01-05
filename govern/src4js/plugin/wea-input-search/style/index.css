@@ -1,0 +1,69 @@
+.wea-input-focus{
+	/*min-width: 180px;*/
+    height: 28px;
+    line-height: 28px;
+    position: relative;
+}
+.wea-input-focus .ant-btn {
+    border-radius:0 0 0 0;
+    vertical-align:middle;
+}
+
+.wea-input-focus .ant-input {
+    border-radius:0 0 0 0;
+    padding-right: 28px;
+    /*border-right: 0px solid transparent !important;*/
+    vertical-align: middle;
+}
+
+.wea-input-focus .ant-btn-icon-only {
+    border-left: 0px solid transparent !important;
+}
+
+/*wea-input-focus����*/
+.wea-input-focus{
+    display: inline-block;
+}
+
+.ant-input-wrapper {
+    width: 100%;
+}
+.wea-input-focus .icon-coms-Clear {
+    position: absolute;
+    right: 32px;
+    top: 8px;
+    color: #e2e2e2;
+    display: none;
+    cursor: pointer;
+}
+
+.wea-input-focus:hover .icon-coms-Clear {
+    display: inline-block;
+}
+
+.wea-input-focus:hover .ant-btn,
+.wea-input-focus:hover .ant-input-wrapper>input{
+    border-color: #57c5f7;
+}
+.wea-input-focus .ant-input-wrapper>input{
+    box-shadow: none;
+    /*width: 150px;*/
+    /*box-shadow: 0 0 0 2px rgba(45,183,245,.2);*/
+}
+/*����focusʱ����Ӱ*/
+.wea-input-focus .ant-search-btn{
+    color: #57c5f7;
+    /*border-color: #57c5f7;*/
+}
+
+.wea-input-focus> .wea-input-focus-btn{
+    height: 28px;
+    border: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.wea-input-focus i {
+    color: #b2b2b2;
+}

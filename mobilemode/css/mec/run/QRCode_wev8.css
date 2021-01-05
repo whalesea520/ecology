@@ -1,0 +1,11 @@
+.qrcodeContainer{
+	padding: 5px;
+	text-align: center;
+}
+.Design_QCCode_Tip{
+	color: #bbb;
+	font-size: 14px;
+	font-family: 'Microsoft Yahei',Arial, Helvetica, sans-serif;
+	padding: 4px 0px 4px 17px;	
+	text-align: left;
+}

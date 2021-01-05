@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow workflowId="">
+	<!-- name. 传递的参数,name不能修改.name唯一   column 表单(数据库) 对应的字段名,多个字段需要相同赋值,可以用逗号隔开,明细表字段使用dt##1##,其中dt##明细表几##  defaultV 默认值 -->
+	<!-- 可以使用指定class进行值的获取,实现字段联动与转化
+		class 指定类名
+		method 指定方法
+		static 是否是静态方法
+		ref 指定通过对于某个字段进行转化
+	 -->
+	<field name="userId" column=""></field>
+	<field name="workcode" column=""></field>
+	<field name="departmentId" column=""></field>
+	<field name="subcompanyId" column=""></field>
+	<field name="manager" column=""></field>
+	<field name="submitDate" column=""></field>
+	
+	<!-- noInteractive 针对费用报销中可以指定不需要交互的字段,本身哪些字段交互在程序中已经定义写死了 -->
+	<!-- 费用承担类型(个人　部门　分部　成本中心).暂时不支持. -->
+	<field name="budgettype" column=""  defaultV="0" defaultN="个人" noInteractive="1"></field>
+	<!-- 费用承担人 -->
+	<field name="resourceid" column=""></field>
+	<!-- 费用科目 -->
+	<field name="feetypeid" column="" ></field>
+	<!-- 报销日期 -->
+	<field name="occurdate" column=""></field>
+	<!-- 报销金额 -->
+	<field name="amount" column=""></field>
+	<!-- 事由 -->
+	<field name="description" column="" ></field>
+	<!-- 相关客户 -->
+	<field name="crm" column="" defaultV="" defaultN="" noInteractive="1"></field>
+	<!-- 报销方式 -->
+	<field name="debitledgeid" column="" defaultV="0" defaultN="报销方式"></field>
+	<!-- 附件数 -->
+	<field name="accessory" column="" defaultV="1" defaultN="附件数"></field>
+	
+	<!-- 可以使用指定class进行值的获取,实现字段联动与转化
+		class 指定类名
+		method 指定方法
+		static 是否是静态方法
+		ref 指定通过对于某个字段进行转化. 如果没有ref 则是无参方法.
+		如果class上下有依赖关系,必须按照顺序.
+	 -->
+	 
+	<!-- 其他一些值,通过固定参数指定,或者通过 class指定. 以下一个举例 -->
+	<!-- 合同编号 -->
+	<field name="contractCode" column="" class="weaver.fullsearch.CustomFieldUtil" method="getContractCode" static="1"></field>
+	
+</workflow>

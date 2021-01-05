@@ -1,0 +1,2 @@
+update imagefile set miniimgpath=''
+/

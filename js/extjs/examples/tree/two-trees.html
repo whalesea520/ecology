@@ -1,0 +1,46 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Drag and Drop between 2 TreePanels</title>
+<link rel="stylesheet" type="text/css" href="../../resources/css/ext-all_wev8.css" />
+
+    <!-- GC -->
+ 	<!-- LIBS -->
+ 	<script type="text/javascript" src="../../adapter/ext/ext-base_wev8.js"></script>
+ 	<!-- ENDLIBS -->
+
+    <script type="text/javascript" src="../../ext-all_wev8.js"></script>
+<script type="text/javascript" src="two-trees_wev8.js"></script>
+
+<!-- Common Styles for the examples -->
+<link rel="stylesheet" type="text/css" href="../examples_wev8.css" />
+<style type="text/css">
+    #tree, #tree2 {
+    	float:left;
+    	margin:20px;
+    	border:1px solid #c3daf9;
+    	width:250px;
+    	height:300px;
+    }
+    .folder .x-tree-node-icon{
+		background:transparent url(../../resources/images/default/tree/folder_wev8.gif);
+	}
+	.x-tree-node-expanded .x-tree-node-icon{
+		background:transparent url(../../resources/images/default/tree/folder-open_wev8.gif);
+	}
+    </style>
+</head>
+<body>
+<script type="text/javascript" src="../examples_wev8.js"></script><!-- EXAMPLES -->
+<h1>Drag and Drop betweens two TreePanels</h1>
+<p>The TreePanels have a TreeSorter applied in "folderSort" mode.</p>
+<p>Both TreePanels are in "appendOnly" drop mode since they are sorted.</p>
+<p>Drag along the edge of the tree to trigger auto scrolling while performing a drag and drop.</p>
+<p>The data for this tree is asynchronously loaded with a JSON TreeLoader.</p>
+<p>The js is not minified so it is readable. See <a href="two-trees_wev8.js">two-trees_wev8.js</a>.</p>
+
+<div id="tree"></div>
+<div id="tree2"></div>
+
+</body>
+</html>

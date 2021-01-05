@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<base>
+		<rules>
+			<rule>[^a-zA-Z]exec[^a-zA-Z]|[^a-zA-Z]insert[^a-zA-Z]into[^a-zA-Z].*?values|[^a-zA-Z]delete[^a-zA-Z].*?from|[^a-zA-Z]update[^a-zA-Z].*?set|truncate[^a-zA-Z]</rule>
+			<rule>DBMS_LOCK|DBMS_PIPE|xp_cmdshell|xp_dirtree|UTL_HTTP|USER_LOCK|EXTRACTVALUE|UPDATEXML</rule>
+			<rule>(select|union|SLEEP|WAITFOR|CHR|UPDATEXML|ascii)(\(|\+|/|--|\*|\[|\{)</rule>
+			<rule>(SLEEP|WAITFOR|UPDATEXML|ascii)(\s)</rule>
+			<rule>(union)(\s).*?select</rule>
+		</rules>
+	</base>
+</root>

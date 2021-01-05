@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+  <forbidden-url>
+		<urls>
+			<url>/cpu.jsp</url>
+			<url>/urltime.jsp</url>
+			<url>/forbiddenUrl.jsp</url>
+		</urls>
+	</forbidden-url>
+</root>

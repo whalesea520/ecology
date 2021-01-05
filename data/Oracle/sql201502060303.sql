@@ -1,0 +1,2 @@
+update workflow_requestbase set requestnamenew=requestname
+/

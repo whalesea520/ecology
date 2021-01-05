@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+
+<title>小e助手</title>
+<link rel="stylesheet" href="/mobile/plugin/fullsearch/permanent/css/jquery.mobile-1.1.1.min_wev8.css" />
+<link rel="stylesheet" href="/mobile/plugin/fullsearch/permanent/css/animate.min.css" />
+<link rel="stylesheet" href="/mobile/plugin/fullsearch/permanent/css/toast_wev8.css" />
+</head>
+<body style="background-color:#053E73;margin: 0;"> 
+	<div style="background-color:red;height:1px;width:100%;position: absolute;bottom: 0px;"></div>
+</body>
+</html>
+<script	type="text/javascript" src="/mobile/plugin/fullsearch/permanent/js/jquery-1.7.1.min_wev8.js"></script>
+<script type="text/javascript" src="/mobile/plugin/fullsearch/permanent/js/siriwave_wev8.js"></script>
+<script type="text/javascript" src="/mobile/plugin/fullsearch/permanent/js/jquery.scrollTo.js"></script>
+<script type="text/javascript" src="/mobile/plugin/fullsearch/permanent/js/script_wev8.js"></script>
+<script type="text/javascript" src="/mobile/plugin/fullsearch/permanent/js/md5_wev8.js"></script>
+<script type="text/javascript" id="voiceHtml">
+	var storage = window.localStorage;
+	var supportStorage=isLocalStorageSupported();
+	console.log("是否支持Storage:"+supportStorage);
+	
+	try{
+	
+	$(function(){
+
+		var hasLoad=false;//是否需要重新加载
+		var forceRefresh=false;//是否强制刷新
+		var jsLoadCount=0;//正在加载中的js数量
+		var readHtmlInterval;//定时检测服务端代码是否变化
+		
+		//支持storage
+		if(supportStorage){
+			var loadHtmlResult=true;
+			if(storage.getItem("weaver-voice-html")&&storage.getItem("weaver-voice-html")!=""){
+		 		loadHtmlResult=loadResources(storage.getItem("weaver-voice-html"),true);
+		 		storage.setItem("weaver-voice-html-refresh",false);
+		 		console.log("缓存加载");
+			}
+			if(loadHtmlResult){
+				loadUser();
+			}
+	 	}else{
+	 		loadUser();
+	 	}
+	 	
+		//检测当前登录用
+		function loadUser(){
+			//判断用户是否改变
+			jQuery.ajax({
+				url: "/mobile/plugin/fullsearch/ajaxVoice.jsp?type=getUserInfo&random="+new Date().getTime(),//目标页面
+				dataType: "json",
+				type: "GET",
+				success: function(data)
+				{
+					//获取到当前用户.
+					var userId=data.uid;
+					if(userId){
+						if(storage.getItem("weaver-voice-html-user")&&storage.getItem("weaver-voice-html-user")!=""){
+							if(userId==storage.getItem("weaver-voice-html-user")){
+								console.log("相同用户,无需强制刷新");
+							}else{
+								console.log("不同用户,需要强制刷新");
+								storage.setItem("weaver-voice-html-user",userId);
+								forceRefresh=true;
+							}
+						}else{//首次加载.
+							storage.setItem("weaver-voice-html-user",userId);
+						}
+					}
+					loadHtml();
+				},
+				error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    //setTimeout(function(){loadUser()},1000);
+                     writeErrorMsg("获取getUserInfo异常");
+               	}
+			});
+		}
+		
+		//加载代码
+		function loadHtml(){
+			//检测版本.
+			jQuery.ajax({
+				url: "/mobile/plugin/fullsearch/voice.jsp?isFullE=1&random="+new Date().getTime(),//目标页面
+				dataType: "html",
+				type: "GET",
+				success: function(html)
+				{	
+					var hasErrorNo=false;
+					try{
+						var errObj=JSON.parse(html);
+						hasErrorNo=true;
+						writeErrorMsg("loadHtml-voice.jsp返回值为json串");
+					}catch(e){}
+					
+					
+					//判断非正确的jsp内容
+					if(!hasErrorNo){
+						if($(html).find("#contentDiv").length>0&&$(html).find("#msgContentDiv").length>0){
+							
+						}else{
+							writeErrorMsg("loadHtml-voice.jsp返回值为非此jsp内容");
+							hasErrorNo=true;
+						}
+					}
+					
+					if(hasErrorNo){
+						//有报错,1秒后重新加载
+						//setTimeout(function(){loadHtml()},1000);
+					}else{
+					 	//html保存到localstore
+					 	if(supportStorage){
+					 		var needFresh=true;
+					 		storage.setItem("weaver-voice-html-time",new Date().getTime());
+					 		//本次内容加密
+					 		var currentMd5=jQuery.md5(html);
+					 		if(forceRefresh){
+					 			//强制刷新....
+					 			storage.setItem("weaver-voice-html",html);
+					 			storage.setItem("weaver-voice-html-md5",currentMd5);
+					 			storage.setItem("weaver-voice-html-refresh",false);
+					 			location=window.location.href;
+					 			return;
+					 		}else{
+						 		//从缓存中加载原来的md5值.
+						 		if(storage.getItem("weaver-voice-html-md5")&&storage.getItem("weaver-voice-html-md5")!=""){
+						 			if(currentMd5==storage.getItem("weaver-voice-html-md5")){
+						 				console.log("内容相同,无需重载页面");
+						 				needFresh=false;
+						 			}else{
+						 				console.log("内容不同,重载页面");
+						 				needFresh=false;
+						 				//标识变化,下次加载
+						 				storage.setItem("weaver-voice-html",html);
+						 				storage.setItem("weaver-voice-html-md5",currentMd5);
+						 				storage.setItem("weaver-voice-html-refresh",needFresh);
+						 				setTimeout(function(){
+											location=window.location.href;
+										},200);
+					 					return;
+						 			}
+						 		}else{
+						 			console.log("首次加载页面");
+						 			needFresh=false;
+						 			//为空. 首次加载
+						 			storage.setItem("weaver-voice-html",html);
+						 			storage.setItem("weaver-voice-html-md5",currentMd5);
+						 			storage.setItem("weaver-voice-html-refresh",needFresh);
+						 		}
+					 		}
+					 	}
+					}
+				 	if(!hasLoad){
+				 		console.log("ajax加载");
+					 	loadResources(html,false);
+				 	}
+				},
+				error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    writeErrorMsg("loadHtml-加载voice.jsp异常");
+                    //setTimeout(function(){loadHtml()},1000);
+               	}
+			});
+		}		
+		
+		//渲染资源
+		function loadResources(html,isCache){
+			var commonPath="/mobile/plugin/fullsearch/permanent";
+			var ignoreCss=["/css/jquery.mobile-1.1.1.min_wev8.css","/css/animate.min.css","/css/toast_wev8.css"];
+			var ignoreJs=["/js/jquery-1.7.1.min_wev8.js","/js/siriwave_wev8.js","/js/jquery.scrollTo.js","/js/script_wev8.js"];
+			
+			//判断是否有报错
+			var hasErrorNo=false;
+			try{
+				var errObj=JSON.parse(html);
+				hasErrorNo=true;
+			}catch(e){}
+			
+			//判断非正确的jsp内容
+			if(!hasErrorNo){
+				if($(html).find("#contentDiv").length>0&&$(html).find("#msgContentDiv").length>0){
+					
+				}else{
+					hasErrorNo=true;
+				}
+			}
+			
+			if(hasErrorNo){
+				var voiceHtmlRefreshTimes=storage.getItem("weaver-voice-error-refresh-times");
+				if(!voiceHtmlRefreshTimes) voiceHtmlRefreshTimes=1;
+				try{
+					voiceHtmlRefreshTimes=parseInt(voiceHtmlRefreshTimes)
+				}catch(e){}
+				//刷新3次
+				if(voiceHtmlRefreshTimes<4){
+					storage.setItem("weaver-voice-error-refresh-times",++voiceHtmlRefreshTimes);
+					if(isCache){
+						storage.removeItem("weaver-voice-html");
+						storage.removeItem("weaver-voice-html-md5");
+						storage.removeItem("weaver-voice-html-refresh");
+						storage.removeItem("weaver-voice-html-user");
+					}
+					//800毫秒后重刷页面
+					setTimeout(function(){
+						location=window.location.href;
+					},800);
+				}else{
+					writeErrorMsg("多次重载后还是异常");
+					if(isCache){
+						storage.removeItem("weaver-voice-html");
+						storage.removeItem("weaver-voice-html-md5");
+						storage.removeItem("weaver-voice-html-refresh");
+						storage.removeItem("weaver-voice-html-user");
+						storage.removeItem("weaver-voice-html-time");
+					}
+					storage.removeItem("weaver-voice-error-refresh-times");
+					alert("页面加载异常,请重新进入");
+				}
+				return false;
+			}else{
+				hasLoad=true;
+				
+				storage.removeItem("weaver-voice-error-refresh-times");
+				var htmlObj=$(html);
+				htmlObj.each(function(j,item){
+					var tagName=this.tagName;
+					if(tagName){
+						if(tagName=="LINK"){
+							var href=this.href;
+							var needAppend=true;
+							for(k = 0,len=ignoreCss.length; k < len; k++) {
+								if(href.indexOf(commonPath+ignoreCss[k])>-1){
+									needAppend=false;
+									ignoreCss.splice(k,1);
+									break;
+								}
+							}
+							if(needAppend){
+								//console.log(this);
+								$("head").append(this);
+							}
+						}else if(tagName=="DIV"||tagName=="SCRIPT"){
+							
+							var needAppend=true;
+							if(tagName=="SCRIPT"){
+								var href=this.src;
+								if(href!=""){
+									for(k = 0,len=ignoreJs.length; k < len; k++) {
+										if(href.indexOf(commonPath+ignoreJs[k])>-1){
+											needAppend=false;
+											ignoreJs.splice(k,1);
+											break;
+										}
+									}
+								}
+							}
+							if(needAppend){
+								//console.log(this);
+								if(tagName=="SCRIPT"){
+									if(this.src==""){
+										loadPageScript(this);
+									}else{
+										loadJSFile(this.src);
+									}
+								}else{
+									$("body").append(this);
+								}
+							}
+						}
+					}
+				});
+				$("html").addClass("ui-mobile");
+				$("body").addClass("ui-mobile-viewport ui-overlay-c");
+				$("#main").addClass("ui-page ui-body-c ui-page-active");
+				return true;
+			}
+		}
+		
+		/*等待js加载完,运行页面js*/
+		function loadPageScript(obj){
+			//console.log("jsLoadCount:"+jsLoadCount);
+			if(jsLoadCount<=0){
+				$("body").append(obj);
+			}else{
+				setTimeout(function(){loadPageScript(obj)},100);
+			}
+		}
+		
+		/*加载JS文件,url:文件路径,加载成功回调判断*/
+	    function loadJSFile(url) {
+	    	jsLoadCount++;
+	        var fileObj=document.createElement('script');
+	        fileObj.src = url;
+	        fileObj.onload = fileObj.onreadystatechange = function() {
+	          if (!this.readyState || 'loaded' === this.readyState || 'complete' === this.readyState) {
+	            jsLoadCount--;
+	          }
+	        }
+	        document.getElementsByTagName('body')[0].appendChild(fileObj);
+	    }
+    	
+    	
+	});
+	
+	}catch(e){
+		console.log(e);
+  		writeErrorMsg(e.message);
+		//window.localStorage.clear();
+		document.body.innerHTML +="<div style='margin: 20px;color: white;'>"+new Date()+"<br/>"+e.message+"<br/>请杀进程重新进入<br/>如果杀进程无效可以清除Emobile缓存再进入</div>"
+  		try{
+			//清理浏览器缓存
+			//location='emobile:{"func":"clearCache","params":{}}';
+		}catch(e){}
+		
+	}
+	
+	/*记录错误信息*/
+   	function writeErrorMsg(eMsg){
+   		try{
+   			var errMsg;
+   			var errArray;
+   			var count;
+    		if(storage.getItem("weaver-voice-err-msg")&&storage.getItem("weaver-voice-err-msg")!=""){
+				errMsg=storage.getItem("weaver-voice-err-msg");
+				errArray=JSON.parse(errMsg);
+			}else{
+				errArray=new Array();
+			}
+			
+			count=errArray.push(new Date().format("yyyy-MM-dd hh:mm:ss")+" error:"+eMsg);
+			if(count>5){
+				errArray.shift();
+			}
+			errMsg=JSON.stringify(errArray);
+			
+			storage.setItem("weaver-voice-err-msg",errMsg);
+   		}catch(e){} 
+   	}
+   	
+	/*判断是否支持LocalStorage*/
+   	function isLocalStorageSupported(){
+    	var testKey = 'test'+new Date().getTime();
+	    try{
+	        storage.setItem(testKey, 'testValue');
+	        storage.removeItem(testKey);
+	        return true;
+	    }catch (error) {
+	        return false;
+	    }
+	}
+
+	/**
+	* 重新唤醒小e后.如果发生变更,下次加载新的内容	
+	* 检测服务端代码是否发生变更
+	*/
+	function checkHtmlHasChange(){
+		//上次检测时间判断..
+		if(storage.getItem("weaver-voice-html-time")&&(new Date().getTime()-storage.getItem("weaver-voice-html-time"))/1000>5*60){
+			//检测版本.
+			jQuery.ajax({
+				url: "/mobile/plugin/fullsearch/voice.jsp?isFullE=1&random="+new Date().getTime(),//目标页面
+				dataType: "html",
+				type: "GET",
+				success: function(html)
+				{	
+					var hasErrorNo=false;
+					try{
+						var errObj=JSON.parse(html);
+						hasErrorNo=true;
+						writeErrorMsg("checkHtmlHasChange-定时检测返回json串");
+					}catch(e){}
+					
+					//判断非正确的jsp内容
+					if(!hasErrorNo){
+						if($(html).find("#contentDiv").length>0&&$(html).find("#msgContentDiv").length>0){
+							
+						}else{
+							hasErrorNo=true;
+							writeErrorMsg("checkHtmlHasChange-定时检测返回非此jsp内容");
+						}
+					}
+			
+					if(hasErrorNo){
+						//有报错,忽略检查
+					}else{
+					 	//html保存到localstore
+					 	if(supportStorage){
+					 		var needFresh=true;
+					 		storage.setItem("weaver-voice-html-time",new Date().getTime());
+					 		//本次内容加密
+					 		var currentMd5=jQuery.md5(html);
+					 		//从缓存中加载原来的md5值.
+					 		if(storage.getItem("weaver-voice-html-md5")&&storage.getItem("weaver-voice-html-md5")!=""){
+					 			if(currentMd5!=storage.getItem("weaver-voice-html-md5")){
+					 				//标识变化,下次加载
+					 				storage.setItem("weaver-voice-html",html);
+					 				storage.setItem("weaver-voice-html-md5",currentMd5);
+					 				storage.setItem("weaver-voice-html-refresh",needFresh);
+					 			}
+					 		}
+					 	}
+					}
+				},
+				error: function (XMLHttpRequest, textStatus, errorThrown) {
+                   
+               	}
+			});
+		}
+	}
+	
+</script> 
+
+
+

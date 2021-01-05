@@ -1,0 +1,342 @@
+.progressWrapper {  
+ width: 357px;  
+ overflow: hidden;  
+ opacity: 1;
+}
+.progressContainer {  
+ margin: 5px;  
+ padding: 4px;  
+ border: solid 1px #E8E8E8;  
+ background-color: #F7F7F7;  
+ overflow: hidden;  
+} 
+.progressName {  
+ font-size: 8pt;  
+ font-weight: 700;  
+ color: #555;  
+ width: 323px;  
+ height: 14px;  
+ text-align: left;  
+ white-space: nowrap;  
+ overflow: hidden;  
+}  
+.progressBarInProgress,  
+.progressBarComplete,  
+.progressBarError {  
+ font-size: 0;  
+ width: 0%;  
+ height: 10px;  
+ background-color:#0C0;  
+ margin-top: 2px;  
+}
+.signpage:hover{
+	cursor: hand;
+	color: blue;
+	TEXT-DECORATION: none;
+}
+.signpage:link{
+	cursor: hand;
+	color: blue;
+	TEXT-DECORATION: none;
+}
+/*动态计算浮动签字栏距离top的距离*/
+.flowsign {
+  /* IE5.5+/Win - this is more specific than the IE 5.0 version */
+  right: auto; bottom: auto;
+/*  top: expression( ( -0.1 - this.offsetHeight + ( document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );*/
+  BACKGROUND-COLOR: #F7F7F7;
+  border-bottom: 0 !important;
+
+}
+
+/*动态计算浮动签字栏距离top的距离*/
+.modeflowsignutil {
+  /* IE5.5+/Win - this is more specific than the IE 5.0 version */
+  right: auto; bottom: auto;
+/*  top: expression( ( -0.1 - this.offsetHeight + ( document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );*/
+}
+
+.flowsign TABLE.ViewForm TD {
+padding: 0;
+BACKGROUND-COLOR: #F7F7F7;
+border-right: 1px solid #cccccc;
+}
+
+span.cke_skin_kama {
+-moz-border-radius: 0px;
+-webkit-border-radius: 0px;
+border-radius: 0px;
+border: 1px solid #D3D3D3;
+border-bottom: none!important;
+
+}
+
+.cke_skin_kama .cke_wrapper {
+-moz-border-radius: 0px !important; 
+-webkit-border-radius: 0px !important;
+-webkit-touch-callout: none !important;
+border-radius: 0px !important;
+background-color: white !important;
+background-image: url(images/sprites_wev8.png) !important;
+background-repeat: repeat-x !important;
+background-position: 0 -1950px !important;
+display: block !important;
+_display: inline-block !important;
+padding: 0px !important;
+}
+
+.signbottommenu{
+	/*
+border: 1px solid #cccccc;
+height: 30px;
+width:30px;
+color:#404040;
+line-height: 21px;
+border-right: 0;
+border-bottom:0;
+*/
+}
+
+.signWorkflow {
+	display:block;
+	width:32px;
+	height:32px;
+	background:url(/images/sign/24wf_wev8.png) 0 0 no-repeat;
+	float:left;
+	cursor:pointer;
+}
+.signDoc {
+	display:block;
+	width:32px;
+	height:32px;
+	background:url(/images/sign/24wd_wev8.png) 0 0 no-repeat;
+	float:left;
+	cursor:pointer;
+}
+.signAnnexupload {
+	display:block;
+	width:32px;
+	height:32px;
+	background:url(/images/sign/24fj_wev8.png) 0 0 no-repeat;
+	float:left;
+	cursor:pointer;
+}
+
+
+.signcountClass_left {
+	width:9px;
+	height:20px;
+	background:url(/images/ecology8/workflow/signCount_left_wev8.png) 0 0 no-repeat;
+}
+
+.signcountClass_center {
+	height:20px;
+	background:url(/images/ecology8/workflow/signCount_center_wev8.png) 0 0 repeat-x;
+}
+
+.signcountClass_right {
+	width:9px;
+	height:20px;
+	background:url(/images/ecology8/workflow/signCount_right_wev8.png) 0 0 no-repeat;
+}
+
+.signResourceBlockClass {
+	display:inline-block;
+	width:90%;
+	height:32px;margin-top:15px;position:relative;
+}
+.signcountblockclass {
+	display:inline-block;height:6px;position:absolute;right:-8px;bottom:8px;
+	display:none;
+}
+
+.title{
+height: 30px !important;
+border-top: 1px solid #cccccc;
+cursor: pointer;
+}
+
+.cke_skin_kama span.cke_browser_webkit, .cke_skin_kama span.cke_browser_gecko18 {
+outline:none;
+}
+.cke_skin_kama a.cke_toolbox_collapser, .cke_skin_kama a:hover.cke_toolbox_collapser {
+background-image: url(images/sprites_wev8.png);
+_background-image: url(images/sprites_ie6_wev8.png);
+background-position: 3px -1366px;
+background-repeat: no-repeat;
+width: 11px;
+height: 11px;
+float: right;
+border: 1px outset #D3D3D3;
+margin: 11px 0 2px;
+cursor: pointer;
+display: none;
+}
+
+#cke_top_remark{
+
+border-bottom: 1px solid #d6d6d6;
+background:  #f0f0ee!important;
+}
+.cke_top {
+	border-bottom: 1px solid #d6d6d6;
+	background:  #f0f0ee!important;
+}
+#cke_top_remark, #cke_toolbox {
+	padding-left:2px;
+}
+#cke_top_remark .cke_toolbar {
+	height:27px;
+	margin-top:2px;
+	margin-bottom:2px;
+}
+.cke_toolgroup {
+ background:none!important;
+}
+
+.signblockbarclass {
+ 	padding: 0px;
+	margin: 0px;
+	background: #fff;
+	height: 44px;
+	/* line-height: 40px; */
+	/* width: 120px; */
+	overflow-y: hidden;
+	white-space: nowrap;
+	border-bottom:1px solid #d6d6d6;
+	/*background:#f8f8f8;*/
+ }
+ .signblockbarULclass li{
+ 	float:left;
+ 	display:inline;
+ 	list-style-type:disc;
+ 	line-height:40px;
+ 	padding:0 5px;
+ 	
+ }
+ .signblockbarULclass li a{
+ 	color:#242424;
+ }
+ .signblockbarULclass .current a{
+ 	color:#008df6;
+ }
+ .wfsigntextjt {
+ 	background:url(/images/ecology8/workflow/wfsigntextjt_wev8.png) 0 0 no-repeat;
+ }
+ 
+ .cke_skin_kama .cke_dialog_body{
+ 	padding:0px!important;
+ }
+ 
+ .cke_skin_kama .cke_dialog_title{
+ 	background-color:#4f81bd!important;
+ 	color:#fff!important;
+ 	padding-left:10px!important;
+ }
+ 
+ .cke_skin_kama .cke_dialog .cke_dialog_body .cke_dialog_close_button{
+ 	background-image:url(/images/ecology8/16_close_wev8.png)!important;
+ 	background-position:0 50%;
+ }
+ 
+ .cke_skin_kama .cke_dialog_contents{
+ 	margin-top:32px!important;
+ }
+ 
+ .cke_skin_kama .cke_dialog_contents{
+ 	background-color:#fff!important;
+ 	border-top:1px solid #dadada!important;
+ }
+ 
+ .cke_skin_kama .cke_dialog_footer{
+ 	background-color:#f9f9f9!important;
+ 	border:none;
+ 	border-top:1px solid #dadada!important;
+ 	text-align:center!important;
+ }
+ 
+ .cke_skin_kama a.cke_dialog_ui_button{
+	background-image:none!important;
+}
+ 
+ .cke_skin_kama a.cke_dialog_ui_button_ok span{
+ 	background-image:none!important;
+ }
+ 
+ .cke_skin_kama a.cke_dialog_ui_button_cancel span{
+ 	background-image:none!important;
+ }
+ 
+ .cke_skin_kama a.cke_dialog_ui_button_ok span, .cke_skin_kama a.cke_dialog_ui_button_cancel span{
+ 	padding-left:18px;
+ 	padding-right:18px;
+ 	color:#007aff;
+ 	width:auto;
+ 	min-width:inherit;
+ 	height:26px;
+ 	line-height:26px;
+ }
+ 
+  .cke_skin_kama a.cke_dialog_ui_button_ok span:hover, .cke_skin_kama a.cke_dialog_ui_button_cancel span:hover{
+  	color:#fff!important;
+  	background-color:#2690E3!important;
+  }
+ 
+ .cke_skin_kama .cke_browser_webkit a.cke_dialog_ui_button{
+ 	cursor:pointer!important;
+ }
+ 
+ .cke_skin_kama span.cke_dialog_ui_button{
+ 	cursor:pointer!important;
+ 	min-width:auto;
+ 	width:auto;
+ }
+ 
+ .cke_skin_kama .cke_dialog_footer .cke_resizer{
+ 	margin-top:30px!important;
+ }
+ 
+ 
+ .transto, .quote {
+ 	color:#242424!important;
+ }
+ 
+  .transto:hover, .quote:hover {
+ 	color:#008df6!important;
+ }
+ 
+ ._signinputphraseblockClass .progressBarInProgress {
+	height:5px;
+	background:#e33633;
+	margin:0!important;
+}
+._signinputphraseblockClass .progressWrapper {
+	height:30px!important;
+	width:100%!important;
+}
+._signinputphraseblockClass .progressContainer  {
+	background-color:#FFFFFF!important;
+	border:solid 0px!important;
+	padding-left:0px!important;
+	margin-top:3px!important;
+}
+._signinputphraseblockClass .progressCancel {
+	display:none!important;
+}
+._signinputphraseblockClass .progressBarStatus {
+	display:none!important;
+}
+._signinputphraseblockClass .edui-for-wfannexbutton{
+	cursor:pointer!important;
+}
+._signinputphraseblockClass .progressName{
+	width:140px!important;
+	height:18px;
+	font-size:12px;
+	font-family:微软雅黑;
+	font-weight:normal!important;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	color:#000;
+}

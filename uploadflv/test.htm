@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+ </HEAD>
+
+ <BODY>
+  <input type="button" onclick="openWindow()" value="open">
+ </BODY>
+</HTML>
+
+
+<script language="VBScript">
+    function openWindow()
+        id = window.showModalDialog("UploadFlv.jsp")
+        if (Not IsEmpty(id)) then
+			MsgBox(id)
+        end if
+    end function
+</script>

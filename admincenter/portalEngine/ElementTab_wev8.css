@@ -1,0 +1,57 @@
+.menuback {
+	background-color: #F0F0F0;
+}
+
+.memutabset {
+	overflow: hidden;	/* workaround firefox bug */
+}
+
+.menutab {
+	padding : 0px;
+	border-top: 1px solid #d9d9d9;
+	clear : both;
+	margin-top : -1px;
+	margin-bottom : 10px;
+	overflow : auto;
+}
+
+.topTab {
+	float: left;
+	cursor: pointer;
+	width: 120px;
+	height:40px;
+	vertical-align: middle;
+	line-height: 40px;
+	text-align: center;
+}
+
+.unSecTabColor {
+	color: #000;
+	background-color: #BFBFBF;
+}
+
+.secTabColor {
+	color: #000;
+	background-color: #fff;
+}
+
+.tabs {
+	margin : 0;
+	padding : 0;
+	list-style : none;
+}
+
+.tabs li {
+	float: left;
+	padding-left: 10px;
+	background-position: 0 0px;
+	width: 100px;
+	height: 40px;
+	cursor: pointer;
+	line-height: 40px;
+}
+
+.selectColor {
+	color: #000;
+	background-color: #BFBFBF;
+}

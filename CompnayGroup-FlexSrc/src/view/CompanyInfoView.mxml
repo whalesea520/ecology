@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TitleWindow xmlns:mx="http://www.adobe.com/2006/mxml"  width="490" height="500" title="{resourceManager.getString('resources', 'LM026')}" showCloseButton="true" fontSize="12" fontWeight="bold" color="#000000">
+	<mx:Style>
+		
+		
+	</mx:Style>
+	<mx:HBox width="100%" paddingTop="20" paddingLeft="20"  verticalAlign="middle">
+		<mx:Label text="{resourceManager.getString('resources', 'LM018')}:" >
+			
+		</mx:Label>
+		<mx:TextInput text="{staticObj.companyinfo.cnname}" editable="false" width="70%" >
+			
+		</mx:TextInput>
+	</mx:HBox>
+	<mx:HBox width="100%"  paddingLeft="20"  verticalAlign="middle">
+		<mx:Label text="{resourceManager.getString('resources', 'LM025')}:" >
+			
+		</mx:Label>
+		<mx:TextInput text="{staticObj.companyinfo.enname}" editable="false"  width="70%" >
+			
+		</mx:TextInput>
+	</mx:HBox>
+	<mx:HBox width="100%"  paddingLeft="20"  verticalAlign="middle">
+		<mx:Label text="{resourceManager.getString('resources', 'LM027')}:" >
+			
+		</mx:Label>
+		<mx:TextInput text="{staticObj.companyinfo.registercapital}" editable="false"  width="70%" >
+			
+		</mx:TextInput>
+	</mx:HBox>
+	<mx:HBox width="100%"  paddingLeft="20"  verticalAlign="middle">
+		<mx:Label text="{resourceManager.getString('resources', 'LM028')}:" >
+			
+		</mx:Label>
+		<mx:TextInput text="{staticObj.companyinfo.corporatdelegate}" editable="false"  width="70%" >
+			
+		</mx:TextInput>
+	</mx:HBox>
+	<mx:HBox width="100%"  paddingLeft="20"  verticalAlign="top">
+		<mx:Label text="{resourceManager.getString('resources', 'LM022')}:   " >
+			
+		</mx:Label>
+		<mx:TextArea text="{staticObj.companyinfo.theboard}" editable="false" height="60"  width="70%" >
+			
+		</mx:TextArea>
+	</mx:HBox>
+	<mx:HBox width="100%"  paddingLeft="20"  verticalAlign="top">
+		<mx:Label text="{resourceManager.getString('resources', 'LM023')}:   " >
+			
+		</mx:Label>
+		<mx:TextArea text="{staticObj.companyinfo.boardvisitors}" editable="false"  height="60"  width="70%" >
+			
+		</mx:TextArea>
+	</mx:HBox>
+	<mx:HBox width="100%"  paddingLeft="20"  verticalAlign="middle">
+		<mx:Label text="{resourceManager.getString('resources', 'LM024')}:   " >
+			
+		</mx:Label>
+		<mx:TextInput text="{staticObj.companyinfo.generalmanager}" editable="false" >
+			
+		</mx:TextInput>
+	</mx:HBox>
+	<mx:HBox width="100%"  paddingLeft="20"  verticalAlign="middle">
+		<mx:Label text="{resourceManager.getString('resources', 'LM029')}:" >
+			
+		</mx:Label>
+		<mx:TextInput  text="{staticObj.companyinfo.usefulbegindate}"  width="110" editable="false">
+			
+		</mx:TextInput>
+		<mx:Label text="{resourceManager.getString('resources', 'LM030')}" >
+			
+		</mx:Label>
+		<mx:TextInput  text="{staticObj.companyinfo.usefulenddate}"  width="110" editable="false">
+			
+		</mx:TextInput>
+
+	</mx:HBox>
+	<mx:HBox  paddingLeft="350">
+			<mx:Button label="{resourceManager.getString('resources', 'LM008')}" paddingLeft="20" paddingRight="10" click="navigateToURL(new URLRequest('/cpcompanyinfo/CompanyManageMain.jsp?companyid='+staticObj.companyinfo.companyid),'_blank')">
+				
+			</mx:Button>
+	</mx:HBox>
+	<mx:Style>
+		
+		
+		
+		Label{
+			fontSize:12;
+			color:#cccccc;
+		}
+		Button {
+			fillAlphas: 1, 1, 1, 1;
+			fillColors: #51a7d6, #51a7d6, #51a7d6, #51a7d6;
+			color: #ffffff;
+			textRollOverColor: #ffffff;
+			textSelectedColor: #ffffff;
+			borderColor: #0b60a1;
+			themeColor: #0b60a1;
+			fontSize: 12;
+			fontWeight: normal;
+			paddingLeft:0;
+			paddingRight:0;
+			letterSpacing: 0;
+		}
+	</mx:Style>
+	<mx:Script>
+		<![CDATA[
+			import common.StaticObj;
+			import mx.core.Application;
+			[bindable]
+			var staticObj :StaticObj=Application.application.staticObj;
+			//import model.CompanyInfo;
+			//var company:CompanyInfo = 
+		]]>
+	</mx:Script>
+</mx:TitleWindow>

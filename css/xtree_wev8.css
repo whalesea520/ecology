@@ -1,0 +1,161 @@
+
+BODY {
+	/*margin-top:-33px;
+	*margin-top:8px;*/
+	margin-left:0px;
+	background-color:#ffffff;
+	scrollbar-base-color:#FFFFCC; 
+	scrollbar-face-color:#d6d3ce; 
+	SCROLLBAR-HIGHLIGHT-COLOR: #f5f9ff; 
+	SCROLLBAR-SHADOW-COLOR: #D6D3D6;
+	SCROLLBAR-3DLIGHT-COLOR: #D6D3D6; 
+	SCROLLBAR-ARROW-COLOR: #797979; 
+	SCROLLBAR-TRACK-COLOR: #EFF3F7; 
+	SCROLLBAR-DARKSHADOW-COLOR: #ffffff;
+}
+
+.cxtreeMargin{
+	/*margin-top:-35px;*/
+}
+
+
+.webfx-tree-container {
+	margin: 0px;
+	padding: 0px;
+	font-family: Verdana;
+	font-size:12px;
+	white-space: nowrap;
+}
+
+.webfx-tree-item {
+	padding: 0px;
+	margin: 0px;
+	font-family: Verdana;
+	font-size:12px;
+	color: WindowText;
+	white-space: nowrap;
+	height: 30px;
+	line-height:30px;
+}
+
+.webfx-tree-item-sec{
+	height:22px;
+	line-height:22px;
+}
+
+.webfx-tree-item_hover {
+	background-color:#DEF0FF;
+}
+
+.webfx-tree-item_selected{
+	background-color:#0D93F6;
+	color:#fff;
+}
+
+.webfx-tree-item a, .webfx-tree-item a:active, .webfx-tree-item a:hover, .webfx-tree-item label {
+	margin-left: 3px;
+	padding: 0px 2px 1px 2px;
+	color: #333333;
+	text-decoration: none;
+}
+
+.webfx-tree-item label {
+	color: #999999;
+}
+
+/*
+.webfx-tree-item a {
+	color: black;
+	text-decoration: none;
+}
+
+.webfx-tree-item a:hover {
+	color: blue;
+	text-decoration: underline;
+}
+
+.webfx-tree-item a:active {
+	background: highlight;
+	color: highlighttext;
+	text-decoration: none;
+}
+*/
+
+.webfx-tree-item img {
+	vertical-align: middle;
+	border: 0px;
+}
+
+.webfx-tree-icon {
+	width: 16px;
+	height: 16px;
+}
+
+.cxtree
+{
+    overflow:hidden;
+    /*height:100%;*/
+    width:100%;
+    padding:0 0 5px;
+}
+DIV.cxtree A
+{
+	color:black;
+	text-decoration:none;
+
+}
+
+DIV.cxtree A:visited
+{
+	background: none;
+	color:blank;
+	text-decoration:none;
+
+}
+
+DIV.cxtree A:hover
+{
+	/*background-color:#0099CC;
+	border:1px solid #0099CC;*/
+	color:white;
+	text-decoration:none;
+}
+
+DIV.cxtree A:active
+{
+	/*background-color:#0099CC;
+	border:1px solid #0099CC;*/
+	color:white;
+	text-decoration:none;
+}
+
+DIV.cxtree A:link
+{
+	color:#242424;
+	text-decoration:none;
+}
+
+DIV.cxtree .webfx-tree-item_selected a{
+	color:#fff !important;
+}
+
+div.e8_expandOrCollapseDiv{
+	position:absolute;
+	width:10px;
+	height:32px;
+	line-height:32px;
+	background-color:#fff;
+	text-align:center;
+	border:none;
+	top:300px;
+	left:450px;
+	cursor:pointer;
+	z-index:10004;
+}
+
+span.e8_num_xtree{
+	display:inline-block;
+	right:10px;
+	position:absolute;	
+}
+

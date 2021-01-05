@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<service-detail-setting>
+		<service>
+			<service-url>/services/DocService</service-url>
+			<ip-list>
+				<ip>120.30.14.1</ip>
+			</ip-list>
+		</service>
+	</service-detail-setting>
+</root>

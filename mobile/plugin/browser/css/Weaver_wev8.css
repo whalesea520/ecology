@@ -1,0 +1,138 @@
+*{font-size:12px;}
+body{font-size:12px;}
+BUTTON.Browser { 
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BACKGROUND-IMAGE: url(/mobile/plugin/browser/images/BacoBrowser_wev8.gif); OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 16px; CURSOR: pointer; BORDER-BOTTOM: medium none; BACKGROUND-REPEAT: no-repeat; HEIGHT: 16px; BACKGROUND-COLOR: transparent
+}
+/*表单样式*/
+.formStyle{background:#c9c9c9;margin-bottom:20px;} 
+.formStyle td{height:24px;background-color: rgb(238, 238, 238);padding-left:5px;} 
+.formStyle .valueField{background:#ffffff} 
+
+
+TABLE.ViewForm {
+	WIDTH: 100%;
+	border:0;margin:0;
+	border-collapse:collapse;
+
+}
+
+TABLE.ViewForm A {
+	COLOR: blue; TEXT-DECORATION: none
+}
+TABLE.ViewForm A:hover {
+	COLOR: red; TEXT-DECORATION: none
+}
+
+TABLE.ViewForm A:link {
+	COLOR: blue; TEXT-DECORATION: none
+}
+TABLE.ViewForm A:visited {
+	TEXT-DECORATION: none}
+
+
+TABLE.ViewForm TR {
+	height:29px;
+}
+
+TABLE.ViewForm TR.Title TH {
+	TEXT-INDENT: -1pt; TEXT-ALIGN: left;
+}
+TABLE.ViewForm TR.Spacing {
+	HEIGHT: 4px
+}
+TABLE.ViewForm TD {
+	padding:0 0 0 5;
+}
+TABLE.ViewForm TD.Field {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 2px; BACKGROUND-COLOR:#F5FAFA;
+}
+
+TABLE.ViewForm TD.Line {
+	BACKGROUND-COLOR: #D8ECEF; BACKGROUND-REPEAT: repeat-x; HEIGHT: 1px
+}
+TABLE.ViewForm TD.Line1 {
+	BACKGROUND-COLOR: #D8ECEF; BACKGROUND-REPEAT: repeat-x; HEIGHT: 2px
+}
+TABLE.ViewForm TD.Line2 {
+	BACKGROUND-COLOR: #D8ECEF; BACKGROUND-REPEAT: repeat-x; HEIGHT: 1px
+}
+TABLE.ViewForm TR.Line {
+	HEIGHT:1px;
+}
+TABLE.ViewForm TR.Line1 {
+	HEIGHT:1px;
+}
+TABLE.ViewForm TR.Line2 {
+	HEIGHT:1px;
+}
+
+/*=============for Browser style====================*/
+TABLE.BroswerStyle {
+	width:"100%" ;
+	BACKGROUND-COLOR: #FFFFFF ;
+	BORDER-Spacing:1pt ; 
+}
+
+TABLE.BroswerStyle TR {
+	
+}
+TABLE.BroswerStyle TR.Title {
+	
+}
+TABLE.BroswerStyle TR.Title TH {
+	TEXT-ALIGN: left
+}
+TABLE.BroswerStyle TR.Spacing {
+	HEIGHT: 1px
+}
+TABLE.BroswerStyle TR.DataHeader {
+	height:28px;
+	
+	cursor: pointer;
+	color: #4f6b72;
+	background: #CAE8EA url(table/head-bg_wev8.png);
+}
+TABLE.BroswerStyle TR.DataHeader TD {
+	COLOR: #000000 ;
+	padding: 4px;
+}
+TABLE.BroswerStyle TR.DataHeader TH {
+	padding: 4px;
+	COLOR: #000000 ;
+	TEXT-ALIGN: left
+}
+TABLE.BroswerStyle TR.DataDark {
+	BACKGROUND-COLOR: #F5FAFA ; HEIGHT: 28px ; BORDER-Spacing:1pt
+}
+TABLE.BroswerStyle TR.DataDark TD {
+	PADDING-RIGHT: 0pt; PADDING-LEFT: 0pt; LINE: 100%
+}
+TABLE.BroswerStyle TR.DataLight {
+	BACKGROUND-COLOR: #ffffff ; HEIGHT: 28px ; BORDER-Spacing:1pt 
+}
+TABLE.BroswerStyle TR.DataLight TD {
+	PADDING-RIGHT: 0pt; PADDING-LEFT: 0pt; LINE: 100%
+}
+TABLE.BroswerStyle TR.Line {
+	 BACKGROUND-COLOR: #F5FAFA ; BACKGROUND-REPEAT: repeat-x; HEIGHT: 3px
+}
+
+TABLE.BroswerStyle TR.Selected
+{
+    CURSOR: pointer;
+	background: #B1D4D9;
+	height:28px;
+}
+TABLE.BroswerStyle TR.Selected TD
+{
+PADDING-RIGHT: 0pt; PADDING-LEFT: 0pt; LINE: 100%
+}
+
+BUTTON.Browser {
+	BACKGROUND-IMAGE: url(/mobile/plugin/browser/images/browser_wev8.png)!important;width:16px;
+}
+
+
+.operationDiv{
+  background:rgb(246, 246, 246);height: 40px;line-height: 40px;vertical-align: middle;padding-top: 8px;border-top:#dadee5 solid 1px;
+}

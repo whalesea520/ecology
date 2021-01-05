@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  -->
+<workflow workflowId="">
+	<!-- name. 传递的参数,name不能修改.   column="CrossDomain" 表示跨域.默认空  url对应的defaultV 是ajax请求页面 -->
+	<field name="url" column="" defaultV="" defaultN="功能描述"></field>
+	<!-- 搜索关键字 -->
+	<field name="key" column=""></field>
+	<!-- 人员 -->
+	<field name="people" column=""></field>
+	<!-- 开始日期 -->
+	<field name="fromDate" column=""></field>
+	<!-- 结束日期 -->
+	<field name="toDate" column=""></field>
+	<!-- 每页大小 -->
+	<field name="pageSize" column="pageSize" defaultV="20"></field>
+	<!-- 当前请求页数 -->
+	<field name="pageNum" column="pageNum" defaultV="1"></field>
+	<!-- 年 -->
+	<field name="year" column=""></field>
+	<!-- 月 -->
+	<field name="month" column=""></field>
+	<!-- 年. 报表用,指定年月类型查询 -->
+	<field name="confirmYear" column=""></field>
+	<!-- 月  报表用,指定年月类型查询-->
+	<field name="confirmYear" column=""></field>
+	
+	<!-- 经度 -->
+	<field name="lng" column=""></field>
+	<!-- 维度 -->
+	<field name="lat" column=""></field>
+	
+	
+	<!--直接包含返回的json中. 返回值判断,默认空.即为msg. 0标识成功. -->
+	<field name="return_flag" column="SuccessF" defaultV="" defaultN="成功标识"></field>
+	<field name="return_flag" column="SuccessV" defaultV="" defaultN="成功值"></field>
+	<!-- 错误信息显示 -->
+	<field name="return_flag" column="ErrMsg" defaultV="" defaultN="错误信息"></field>
+	<!--默认,空.返回示例如下图.标准返回 空或者1: -->
+	<field name="return_flag" column="RetType" defaultV="" defaultN="返回类型"></field>
+	<!--返回list对应的key值.默认key值是list -->
+	<field name="return_flag" column="RetList" defaultV="list" defaultN="返回列表key值"></field>
+	<!-- 数据显示格式默认1 -->
+	<field name="return_flag" column="ShowStyle" defaultV="1" defaultN="展示样式"></field>
+	<!-- 每条数据是否显示序号(1开始),类似排名 -->
+	<field name="return_flag" column="DisplayRanking" defaultV="0" defaultN="是否显示序号"></field>
+	<!-- 每条数据是否小图片,默认未空.不需要.defaultV 可以设置默认图标. DisplayIcon可以指定某个模块获取对应图标,也可以是url  -->
+	<field name="return_flag" column="DisplayIcon" defaultV="0" defaultN="显示小图标"></field>
+	<!-- 针对某种图标指定小头像底色,一般不需要.默认空./secondary/docrelate/images/logo1.png||white; -->
+	<field name="return_flag" column="IconColor" defaultV="" defaultN="指定特殊小图标底色"></field>
+	<!-- 在原来的icon 下面显示一小块内容,是div 目前只针对 ShowStyle=7 有效-->
+	<field name="return_flag" column="SmallIcon" defaultV="0" defaultN="ICON下的小图标"></field>
+	<!-- 点击跳转URL url中的& 需要转移&amp; -->
+	<field name="return_flag" column="ClickURL" defaultV="" defaultN="跳转URL"></field>
+	<!-- 无值显示结果上面的文字提示 -->
+	<field name="return_flag" column="DisplayStr_NO" defaultV="对不起,没有找到你要的数据" defaultN="无值个性化输出"></field>
+	<!-- 有值显示结果上面的文字提示,DisplayStr是后端返回的值,DisplayDate针对前台识别的时间 -->
+	<field name="return_flag" column="DisplayStr" defaultV="为您找到以下内容" defaultN="有值个性化输出"></field>
+	<!-- 播报list中的标题 -->
+	<field name="return_flag" column="ReadListTitle" defaultV="" defaultN="阅读list中的标题,name字段.如果要阅读.必须大于0."></field>
+	<!-- 备注说明,可以使用html标签.尖括号需要转义  -->
+	<field name="return_flag" column="DisplayRemark" defaultV="" defaultN="最后内容后增加备注信息"></field>
+	<!-- 备注上面记录 查询条件.配合DisplayRemark使用 -->
+	<field name="return_flag" column="NeedRemarkQueryData" defaultV="0" defaultN="备注上是否显示查询条件"></field>
+	
+	
+	<!-- 查看明细,针对报表2样式,可以点击查看明细.查询条件同统计,目前通过指定一个报表名称,Report_还是隐藏,  -->
+	<field name="return_flag" column="DisplayDetailInfo" defaultV="" defaultN="统计后面增加查看明细点击"></field>
+	
+	<!-- 隐藏空的统计项 1隐藏,其他不隐藏-->
+	<field name="return_flag" column="HideNullStatistics" defaultV="0" defaultN="隐藏空的统计项,默认不隐藏"></field>
+	<!-- 增加权限判断显示提醒信息,以下3个字段必须配合同时使用,如果没有权限.直接展示内容,不展示任何数据 -->
+	<field name="return_flag" column="HasRightF" defaultV="" defaultN="是否有权限标识"></field>
+	<field name="return_flag" column="HasRightV" defaultV="" defaultN="是否有权限判断值"></field>
+	<field name="return_flag" column="NoRightMsg" defaultV="" defaultN="没有权限时的提示信息"></field>
+	
+	<!-- 分页相关字段-->
+	<field name="return_flag" column="IsPage" defaultV="0" defaultN="是否分页,返回类型1.显示类型1.默认分页 兼容第一期的报表展示"></field>
+	<field name="return_flag" column="TotalPage" defaultV="totalPage" defaultN="总页数"></field>
+	<field name="return_flag" column="PageNum" defaultV="pageNum" defaultN="当前页数"></field>
+	<field name="return_flag" column="Total" defaultV="total" defaultN="数据总条数"></field>
+	<field name="return_flag" column="PageSize" defaultV="pageSize" defaultN="每页条数"></field>
+	<!-- 主要针对返回样式1使用 -->
+	<field name="return_flag" column="EachPageSize" defaultV="2" defaultN="页面显示每页条数,左右滑动的条数默认2条"></field>
+	
+	<!-- 每个展示项上保留原始数据,默认0不留, 1保留 -->
+	<field name="return_flag" column="NeedRecordData" defaultV="0" defaultN="每个展示项上保留原始数据"></field>
+	
+	
+	<!-- 对返回字段做点击事件处理,colum定义为 #EVENT_ 开始-->
+	<field name="return_flag" column="#EVENT_字段名" defaultV="js方法名,默认只传this" defaultN="返回内容的点击事件,主要针对显示1和显示2"></field>
+	
+	<!-- 返回json查询条件 默认 retQueryData,可以自行定义 -->
+	<field name="return_flag" column="retQueryData" defaultV="retQueryData" defaultN=""></field>
+	<!-- 指定json中返回推荐人员的key,暂时只支持样式5显示 -->
+	<field name="return_flag" column="suggestRscList" defaultV="" defaultN="报表后支持返回推荐人员列表"></field>
+		
+	<!-- 不需要的字段直接删除 -->
+
+	<!-- 以下都是返回参数,针对list中返回的key值,name值固定 return_, column为返回list数据中json的key值,defaultN 为显示的标签名 ,ID和NAME 按照以下顺序. 其他可以自由排序 -->
+	<field name="return_" column="" defaultV="ID" defaultN=""></field>
+	<!-- 如果return_flag未开启icon,忽略此字段.如果需要此字段,那么必须放在ID与NAME之间 -->
+	<field name="return_" column="" defaultV="ICON" defaultN=""></field>
+	<field name="return_" column="" defaultV="{xxx}" defaultN="SMALL_ICON"></field>
+	<!-- 用于把日期转换成日历图标 -->
+	<field name="return_" column="" defaultV="DATE" defaultN=""></field>
+	<!-- 如果没有此字段,可以去除.当column没有值的时候.或显示defaultN的值 -->
+	<field name="return_" column="" defaultV="NAME" defaultN="名称"></field>
+	<field name="return_" column="" defaultN=""></field>
+	<field name="return_" column="" defaultN=""></field>
+	<field name="return_" column="" defaultN=""></field>
+	<field name="return_" column="" defaultN=""></field>
+	<field name="return_" column="" defaultN=""></field>
+	
+	<!-- 返回统计值 -->
+	<field name="return_statistics" column="" defaultN=""></field>
+	
+	<!-- 返回格式示例说明start -->
+	<!-- 返回类型(1):多条明细,有分页
+		返回数据格式要求. 
+		{"list":[],  //list 是返回的数据
+		"msg":"0",   //0表示 查询操作成功. 如果失败,直接把失败原因赋上
+		//标准分页形式数据.  可以自定义指定.
+		"totalPage":1,   //数据共有多少页
+		"pageNum":1,     //当前第几页数据
+		"total":2,       //数据总条数
+		"pageSize":20}   //每页显示条数.
+	 	
+	 	//字段填写
+		<field name="return_" column="" defaultV="ID" defaultN=""></field>
+		<field name="return_" column="" defaultV="NAME" defaultN="名称"></field>
+		<field name="return_" column="" defaultN=""></field>
+		<field name="return_" column="" defaultN=""></field>
+		<field name="return_" column="" defaultN=""></field>
+		<field name="return_" column="" defaultN=""></field>
+		<field name="return_" column="" defaultN=""></field>
+		
+	 -->
+	 
+	 
+	 <!-- 返回类型(2): 简单的单条数据,多行显示
+		返回数据格式要求. 
+		{"key1:"","key2":"","msg":"0"}
+	
+	<field name="return_" column="" defaultV="NAME" defaultN="名称"></field>
+	<field name="return_" column="" defaultN=""></field>
+	<field name="return_" column="" defaultN=""></field>
+
+	 -->
+	 
+	 
+	 <!-- 返回类型(3): 基本支持所有的返回格式,可以自行指定返回分页等
+		返回数据格式要求. 
+		{"list":[],  //list 是返回的数据
+		"msg":"0",   //成功标识
+		}
+	 -->
+	 
+	 <!-- 返回格式示例说明end -->
+	 
+	 
+	 <!-- 显示样式说明start -->
+	 <!-- 	
+	 	显示样式  1
+	 	为您找到xx条数据,以下是
+	 		名称1
+	 	  xxxx1	:	123
+	 	  xxxx2	:	234
+	 	  	名称2
+	 	  xxxx1	:	2345
+	 	  xxxx2	:	2342
+	 -->
+	 
+	 <!-- 	
+	 	显示样式  2
+	 	为您找到以下数据
+			名称
+		 xxxx1	:	123
+	 	 xxxx2	:	234
+	 -->
+	 
+
+	 <!-- 	
+	 	显示样式 5  统计结果, 指定背景色, 字体默认白色.(统计+列表,如果有列表)  
+		 <field name="return_statistics" column="xxx1" defaultN="系统中的知识文档数量：{xxx1}" bgcolor="#1673dd" color=""></field>
+		 <field name="return_statistics" column="xxx2" defaultN="分支机构总数：{xxx2}" bgcolor="#6d3ed9"></field>
+		 <field name="return_statistics" column="xxx3" defaultN="客户总数：{xxx3}" bgcolor="#0ea736"></field>
+		 <field name="return_statistics" column="xxx4,xxx5" defaultN="覆盖全国{xxx4}个省份，{xxx5}个城市" bgcolor="#db893a"></field>
+	 	 
+	 	 为您找到以下结果
+		 统计1
+		 统计2
+		 统计3
+		 
+		 标题1  		标题2 		标题3
+		 xxx1_1		xxx1_2		xxx1_3
+		 xxx2_1		xxx2_2		xxx2_3
+	 -->
+
+	 <!-- 	
+	 	显示样式 6. 排名和icon.
+	 	 为您找到以下结果
+		排名 icon	title
+	 -->
+	 
+	 <!-- 	
+	 	显示样式 3. 排名和icon.   因为&nbsp;不支持. 所有使用 #x20;可以表示空格.
+	 	<field name="return_" column="id" defaultV="ID" defaultN=""></field>
+	    <field name="return_" column="name" defaultV="NAME" defaultN="名称"></field>
+		<field name="return_" column="lastname,enddate,status" defaultV="客户经理：{lastname}#x20;#x20;{enddate}#x20;#x20;{status}" defaultN="客户经理"></field>
+	
+	 	 为您找到以下结果
+					title
+		排名 icon
+		 			desc
+					title
+		排名 icon
+		 			desc
+	 -->
+	 
+	 <!-- 	
+	 	显示样式 4 排名和icon.
+	 	 为您找到以下结果
+					title1		title2
+		 排名 icon
+		 			desc		desc2
+					title1		title2
+		 排名 icon
+		 			desc		desc2
+	 -->
+	 
+	 <!-- 	
+	 	显示样式 7. 排名和icon.
+	 	 为您找到以下结果
+	 	 					title
+		排名    icon			desc1
+			small_icon		desc2
+	 -->
+	 
+	 <!-- 	
+	 	显示样式 8. 排名和icon.
+	 	 为您找到以下结果
+	 	 			title
+		排名 icon	
+					desc1      desc2
+					
+	 -->
+	 
+	 <!-- 	
+	 	显示样式 9. 排名和icon.
+	 	 为您找到以下结果
+	 	 			title
+		排名 icon	
+					desc1      desc2
+					desc3
+	 -->
+	 
+	 <!-- 显示样式说明end -->
+</workflow>

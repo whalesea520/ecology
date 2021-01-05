@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> ZTREE DEMO - noIcon </TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../../css/demo.css" type="text/css">
+	<link rel="stylesheet" href="../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="../../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ztree.core-3.0.js"></script>
+	<!--  <script type="text/javascript" src="../../js/jquery.ztree.excheck-3.0.js"></script>
+	  <script type="text/javascript" src="../../js/jquery.ztree.exedit-3.0.js"></script>-->
+	<SCRIPT LANGUAGE="JavaScript">
+		<!--
+		var setting = {
+			view: {
+				showIcon: showIconForTree
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			}
+		};
+
+		var zNodes =[
+			{ id:1, pId:0, name:"鐖惰妭鐐? - 灞曞紑", open:true},
+			{ id:11, pId:1, name:"鐖惰妭鐐?1 - 鎶樺彔"},
+			{ id:111, pId:11, name:"鍙跺瓙鑺傜偣111"},
+			{ id:112, pId:11, name:"鍙跺瓙鑺傜偣112"},
+			{ id:113, pId:11, name:"鍙跺瓙鑺傜偣113"},
+			{ id:114, pId:11, name:"鍙跺瓙鑺傜偣114"},
+			{ id:12, pId:1, name:"鐖惰妭鐐?2 - 鎶樺彔"},
+			{ id:121, pId:12, name:"鍙跺瓙鑺傜偣121"},
+			{ id:122, pId:12, name:"鍙跺瓙鑺傜偣122"},
+			{ id:123, pId:12, name:"鍙跺瓙鑺傜偣123"},
+			{ id:124, pId:12, name:"鍙跺瓙鑺傜偣124"},
+			{ id:13, pId:1, name:"鐖惰妭鐐?3 - 娌℃湁瀛愯妭鐐?, isParent:true},
+			{ id:2, pId:0, name:"鐖惰妭鐐? - 鎶樺彔"},
+			{ id:21, pId:2, name:"鐖惰妭鐐?1 - 灞曞紑", open:true},
+			{ id:211, pId:21, name:"鍙跺瓙鑺傜偣211"},
+			{ id:212, pId:21, name:"鍙跺瓙鑺傜偣212"},
+			{ id:213, pId:21, name:"鍙跺瓙鑺傜偣213"},
+			{ id:214, pId:21, name:"鍙跺瓙鑺傜偣214"},
+			{ id:22, pId:2, name:"鐖惰妭鐐?2 - 鎶樺彔"},
+			{ id:221, pId:22, name:"鍙跺瓙鑺傜偣221"},
+			{ id:222, pId:22, name:"鍙跺瓙鑺傜偣222"},
+			{ id:223, pId:22, name:"鍙跺瓙鑺傜偣223"},
+			{ id:224, pId:22, name:"鍙跺瓙鑺傜偣224"},
+			{ id:23, pId:2, name:"鐖惰妭鐐?3 - 鎶樺彔"},
+			{ id:231, pId:23, name:"鍙跺瓙鑺傜偣231"},
+			{ id:232, pId:23, name:"鍙跺瓙鑺傜偣232"},
+			{ id:233, pId:23, name:"鍙跺瓙鑺傜偣233"},
+			{ id:234, pId:23, name:"鍙跺瓙鑺傜偣234"},
+			{ id:3, pId:0, name:"鐖惰妭鐐? - 娌℃湁瀛愯妭鐐?, isParent:true}
+		];
+
+		function showIconForTree(treeId, treeNode) {
+			return !treeNode.isParent;
+		};
+
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+		});
+		//-->
+	</SCRIPT>
+
+</HEAD>
+
+<BODY>
+<h1>涓嶆樉绀鸿妭鐐瑰浘鏍囩殑鏍?/h1>
+<h6>[ 鏂囦欢璺緞锛歞emo/core/noicon.html ]</h6>
+<div class="content_wrap">
+	<div class="zTreeDemoBackground left">
+		<ul id="treeDemo" class="ztree"></ul>
+	</div>
+	<div class="right">
+		<ul class="info">
+			<li class="title"><h2>1銆乻etting 閰嶇疆淇℃伅璇存槑</h2>
+				<ul class="list">
+				<li>姝?Demo 鍒╃敤 Function 璁剧疆浜嗕娇鐖惰妭鐐逛笉鏄剧ず鍥炬爣鐨勮鍒?/li>
+				<li class="highlight_red">鏄惁鏄剧ず鑺傜偣鍥炬爣璇疯缃?setting.view.showIcon 灞炴€э紝璇︾粏璇峰弬瑙?API 鏂囨。涓殑鐩稿叧鍐呭</li>
+				</ul>
+			</li>
+			<li class="title"><h2>2銆乼reeNode 鑺傜偣鏁版嵁璇存槑</h2>
+				<ul class="list">
+				<li>鏄惁鏄剧ず鍥炬爣锛屼笉闇€瑕?treeNode 鑺傜偣鏁版嵁鎻愪緵鐗规畩璁剧疆锛屼絾濡傛灉鐢ㄦ埛闇€瑕佹牴鎹笉鍚岃妭鐐瑰姩鎬佽缃紝鍙互瀵硅妭鐐规暟鎹鍔犵壒娈婂睘鎬э紝鐢ㄤ簬鍒ゅ埆</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+</BODY>
+</HTML>

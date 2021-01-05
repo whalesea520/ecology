@@ -1,0 +1,2 @@
+update system_default_col set pkey='requestname+weaver.general.WorkFlowTransMethod.getWfNewLinkWithTitle' where pageid in ('Wf:pendingMatters','Wf:handledMatters','Wf:completeMatters','Wf:myRequest') and column_ = 'requestname'
+/

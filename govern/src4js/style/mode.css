@@ -1,0 +1,428 @@
+.modetextarea{
+    word-break:break-all;
+    word-wrap:break-word;
+    resize:none
+}
+.etype_3{
+    vertical-align: middle
+}
+
+.excelOuterTable{
+	border:0px; margin:0px; padding:0px;
+	width:100% !important;
+}
+
+table.excelMainTable ol{
+	padding-left:16px;
+}
+
+.excelTabTable{
+	width:100%; border:0px; margin:0px; padding:0px; border-collapse:collapse;
+}
+.excelDetailTable{
+	border:0px; margin:0px; padding:0px; border-collapse:collapse;
+}
+
+.excelDetailTable .header{
+	height:30px !important;
+}
+.detailButtonDiv{
+	margin-top: 2px;
+	float:right; text-align:right;
+}
+.detail_hide_col{
+	display:none;
+}
+.detailSumTd{
+	background: #FFF !important;
+}
+.warnInfoSpan{
+	color:red !important;
+	font-size:16px !important;
+}
+.excelMainTable{
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	border-collapse:collapse;
+	table-layout: fixed;
+}
+.excelDetailTableDiv{
+	margin-left: -1px;
+}
+.span_mc{
+	display:inline-block;
+}
+.excelMainTable .etype_3 a{
+	color:#123885 !important;
+}
+.excelMainTable .etype_3 a:hover{
+	color:red !important;
+}
+.excelMainTable .etype_3 img{
+	max-width:90% !important;
+}
+.excelMainTable .etype_5 img{
+	max-width:90% !important;
+}
+
+.excelReplyTable{
+	border: 0px;
+	margin-left: 10px;
+	padding: 0px;
+	left: 10px;
+	border-collapse:collapse;
+	table-layout: fixed;
+}
+.excelReplyTable .etype_3 a{
+	color:#123885 !important;
+}
+.excelReplyTable .etype_3 a:hover{
+	color:red !important;
+}
+.excelReplyTable .etype_3 img{
+	max-width:90% !important;
+}
+.excelReplyTable .etype_5 img{
+	max-width:90% !important;
+}
+
+
+.findiv{
+	height:100%; overflow:hidden; text-align:center;
+}
+.fintable{
+	width:100%; height:100%; float:right; border:0px; border-spacing:0px !important;
+}
+.fintable .ftoprow td{
+	border-bottom:solid 1px black;
+}
+.fintable .finborder{
+	min-width:18px;
+}
+.fintable .fborder1{
+	border-right:solid 1px black; 
+}
+.fintable .fborder2{
+	border-right:solid 2px red;
+}
+.fintable .fborder3{
+	border-right:solid 2px blue;
+}
+
+
+/**表单字段相关CSS**/
+
+.field-filearea{
+    margin-top: 4px;
+    max-width: 600px;
+}
+.field-file-img{
+    float: left;
+    height: 34px;
+    padding-top: 4px;
+    padding-left: 4px;
+}
+.field-file-name{
+    padding-left: 4px;
+    height: 30px;
+    line-height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.field-file-size{
+    padding-left: 4px;
+    height: 30px;
+    line-height: 30px;
+    white-space: nowrap;
+}
+.field-file-btn{
+    height: 30px;
+    line-height: 30px;
+    white-space: nowrap;
+}
+.field-file-btnarea{
+    padding-left:4px;
+    padding-bottom:2px;
+}
+
+
+/***回复评论***/
+.wea-formmode-reply {
+	margin: 20px auto 30px;
+	box-sizing: border-box;
+}
+
+.wea-formmode-reply>div {
+	border: 1px solid #d0d0d0;
+	border-top-width: 0px;
+}
+
+.wea-formmode-reply .wea-tab {
+	background-color: #f4f4f4;
+	border-left: 0;
+	border-right: 0;
+	height: 48px;
+}
+
+.wea-formmode-reply .wea-search-tab span>i {
+	font-size: 18px;
+	cursor: pointer;
+	position: relative;
+	top: 3px;
+}
+
+.wea-formmode-reply .wea-tab .ant-tabs-tab-inner {
+	height: 49px;
+}
+
+.wea-formmode-reply .wea-tab .ant-tabs-nav .ant-tabs-tab {
+	margin: 0 20px;
+}
+
+
+/*签字意见*/
+
+.wea-formmode-reply-input {
+	cursor: pointer;
+	font-size: 12px;
+	line-height: 36px;
+	padding-left: 20px;
+	color: #9b9b9b;
+	margin-left: -1px;
+	border: 1px solid #d0d0d0;
+}
+
+.wea-formmode-reply-input:hover{
+	border:1px solid #7FBBF2;
+	border-left-color:#7FBBF2 !important;
+}
+
+#edui1_iframeholder{
+	border-bottom: 1px solid #d0d0d0;
+}
+
+#edui1_toolbarbox{
+	border-top:1px solid #d0d0d0;
+}
+
+/*签字意见列表*/
+
+.wea-formmode-reply-list {
+	padding: 11px 5px;
+}
+
+.wea-formmode-reply-list:after,
+.wea-formmode-reply-list-content:after {
+	clear: both;
+	content: ".";
+	display: block;
+	font-size: 0;
+	height: 0;
+	visibility: hidden;
+	_zoom: 1;
+}
+
+.wea-formmode-reply-list .ant-pagination {
+	float: right;
+	margin: 20px;
+}
+
+.wea-formmode-reply-list-content {
+	position: relative;
+	padding: 15px 21px 15px 185px;
+	border-bottom: 1px dashed #e4e4e4;
+}
+
+.wea-formmode-reply-list-content .content-left {
+	float: left;
+	line-height: 36px;
+	width: 180px;
+	margin-left: -169px;
+	padding-left: 48px;
+}
+
+.wea-formmode-reply-list-content .content-right {
+	overflow: hidden;
+}
+
+.wea-formmode-reply-list-content .content-left>img {
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	float: left;
+	margin: 5px 0 0 -48px;
+}
+
+.wea-formmode-reply-list-content .content-left>div {
+	line-height: 24px;
+	padding-right: 10px;
+}
+
+.wea-formmode-reply-list-content .content-text-right-open-btn {
+	cursor: pointer;
+	margin-left: 15px;
+}
+
+.wea-formmode-reply-list-content .content-right-remark-html {
+	min-height: 24px;
+}
+
+.wea-formmode-reply-list-content .content-right-other-html {
+	min-height: 24px;
+	color: #929393;
+}
+
+.wea-formmode-reply-list-content .content-right-docs>i {
+	color: #9b9b9b;
+	font-size: 16px;
+	margin-right: 5px;
+	position: relative;
+	top: 5px;
+}
+
+.wea-formmode-reply-list-content .content-right-docs>div {
+	display: inline-block;
+	vertical-align: top;
+	line-height: 2;
+}
+
+.wea-formmode-reply-list-content .content-right a {
+	color: #2777c1!important;
+}
+
+.wea-formmode-reply-list-content a:hover {
+	color: #003a70 !important;
+}
+
+.wea-formmode-reply-list-content .wea-formmode-reply-list-users {
+	padding: 5px;
+	background-color: #f4f4f4;
+	border-radius: 3px;
+	line-height: 20px;
+	color: #c0c0c0;
+	position: relative;
+}
+
+.wea-formmode-reply-list-content .wea-formmode-reply-list-users .content-text-right-open-btn {
+	position: absolute;
+	right: 10px;
+	top: 6px;
+}
+
+.btnspan{
+	float:right;
+	text-align:right;
+}
+
+.wea-formmode-reply-list .ant-table-placeholder{
+	z-index: 1;
+}
+
+.wea-workflow-main-sub-req{
+	background: #f4f9ff;
+	height: 40px;
+	width: 100%;
+	border-bottom: 1px solid #d4e8f4;
+	padding: 10px 10px
+}
+
+
+
+.formModeExternalBtn{
+	font-size:13px;
+	float:right;
+}
+
+
+#remarkShadowDiv{
+	/*border-bottom:0px;
+	border-top:1px solid #d6d6d6;
+	border-left:1px solid #d6d6d6;
+	border-right:1px solid #d6d6d6;*/
+	border:1px solid #d6d6d6;
+	display:inline-block;
+	width:100%;
+	background:#F7F7F7;
+}
+#remarkShadowDivInnerDiv{
+	margin: 10px 10px; 
+	height: 30px; 
+	border: 1px solid #d6d6d6; 
+	background: #fff; 
+	color: #a2a2a2; 
+	cursor: pointer;
+}
+
+.searchNameSpan{
+	text-align:middle;
+}
+
+.moreFoot{
+		POSITION: relative;
+		MARGIN-BOTTOM: -1px;
+		HEIGHT: 37px;
+		OVERFLOW: hidden;
+		FONT-SIZE: 14px !important;
+		FONT-WEIGHT: bold;
+		background: #fcfcfc;
+		padding-left: 5px;
+		padding-right: 5px;
+}
+.moreFoot A {
+		TEXT-ALIGN: center;
+		LINE-HEIGHT: 19px;
+		WIDTH: 100%;
+		DISPLAY: block;
+		BACKGROUND-REPEAT: repeat-x;
+		HEIGHT: 37px;
+		COLOR: #333 !important;
+		PADDING-TOP: 10px
+	}
+	.moreFoot A:hover {
+		/*BACKGROUND-POSITION: 0px -99px;*/
+		TEXT-DECORATION: none;
+		BACKGROUND: url(/blog/images/more_bg_hover_wev8.png) repeat-x;
+		COLOR: #333 !important;
+	}
+	.moreFoot EM {
+		PADDING-LEFT: 10px;
+		WIDTH: 9px;
+		DISPLAY: inline-block;
+		HEIGHT: 16px;
+		VERTICAL-ALIGN: text-top;
+		OVERFLOW: hidden;
+		CURSOR: pointer
+	}
+	.moreFoot EM.ico_load {
+		POSITION: absolute;
+		WIDTH: 16px;
+		DISPLAY: none;
+		MARGIN-LEFT: -50px;
+		TOP: 12px;
+		LEFT: 50%
+	}
+	.moreFoot .more_down {
+		background: url('/blog/images/more_down_wev8.png') no-repeat 50% 50%;
+		margin-left: 3px;
+		width: 15px;
+	}
+	.moreFoot .loading EM.ico_load {
+		DISPLAY: inline-block
+	}
+	.moreFoot {
+		border-radius: 0 0 0 5px;
+		-moz-border-radius: 0 0 0 5px;
+		-webkit-border-radius: 0 0 0 5px
+	}
+	.moreFoot A {
+		border-radius: 0 0 0 5px;
+		-moz-border-radius: 0 0 0 5px;
+		-webkit-border-radius: 0 0 0 5px
+	}
+	.moreFoot .more_down {
+		background: url('/blog/images/more_down_wev8.png') no-repeat 50% 50%;
+		margin-left: 3px;
+		width: 15px;
+	}

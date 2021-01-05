@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> ZTREE DEMO - multiTree</TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../../css/demo.css" type="text/css">
+	<link rel="stylesheet" href="../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="../../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ztree.core-3.0.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ztree.excheck-3.0.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ztree.exedit-3.0.js"></script>
+	<SCRIPT LANGUAGE="JavaScript">
+		<!--
+		var setting = {
+			edit: {
+				enable: true,
+				showRemoveBtn: false,
+				showRenameBtn: false
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			callback: {
+				beforeDrag: beforeDrag,
+				beforeDrop: beforeDrop
+			}
+		};
+
+		var zNodes =[
+			{ id:1, pId:0, name:"鐖惰妭鐐?", open:true},
+			{ id:11, pId:1, name:"鍙跺瓙鑺傜偣1"},
+			{ id:12, pId:1, name:"鍙跺瓙鑺傜偣2"},
+			{ id:13, pId:1, name:"鍙跺瓙鑺傜偣3"},
+			{ id:2, pId:0, name:"鐖惰妭鐐?", open:true},
+			{ id:21, pId:2, name:"鍙跺瓙鑺傜偣1"},
+			{ id:22, pId:2, name:"鍙跺瓙鑺傜偣2"},
+			{ id:23, pId:2, name:"鍙跺瓙鑺傜偣3"},
+			{ id:3, pId:0, name:"鐖惰妭鐐?", open:true },
+			{ id:31, pId:3, name:"鍙跺瓙鑺傜偣1"},
+			{ id:32, pId:3, name:"鍙跺瓙鑺傜偣2"},
+			{ id:33, pId:3, name:"鍙跺瓙鑺傜偣3"}
+		];
+
+		function beforeDrag(treeId, treeNodes) {
+			for (var i=0,l=treeNodes.length; i<l; i++) {
+				if (treeNodes[i].drag === false) {
+					return false;
+				}
+			}
+			return true;
+		}
+		function beforeDrop(treeId, treeNodes, targetNode, moveType) {
+			return targetNode ? targetNode.drop !== false : true;
+		}
+		
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			$.fn.zTree.init($("#treeDemo2"), setting);
+			
+		});
+		//-->
+	</SCRIPT>
+</HEAD>
+
+<BODY>
+<h1>澶氭５鏍戜箣闂?鐨?鏁版嵁浜や簰</h1>
+<h6>[ 鏂囦欢璺緞锛歞emo/exedit/multiTree.html ]</h6>
+<div class="content_wrap">
+	<div>
+		<ul class="info">
+			<li class="title"><h2>1銆乻etting 閰嶇疆淇℃伅璇存槑</h2>
+				<ul class="list">
+				<li>zTree 瀵逛簬澶氭５鏍戜箣闂存嫋鎷界殑鎿嶄綔闈炲父绠€鍗曪紝鍙渶瑕佸垱寤轰袱妫靛彲鎷栨嫿鐨勬爲鍗冲彲锛屽悓鏃跺彲鏍规嵁 鍚勭浜嬩欢鍥炶皟鍑芥暟 浠ュ強 zTree 鐨勬柟娉曢厤鍚堝疄鐜拌緝澶嶆潅鐨勬搷浣滆鍒欙紝杩欓噷鍙槸鍩烘湰婕旂ず銆?/li>
+				<li class="highlight_red">鍏充簬閰嶇疆淇℃伅璇峰弬鑰冩嫋鎷姐€佺紪杈戠瓑 Demo 鐨勮缁嗚鏄?/li>
+				</ul>
+			</li>
+			<li class="title"><h2>2銆乼reeNode 鑺傜偣鏁版嵁璇存槑</h2>
+				<ul class="list">
+				<li>瀵?鑺傜偣鏁版嵁 娌℃湁鐗规畩瑕佹眰锛岀敤鎴峰彲浠ユ牴鎹嚜宸辩殑闇€姹傛坊鍔犺嚜瀹氫箟灞炴€?/li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="zTreeDemoBackground left">
+		<ul id="treeDemo" class="ztree"></ul>
+	</div>
+	<div class="right">
+		<ul id="treeDemo2" class="ztree"></ul>
+	</div>
+</div>
+</BODY>
+</HTML>

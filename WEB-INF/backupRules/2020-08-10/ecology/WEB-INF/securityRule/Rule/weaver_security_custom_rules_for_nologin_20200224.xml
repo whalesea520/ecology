@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+		<no-login-urls>
+			<url>/online/syncOnlineData.jsp</url>
+			<url>/wui/common/page/changeLanguageInfo.jsp</url>
+		</no-login-urls>
+		<webservice-list>
+			<webservice>/online/syncOnlineData.jsp</webservice>
+		</webservice-list>
+</root>

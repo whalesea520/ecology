@@ -1,0 +1,2 @@
+INSERT INTO hrm_formfield(fieldid, fielddbtype, fieldname, fieldlabel, fieldhtmltype, type, fieldorder, ismand, isuse, groupid, allowhide, imgwidth, imgheight, textheight, issystem) VALUES  ( 84, 'number', 'limitUsers', 81922, 1, 2, 7, 0, 1, 6, 1, 0, 0, 0, 1)
+/

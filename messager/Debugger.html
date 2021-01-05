@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Debugger</title>
+    <style>
+      body { font-family: Monospace; }
+    </style>
+    <script>
+      <!--
+var debugC = new Array(); // different colors for debug-levels
+debugC[0] = 'green';
+debugC[1] = 'red';
+debugC[2] = 'blue';
+debugC[3] = 'purple';
+debugC[4] = 'fuchsia';
+
+function popMsgs() {
+  if (!this.oDbg)	return; // sth. weird is going on here
+  if (!this.oDbg.debug) return; // stopped
+  if (this.oDbg.debugMsgs.length > 0) {
+    var msg = this.oDbg.debugMsgs[0];
+    this.oDbg.debugMsgs = this.oDbg.debugMsgs.slice(1,this.oDbg.debugMsgs.length);
+    var now = new Date();
+
+    if (this.oDbg.lvl >= msg.lvl) {
+      var auto_scroll = false;
+      if (frames['DebugBottom'].document.body.scrollTop+frames['DebugBottom'].document.body.clientHeight >= frames['DebugBottom'].document.body.scrollHeight)
+        auto_scroll = true;
+      var A = new Array();
+      A[A.length] = "<div class='debugmsgheader'>[";
+      A[A.length] = now.toLocaleString();
+      A[A.length] = "] (level ";
+      A[A.length] =  msg.lvl;
+      A[A.length] = ") func: ";
+      A[A.length] = msg.caller;
+      A[A.length] = "</div>";
+      A[A.length] = "<div class='debugmsgbody ";
+      A[A.length] = debugC[msg.lvl%debugC.length];
+      A[A.length] = "'>";
+      A[A.length] = msg.str;
+      A[A.length] = "</div>";
+      frames['DebugBottom'].document.body.innerHTML += A.join('');
+      //frames['DebugBottom'].document.body.innerHTML += "<div class='debugmsgheader'>[" + now.toLocaleString() + "] (level " +msg.lvl+") func: "+msg.caller+"</div><div class='debugmsgbody' style='color:"+debugC[msg.lvl%debugC.length]+";'>" + msg.str + "</div>";
+      if (auto_scroll)
+        frames['DebugBottom'].scrollTo(0,frames['DebugBottom'].document.body.scrollHeight);
+            
+    }
+  }
+  oDbg = this.oDbg;
+  this.oDbg._to = setTimeout("oDbg.debugW.popMsgs();", 100);
+}
+
+function DebuggerInit() {
+  if (!this.oDbg)
+    return;
+				
+  frames['DebugTop'].document.getElementById('lvlSelector').selectedIndex = this.oDbg.lvl;
+
+  if (this.oDbg.id != '')
+    document.title = this.oDbg.id + " Debugger";
+
+  popMsgs();
+}
+
+onload = DebuggerInit;
+      //-->
+      </script>
+  </head>
+	<frameset rows="26,*" frameborder=2 framespacing=2 border=2 bordercolor=black>
+		<frame src="DebugTop.html" name="DebugTop" />
+		<frame src="DebugBottom.html" name="DebugBottom" />
+	</frameset>
+</html>

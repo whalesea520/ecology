@@ -1,0 +1,87 @@
+@IMPORT url("/js/jquery-autocomplete/jquery.autocomplete_wev8.css");
+@IMPORT url("/wui/common/jquery/plugin/at/css/jquery.atwho_wev8.css");
+.signAnnexupload_span a:hover,.signWorkflow_span a:hover,.signDoc_span a:hover{
+   color:red !important;
+}
+.wffbtn:hover{
+	color:red !important;
+}
+
+
+._signinputphraseblockClass .cg_block ul {
+	width: 100%;
+	list-style-position: outside;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+._signinputphraseblockClass .cg_block ul li {
+	padding:2px 5px 2px 5px;
+	cursor:pointer;
+}
+
+._signinputphraseblockClass .cg_block ul li.cg_item:hover {
+	background:#f4fcfa;
+	/*#;*/
+}
+
+._signinputphraseblockClass .cg_splitline {
+	border-bottom:1px dotted #bfbfc0;
+	height:1px!important;
+	margin:0 5px;
+}
+
+._signinputphraseblockClass .cg_title {
+	color:#242424;
+}
+._signinputphraseblockClass .cg_detail {
+	display:inline-block;width:100%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;
+	color:#242424;
+}
+
+._signinputphraseblockClass .phrase_btn {
+	color:#8d8d8d;
+	display:inline-block;
+	height:22px;
+	line-height:22px;
+	cursor:pointer;
+}
+/*
+.cg_btn:hover {
+	border:1px solid #d9d9d9;
+}
+*/
+._signinputphraseblockClass .cg_allresli .cg_title {
+	display:inline-block;margin-bottom:10px;margin-top:10px;
+}
+
+._signinputphraseblockClass .cg_detail {
+	margin-top:5px;
+}
+._signinputphraseblockClass .phrase_arrowsblock {
+	height:14px!important;
+	width:100%!important;
+	position: absolute;
+	left:5px;
+}
+
+._signinputphraseblockClass {
+	width:160px!important;
+	POSITION:absolute;
+}
+
+._signinputphraseblockClass .cg_block {
+	width:160px;
+	border:1px solid #bfbfbf;margin-top:7px;
+}
+
+._signinputphraseblockClass .addphraseblockClass{
+	display:none;padding:3px;width:243px;background:#e6f6ff;border:1px solid #c3dbea;margin-top:0px;text-align:left;
+	margin-bottom:-1px;
+	margin-left:-1px;
+}
+
+._signinputphraseblockClass .phraseinputClass {
+	width:192px;height:30px;border:1px solid #c3dbea;
+}

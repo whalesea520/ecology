@@ -1,0 +1,24 @@
+delete from HtmlLabelIndex where id=27569 
+GO
+delete from HtmlLabelInfo where indexid=27569 
+GO
+INSERT INTO HtmlLabelIndex values(27569,'产品自定义字段') 
+GO
+INSERT INTO HtmlLabelInfo VALUES(27569,'产品自定义字段',7) 
+GO
+INSERT INTO HtmlLabelInfo VALUES(27569,'Product Custom Fields',8) 
+GO
+INSERT INTO HtmlLabelInfo VALUES(27569,'産品自定義字段',9) 
+GO
+delete from HtmlLabelIndex where id=27606 
+GO
+delete from HtmlLabelInfo where indexid=27606 
+GO
+INSERT INTO HtmlLabelIndex values(27606,'说明：操作后，必须点击右键保存才能保存数据！') 
+GO
+INSERT INTO HtmlLabelInfo VALUES(27606,'说明：操作后，必须点击右键保存才能保存数据！',7) 
+GO
+INSERT INTO HtmlLabelInfo VALUES(27606,'Description: The operation, you must right click save to save the data!',8) 
+GO
+INSERT INTO HtmlLabelInfo VALUES(27606,'說明：操作後，必須點擊右鍵保存才能保存數據！',9) 
+GO

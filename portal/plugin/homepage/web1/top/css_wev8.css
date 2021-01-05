@@ -1,0 +1,21 @@
+ #divMainMenu{
+			margin:30,0,0,0;	 			
+ }
+
+
+#divMainMenu a{
+	display: inline;
+	text-decoration: none;
+	color: #464646;
+	background: #fff;
+	border-bottom: 0;
+	font-size:12px;
+	font-weight: bold;
+}
+
+#divMainMenu span{	
+	  width:5px;
+	  border-right: 1px solid #464646; 
+	  margin: 0,4;
+}
+

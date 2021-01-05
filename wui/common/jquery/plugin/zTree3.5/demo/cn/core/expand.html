@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> ZTREE DEMO - beforeExpand / onExpand && beforeCollapse / onCollapse</TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../../../css/demo.css" type="text/css">
+	<link rel="stylesheet" href="../../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="../../../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../../js/jquery.ztree.core-3.5.js"></script>
+	<!--  <script type="text/javascript" src="../../../js/jquery.ztree.excheck-3.5.js"></script>
+	  <script type="text/javascript" src="../../../js/jquery.ztree.exedit-3.5.js"></script>-->
+	<SCRIPT type="text/javascript">
+		<!--
+		var setting = {
+			view: {
+				selectedMulti: false
+			},
+			data: {
+				key: {
+					title:"t"
+				},
+				simpleData: {
+					enable: true
+				}
+			},
+			callback: {
+				beforeClick: beforeClick,
+				beforeCollapse: beforeCollapse,
+				beforeExpand: beforeExpand,
+				onCollapse: onCollapse,
+				onExpand: onExpand
+			}
+		};
+
+		var zNodes =[
+			{ id:1, pId:0, name:"鍙姌鑵剧殑鐖惰妭鐐?1", t:"鎴戝緢鏅€氾紝闅忎究 灞曞紑/鎶樺彔 鎴戝惂", open:false},
+			{ id:11, pId:1, name:"鍙跺瓙鑺傜偣 - 1", t:"鎴戣€佺埜寰堟櫘閫氾紝闅忎究鎶樿吘浠栧惂"},
+			{ id:12, pId:1, name:"鍙姌鑵剧殑鐖惰妭鐐?2", t:"鎴戝拰鎴戣€佺埜閮藉緢鏅€氾紝闅忎究鎶樿吘鎴戝拰浠栧惂", open: false},
+			{ id:121, pId:12, name:"鐖惰妭鐐?- 121", t:"鎴戣€佺埜寰堟櫘閫氾紝闅忎究鎶樿吘浠栧惂", open:true},
+			{ id:1211, pId:121, name:"鐖惰妭鐐?- 1211", t:"鎴戣€佺埜寰堟櫘閫氾紝闅忎究鎶樿吘浠栧惂", open:false},
+			{ id:1212, pId:1211, name:"鍙跺瓙鑺傜偣 - 1212", t:"鎴戣€佺埜寰堟櫘閫氾紝闅忎究鎶樿吘浠栧惂"},
+			{ id:1213, pId:121, name:"鐖惰妭鐐?- 1213", t:"鎴戣€佺埜寰堟櫘閫氾紝闅忎究鎶樿吘浠栧惂", open:false},
+			{ id:1214, pId:1213, name:"鍙跺瓙鑺傜偣 - 1214", t:"鎴戣€佺埜寰堟櫘閫氾紝闅忎究鎶樿吘浠栧惂"},
+			{ id:123, pId:12, name:"鍙跺瓙鑺傜偣 - 23", t:"鎴戣€佺埜寰堟櫘閫氾紝闅忎究鎶樿吘浠栧惂"},
+			{ id:13, pId:1, name:"鍙跺瓙鑺傜偣 - 3", t:"鎴戣€佺埜寰堟櫘閫氾紝闅忎究鎶樿吘浠栧惂"},
+			{ id:2, pId:1, name:"鏃犳硶鎶樺彔鐨勭埗鑺傜偣", t:"浼戞兂璁╂垜鎶樺彔璧锋潵...闄ら潪浣犵敤 expandAll 鏂规硶", open:false, collapse:false},
+			{ id:21, pId:2, name:"鍙跺瓙鑺傜偣2 - 1", t:"鍝堝搱鍝堬紝鎴戣€佺埜NB鍚э紝涓嶈兘鎶樺彔鍚э紵"},
+			{ id:22, pId:21, name:"鍙跺瓙鑺傜偣2 - 2", t:"鍝堝搱鍝堬紝鎴戣€佺埜NB鍚э紝涓嶈兘鎶樺彔鍚э紵"},
+			{ id:23, pId:21, name:"鍙跺瓙鑺傜偣2 - 3", t:"鍝堝搱鍝堬紝鎴戣€佺埜NB鍚э紝涓嶈兘鎶樺彔鍚э紵"},
+			{ id:3, pId:2, name:"鏃犳硶灞曞紑鐨勭埗鑺傜偣", t:"灏卞嚟浣犱篃鎯冲睍寮€鎴戯紵闅惧憖...鍢垮樋, 闄ら潪浣犵敤 expandAll 鏂规硶", open:false, expand:true},
+			{ id:31, pId:3, name:"鍙跺瓙鑺傜偣3 - 1", t:"灞呯劧璁╀綘鐪嬪埌浜?..鑾潪浣犵敤浜嗗叏閮ㄨ妭鐐瑰睍寮€锛?},
+			{ id:32, pId:31, name:"鍙跺瓙鑺傜偣3 - 2", t:"灞呯劧璁╀綘鐪嬪埌浜?..鑾潪浣犵敤浜嗗叏閮ㄨ妭鐐瑰睍寮€锛?},
+			{ id:33, pId:31, name:"鍙跺瓙鑺傜偣3 - 3", t:"灞呯劧璁╀綘鐪嬪埌浜?..鑾潪浣犵敤浜嗗叏閮ㄨ妭鐐瑰睍寮€锛?},
+			{ id:4, pId:3, name:"绌虹┖鐨勭埗鑺傜偣 1", t:"涓€鏃犳墍鏈?..闄や簡鎴戣嚜宸?, isParent:true, open:false}
+		];
+
+		var log, className = "dark";
+		function beforeClick(treeId, treeNode) {
+			if (treeNode.isParent) {
+				return true;
+			} else {
+				alert("杩欎釜 Demo 鏄敤鏉ユ祴璇?灞曞紑 / 鎶樺彔 鐨?..\n\n鍘荤偣鍑荤埗鑺傜偣鍚?.. ");
+				return false;
+			}
+		}
+		function beforeCollapse(treeId, treeNode) {
+			className = (className === "dark" ? "":"dark");
+			showLog("[ "+getTime()+" beforeCollapse ]&nbsp;&nbsp;&nbsp;&nbsp;" + treeNode.name );
+			return (treeNode.collapse !== false);
+		}
+		function onCollapse(event, treeId, treeNode) {
+			showLog("[ "+getTime()+" onCollapse ]&nbsp;&nbsp;&nbsp;&nbsp;" + treeNode.name);
+		}		
+		function beforeExpand(treeId, treeNode) {
+			className = (className === "dark" ? "":"dark");
+			showLog("[ "+getTime()+" beforeExpand ]&nbsp;&nbsp;&nbsp;&nbsp;" + treeNode.name );
+			return (treeNode.expand !== false);
+		}
+		function onExpand(event, treeId, treeNode) {
+			showLog("[ "+getTime()+" onExpand ]&nbsp;&nbsp;&nbsp;&nbsp;" + treeNode.name);
+		}
+		function showLog(str) {
+			if (!log) log = $("#log");
+			log.append("<li class='"+className+"'>"+str+"</li>");
+			if(log.children("li").length > 8) {
+				log.get(0).removeChild(log.children("li")[0]);
+			}
+		}
+		function getTime() {
+			var now= new Date(),
+			h=now.getHours(),
+			m=now.getMinutes(),
+			s=now.getSeconds(),
+			ms=now.getMilliseconds();
+			return (h+":"+m+":"+s+ " " +ms);
+		}
+
+		function expandNode(e) {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			type = e.data.type,
+			nodes = zTree.getSelectedNodes();
+			if (type.indexOf("All")<0 && nodes.length == 0) {
+				alert("璇峰厛閫夋嫨涓€涓埗鑺傜偣");
+			}
+
+			if (type == "expandAll") {
+				zTree.expandAll(true);
+			} else if (type == "collapseAll") {
+				zTree.expandAll(false);
+			} else {
+				var callbackFlag = $("#callbackTrigger").attr("checked");
+				for (var i=0, l=nodes.length; i<l; i++) {
+					zTree.setting.view.fontCss = {};
+					if (type == "expand") {
+						zTree.expandNode(nodes[i], true, null, null, callbackFlag);
+					} else if (type == "collapse") {
+						zTree.expandNode(nodes[i], false, null, null, callbackFlag);
+					} else if (type == "toggle") {
+						zTree.expandNode(nodes[i], null, null, null, callbackFlag);
+					} else if (type == "expandSon") {
+						zTree.expandNode(nodes[i], true, true, null, callbackFlag);
+					} else if (type == "collapseSon") {
+						zTree.expandNode(nodes[i], false, true, null, callbackFlag);
+					}
+				}
+			}
+		}
+
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			$("#expandBtn").bind("click", {type:"expand"}, expandNode);
+			$("#collapseBtn").bind("click", {type:"collapse"}, expandNode);
+			$("#toggleBtn").bind("click", {type:"toggle"}, expandNode);
+			$("#expandSonBtn").bind("click", {type:"expandSon"}, expandNode);
+			$("#collapseSonBtn").bind("click", {type:"collapseSon"}, expandNode);
+			$("#expandAllBtn").bind("click", {type:"expandAll"}, expandNode);
+			$("#collapseAllBtn").bind("click", {type:"collapseAll"}, expandNode);
+		});
+		//-->
+	</SCRIPT>
+</HEAD>
+
+<BODY>
+<h1>灞曞紑 / 鎶樺彔鐖惰妭鐐规帶鍒?/h1>
+<h6>[ 鏂囦欢璺緞: core/expand.html ]</h6>
+<div class="content_wrap">
+	<div class="zTreeDemoBackground left">
+		<ul id="treeDemo" class="ztree"></ul>
+	</div>
+	<div class="right">
+		<ul class="info">
+			<li class="title"><h2>1銆乥eforeCollapse / onCollapse<br/>&nbsp;&nbsp;beforeExpand / onExpand 浜嬩欢鍥炶皟鍑芥暟鎺у埗</h2>
+				<ul class="list">
+				<li>鍒╃敤 collapse / expand 浜嬩欢鍥炶皟鍑芥暟 鍙互鎺у埗鐖惰妭鐐规槸鍚﹀厑璁?灞曞紑 / 鎶樺彔锛岃繖閲岀畝鍗曟紨绀哄浣曠洃鎺ф浜嬩欢</li>
+				<li><p>璇曡瘯鐪嬶細<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="callbackTrigger" checked /> expandNode 鏂规硶鏄惁瑙﹀彂 callback<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;鍗曚釜鑺傜偣--[ <a id="expandBtn" href="#" title="涓嶆兂灞曞紑鎴戝氨涓嶅睍寮€浣?.." onclick="return false;">灞曞紑</a> ]
+					&nbsp;&nbsp;&nbsp;&nbsp;[ <a id="collapseBtn" href="#" title="涓嶆兂鎶樺彔鎴戝氨涓嶆姌鍙犱綘..." onclick="return false;">鎶樺彔</a> ]
+					&nbsp;&nbsp;&nbsp;&nbsp;[ <a id="toggleBtn" href="#" title="浣犳兂鎬庢牱锛?.." onclick="return false;">灞曞紑 / 鎶樺彔 鍒囨崲</a> ]<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;鍗曚釜鑺傜偣锛堝寘鎷瓙鑺傜偣锛?-[ <a id="expandSonBtn" href="#" title="涓嶆兂灞曞紑鎴戝氨涓嶅睍寮€浣?.." onclick="return false;">灞曞紑</a> ]
+					&nbsp;&nbsp;&nbsp;&nbsp;[ <a id="collapseSonBtn" href="#" title="涓嶆兂鎶樺彔鎴戝氨涓嶆姌鍙犱綘..." onclick="return false;">鎶樺彔</a> ]<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;鍏ㄩ儴鑺傜偣--[ <a id="expandAllBtn" href="#" title="涓嶇浣犳湁澶歂B锛岀粺缁熼兘瑕佸惉鎴戠殑锛侊紒" onclick="return false;">灞曞紑</a> ]
+					&nbsp;&nbsp;&nbsp;&nbsp;[ <a id="collapseAllBtn" href="#" title="涓嶇浣犳湁澶歂B锛岀粺缁熼兘瑕佸惉鎴戠殑锛侊紒" onclick="return false;">鎶樺彔</a> ]</p>
+				<li><p><span class="highlight_red">浣跨敤 zTreeObj.expandNode 鏂规硶锛岃缁嗚鍙傝 API 鏂囨。涓殑鐩稿叧鍐呭</span><br/>
+					collapse / expand log:<br/>
+					<ul id="log" class="log"></ul></p>
+				</li>
+				</ul>
+			</li>
+			<li class="title"><h2>2銆乻etting 閰嶇疆淇℃伅璇存槑</h2>
+				<ul class="list">
+				<li class="highlight_red">浜嬩欢鍥炶皟鍑芥暟鐨勪娇鐢紝璇︾粏璇峰弬瑙?API 鏂囨。涓?setting.callback 鐨勭浉鍏冲唴瀹?/li>
+				<li class="highlight_red">濡傛灉闇€瑕佽皟鏁?灞曞紑 / 鎶樺彔 鐨勫姩鐢绘晥鏋滐紝 璇︾粏璇峰弬瑙?API 鏂囨。涓?setting.view.expandSpeed 鐨勭浉鍏冲唴瀹?/li>
+				</ul>
+			</li>
+			<li class="title"><h2>3銆乼reeNode 鑺傜偣鏁版嵁璇存槑</h2>
+				<ul class="list">
+				<li>瀵?鑺傜偣鏁版嵁 娌℃湁鐗规畩瑕佹眰锛岀敤鎴峰彲浠ユ牴鎹嚜宸辩殑闇€姹傛坊鍔犺嚜瀹氫箟灞炴€?/li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+</BODY>
+</HTML>

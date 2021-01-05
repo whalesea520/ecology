@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sql>
+<statement key="0">
+create table cloudstore_sqlrun (
+keyStr varchar(512) not null,
+appNo varchar(512) not null
+)
+</statement>
+<statement  key="1">
+create table cloudstore_role (
+id int auto_increment key not null,
+rolename varchar(512) not null,
+rolecode varchar(512) not null,
+roledesc varchar(512) not null,
+appcode varchar(512) not null,
+del int default 1
+)
+</statement>
+<statement key="2">
+create table cloudstore_rolemember (
+id int auto_increment key not null,
+roleid int not null,
+membertype int not null,
+memberobj int not null,
+rolelevel int not null,
+roleobj int not null,
+del int default 1
+)
+</statement>
+<statement key="3">
+create table cloudstore_cdSerializeNo(
+id varchar(50),
+curNo varchar(300),
+supNo varchar(300),
+no1 varchar(300)
+)
+</statement>
+<statement key="3.1">
+create table cloudstore_tocstoken(
+token varchar(300) not null,
+license varchar(300) not null
+)
+</statement>
+<statement  key="3.2">
+alter table cloudstore_tocstoken  add loginconfig varchar(300) default 0
+</statement>
+<statement key="3.3">
+create table cloudstore_checkforuuid(
+id varchar(300) not null,
+uuid varchar(300) not null,
+type varchar(300) not null
+)
+</statement>
+<statement key="3.4">
+alter table cloudstore_checkforuuid  add counts int 
+</statement>
+<statement key="3.5">
+alter table cloudstore_checkforuuid  add name varchar(300) 
+</statement>
+<statement key="3.6">
+create table cloudstore_checkforuuidtimes(
+id int auto_increment key not null,
+uuid varchar(300) not null,
+updatetimes datetime,
+count int not null,
+counts int not null,
+type varchar(300) not null,
+urls varchar(300)
+)
+</statement>
+<statement key="3.7">
+create table cloudstore_checkforuuidtypes(
+id int auto_increment key not null,
+license varchar(300) not null,
+type varchar(300) not null
+)
+</statement>
+<statement key="3.8">
+create table cloudstore_checkforuuiddb(
+id int auto_increment key not null,
+fid varchar(300) not null default 0,
+type varchar(300) not null ,
+enname varchar(300) not null ,
+chname varchar(300) not null ,
+dbname varchar(300) ,
+dbtitle text ,
+url varchar(300),
+dborder int 
+)
+</statement>
+<statement key="3.8001">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(0,1,'gs','分部','','','',0)
+</statement>
+<statement key="3.8002">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(0,1,'bm','部门','','','',0)
+</statement>
+<statement key="3.8003">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(0,1,'Gw','岗位','','','',0)
+</statement>
+<statement key="3.8004">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(0,1,'rol','角色','','','',0)
+</statement>
+<statement key="3.8005">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(0,1,'ry','人员','','','',0)
+</statement>
+<statement key="3.8006">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(0,1,'martix','矩阵','','','',0)
+</statement>
+<statement key="3.8007">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(0,1,'Jc','集成','','','',0)
+</statement>
+<statement key="3.8008">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(0,1,'lc','流程','','','',0)
+</statement>
+<statement key="3.8009">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(0,1,'lz','流转','','','',0)
+</statement>
+<statement key="3.8010">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(1,1,'gs-init','基础数据','HrmSubCompany','','',0)
+</statement>
+<statement key="3.8011">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(2,1,'bm-init','基础数据','HrmDepartment','','',0)
+</statement>
+<statement key="3.8012">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(3,1,'Gw-Init','基础数据','hrmjobtitles','','',0)
+</statement>
+<statement key="3.8013">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(3,1,'Gw-Gwzz','人力资源职责表','hrmjobactivities','','',0)
+</statement>
+<statement key="3.8014">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(4,1,'rol-init','基础数据','hrmroles','','',0)
+</statement>
+<statement key="3.8015">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(4,1,'rol-member','人力资源角色成员表','hrmrolemembers','','',0)
+</statement>
+<statement key="3.8016">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(5,1,'ry-init','人力资源角色成员表','hrmrolemembers','','',0)
+</statement>
+<statement key="3.8017">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(6,1,'Martix-Mtfi','人力资源组矩阵字段信息表','MatrixFieldInfo','','',0)
+</statement>
+<statement key="3.8018">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(6,1,'Martix-Mti','人力资源组矩阵信息表','matrixinfo','','',0)
+</statement>
+<statement key="3.8019">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(7,2,'Jc-Datasource','数据源','','','/WEB-INF/service/datasource.xml',0)
+</statement>
+<statement key="3.8020">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(7,1,'Jc-Jcdss','数据展现集成设置表','datashowset','','',0)
+</statement>
+<statement key="3.8021">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(7,1,'Jc-Jcdsp','数据展现集成显示字段表','datashowset','','',0)
+</statement>
+<statement key="3.8022">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(7,2,'Jc-DataAction','节点后操作','','','/WEB-INF/service/action.xml',0)
+</statement>
+<statement key="3.8023">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(9,1,'Lz-Lzjcasd','自定义接口详细设置表','actionsettingdetail','','',0)
+</statement>
+<statement key="3.8024">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(9,1,'Lz-Lzjcfafm','DML接口字段映射表','formactionfieldmap','','',0)
+</statement>
+<statement key="3.8025">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(9,1,'Lz-Lzjcfass','DML接口自定义sql设置表','formactionsqlset','','',0)
+</statement>
+<statement key="3.8026">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(9,1,'Lz-Lzjcfas','DML接口设置表','formactionset','','',0)
+</statement>
+<statement key="3.8027">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(9,1,'Lz-Lzjcwfas','WebService接口设置表','wsformactionset','','',0)
+</statement>
+<statement key="3.8028">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(9,1,'Lz-Lzjcac','自定义接口设置表','actionsetting','','',0)
+</statement>
+<statement key="3.8029">
+update cloudstore_checkforuuiddb set dbname = 'hrmresource' where id = 16
+</statement>
+<statement key="3.8030">
+update cloudstore_checkforuuiddb set dbname = 'datasource.xml' where id =19
+</statement>
+<statement key="3.8031">
+update cloudstore_checkforuuiddb set dbname = 'datashowparam' where id = 21
+</statement>
+<statement key="3.8032">
+update cloudstore_checkforuuiddb set dbname = 'action.xml' where id = 22
+</statement>
+<statement key="3.8033">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(9,1,'Lz-Lzwdc','字段联动条件表','workflow_datainput_condition','','',0)
+</statement>
+<statement key="3.8034">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(9,1,'Lz-Lzwde','工作流字段联动设置表','workflow_datainput_entry','','',0)
+</statement>
+<statement key="3.8035">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(9,1,'Lz-Lzwdf','工作流字段联动设置表-取值与赋值字段表','workflow_datainput_field','','',0)
+</statement>
+<statement key="3.8036">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(9,1,'Lz-Lzwdm','工作流字段联动设置表（联动主表）','workflow_datainput_main','','',0)
+</statement>
+<statement key="3.8037">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(9,1,'Lz-Lzwdt','工作流字段联动设置表—关联数据表','workflow_datainput_table','','',0)
+</statement>
+<statement key="3.8038">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(9,1,'Lz-Lzmdal','属性联动基本信息表','modeattrlinkage','','',0)
+</statement>
+<statement key="3.8039">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(9,1,'Lz-Lzmdi','字段联动引用数据库表名','modedatainputtable','','',0)
+</statement>
+<statement key="3.8040">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(9,1,'Lz-Lzmdit','字段联动设置基本信息','modedatainputentry','','',0)
+</statement>
+<statement key="3.8041">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(9,1,'Lz-Lzcmdif','字段联动字段信息','modedatainputfield','','',0)
+</statement>
+<statement key="3.8042">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(9,1,'Lz-Lzcmdim','字段联动设置主信息','modedatainputmain','','',0)
+</statement>
+<statement key="3.8043">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(0,1,'gongw','公文','','','',0)
+</statement>
+<statement key="3.8044">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(39,1,'gongw-dru','基础信息','DocReceiveUnit','','',0)
+</statement>
+<statement key="3.8045">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(7,1,'Jc-dsp','数据展现集成查询字段表','datasearchparam','','',0)
+</statement>
+<statement key="3.8046">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(9,2,'Lz-SapB','旧版本Sap数据','SapBrowser.xml','SapBrowser.xml','\WEB-INF\config\SapBrowser.xml',0)
+</statement>
+<statement key="3.8047">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(9,1,'Lz-ibbi','Sap初始化信息表','int_BrowserbaseInfo','','',0)
+</statement>
+<statement key="3.8048">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(9,1,'Lz-ipt','SapinParameter','sap_inParameter','','',0)
+</statement>
+<statement key="3.8049">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(9,1,'Lz-ist','SapinStructure','sap_inStructure','','',0)
+</statement>
+<statement key="3.8050">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(9,1,'Lz-it','SapinTable','sap_inTable','','',0)
+</statement>
+<statement key="3.8051">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(9,1,'Lz-sop','SapoutParameter','sap_outParameter','','',0)
+</statement>
+<statement key="3.8052">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(9,1,'Lz-sos','SapoutStructure','sap_outStructure','','',0)
+</statement>
+<statement key="3.8053">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(9,1,'Lz-sot','SapoutTable','sap_outTable','','',0)
+</statement>
+<statement key="3.8054">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(9,1,'Lz-smb','SapmultiBrowser','sap_multiBrowser','','',0)
+</statement>
+<statement key="3.8055">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(9,2,'Lz-brow','自定义浏览旧版本数据','browser.xml','browser.xml','WEB-INF\service\browser.xml',0)
+</statement>
+<statement key="3.8056">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(0,1,'Sap','Sap集成','','','',0)
+</statement>
+<statement key="3.8057">
+update  cloudstore_checkforuuiddb set fid = 52 where id in (42,43,44,45,46,47,48,49,50)
+</statement>
+<statement key="3.8058">
+alter table cloudstore_checkforuuiddb  add isshow varchar(10) default 0
+</statement>
+<statement key="3.8059">
+update  cloudstore_checkforuuiddb  set isshow = 1 where id in(44,45,46,47,48,49)
+</statement>
+<statement key="3.8060">
+update  cloudstore_checkforuuiddb  set isshow = 0 where id not in(44,45,46,47,48,49)
+</statement>
+<statement key="3.90">
+create table cloudstore_checkforky(
+kyinit int not null default 0
+)
+</statement>
+<statement key="3.91">
+insert into cloudstore_checkforky (kyinit) values(0)
+</statement>
+<statement key="3.8061">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(8,1,'lc-init','流程基本数据','workflow_base','','',0)
+</statement>
+<statement key="3.92">
+update cloudstore_checkforky set kyinit = 1 where kyinit = 0
+</statement>
+<statement key="3.8062">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(52,1,'lz-ibm','sap浏览按钮相关信息','int_browermark','','',0)
+</statement>
+<statement key="3.8063">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(52,1,'lz-ss','sap注册信息表','sap_service','','',0)
+</statement>
+<statement key="3.8064">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(9,1,'Lz-Lzwfap','出口附加规则或节点前后附加操作表','workflow_addinoperate','','',0)
+</statement>
+<statement key="3.8065">
+insert into cloudstore_checkforuuiddb (fid,type,enname,chname,dbname,dbtitle,url,dborder) values(9,1,'Lz-Lzwfas','流程action配置表','workflowactionset','','',0)
+</statement>
+<statement key="3.8066">
+update cloudstore_checkforuuiddb set enname = 'Lz-Lzwfas' , chname = '流程action配置表' ,dbname = 'workflowactionset' where id = 23
+</statement>
+<statement key="3.8067">
+update cloudstore_checkforuuiddb set enname = 'Lz-Lzjcasd' , chname = '自定义接口详细设置表' ,dbname = 'actionsettingdetail' where id = 57
+</statement>
+<statement key="4.3">
+create table cloudstore_defcol(
+id int auto_increment key not null,
+systemid varchar(300) not null default 0,
+col_base_id varchar(300) ,
+pageid varchar(300)  ,
+pageuid varchar(300)  ,
+userid varchar(300)  ,
+orders varchar(300) ,
+onlyWidth varchar(300) ,
+width_ varchar(300) 
+)
+</statement>
+<statement key="4.4">
+create table cloudstore_sdfcol(
+id int auto_increment key not null,
+isdefault varchar(1000),
+pageid varchar(1000) ,
+pageuid varchar(1000)  ,
+align varchar(1000)  ,
+name varchar(1000) ,
+column_ varchar(1000) ,
+orderkey varchar(1000) ,
+linkvaluecolumn varchar(1000) ,
+linkkey varchar(1000) ,
+href varchar(1000) ,
+target varchar(1000) ,
+transmethod varchar(1000), 
+otherpara varchar(1000), 
+orders int, 
+width varchar(1000), 
+text_ varchar(1000), 
+labelid varchar(1000), 
+hide_ varchar(1000), 
+pkey varchar(1000), 
+isfixed varchar(1000) 
+)
+</statement>
+<statement key="4.5">
+drop table cloudstore_sdfcol
+</statement>
+<statement key="4.6">
+drop table cloudstore_defcol
+</statement>
+<statement key="4.7">
+create table cloudstore_sdfcol(
+id int auto_increment key not null,
+uuid varchar(1000)  not null,
+pageuid varchar(1000)  not null,
+_key varchar(1000)  not null,
+display int ,
+orders varchar(1000) ,
+orderkey varchar(1000) ,
+_text varchar(1000)
+)
+</statement>
+<statement key="4.8">
+create table cloudstore_defcol(
+id int auto_increment key not null,
+sysid varchar(1000)  not null,
+userid varchar(1000)  not null,
+pageuid varchar(1000)  not null,
+orders varchar(1000) ,
+display int 
+)
+</statement>
+<statement key="5">
+create table cloudstore_appdb(
+serialNumber varChar(30) not null,
+uuid varchar(100) not null
+)
+</statement>
+<statement key="6">
+create table cloudstore_localerls(
+id int auto_increment key not null,
+localeindexid varchar(1000)  not null,
+lableindexid varchar(1000)  not null
+)
+</statement>
+<statement key="8">
+create table app_license(
+  code varchar(40) not null
+)
+</statement>
+<statement key="9">
+alter table cloudstore_defcol add dataIndex varchar(200) not null default ''
+</statement>
+<statement key="9.1">
+alter table cloudstore_defcol modify column orders int
+</statement>
+</sql>
+<!-- 
+drop table cloudstore_sqlrun
+go
+drop table cloudstore_role
+go
+drop table cloudstore_rolemember
+
+1、参开配置如下：
+<sql>
+<statement>
+create table ...
+</statement>
+</sql>
+2、系统打开后会自动按顺序执行statement，如果有错误会在xml中体现，执行完成会有如下提示，也可以手动标记executed="true"达到不执行的效果，如果有错误会出现error标签
+<sql>
+<statement executed="true" error="">
+create table ...
+</statement>
+</sql>
+3、开发者在语句错误的时候直接获取此文件即可
+
+
+<statement>
+insert into cloudstore_role111(a,b,c) 
+</statement>
+<statement>
+update cloudstore_role
+</statement>
+<statement>
+drop table cloudstore_role
+</statement>
+<statement>
+delete from cloudstore_role
+</statement>
+<statement>
+create view cloudstore_role as
+select * from hrmresource 
+</statement>
+<statement>
+create proc cloudstore_role as
+select * from hrmresource 
+</statement>
+ -->
+<!-- 
+
+create table cloudstore_role (
+id int identity(1,1) not null, 主键自增
+rolename varchar(512) not null, 角色名
+rolecode varchar(512) not null, 角色编码
+del int default 1 是否删除：0是 1否
+) 
+create table cloudstore_rolemenber (
+id int identity(1,1) not null, 主键自增
+roleid int not null, 角色id
+membertype int not null,0个人 1分部 2部门
+memberobj int not null,type是个人选人，是分部选分部，是部门选部门
+rolelevel int not null, 0总部 1分部 2部门
+roleobj int not null, 0代表都为自己的部门、分部、总部，其它就是和rolelevel绑定，它选择什么类型这里就存放什么类型
+del int default 1 是否删除：0是 1否
+)
+ -->

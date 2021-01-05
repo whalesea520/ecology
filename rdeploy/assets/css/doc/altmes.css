@@ -1,0 +1,47 @@
+.altDiv {
+  width: 356px;
+  height: 134px;
+  background-color: #272727;
+  position: absolute;
+  top: 333px;
+  left: 334px;
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.4;
+  -khtml-opacity: 0.4;
+  opacity: 0.4;
+  text-align: center;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius:4px;
+}
+.altMes {
+	font-size: 14px;
+  	font-weight: bold;
+  	color: #ffffff;
+	padding-top: 37px;
+}
+.btnDiv{
+      width: 148px;
+  height: 26px;
+  border: 1px solid #ffffff;
+  line-height: 26px;
+  position: absolute;
+  font-size: 12px;
+  color: #ffffff;
+  top: 425px;
+  left: 437px;
+  z-index: 9;
+  text-align: center;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius:4px;
+  opacity: 0.8;
+  cursor:pointer;
+}
+	
+.btnDiv:hover{
+	 background-color: #ffffff;
+	 color: #293a51;
+	 opacity: 1;
+}
+																			

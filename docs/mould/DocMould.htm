@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0066)http://210.83.41.41/test/docs/BDMaintTemplate.asp?Action=Templates -->
+<HTML><HEAD><TITLE>Maintenance - Document layouts</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=UTF-8"><LINK 
+href="../css/BacoSystem_wev8.css" type=text/css 
+rel=STYLESHEET>
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY>
+<FORM name=Baco action=BDMaintTemplate.asp method=post>
+<SCRIPT language=javascript>
+function displaySpan(objectName, imgObject)
+{
+	if (objectName.style.display == "none")
+	{
+		imgObject.src = "images/btnDocCollapse_wev8.gif";
+		objectName.style.display = "";
+	}
+	else
+	{
+		imgObject.src ="images/btnDocExpand_wev8.gif";
+		objectName.style.display = "none";
+	}
+}
+</SCRIPT>
+
+<SCRIPT language=vbscript>
+Sub btnNew_onclick()
+	Dim sURL
+	
+	sURL = sURL & "BDDocEdit.asp?Action=0"
+	If Trim(Baco.GroupID.value) <> "" Then
+		sURL = sURL & "&Group=" & Baco.GroupID.value
+	End If
+	
+	If Trim(Baco.Category.value) <> "" Then
+		sURL = sURL & "&Category=" & Baco.Category.value
+	End If
+	If Trim(Baco.SubCategory.value) <> "" Then
+		sURL = sURL & "&SubCategory=" & Baco.SubCategory.value
+	End If
+	
+	sURL = sURL & "&IsTemplate=True&ReturnTo=BDMaintTemplate.asp?" & "Action%3DTemplates"
+	Location = sURL
+End Sub
+
+Sub SubmitValue()
+	Baco.submit()
+End Sub
+</SCRIPT>
+
+<DIV class=HdrTitle>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD align=left width=55><IMG height=24 
+      src="../images/hdDOC_wev8.gif"></TD>
+        <TD align=left><SPAN id=BacoTitle 
+      style="FONT-WEIGHT: bold; FONT-SIZE: medium"><%=SystemEnv.getHtmlLabelName(58,user.getLanguage())%>：<%=SystemEnv.getHtmlLabelName(64,user.getLanguage())%></SPAN></TD>
+    <TD align=right>&nbsp;</TD>
+    <TD width=5></TD>
+    <TD align=middle width=24><BUTTON language=VBS class=btnFavorite 
+      id=BacoAddFavorite title="Add to favorites"></BUTTON>
+      <SCRIPT language=VBS>
+	Sub BacoAddFavorite_OnClick
+		window.external.AddFavorite BacoGetGoPageURL, BacoTitle.InnerText
+	End Sub
+
+	Function BacoGetGoPageURL
+		Dim i, i2
+		Dim s, gopage
+		Dim sp: sp = "BDMaintTemplate%2Easp%3FAction%3DTemplates"
+		If IsEmpty(window.parent) Then 
+			s = location.href & ""
+		Else	
+			s = window.parent.location.href
+			If InStr(1,s,"bp.asp",1) > 0 Then
+				s = window.parent.location.href
+				gopage = "?gopage="
+				If InStr(1,s,"?gopage=",1) > 0 Then
+					gopage = "&gopage="
+				Else
+					If InStr(1,s,"?",1) > 0 Then gopage = "&gopage="
+				End If
+				i = Instr(1, s, "gopage=",1)
+				If i > 0 Then
+					i2 = Instr(i, s, "&",1) 
+					If i2 > 0 Then
+						s = Left(s,i-2) & Mid(s, i2, Len(s) - i2) & gopage & sp 
+					Else
+						s = Left(s,i-2) & gopage & sp 
+					End If
+				Else
+					s = s & gopage & sp 
+				End If
+			Else
+				s = location.href & ""
+			End If
+		End If
+		s = Replace(s,"bp.asp&","bp.asp?",1,1,1)
+		BacoGetGoPageURL = s
+	End Function
+</SCRIPT>
+       </TD>
+    <TD align=middle width=24><BUTTON language=VBS class=btnHelp 
+      onclick='window.open "BacoHelp.asp?Title=%B0%E6%CA%BD%3A+%CE%C4%B5%B5&amp;Topic=BDMaintTemplate.asp&amp;TopicFilter=BACO", null, "width=800,height=500,resizable=yes,scrollbars=yes,status=yes,toolbar=yes,menubar=no,location=no"'></BUTTON></TD></TR></TBODY></TABLE></DIV>
+<DIV class=HdrProps></DIV>
+<INPUT id=GroupID type=hidden 
+name=GroupID> <INPUT id=Category type=hidden name=Category> <INPUT 
+id=SubCategory type=hidden name=SubCategory> <INPUT id=Action type=hidden 
+value=Templates name=Action> <!-- Buttonbar --><BUTTON class=btn id=btnNew 
+accessKey=N name=btnNew><U><U>N</U></U>-<%=SystemEnv.getHtmlLabelName(365,user.getLanguage())%></BUTTON>
+<BUTTON class=BtnLog id=button2 accessKey=L 
+onclick='window.location="BDFieldLog.asp?HumresID=3&amp;apptitle=<%=SystemEnv.getHtmlLabelName(65,user.getLanguage())%>&amp;component=BDGroup&amp;jointable=bacodiscussioncategories&amp;joinfield=id&amp;extrafields=&amp;extracols="' 
+name=button2><U>L</U>-<%=SystemEnv.getHtmlLabelName(83,user.getLanguage())%></BUTTON> 
+<SCRIPT language=vbscript>
+	
+	'Sub SelectCompany_onclick
+	Sub FilterDivisionKey_onChange
+		SubmitValue
+	End Sub
+
+	Sub SelectLanguage_onclick
+		'id = window.showModalDialog("BacoBrowser.asp?ID={B741B6DA-DBAB-11D2-AF7E-00C04F9553B8}&ResultCols=taalcode%2Coms30%5F0&MaxRows=25&Options=1",window,"dialogWidth:550px;resizable:yes")
+		id = window.showModalDialog("BacoBrowser.asp?NAME=Language&ResultCols=taalcode%2Coms30%5F0&MaxRows=25&Options=1",window,"dialogWidth:550px;resizable:yes")
+		
+		If IsNull(id) Then
+		   Baco.FilterLanguageKey.value = Empty
+		   Baco.Language.innerText = Empty
+		ElseIf Not IsEmpty(id) Then
+		   Baco.FilterLanguageKey.value = id(0)
+		   Baco.Language.innerText = id(1)
+		End If
+		
+		SubmitValue
+	End Sub
+	
+</SCRIPT>
+
+  <span id=BDSC1 name="BDSC1">
+  <ul>
+
+    <li><a 
+              href="http://210.83.41.41/test/docs/BDMaintTemplate.asp?Action=VIEW&GroupID=2&Category=Relationship&SubCategory=Weaver%2BNews&FilterLanguageKey=&FilterDivisionKey="><%=SystemEnv.getHtmlLabelName(16225,user.getLanguage())%></a></li>
+    <li><a href="Action=VIEW&GroupID=2&Category=Relationship&SubCategory=Weaver%2BNews&FilterLanguageKey=&FilterDivisionKey="><%=SystemEnv.getHtmlLabelName(16226,user.getLanguage())%></a></li>
+  </ul>
+  </span> 
+</FORM></BODY></HTML>

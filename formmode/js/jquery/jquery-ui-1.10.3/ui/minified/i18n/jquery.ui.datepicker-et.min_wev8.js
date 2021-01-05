@@ -1,0 +1,4 @@
+﻿/*! jQuery UI - v1.10.3 - 2013-05-03
+* http://jqueryui.com
+* Copyright 2013 jQuery Foundation and other contributors; Licensed MIT */
+jQuery(function(t){t.datepicker.regional.et={closeText:"Sulge",prevText:"Eelnev",nextText:"J盲rgnev",currentText:"T盲na",monthNames:["Jaanuar","Veebruar","M盲rts","Aprill","Mai","Juuni","Juuli","August","September","Oktoober","November","Detsember"],monthNamesShort:["Jaan","Veebr","M盲rts","Apr","Mai","Juuni","Juuli","Aug","Sept","Okt","Nov","Dets"],dayNames:["P眉hap盲ev","Esmasp盲ev","Teisip盲ev","Kolmap盲ev","Neljap盲ev","Reede","Laup盲ev"],dayNamesShort:["P眉hap","Esmasp","Teisip","Kolmap","Neljap","Reede","Laup"],dayNamesMin:["P","E","T","K","N","R","L"],weekHeader:"n盲d",dateFormat:"dd.mm.yy",firstDay:1,isRTL:!1,showMonthAfterYear:!1,yearSuffix:""},t.datepicker.setDefaults(t.datepicker.regional.et)});

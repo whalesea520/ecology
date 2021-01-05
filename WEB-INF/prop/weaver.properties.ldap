@@ -1,0 +1,18 @@
+DriverClasses = com.microsoft.jdbc.sqlserver.SQLServerDriver
+ecology.url = jdbc:microsoft:sqlserver://192.168.0.49:1433;DatabaseName=evdev
+ecology.user = ecology
+ecology.password = ecology
+ecology.maxconn = 20
+ecology.minconn = 10
+
+#Ldap settings
+authentic=ldap
+ldap.factoryclass=com.sun.jndi.ldap.LdapCtxFactory
+ldap.provider=ldap://weaver1:389
+ldap.domain=ou=people,o=midea.com.cn,o=isp
+ldap.principal=cn=Directory Manager
+ldap.credentials=12345678
+
+
+LOG_FORMAT = yyyy.MM.dd'-'hh:mm:ss
+DEBUG_MODE = false

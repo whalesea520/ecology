@@ -1,0 +1,15 @@
+/*可以在这里添加你自己的css*/
+table{
+	width: 100%;
+  	font-family: '微软雅黑' 12px;
+}
+.field_label_colspan{
+	display: inline-block;
+	margin-right: 35px;
+}
+.field_label{
+	width: 30%;
+}
+.field_content{
+	width: 70%;
+}

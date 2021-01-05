@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> ZTREE DEMO - big data page</TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../../css/demo.css" type="text/css">
+	<link rel="stylesheet" href="../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="../../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ztree.core-3.0.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ztree.excheck-3.0.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ztree.exedit-3.0.js"></script>
+	<SCRIPT LANGUAGE="JavaScript">
+		<!--
+		var setting = {
+			async: {
+				enable: true,
+				url: getUrl
+			},
+			check: {
+				enable: true
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			view: {
+				addDiyDom: addDiyDom
+			},
+			callback: {
+				beforeExpand: beforeExpand,
+				onAsyncSuccess: onAsyncSuccess,
+				onAsyncError: onAsyncError
+			}
+		};
+
+		var zNodes =[
+			{name:"鍒嗛〉娴嬭瘯", t:"璇风偣鍑诲垎椤垫寜閽?, id:"1", count:2000, page:0, pageSize:100, isParent:true}
+		];
+		var curPage = 0;
+		function getUrl(treeId, treeNode) {
+			var param = "id="+ treeNode.id +"_"+treeNode.page +"&count="+treeNode.pageSize,
+			aObj = $("#" + treeNode.tId + "_a");
+			aObj.attr("title", "褰撳墠绗?" + treeNode.page + " 椤?/ 鍏?" + treeNode.maxPage + " 椤?)
+			return "../asyncData/getNodesForBigData.php?" + param;
+		}
+		function goPage(treeNode, page) {
+			treeNode.page = page;
+			if (treeNode.page<1) treeNode.page = 1;
+			if (treeNode.page>treeNode.maxPage) treeNode.page = treeNode.maxPage;
+			if (curPage == treeNode.page) return;
+			curPage = treeNode.page;
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+			zTree.reAsyncChildNodes(treeNode, "refresh");
+		}
+		function beforeExpand(treeId, treeNode) {
+			if (treeNode.page == 0) treeNode.page = 1;
+			return !treeNode.isAjaxing;
+		}
+		function onAsyncSuccess(event, treeId, treeNode, msg) {
+			
+		}
+		function onAsyncError(event, treeId, treeNode, XMLHttpRequest, textStatus, errorThrown) {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+			alert("寮傛鑾峰彇鏁版嵁鍑虹幇寮傚父銆?);
+			treeNode.icon = "";
+			zTree.updateNode(treeNode);
+		}
+		function addDiyDom(treeId, treeNode) {
+			if (treeNode.level>0) return;
+			var aObj = $("#" + treeNode.tId + "_a");
+			if ($("#addBtn_"+treeNode.id).length>0) return;
+			var addStr = "<button type='button' class='lastPage' id='lastBtn_" + treeNode.id
+				+ "' title='last page' onfocus='this.blur();'></button><button type='button' class='nextPage' id='nextBtn_" + treeNode.id
+				+ "' title='next page' onfocus='this.blur();'></button><button type='button' class='prevPage' id='prevBtn_" + treeNode.id
+				+ "' title='prev page' onfocus='this.blur();'></button><button type='button' class='firstPage' id='firstBtn_" + treeNode.id
+				+ "' title='first page' onfocus='this.blur();'></button>";
+			aObj.after(addStr);
+			var first = $("#firstBtn_"+treeNode.id);
+			var prev = $("#prevBtn_"+treeNode.id);
+			var next = $("#nextBtn_"+treeNode.id);
+			var last = $("#lastBtn_"+treeNode.id);
+			treeNode.maxPage = Math.round(treeNode.count/treeNode.pageSize - .5) + (treeNode.count%treeNode.pageSize == 0 ? 0:1);
+			first.bind("click", function(){
+				if (!treeNode.isAjaxing) {
+					goPage(treeNode, 1);
+				}
+			});
+			last.bind("click", function(){
+				if (!treeNode.isAjaxing) {
+					goPage(treeNode, treeNode.maxPage);
+				}
+			});
+			prev.bind("click", function(){
+				if (!treeNode.isAjaxing) {
+					goPage(treeNode, treeNode.page-1);
+				}
+			});
+			next.bind("click", function(){
+				if (!treeNode.isAjaxing) {
+					goPage(treeNode, treeNode.page+1);
+				}
+			});
+		};
+		
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+		});
+		//-->
+	</SCRIPT>
+	<style type="text/css">
+.ztree li button.firstPage {float:right; margin-left:2px; margin-right: 0; background-position:-112px -16px; vertical-align:top; *vertical-align:middle}
+.ztree li button.prevPage {float:right; margin-left:2px; margin-right: 0; background-position:-112px -48px; vertical-align:top; *vertical-align:middle}
+.ztree li button.nextPage {float:right; margin-left:2px; margin-right: 0; background-position:-112px -64px; vertical-align:top; *vertical-align:middle}
+.ztree li button.lastPage {float:right; margin-left:2px; margin-right: 0; background-position:-112px -32px; vertical-align:top; *vertical-align:middle}
+	</style>
+ </HEAD>
+
+<BODY>
+<h1>鍒嗛〉鍔犺浇澶ф暟鎹噺</h1>
+<h6>[ 鏂囦欢璺緞锛歞emo/bigdata/page.html ]</h6>
+<div class="content_wrap">
+	<div class="zTreeDemoBackground left">
+		<ul id="treeDemo" class="ztree"></ul>
+	</div>
+	<div class="right">
+		<ul class="info">
+			<li class="title"><h2>1銆佸ぇ鏁版嵁閲忓姞杞借鏄?/h2>
+				<ul class="list">
+				<li>1)銆佸垎椤垫柟妗堝彲浠ユ湁鏁堣В鍐虫煇涓€绾ц妭鐐规暟鎹秴澶х殑鎯呭喌銆?/li>
+				<li>2)銆佸垎椤垫寜閽€氳繃鑷畾涔夋帶浠剁殑鏂规硶瀹炵幇銆?/li>
+				<li class="highlight_red">3)銆佸垎椤垫柟妗堝浜?checkbox 鐨勫叧鑱斿叧绯绘棤鑳戒负鍔涳紝鍙兘姣忔缈婚〉鍚庤繘琛屼慨姝ｃ€傜敱浜庢椂闂村叧绯伙紝Demo 涓笉瀵?checkbox 鐨勫叧鑱旇繘琛屼换浣曚慨姝ｅ鐞嗐€?/li>
+				<li class="highlight_red">4)銆佸垎椤垫柟妗堜腑锛屼粠 zTree 寰楀埌鐨勮妭鐐规暟鎹彧鏈夊綋鍓嶉〉鐨勮妭鐐规暟鎹紝鍙互鍦ㄦ瘡娆＄炕椤靛悗鑷淇濆瓨姣忛〉鐨勬暟鎹紝浣滀负缂撳瓨锛屽叿浣撴儏鍐佃鏍规嵁瀹為檯闇€姹傛潵鍐冲畾銆?/li>
+			</li>
+			<li class="title"><h2>2銆乻etting 閰嶇疆淇℃伅璇存槑</h2>
+				<ul class="list">
+				<li>闇€瑕佽缃?setting.async 寮傛鍔犺浇閮ㄥ垎鐨勫弬鏁?/li>
+				<li>鍏朵粬涓嶉渶瑕佽繘琛岀壒娈婄殑閰嶇疆锛屾牴鎹嚜宸辩殑闇€姹傝嚜琛岃缃?/li>
+				</ul>
+			</li>
+			<li class="title"><h2>3銆乼reeNode 鑺傜偣鏁版嵁璇存槑</h2>
+				<ul class="list">
+				<li>瀵?鑺傜偣鏁版嵁 娌℃湁鐗规畩瑕佹眰锛岀敤鎴峰彲浠ユ牴鎹嚜宸辩殑闇€姹傛坊鍔犺嚜瀹氫箟灞炴€?/li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+</BODY>
+</HTML>

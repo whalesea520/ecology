@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<page-urls>
+		<url>
+			<create-page>/odoc/odoc/weboffice2015/weboffice2015_iframecontent.jsp</create-page>
+			<consume-page>/weaver/weaver.file.FileDownloadForNews</consume-page>
+			<consume-page>/weaver/weaver.file.FileDownload</consume-page>
+		</url>
+		<url>
+			<create-page>/odoc/odoc/weboffice2015/OfficeToPDF.jsp</create-page>
+			<consume-page>/weaver/weaver.file.FileDownloadForNews</consume-page>
+			<consume-page>/weaver/weaver.file.FileDownload</consume-page>
+		</url>
+		<url>
+			<create-page>/odoc/odoc/weboffice2015/index.jsp</create-page>
+			<consume-page>/weaver/weaver.file.FileDownloadForNews</consume-page>
+			<consume-page>/weaver/weaver.file.FileDownload</consume-page>
+		</url>
+
+		<url>
+			<create-page>/odoc/odoc/webwps/webwps_iframecontent.jsp</create-page>
+			<consume-page>/odoc/odoc/webwps/downloadAsFile.jsp</consume-page>
+			<consume-page>/odoc/odoc/webwps/download.jsp</consume-page>
+		</url>
+		<url>
+			<create-page>/odoc/odoc/yozoOffice/yozoOffice_iframecontent.jsp</create-page>
+			<consume-page>/odoc/odoc/yozoOffice/downloadAsFile.jsp</consume-page>
+		</url>
+		<url>
+			<create-page>/odoc/odoc/iWebOfficeOperation.jsp</create-page>
+			<consume-page>/odoc/odoc/yozoOffice/downloadAsFile.jsp</consume-page>
+			<consume-page>/odoc/odoc/webwps/downloadAsFile.jsp</consume-page>
+			<consume-page>/odoc/odoc/webwps/download.jsp</consume-page>
+			<consume-page>/weaver/weaver.file.FileDownloadForNews</consume-page>
+			<consume-page>/weaver/weaver.file.FileDownload</consume-page>
+		</url>
+		<url>
+			<create-page>/docs/iweboffice/iweboffice2015/OpenAndSave/OpenAndSave_Word3.jsp</create-page>
+			<consume-page>/weaver/weaver.file.FileDownloadForNews</consume-page>
+			<consume-page>/weaver/weaver.file.FileDownload</consume-page>
+		</url>
+		<url>
+			<create-page>/docs/iweboffice/OfficeToPDF.jsp</create-page>
+			<consume-page>/weaver/weaver.file.FileDownloadForNews</consume-page>
+			<consume-page>/weaver/weaver.file.FileDownload</consume-page>
+		</url>
+		<url>
+			<create-page>/docs/iweboffice/DocOperation.jsp</create-page>
+			<consume-page>/weaver/weaver.file.FileDownloadForNews</consume-page>
+			<consume-page>/weaver/weaver.file.FileDownload</consume-page>
+		</url>
+	</page-urls>	
+</root>

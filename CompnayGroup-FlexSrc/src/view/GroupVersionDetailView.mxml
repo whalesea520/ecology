@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TitleWindow  xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" width="800" height="600" xmlns:control="control.*"
+				xmlns:flexlib="http://code.google.com/p/flexlib/" showCloseButton="true" creationComplete="init()">	
+	
+	<flexlib:DragScrollingCanvas 
+		id="orgChartContainer" 
+		width="100%" height="460"
+		horizontalCenter="0"
+		verticalCenter="0"
+		childrenDoDrag="true"
+		
+		horizontalScrollPolicy="auto" verticalScrollPolicy="auto" >
+		<control:OrgChart id="oc" visible="false"  themeColor="0x000000"
+						  horizontalSpacing="20" verticalSpacing="60"
+						  creationComplete="setHorizontalCenterOrNot()"
+						  minWidth="{orgChartContainer.width}"
+						  scaleX="1" scaleY="1"
+						  container="{orgChartContainer}"/>
+	</flexlib:DragScrollingCanvas>	
+	
+	
+	<mx:Script>
+		<![CDATA[
+			
+			import common.StaticObj;
+			import mx.core.Application;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+			import mx.rpc.http.HTTPService;
+			import mx.controls.Alert;
+			import mx.managers.PopUpManager;
+			import mx.collections.ArrayCollection;
+			import mx.collections.XMLListCollection;
+			import mx.collections.ICollectionView;
+			import util.XmlUtil;
+			[bindable]
+			var staticObj :StaticObj=Application.application.staticObj;
+			//import model.CompanyInfo;
+			//var company:CompanyInfo = 
+			[bindable]
+			private var versionList:ArrayCollection;
+			private function init(){
+				oc.canEdit = false;
+				oc.canView =false;
+				var http:HTTPService = new HTTPService();
+				
+				http.addEventListener(ResultEvent.RESULT,showVersion);
+				http.addEventListener(FaultEvent.FAULT,myFaultErrorEvent);
+				
+				http.url="/companygroup/manage/companyoperation.jsp?method=getVersion"
+				http.method = "post";
+				http.resultFormat = "e4x";
+				
+				var val:URLVariables = new URLVariables;
+				val.id = this.name;
+				val.groupid = staticObj.groupid;
+				val.random = Math.random();
+				
+				http.send(val);
+				
+			}
+			
+			public function showVersion(event:ResultEvent):void{
+				try{
+					if(event.result != null && event.result is XML){
+						var result:XML = event.result as XML;
+						//orgTree.dataProvider = result;
+						
+						var data:ICollectionView = new XMLListCollection(new XMLList(result));
+						oc.dataProvider1 = data;
+						oc.visible = true;
+					}
+				}catch(e:Error){
+					
+				}
+			}
+			
+			public function myFaultErrorEvent(myFaultEvent:FaultEvent):void{    //异常处理函数   
+				//Alert.show("333");
+				trace(myFaultEvent.message);   
+			}  
+			
+			private function setHorizontalCenterOrNot():void{
+				//trace("setHorizontalCenterOrNot width = "+width);
+				//trace("setHorizontalCenterOrNot oc.width = "+oc.width);
+				//trace("setHorizontalCenterOrNot oc.width = ");
+				//orgChartContainer.oc
+				//Alert.show(orgChartContainer.width+"$"+oc.width)
+				//orgChartContainer.verticalScrollPolicy = orgChartContainer.horizontalScrollPolicy = ScrollPolicy.AUTO
+				if(orgChartContainer.width > oc.width){
+					oc.setStyle("horizontalCenter", 0);
+					
+				}else{
+					//Alert.show(oc.width+"");
+					oc.setStyle("left", 0);					
+					oc.setStyle("horizontalCenter", "");
+				}
+			}
+			
+		]]>
+	</mx:Script>
+</mx:TitleWindow>

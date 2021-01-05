@@ -1,0 +1,35 @@
+	.huotu_dialog_overlay
+		{
+			z-index:99991;
+			position:fixed;
+			filter:alpha(opacity=30); BACKGROUND-COLOR: white;
+			width:100%;
+			bottom:0px;
+			height:100%;
+			top:0px;
+			right:0px;
+			left:0px;
+			opacity:0.3;
+			_position:absolute;		
+			margin: 0px;
+			padding: 0px;
+			overflow: hidden;
+			display: none;
+		}
+		.bd_dialog_main
+		{	
+			display: none; 
+			z-index:99998;
+			position:fixed;
+			_position:absolute;	
+			background: white url(/integration/images/loading_wev8.gif) no-repeat 15px 15px; 
+			width: 240px; 
+			height: 60px; 
+			background-color:#55A9DD;	
+			padding: 13px 10px 10px 50px; 
+			text-align: left; 
+	        line-height: 27px; 
+			font-weight: bold; 
+			color:white;
+			
+		}

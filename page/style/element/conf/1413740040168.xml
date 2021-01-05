@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<conf>
+<id>1413740040168</id>
+<!--id与文件名需保持一至-->
+<title>ecology8样式-隐藏标题</title>
+<desc/>
+<!--书写时请保证每行以下分号结尾-->
+<css>&#13;
+.item{&#13;
+	background-color:#ffffff;&#13;
+}&#13;
+.header{&#13;
+	background-color:#ffffff;&#13;
+	background-repeat:repeat;&#13;
+	background-position-x:0px;&#13;
+	background-position-y:0px;&#13;
+	border-top-style:none;&#13;
+	border-top-width:0px;&#13;
+	border-top-color:#000000;&#13;
+	border-bottom-style:solid;&#13;
+	border-bottom-width:1px;&#13;
+	border-bottom-color:#dedede;&#13;
+	border-left-style:none;&#13;
+	border-left-width:0px;&#13;
+	border-left-color:#000000;&#13;
+	border-right-style:none;&#13;
+	border-right-width:0px;&#13;
+	border-right-color:#000000;&#13;
+	height:34px;&#13;
+	border-bottom:1px solid rgb(222&amp;#44; 222&amp;#44; 222);&#13;
+}&#13;
+.toolbar{&#13;
+	right:-46px;&#13;
+	top:9px;&#13;
+}&#13;
+.toolbar ul{&#13;
+	width:108px;&#13;
+	margin:0px;&#13;
+	padding:0px;&#13;
+	list-style-type:none;&#13;
+}&#13;
+.toolbar ul li a{&#13;
+	float:left;&#13;
+	display:block;&#13;
+	padding-top:0px;&#13;
+	padding-bottom:0px;&#13;
+	padding-left:3px;&#13;
+	padding-right:3px;&#13;
+	text-decoration:none;&#13;
+}&#13;
+.toolbar ul li{&#13;
+	float:left;&#13;
+	width:16px;&#13;
+	height:16px;&#13;
+}&#13;
+.toolbar ul li a{&#13;
+	width:16px;&#13;
+	height:16px;&#13;
+}&#13;
+.icon{&#13;
+	display:none;&#13;
+	left:15px;&#13;
+	top:7px;&#13;
+}&#13;
+.title{&#13;
+	color:#252525!important;&#13;
+	font-style:normal;&#13;
+	font-size:12px;&#13;
+	font-weight:normal;&#13;
+	font-family:微软雅黑!important;&#13;
+	left:13px;&#13;
+	top:8px;&#13;
+	border-bottom:2px solid rgb(2&amp;#44; 198&amp;#44; 58);&#13;
+	height:25px;&#13;
+}&#13;
+.content{&#13;
+	background-color:rgba(0&amp;#44; 0&amp;#44; 0&amp;#44; 0);&#13;
+	background-image:none;&#13;
+	background-repeat:repeat;&#13;
+	background-position-x:329px;&#13;
+	background-position-y:329px;&#13;
+	border-top-style:none;&#13;
+	border-top-width:0px;&#13;
+	border-top-color:#1d1616;&#13;
+	border-bottom-style:none;&#13;
+	border-bottom-width:0px;&#13;
+	border-bottom-color:#c2d5fc;&#13;
+	border-left-style:none;&#13;
+	border-left-width:0px;&#13;
+	border-left-color:#c2d5fc;&#13;
+	border-right-style:none;&#13;
+	border-right-width:0px;&#13;
+	border-right-color:#c2d5fc;&#13;
+	overflow:auto;&#13;
+	padding-top:5px;&#13;
+	padding-bottom:5px;&#13;
+	padding-left:5px;&#13;
+	padding-right:5px;&#13;
+}&#13;
+.font{&#13;
+	color:#242424!important;&#13;
+	font-style:normal;&#13;
+	font-size:12px;&#13;
+	font-weight:normal;&#13;
+	font-family:微软雅黑!important;&#13;
+	text-decoration:none;&#13;
+}&#13;
+.sparator{&#13;
+	background-image:none;&#13;
+}&#13;
+.tab2{&#13;
+   background-image:url(/page/resource/userfile/image/ecology8/tabbg1_wev8.png);&#13;
+}&#13;
+.tab2unselected{&#13;
+	background-image:url(/page/resource/userfile/image/ecology8/tabbg1_wev8.png);&#13;
+	background-repeat:no-repeat;&#13;
+	cursor:pointer;&#13;
+	text-align:center;&#13;
+	padding-top:5px;&#13;
+	width:77px;&#13;
+	vertical-align:middle;&#13;
+	color:#242424!important;&#13;
+	font-style:normal;&#13;
+	font-family:微软雅黑!important;&#13;
+	font-size:12px;&#13;
+	font-weight:normal;&#13;
+}&#13;
+.tab2selected{&#13;
+    background-image:url(/page/resource/userfile/image/ecology8/tabbg001_wev8.png);&#13;
+	background-repeat:no-repeat;&#13;
+	color:#008ff3!important;&#13;
+	font-style:normal;&#13;
+	font-size:12px;&#13;
+	font-family:微软雅黑!important;&#13;
+	font-weight:normal;&#13;
+	text-align:center;&#13;
+	padding-top:5px;&#13;
+	width:77px;&#13;
+	cursor:pointer;&#13;
+	vertical-align:middle;&#13;
+}&#13;
+.font:hover{&#13;
+	color:#018efb!important;&#13;
+}</css>
+<cornerTop>Right</cornerTop>
+<cornerBottom>Right</cornerBottom>
+<cornerTopRadian>8px</cornerTopRadian>
+<cornerBottomRadian>5px</cornerBottomRadian>
+<imgMode>flash</imgMode>
+<!--flash page-->
+<titleState>hidden</titleState>
+<!--show hidden-->
+<settingState>show</settingState>
+<!--show hidden-->
+<refreshIconState>show</refreshIconState>
+<!--show hidden-->
+<settingIconState>show</settingIconState>
+<!--show hidden-->
+<closeIconState>show</closeIconState>
+<!--show hidden-->
+<moreLocal>title</moreLocal>
+<!--show hidden-->
+<iconLogo>/images/homepage/element/stock_wev8.gif</iconLogo>
+<iconMenu/>
+<iconLock>/page/resource/userfile/image/ecology8/lock_wev8.png</iconLock>
+<iconUnLock>/page/resource/userfile/image/ecology8/unlock_wev8.png</iconUnLock>
+<iconRefresh>/page/resource/userfile/image/ecology8/refresh_wev8.png</iconRefresh>
+<iconSetting>/page/resource/userfile/image/ecology8/setting_wev8.png</iconSetting>
+<iconClose>/page/resource/userfile/image/ecology8/close_wev8.png</iconClose>
+<iconMore>/page/resource/userfile/image/ecology8/more_wev8.png</iconMore>
+<iconEsymbol>/page/resource/userfile/image/ecology8/pointer_wev8.png</iconEsymbol>
+</conf>

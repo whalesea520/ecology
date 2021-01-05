@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<filesystem-white-list>
+		<filesystem-url>/filesystem/exceldesign/uploadimg/</filesystem-url>
+	</filesystem-white-list>
+</root>

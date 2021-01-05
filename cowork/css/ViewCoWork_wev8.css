@@ -1,0 +1,180 @@
+body{
+	padding:8 4 0 10; 
+}
+div#remarkdiv{
+	width: 100%;padding: 0px;margin:0;  background:#C2D3E1;color:#000
+}
+.pagenav{
+	background:#E6E6E6;color:#000;width: 100%;text-align:right;
+	margin:5 0;
+	vertical-align: middle;
+}
+.remarkTable {
+	background:#C2D3E1;
+}
+.remarkTable .leftbottomconer{
+		height:5px;width:5px;
+		background:url('/cowork/images/leftbottom_wev8.gif') no-repeat;	
+}
+.remarkTable .lefttopconer{
+		height:5px;width:5px;
+		background:url('/cowork/images/lefttopconer_wev8.gif') no-repeat;
+}
+.remarkTable .righttopconer{
+		height:5px;width:5px;
+		background:url('/cowork/images/righttopconer_wev8.gif') no-repeat;
+}
+.remarkTable .rightbottomconer{
+		height:5px;width:5px;
+		background:url('/cowork/images/rightbottomconner_wev8.gif') no-repeat;
+}
+ 
+/*========For discuss area========*/
+.discuss{
+ 	width: 100%;padding: 0px;margin:0;
+}
+.discuss	.corner-top-left{
+		height:6px;width:6px;
+		background:url('/cowork/images/lefttop_wev8.jpg') no-repeat;	
+	}
+.discuss	.corner-top-right{
+		height:6px;width:6px;
+		background:url('/cowork/images/righttop_wev8.jpg') no-repeat;
+	}
+.discuss	.corner-bottom-left{
+		height:6px;width:6px;
+		background:url('/cowork/images/leftbottom_wev8.jpg') no-repeat;
+	}
+.discuss	.corner-bottom-right{
+		height:6px;width:6px;
+		background:url('/cowork/images/rightbottom_wev8.jpg') no-repeat;
+	}
+.discuss	.line-x-top{
+		height:6px;
+		background:url('/cowork/images/topline_wev8.jpg') repeat-x;
+	}
+.discuss	.line-x-bottom{
+		height:6px;
+		background:url('/cowork/images/bottomline_wev8.jpg') repeat-x;
+	}
+.discuss	.line-y-left{
+		width:6px;
+		background:url('/cowork/images/leftline_wev8.jpg') repeat-y;
+	}
+.discuss	.line-y-right{
+		width:6px;
+		background:url('/cowork/images/rightline_wev8.jpg') repeat-y;
+	}
+.discuss	.centercenter{
+		background:#E6E6E6;
+	}
+
+.discuss	.triangle{
+		position:absolute;
+		left:30px;
+		bottom:-10px;
+		width:25px;
+        height:22px;
+		background:url('/cowork/images/triangle_wev8.jpg') no-repeat;
+	}
+
+  .oper{margin-top: 5px;margin-left: 15px}  
+  
+  .normal_remark{
+    width: 100%;height: 35px;border:solid 1px #A7AFBD;color: #BCC5D4;OVERFLOW:hidden;vertical-align:middle;    
+  }
+  .active_remark{
+    width: 95%;height: 80px;border:solid 1px #227ABD;
+  }
+  
+.discuss a {font-size:12px} 
+
+.discuss a:link {color: #5d5d5d; text-decoration:underline;} /*未访问：蓝色、无下划线 */
+
+.discuss a:active:{color: red; } /*激活：红色 */
+
+.discuss a:visited {color:#5d5d5d;text-decoration:underline;} /*已访问：purple、无下划线 */
+
+.discuss a:hover {color: red; text-decoration:underline;} /*鼠标移近：红色、下划线 */
+  
+  
+  a.btnEcology  {
+		border:medium none;
+		cursor:pointer;
+		display:inline-block;
+		height:23px;
+		line-height:23px;
+		overflow:hidden;
+		text-align:center;
+		color:#5A5A5A !important;
+		text-decoration:none !important;
+		font-size:12px;
+	}
+	a.btnEcology .left {
+		background:url("/cowork/images/btn_wev8.png")    no-repeat transparent;
+		background-position:top left;
+		height:23px;
+		padding-left:5px;
+		float:left;
+	}
+
+	a.btnEcology .right {
+		background:url("/cowork/images/btn_wev8.png")    no-repeat transparent;		
+		background-position:top right;			
+		height:23px;
+		width:5px;
+		float:left;
+	}
+	
+	a.btnEcology:active{
+	    color:#5A5A5A !important;
+		text-decoration:none;
+	}
+
+	a.btnEcology:hover{
+	    color:#5A5A5A !important;
+		text-decoration:none;
+	}
+
+    a.btnEcology:visited{
+	    color:#5A5A5A !important;
+		text-decoration:none;
+	}
+
+	a.btnEcology:hover .left {
+		background-position:bottom left;
+		
+		
+	}
+
+	a.btnEcology:hover .right {
+		background-position:bottom right;
+		
+	}
+    .newdiscuss{
+      border: solid 2px #3399FF;
+      /*background:#F7F7F7;*/
+    }
+    
+    .pageActive{
+       color:blue;
+       cursor:hand;
+    }
+    
+    #loading{
+    position:absolute;
+    left:25%;
+    background-image:url('/cowork/images/loading_bg_wev8.png');
+    top:30%;
+    padding:8px;
+    z-index:20001;
+    height:auto;
+    /*border:1px solid #ccc;*/
+    display:none;
+    width:250px;
+    height:65px;
+    }
+    #bg { DISPLAY: none; Z-INDEX: 1; BACKGROUND: #E6E6E6; FILTER: alpha(opacity=20); LEFT: 0px; WIDTH: 100%; POSITION: absolute; TOP: 0px; opacity: 0.2 }
+    
+    
+  

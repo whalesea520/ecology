@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+ * FCKeditor - The text editor for Internet - http://www.fckeditor.net
+ * Copyright (C) 2003-2007 Frederico Caldeira Knabben
+ *
+ * == BEGIN LICENSE ==
+ *
+ * Licensed under the terms of any of the following licenses at your
+ * choice:
+ *
+ *  - GNU General Public License Version 2 or later (the "GPL")
+ *    http://www.gnu.org/licenses/gpl.html
+ *
+ *  - GNU Lesser General Public License Version 2.1 or later (the "LGPL")
+ *    http://www.gnu.org/licenses/lgpl.html
+ *
+ *  - Mozilla Public License Version 1.1 or later (the "MPL")
+ *    http://www.mozilla.org/MPL/MPL-1.1.html
+ *
+ * == END LICENSE ==
+ *
+ * This is the configuration file to be used with FCKpackager to generate the
+ * compressed code files in the "js" folder.
+ *
+ * Please check http://www.fckeditor.net for more info.
+-->
+<Package>
+	<Header><![CDATA[/*
+ * FCKeditor - The text editor for Internet - http://www.fckeditor.net
+ * Copyright (C) 2003-2007 Frederico Caldeira Knabben
+ * 
+ * == BEGIN LICENSE ==
+ * 
+ * Licensed under the terms of any of the following licenses at your
+ * choice:
+ * 
+ *  - GNU General Public License Version 2 or later (the "GPL")
+ *    http://www.gnu.org/licenses/gpl.html
+ * 
+ *  - GNU Lesser General Public License Version 2.1 or later (the "LGPL")
+ *    http://www.gnu.org/licenses/lgpl.html
+ * 
+ *  - Mozilla Public License Version 1.1 or later (the "MPL")
+ *    http://www.mozilla.org/MPL/MPL-1.1.html
+ * 
+ * == END LICENSE ==
+ * 
+ * This file has been compressed for better performance. The original source
+ * can be found at "editor/_source".
+ */
+]]></Header>
+	<Constants removeDeclaration="false">
+		<Constant name="FCK_STATUS_NOTLOADED" value="0" />
+		<Constant name="FCK_STATUS_ACTIVE" value="1" />
+		<Constant name="FCK_STATUS_COMPLETE" value="2" />
+		<Constant name="FCK_TRISTATE_OFF" value="0" />
+		<Constant name="FCK_TRISTATE_ON" value="1" />
+		<Constant name="FCK_TRISTATE_DISABLED" value="-1" />
+		<Constant name="FCK_UNKNOWN" value="-9" />
+		<Constant name="FCK_TOOLBARITEM_ONLYICON" value="0" />
+		<Constant name="FCK_TOOLBARITEM_ONLYTEXT" value="1" />
+		<Constant name="FCK_TOOLBARITEM_ICONTEXT" value="2" />
+		<Constant name="FCK_EDITMODE_WYSIWYG" value="0" />
+		<Constant name="FCK_EDITMODE_SOURCE" value="1" />
+	</Constants>
+	<PackageFile path="editor/js/fckeditorcode_ie_wev8.js">
+		<File path="editor/_source/fckconstants_wev8.js" />
+		<File path="editor/_source/fckjscoreextensions_wev8.js" />
+		<File path="editor/_source/classes/fckiecleanup_wev8.js" />
+		<File path="editor/_source/internals/fckbrowserinfo_wev8.js" />
+		<File path="editor/_source/internals/fckurlparams_wev8.js" />
+		<File path="editor/_source/classes/fckevents_wev8.js" />
+		<File path="editor/_source/internals/fck_wev8.js" />
+		<File path="editor/_source/internals/fck_ie_wev8.js" />
+		<File path="editor/_source/internals/fckconfig_wev8.js" />
+		<File path="editor/_source/internals/fckdebug_wev8.js" />
+		<File path="editor/_source/internals/fckdomtools_wev8.js" />
+		<File path="editor/_source/internals/fcktools_wev8.js" />
+		<File path="editor/_source/internals/fcktools_ie_wev8.js" />
+		<File path="editor/_source/fckeditorapi_wev8.js" />
+		<File path="editor/_source/classes/fckimagepreloader_wev8.js" />
+
+		<File path="editor/_source/internals/fckregexlib_wev8.js" />
+		<File path="editor/_source/internals/fcklistslib_wev8.js" />
+		<File path="editor/_source/internals/fcklanguagemanager_wev8.js" />
+		<File path="editor/_source/internals/fckxhtmlentities_wev8.js" />
+		<File path="editor/_source/internals/fckxhtml_wev8.js" />
+		<File path="editor/_source/internals/fckxhtml_ie_wev8.js" />
+		<File path="editor/_source/internals/fckcodeformatter_wev8.js" />
+		<File path="editor/_source/internals/fckundo_ie_wev8.js" />
+		<File path="editor/_source/classes/fckeditingarea_wev8.js" />
+		<File path="editor/_source/classes/fckkeystrokehandler_wev8.js" />
+
+		<File path="editor/_source/internals/fcklisthandler_wev8.js" />
+		<File path="editor/_source/classes/fckelementpath_wev8.js" />
+		<File path="editor/_source/classes/fckdomrange_wev8.js" />
+		<File path="editor/_source/classes/fckdomrange_ie_wev8.js" />
+		<File path="editor/_source/classes/fckdocumentfragment_ie_wev8.js" />
+		<File path="editor/_source/classes/fckw3crange_wev8.js" />
+		<File path="editor/_source/classes/fckenterkey_wev8.js" />
+
+		<File path="editor/_source/internals/fckdocumentprocessor_wev8.js" />
+		<File path="editor/_source/internals/fckselection_wev8.js" />
+		<File path="editor/_source/internals/fckselection_ie_wev8.js" />
+
+		<File path="editor/_source/internals/fcktablehandler_wev8.js" />
+		<File path="editor/_source/internals/fcktablehandler_ie_wev8.js" />
+		<File path="editor/_source/classes/fckxml_ie_wev8.js" />
+		<File path="editor/_source/classes/fckstyledef_wev8.js" />
+		<File path="editor/_source/classes/fckstyledef_ie_wev8.js" />
+		<File path="editor/_source/classes/fckstylesloader_wev8.js" />
+
+		<File path="editor/_source/commandclasses/fcknamedcommand_wev8.js" />
+		<File path="editor/_source/commandclasses/fck_othercommands_wev8.js" />
+		<File path="editor/_source/commandclasses/fckspellcheckcommand_ie_wev8.js" />
+		<File path="editor/_source/commandclasses/fcktextcolorcommand_wev8.js" />
+		<File path="editor/_source/commandclasses/fckpasteplaintextcommand_wev8.js" />
+		<File path="editor/_source/commandclasses/fckpastewordcommand_wev8.js" />
+		<File path="editor/_source/commandclasses/fcktablecommand_wev8.js" />
+		<File path="editor/_source/commandclasses/fckstylecommand_wev8.js" />
+		<File path="editor/_source/commandclasses/fckfitwindow_wev8.js" />
+		<File path="editor/_source/internals/fckcommands_wev8.js" />
+
+		<File path="editor/_source/classes/fckpanel_wev8.js" />
+		<File path="editor/_source/classes/fckicon_wev8.js" />
+		<File path="editor/_source/classes/fcktoolbarbuttonui_wev8.js" />
+		<File path="editor/_source/classes/fcktoolbarbutton_wev8.js" />
+		<File path="editor/_source/classes/fckspecialcombo_wev8.js" />
+		<File path="editor/_source/classes/fcktoolbarspecialcombo_wev8.js" />
+		<File path="editor/_source/classes/fcktoolbarfontscombo_wev8.js" />
+		<File path="editor/_source/classes/fcktoolbarfontsizecombo_wev8.js" />
+		<File path="editor/_source/classes/fcktoolbarfontformatcombo_wev8.js" />
+		<File path="editor/_source/classes/fcktoolbarstylecombo_wev8.js" />
+		<File path="editor/_source/classes/fcktoolbarpanelbutton_wev8.js" />
+		<File path="editor/_source/internals/fcktoolbaritems_wev8.js" />
+		<File path="editor/_source/classes/fcktoolbar_wev8.js" />
+		<File path="editor/_source/classes/fcktoolbarbreak_ie_wev8.js" />
+		<File path="editor/_source/internals/fcktoolbarset_wev8.js" />
+		<File path="editor/_source/internals/fckdialog_wev8.js" />
+		<File path="editor/_source/internals/fckdialog_ie_wev8.js" />
+
+		<File path="editor/_source/classes/fckmenuitem_wev8.js" />
+		<File path="editor/_source/classes/fckmenublock_wev8.js" />
+		<File path="editor/_source/classes/fckmenublockpanel_wev8.js" />
+		<File path="editor/_source/classes/fckcontextmenu_wev8.js" />
+		<File path="editor/_source/internals/fck_contextmenu_wev8.js" />
+
+		<File path="editor/_source/classes/fckplugin_wev8.js" />
+		<File path="editor/_source/internals/fckplugins_wev8.js" />
+	</PackageFile>
+
+	<PackageFile path="editor/js/fckeditorcode_gecko_wev8.js">
+		<File path="editor/_source/fckconstants_wev8.js" />
+		<File path="editor/_source/fckjscoreextensions_wev8.js" />
+		<File path="editor/_source/internals/fckbrowserinfo_wev8.js" />
+		<File path="editor/_source/internals/fckurlparams_wev8.js" />
+		<File path="editor/_source/classes/fckevents_wev8.js" />
+		<File path="editor/_source/internals/fck_wev8.js" />
+		<File path="editor/_source/internals/fck_gecko_wev8.js" />
+		<File path="editor/_source/internals/fckconfig_wev8.js" />
+		<File path="editor/_source/internals/fckdebug_wev8.js" />
+		<File path="editor/_source/internals/fckdomtools_wev8.js" />
+		<File path="editor/_source/internals/fcktools_wev8.js" />
+		<File path="editor/_source/internals/fcktools_gecko_wev8.js" />
+		<File path="editor/_source/fckeditorapi_wev8.js" />
+		<File path="editor/_source/classes/fckimagepreloader_wev8.js" />
+
+		<File path="editor/_source/internals/fckregexlib_wev8.js" />
+		<File path="editor/_source/internals/fcklistslib_wev8.js" />
+		<File path="editor/_source/internals/fcklanguagemanager_wev8.js" />
+		<File path="editor/_source/internals/fckxhtmlentities_wev8.js" />
+		<File path="editor/_source/internals/fckxhtml_wev8.js" />
+		<File path="editor/_source/internals/fckxhtml_gecko_wev8.js" />
+		<File path="editor/_source/internals/fckcodeformatter_wev8.js" />
+		<File path="editor/_source/internals/fckundo_gecko_wev8.js" />
+		<File path="editor/_source/classes/fckeditingarea_wev8.js" />
+		<File path="editor/_source/classes/fckkeystrokehandler_wev8.js" />
+
+		<File path="editor/_source/internals/fcklisthandler_wev8.js" />
+		<File path="editor/_source/classes/fckelementpath_wev8.js" />
+		<File path="editor/_source/classes/fckdomrange_wev8.js" />
+		<File path="editor/_source/classes/fckdomrange_gecko_wev8.js" />
+		<File path="editor/_source/classes/fckdocumentfragment_gecko_wev8.js" />
+		<File path="editor/_source/classes/fckw3crange_wev8.js" />
+		<File path="editor/_source/classes/fckenterkey_wev8.js" />
+
+		<File path="editor/_source/internals/fckdocumentprocessor_wev8.js" />
+		<File path="editor/_source/internals/fckselection_wev8.js" />
+		<File path="editor/_source/internals/fckselection_gecko_wev8.js" />
+
+		<File path="editor/_source/internals/fcktablehandler_wev8.js" />
+		<File path="editor/_source/internals/fcktablehandler_gecko_wev8.js" />
+		<File path="editor/_source/classes/fckxml_gecko_wev8.js" />
+		<File path="editor/_source/classes/fckstyledef_wev8.js" />
+		<File path="editor/_source/classes/fckstyledef_gecko_wev8.js" />
+		<File path="editor/_source/classes/fckstylesloader_wev8.js" />
+
+		<File path="editor/_source/commandclasses/fcknamedcommand_wev8.js" />
+		<File path="editor/_source/commandclasses/fck_othercommands_wev8.js" />
+		<File path="editor/_source/commandclasses/fckspellcheckcommand_gecko_wev8.js" />
+		<File path="editor/_source/commandclasses/fcktextcolorcommand_wev8.js" />
+		<File path="editor/_source/commandclasses/fckpasteplaintextcommand_wev8.js" />
+		<File path="editor/_source/commandclasses/fckpastewordcommand_wev8.js" />
+		<File path="editor/_source/commandclasses/fcktablecommand_wev8.js" />
+		<File path="editor/_source/commandclasses/fckstylecommand_wev8.js" />
+		<File path="editor/_source/commandclasses/fckfitwindow_wev8.js" />
+		<File path="editor/_source/internals/fckcommands_wev8.js" />
+
+		<File path="editor/_source/classes/fckpanel_wev8.js" />
+		<File path="editor/_source/classes/fckicon_wev8.js" />
+		<File path="editor/_source/classes/fcktoolbarbuttonui_wev8.js" />
+		<File path="editor/_source/classes/fcktoolbarbutton_wev8.js" />
+		<File path="editor/_source/classes/fckspecialcombo_wev8.js" />
+		<File path="editor/_source/classes/fcktoolbarspecialcombo_wev8.js" />
+		<File path="editor/_source/classes/fcktoolbarfontscombo_wev8.js" />
+		<File path="editor/_source/classes/fcktoolbarfontsizecombo_wev8.js" />
+		<File path="editor/_source/classes/fcktoolbarfontformatcombo_wev8.js" />
+		<File path="editor/_source/classes/fcktoolbarstylecombo_wev8.js" />
+		<File path="editor/_source/classes/fcktoolbarpanelbutton_wev8.js" />
+		<File path="editor/_source/internals/fcktoolbaritems_wev8.js" />
+		<File path="editor/_source/classes/fcktoolbar_wev8.js" />
+		<File path="editor/_source/classes/fcktoolbarbreak_gecko_wev8.js" />
+		<File path="editor/_source/internals/fcktoolbarset_wev8.js" />
+		<File path="editor/_source/internals/fckdialog_wev8.js" />
+		<File path="editor/_source/internals/fckdialog_gecko_wev8.js" />
+
+		<File path="editor/_source/classes/fckmenuitem_wev8.js" />
+		<File path="editor/_source/classes/fckmenublock_wev8.js" />
+		<File path="editor/_source/classes/fckmenublockpanel_wev8.js" />
+		<File path="editor/_source/classes/fckcontextmenu_wev8.js" />
+		<File path="editor/_source/internals/fck_contextmenu_wev8.js" />
+
+		<File path="editor/_source/classes/fckplugin_wev8.js" />
+		<File path="editor/_source/internals/fckplugins_wev8.js" />
+	</PackageFile>
+
+</Package>

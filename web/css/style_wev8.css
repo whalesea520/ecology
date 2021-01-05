@@ -1,0 +1,53 @@
+.p9 {
+
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	line-height: 180%;
+}
+a:link {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: 27287A;
+	text-decoration: none;
+}
+a:hover {
+	color: CC0000;
+	text-decoration: underline;
+}
+a:active {
+	color: #FFCC33;
+}
+a:visited {
+	color: #999999;
+	text-decoration: none;
+}
+.p9grey {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	line-height: 180%;
+	color: #333333;
+
+}
+.p91 {
+
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	line-height: 150%;
+	color: #333333;
+}
+td {
+
+
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	line-height: 180%;
+	color: #666666;
+}
+.p9lightgrey {
+
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	line-height: 180%;
+	color: #666666;
+}
+.stedit { BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid;  border-color: #4A3163; FONT-SIZE: 12px; COLOR: #040cad; background-COLOR: #ffffff}

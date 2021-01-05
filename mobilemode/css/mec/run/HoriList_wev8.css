@@ -1,0 +1,52 @@
+.horiListContainer{
+	width: 100%;
+	overflow-x: auto; 
+	-webkit-overflow-scrolling:touch;
+	background-color: #fff;
+}
+.mobile .horiListContainer::-webkit-scrollbar {
+	display: none;
+}
+.horiListContainer > ul{
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+	display: table;
+}
+.horiListContainer > ul > li{
+	display: table-cell;
+	text-align: center;
+	padding: 3px 5px;
+}
+.horiListContainer > ul > li .imgRow{
+	white-space:nowrap;
+}
+.horiListContainer > ul > li .imgRow img{
+	width: 80px;
+	height: 80px;
+	border-radius: 3px;
+	border: 1px solid #eee;
+}
+.horiListContainer > ul > li .titleRow{
+	color: #333;
+	font-size: 15px;
+	white-space:nowrap;
+}
+.horiListContainer > ul > li .normalRow{
+	color: #333;
+	font-size: 12px;
+	white-space:nowrap;
+}
+.horiListWarn{
+	font-family: 'Microsoft Yahei', Arial;
+	font-size: 18px;
+	background: url("/mobilemode/images/tip_wev8.png") no-repeat;
+	padding: 5px 5px 5px 45px;
+	line-height: 35px;
+	color: #bbb;
+	background-size: 30px;
+	background-position: 10px center;
+	margin: 0px auto;
+	text-align: left;
+}

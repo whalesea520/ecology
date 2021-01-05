@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 所有没有内容的标签请增加一个空格 -->
+<start>
+	<variables>
+		<variable>
+			<name>itemAreaDisplay</name>
+			<value>inline-block</value>
+			//可取值boolean,integer,string,long,float,double
+			<dataType>string</dataType>
+		</variable>
+	</variables>
+	<table class="LayoutTable e8Table" id="#{layoutTableId}" style="display:#{layoutTableDisplay}">
+		<colgroup>
+			<col width="50%"></col>
+			<col width="50%"></col>
+		</colgroup>
+		<tbody>
+			<!-- 分组循环 -->
+			<groups>
+				<!-- 分组title信息 -->
+				<group>
+					<tr class="intervalTR"  _samePair="#{samePair}" style="display:#{groupDisplay}">
+						<td colspan="2">
+							<table class="LayoutTable" style="width:100%;">
+								<colgroup>
+									<col width="50%"></col>
+									<col width="50%"></col>
+								</colgroup>
+								<tr class="groupHeadHide">
+									<td class="interval">
+										<span class="groupbg"> </span>
+										<span class="e8_grouptitle">#{context}</span>
+									</td>
+									<td class="interval" colspan="2" style="text-align:right;">
+										<groupRightContext>
+											<everyItem>
+												<span class="toolbar">
+													#{context}
+												</span>
+											</everyItem>
+										</groupRightContext>
+										<!--  <span _status="#{_status}" class="hideBlockDiv" style="display:expression(isFirstGroup?'none':groupSHBtnDisplay)"> -->
+										<span _status="#{_status}" class="hideBlockDiv">
+											<!--#{showOrHide}--><img src="/wui/theme/ecology8/templates/default/images/expression(itemAreaDisplay=='none'?'1':'2')_wev8.png"> </img>
+										</span>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr class="Spacing" style="height:1px;display:#{groupDisplay}">
+						<td class="Line" colspan="2"></td>
+					</tr>
+				</group>
+				<!-- 分组元素区域 -->
+				<itemArea>
+					<tr class="items intervalTR" style="display:#{itemAreaDisplay}">
+						<td colspan="2">
+							<table class="ListStyle ListStyleXml" id="#{formTableId}" style="display:#{formTableDisplay};table-layout: fixed;">
+								<colgroup>
+									<cwInner>
+										<col></col>
+									</cwInner>
+								</colgroup>
+								<thead>
+									<tr class="HeaderForXtalbe intervalTR">
+										<tItems>
+											<tItem>
+												<th>#{context}</th>
+											</tItem>
+										</tItems>
+									</tr>
+								</thead>
+								<tbody>
+									<!-- 分组元素循环区 -->
+									<items>
+										<tr>
+											<!-- 行元素定义区 -->
+											<item>
+												<everyItem>
+													<td style="display:#{display}" id="#{id}" name="#{id}" _samePair="#{samePair}"  class="expression(isTableList?'tableField':'fieldName')" colspan="#{colspan}">
+														#{context}
+													</td>
+												</everyItem>
+											</item>
+										</tr>
+										<tr style="height:1px!important;display:expression(isTableList?'none':'');" class="Spacing">
+											<td class="expression(isLastRow?'paddingLeft0Table':'paddingLeft18Table')" colspan="#{cols}">
+												<div class="intervalDivClass"></div>
+											</td>
+										</tr>
+									</items>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+				</itemArea>
+			</groups>
+		</tbody>
+    </table>
+  <importJsCss>
+	  <link rel="stylesheet" href="/wui/theme/ecology8/templates/default/css/default3_wev8.css" type="text/css"> </link>
+	  <script type="text/javascript" src="/wui/theme/ecology8/templates/default/js/default_wev8.js"> </script>
+  </importJsCss>
+</start>

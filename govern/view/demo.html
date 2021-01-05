@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>jsMind</title>
+    <link type="text/css" rel="stylesheet" href="../css/jsmind.css" />
+    <style type="text/css">
+        #jsmind_container{
+            width:800px;
+            height:500px;
+            border:solid 1px #ccc;
+            /*background:#f4f4f4;*/
+            background:#f4f4f4;
+        }
+        #mind_top {
+	background: #FFF;
+	height: 30px;
+}
+
+#mind_total {
+	float: left;
+}
+
+#mind_operate {
+	float: right;
+}
+
+#mind_total ul {
+	text-align: center;
+	line-height: 15px;
+	margin: 0px auto;
+	padding: 0;
+	margin-left: 10px;
+	font-size: 12px;
+	color: #7d7f81;
+	height: 30px;
+	margin-top: 6px;
+}
+
+#mind_operate ul {
+	margin: 0px auto;
+	padding: 0;
+	margin-right: 25px;
+	height: 30px;
+}
+
+#mind_operate ul li {
+	list-style: none;
+	float: right;
+	margin-top: 6px;
+	margin-left: -1px;
+}
+
+#mind_operate ul li a {
+	width: 60px;
+	height: 18px;
+	line-height: 15px;
+	color: #30b5ff;
+	background: #FFF;
+	margin: 1px 0px;
+	font-size: 12px;
+	text-align: center;
+	text-decoration: none;
+	border: 1px solid #30b5ff;
+	display: block;
+}
+
+#jsmind_container {
+	/*height: 93%;*/
+	width: 99.5%;
+	border: solid 1px #ccc;
+	background: #f4f4f4;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+jmnode {
+	box-shadow: 0px 0px 10px #aaa;
+}
+
+jmnode.selected {
+	box-shadow: 0px 0px 10px #017afd;
+}
+
+jmnode:hover {
+	box-shadow: 0px 0px 10px #777;
+}
+    </style>
+</head>
+<body>
+<div id="mind_top">
+			<div id="mind_total">
+				<ul>
+					共10位联系人：
+				</ul>
+			</div>
+			<div id="mind_operate">
+				<ul>
+					<li>
+						<a style="width: 90px;" href="#" onclick="showLog()">日志</a>
+					</li>
+					<li>
+						<a href="#" onclick="zoomOut()"> - 缩小</a>
+					</li>
+					<li>
+						<a href="#" onclick="zoomIn()"> + 放大</a>
+					</li>
+					<li>
+						<a style="width: 90px;" href="#" onclick="collapse_all()">
+							全部收起 </a>
+					</li>
+					<li>
+						<a style="width: 90px;" href="#" onclick="expand_all()"> 全部展开
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="jsmind_container"></div>
+<script type="text/javascript" src="../js/jsmind.js"></script>
+<script type="text/javascript" src="../js/jsmind.draggable.js"></script>
+<script type="text/javascript" src="../js/jsmind.shell.js"></script>
+<script type="text/javascript">
+    var _jm = null;
+    function load_jsmind(){
+	var sss = "<table style=\"font-size:11px;color:#7d7f81\";><tr>"
+			+ "<td valign=\"top\"; style=\"width:20px;\"><img style=\"width:20px;\" src=\"/govern/image/man.png\" ></div>"
+			+ "<td style=\"padding:0px 2px;\">"
+			+ "<table class=\"mind\" style=\"width:100%;\">"
+			+ "<tr class=\"mind\" valign=\"top\";>"
+			+ "<td>"
+			+ "测试节点1"
+			+ "</td>"
+			+ "<td>"
+			+ "</td>"
+			+ "<td style=\"text-align: right;\">"
+			+ "<span  style=\"background-color:#00DD00;color:#FFFFFF;border-radius: 15px;font-size:11px;font-weight:600;padding:0 10px;display:inline-block;width:auto;height:24px;line-height:24px;text-align:center; \">" 
+			+ "进行中" 
+			+ "</span>"
+			+ "</td>"
+			+ "</tr>"
+			+ "<tr  style=\"height:20px;\">"
+			+ "<td colspan=3  style=\"word-break:break-all;white-space:normal;width:185px;\">"
+			+ "<span style=\"display:inline-block;overflow:hidden;\">1污水治理</span>"
+			+ "</td>"
+			+ "</tr>"
+			+ "<tr>"
+			+ "<td style=\"padding:0px 5px;\" height=\"1px;\"; bgcolor=\"#e7e7e7\"; colspan='3'></td>"
+			+ "</tr>" + "<tr>" + "<table>" 
+			+ "<tr style=\"height:20px;\">"
+			+ "<td>"
+			+ "<span style=\"width:128px;display:inline-block;overflow:hidden;\"><img style=\"width:13px;vertical-align:middle;\""
+			+ "src=\"/govern/image/imcode.png\">主办：杨文元</span>"
+        	+ "</td>"
+        	+ "<td>"
+			+ "<span style=\"width:128px;display:inline-block;overflow:hidden;\"><img style=\"width:13px;vertical-align:middle;\""
+			+ "src=\"/govern/image/imcode.png\">协办：用户1,用户2</span>"
+        	+ "</td>"
+        	+ "</tr>"
+			"</table>" + "</tr>"
+			+ "</table>" + "</td>" + "</tr></table>";
+			
+			
+		var mind = {
+            meta:{
+                name:'demo',
+                author:'hizzgdev@163.com',
+                version:'0.2'
+            },
+            format:'node_tree',
+            data: {"id":"root", "topic":"jsMind","children":[
+            		{"id":"sub1", "topic":"sub1", "children":[
+            			{"id":"sub11", "topic":"sub11"},
+            			{"id":"sub12", "topic":"sub12"},
+            			{"id":"sub13", "topic":"sub13"},
+            			{"id":"sub14", "topic":"sub14"},
+            			]},
+            		{"id":"sub2", "topic":"sub2"},
+            		{"id":"sub3", "topic":"sub3"},
+            		{"id":"sub4", "topic":"sub4"},
+            		{"id":"sub5", "topic":"sub5"},
+            	]}
+        };
+        var options = {
+            container:'jsmind_container',
+            editable:true,
+            theme:'primary',
+            shortcut:{
+                handles:{
+                    test:function(j,e){
+                        console.log(j);
+                    }
+                },
+                mapping:{
+                    test:89
+                }
+            }
+        }
+        _jm = jsMind.show(options,mind);
+        // jm.set_readonly(true);
+        // var mind_data = jm.get_data();
+        // alert(mind_data);
+    }
+    
+    function load_file(fi){
+        var files = fi.files;
+        if(files.length > 0){
+            var file_data = files[0];
+            jsMind.util.file.read(file_data, function(freemind_data, jsmind_name){
+                var mind = jsmind_data;
+                if(!!mind){
+                    _jm.show(mind);
+                }else{
+                    console.error('can not open this file as mindmap');
+                }
+            });
+        }
+    }
+
+    function save_nodetree(){
+        var mind_data = _jm.get_data('node_tree');
+        console.log(mind_data);
+    }
+
+    function replay(){
+        var shell = _jm.shell;
+        if(!!shell){
+            shell.replay();
+        }
+    }
+
+    load_jsmind();
+</script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+#FBrowser{
+	width: 45px;	
+}
+#FBrowser span{
+	width: 45px;
+}
+.MADFBro_Title{
+	border-bottom: 1px solid rgb(223, 223, 223);
+	font-size: 12px;
+	color: rgb(164, 169, 174);
+	font-weight: bold;
+	padding: 0px 0px 6px 10px;	
+	margin-bottom: 10px;
+}
+.MADFBro_BaseInfo{
+	padding-left: 10px;
+	margin-bottom: 15px;
+	color: rgb(166, 167, 171);	
+}
+.MADFBro_BaseInfo div{
+	margin-bottom: 10px;	
+}
+.MADFBro_BaseInfo .MADFBro_BaseInfo_Label{
+	width: 60px;
+	display: inline-block;
+	text-align: right;
+	margin-right: 6px;
+}
+.MADFBro_BaseInfo .MADFBro_BaseInfo_Label_style8{
+	width: 200px;
+	display: block;
+	text-align: left;
+}
+.MADFBro_BaseInfo .MADFBro_BaseInfo_Label1_style8{
+	width: 86px;
+	text-align: left;
+}
+.MADFBro_Select{
+	border: 1px solid rgb(204, 204, 204);
+	height: 25px;
+	width:135px;
+}
+.MADFBro_Text{
+	-webkit-appearance: none;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+	-webkit-rtl-ordering: logical;
+	-webkit-user-select: text;
+	-webkit-writing-mode: horizontal-tb;
+	border: 1px solid rgb(223, 223, 223);
+	background-color: rgb(255, 255, 255);
+	border-image-outset: 0px;
+	border-image-repeat: stretch;
+	border-image-slice: 100%;
+	border-image-source: none;
+	border-image-width: 1;
+	box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+	box-sizing: border-box;
+	cursor: auto;
+	display: inline-block;
+	font-family: 'Microsoft Yahei',Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	height: 26px;
+	letter-spacing: normal;
+	line-height: 19px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	outline-color: rgb(0, 0, 255);
+	outline-style: none;
+	outline-width: 0px;
+	padding-bottom: 3px;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-top: 3px;
+	text-align: start;
+	text-indent: 7px;
+	text-shadow: none;
+	text-transform: none;
+	width: 262px;
+	word-spacing: 0px;
+	writing-mode: lr-tb;
+	zoom: 1;	
+}
+.MADFBro_Textarea{
+	border: 1px solid rgb(223, 223, 223);
+	width: 275px;
+	height: 106px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	overflow: auto;
+}
+.MADFBro_Bottom{
+	padding: 0px 9px 0px 9px;
+	margin-bottom: 5px;		
+}
+.MADFBro_SaveBtn{
+	background-color: rgb(107, 163, 237);
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	box-sizing: border-box;
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+	display: block;
+	font-family: 'Microsoft Yahei', Arial, sans-serif;
+	font-size: 14px;
+	height: 28px;
+	line-height: 28px;
+	margin: 0px;
+	text-align: center;
+	width: 100%
+	zoom: 1;	
+}
+.MADFBro_BaseInfo .ftextarea_btn_edit{
+	display: inline-block;
+	background: url("/mobilemode/images/mec/lego_icon_d5b6388_wev8.png") no-repeat;
+	cursor: pointer;
+	margin-bottom: -2px;
+	width: 11px;
+	height: 12px;
+	background-position: -15px -26px;
+}
+.ftextarea_param_paramValue{
+	margin-left: 5px;
+}
+.jNiceCheckbox {
+	margin-bottom: -2px;
+}
+.MADFBro_fieldSearch{
+	border: 1px solid rgb(223, 223, 223);
+	height: 20px;
+	width:115px;
+	background-image: url('/formmode/images/btnSearch_wev8.png');
+	background-repeat: no-repeat;
+	background-position: 98px center;
+}
+.MADFBro_fieldSearchTip{
+	position: absolute;
+	left: 5px;
+	top: 4px;
+	color: #ccc;
+	font: 12px Microsoft YaHei;
+	font-style: italic;
+}
+
+.MADFBro_SearchResult{
+	position: absolute;
+	z-index: 100001;
+	margin: 0px;
+	padding: 3px 5px;
+	height: 62px;
+	width: 160px;
+	overflow: auto;
+	background-color: #fff;
+	border: 1px solid #e9e9e9;
+	display: none;
+}
+.MADFBro_SearchResult ul{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+.MADFBro_SearchResult ul li{
+	border-bottom: #eee 1px dotted;
+}
+.MADFBro_SearchResult ul li a{
+	padding: 2px 0px 2px 2px;
+	text-decoration: none;
+	color: #333;
+	display: block;
+}
+.MADFBro_SearchResult ul li a:hover{
+	background-color: #0072C6;
+	color: #fff;
+}
+.MADFBro_SearchResult ul li .tip{
+	padding: 2px 0px 2px 2px;
+	color: #ccc;
+}
+.MADFBro_FieldSearchResult{
+	top: 92px;
+	right: 11px;
+}
+.MADFBro_FieldSearchResult_style8{
+	top: 123px;
+	right: 72px;
+}
+.MADFBro_BrowserTypeSearchResult{
+	top: 164px;
+	right: 8px;
+}
+.MADFBro_BrowserTypeSearchResult_style8{
+	top: 226px;
+	right: 72px;
+}
+.MADFBro_Text2{
+	width: 251px;
+	width: 249px\9;
+	border: 1px solid rgb(204, 204, 204);
+	height: 20px;
+	padding-left: 5px;
+}
+.MADFBro_BrowserBtn{
+	width: 16px;
+	height: 22px;
+	background-image: url("/wui/theme/ecology8/skins/default/general/browser_wev8.png");
+	background-color: rgba(0, 0, 0, 0);
+	background-position: 0px 50%;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 328px;
+	top: 2px;
+}
+.MADFBro_BrowserBtn_style8{
+	left: 262px;
+}
+.browsernameDiv{
+	padding-left: 66px;position: relative;display:none;
+}
+.browsernameDiv_style8{
+	padding-left: 0px;
+}

@@ -1,0 +1,130 @@
+2020-07-06 09:06:13,609 INFO  [Thread:Thread-24] weaver.general.InitServerXMLtoDBThread.checkEndUpgrade() - 升级进行中,sleep...
+2020-07-06 09:06:14,705 INFO  [Thread:Thread-24] weaver.general.InitServerXMLtoDBThread.run() - 升级完成，执行 InitServiceXMLtoDB ...
+2020-07-06 09:06:14,743 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.initDB() - 创建表：INITSERVICEXMLSTATE ……
+2020-07-06 09:06:14,851 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.notExistTable() - table(INITSERVICEXMLSTATE) exist
+2020-07-06 09:06:14,859 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.notExistTable() - table(INITSERVICEXMLSTATE) exist
+2020-07-06 09:06:14,911 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.notExistField() - filed (INITSERVICEXMLSTATE.E8CLEAR) exist
+2020-07-06 09:06:14,919 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.notExistTable() - table(INITSERVICEXMLSTATE) exist
+2020-07-06 09:06:14,966 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.notExistField() - filed (INITSERVICEXMLSTATE.SMS) exist
+2020-07-06 09:06:14,968 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.notExistTable() - table(INITSERVICEXMLSTATE) exist
+2020-07-06 09:06:14,976 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.notExistField() - filed (INITSERVICEXMLSTATE.CHECKERRORDATA) exist
+2020-07-06 09:06:14,989 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.notExistTable() - table(INITSERVICEXMLSTATE) exist
+2020-07-06 09:06:15,009 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.notExistField() - filed (INITSERVICEXMLSTATE.XMLINITTODB) exist
+2020-07-06 09:06:15,009 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.initDB() - 创建表：DATASOURCESETTING ……
+2020-07-06 09:06:15,018 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.notExistTable() - table(DATASOURCESETTING) exist
+2020-07-06 09:06:15,018 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.initDB() - 创建表：SCHEDULESETTING ……
+2020-07-06 09:06:15,025 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.notExistTable() - table(SCHEDULESETTING) exist
+2020-07-06 09:06:15,025 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.initDB() - 创建表：SMSPROPERTIS ……
+2020-07-06 09:06:15,037 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.notExistTable() - table(SMSPROPERTIS) exist
+2020-07-06 09:06:15,043 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.notExistTable() - table(actionsettingdetail) exist
+2020-07-06 09:06:15,051 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.notExistField() - filed (actionsettingdetail.isdatasource) exist
+2020-07-06 09:06:15,058 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.notExistTable() - table(datashowset) exist
+2020-07-06 09:06:15,081 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.notExistField() - filed (datashowset.searchByName) exist
+2020-07-06 09:06:15,085 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.notExistField() - filed (datashowset.customid) exist
+2020-07-06 09:06:15,086 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.notExistTable() - table(SCHEDULESETTING) exist
+2020-07-06 09:06:15,151 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.notExistField() - filed (SCHEDULESETTING.createdate) exist
+2020-07-06 09:06:15,153 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.notExistTable() - table(SCHEDULESETTING) exist
+2020-07-06 09:06:15,184 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.notExistField() - filed (SCHEDULESETTING.createtime) exist
+2020-07-06 09:06:15,185 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.notExistTable() - table(SCHEDULESETTING) exist
+2020-07-06 09:06:15,189 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.notExistField() - filed (SCHEDULESETTING.modifydate) exist
+2020-07-06 09:06:15,190 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.notExistTable() - table(SCHEDULESETTING) exist
+2020-07-06 09:06:15,194 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.notExistField() - filed (SCHEDULESETTING.modifytime) exist
+2020-07-06 09:06:15,197 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.initCache() - 开始初始化缓存......
+2020-07-06 09:06:15,323 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.initCache() - System Init Message:mainControlIp= localIp:[192.168.97.232]
+2020-07-06 09:06:15,323 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.initCache() -   初始化计划任务缓存Start ......
+2020-07-06 09:06:15,645 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.initCache() -   初始化数据源缓存 ......
+2020-07-06 09:06:15,665 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.initCache() -   初始化Action缓存 ......
+2020-07-06 09:06:17,280 ERROR [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.initCache() - Action加入缓存异常(com.shxiv.hfwh.workflow.action.HfKhAction)：java.lang.NoClassDefFoundError: com/shxiv/jqkj/workflow/action/ClAction
+2020-07-06 09:06:17,498 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.initCache() -   初始化浏览框缓存 ......
+2020-07-06 09:06:19,387 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.initCache() -   初始化HR缓存 ......
+2020-07-06 09:06:19,407 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.initCache() -   初始化短信缓存 ......
+2020-07-06 09:06:19,473 INFO  [Thread:Thread-24] weaver.servicefiles.BrowserXML.<init>() - BrowserXML init start ....
+2020-07-06 09:06:19,520 INFO  [Thread:Thread-24] weaver.servicefiles.BrowserXML.<init>() - BrowserXML init end ....
+2020-07-06 09:06:19,637 INFO  [Thread:Thread-24] weaver.general.InitServiceXMLtoDB.initCache() - 初始化缓存结束......
+2020-07-06 09:06:19,928 ERROR [Thread:Thread-24] weaver.interfaces.schedule.ScheduleManage.start() - Schedule Cron Job 缓存（schedule.deleteEML）
+2020-07-06 09:06:20,083 ERROR [Thread:Thread-24] weaver.interfaces.schedule.ScheduleManage.start() - Schedule Cron Job 缓存（schedule.Mode4CptCalculateDeprecationJob）
+2020-07-06 09:06:20,085 ERROR [Thread:Thread-24] weaver.interfaces.schedule.ScheduleManage.start() - Schedule Cron Job 缓存（schedule.CptLowInventoryRemindJob）
+2020-07-06 09:06:20,086 ERROR [Thread:Thread-24] weaver.interfaces.schedule.ScheduleManage.start() - Schedule Cron Job 缓存（schedule.Mode4CptDulldaysInventoryRemindJob）
+2020-07-06 09:06:20,088 ERROR [Thread:Thread-24] weaver.interfaces.schedule.ScheduleManage.start() - Schedule Cron Job 缓存（schedule.Mode4CptHighInventoryRemindJob）
+2020-07-06 09:06:20,089 ERROR [Thread:Thread-24] weaver.interfaces.schedule.ScheduleManage.start() - Schedule Cron Job 缓存（schedule.Mode4CptLowInventoryRemindJob）
+2020-07-06 09:06:20,089 ERROR [Thread:Thread-24] weaver.interfaces.schedule.ScheduleManage.start() - Schedule Cron Job 缓存（schedule.HttpServiceImpl）
+2020-07-06 09:06:20,090 ERROR [Thread:Thread-24] weaver.interfaces.schedule.ScheduleManage.start() - Schedule Cron Job 缓存（schedule.HttpKaoQin）
+2020-07-06 09:19:13,313 INFO  [Thread:http--8080-11$1519161481] weaver.workflow.action.BaseAction.execute() - --------------------进入节点前、后操作动作-----------------------------------
+2020-07-06 09:19:13,346 INFO  [Thread:http--8080-11$1519161481] weaver.workflow.action.BaseAction.execute() - 触发老的接口
+2020-07-06 09:19:13,347 INFO  [Thread:http--8080-11$1519161481] weaver.workflow.action.BaseAction.execute() - 老版本的action解析------BaseAction-----------
+2020-07-06 09:19:13,442 ERROR [Thread:http--8080-11$1519161481] weaver.workflow.action.ActionLogService.save() - insertSql= INSERT INTO actionExecuteLog (  actionid,  actiontype,  datashowCount,  createDate,  createTime  ) VALUES (  'action.DlAction' ,  '3' ,  1 , '2020-07-06', '09:19:13'  ) 
+2020-07-06 09:19:13,442 INFO  [Thread:http--8080-11$1519161481] weaver.workflow.action.BaseAction.execute() - &&&&  执行SAPAction 流程信息 workflowid : 250 requestid :57202  end ....................
+2020-07-06 09:19:13,443 INFO  [Thread:http--8080-11$1519161481] weaver.workflow.action.BaseAction.execute() - 触发老的接口
+2020-07-06 09:19:13,443 INFO  [Thread:http--8080-11$1519161481] weaver.workflow.action.BaseAction.execute() - 老版本的action解析------BaseAction-----------
+2020-07-06 09:19:13,482 ERROR [Thread:http--8080-11$1519161481] weaver.workflow.action.ActionLogService.save() - insertSql= INSERT INTO actionExecuteLog (  actionid,  actiontype,  datashowCount,  createDate,  createTime  ) VALUES (  'action.MxFzAction' ,  '3' ,  1 , '2020-07-06', '09:19:13'  ) 
+2020-07-06 09:19:13,482 INFO  [Thread:http--8080-11$1519161481] weaver.workflow.action.BaseAction.execute() - &&&&  执行SAPAction 流程信息 workflowid : 250 requestid :57202  end ....................
+2020-07-06 09:19:13,482 INFO  [Thread:http--8080-11$1519161481] weaver.workflow.action.BaseAction.execute() - 触发老的接口
+2020-07-06 09:19:13,482 INFO  [Thread:http--8080-11$1519161481] weaver.workflow.action.BaseAction.execute() - 老版本的action解析------BaseAction-----------
+2020-07-06 09:19:14,403 ERROR [Thread:http--8080-11$1519161481] weaver.workflow.action.ActionLogService.save() - insertSql= INSERT INTO actionExecuteLog (  actionid,  actiontype,  datashowCount,  createDate,  createTime  ) VALUES (  'action.TmAction' ,  '3' ,  1 , '2020-07-06', '09:19:14'  ) 
+2020-07-06 09:19:14,403 INFO  [Thread:http--8080-11$1519161481] weaver.workflow.action.BaseAction.execute() - &&&&  执行SAPAction 流程信息 workflowid : 250 requestid :57202  end ....................
+2020-07-06 09:19:14,404 INFO  [Thread:http--8080-11$1519161481] weaver.workflow.action.BaseAction.execute() - 触发老的接口
+2020-07-06 09:19:14,405 INFO  [Thread:http--8080-11$1519161481] weaver.workflow.action.BaseAction.execute() - 老版本的action解析------BaseAction-----------
+2020-07-06 09:19:14,416 ERROR [Thread:http--8080-11$1519161481] weaver.workflow.action.ActionLogService.save() - insertSql= INSERT INTO actionExecuteLog (  actionid,  actiontype,  datashowCount,  createDate,  createTime  ) VALUES (  'action.QyjJsAction' ,  '3' ,  1 , '2020-07-06', '09:19:14'  ) 
+2020-07-06 09:19:14,416 INFO  [Thread:http--8080-11$1519161481] weaver.workflow.action.BaseAction.execute() - &&&&  执行SAPAction 流程信息 workflowid : 250 requestid :57202  end ....................
+2020-07-06 09:30:03,683 INFO  [Thread:Thread-23] weaver.general.InitServerXMLtoDBThread.checkEndUpgrade() - 升级进行中,sleep...
+2020-07-06 09:30:04,705 INFO  [Thread:Thread-23] weaver.general.InitServerXMLtoDBThread.checkEndUpgrade() - 升级进行中,sleep...
+2020-07-06 09:30:05,707 INFO  [Thread:Thread-23] weaver.general.InitServerXMLtoDBThread.run() - 升级完成，执行 InitServiceXMLtoDB ...
+2020-07-06 09:30:05,876 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initDB() - 创建表：INITSERVICEXMLSTATE ……
+2020-07-06 09:30:06,648 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(INITSERVICEXMLSTATE) exist
+2020-07-06 09:30:06,694 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(INITSERVICEXMLSTATE) exist
+2020-07-06 09:30:06,738 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (INITSERVICEXMLSTATE.E8CLEAR) exist
+2020-07-06 09:30:06,739 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(INITSERVICEXMLSTATE) exist
+2020-07-06 09:30:06,763 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (INITSERVICEXMLSTATE.SMS) exist
+2020-07-06 09:30:06,765 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(INITSERVICEXMLSTATE) exist
+2020-07-06 09:30:06,770 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (INITSERVICEXMLSTATE.CHECKERRORDATA) exist
+2020-07-06 09:30:06,771 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(INITSERVICEXMLSTATE) exist
+2020-07-06 09:30:07,479 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (INITSERVICEXMLSTATE.XMLINITTODB) exist
+2020-07-06 09:30:07,479 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initDB() - 创建表：DATASOURCESETTING ……
+2020-07-06 09:30:07,494 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(DATASOURCESETTING) exist
+2020-07-06 09:30:07,495 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initDB() - 创建表：SCHEDULESETTING ……
+2020-07-06 09:30:07,501 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(SCHEDULESETTING) exist
+2020-07-06 09:30:07,501 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initDB() - 创建表：SMSPROPERTIS ……
+2020-07-06 09:30:07,509 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(SMSPROPERTIS) exist
+2020-07-06 09:30:07,516 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(actionsettingdetail) exist
+2020-07-06 09:30:07,550 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (actionsettingdetail.isdatasource) exist
+2020-07-06 09:30:07,558 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(datashowset) exist
+2020-07-06 09:30:07,619 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (datashowset.searchByName) exist
+2020-07-06 09:30:07,624 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (datashowset.customid) exist
+2020-07-06 09:30:07,625 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(SCHEDULESETTING) exist
+2020-07-06 09:30:07,698 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (SCHEDULESETTING.createdate) exist
+2020-07-06 09:30:07,699 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(SCHEDULESETTING) exist
+2020-07-06 09:30:07,714 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (SCHEDULESETTING.createtime) exist
+2020-07-06 09:30:07,715 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(SCHEDULESETTING) exist
+2020-07-06 09:30:07,719 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (SCHEDULESETTING.modifydate) exist
+2020-07-06 09:30:07,720 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(SCHEDULESETTING) exist
+2020-07-06 09:30:07,724 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (SCHEDULESETTING.modifytime) exist
+2020-07-06 09:30:07,726 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initCache() - 开始初始化缓存......
+2020-07-06 09:30:07,830 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initCache() - System Init Message:mainControlIp= localIp:[192.168.97.232]
+2020-07-06 09:30:07,830 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initCache() -   初始化计划任务缓存Start ......
+2020-07-06 09:30:08,274 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initCache() -   初始化数据源缓存 ......
+2020-07-06 09:30:08,310 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initCache() -   初始化Action缓存 ......
+2020-07-06 09:30:15,031 ERROR [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initCache() - Action加入缓存异常(com.shxiv.hfwh.workflow.action.HfKhAction)：java.lang.NoClassDefFoundError: com/shxiv/jqkj/workflow/action/ClAction
+2020-07-06 09:30:15,295 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initCache() -   初始化浏览框缓存 ......
+2020-07-06 09:30:16,745 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initCache() -   初始化HR缓存 ......
+2020-07-06 09:30:16,787 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initCache() -   初始化短信缓存 ......
+2020-07-06 09:30:16,936 INFO  [Thread:Thread-23] weaver.servicefiles.BrowserXML.<init>() - BrowserXML init start ....
+2020-07-06 09:30:17,031 INFO  [Thread:Thread-23] weaver.servicefiles.BrowserXML.<init>() - BrowserXML init end ....
+2020-07-06 09:30:17,040 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initCache() - 初始化缓存结束......
+2020-07-06 09:30:17,190 ERROR [Thread:Thread-23] weaver.interfaces.schedule.ScheduleManage.start() - Schedule Cron Job 缓存（schedule.deleteEML）
+2020-07-06 09:30:17,361 ERROR [Thread:Thread-23] weaver.interfaces.schedule.ScheduleManage.start() - Schedule Cron Job 缓存（schedule.Mode4CptCalculateDeprecationJob）
+2020-07-06 09:30:17,362 ERROR [Thread:Thread-23] weaver.interfaces.schedule.ScheduleManage.start() - Schedule Cron Job 缓存（schedule.CptLowInventoryRemindJob）
+2020-07-06 09:30:17,363 ERROR [Thread:Thread-23] weaver.interfaces.schedule.ScheduleManage.start() - Schedule Cron Job 缓存（schedule.Mode4CptDulldaysInventoryRemindJob）
+2020-07-06 09:30:17,364 ERROR [Thread:Thread-23] weaver.interfaces.schedule.ScheduleManage.start() - Schedule Cron Job 缓存（schedule.Mode4CptHighInventoryRemindJob）
+2020-07-06 09:30:17,364 ERROR [Thread:Thread-23] weaver.interfaces.schedule.ScheduleManage.start() - Schedule Cron Job 缓存（schedule.Mode4CptLowInventoryRemindJob）
+2020-07-06 09:30:17,365 ERROR [Thread:Thread-23] weaver.interfaces.schedule.ScheduleManage.start() - Schedule Cron Job 缓存（schedule.HttpServiceImpl）
+2020-07-06 09:30:17,366 ERROR [Thread:Thread-23] weaver.interfaces.schedule.ScheduleManage.start() - Schedule Cron Job 缓存（schedule.HttpKaoQin）
+2020-07-06 15:35:27,200 INFO  [Thread:http--8080-5$10233612] weaver.workflow.action.BaseAction.execute() - --------------------进入节点前、后操作动作-----------------------------------
+2020-07-06 15:35:27,225 INFO  [Thread:http--8080-5$10233612] weaver.workflow.action.BaseAction.execute() - 触发老的接口
+2020-07-06 15:35:27,225 INFO  [Thread:http--8080-5$10233612] weaver.workflow.action.BaseAction.execute() - 老版本的action解析------BaseAction-----------
+2020-07-06 15:35:27,288 ERROR [Thread:http--8080-5$10233612] weaver.workflow.action.ActionLogService.save() - insertSql= INSERT INTO actionExecuteLog (  actionid,  actiontype,  datashowCount,  createDate,  createTime  ) VALUES (  'action.QyjKjAction' ,  '3' ,  1 , '2020-07-06', '15:35:27'  ) 
+2020-07-06 15:35:27,288 INFO  [Thread:http--8080-5$10233612] weaver.workflow.action.BaseAction.execute() - &&&&  执行SAPAction 流程信息 workflowid : 250 requestid :56512  end ....................
+2020-07-06 15:37:34,339 INFO  [Thread:http--8080-5$10233612] weaver.workflow.action.BaseAction.execute() - --------------------进入节点前、后操作动作-----------------------------------
+2020-07-06 15:37:34,340 INFO  [Thread:http--8080-5$10233612] weaver.workflow.action.BaseAction.execute() - 触发老的接口
+2020-07-06 15:37:34,340 INFO  [Thread:http--8080-5$10233612] weaver.workflow.action.BaseAction.execute() - 老版本的action解析------BaseAction-----------
+2020-07-06 15:37:34,345 ERROR [Thread:http--8080-5$10233612] weaver.workflow.action.ActionLogService.save() - insertSql= INSERT INTO actionExecuteLog (  actionid,  actiontype,  datashowCount,  createDate,  createTime  ) VALUES (  'action.QyjKjAction' ,  '3' ,  1 , '2020-07-06', '15:37:34'  ) 
+2020-07-06 15:37:34,345 INFO  [Thread:http--8080-5$10233612] weaver.workflow.action.BaseAction.execute() - &&&&  执行SAPAction 流程信息 workflowid : 250 requestid :56512  end ....................

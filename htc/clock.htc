@@ -1,0 +1,1329 @@
+<!-- ---------------------------------------------------------------------
+//
+//  Copyright 1999 Microsoft Corporation.  All Rights Reserved.
+//
+//  File:         clock.htc
+//
+//  Description:  The calendar behavior provides an easy, declarative way
+//                to add a standard calendar control to web pages and html
+//                based applications.  It provides a variety of properties
+//                to customize the look and feel along with a strong set 
+//                events and functionality.
+//
+//-------------------------------------------------------------------- -->
+
+<script language="javascript">
+
+//------------------------------------------------------------------------
+// Attach to element events
+//------------------------------------------------------------------------
+
+element.attachEvent("onselectstart", fnOnSelectStart)
+element.attachEvent("onclick", fnOnClick)
+element.attachEvent("onpropertychange", fnOnPropertyChange)
+element.attachEvent("onreadystatechange", fnOnReadyStateChange)
+
+//------------------------------------------------------------------------
+// Create the arrays of days & months for different languages
+//------------------------------------------------------------------------
+
+var StyleInfo            = null            // Style sheet with rules for this calendar
+var goStyle              = new Object()    // A hash of style sheet rules that apply to this calendar
+var gbLoading            = true            // Flag for if the behavior is loading
+
+//modified by zhouquan for linux server time browser TD1696
+var gaMinuteCell            = new Array()     // an array of the table cells for minutes
+var goHourSelect        = null            // The hour select control
+var goCurrentMinuteCell     = null            // The cell for the currently selected minute
+
+var giMinute                                  // minute of the hour (1 to 60)
+var giHour                                // hour of the day (1 to 24)
+var giHourLength        = 1               // hour length (0,1)
+var giMinuteLength          = 1               // minute length (0 to 2)
+var gbShowTimeSelectors  = true            // Show time selectors (0,1)
+
+var gsGridCellEffect     = 'raised'        // Grid cell effect
+var gsGridLinesColor     = 'black'         // Grid line color
+var gbShowTitle          = true            // Show the title (0,1)
+var gbShowHorizontalGrid = true            // Show the horizontal grid (0,1)
+var gbShowVerticalGrid   = true            // Show the vertical grid (0,1)
+var gbValueIsNull        = false           // There is no value selected (0,1)
+var gbReadOnly           = false           // The user can not interact with the control
+
+// Load the property values defined on the element to replace defaults
+fnGetPropertyDefaults()
+
+// Create the style sheets needed for the calendar display
+fnCreateStyleSheets()
+
+// Insert the HTML elements needed for the calendar display
+fnCreateCalendarHTML()
+
+// Build the hour select control
+fnBuildHourSelect()
+
+// Fill in the cells with the days of the month and set style values
+fnFillInCells()
+
+
+// **********************************************************************
+//                       PROPERTY GET/SET FUNCTIONS
+// **********************************************************************
+
+//begin add by zhouquan for linux time browser TD1696
+
+function fnGetMinute()
+{
+  return (gbValueIsNull) ? null : giMinute
+}
+
+function fnPutMinute(iMinute)
+{
+  if (gbLoading) return  // return if the behavior is loading
+  
+  iMinute = parseInt(iMinute)
+  if (isNaN(iMinute)) throw 450
+
+  fnSetTime(iMinute, giHour)
+}
+//--------------------------------------------------------------------------
+function fnGetHour()
+{
+  return (gbValueIsNull) ? null : giHour
+}
+
+function fnPutHour(iHour)
+{
+  if (gbLoading) return  // return if the behavior is loading
+
+  iHour = parseInt(iHour)
+  if (isNaN(iHour)) throw 450
+
+  fnSetTime(giMinute, iHour)
+}
+
+//------------------------------------------------------------------------
+
+function fnGetHourLength()
+{
+  if (giHourLength == 0) return "short"
+  if (giHourLength == 1) return "long"
+}
+
+function fnPutHourLength(sLength)
+{
+  if (gbLoading) return  // return if the behavior is loading
+
+  switch (sLength.toLowerCase())
+  {
+    case "short" :
+      if (giHourLength == 0) return
+      giHourLength = 0
+      break;
+    case "long" : 
+      if (giHourLength == 1) return
+      giHourLength = 1
+      break;
+    default :
+      throw 450
+      return
+  }
+
+  fnBuildHourSelect()
+}
+
+//------------------------------------------------------------------------
+
+function fnGetMinuteLength()
+{
+  if (giMinuteLength == 0) return "short"
+  if (giMinuteLength == 1) return "medium"
+  if (giMinuteLength == 2) return "long"
+}
+
+function fnPutMinuteLength(sLength)
+{
+  if (gbLoading) return  // return if the behavior is loading
+
+  switch (sLength.toLowerCase())
+  {
+    case "short" :
+      if (giMinuteLength == 0) return
+      giMinuteLength = 0
+      break;
+    case "medium" : 
+      if (giMinuteLength == 1) return
+      giMinuteLength = 1
+      break;
+    case "long" : 
+      if (giMinuteLength == 2) return
+      giMinuteLength = 2
+      break;
+    default :
+      throw 450
+      return
+  }
+
+  // Used to force a table resize if needed
+  goStyle['MinuteSelected'].borderStyle = 'solid'  
+}
+
+//------------------------------------------------------------------------
+
+function fnGetGridCellEffect()
+{
+  return gsGridCellEffect
+}
+
+function fnPutGridCellEffect(sEffect)
+{
+  if (gbLoading) return  // return if the behavior is loading
+
+  switch (sEffect.toLowerCase())
+  {
+    case "raised" :
+      if (gsGridCellEffect == 'raised') return
+      gsGridCellEffect = 'raised'
+      fnUptimeGridColors()
+      break
+    case "flat" : 
+      if (gsGridCellEffect == 'flat') return
+      gsGridCellEffect = 'flat'
+      fnUptimeGridColors()
+      break
+    case "sunken" : 
+      if (gsGridCellEffect == 'sunken') return
+      gsGridCellEffect = 'sunken'
+      fnUptimeGridColors()
+      break
+    default :
+      throw 450
+  }
+}
+
+//------------------------------------------------------------------------
+
+function fnGetGridLinesColor()
+{
+  return gsGridLinesColor
+}
+
+function fnPutGridLinesColor(sGridLinesColor)
+{
+  if (gbLoading) return  // return if the behavior is loading
+
+  gsGridLinesColor = sGridLinesColor
+  fnUptimeGridColors()
+}
+
+//------------------------------------------------------------------------
+
+function fnGetShowVerticalGrid()
+{
+  return gbShowVerticalGrid
+}
+
+function fnPutShowVerticalGrid(bShowVerticalGrid)
+{
+  if (gbLoading) return  // return if the behavior is loading
+
+  if ((bShowVerticalGrid) != gbShowVerticalGrid)
+  {
+    gbShowVerticalGrid = (bShowVerticalGrid) ? true : false
+    fnFireOnPropertyChange("propertyName", "showVerticalGrid")
+    fnUptimeGridColors()
+  }
+}
+
+//------------------------------------------------------------------------
+
+function fnGetShowHorizontalGrid()
+{
+  return gbShowHorizontalGrid
+}
+
+function fnPutShowHorizontalGrid(bShowHorizontalGrid)
+{
+  if (gbLoading) return  // return if the behavior is loading
+
+  if ((bShowHorizontalGrid) != gbShowHorizontalGrid)
+  {
+    gbShowHorizontalGrid = (bShowHorizontalGrid) ? true : false
+    fnFireOnPropertyChange("propertyName", "showHorizontalGrid")
+    fnUptimeGridColors()
+  }
+}
+
+//------------------------------------------------------------------------
+
+function fnGetShowTimeSelectors()
+{
+  return gbShowTimeSelectors
+}
+
+function fnPutShowTimeSelectors(bShowTimeSelectors)
+{
+  if (gbLoading) return  // return if the behavior is loading
+
+  gbShowTimeSelectors = (bShowTimeSelectors) ? true : false
+  element.children[0].rows[0].cells[1].style.display = (gbShowTimeSelectors) ? '' : 'none'
+
+  element.children[0].rows[0].style.display = (gbShowTimeSelectors || gbShowTitle) ? '' : 'none'
+}
+
+
+//------------------------------------------------------------------------
+
+function fnGetShowMinutes()
+{
+  return gbShowMinutes
+}
+
+function fnPutShowMinutes(bShowMinutes)
+{
+  if (gbLoading) return  // return if the behavior is loading
+
+  gbShowMinutes = (bShowMinutes) ? true : false
+  goMinuteTitleRow.style.display = (gbShowMinutes) ? '' : 'none'
+}
+
+//------------------------------------------------------------------------
+
+function fnGetValue()
+{
+  var sValue
+
+  if (gbValueIsNull) return null
+  sValue = ((giMinute < 10) ? '0' + giMinute : giMinute) + '/' +
+           ((giHour < 10) ? '0' + giHour : giHour) 
+  return sValue 
+}
+
+function fnPutValue(sValue)
+{
+  if (gbLoading) return  // return if the behavior is loading
+
+  var aValue = sValue.split('/')
+
+  // ensure valid valuse for hour, minute, and year
+  aValue[0]++ ; aValue[0]-- ; aValue[1]++ ; aValue[1]-- ; 
+  if ( isNaN(aValue[0]) || isNaN(aValue[1]) ) throw 450
+
+  fnSetTime(aValue[0], aValue[1])
+}
+
+//------------------------------------------------------------------------
+
+function fnHourSelectOnChange()
+{
+  iHour = goHourSelect.selectedIndex
+  fnSetTime(giMinute, iHour)
+}
+
+//------------------------------------------------------------------------
+function fnSetTime(iMinute, iHour)
+{
+  var bValueChange = false
+  if (gbValueIsNull)
+  { 
+    gbValueIsNull = false
+    fnFireOnPropertyChange("propertyName", "valueIsNull")
+  }
+
+  if (iHour < 0) iHour = 0
+  if (iHour > 23) iHour = 23
+
+  if (iMinute < 0) iMinute = 0
+  if (iMinute > 59) iMinute = 59
+
+  if ((giMinute == iMinute) && (giHour == iHour))
+    return
+  else
+    bValueChange = true
+  
+  if (giMinute != iMinute) 
+  {
+    giMinute = iMinute
+    fnFireOnPropertyChange("propertyName", "minute")
+  }
+ 
+    if (giHour != iHour) 
+    {
+      giHour = iHour
+      fnFireOnPropertyChange("propertyName", "hour")
+      fnUptimeHourSelect()
+    }
+ 
+//  fnUptimeTitle()   
+    fnFillInCells()
+  
+  if (bValueChange) fnFireOnPropertyChange("propertyName", "value")
+}
+
+//------------------------------------------------------------------------
+
+function fnUptimeHourSelect()
+{
+  goHourSelect.options[ giHour ].selected = true
+}
+
+//------------------------------------------------------------------------
+//end zhouquan add
+
+//------------------------------------------------------------------------
+//
+//  Function:  fnGetGridCellEffect / fnPutGridCellEffect
+//
+//  Synopsis:  The gridCellEffect property is used to modify the 3D effect
+//             in the calendar grid (excluding day titles).  It can take
+//             values of 'raised', 'flat', or 'sunken'.  Other values will
+//             cause an exception.
+//             
+//  Arguments: The put method requires a value of 'raised', 'flat', or 
+//             'sunken'. 
+//
+//  Returns:   The get method will return a value of 'raised', 'flat', or 
+//             'sunken'. 
+//
+//  Notes:     none
+//
+//------------------------------------------------------------------------
+
+function fnGetGridCellEffect()
+{
+  return gsGridCellEffect
+}
+
+function fnPutGridCellEffect(sEffect)
+{
+  if (gbLoading) return  // return if the behavior is loading
+
+  switch (sEffect.toLowerCase())
+  {
+    case "raised" :
+      if (gsGridCellEffect == 'raised') return
+      gsGridCellEffect = 'raised'
+      fnUpdateGridColors()
+      break
+    case "flat" : 
+      if (gsGridCellEffect == 'flat') return
+      gsGridCellEffect = 'flat'
+      fnUpdateGridColors()
+      break
+    case "sunken" : 
+      if (gsGridCellEffect == 'sunken') return
+      gsGridCellEffect = 'sunken'
+      fnUpdateGridColors()
+      break
+    default :
+      throw 450
+  }
+}
+
+//------------------------------------------------------------------------
+//
+//  Function:  fnGetGridLinesColor / fnPutGridLinesColor
+//
+//  Synopsis:  The gridLinesColor property is used to change the color of 
+//             the calendar grid when the gridCellEffect property is set 
+//             to 'flat'.  It can be any valid HTML color value.  
+//             
+//  Arguments: The put method requires a HTML color value
+//
+//  Returns:   The get method will return a HTML color value
+//
+//  Notes:     No error checking is performed.  Invalid values may result
+//             in unexpected rendering.
+//
+//------------------------------------------------------------------------
+
+function fnGetGridLinesColor()
+{
+  return gsGridLinesColor
+}
+
+function fnPutGridLinesColor(sGridLinesColor)
+{
+  if (gbLoading) return  // return if the behavior is loading
+
+  gsGridLinesColor = sGridLinesColor
+  fnUpdateGridColors()
+}
+
+//------------------------------------------------------------------------
+//
+//  Function:  fnGetShowVerticalGrid / fnPutShowVerticalGrid
+//
+//  Synopsis:  The showVerticalGrid property is used to toggle the 
+//             visibility of vertical lines in the calendar grid.
+//             
+//  Arguments: The put method requires true or false value for visibility
+//
+//  Returns:   The get method will return a true or false value
+//
+//  Notes:     none
+//
+//------------------------------------------------------------------------
+
+function fnGetShowVerticalGrid()
+{
+  return gbShowVerticalGrid
+}
+
+function fnPutShowVerticalGrid(bShowVerticalGrid)
+{
+  if (gbLoading) return  // return if the behavior is loading
+
+  if ((bShowVerticalGrid) != gbShowVerticalGrid)
+  {
+    gbShowVerticalGrid = (bShowVerticalGrid) ? true : false
+    fnFireOnPropertyChange("propertyName", "showVerticalGrid")
+    fnUpdateGridColors()
+  }
+}
+
+
+//------------------------------------------------------------------------
+//
+//  Function:  fnGetShowHorizontalGrid / fnPutShowHorizontalGrid
+//
+//  Synopsis:  The showHorizontalGrid property is used to toggle the 
+//             visibility of horizontal lines in the calendar grid.
+//             
+//  Arguments: The put method requires true or false value for visibility
+//
+//  Returns:   The get method will return a true or false value
+//
+//  Notes:     none
+//
+//------------------------------------------------------------------------
+
+function fnGetShowHorizontalGrid()
+{
+  return gbShowHorizontalGrid
+}
+
+function fnPutShowHorizontalGrid(bShowHorizontalGrid)
+{
+  if (gbLoading) return  // return if the behavior is loading
+
+  if ((bShowHorizontalGrid) != gbShowHorizontalGrid)
+  {
+    gbShowHorizontalGrid = (bShowHorizontalGrid) ? true : false
+    fnFireOnPropertyChange("propertyName", "showHorizontalGrid")
+    fnUpdateGridColors()
+  }
+}
+
+
+//------------------------------------------------------------------------
+//
+//  Function:  fnGetReadOnly / fnPutReadOnly
+//
+//  Synopsis:  The readOnly property can be set to true or false to 
+//             disable user date selection by clicking on days or through
+//             the select controls
+//
+//  Arguments: The put method requires a true/false value
+//
+//  Returns:   The get method will return true or false
+//
+//  Notes:     none
+//
+//------------------------------------------------------------------------
+
+function fnGetReadOnly()
+{
+  return (gbReadOnly) ? true : false
+}
+
+function fnPutReadOnly(bReadOnly)
+{
+  if (gbLoading) return  // return if the behavior is loading
+
+  if ((bReadOnly) != gbReadOnly)
+  {
+    gbReadOnly = (bReadOnly) ? true : false
+    fnFireOnPropertyChange("propertyName", "readOnly")
+  }
+
+  element.children[0].rows[0].cells[1].children[0].children[0].disabled = gbReadOnly
+  element.children[0].rows[0].cells[1].children[0].children[1].disabled = gbReadOnly
+}
+
+// **********************************************************************
+//                       CALENDAR INITIALIZATION FUNCTIONS
+// **********************************************************************
+
+//------------------------------------------------------------------------
+//
+//  Function:  fnCreateCalendarHTML
+//
+//  Synopsis:  This function adds the HTML code to the main document that
+//             is required to display the calendar.  It contains nested
+//             tables and all style information is inherited from the 
+//             style sheet properties.
+//
+//  Arguments: none
+//
+//  Returns:   none
+//
+//  Notes:     none
+//
+//------------------------------------------------------------------------
+
+function fnCreateCalendarHTML()
+{
+  var row, cell
+
+  element.innerHTML = 
+  '<table border=0 class=WholeCalendar_' + uniqueID + '> ' +
+  '  <tr>                                          ' +
+  '      <td class=Title_' + uniqueID + '>Сʱ</td>    ' +
+  '      <td class=TimeControls_' + uniqueID + '>  ' +
+  '        <nobr> <select size=10 ></select>                ' +
+  '                </nobr> </td>  ' +
+  '  </tr>                                         ' +
+  '  <tr> <td colspan=2>                           ' +
+  '    <table class=CalTable_' + uniqueID + ' cellspacing=0 border=0> ' +
+  '      <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>' +
+  '      <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>' +
+  '      <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>' +
+  '      <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>' +
+  '      <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>' +
+  '      <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>' +
+  '      <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>' +
+  '      <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>' +
+  '      <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>' +
+  '      <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>' +
+  '      <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>' +
+  '    </table> ' +
+  '    </td>    ' +
+  '  </tr>      ' +
+  '</table>     ';
+
+  goHourSelect = element.children[0].rows[0].cells[1].children[0].children[0]
+
+  for (row=1; row < 11; row++)
+    for (cell=0; cell < 6; cell++)
+      gaMinuteCell[((row-1)*6) + cell] = element.children[0].rows[1].cells[0].children[0].rows[row].cells[cell]
+
+}
+
+//------------------------------------------------------------------------
+//
+//  Function:  fnCreateStyleSheets
+//
+//  Synopsis:  The calendar uses a style sheet to control the rendering
+//             of the different calendar elements.  This function creates
+//             the style sheet in the main document using a unique name.
+//
+//  Arguments: none
+//
+//  Returns:   
+//
+//  Notes:     
+//
+//------------------------------------------------------------------------
+
+function fnCreateStyleSheets()
+{
+  var StyleInfo
+
+  if (! element.document.body.BehaviorStyleSheet)
+  {
+    element.document.body.BehaviorStyleSheet = element.document.createStyleSheet()
+  }
+  StyleInfo = element.document.body.BehaviorStyleSheet 
+
+  StyleInfo.addRule(   '.WholeCalendar_' + uniqueID,
+      'background-color : lightgrey        ;'+
+      'border           : 1px solid black  ;'+
+      'cursor           : default          ;'+
+      'width            : 100%             ;'+
+      'height           : 100%             ;'
+    )
+  goStyle['WholeCalendar'] = StyleInfo.rules[StyleInfo.rules.length - 1].style
+
+  StyleInfo.addRule(   '.Title_' + uniqueID,
+      'color            : #00009F  ;'+	// cal--title-color 
+      'font-family      : Arial    ;'+	// cal--title-font-family 
+      'font-size        : 10pt     ;'+	// cal--title-font-size 
+      'font-weight      : bold     ;'+	// cal--title-font-weight 
+      'text-align       : center   ;'+	// cal--title-text-align 
+      'height           : 1        ;'+
+      'width            : 50%     ;'+
+      'background-color : lightgrey;'
+    )
+  goStyle['Title'] = StyleInfo.rules[StyleInfo.rules.length - 1].style
+  
+  fnLoadCSSDefault('cal--title-background-color', 'calTitleBackgroundColor', goStyle['Title'], 'backgroundColor')
+  fnLoadCSSDefault('cal--title-color',            'calTitleColor',           goStyle['Title'], 'color')
+  fnLoadCSSDefault('cal--title-font-family',      'calTitleFontFamily',      goStyle['Title'], 'fontFamily')
+  fnLoadCSSDefault('cal--title-font-size',        'calTitleFontSize',        goStyle['Title'], 'fontSize')
+  fnLoadCSSDefault('cal--title-font-weight',      'calTitleFontWeight',      goStyle['Title'], 'fontWeight')
+  fnLoadCSSDefault('cal--title-text-align',       'calTitleTextAlign',       goStyle['Title'], 'textAlign')
+
+  StyleInfo.addRule(   '.TimeControls_' + uniqueID,
+      'text-align : right ;'
+    )
+  goStyle['TimeControls'] = StyleInfo.rules[StyleInfo.rules.length - 1].style
+
+  StyleInfo.addRule(   '.CalTable_' + uniqueID,
+      'border : 1 solid black ;'+
+      'width  : 100%          ;'+
+      'height : 100%          ;'
+    )
+  goStyle['CalTable'] = StyleInfo.rules[StyleInfo.rules.length - 1].style
+
+  StyleInfo.addRule(   '.MinuteTitle_' + uniqueID,
+      'background-color    : lightgrey ;'+	// minuteTitle-background-color 
+      'color               : black     ;'+	// minuteTitle-color 
+      'font-family         : Arial     ;'+	// minuteTitle-font-family 
+      'font-size           : 8pt       ;'+	// minuteTitle-font-size 
+      'font-weight         : bold      ;'+	// minuteTitle-font-weight 
+      'text-align          : center    ;'+	// minuteTitle-text-align 
+      'border-width        : 1px       ;'+
+      'border-style        : solid     ;'+
+      'border-left-color   : white     ;'+
+      'border-top-color    : white     ;'+
+      'border-right-color  : black     ;'+
+      'border-bottom-color : black     ;'+
+      'width               : 16%       ;'+
+      'height              : 1         ;'
+    )
+  goStyle['MinuteTitle'] = StyleInfo.rules[StyleInfo.rules.length - 1].style
+
+  fnLoadCSSDefault('cal--minuteTitle-background-color', 'calMinuteTitleBackgroundColor', goStyle['MinuteTitle'], 'backgroundColor')
+  fnLoadCSSDefault('cal--minuteTitle-color',            'calMinuteTitleColor',           goStyle['MinuteTitle'], 'color')
+  fnLoadCSSDefault('cal--minuteTitle-font-family',      'calMinuteTitleFontFamily',      goStyle['MinuteTitle'], 'fontFamily')
+  fnLoadCSSDefault('cal--minuteTitle-font-size',        'calMinuteTitleFontSize',        goStyle['MinuteTitle'], 'fontSize')
+  fnLoadCSSDefault('cal--minuteTitle-font-weight',      'calMinuteTitleFontWeight',      goStyle['MinuteTitle'], 'fontWeight')
+  fnLoadCSSDefault('cal--minuteTitle-text-align',       'calMinuteTitleTextAlign',       goStyle['MinuteTitle'], 'textAlign')
+
+  StyleInfo.addRule(   '.OffMinute_' + uniqueID,
+      'background-color    : lightgrey ;'+	// cal--offHour-background-color 
+      'color               : #7F7F7F   ;'+	// cal--offHour-color 
+      'font-family         : Arial     ;'+	// cal--offHour-font-family
+      'font-size           : 8pt       ;'+	// cal--offHour-font-size 
+      'font-weight         : normal    ;'+	// cal--offHour-font-weight 
+      'text-align          : right     ;'+	// cal--offHour-text-align 
+      'vertical-align      : text-top  ;'+	// cal--offHour-vertical-align 
+      'border-width        : 1px       ;'+
+      'border-style        : solid     ;'+
+      'border-left-color   : white     ;'+
+      'border-top-color    : white     ;'+
+      'border-right-color  : black     ;'+
+      'border-bottom-color : black     ;'+
+      'width               : 16%       ;'+
+      'cursor              : hand      ;'
+    )
+  goStyle['OffMinute'] = StyleInfo.rules[StyleInfo.rules.length - 1].style
+
+  fnLoadCSSDefault('cal--offHour-background-color', 'calOffHourBackgroundColor', goStyle['OffMinute'], 'backgroundColor')
+  fnLoadCSSDefault('cal--offHour-color',            'calOffHourColor',           goStyle['OffMinute'], 'color')
+  fnLoadCSSDefault('cal--offHour-font-family',      'calOffHourFontFamily',      goStyle['OffMinute'], 'fontFamily')
+  fnLoadCSSDefault('cal--offHour-font-size',        'calOffHourFontSize',        goStyle['OffMinute'], 'fontSize')
+  fnLoadCSSDefault('cal--offHour-font-weight',      'calOffHourFontWeight',      goStyle['OffMinute'], 'fontWeight')
+  fnLoadCSSDefault('cal--offHour-text-align',       'calOffHourTextAlign',       goStyle['OffMinute'], 'textAlign')
+  fnLoadCSSDefault('cal--offHour-vertical-align',   'calOffHourVerticalAlign',   goStyle['OffMinute'], 'verticalAlign')
+
+  StyleInfo.addRule(   '.Minute_' + uniqueID,
+      'background-color    : lightgrey ;'+	// cal--currentHour-background-color 
+      'color               : #00009F   ;'+	// cal--currentHour-color 
+      'font-family         : Arial     ;'+	// cal--currentHour-font-family 
+      'font-size           : 8pt       ;'+	// cal--currentHour-font-size 
+      'font-weight         : normal    ;'+	// cal--currentHour-font-weight 
+      'text-align          : right     ;'+ 	// cal--currentHour-text-align 
+      'vertical-align      : text-top  ;'+	// cal--currentHour-vertical-align 
+      'border-width        : 1px       ;'+
+      'border-style        : solid     ;'+
+      'border-left-color   : white     ;'+
+      'border-top-color    : white     ;'+
+      'border-right-color  : black     ;'+
+      'border-bottom-color : black     ;'+
+      'width               : 16%       ;'+
+      'cursor              : hand      ;'
+    )
+  goStyle['Minute'] = StyleInfo.rules[StyleInfo.rules.length - 1].style
+  
+  fnLoadCSSDefault('cal--currentHour-background-color', 'calCurrentHourBackgroundColor', goStyle['Minute'], 'backgroundColor')
+  fnLoadCSSDefault('cal--currentHour-color',            'calCurrentHourColor',           goStyle['Minute'], 'color')
+  fnLoadCSSDefault('cal--currentHour-font-family',      'calCurrentHourFontFamily',      goStyle['Minute'], 'fontFamily')
+  fnLoadCSSDefault('cal--currentHour-font-size',        'calCurrentHourFontSize',        goStyle['Minute'], 'fontSize')
+  fnLoadCSSDefault('cal--currentHour-font-weight',      'calCurrentHourFontWeight',      goStyle['Minute'], 'fontWeight')
+  fnLoadCSSDefault('cal--currentHour-text-align',       'calCurrentHourTextAlign',       goStyle['Minute'], 'textAlign')
+  fnLoadCSSDefault('cal--currentHour-vertical-align',   'calCurrentHourVerticalAlign',   goStyle['Minute'], 'verticalAlign')
+
+
+  StyleInfo.addRule(   '.MinuteSelected_' + uniqueID,
+      'background-color    : #7F7F7F  ;'+	// cal--selectedMinute-background-color 
+      'color               : yellow   ;'+	// cal--selectedMinute-color 
+      'font-family         : Arial    ;'+	// cal--selectedMinute-font-family 
+      'font-size           : 8pt      ;'+	// cal--selectedMinute-font-size 
+      'font-weight         : normal   ;'+	// cal--selectedMinute-font-weight 
+      'text-align          : right    ;'+ 	// cal--selectedHour-text-align 
+      'vertical-align      : text-top ;'+	// cal--selectedHour-vertical-align 
+      'border-width        : 1px      ;'+
+      'border-style        : solid    ;'+
+      'border-left-color   : black    ;'+
+      'border-top-color    : black    ;'+
+      'border-right-color  : #BFBFBF  ;'+
+      'border-bottom-color : #BFBFBF  ;'+
+      'width               : 16%       ;'+
+      'cursor              : hand     ;'
+    )
+  goStyle['MinuteSelected'] = StyleInfo.rules[StyleInfo.rules.length - 1].style
+
+  fnLoadCSSDefault('cal--selectedMinute-background-color', 'calSelectedMinuteBackgroundColor', goStyle['MinuteSelected'], 'backgroundColor')
+  fnLoadCSSDefault('cal--selectedMinute-color',            'calSelectedMinuteColor',           goStyle['MinuteSelected'], 'color')
+  fnLoadCSSDefault('cal--selectedMinute-font-family',      'calSelectedMinuteFontFamily',      goStyle['MinuteSelected'], 'fontFamily')
+  fnLoadCSSDefault('cal--selectedMinute-font-size',        'calSelectedMinuteFontSize',        goStyle['MinuteSelected'], 'fontSize')
+  fnLoadCSSDefault('cal--selectedMinute-font-weight',      'calSelectedMinuteFontWeight',      goStyle['MinuteSelected'], 'fontWeight')
+  fnLoadCSSDefault('cal--selectedMinute-text-align',       'calSelectedMinuteTextAlign',       goStyle['MinuteSelected'], 'textAlign')
+  fnLoadCSSDefault('cal--selectedMinute-vertical-align',   'calSelectedMinuteVerticalAlign',   goStyle['MinuteSelected'], 'verticalAlign')
+}
+
+//------------------------------------------------------------------------
+//
+//  Function:  fnLoadCSSDefault
+//
+//  Synopsis:  This helper function checks to see if a CSS property 
+//             extension was used to specify a custom style for the 
+//             calendar.  If so, the style style object.
+//
+//  Arguments: sCSSProp        The CSS property extension used by the 
+//                             page author
+//             sScriptProp     The scriptable property name to add to the 
+//                             style Name of the style rule
+//             sStyleRuleProp  Name of the CSS property on the style rule
+//
+//  Returns:   none
+//
+//  Notes:     none
+//
+//------------------------------------------------------------------------
+
+function fnLoadCSSDefault(sCSSProp, sScriptProp, oStyleRule, sStyleRuleProp)
+{
+  if (element.currentStyle[sCSSProp])
+  {
+    oStyleRule[sStyleRuleProp] = element.currentStyle[sCSSProp] 
+  }
+  element.style[sScriptProp] = oStyleRule[sStyleRuleProp]  
+}   
+
+//------------------------------------------------------------------------
+//
+//  Function:  fnGetPropertyDefaults
+//
+//  Synopsis:  When the for the properties.
+//             If so, error checking is performed and the state of the
+//             calendar is updated.
+//
+//  Arguments: none
+//
+//  Returns:   none
+//
+//  Notes:     none
+//
+//------------------------------------------------------------------------
+
+function fnGetPropertyDefaults()
+{
+  var x
+  var oTime = new Date()
+  
+  giMinute = oTime.getMinutes()
+  giHour = oTime.getHours() 
+  // The JavaScript Time.getYear function returns a 2 digit time representation
+  // for times in the 1900's and a 4 digit time for 2000 and beyond.  
+
+  if (element.hour) 
+  {
+    if (! isNaN(parseInt(element.hour))) giHour = parseInt(element.hour)
+    if (giHour < 1) giHour = 1
+    if (giHour > 24) giHour = 24
+  }
+  
+  if (element.minute) 
+  {
+    if (! isNaN(parseInt(element.minute))) giMinute = parseInt(element.minute)
+    if (giMinute < 1) giMinute = 1
+    if (giMinute > 60) giMinute = 60
+  }
+
+  if (element.hourLength)
+  {
+    switch (element.hourLength.toLowerCase())
+    {
+      case 'short' :
+        giHourLength = 0
+        break
+      case 'long' :
+        giHourLength = 1
+        break
+    }
+  }
+  
+  if (element.minuteLength)
+  {
+    switch (element.minuteLength.toLowerCase())
+    {
+      case 'short' :
+        giMinuteLength = 0
+        break
+      case 'medium' :
+        giMinuteLength = 1
+        break
+      case 'long' :
+        giMinuteLength = 1
+        break
+    }
+  }
+
+  if (element.gridCellEffect) 
+  { 
+    switch (element.gridCellEffect.toLowerCase())
+    {
+      case 'raised' :
+        giGridCellEffect = 'raised'
+        break
+      case 'flat' :
+        giGridCellEffect = 'flat'
+        break
+      case 'sunken' :
+        giGridCellEffect = 'sunken'
+        break
+    }
+  }
+
+  if (element.gridLinesColor) 
+    gsGridLinesColor = element.gridLinesColor
+  
+  if (element.showTimeSelectors)
+    gbShowTimeSelectors = (element.showTimeSelectors) ? true : false
+    
+  if (element.showMinutes)
+    gbShowMinutes = (element.showMinutes) ? true : false
+
+  if (element.showTitle)
+    gbShowTitle = (element.showTitle) ? true : false
+    
+  if (element.showHorizontalGrid)
+    gbShowHorizontalGrid = (element.showHorizontalGrid) ? true : false
+    
+  if (element.showVerticalGrid)
+    gbShowVerticalGrid = (element.showVerticalGrid) ? true : false
+  
+  if (element.valueIsNull)
+    gbValueIsNull = (element.valueIsNull) ? true : false
+  
+  if (element.name)
+    gsName = element.name
+    
+  if (element.readOnly)
+    gbReadOnly = (element.readOnly) ? true : false
+}
+
+//------------------------------------------------------------------------
+//
+//  Function:  fnBuildHourSelect
+//
+//  Synopsis:  When the calendar is created, this function inserts the 
+//             hour values into the select control and selects the 
+//             current hour.
+//
+//  Arguments: none
+//
+//  Returns:   none
+//
+//  Notes:     none
+//
+//------------------------------------------------------------------------
+
+function fnBuildHourSelect()
+{
+  var newHourSelect
+
+  newHourSelect = element.document.createElement("SELECT")
+  goHourSelect.parentElement.replaceChild(newHourSelect, goHourSelect)
+  goHourSelect = newHourSelect
+
+  for (i=0 ; i < 24; i++)
+  {
+    e = element.document.createElement("OPTION")
+    e.text = i
+    goHourSelect.options.add(e)
+  }
+
+  goHourSelect.options[ giHour ].selected = true
+  goHourSelect.attachEvent("onchange", fnHourSelectOnChange)
+}
+
+//------------------------------------------------------------------------
+//
+//  Function:  fnFillInCells
+//
+//  Synopsis:  This method works through the table and sets the day and
+//             style needed.
+//
+//  Arguments: none
+//
+//  Returns:   none
+//
+//  Notes:     none
+//
+//------------------------------------------------------------------------
+
+function fnFillInCells()
+{
+  var iMinuteCell = 0
+  
+  for(i=0;i<60;i++,iMinuteCell++)
+  {
+     gaMinuteCell[iMinuteCell].innerText = i
+
+     if (giMinute == i)
+     {
+       goCurrentMinuteCell = gaMinuteCell[iMinuteCell]
+       gaMinuteCell[iMinuteCell].className = 'MinuteSelected_' + uniqueID
+     } 
+     else 
+     {
+       if (gaMinuteCell[iMinuteCell].className != 'Minute_' + uniqueID)
+         gaMinuteCell[iMinuteCell].className = 'Minute_' + uniqueID
+     }
+
+     gaMinuteCell[iMinuteCell].minute = i+1
+     gaMinuteCell[iMinuteCell].hour = giHour
+  }
+}
+
+
+// **********************************************************************
+//                            EVENT HANDLERS
+// **********************************************************************
+
+//------------------------------------------------------------------------
+//
+//  Function:  fnOnClick
+//
+//  Synopsis:  When the user clicks on the calendar, change the date if
+//             needed
+//
+//  Arguments: none
+//
+//  Returns:   none
+//
+//  Notes:     none
+//
+//------------------------------------------------------------------------
+
+function fnOnClick()
+{
+  var e = window.event.srcElement
+
+  if (e.tagName == "TD") 
+  {
+
+    if (gbReadOnly|| (!e.minute) ) return  // The calendar is read only
+    fnSetTime(e.minute-1, e.hour)
+  }
+}
+
+//------------------------------------------------------------------------
+//
+//  Function:  fnOnSelectStart
+//
+//  Synopsis:  This cancels selection when the user clicks and drags the 
+//             mouse on the calendar.  It can still be selected if the
+//             the SelectStart begins outside this element.
+//
+//  Arguments: none
+//
+//  Returns:   none
+//
+//  Notes:     none
+//
+//------------------------------------------------------------------------
+
+function fnOnSelectStart()
+{
+  window.event.returnValue = false
+  window.event.cancelBubble = true
+}
+
+//------------------------------------------------------------------------
+//
+//  Function:  fnOnReadyStateChange
+//
+//  Synopsis:  When the behavior is completely loaded, set the global 
+//             loading flag to false.
+//
+//  Arguments: none
+//
+//  Returns:   none
+//
+//  Notes:     To improve load time, we do not want the put methods on 
+//             properties to be called.  We also need to keep events from
+//             getting fired while the behavior is loading.
+//
+//------------------------------------------------------------------------
+
+function fnOnReadyStateChange()
+{
+  gbLoading = (readyState != "complete")
+}
+
+//------------------------------------------------------------------------
+//
+//  Function:  fnOnPropertyChange
+//
+//  Synopsis:  When a property changes on the element, this function will
+//             check it to see if part of the calendar needs to be changed
+//             as a result.  
+//
+//  Arguments: none
+//
+//  Returns:   none
+//
+//  Notes:     This is currently only checking extended style
+//             properties to alter the calendar style sheet rules.
+//
+//------------------------------------------------------------------------
+
+function fnOnPropertyChange()
+{
+  if (window.event.propertyName.substring(0, 5) == 'style')
+  { 
+    switch (window.event.propertyName)
+    {
+      case 'style.calTitleBackgroundColor' :
+        goStyle['WholeCalendar'].backgroundColor = style.calTitleBackgroundColor
+        goStyle['Title'].backgroundColor = style.calTitleBackgroundColor
+        break
+      case 'style.calTitleColor' :
+        goStyle['Title'].color = style.calTitleColor
+        break
+      case 'style.calTitleFontFamily' :
+        goStyle['Title'].fontFamily = style.calTitleFontFamily
+        break
+      case 'style.calTitleFontSize' :
+        goStyle['Title'].fontSize = style.calTitleFontSize
+        break
+      case 'style.calTitleFontWeight' :
+        goStyle['Title'].fontWeight = style.calTitleFontWeight
+        break
+      case 'style.calTitleTextAlign' :
+        goStyle['Title'].textAlign = style.calTitleTextAlign
+        break
+
+      case 'style.calMinuteTitleBackgroundColor' :
+        goStyle['MinuteTitle'].backgroundColor = style.calMinuteTitleBackgroundColor
+        break
+      case 'style.calMinuteTitleColor' :
+        goStyle['MinuteTitle'].color = style.calMinuteTitleColor
+        break
+      case 'style.calMinuteTitleFontFamily' :
+        goStyle['MinuteTitle'].fontFamily = style.calMinuteTitleFontFamily
+        break
+      case 'style.calMinuteTitleFontSize' :
+        goStyle['MinuteTitle'].fontSize = style.calMinuteTitleFontSize
+        break
+      case 'style.calMinuteTitleFontWeight' :
+        goStyle['MinuteTitle'].fontWeight = style.calMinuteTitleFontWeight
+        break
+      case 'style.calMinuteTitleTextAlign' :
+        goStyle['MinuteTitle'].textAlign = style.calMinuteTitleTextAlign
+        break
+      
+      case 'style.calOffHourBackgroundColor' :
+        goStyle['OffMinute'].backgroundColor = style.calOffHourBackgroundColor
+        break
+      case 'style.calOffHourColor' :
+        goStyle['OffMinute'].color = style.calOffHourColor
+        break
+      case 'style.calOffHourFontFamily' :
+        goStyle['OffMinute'].fontFamily = style.calOffHourFontFamily
+        break
+      case 'style.calOffHourFontSize' :
+        goStyle['OffMinute'].fontSize = style.calOffHourFontSize
+        break
+      case 'style.calOffHourFontWeight' :
+        goStyle['OffMinute'].fontWeight = style.calOffHourFontWeight
+        break
+      case 'style.calOffHourTextAlign' :
+        goStyle['OffMinute'].textAlign = style.calOffHourTextAlign
+        break
+      case 'style.calOffHourVerticalAlign' :
+        goStyle['OffMinute'].verticalAlign = style.calOffHourVerticalAlign
+        break
+
+      case 'style.calCurrentHourBackgroundColor' :
+        goStyle['Minute'].backgroundColor = style.calCurrentHourBackgroundColor
+        break
+      case 'style.calCurrentHourColor' :
+        goStyle['Minute'].color = style.calCurrentHourColor
+        break
+      case 'style.calCurrentHourFontFamily' :
+        goStyle['Minute'].fontFamily = style.calCurrentHourFontFamily
+        break
+      case 'style.calCurrentHourFontSize' :
+        goStyle['Minute'].fontSize = style.calCurrentHourFontSize
+        break
+      case 'style.calCurrentHourFontWeight' :
+        goStyle['Minute'].fontWeight = style.calCurrentHourFontWeight
+        break
+      case 'style.calCurrentHourTextAlign' :
+        goStyle['Minute'].textAlign = style.calCurrentHourTextAlign
+        break
+      case 'style.calCurrentHourVerticalAlign' :
+        goStyle['Minute'].verticalAlign = style.calCurrentHourVerticalAlign
+        break
+      
+      case 'style.calSelectedMinuteBackgroundColor' :
+        goStyle['MinuteSelected'].backgroundColor = style.calSelectedMinuteBackgroundColor
+        break
+      case 'style.calSelectedMinuteColor' :
+        goStyle['MinuteSelected'].color = style.calSelectedMinuteColor
+        break
+      case 'style.calSelectedMinuteFontFamily' :
+        goStyle['MinuteSelected'].fontFamily = style.calSelectedMinuteFontFamily
+        break
+      case 'style.calSelectedMinuteFontSize' :
+        goStyle['MinuteSelected'].fontSize = style.calSelectedMinuteFontSize
+        break
+      case 'style.calSelectedMinuteFontWeight' :
+        goStyle['MinuteSelected'].fontWeight = style.calSelectedMinuteFontWeight
+        break
+      case 'style.calSelectedMinuteTextAlign' :
+        goStyle['MinuteSelected'].textAlign = style.calSelectedMinuteTextAlign
+        break
+      case 'style.calSelectedMinuteVerticalAlign' :
+        goStyle['MinuteSelected'].verticalAlign = style.calSelectedMinuteVerticalAlign
+        break
+    }
+  }
+}
+
+// **********************************************************************
+//                            HELPER FUNCTIONS
+// **********************************************************************
+
+//------------------------------------------------------------------------
+//
+//  Function:  fnFireOnPropertyChange
+//
+//  Synopsis:   
+//
+//  Arguments: 
+//
+//  Returns:   
+//
+//  Notes:     
+//
+//------------------------------------------------------------------------
+
+function fnFireOnPropertyChange(name1, value1)
+{
+  var evObj = createEventObject()
+  evObj.setAttribute(name1, value1)
+  onPropertyChange.fire(evObj)
+}
+
+//------------------------------------------------------------------------
+//
+//  Function:  fnUpdateGridColors
+//
+//  Synopsis:  This is a helper function for the calendar grid rendering
+//             properties.  It handles setting the style rules to create
+//             the desired effects.
+//             
+//  Arguments: none
+//
+//  Returns:   none
+//
+//  Notes:     none
+//
+//------------------------------------------------------------------------
+
+function fnUpdateGridColors()
+{
+  switch (gsGridCellEffect)
+  {
+    case "raised" :
+      goStyle['OffMinute'].borderLeftColor = 'white'
+      goStyle['OffMinute'].borderTopColor = 'white'
+      goStyle['OffMinute'].borderRightColor = 'black'
+      goStyle['OffMinute'].borderBottomColor = 'black'
+
+      goStyle['Minute'].borderLeftColor = 'white'
+      goStyle['Minute'].borderTopColor = 'white'
+      goStyle['Minute'].borderRightColor = 'black'
+      goStyle['Minute'].borderBottomColor = 'black'
+
+      goStyle['MinuteSelected'].borderLeftColor = 'white'
+      goStyle['MinuteSelected'].borderTopColor = 'white'
+      goStyle['MinuteSelected'].borderRightColor = 'black'
+      goStyle['MinuteSelected'].borderBottomColor = 'black'
+      
+      break
+    case "flat" : 
+      goStyle['OffMinute'].borderLeftColor = goStyle['OffMinute'].backgroundColor
+      goStyle['OffMinute'].borderTopColor = goStyle['OffMinute'].backgroundColor
+      goStyle['OffMinute'].borderRightColor = (gbShowVerticalGrid) ? gsGridLinesColor : goStyle['Minute'].backgroundColor
+      goStyle['OffMinute'].borderBottomColor = (gbShowHorizontalGrid) ? gsGridLinesColor : goStyle['Minute'].backgroundColor
+
+      goStyle['Minute'].borderLeftColor = goStyle['Minute'].backgroundColor
+      goStyle['Minute'].borderTopColor = goStyle['Minute'].backgroundColor
+      goStyle['Minute'].borderRightColor = (gbShowVerticalGrid) ? gsGridLinesColor : goStyle['Minute'].backgroundColor
+      goStyle['Minute'].borderBottomColor = (gbShowHorizontalGrid) ? gsGridLinesColor : goStyle['Minute'].backgroundColor
+
+      goStyle['MinuteSelected'].borderLeftColor = goStyle['MinuteSelected'].backgroundColor
+      goStyle['MinuteSelected'].borderTopColor = goStyle['MinuteSelected'].backgroundColor
+      goStyle['MinuteSelected'].borderRightColor = (gbShowVerticalGrid) ? gsGridLinesColor : goStyle['Minute'].backgroundColor
+      goStyle['MinuteSelected'].borderBottomColor = (gbShowHorizontalGrid) ? gsGridLinesColor : goStyle['Minute'].backgroundColor
+      
+      break
+    case "sunken" : 
+      goStyle['OffMinute'].borderLeftColor = 'black'
+      goStyle['OffMinute'].borderTopColor = 'black'
+      goStyle['OffMinute'].borderRightColor = 'white'
+      goStyle['OffMinute'].borderBottomColor = 'white'
+
+      goStyle['Minute'].borderLeftColor = 'black'
+      goStyle['Minute'].borderTopColor = 'black'
+      goStyle['Minute'].borderRightColor = 'white'
+      goStyle['Minute'].borderBottomColor = 'white'
+
+      goStyle['MinuteSelected'].borderLeftColor = 'black'
+      goStyle['MinuteSelected'].borderTopColor = 'black'
+      goStyle['MinuteSelected'].borderRightColor = 'white'
+      goStyle['MinuteSelected'].borderBottomColor = 'white'
+
+      break
+    default :
+      throw 450
+  }
+
+}
+
+</script>
+<public:property put=fnPutMinute                  get=fnGetMinute                name="minute">
+<public:property put=fnPutHour                get=fnGetHour              name="hour">
+<public:property put=fnPutHourLength          get=fnGetHourLength        name="hourLength">
+<public:property put=fnPutShowTimeSelectors    get=fnGetShowTimeSelectors  name="showTimeSelectors">
+
+<public:property put=fnPutGridCellEffect       get=fnGetGridCellEffect     name="gridCellEffect">
+<public:property put=fnPutGridLinesColor       get=fnGetGridLinesColor     name="gridLinesColor">
+<public:property put=fnPutShowVerticalGrid     get=fnGetShowVerticalGrid   name="showVerticalGrid">
+<public:property put=fnPutShowHorizontalGrid   get=fnGetShowHorizontalGrid name="showHorizontalGrid">
+<public:property put=fnPutValue                get=fnGetValue              name="value">
+<public:property put=fnPutValueIsNull          get=fnGetValueIsNull        name="valueIsNull">
+<public:property put=fnPutReadOnly             get=fnGetReadOnly           name="readOnly">
+
+<public:event id="onChange"         name="onchange">
+<public:event id="onPropertyChange" name="onpropertychange">
+<public:event id="onError"          name="onerror">
+

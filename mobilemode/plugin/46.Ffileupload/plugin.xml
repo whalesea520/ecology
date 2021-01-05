@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEC>
+	<id>FFile</id>	<!-- id 插件唯一标识 -->
+	<text>128158</text>  <!-- 附件 -->
+	<type>2</type>	<!-- 类型，方便对插件进行区分，目前已有：1.普通功能插件，2.表单插件 -->
+	<isEnabled>1</isEnabled>	<!-- 是否启用，1或者不填写为启用，0或者其他非1值为禁用 -->
+	<order>45</order>	<!-- 插件显示顺序，值越小则显示越靠前，不填写或者无此标签将为整数的最大值 -->
+	
+	<!-- 插件设计信息配置 -->
+	<design>
+		<unique>0</unique> <!-- 是否唯一，如果值为1则在自定义页面设计时一个页面最多只能添加一个这种控件，不为1或者不填写此属性则没有此限制 -->
+		<resources>	<!-- 依赖资源 -->
+			<resource type="js">/mobilemode/js/mec/handler/form/FFile_wev8.js</resource>
+			<resource type="css">/mobilemode/css/mec/handler/form/FFile_wev8.css</resource>
+		</resources>
+	</design>
+	
+	<!-- 插件运行信息配置 -->
+	<run java="com.weaver.formmodel.mobile.mec.handler.form.FFile">
+		<resources>	<!-- 依赖资源 -->
+			<resource type="js">/mobilemode/js/mec/run/form/FFile_wev8.js?v=2017073101</resource>
+		</resources>
+	</run>
+	
+	<!-- 内容模板 -->
+	<contentTemplate>
+		<edit>
+			<![CDATA[
+				<div class="Design_FFile_Container ${Design_Field_Required}" id="div${theId}">
+					<div class="Design_FFile_Fieldlabel Formfield-Label" style="display:${displayLable}">${fieldlabel}</div>
+					<div class="Design_FFile_EntryWrap" style="display:none;" id="FileEntryDefaultShowHtmlWrap${theId}">
+						${defaultValueShowHtml}
+					</div>
+					<div class="Design_FFile_EntryWrap" id="FileEntryWrap${theId}">
+						$mec_file_forstart$
+						<div class="Design_FFile_EntryBorder">
+							<div class="Design_FFile_Entry" onclick="downloadattach('${fileid}', '${filename}');">
+								<table style="width: 100%; table-layout: fixed;">
+									<tbody>
+										<tr>
+											<td class="icon"><img src="${entryIcon}"></td>
+											<td class="name">${entryName}</td>
+											<td class="size">${entrySize}</td>
+											<td class="flag"><span></span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="Design_FFile_DeleteBtn" onclick="delFFile(this, '${theId}', '${docid}');"></div>
+						</div>
+						$mec_file_forend$
+						<div class="Design_FFile_EntryBorder" id="fileBorder${theId}" style="${style}">
+							<div class="Design_FFile_EntryBtn" id="entryBtn${theId}" style="width:55px;height:55px;">
+								<input id="file${theId}" type="file" name="file" fileNum="0" class="upLoadFile" single="single"  data-role="none"/>
+							</div>
+						</div>
+					</div>
+					<input type="text" style="display:none;" name="fieldname_${fieldname}" id="fileField${theId}" mecid=${theId} value="${value}" fieldlabel="${fieldlabel}" require="${required}"/>
+					<input type="hidden" name="type_${fieldname}" value="file" />
+					<input type="hidden" name="fieldmecid_${fieldname}" value="${theId}" />
+				</div>
+			]]>
+		</edit>
+		<view>
+			<![CDATA[
+				<div class="Design_FFile_Container ${Design_Field_Required}" id="div${theId}">
+					<div class="Design_FFile_Fieldlabel Formfield-Label" style="display:${displayLable}">${fieldlabel}</div>
+					<div class="Design_FFile_EntryWrap" style="display:none;" id="FileEntryDefaultShowHtmlWrap${theId}">
+						${defaultValueShowHtml}
+					</div>
+					<div class="Design_FFile_EntryWrap" id="FileEntryWrap${theId}">
+						$mec_file_forstart$
+						<div class="Design_FFile_EntryBorder Design_FFile_EntryBorder_View">
+							<div class="Design_FFile_Entry" onclick="downloadattach('${fileid}', '${filename}');">
+								<table style="width: 100%; table-layout: fixed;">
+									<tbody>
+										<tr>
+											<td class="icon"><img src="${entryIcon}"></td>
+											<td class="name">${entryName}</td>
+											<td class="size">${entrySize}</td>
+											<td class="flag"><span></span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						$mec_file_forend$
+					</div>
+					<input type="text" style="display:none;" name="fieldname_${fieldname}" id="fileField${theId}" mecid=${theId} value="${value}" fieldlabel="${fieldlabel}" require="${required}"/>
+					<input type="hidden" name="type_${fieldname}" value="file" />
+				</div>
+			]]>
+		</view>
+		<hidden>
+			<![CDATA[
+				<div class="Design_FFile_EntryWrap" id="FileEntryWrap${theId}_${indexid}">
+					$mec_file_forstart$
+					<div class="Design_FFile_EntryBorder ${viewClass}">
+						<div class="Design_FFile_Entry" onclick="downloadattach('${fileid}', '${filename}');">
+							<table style="width: 100%; table-layout: fixed;">
+								<tbody>
+									<tr>
+										<td class="icon"><img src="${entryIcon}"></td>
+										<td class="name">${entryName}</td>
+										<td class="size">${entrySize}</td>
+										<td class="flag"><span></span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						${deleteBtn}
+					</div>
+					$mec_file_forend$
+				</div>
+				<input type="hidden" name="${detailtable}_${fieldname}_rowindex_${indexid}" id="${theId}_${indexid}" value="${value}" data-role="none" fieldlabel="${fieldlabel}"></input>
+				<input type="hidden" name="type_${detailtable}_${fieldname}_${indexid}" value="file" />
+				<input type="hidden" name="fieldmecid_${detailtable}_${fieldname}_${indexid}" value="${theId}_${indexid}" />
+			]]>
+		</hidden>
+	</contentTemplate>
+</MEC>

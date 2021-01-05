@@ -1,0 +1,67 @@
+.edui-default .edui-editor{
+  border-radius: 0px;
+}
+.e8_weavertab .x-tab-panel-footer{
+width:100% !important;
+}
+.edui-default .edui-editor-bottomContainer {
+display: none;
+}
+
+.edui-for-wfatbutton > div > div > div > .edui-metro {
+	background-image: url('/ueditor/custbtn/images/app-at_wev8.png') !important;background-repeat: no-repeat;
+}
+
+
+.wfres_1 {
+	background: url('/ueditor/custbtn/images/wf_annex_wev8.png') 0 0 no-repeat!important;
+}
+
+.wfres_2 {
+	background: url('/ueditor/custbtn/images/wf_doc_wev8.png') 0 0 no-repeat!important;
+}
+
+.wfres_3 {
+	background: url('/ueditor/custbtn/images/wf_wf_wev8.png') 0 0 no-repeat!important;
+}
+
+.wfres_1_slt {
+	background: url('/ueditor/custbtn/images/wf_annex_slt_wev8.png') 0 0 no-repeat!important;
+}
+
+.wfres_2_slt {
+	background: url('/ueditor/custbtn/images/wf_doc_slt_wev8.png') 0 0 no-repeat!important;
+}
+
+.wfres_3_slt {
+	background: url('/ueditor/custbtn/images/wf_wf_slt_wev8.png') 0 0 no-repeat!important;
+}
+
+
+
+.edui-for-wfpphraseaddbutton > div > div > div > .edui-metro {
+	background: url('/ueditor/custbtn/images/phares_add_wev8.png') 2px 2px no-repeat!important;
+}
+
+.edui-for-wfphrasebutton > div > div > div > .edui-icon {
+	background: url('/ueditor/custbtn/images/phraselist_wev8.png') 2px 2px no-repeat!important;
+	cursor:pointer;
+}
+
+.edui-for-docupload  > div > div > div > .edui-metro {
+	background-image: url('/ueditor/themes/metro/images/icons_wev8.png') !important;background-repeat: no-repeat;
+	background-position: -660px -40px!important;
+}
+
+
+.bigbg {
+	width:40px!important;	
+}
+
+.edui-for-wfannexbutton, .edui-for-wfdocbutton {
+	margin-right:5px!important;	
+} 
+
+.view div{
+  line-height: 0px;
+}

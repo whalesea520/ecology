@@ -1,0 +1,30 @@
+delete from HtmlLabelIndex where id=21140 
+/
+delete from HtmlLabelInfo where indexid=21140 
+/
+INSERT INTO HtmlLabelIndex values(21140,'ÄÚ´Ö±ß¿ò±³¾°Í¼') 
+/
+delete from HtmlLabelIndex where id=21139 
+/
+delete from HtmlLabelInfo where indexid=21139 
+/
+INSERT INTO HtmlLabelIndex values(21139,'Íâ±ß¿ò±³¾°Í¼') 
+/
+delete from HtmlLabelIndex where id=21141 
+/
+delete from HtmlLabelInfo where indexid=21141 
+/
+INSERT INTO HtmlLabelIndex values(21141,'µ×²¿×Ô¶¨ÒåÀ¸±³¾°Í¼') 
+/
+INSERT INTO HtmlLabelInfo VALUES(21139,'Íâ±ß¿ò±³¾°Í¼',7) 
+/
+INSERT INTO HtmlLabelInfo VALUES(21139,'outer border background',8) 
+/
+INSERT INTO HtmlLabelInfo VALUES(21140,'ÄÚ´Ö±ß¿ò±³¾°Í¼',7) 
+/
+INSERT INTO HtmlLabelInfo VALUES(21140,'Inner Bold Border Background',8) 
+/
+INSERT INTO HtmlLabelInfo VALUES(21141,'µ×²¿×Ô¶¨ÒåÀ¸±³¾°Í¼',7) 
+/
+INSERT INTO HtmlLabelInfo VALUES(21141,'Bottom Customer Bar Background',8) 
+/

@@ -1,0 +1,230 @@
+#popup strong {
+    font-weight: bold;
+    color: #7ccd60
+}
+#imgpopup strong {
+    font-weight: bold;
+    color: #7ccd60
+}
+
+#popup  .button {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none
+}
+#imgpopup .button {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none
+}
+
+#popup  .button.small {
+    float: right;
+    margin: 22px 5px 0;
+    padding: 6px 15px
+}
+#imgpopup  .button.small {
+    float: right;
+    margin: 22px 5px 0;
+    padding: 6px 15px
+}
+
+#popup  .button>span {
+    font-size: 84%
+}
+#imgpopup .button>span {
+    font-size: 84%
+}
+
+#popup  .button.b-close, .button.bClose {
+    border-radius: 7px 7px 7px 7px;
+    box-shadow: none;
+    font: bold 45% sans-serif;
+    padding: 0 6px 2px;
+    position: absolute;
+    right: 9px;
+    top: 4px;
+}
+#imgpopup .button.b-close, .button.bClose {
+    border-radius: 7px 7px 7px 7px;
+    box-shadow: none;
+    font: bold 131% sans-serif;
+    padding: 0 6px 2px;
+    position: absolute;
+    right: 9px;
+    top: 4px
+}
+
+#popup .example {
+    display: block;
+    line-height: 1.25;
+    padding: 30px 110px 15px 0
+}
+#imgpopup .example {
+    display: block;
+    line-height: 1.25;
+    padding: 30px 110px 15px 0
+}
+
+#popup,#imgpopup .code-undefined {
+    color: #617a61
+}
+
+#popup,#imgpopup .code-string {
+    color: #fa8072
+}
+
+#popup,#imgpopup .code-function {
+    color: #ffa54f
+}
+
+#popup,#imgpopup .code-int {
+    color: #2b91af
+}
+
+#popup,#imgpopup .code-comment {
+    color: #7ccd60
+}
+
+::-moz-selection {
+    background-color: #2b91af;
+    color: #fff;
+    text-shadow: none
+}
+
+::selection {
+    background-color: #2b91af;
+    color: #fff;
+    text-shadow: none
+}
+
+#page  h1+.button {
+    position: absolute;
+    top: 20px;
+    right: 25px
+}
+
+#imgpopup h1+.button {
+    position: absolute;
+    top: 20px;
+    right: 25px
+}
+
+#share {
+    position: absolute;
+    right: 18px;
+    top: 85px;
+    width: 205px
+}
+
+#share>div {
+    display: inline-block
+}
+
+#page li {
+    position: relative
+}
+
+#page ul+a {
+    display: block;
+    font-size: 180%;
+    margin: 25px 0;
+    text-align: center;
+    text-decoration: none
+}
+
+.header {
+    margin: 30px 0 0;
+    background-color: #000;
+    padding: 12px 20px 10px;
+    border-radius: 20px 0 0 0;
+    width: 100%;
+    left: -40px;
+    position: relative
+}
+
+.note {
+    color: #c0c0c0;
+    font-size: 80%
+}
+
+#popup,#imgpopup, #popup2, .bMulti {
+    background-color: #fff;
+    color: #111;
+    display: none;
+    min-width: 450px;
+}
+
+#popup,#imgpopup .logo {
+    color: #2b91af;
+    font: bold 325% 'Petrona', sans
+}
+
+#popup,#imgpopup, .bMulti {
+    min-height: 250px
+}
+
+#popup2 iframe {
+    background: url('loader_wev8.gif') center center no-repeat;
+    min-height: 240px;
+    min-width: 450px
+}
+
+.loading {
+    background: url('loader_wev8.gif') center center no-repeat
+}
+
+.bMulti p {
+    font: 500% 'Petrona', sans-serif;
+    padding: 45px 0 0;
+    text-align: center
+}
+
+.bMulti a {
+    left: 175px;
+    position: absolute;
+    top: 175px
+}
+
+.lt-ie9 .bModal {
+    background-color: #000
+}
+
+#popup table{
+    width: 100%;
+    border-collapse: collapse;
+}
+#popup td{
+    border: 1px solid #cccccc;
+    padding: 3px 5px;
+}
+
+#popup p.head {
+    font-size: 14px;
+    background: #4e82bc;
+    color: #FFF;
+    margin: 0;
+}
+#imgpopup p.head {
+    font-size: 14px;
+    background: #4e82bc;
+    color: #FFF;
+    margin: 0;
+	cursor: move;
+}
+#popup  p {
+    padding: 5px 10px;
+    margin: 0;
+    font-size: 12px;
+}
+#imgpopup p {
+    padding: 5px 10px;
+    margin: 0;
+    font-size: 12px;
+}

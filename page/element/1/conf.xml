@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<id>1</id>  <!--只能是唯一的英文字母-->
+	<title>RSS阅读器</title>
+	<titleEN>RSS Reader</titleEN>
+	<desc>可以直接填定RSS地址以及RSS主题</desc>
+	<icon>resource/image/1_wev8.gif</icon>
+	<linkMode>2</linkMode>
+	<loginView>1</loginView>
+	<type>2</type>
+	<perpage>5</perpage>
+	<private>
+		<jsList> 
+		</jsList>
+	</private>
+	<public>
+		<jsIdList>  
+		</jsIdList>
+		<cssIdList>
+		</cssIdList>
+	</public>
+	<view>
+		<url>/page/element/1/Rss.jsp</url>
+		<method/>
+	</view>
+	<setting>
+		<url>/page/element/compatible/setting.jsp</url>
+		<method>getRssSettingStr</method>
+	</setting>
+	<more>
+		<url>/page/element/compatible/more.jsp</url>
+		<method>getRssMore</method>
+	</more>
+	<operation>/page/element/compatible/operation.jsp</operation>
+</root>

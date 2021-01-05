@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEC>
+	<id>Button</id>	<!-- id 插件唯一标识 -->
+	<text>128142</text>  <!-- 按钮 -->
+	<type>1</type>	<!-- 类型，方便对插件进行区分，目前已有：1.普通功能插件，2.表单插件 -->
+	<isEnabled>1</isEnabled>	<!-- 是否启用，1或者不填写为启用，0或者其他非1值为禁用 -->
+	<order>48</order>	<!-- 插件显示顺序，值越小则显示越靠前，不填写或者无此标签将为整数的最大值 -->
+	
+	<!-- 插件设计信息配置 -->
+	<design>
+		<unique>0</unique> <!-- 是否唯一，如果值为1则在自定义页面设计时一个页面最多只能添加一个这种控件，不为1或者不填写此属性则没有此限制 -->
+		<resources>	<!-- 依赖资源 -->
+			<resource type="js">/mobilemode/js/mec/handler/Button_wev8.js</resource>
+			<resource type="css">/mobilemode/css/mec/handler/Button_wev8.css?v=2016081701</resource>
+			<resource type="css">/mobilemode/css/mec/run/Button_wev8.css?v=2016081701</resource>
+		</resources>
+	</design>
+	
+	<!-- 插件运行信息配置 -->
+	<run java="com.weaver.formmodel.mobile.mec.handler.Button">
+		<resources>
+			<resource type="css">/mobilemode/css/mec/run/Button_wev8.css?v=2015101503</resource>
+			<resource type="js">/mobilemode/js/mec/run/Button_wev8.js?v=2015101901</resource>
+		</resources>
+	</run>
+	
+	<!-- 内容模板 -->
+	<contentTemplate>
+		<![CDATA[
+			<div class="buttonContainer" id="NMEC_${theId}">
+				$mec_forstart$
+					$mec_fixed_forstart$
+						<div class="mecButton fixedButton ${class}" id="${id}" title="${title}" style="${style}" script="${script}">
+							${buttonName}
+							<span class="Button_NumRemind" style="display:${display};">${remindNum}</span>
+						</div>
+					$mec_fixed_forend$
+					$mec_relative_forstart$
+						<div class="relativeButtonFrame">
+							<span class="mecButton relativeButton ${class}" id="${id}" title="${title}" style="${style}" script="${script}">${buttonName}</span>
+							<span class="Button_NumRemind" style="display:${display};">${remindNum}</span>
+						</div>
+					$mec_relative_forend$
+				$mec_forend$
+			</div>
+		]]>
+	</contentTemplate>
+</MEC>

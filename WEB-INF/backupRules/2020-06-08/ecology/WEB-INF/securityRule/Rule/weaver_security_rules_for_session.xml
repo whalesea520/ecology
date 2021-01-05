@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<no-timeout-urls>
+		<url>/js/hrm/getdata.jsp</url>
+		<url>/wui/theme/ecology8/page/getremindinfo.jsp</url>
+		<url>/email/MailTimingDateReceiveOperation.jsp</url>
+		<url>/dwr/exec/msgutil.getpopupmsg</url>
+		<url>/api/ec/dev/message/getmessage</url>
+		<url>/api/hrm/common/heartbeat</url>
+		<url>/api/msgcenter/homepage/getPopList</url>
+		<url>/api/msgcenter/homepage/getMsgCount</url>
+		<url>/dwr/call/plaincall/MsgUtil.getPopupMsg.dwr</url>
+		<url>/api/email/base/EmailTimingDateReceiveOperation</url>
+	</no-timeout-urls>	
+</root>

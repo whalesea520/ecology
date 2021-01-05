@@ -1,0 +1,1 @@
+alter table sensitive_logs add subjectName varchar2(4000)

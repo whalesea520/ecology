@@ -1,0 +1,475 @@
+/*Ext JS CSS Override*/
+.x-grid3-cell-inner{
+	white-space:normal;
+	FONT-SIZE: 9pt;
+	FONT-FAMILY: Verdana;
+	/**链接折行时回出现鼠标无法点击的情况，需调整LINE-HEIGHT*/
+	/*LINE-HEIGHT: 13pt;*/
+	LINE-HEIGHT: 12pt;
+}
+/*.x-grid3-cell-text-visible .x-grid3-cell-inner{overflow:visible;padding:3px 3px 3px 5px;white-space:normal;}*/
+
+.x-grid3-body .x-grid3-td-numberer {
+	background-image : none;
+}
+.x-grid3-body .x-grid3-td-checker {
+	background-image : none
+}
+.x-grid3-body .x-grid3-row-selected .x-grid3-td-numberer, .x-grid3-body .x-grid3-row-selected .x-grid3-td-checker, .x-grid3-body .x-grid3-row-selected .x-grid3-td-expander {
+	background-image : none
+}
+.x-grid3-cell A {
+	COLOR: blue; TEXT-DECORATION: underline
+}
+.x-grid3-cell A:hover {
+	COLOR: red; TEXT-DECORATION: underline
+}
+
+.x-grid3-cell A:link {
+	COLOR: blue; TEXT-DECORATION: underline
+}
+.x-grid3-cell A:visited {
+	TEXT-DECORATION: underline
+}
+
+
+.x-tree-root-node A {
+	COLOR: blue; TEXT-DECORATION: underline
+}
+.x-tree-root-node A:hover {
+	COLOR: red; TEXT-DECORATION: underline
+}
+
+.x-tree-root-node A:link {
+	COLOR: blue; TEXT-DECORATION: underline
+}
+.x-tree-root-node A:visited {
+	TEXT-DECORATION: underline
+}
+
+/*Ext JS CSS Override*/
+.btn_details{
+	background-image:url('/images/details2_wev8.gif') !important;
+}
+
+
+/* e-cology8 tab样式覆盖*/
+.btn_add {
+      background-image:url('') !important;
+ }
+
+ul.x-tab-strip li {
+float: left;
+margin-left: 0px; 
+}
+.x-tab-strip-bottom .x-tab-strip-active .x-tab-right {
+background-image: url("") !important;
+}
+
+
+.x-tab-strip-bottom .x-tab-left {
+padding: 0;
+}
+
+.e8_weavertab  em {
+display: block;
+width: 100px;
+}
+
+.x-tab-strip-wrap {
+width: 100%;
+overflow: hidden;
+position: relative;
+zoom: 1;
+background: rgb(248, 248, 248);
+color: #626262;
+}
+
+.x-tab-strip-bottom .x-tab-left {
+background-image: url("") !important;
+}
+
+.x-tab-panel-footer {
+border: 1px solid;
+padding-top: 0px; 
+}
+
+.x-tab-strip-bottom .x-tab-right {
+   background-image: url("") !important;
+}
+
+.x-tab-strip-active
+{
+background:#f8f8f8;
+}
+
+ul.x-tab-strip-bottom {
+background-color: #cccccc  !important; 
+background-image: url("")  !important;
+padding-bottom: 0px  !important; 
+border-color: #d0d0d0;
+border: none  !important;
+}
+
+.x-tab-strip-bottom .x-tab-strip-active .x-tab-left {
+background: no-repeat bottom right !important;
+
+}
+.x-tab-strip-bottom .x-tab-right {
+background-image: url("") !important;
+height: 30px;
+padding-top: 3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.btn_option {
+      background-image:url(/js/extjs/examples/shared/icons/fam/plugin_wev8.gif) !important;
+ }
+.btn_remove {
+      background-image:url(/js/extjs/examples/shared/icons/fam/delete_wev8.gif) !important;
+}
+.btn_BacthDownload {
+      background-image:url(/js/extjs/examples/shared/icons/fam/bp_btn_recent_wev8.gif) !important;
+}
+.btn_list{
+	 background-image:url('/images/docs/list_wev8.gif') !important;
+}
+.btn_ShowOrHidden {
+      background-image:url('/images/docs/showorhidden_wev8.gif') !important;
+ }
+.btn_word {
+      background-image:url('/images/docs/word_wev8.gif') !important;
+}
+.btn_excel {	
+	background-image:url('/images/docs/excel_wev8.gif') !important;
+}
+.btn_wps {
+      background-image:url('/images/docs/wps_wev8.gif') !important;
+}
+.btn_et {
+      background-image:url('/images/docs/et_wev8.gif') !important;
+}
+.btn_html {
+      background-image:url('/images/docs/html_wev8.gif') !important;
+}
+
+/*doc*/
+.btn_save{
+	background-image:url(/images/docs/save_wev8.gif) !important;
+}
+
+.btn_edit{
+	background-image:url(/images/docs/edit_wev8.gif) !important;
+}
+.btn_print{
+	background-image:url('/images/docs/print_wev8.gif') !important;
+}
+
+.btn_version{
+	background-image:url('/images/docs/version_wev8.png') !important;
+}
+
+.btn_share{
+	background-image:url('/images/docs/share_wev8.gif') !important;
+}
+.btn_log{
+	background-image:url('/images/docs/log_wev8.gif') !important;
+}
+.btn_back{
+	background-image:url('/images/docs/back_wev8.gif') !important;
+}
+.btn_reject{
+	background-image:url('/images/docs/reject_wev8.gif') !important;
+}
+.btn_refresh{
+	background-image:url('/images/docs/refresh_wev8.gif') !important;
+}
+.btn_checkout{
+	background-image:url('/images/docs/checkout_wev8.gif') !important;
+}
+
+
+.btn_relateCwork{
+	background-image:url('/images/docs/relateCwork_wev8.gif') !important;
+}
+
+.btn_newCwork{
+	background-image:url('/images/docs/newCwork_wev8.gif') !important;
+}
+.btn_newWork{
+	background-image:url('/images/docs/newWork_wev8.gif') !important;
+}
+.btn_newPlan{
+	background-image:url('/images/docs/newPlan_wev8.gif') !important;
+}
+.btn_relateWork{
+	background-image:url('/images/docs/relateWork_wev8.gif') !important;
+}
+
+.btn_save{
+	background-image:url('/images/docs/save_wev8.gif') !important;
+}
+.btn_draft{
+	background-image:url('/images/docs/draft_wev8.gif') !important;
+}
+.btn_preview{
+	background-image:url('/images/docs/preview_wev8.gif') !important;
+}
+.btn_tab{
+	background-image:url('/images/tab_wev8.gif') !important;
+} 
+.btn_collapseAll{
+	background-image:url('/images/collapse-all_wev8.gif') !important;
+}
+.btn_expandAll{
+	background-image:url('/images/expand-all_wev8.gif') !important;
+}
+.btn_up{
+	background-image:url('/images/docs/up_wev8.gif') !important;
+}
+.btn_down{
+	background-image:url('/images/docs/down_wev8.gif') !important;
+}
+.btn_left{
+	background-image:url('/images/docs/left_wev8.gif') !important;
+}
+.btn_right{
+	background-image:url('/images/docs/down_wev8.gif') !important;
+}
+
+.btn_import{
+	background-image:url('/images/docs/import_wev8.gif') !important;
+}
+.btn_rss{
+	background-image:url('/images/docs/rss_wev8.gif') !important;
+}
+.btn_Favorite{
+	background-image:url('/images/btnFavorite_wev8.gif') !important;
+}
+.btn_help{
+	background-image:url('/images/help2_wev8.gif') !important;
+}
+.btn_signature{
+	background-image:url('/images/docs/signature_wev8.gif') !important;
+}
+.btn_signature1{
+	background-image:url('/images/docs/signature1_wev8.gif') !important;
+}
+.btn_acc{
+	background-image:url('/images/docs/acc_wev8.gif') !important;
+}
+.btn_thtemplate{
+	background-image:url('/images/docs/thtemplate_wev8.gif') !important;
+}
+.btn_thtemplate1{
+	background-image:url('/images/docs/thtemplate1_wev8.gif') !important;
+}
+.btn_displayh{
+	background-image:url('/images/docs/displayh_wev8.gif') !important;
+}
+
+/*wf*/
+.btn_wfSave{
+	background-image:url('/images/docs/save_wev8.gif') !important;
+}
+.btn_submit{
+/*	background-image:url('/images/docs/draft_wev8.gif') !important;*/
+}
+.btn_forward{
+	background-image:url('/images/wf/forward_wev8.gif') !important;
+}
+.btn_newSMSName{
+	background-image:url('/images/wf/newSMSName_wev8.gif') !important;
+}
+.btn_newWFName{
+	background-image:url('/images/wf/newWFName_wev8.gif') !important;
+}
+.btn_subnobackName{
+	background-image:url('/images/docs/draft_wev8.gif') !important;
+}
+.btn_subbackName{
+	background-image:url('/images/docs/draft_wev8.gif') !important;
+}
+.btn_doIntervenor{
+    background-image:url('/images/docs/draft_wev8.gif') !important;
+}
+.btn_Supervise{
+	background-image:url('/images/wf/Supervise_wev8.gif') !important;
+}
+.btn_ccsubnobackName{
+	background-image:url('/images/docs/draft_wev8.gif') !important;
+}
+.btn_doDrawBack{
+	background-image:url('/images/wf/doDrawBack_wev8.gif') !important;
+}
+.btn_doRetract{
+	background-image:url('/images/wf/doRetract_wev8.gif') !important;
+}
+.btn_doReopen{
+	background-image:url('/images/wf/doReopen_wev8.gif') !important;
+}
+.btn_doViewModifyLog{
+	background-image:url('/images/docs/log_wev8.gif') !important;
+}
+.btn_rejectName{
+	background-image:url('/images/docs/reject_wev8.gif') !important;
+}
+.btn_doDelete{
+	background-image:url('/js/extjs/examples/shared/icons/fam/delete_wev8.gif') !important;
+}
+.btn_detele{
+	background-image:url('/js/extjs/examples/shared/icons/fam/delete_wev8.gif') !important;
+}
+.btn_back{
+	background-image:url('/images/docs/back_wev8.gif') !important;
+}
+.btn_collect{
+	background-image:url('/wui/theme/ecology7/skins/red/general/fav_wev8.png') !important;
+}
+.btn_help{
+	background-image:url('/wui/theme/ecology7/skins/red/general/help_wev8.png') !important;
+}
+.btn_edit{
+	background-image:url('/images/docs/edit_wev8.gif') !important;
+}
+.btn_search{
+	background-image:url('/images/docs/search_wev8.gif') !important;
+}
+.btn_searchForTitle{
+	background-image:url('/images/search_wev8.gif') !important;
+}
+.btn_hiden{
+	background-image:url('/images/docs/hiden_wev8.gif') !important;
+}
+.btn_floder_main{
+	background-image:url('/images/floder_main_wev8.gif') !important;
+}
+.btn_floder_sub{
+	background-image:url('/images/floder_sub_wev8.gif') !important;
+}
+.btn_floder_sec{
+	background-image:url('/images/floder_sec_wev8.gif') !important;
+}
+.btn_doOpen{
+	background-image:url('/images/wf/doOpen_wev8.gif') !important;
+}
+
+.btn_displayAndHide{
+	background-image:url('/images/wf/displayhide_wev8.gif') !important;
+}
+
+.btn_dot{
+	background-image:url('/images/dian_wev8.gif') !important;
+}
+.btn_searchAdvice{
+	background-image:url('/images/wf/advice_wev8.gif') !important;
+}
+
+/*search bottun*/
+.btn_first{
+	background-image:url('/images/wf/first_wev8.gif') !important;
+}
+.btn_next{
+	background-image:url('/images/wf/next_wev8.gif') !important;
+}
+.btn_end{
+	background-image:url('/images/wf/end_wev8.gif') !important;
+}
+.btn_previous{
+	background-image:url('/images/wf/previous_wev8.gif') !important;
+}
+.btn_custom{
+	background-image:url('/images/wf/custom_wev8.gif') !important;
+}
+.btn_viewUrl{
+	background-image:url('/images/wf/viewUrl_wev8.gif') !important;
+}
+.btn_miniatureDisplay{
+	background-image:url('/images/wf/miniatureDisplay_wev8.gif') !important;
+}
+.btn_listDisplay{
+	background-image:url('/images/wf/list_wev8.gif') !important;
+}
+.btn_approve{
+	background-image:url('/images/wf/approve_wev8.gif') !important;
+}
+.btn_subscribeHistory{
+	background-image:url('/images/wf/subscribeHistory_wev8.gif')!important;
+}
+.btn_backSubscrible{
+	background-image:url('/images/wf/backSubscrible_wev8.gif')!important;
+}
+.btn_nextStep{
+	background-image:url('/images/wf/go_wev8.gif')!important;
+}
+.btn_signReaded{
+	background-image:url('/images/wf/signReaded_wev8.gif')!important;
+}
+.btn_treeMode{
+	background-image:url('/images/wf/treeMode_wev8.gif')!important;
+}
+.btn_sutra{
+	background-image:url('/images/wf/sutra_wev8.gif')!important;
+}
+.btn_organization{
+	background-image:url('/images/wf/organization_wev8.gif')!important;
+}
+/*reply doc*/
+.icon_replyDoc {
+    background-image:url('/images/replyDoc/news_general_wev8.gif') !important;
+}
+.icon_replyDoc_this {
+    background-image:url('/images/replyDoc/news_this.gif') !important;
+}
+
+.head_toolbar{
+	/*border:1px solid #C3C3C3;*/
+	height:28px; 
+	
+	border:#8CC7CF 1px solid;
+	/*border-bottom:none;*/
+	margin:2 8 0 5;
+}
+.head_toolbar_noViewport{
+	border:1px solid #C3C3C3;
+	margin:2 0 0 0;
+}
+.x-panel-body{
+	
+	/*border:1px solid #8CC7CF;*/
+	border:none;
+}
+.x-toolbar{
+		/*
+		border-color:#8cc7cf!important;
+		*/
+}
+/*.content_ext{
+	border:1px solid #C3C3C3;
+	margin:0 8 0 5;
+}*/
+
+.x-border-layout-ct {
+ 	background:#ffffff;
+}
+
+
+.wfTreeLeafNode{
+	height:19px;
+}
+.wfTreeFolderNode{	
+	border-top:1px solid  #E5E5E5;
+	height:22px;
+}
+
+

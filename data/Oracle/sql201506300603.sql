@@ -1,0 +1,2 @@
+drop TRIGGER Tri_MailResourceFile_BackUp
+/

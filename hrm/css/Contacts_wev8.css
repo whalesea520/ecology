@@ -1,0 +1,15 @@
+/*---------通讯录样式表------------*/
+.Contacts{width:100%;}
+
+.Contacts{ left:7px; top:0px; padding-top: 4px;}
+
+.ContactsBg{float:left;background:url(../images/bg10_wev8.gif) repeat-y center #fafbfb; width:100%; border:1px solid #ccc; padding-top:50px; padding-bottom:25px;}
+
+.ContactsLeft{position:relative;width:40%; float:left; padding-left:30px;padding-bottom: 20px}
+
+.ContactsAvatar{padding:6px; background:url(../images/contacts_03_wev8.gif) no-repeat center #fff; border:1px solid #5f96b7;width:160px;}
+
+.ContactsRight{position:relative;width:40%; float:right; margin-right:30px; display:inline;padding-bottom: 20px}
+
+.ContactsList li{line-height:25px; height:25px; padding-left:15px;}
+

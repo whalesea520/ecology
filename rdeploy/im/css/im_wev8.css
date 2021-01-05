@@ -1,0 +1,1153 @@
+.chatContent .chatcontentimg{
+	cursor: pointer;
+}
+ /*顶部导航*/
+
+ .imToptab{
+ 	height:65px;
+ 	height: 65px;
+  	width: 100%;
+  	background: #5cb5d8;
+  	float: left;
+ }
+ .imToptab .tabitem{
+ 	float: left;
+ 	padding:10px 10px 0px 9px;
+ 	cursor:pointer;
+ 	width:80px;
+ }
+ .imToptab .tabitem .tabicon{
+ 	height:24px;
+ 	background-repeat:no-repeat;
+ 	background-position:center center;
+ }
+ .imToptab .tabitem .tabname{
+ 	text-align: center;
+ 	margin-top:5px;
+ 	margin-bottom:3px;
+ 	color:#fff;
+ 	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+ }
+ .imToptab .activeitem{}
+ 
+ .imToptab .tabitem .tabresent{background-image: url('/social/images/im_resent_wev8.png');}
+ .imToptab .tabitem .tabgroup{background-image: url('/social/images/im_group_wev8.png');}
+ .imToptab .tabitem .tabcontact{background-image: url('/social/images/im_contact_wev8.png');}
+ 
+ .imToptab .activeitem .tabresent{background-image: url('/social/images/im_resent_h_wev8.png');}
+ .imToptab .activeitem .tabgroup{background-image: url('/social/images/im_group_h_wev8.png');}
+ .imToptab .activeitem .tabcontact{background-image: url('/social/images/im_contact_h_wev8.png');}
+ 
+ .imToptab .activeitem .tabname{
+ 	filter:alpha(opacity=100);
+	-moz-opacity:1;
+	-khtml-opacity:1;
+	opacity: 1;
+ }
+ 
+ .imToptab .tabline{border-top:1px solid #e3e6f0;}
+ /*顶部导航*/
+ 
+ /*联系人导航*/
+ .conTabs{height:35px;line-height:35px;background:#7ec9e3;position:relative;}
+ .conTabs .conTabItem{
+	 float: left;
+	 width:75px;
+	 text-align:center;
+	 color:#fff;
+	 filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+	cursor:pointer;
+ }
+ 
+ .conTabs .conActItem{
+ 	filter:alpha(opacity=100);
+	-moz-opacity:1;
+	-khtml-opacity: 1;
+	opacity: 1;
+ }
+ /*联系人导航*/
+ 
+ .arrow-up{
+    width:0; 
+    height:0; 
+    border-left:5px solid transparent;
+    border-right:5px solid transparent;
+    border-bottom:8px solid #7ec9e3;
+    left: 140px;
+  	position: absolute;
+  	top: -8px;
+}
+.leftMenudiv .chatItem:hover {
+	background: #f1faff;
+}
+.leftMenudiv .chatItem{
+  border-bottom: 1px solid #eeeeee;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor:pointer;
+  padding-left:15px;
+  position: relative;
+}
+
+.leftMenudiv .activeChatItem{background-color: #F1FAFF;}
+
+.leftMenudiv .chatItem .itemleft{  
+	float: left;
+  	margin-right: 10px;
+}
+.leftMenudiv .chatItem .itemcenter{
+	float: left;
+  	margin-right: 10px;
+  	width: 110px;
+}
+.leftMenudiv .chatItem .itemright{
+	float: left;
+  	width: 110px;
+}
+
+.leftMenudiv .chatItem .itemconverright{
+	float: left;
+  	width:240px;
+}
+
+.leftMenudiv .chatItem .lastName,.leftMenudiv .chatItem .jobtitle{color:#384560 !important;width:110px;height:18px;line-height:18px;}
+.leftMenudiv .chatItem .deptName,.leftMenudiv .chatItem .subName,.leftMenudiv .chatItem .mobile{color:#b4c2d5 !important;width:110px;height:18px;line-height:18px;}
+
+.leftMenudiv .chatItem .latestTime{color:#8e9598;text-align:right;}
+.leftMenudiv .chatItem .msgcontent{color:#8e9598;width:200px;height: 16px;}
+.leftMenudiv .chatItem .targetName{color:#384560;width:180px;}
+
+.leftMenudiv .chatItem .groupName{
+	color:#384560;
+	height: 35px;
+  	line-height: 35px;
+}
+
+.leftMenudiv .chatItem .msgcount{
+	text-align: center;
+  	min-width: 20px;
+  	height: 20px;
+  	border-radius: 12px;
+  	background-color: red;
+  	color: #fff;
+  	line-height: 20px;
+  	display: none;
+  	position: absolute;
+  	top: 3px;
+  	left: 36px;
+  	border: 2px solid #FFF;
+}
+.leftMenudiv .chatItem .interestSwitch{
+  position: absolute;
+  right: 0px;
+  margin-top: 21px;
+  font-size: 20px;
+  cursor: pointer;
+  width: 26px;
+  height: 26px;
+  text-align: center;
+}
+.leftMenudiv .chatItem .interestSwitch:hover{
+	border: 1px solid #e4e4e4;	
+}
+.imMainbox {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  /* height: 600px; */
+  width: 100%;
+  z-index: 101;
+}
+
+.imMainbox .imLeftdiv{
+	background:#f4f9f8;width:120px;height:100%;position:absolute;left:0px;border-right:1px solid #e1e8f5;display:none;
+}
+
+.imMainbox .imCenterdiv{
+	  height: 100%;
+  position: absolute;
+  left: 312px;
+  /* width: 650px; */
+  top: 0px;
+  display: none;
+  right: 0px;
+}
+
+.imMainbox .chatIMdivBox{
+  overflow: none;
+  z-index: 11;
+  position: relative;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  top: 0px;
+  height: 100%;
+  /* height: 600px; */
+}
+
+.imMainbox .imRightdiv {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  top: 0px;
+  width: 311px;
+  border-right: 1px solid #e4e4e4;
+  height: 100%;
+}
+
+
+
+
+.chatIMTabs{}
+.chatIMTabs .chatIMTabItem{
+	padding-left: 5px;
+	padding-top: 5px;
+  	padding-bottom: 5px;
+  	position:relative;
+  	cursor:pointer;
+}
+
+.chatIMTabs .chatIMTabActiveItem{
+  	background-color:#a7d6e8;
+  	color:#394560;
+}
+
+.chatIMTabs .chatIMTabItem .headicon{margin-right: 5px;float:left;}
+.chatIMTabs .chatIMTabItem .targetName{height:28px;line-height:28px;width:75px;float:left;}
+
+.chatIMTabs .chatIMTabItem .tabClostBtn{  
+  width: 16px;
+  height: 16px;
+  border-radius: 10px;
+  background: #708c96;
+  position: absolute;
+  right: 5px;
+  top: 13px;
+  text-align: center;
+  line-height: 12px;
+  color:#fff;
+  display:none;
+}
+
+.chatIMTabs .chatIMTabItem .tabClostBtn:hover{
+  background: #a66666;	//fe4643
+  cursor:pointer;
+}
+
+.chatIMTabs .chatIMTabItem:hover .tabClostBtn{
+  display:block;	
+} 
+
+.imMainbox .imCoseBtn{
+	position:absolute;top:0px;right:10px;color:#fff;font-size:24px;
+	cursor:pointer;
+}
+
+.imMainbox .imCoseBtn:hover{color:#fe4643;}
+
+.imMainbox .addressTitle{
+	height:35px;line-height:35px;text-align:center;color:#fff;position:relative;font-size:15px;
+}
+
+.imMainbox .imsearchdiv{
+	border-bottom: 1px solid #e4e4e4;
+  	padding-bottom: 5px;
+}
+
+.imsearchdiv .filterOptions{
+	width: 68px;
+  	height: 31px;
+  	float: left;
+  	margin: 5px 0px 0px 5px;
+  	border: 1px solid #e9e9e9;
+  	color: #3c4350;
+  	overflow: hidden;
+  	background: transparent;
+   	-webkit-appearance: none; /*for chrome*/
+}
+
+.imsearchdiv .filterOptions #filterSelector{
+	width: 88px;
+  	height: 35px;
+  	margin-top: -2px;
+  	border: none;
+  	background: url("/rdeploy/im/img/selectarrow_wev8.png") no-repeat 50px center;
+  	line-height: 35px;
+  	padding-left: 3px;
+}
+.imsearchdiv .filterOptions  .seletOptions{
+	position: absolute;
+	left: 5px;
+  	border: 1px solid #e9e9e9;
+  	width: 68px;
+  	background: #FFF;
+  	z-index: 10;
+}
+
+.imsearchdiv .filterOptions  .seletOptions .optionItem {
+	height: 30px;
+	width: 62px;
+	line-height: 30px;
+	text-align: left;
+	cursor: pointer;
+	padding: 0 3px;
+}
+.imsearchdiv .filterOptions  .seletOptions .optionItem:hover {
+	background: #4BAADF;
+	color: #FFF;
+}
+.imsearchdiv .filterOptions #filterSelector:hover{
+	background: url("/rdeploy/im/img/selectarrow_hot_wev8.png") no-repeat 50px center;
+}
+
+.imMainbox .imSearchBtn{
+	height:35px;float: left;width:18px;background:url('/social/images/im_search_wev8.png') no-repeat center center;
+}
+.imMainbox .imInputdivWrap{
+	
+}
+.imMainbox .imInputdiv{
+	
+}
+
+input::-ms-clear{display:none;}
+
+.imMainbox .defaultdiv{
+   left:311px;right: 0px;height:100%;position:absolute;text-align:center;background: #fff;
+}
+
+.imMainbox .discussInfo{
+  position: absolute;
+  background-color: #fff;
+  z-index: 10;
+  left: 0px;
+  right: 0px;
+  height: 55px;
+  padding-left: 5px;
+  padding-top: 10px;
+  display:none;
+  border-bottom: 1px solid #E3E6F0;
+  z-index:11;
+}
+.imMainbox .discussInfo .mitem{
+  width: 60px;
+  text-align: center;
+  float: left;
+}
+
+.imMainbox .discussInfo .mname{
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  color:#394560;
+}
+
+/*聊天*/
+.chatdiv .chattop .imSetting{  
+  float: right;
+  background: url('/social/images/im_setting_wev8.png') no-repeat center center;
+  width: 20px;
+  height: 50px;
+  background-repeat: no-repeat;
+  margin-right: 5px;
+  cursor:pointer;
+}
+.chatdiv .chattop .imSetting:hover{
+	background: url('/rdeploy/im/img/im_setting_r_wev8.png') no-repeat center center;
+}  
+.hrmOrg span.department { background: url(/images/treeimages/subCopany_Colse_wev8.gif) 0 center no-repeat; }
+.IMbg{position: absolute; opacity: 0.4; width: 100%; height: 100%; background-color: rgb(51, 51, 51);z-index:100}
+
+.chatdiv .imtitle,
+.chatWin .imtitle{  
+  height: 24px;
+  line-height: 24px;
+  margin-left: 15px;
+  font-size: 14px;
+  cursor:default;
+  display: inline-block;
+}
+.chatdiv .imtitle .imCloseSpan,
+.chatWin .imtitle .imCloseSpan{  
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  line-height: 19px;
+  /*background: #bcbcbe;*/
+  color: #8d9598;
+  display: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.chatdiv .imtitle .imCloseSpan:hover,
+.chatWin .imtitle .imCloseSpan:hover{  
+  background: #8d9598;
+  color: #fff;
+}
+.chatdiv .chatIMtop{
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 20px;
+  height: 40px;
+  border:0px;
+  border-bottom: 1px solid #E3E6F0;
+  border-top: 0px;
+  z-index: 10000;
+}
+.chatdiv .chattop .chatActiveTab {color: #4baadf;}
+.chatdiv .chattop .chattab {
+  cursor: pointer;
+  margin-left: 20px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+  padding-left: 9px;
+}
+.chatdiv .chattop .imchat {
+	margin-left: 9px;
+}
+/*wyw*/
+/*搜索*/
+#searchResultListDiv {
+	position: relative;	
+}
+
+.chatdiv .chatbottom .faceBox{
+	bottom: 37px;
+  	width: 405px;
+ 	max-height: 340px;
+}
+
+.imSearchInputdiv {
+	background: rgb(244, 249, 248);
+	z-index: 999;
+	color:#242424;
+	border:0px;
+	width:309px;
+	height:36px;
+	line-height:36px;
+	position:absolute;
+	left:0px;
+}
+
+.imSearchClose {
+	position:absolute;
+	right:0px;
+	z-index: 999;
+	width:36px;
+	height:36px;
+	background: url('/social/images/search_close_wev8.png') no-repeat center;
+	-moz-background-size:18px 18px; /* 老版本的 Firefox */
+	background-size:18px 18px;
+	cursor: pointer;
+}
+
+.imSearchList{
+	position:absolute;
+	z-index: 999;
+	left:15px;
+	top:36px;
+	width:294px;
+	height:526px;
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+
+.scroll-pane{
+	outline:none;
+}
+.jspPane{position:inherit;}
+
+.chatList .chatItemdiv .locationdiv{
+	width:280px;position:relative;cursor:pointer;
+}
+.chatList .chatItemdiv .locationdiv .locationimg{
+	width:280px;
+}		
+.chatList .chatItemdiv .locationdiv .locationpoi{
+  position: absolute;
+  bottom: 0px;
+  width: 280px;
+  background-color: #100101;
+  opacity: 0.5;
+  color: #fff;
+  height: 22px;
+  line-height: 22px;
+}
+
+/*聊天窗口公告消息的气泡*/
+.chatNote .chatContent{
+	    background: url("/social/images/group_notice_l_logo_wev8.png") no-repeat !important;
+  		border: 1px solid #FFD181 !important;
+  		padding-top: 8px;
+  		padding-top: 20px !important;
+  		min-width: 150px;
+}
+
+.chatNote .chatArrow {
+	background: url(/social/images/group_notice_l_arrow_wev8.png) no-repeat !important;
+	background-position:left top;
+}
+
+.chatNote .chatContentdiv {
+	position:relative;
+}
+
+.chatNote .chatContentdiv .chatnoteMark {
+  padding: 5px;
+  padding-left:0px;
+  color: #999;
+  text-align: left;
+  border-top: 1px solid #E3E6F0;
+  margin-top: 5px;
+}
+
+.chatRItem .chatNote .chatContentdiv .chatnoteMark {
+  text-align:right;	  
+}
+
+.chatLItem .chatNote .chatArrow{
+	background:url('/social/images/group_notice_l_arrow_wev8.png') no-repeat !important;
+	top: 24px !important;
+  	z-index: 10;
+}
+
+.chatRItem .chatNote .chatArrow{
+	background:url('/social/images/group_notice_r_arrow_wev8.png') no-repeat !important;
+	top: 24px !important;
+  	z-index: 10;
+}
+
+.chatLItem .chatNote .chatContent{
+	background:url('/social/images/group_notice_l_logo_wev8.png') no-repeat !important;
+	background-color:#fff !important;
+	background-position:right top !important;
+	padding-right: 15px !important;
+}
+
+.chatRItem .chatNote .chatContent{
+	background:url('/social/images/group_notice_r_logo_wev8.png') no-repeat !important;
+	background-color:#fff !important;
+	background-position:left top !important;
+	padding-left: 15px !important;
+	
+}
+
+.chatLItem .chatNote .chatContentdiv .borderLayer{
+	  position: absolute;
+	  width: 8px;
+	  height: 8px;
+	  top: 0px;
+	  left: 0px; 
+	  border-left: 1px solid #fff;
+}
+
+.chatRItem .chatNote .chatContentdiv .borderLayer{
+	  position: absolute;
+	  width: 8px;
+	  height: 8px;
+	  top: 0px;
+	  right: 0px;
+	  border-right: 1px solid #fff;
+}
+.noteJLink {
+	width:46px;
+	cursor:pointer;
+	text-align:center;
+}
+
+/*语音消息的气泡*/
+
+.chatItemdiv .chatVoice{
+	height:24px;
+	width:40px;
+	cursor:pointer;
+}
+
+.chatList .chatItemdiv .chatLItem .chatVoiceTime{
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 10px;
+}
+
+.chatList .chatItemdiv .chatRItem .chatVoiceTime{
+  float: right;
+  height: 40px;
+  line-height: 40px;
+  margin-right: 10px;
+}
+
+.chatRItem  .chatContent .chatVoice{
+	text-align:right;
+/*	background:url('/social/images/chat_voice_r_wev8.png') no-repeat right;	*/
+}
+.chatLItem  .chatContent .chatVoice{
+	text-align:left;	
+/*	background:url('/social/images/chat_voice_l_wev8.png') no-repeat left;	*/
+}	
+.leftMenudiv .groupItem{display: none;}
+
+.chatdiv .chattop .chatArrow{
+	position:absolute;
+	width: 14px;
+    height: 11px;
+    background: url('/rdeploy/im/img/chattopnav_arrow_wev8.png');
+	top:32px;
+	left:21px;
+}
+.chatdiv .chattop .chatArrowGrey {
+	background: url('/rdeploy/im/img/chattopnav_arrow_grey_wev8.png');
+}
+.chatList .chatItemdiv .chatLItem .chatHead{margin-left:5px;}
+/*公告&相关资源*/
+.noteList,.icrList{position:absolute;left:0px;right: 0px;bottom:0px;top:61px;background:#fff;overflow-y: auto;z-index:10;}
+
+.chatList .chatNotice{
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.chatList .chatNotice span{
+  text-align: center;
+  background: #edeff7;
+  text-align: center;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 30px;
+  line-height: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;		
+}	
+.chatContent .chatcontentimg{
+	cursor: pointer;
+}
+
+.chatContent .chatcontentimg img{
+	max-width:240px;
+	max-heigt:240px;
+}
+.sendtype .checkpane{
+  	width: 30px;
+	height: 30px;
+	background-color: #f2f2f2 !important;
+	margin-left: 0px;
+	position: absolute;
+	z-index: -1;
+}
+
+.chatoption .chatsendtip {
+	float: left;
+  	padding-left: 20px;
+  	margin-left: 10px;
+  	background: url('/social/images/tip_info_wev8.png') no-repeat left center;
+  	height: 40px;
+  	line-height: 40px;
+  	color: #B0BDD6;
+}
+
+.chatoption .chatsendtip span{
+	/*color:#FFBD1E;*/
+}
+
+.sendtype span{
+	margin-left: 25px;
+}
+
+.chatSend .sendtypeSet{
+	float:left;
+	width:30px;
+	height:25px;
+}
+
+.chatSend .down{
+	background:url('/social/images/arrow_down_wev8.png') no-repeat center center;
+}
+
+.chatSend .up{
+	background:url('/social/images/arrow_up_wev8.png') no-repeat center center;
+}
+
+.sendtype .active{
+	  background: url("/social/images/sendtype_ok_wev8.png") no-repeat;
+	  background-position: center center;
+}
+
+.sendSplitLine{
+	float: left;
+  	width: 1px;
+  	height: 25px;
+  	background: url('/social/images/send_split_line_wev8.png') no-repeat;
+  	background-size: 1px 10px;
+  	background-position: center center;
+  	margin-left: 5px;
+  	margin-right: -1px;
+}
+
+.sendError {
+	text-align: right;
+}
+
+.sendError img {
+	cursor: pointer;
+}
+
+.sendError .resendwrap {
+	float: right;
+	width: 25px;
+  	text-align: left;
+  	display:inline-block;
+  	/*padding: 8px;*/
+}
+
+/*发起群聊div*/
+.imRightdiv .adddiscussDiv{
+	cursor:pointer;
+	width:100px;
+	height:30px;
+	line-height:30px;
+	float:right;
+	color:#fff;
+	margin-top:5px;
+	margin-right:5px;
+	border-radius:15px;
+	background:#7bc4e0 url('/social/images/im_add_group_wev8.png') no-repeat 10px center;
+}
+.imRightdiv .adddiscussDiv:hover{
+	background: #80cceb url('/social/images/im_add_group_wev8.png') no-repeat 10px center;
+}
+/*
+.carousel-control{
+	top:250px;
+	position: absolute;
+	z-index: 9999;
+  	border: 1px solid #fff;
+  	width: 80px;
+  	height: 80px;
+  	border-radius: 40px;
+  	color: #fff;
+  	font-size: 80px;
+  	line-height: 65px;
+  	text-align: center;
+  	cursor: pointer;
+}
+*/
+/*群成员管理页面*/
+.groupHeader{
+	
+}
+
+/*右键菜单*/
+.rightMenudiv {
+	width: 120px;
+  	display: none;
+  	position: fixed;
+  	z-index: 9999;
+  	background: #FFFFFF;
+}
+
+.rightMenuItem {
+	color: #666;
+  	height: 25px;
+  	line-height: 25px;
+  	border: 1px solid silver;
+  	padding-left: 6px;
+  	cursor: pointer;
+  	/*css3边框阴影*/
+  	box-shadow: 1px 1px 2px 0px #ccc; 
+	-webkit-box-shadow: 1px 1px 2px 0px #ccc;
+	-moz-box-shadow: 1px 1px 2px 0px #ccc;
+}
+
+.rightMenuItem .rightMenuItemLayer {
+	  background: #5CB5D8;
+  	height: 23px;
+  	width: 111px;
+  	line-height: 23px;
+  	padding-left: 5px;
+  	cursor: pointer;
+  	color: #fff;
+  	position: absolute;
+  	left: 1px;
+  	top: 1px;
+}
+
+.rightMenudiv .rightMenuItem:hover {
+/*	background: #5CB5D8;
+	color: #fff;*/
+}
+
+.clearTopBorder{
+	border-top: none;
+}
+
+.hiddenLayer {
+	position: absolute;
+	z-index: 9999;
+	background: #fff;
+	display: none;
+	opacity: 1;
+}
+
+.chatRecord .accitem{background-color: #fff;position: relative;}
+.chatRecord .accitem .accicon{float: left;height: 55px;width: 50px;}
+.chatRecord .accitem .accContent{float: right;padding: 5px;}
+.chatRecord .accitem .sendok{margin-top:2px;color:#727e96;height: 20px;text-align: left;}
+.chatRecord .accitem .filesize{font-size: 13px;}
+.chatRecord .accitem .filename{font-size: 13px;cursor:pointer;}
+.chatRecord .accitem .filename:hover{color:#018efb !important}
+
+.chatRecord .accitem .accline{
+  border-bottom: 1px solid #e3e5f1;
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
+.chatRecord .accitem .optiondiv{height: 20px;line-height: 20px;text-align: right;}
+.chatRecord .accitem .acccomplete{background:url('/social/images/acc_complete_wev8.png') no-repeat center center;float: left;height: 20px;width: 20px;position: absolute;top:35px;left: 30px;border-radius: 30px;}
+
+
+/*群聊附件列表*/
+.acclist{  
+  position: absolute;
+  top: 0px;
+  bottom: 48px;
+  left: 0px;
+  right: 0px;
+  height:auto !important;
+}
+.acclist .accitem{height:85px;border-bottom:1px solid #e0e8f5;}
+.acclist .accitem:hover{background: #f1faff;}
+.acclist .accitem .accchk{float:left;  height: 85px;line-height: 86px; width: 30px;  border-bottom: 1px solid #FFF;}
+.acclist .accitem .accicon{float:left;height:85px;width:50px;}
+.acclist .accitem .acccdiv{float:left;padding-top:22px;}
+.acclist .accitem .imDownload{float:right;margin-top:25px;width:55px;display:none;}
+.acclist .accitem .fileSize{color:#5c667f}
+.acclist .accitem .senderName{color:#727e96}
+.acclist .accitem .fileCount{color:#5ab4d7;margin-left:3px;}
+.acclist .accitem .accItemLeftPad{height: 100%; width: 20px;float: left;border-bottom: 1px solid #FFF;}
+.acclist .accitem .accItemRightPad{height: 100%; width: 15px;float: right;}
+
+.fileList .fileListTop{height:55px;line-height:55px;border-bottom:1px solid #E3E6F0;}
+.fileList .fileListTop .fileCount{color: #8f8f8f}
+.fileList .accNoneBg {width:100%; height:60%;margin:0 auto;background: url('/rdeploy/im/img/filelist_nonebg_wev8.png') no-repeat center bottom}
+.fileList .accNoneCap {width:100%; height:40%;margin:0 auto;color: #8f8f8f;text-align: center;}
+
+/*文件控制区域*/
+.fileoptPane {
+	position: absolute;
+  	bottom: 0px;
+  	width: 100%;
+  	height: 48px;
+  	display: table;
+  	line-height: 48px;
+  	border-top: 1px solid #eeeeee;
+  	background: #f7f7f7;
+}
+.fileoptPane .optLeftPane{display: table-cell;padding-left: 14px;}
+.fileoptPane .optLeftPane span{color: #8e9598;}
+.fileoptPane .optRightPane{display: table-cell;padding-right: 10px;text-align: right;}
+.fileoptPane .optRightPane .fileOptBtn{
+	display: inline-block;
+  	width: 83px;
+  	height: 30px;
+  	text-align: center;
+  	line-height: 30px;
+  	color: #FFF;
+  	cursor: pointer;
+ }
+.fileoptPane .optRightPane .fileDelBtn{background: #e4e4e4;color:#3c4350;}
+.fileoptPane .optRightPane .fileDelBtn:hover{background: #8d9598;color: #FFF}
+.fileoptPane .optRightPane .fileDownloadBtn{ background: #4baadf; margin-left: 3px;}
+.fileoptPane .optRightPane .fileDownloadBtn:hover{ background: #65c3f9;}
+/*分享消息*/
+.chatList .chatItemdiv .shareMsgItem,
+.chatList .chatItemdiv .taskMsgItem{
+  background-color: #fff;
+  min-width: 180px;
+}
+.chatList .chatItemdiv .shareMsgItem .shareTitle{
+  height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+  padding-left: 25px;
+  color: #fff;
+  border-radius: 5px 5px 0px 0px;
+}
+.chatList .chatItemdiv .shareMsgItem .sharewf {
+	background: #3597f1 url('/social/images/im_share_wf_wev8.png') no-repeat 5px center;
+	text-align: left;
+}
+.chatList .chatItemdiv .shareMsgItem .sharedoc {
+	background: #3597f1 url('/social/images/im_share_doc_wev8.png') no-repeat 5px center;
+}
+.chatList .chatItemdiv .shareMsgItem .sharecrm {
+	background: #3597f1 url('/social/images/im_share_crm_wev8.png') no-repeat 5px center;
+}
+
+.chatList .chatItemdiv .shareMsgItem .shareDetail{
+  padding: 5px;
+  text-align: right;
+  color: #676767;
+  cursor: pointer;
+  padding-bottom: 0px;	
+}
+.chatList .chatItemdiv .shareMsgItem .shareDetail:hover{
+  color: #3598f0;
+}
+.chatList .chatItemdiv .chatRItem .chatShare .chatArrow{
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-left: 12px solid #3597f1;
+  border-bottom: 6px solid transparent;
+  position: absolute;
+  right: 0px;
+  background:none;
+}
+.chatList .chatItemdiv .chatLItem .chatShare .chatArrow{
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-right: 12px solid #3597f1;
+  border-bottom: 6px solid transparent;
+  position: absolute;
+  left: 0px;
+  background:none;
+}
+
+/*分享消息*/
+
+/*拖动层*/
+.transLayer {
+	position: absolute;
+	/*border: 1px solid red;*/
+	display: none;
+	cursor: move;
+	background-image: url(#);
+}
+
+/*名片消息*/
+.chatItemdiv .chatCard .chatContent{
+  		border: 1px solid #5bb4d8;
+  		padding-top: 8px;
+  		min-width: 150px;
+}
+
+.chatCard .chatContentdiv {
+	position:relative;
+}
+
+.chatCard .chatContentdiv .chatCardInfo {
+  padding: 5px;
+  padding-left: 0px;
+  color: #999;
+  text-align: left;
+  border-top: 1px solid #E3E6F0;
+  margin-top: 5px;
+  padding-top: 10px;
+}
+
+.chatCard .chatContentdiv .chatCardInfo .hrmName{
+  color:#384560;
+  cursor:pointer;
+}
+
+.chatRItem .chatCard .chatContentdiv .chatnoteMark {
+  text-align:right;	  
+}
+
+.chatList .chatItemdiv .chatCard .chatArrow{
+  width: 12px;
+  height: 7px;
+  line-height: 7px;
+  position: absolute;
+  top: 24px;
+  z-index: 1;
+  background-color: #fff;
+  color: #3597f1;	
+  font-size: 17px;
+  background-image: none;
+}
+
+.chatList .chatItemdiv .chatLItem .chatCard .chatArrow{
+  left: 0px;
+  color: #E3E8EC;
+}
+
+.chatList .chatItemdiv .chatRItem .chatCard .chatArrow{
+  right: 0px;
+  color: #e4e4e4;
+}	
+
+
+.chatLItem .chatCard .chatContent{
+	background-color:#fff !important;
+	background-position:right top !important;
+}
+
+.chatRItem .chatCard .chatContent{
+	background-color:#fff !important;
+	background-position:left top !important;
+	
+}
+/*名片消息*/
+
+/*任务消息for rdeploy*/
+.chatList .chatItemdiv .taskMsgItem .taskMsgTitle{
+	background: #f4b723 url("/rdeploy/im/img/chat_title_task_wev8.png") no-repeat 5px center;
+  	height: 30px;
+  	line-height: 30px;
+  	padding-left: 25px;
+  	color: #fff;
+  	border-radius: 5px 5px 0px 0px;
+  	text-align: left;
+}
+
+.chatList .chatItemdiv .taskMsgItem .taskComplete {
+	width: 56px;
+  	height: 25px;
+  	border: 1px solid #e6e6e6;
+  	margin: 0 auto;
+  	text-align: center;
+  	line-height: 25px;
+  	color: #5cb5d8;
+  	border-radius: 3px;
+  	cursor: pointer;
+}
+
+.chatList .chatItemdiv .taskMsgItem .taskComplete:hover {
+	background: #4BA9DF;
+	color: #FFF;
+}
+.chatList .chatItemdiv .taskMsgItem .taskCompleted {
+	background: url("/rdeploy/im/img/task_completed_wev8.png") no-repeat center left;
+  	text-align: right;
+  	margin: 0 auto;
+  	width: 58px;
+  	line-height: 25px;
+  	height: 25px;
+}
+
+.chatList .chatItemdiv .taskMsgItem .taskDelete {
+	background: url("/rdeploy/im/img/task_deleted_wev8.png") no-repeat center left;
+  	text-align: right;
+  	margin: 0 auto;
+  	width: 93px;
+  	line-height: 25px;
+  	height: 25px;
+}
+
+
+.chatList .chatItemdiv .chatRItem .chatTask .chatArrow{
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-left: 12px solid #f4b723;
+  border-bottom: 6px solid transparent;
+  position: absolute;
+  right: 0px;
+  background:none;
+}
+.chatList .chatItemdiv .chatLItem .chatTask .chatArrow{
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-right: 12px solid #f4b723;
+  border-bottom: 6px solid transparent;
+  position: absolute;
+  left: 0px;
+  background:none;
+}
+
+.chatList .chatItemdiv .taskMsgItem .taskMsgDetail{
+  padding: 5px;
+  padding-bottom: 0px;	
+}
+/*图文分享类消息*/
+.chatList .chatItemdiv .textImgMsgItem{
+	cursor: pointer;
+}
+
+.textImgMsgItem .content{display: table;padding: 7px;background: #FFF;}
+.textImgMsgItem .imgcot{
+	display: table-cell;
+    vertical-align: middle;
+    width: 45px;
+    height: 45px;
+    background: #3497F3;
+    text-align: center;
+    border-radius: 3px;
+    line-height: 9px;
+}
+.textImgMsgItem .imgcot img{
+	max-width: 45px;
+	max-height: 45px;
+}
+.textImgMsgItem .textcot{display: table-cell;vertical-align: middle; padding-left: 9px;max-width: 200px;}
+
+.imMainbox .imSlideDiv {
+	border: 0;
+  	box-shadow: 0 7px 21px rgba(0,0,0,0.25);
+  	display: none;
+  	width: 0px;
+  	position: absolute;
+  	z-index: 9995;
+  	right:0px;
+  	top: 0px;
+  	bottom:0px;
+  	background-color: #fff;
+  	font-size: 12px;
+}
+.searchdiv{
+	 display: table;
+	 height: 30px;
+	 line-height: 30px;
+	 position: relative;
+	 border: 1px solid #e9e9e9;
+	 background-color: #fff;
+	 float: left;
+	 margin-top: 5px;
+	 margin-left: 5px;
+}
+.searchdiv .keyword{
+	width: 184px;
+  	height: 30px;
+  	line-height: 30px;
+  	border: none;
+  	padding: 0 5px;
+}
+.imbtn1{
+  display: inline-block;
+  width: 75px;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 10px;
+  background-color: #e4e4e4;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 5px;
+  border-radius:4px;
+}
+.imbtn1:hover{
+	background: #4BA9DF;
+	color: #FFF;	
+}
+
+.imsearchdiv .sbHolder{
+	height: 30px !important;
+  	width: 68px !important;
+}
+.imsearchdiv .sbToggle{
+	right: 5px !important;
+  	top: 2px !important;
+}

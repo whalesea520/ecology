@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conf>
+	<id>1</id>
+<!--id与文件名需保持一至-->
+	<title>系统样式一</title>
+	<desc>系统样式一</desc>
+
+	<!--书写时请保证每行以下分号结尾-->
+	<css>#menuhContainer{&#13;
+	height:35px;
+	padding-left:10px;&#13;
+	padding-right:10px;&#13;
+	text-align:left;&#13;
+	background-color:;&#13;
+	background-image:url('/images/homepage/navgatebg_wev8.gif');&#13;
+}&#13;
+#menuhContainer .main{&#13;
+	height:19px;
+	_height:25px;
+	color:#E2E7ED;&#13;
+	font-style:normal;&#13;
+	font-weight:bold;&#13;
+	font-size:12px;&#13;
+	font-family:微软雅黑;&#13;
+	padding-top:8px;&#13;
+	padding-bottom:8px;&#13;
+	padding-left:20px;&#13;
+	padding-right:20px;&#13;
+	background-color:;&#13;
+	background-image:url('/images/homepage/navgatebg_wev8.gif');&#13;
+	border-right-width:1px;&#13;
+	border-right-style:solid;&#13;
+	border-right-color:#235EA7;&#13;
+}&#13;
+#menuhContainer .main:hover{&#13;
+	color:#FFFFFF;&#13;
+	font-size:12px;&#13;
+	font-family:微软雅黑;&#13;
+	background-color:#235EA7;&#13;
+	background-image:url('');&#13;
+}&#13;
+#menuhContainer .sub{&#13;
+	color:#E2E7ED;&#13;
+	font-style:normal;&#13;
+	font-weight:bold;&#13;
+	font-size:12px;&#13;
+	font-family:微软雅黑;&#13;
+	padding-top:5px;&#13;
+	padding-bottom:5px;&#13;
+	padding-left:5px;&#13;
+	padding-right:5px;&#13;
+	background-color:;&#13;
+	background-image:url('/images/homepage/navgatebg_wev8.gif');&#13;
+	border-bottom-width:1px;&#13;
+	border-bottom-style:solid;&#13;
+	border-bottom-color:#2d65aa;&#13;
+}&#13;
+#menuhContainer .sub:hover{&#13;
+	color:#FFFFFF;&#13;
+	font-size:12px;&#13;
+	font-family:微软雅黑;&#13;
+	background-color:#235EA7;&#13;
+	background-image:url('');&#13;
+}</css>
+	 <cornerTop>Right</cornerTop>
+	 <cornerBottom>Right</cornerBottom>	 
+	 <cornerTopRadian>5px</cornerTopRadian>
+	 <cornerBottomRadian>5px</cornerBottomRadian>
+	 <iconMainDown>/js/jquery/plugins/menu/menuh/down_wev8.gif</iconMainDown>
+	 <iconSubDown>/js/jquery/plugins/menu/menuh/right_wev8.gif</iconSubDown>
+	 <showSelectedState>yes</showSelectedState>
+</conf>

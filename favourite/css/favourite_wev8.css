@@ -1,0 +1,34 @@
+@CHARSET "UTF-8";
+.container{
+	height: 179px;
+	background-color: #fff;
+	font-size: 12px;
+	height: 200px;
+}
+.first{
+	padding-top: 25px !important;
+}
+.favline{
+	line-height: 30px;
+	height: auto;
+	padding: 10px 0px;
+}
+.favtitle{
+	margin-left: 10px;
+	width: 120px;
+	display: inline-block;
+	text-align: right;
+}
+.favfield{
+	display: inline-block;
+}
+.favfield input{
+	display: inline-block;
+	border: 1px solid #e4e4e4;
+	background-color: #fff;
+	height: 28px;
+	width: 226px;
+}
+.favfield span{
+	display: inline-block;
+}

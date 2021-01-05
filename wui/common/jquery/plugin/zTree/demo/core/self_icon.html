@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> ZTREE DEMO - DIY Icon </TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../../css/demo.css" type="text/css">
+	<link rel="stylesheet" href="../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="../../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ztree.core-3.0.js"></script>
+	<!--  <script type="text/javascript" src="../../js/jquery.ztree.excheck-3.0.js"></script>
+	  <script type="text/javascript" src="../../js/jquery.ztree.exedit-3.0.js"></script>-->
+	<SCRIPT LANGUAGE="JavaScript">
+		<!--
+		var setting = {
+			data: {
+				simpleData: {
+					enable: true
+				}
+			}
+		};
+
+		var zNodes =[
+			{ id:1, pId:0, name:"灞曞紑銆佹姌鍙?涓€у寲鍥炬爣涓嶅悓", open:true, iconOpen:"../../css/ztreeStyle/img/diy/1_open.png", iconClose:"../../css/ztreeStyle/img/diy/1_close.png"},
+			{ id:11, pId:1, name:"鍙跺瓙鑺傜偣1", icon:"../../css/ztreeStyle/img/diy/2.png"},
+			{ id:12, pId:1, name:"鍙跺瓙鑺傜偣2", icon:"../../css/ztreeStyle/img/diy/3.png"},
+			{ id:13, pId:1, name:"鍙跺瓙鑺傜偣3", icon:"../../css/ztreeStyle/img/diy/5.png"},
+			{ id:2, pId:0, name:"灞曞紑銆佹姌鍙?涓€у寲鍥炬爣鐩稿悓", open:true, icon:"../../css/ztreeStyle/img/diy/4.png"},
+			{ id:21, pId:2, name:"鍙跺瓙鑺傜偣1", icon:"../../css/ztreeStyle/img/diy/6.png"},
+			{ id:22, pId:2, name:"鍙跺瓙鑺傜偣2", icon:"../../css/ztreeStyle/img/diy/7.png"},
+			{ id:23, pId:2, name:"鍙跺瓙鑺傜偣3", icon:"../../css/ztreeStyle/img/diy/8.png"},
+			{ id:3, pId:0, name:"涓嶄娇鐢ㄤ釜鎬у寲鍥炬爣", open:true },
+			{ id:31, pId:3, name:"鍙跺瓙鑺傜偣1"},
+			{ id:32, pId:3, name:"鍙跺瓙鑺傜偣2"},
+			{ id:33, pId:3, name:"鍙跺瓙鑺傜偣3"}
+
+		];
+
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+		});
+		//-->
+	</SCRIPT>
+</HEAD>
+
+<BODY>
+<h1>涓€у寲鍥炬爣 鈥斺€?icon 灞炴€?/h1>
+<h6>[ 鏂囦欢璺緞锛歞emo/core/self_icon.html ]</h6>
+<div class="content_wrap">
+	<div class="zTreeDemoBackground left">
+		<ul id="treeDemo" class="ztree"></ul>
+	</div>
+	<div class="right">
+		<ul class="info">
+			<li class="title"><h2>1銆乻etting 閰嶇疆淇℃伅璇存槑</h2>
+				<ul class="list">
+				<li>涓€у寲鍥炬爣涓嶉渶瑕佸 setting 杩涜鐗规畩閰嶇疆</li>
+				</ul>
+			</li>
+			<li class="title"><h2>2銆乼reeNode 鑺傜偣鏁版嵁璇存槑</h2>
+				<ul class="list">
+				<li>鍒╃敤 鑺傜偣鏁版嵁鐨?icon / iconOpen / iconClose 灞炴€у疄鐜颁釜鎬у寲鍥炬爣</li>
+				<li class="highlight_red">璇︾粏璇峰弬瑙?API 鏂囨。涓殑鐩稿叧鍐呭</li>
+				</ul>
+			</li>
+			<li class="title"><h2>3銆佸叾浠栬鏄?/h2>
+				<ul class="list">
+				<li class="highlight_red">鐢变簬鏃堕棿鍏崇郴锛屼緥瀛愮洿鎺ラ噰鐢?png 鍥剧墖锛屽鏋滈渶瑕佽В鍐?ie6 涓?png 鍥剧墖鐨勯€忔槑闂锛岃閽堝 ie6 鍒朵綔鐗规畩鐨?gif 鍥剧墖鎴栬€呭埄鐢?css filter 瑙ｅ喅</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+</BODY>
+</HTML>

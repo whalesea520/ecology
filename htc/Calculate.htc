@@ -1,0 +1,205 @@
+// Defines an event of the HTML Component (HTC) to be exposed to the containing document. 
+// This example is derived from a calculator behavior sample. 
+// Whenever the result changes, the HTC fires a custom onResultChange event back to the page, 
+// passing the result as a custom property of the event object.
+//		<PUBLIC:EVENT
+//		    NAME = sName
+//		    ID = sEventID
+//		/>
+
+<PUBLIC:EVENT NAME="onResultChange" ID="rcID" />
+
+// Binds a function to an event, so that the function is called whenever the event fires on the specified object
+//		<PUBLIC:ATTACH
+//		    EVENT = sEvent
+//		    FOR = document | element | window
+//		    ONEVENT = sEventHandler
+//		    ID = sID
+//		/>
+//		EVENT 
+//	Required. String that specifies the name of a Dynamic HTML (DHTML) event, or any of the events specific to the HTML Component (HTC) that are listed in the HTC Reference. 
+//		FOR 
+//	Optional. String that specifies one of the following values to identify the source of the event. 
+//		document Refers to the document object. 
+//		element Default. Refers to the element to which the behavior is attached. 
+//		window Refers to the window object. 
+//		ONEVENT 
+//	Required. String that specifies an inline script or a direct invocation of the event handler function. 
+//		ID 
+//	Optional. String that uniquely identifies the PUBLIC:ATTACH element within the component. This attribute is analogous to the ID attribute in DHTML. 
+
+<PUBLIC:ATTACH EVENT="onclick" ONEVENT="doCalc()" />
+<PUBLIC:ATTACH EVENT="onkeydown" ONEVENT="doCalc()" />
+
+<SCRIPT LANGUAGE="JScript">
+
+var sResult = '0';
+var num1 = 0;
+var num2 = 0;
+var bNewNumber=true;
+var sOperation = '+';
+var bEquals = false;
+
+
+
+function sign(sVal)
+{
+   num2    = parseFloat(sResult);
+   sResult = -1 * num2;
+   bNewNumber=true;
+}
+
+function operation (sVal)
+{
+
+   num2    = parseFloat(sResult);
+   if (sOperation == '+')
+     sResult = num1+num2;
+   else if (sOperation == '-')
+     sResult = num1 - num2;
+   else if (sOperation == '*') {
+     num1mul = 1 ; num2mul = 1 ; 
+     tmpnum1 = "" + num1 ;  tmpnum2 = sResult ;
+     dotindex1 = tmpnum1.indexOf(".") ;
+     dotindex2 = tmpnum2.indexOf(".") ;
+     if(dotindex1 != -1)  {
+	dotlength1 = tmpnum1.length - dotindex1 -1 ;
+	num1mul = Math.pow(10,dotlength1) ;
+     }
+     if(dotindex2 != -1)  {
+	dotlength2 = tmpnum2.length - dotindex2 -1 ;
+	num2mul = Math.pow(10,dotlength2) ;
+     }
+
+     sResult = ((num1*num1mul) * (num2*num2mul))/(num1mul*num2mul);
+   }
+   else if (sOperation == '/')
+   {
+     if (num2 == 0)
+        sResult = "Error";
+     else
+        sResult = Math.round((num1 / num2)*1000)/1000 ;
+   }
+
+      if (sVal != '=')
+      {
+        sOperation = sVal;
+//        num1    = parseFloat (sResult);
+	num1 = sResult
+      }
+      else
+      {
+ //     bEquals = true;
+        num1 = 0;
+        sOperation = '+';
+      }
+
+
+     bNewNumber=true;
+}
+
+function digit (sVal)
+{
+   if (bNewNumber)
+      sResult= sVal;
+   else
+      sResult= sResult + sVal;
+
+   bNewNumber=false;
+}
+
+function clear()
+{
+  sResult= '0';
+  num1   = 0;
+  num2   = 0;
+  sOperation = '+';
+  bNewNumber=true;
+}
+
+function stripBlanks (sVal)
+{
+   var sTemp = "";
+   var i;
+
+   for (i=0; i < sVal.length; i++)
+   {
+     x = sVal.substr(i,1);
+     if (x != ' ')
+       sTemp = sTemp + x;
+   }
+
+  return sTemp;  
+}
+
+function KeyCodeToChar(iKeyCode)
+{
+   switch (iKeyCode)
+   {
+      case 48: return '0';
+      case 49: return '1';
+      case 50: return '2';
+      case 51: return '3';
+      case 52: return '4';
+      case 53: return '5';
+      case 54: return '6';
+      case 55: return '7';
+      case 56: return '8';
+      case 57: return '9';
+      case 27: return 'C';
+      case 190:return '.';
+      case 189:return '-';
+      case 191:return '/';
+
+// 189: '-';
+// 187: '=';
+// 187+shift : '+'
+// 56+shift : '*'
+// 191: '/'
+   }
+}
+
+function doCalc()
+{
+   oElement = event.srcElement;
+   window.status = oElement.value;
+
+   if (event.type == "keydown")
+      sVal = KeyCodeToChar (event.keyCode);
+   else
+   {
+      if (event.srcElement.type != "button")
+         return;
+      sVal = stripBlanks(event.srcElement.value);
+   }
+
+   if ((sResult == "Error") && (sVal != 'C'))
+      return;
+
+   if ((sVal=='0') || (sVal == '1') || 
+       (sVal=='2') || (sVal == '3') || 
+       (sVal=='4') || (sVal == '5') || 
+       (sVal=='6') || (sVal == '7') || 
+       (sVal=='8') || (sVal == '9') || (sVal == '.'))
+      digit (sVal);
+   
+   else if ((sVal == '+') || (sVal == '-') || 
+            (sVal == '*') || (sVal == '/') ||
+            (sVal == '='))
+      operation (sVal);
+
+   else if (sVal == '+/-')
+      sign (sVal);
+
+   else if (sVal == 'C')
+      clear ();
+
+
+// Generates an event object for passing event context information when using the fireEvent method.
+
+  oEvent = createEventObject();
+  oEvent.result = sResult;
+  rcID.fire (oEvent);
+}
+
+</SCRIPT>

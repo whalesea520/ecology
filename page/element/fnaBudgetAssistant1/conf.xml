@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<id>fnaBudgetAssistant1</id><!--只能是唯一的英文字母-->
+	<title>审批助手元素</title>
+	<titleEN>Approval assistant element</titleEN>
+	<desc>审批助手元素</desc>
+	<icon>/page/element/fnaBudgetAssistant1/image/fna_wev8.gif</icon>
+	<linkMode>-1</linkMode>
+	<loginView>1</loginView>
+	<type>2</type>
+	<perpage>-1</perpage>
+	<private>
+		<jsList> 
+			<js></js>
+		</jsList>
+	</private>
+	<public>
+		<jsIdList>  
+			<jsId>jquery</jsId>
+		</jsIdList>
+		<cssIdList>
+		</cssIdList>
+	</public>
+	<view>
+		<url>/page/element/fnaBudgetAssistant1/View.jsp</url>
+		<method></method>
+	</view>
+	<setting>
+		<url>/page/element/fnaBudgetAssistant1/setPage.jsp</url>
+		<method></method>
+	</setting>
+	<more>
+		<url></url>
+		<method></method>
+	</more>
+	<operation>/page/element/fnaBudgetAssistant1/setPageOperation.jsp</operation>
+</root> 

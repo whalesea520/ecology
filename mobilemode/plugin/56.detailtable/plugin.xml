@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEC>
+	<id>DetailTable</id>	<!-- id 插件唯一标识 -->
+	<text>130658</text>  <!-- 明细表 -->
+	<type>2</type>	<!-- 类型，方便对插件进行区分，目前已有：1.普通功能插件，2.表单插件 -->
+	<isEnabled>1</isEnabled>	<!-- 是否启用，1或者不填写为启用，0或者其他非1值为禁用 -->
+	<order>15</order>	<!-- 插件显示顺序，值越小则显示越靠前，不填写或者无此标签将为整数的最大值 -->
+	
+	<!-- 插件设计信息配置 -->
+	<design>
+		<unique>0</unique> <!-- 是否唯一，如果值为1则在自定义页面设计时一个页面最多只能添加一个这种控件，不为1或者不填写此属性则没有此限制 -->
+		<resources>	<!-- 依赖资源 -->
+			<resource type="js">/mobilemode/js/mec/handler/form/DetailTable_wev8.js?v=2017072601</resource>
+			<resource type="css">/mobilemode/css/mec/handler/form/Form_wev8.css</resource>
+			<resource type="css">/mobilemode/css/mec/run/form/DetailTable_wev8.css</resource>
+			<resource type="css">/mobilemode/css/mec/handler/form/DetailTable_wev8.css</resource>
+		</resources>
+	</design>
+	
+	<!-- 插件运行信息配置 -->
+	<run java="com.weaver.formmodel.mobile.mec.handler.form.DetailTable">
+		<resources>	<!-- 依赖资源 -->
+			<resource type="js">/mobilemode/js/mec/run/form/DetailTable_wev8.js?v=2018032701</resource>
+			<resource type="css">/mobilemode/css/mec/run/form/DetailTable_wev8.css?v=2017091301</resource>
+			<!-- 单行文本 -->
+			<resource type="js">/mobilemode/js/mobiscroll/mobiscroll-2.5.2-min.js</resource>
+			<resource type="css">/mobilemode/js/mobiscroll/css/mobiscroll-2.5.2-min.css</resource>
+			<resource type="js">/mobilemode/js/mec/run/form/FInputText_wev8.js?v=2017052401</resource>
+			<!-- check框 -->
+			<resource type="js">/mobilemode/js/mec/run/form/FCheck_wev8.js?v=2017052401</resource>
+			<!-- 选择框 -->
+			<resource type="js">/mobilemode/js/mec/run/form/FSelect_wev8.js?v=2017052401</resource>
+			<!-- 拍照 -->
+			<resource type="js">/mobilemode/js/imgdrawing/js/exif.min_wev8.js</resource>
+			<resource type="js">/mobilemode/js/imgdrawing/js/ImageOrientationFix.min_wev8.js</resource>
+			<resource type="css">/mobilemode/js/imgdrawing/css/imgdrawing_wev8.css?v=2017052401</resource>
+			<resource type="js">/mobilemode/js/imgdrawing/imgdrawing_wev8.js?v=2017052401</resource>
+			<resource type="js">/mobilemode/js/mec/run/form/FPhoto_wev8.js?v=?v=2017052601</resource>
+			<!-- 文件上传 -->
+			<resource type="js">/mobilemode/js/mec/run/form/FFile_wev8.js?v=2017052401</resource>
+		</resources>
+	</run>
+	
+	<!-- 内容模板 -->
+	<contentTemplate>
+		<![CDATA[
+			<div class="Design_DetailTable_Container" id="div${theId}">
+				$dt_horizontal_panel_start$
+				<div class="Design_DetailTable_FormPanel" id="detailtable${theId}">
+					<div class="Design_DetailTable_DataCtrlBtns">${dataCtrlBtns}</div>
+					<input type="hidden" name="detailtablename_${theId}" value="${detailtable}" />
+					<input type="hidden" name="${detailtable}_keyname" value="${dtablekey}" />
+					<input type="hidden" name="${detailtable}_relatekey" value="${relatekey}" />
+					<input type="hidden" name="${detailtable}_delids" value="" />
+					<div class="Design_DetailTable_Datadetails">
+						<table class="DetailTable_Title">
+							<thead>
+								<tr class="dt_title_tr">
+									<td>${serialName}</td>
+									$dt_horizontal_panel_title_col_forstart$
+									<td style="${titleColomnStyle}">${titleColumnText}</td>
+									$dt_horizontal_panel_title_col_forend$
+								</tr>
+							</thead>
+						</table>
+						<div class="DetailTable_ContentWrap" style="${contentWrapStyle}">
+							<table class="DetailTable_Content">
+								<tbody>
+									$dt_horizontal_panel_content_row_forstart$
+									<tr class="dt_content_tr" ${bindEvent} rowindex="${indexid}">
+										<td ${operateEvent}>
+											<span class="rowindex rowindex${theId}" index="${indexid}">${indexid}</span>
+											<input type="hidden" name="${detailtable}_${dtablekey}_rowindex_${indexid}" value="${keyvalue}" />
+											${operateHtml}
+										</td>
+										$dt_horizontal_panel_content_col_forstart$
+										<td style="${contentColomnStyle}">${contentColumnText}</td>
+										$dt_horizontal_panel_content_col_forend$
+									</tr>
+									$dt_horizontal_panel_content_row_forend$
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				$dt_horizontal_panel_end$
+				<div class="Design_DetailTable_AddDataPanel" id="detailtableadd${theId}">
+					<div class="Design_DetailTable_AddDataMask"></div>
+					<div class="Design_DetailTable_AddDataContent hide">
+						<form class="detailtableform" style="position:relative" id="detailtableform${theId}" name="${theId}">
+							<input type="hidden" name="detailbillid" id="detailbillid${theId}" value="">
+							<input type="hidden" name="detailcurrrowindex" id="detailcurrrowindex${theId}" value="">
+							${addDataPanel}
+						</form>
+					</div>
+					<div class="Design_DetailTable_AddDataFooter">
+						<button type="button" class="detailtable_btn detailtable_adddata_ok_btn">${confirmName}</button>
+						<button type="button" class="detailtable_btn detailtable_adddata_cancel_btn">${cancelName}</button>
+					</div>
+				</div>
+			</div>
+		]]>
+	</contentTemplate>
+</MEC>

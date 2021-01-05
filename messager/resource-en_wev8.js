@@ -1,0 +1,37 @@
+var rMsg={
+	loadding:"Logining...",
+	offline:"offline",
+	loginHere:"login click here",
+	clickDownload:"click here then download",
+	fileShareToYou:"this file share to you",
+	sendFile:"send a file",
+	onlySaveOneDay:"this file saved 1 day",
+	FlashVerErr:"flash version error",
+	sendAccs:"send file",
+	err:{
+		authenticationFailed:"authentication failed",
+		registerErr:"register error！",
+		msgErr:"messager server error or user logined",
+		errThenRetry:"messager server error,please try again."
+	},
+	autoSearchCompleteNotFound:"can not search the relevant staff!",
+	controlUserMessageHave:"you have ",
+	controlUserMessageCount:" message!",
+	controlUserQuit:"the current online, confirm exit system?",
+	baseWindowCanNotBeEmpty:" can not be empty!",
+	chatWindowJoinMeeting:"join meeting！",
+	chatWindowLeaveMeeting:"leave meeting！",
+	chatWindowAdminCloseMeeting:"admin has closed the meeting！",
+	messageWindowChatWith:"with ",
+	messageWindowChat:" chatting ",
+	messageWindowSend:"send",
+	pageOnline:"online",
+	pageMeetingRoomSet:"meeting room set",
+	pageSureToCloseMeeting:"sure to close the meeting",
+	
+	toolSendEmail:"Send Mail",
+	toolSendSMS:"Send SMS",
+	toolProp:"Prop",
+	toolHistory:"History",
+	headIcon:"Head Icon"
+}

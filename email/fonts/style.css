@@ -1,0 +1,218 @@
+@font-face {
+  font-family: 'icon-blog';
+  src:  url('/email/fonts/fonts/icon-blog.eot?2vte5p');
+  src:  url('/email/fonts/fonts/icon-blog.eot?2vte5p#iefix') format('embedded-opentype'),
+    url('/email/fonts/fonts/icon-blog.ttf?2vte5p') format('truetype'),
+    url('/email/fonts/fonts/icon-blog.woff?2vte5p') format('woff'),
+    url('/email/fonts/fonts/icon-blog.svg?2vte5p#icon-blog') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icon-blog' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-blog-down:before {
+  content: "\e913";
+}
+.icon-blog-up:before {
+  content: "\e900";
+}
+.icon-blog-edit:before {
+  content: "\e95c";
+}
+.icon-blog-AddTo:before {
+  content: "\e93b";
+}
+.icon-blog-blank:before {
+  content: "\e93a";
+}
+.icon-blog-follow:before {
+  content: "\e941";
+}
+.icon-blog-ArrowheadDown:before {
+  content: "\e901";
+}
+.icon-blog-ArrowheadUp:before {
+  content: "\e939";
+}
+.icon-blog-AlreadyConcern:before {
+  content: "\e906";
+}
+.icon-blog-drop-down:before {
+  content: "\e937";
+}
+.icon-blog-NewMessage:before {
+  content: "\e938";
+}
+.icon-blog-delete:before {
+  content: "\e936";
+}
+.icon-blog-Explain:before {
+  content: "\e935";
+}
+.icon-blog-delay:before {
+  content: "\e931";
+}
+.icon-blog-o:before {
+  content: "\e932";
+}
+.icon-blog-solid:before {
+  content: "\e933";
+}
+.icon-blog-Submit:before {
+  content: "\e934";
+}
+.icon-blog-Pay:before {
+  content: "\e922";
+}
+.icon-blog:before {
+  content: "\e923";
+}
+.icon-blog-down2:before {
+  content: "\e919";
+}
+.icon-blog-up2:before {
+  content: "\e920";
+}
+.icon-blog-Absenteeism:before {
+  content: "\e924";
+}
+.icon-blog-checkbox:before {
+  content: "\e925";
+}
+.icon-blog-Explain-o:before {
+  content: "\e926";
+}
+.icon-blog-index:before {
+  content: "\e927";
+}
+.icon-blog-Late:before {
+  content: "\e928";
+}
+.icon-blog-left:before {
+  content: "\e929";
+}
+.icon-blog-normal:before {
+  content: "\e92a";
+}
+.icon-blog-remind:before {
+  content: "\e92b";
+}
+.icon-blog-ReportForm:before {
+  content: "\e92c";
+}
+.icon-blog-right:before {
+  content: "\e92d";
+}
+.icon-blog-Uncommitted-o:before {
+  content: "\e92e";
+}
+.icon-blog-Uncommitted:before {
+  content: "\e92f";
+}
+.icon-blog-Unhappy:before {
+  content: "\e930";
+}
+.icon-blog-at:before {
+  content: "\e902";
+}
+.icon-blog-branch:before {
+  content: "\e903";
+}
+.icon-blog-CancelConcern:before {
+  content: "\e904";
+}
+.icon-blog-Comment:before {
+  content: "\e905";
+}
+.icon-blog-Customer:before {
+  content: "\e93c";
+}
+.icon-blog-Document:before {
+  content: "\e907";
+}
+.icon-blog-Emoji:before {
+  content: "\e908";
+}
+.icon-blog-Enclosure:before {
+  content: "\e909";
+}
+.icon-blog-Good:before {
+  content: "\e90a";
+}
+.icon-blog-Lock:before {
+  content: "\e90b";
+}
+.icon-blog-MessageReminder:before {
+  content: "\e90c";
+}
+.icon-blog-Modular:before {
+  content: "\e90d";
+}
+.icon-blog-Mood:before {
+  content: "\e90e";
+}
+.icon-blog-MutualConcern:before {
+  content: "\e90f";
+}
+.icon-blog-NewPacket:before {
+  content: "\e910";
+}
+.icon-blog-NextPage:before {
+  content: "\e911";
+}
+.icon-blog-NoData:before {
+  content: "\e912";
+}
+.icon-blog-Note:before {
+  content: "\e93d";
+}
+.icon-blog-Personnel:before {
+  content: "\e914";
+}
+.icon-blog-Previous_page:before {
+  content: "\e915";
+}
+.icon-blog-Process:before {
+  content: "\e916";
+}
+.icon-blog-Project:before {
+  content: "\e917";
+}
+.icon-blog-region:before {
+  content: "\e918";
+}
+.icon-blog-Schedule:before {
+  content: "\e91a";
+}
+.icon-blog-Score-o:before {
+  content: "\e91b";
+}
+.icon-blog-Score:before {
+  content: "\e91c";
+}
+.icon-blog-Task:before {
+  content: "\e91d";
+}
+.icon-blog-VisiblePart:before {
+  content: "\e91e";
+}
+.icon-blog-next-month:before {
+  content: "\e91f";
+}
+.icon-blog-last-month:before {
+  content: "\e921";
+}

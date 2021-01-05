@@ -1,0 +1,2 @@
+insert into hpFieldElement (id, elementid, fieldname, fieldColumn, isDate, transMethod, fieldwidth, linkurl, valuecolumn, isLimitLength, ordernum)  select max(id)+1,'8', '127103', 'sysname', '0', '', '120', '' , '', '0', '0' from hpFieldElement
+GO

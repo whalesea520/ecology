@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<special-non>
+		<urls>
+			<url>
+				<value>/mobile/plugin/1/RequestOperation.jsp</value>
+				<params>
+					<param>
+						<value>userSignRemark</value>
+						<rules>
+							<rule>##CONST:FREEHTML##</rule>
+						</rules>
+					</param>
+				</params>
+			</url>
+		</urls>
+	</special-non>
+	
+</root>

@@ -1,0 +1,168 @@
+.allchecked_ck{
+   background-color:#E5E5EA;
+   width:22px;
+   height:22px;
+}
+
+.allchecked_span{
+   font-size: 17px;
+   color: #55B1F9;
+   letter-spacing: -0.41px;
+}
+
+.allchecked_cancelspan{
+	font-size: 17px;
+	color: #55B1F9;
+	letter-spacing: -0.41px;
+}
+
+.cardopratordiv{
+    width:100%;
+	height:45px;
+	line-height:45px;
+}
+
+.cardopratoredit{
+    float:left;
+	font-size:14px;
+	color:#55B1F9
+}
+
+.cardopratorxxnr{
+   margin-right:10px;
+   text-align:right;
+   font-size:14px;
+   color:#55B1F9
+}
+
+.cardxhdiv{
+ width:22px;
+ height:22px;
+ line-height:22px;
+ border-radius:11px;
+ border:solid #D8D8D8 1px;
+ background: #D8D8D8;
+ color:#FFFFFF;
+ margin-left:8px;
+}
+
+#szsyjfsbg{
+display: none; 
+position: fixed;
+top: 0%;
+left: 0%;  
+width: 100%;  
+height: 100%;  
+background-color: #777777; 
+z-index:998;  
+-moz-opacity: 0.5; 
+opacity:.50;  
+filter: alpha(opacity=50);
+}
+
+#szsyjfsshow{
+display: none; 
+position: fixed;  
+bottom: 0; 
+width: 100%; 
+background-color: #FFFFFF;  
+z-index:999;  
+overflow: auto;
+}
+
+.cardeditTitleDiv{
+   margin-left:20px;
+   margin-top:10px;
+   height:30px;
+   float:left;
+   font-size: 14px;
+   color: #999999;
+   letter-spacing: -0.39px;
+   width:40%;
+   vertical-align:middle;
+}
+
+.cardeditTitleTable img{
+   border:none;
+}
+
+
+.cardeditTitleSpan{
+   height:100%;
+   margin-left:10px;
+   display:inline;
+   margin-top:0;
+}
+
+.cardeditTitleClose{
+   margin-right:20px;
+   margin-top:16px;
+   height:30px;
+   text-align:right;
+   font-size: 14px;
+   color: #999999;
+   letter-spacing: -0.39px;
+}
+
+.cardeditContentTable{
+    width:100%;
+	margin-left:20px;
+	margin-right:20px;
+	font-size: 14px;
+	color: #999999;
+	letter-spacing: -0.39px;
+}
+
+.cardeditContentTable tr{
+   height:45px;
+   line-height:45px;
+}
+
+.cardeditContentTableTd01{
+   border-bottom: 1px solid #E3E3E3;
+   width:30%
+}
+
+
+.cardeditContentTableTd02{
+   border-bottom: 1px solid #E3E3E3;
+   width:70%
+}
+
+
+.cardeditContentTableTd03{
+   width:30%
+}
+
+
+.cardeditContentTableOprator{
+   border-top: 1px solid #E3E3E3;
+   font-size: 17px;color: #55B1F9;
+   letter-spacing: -0.48px;
+   text-align:center;
+   height:45px;
+   line-height:45px;
+}
+
+.nextHandleOprator{
+  width:50%;
+  float:left;
+  border-right: 1px solid #E3E3E3;
+}
+
+.editCardShowClass{
+   margin-right:20px;
+}
+
+.trxhclass{
+   float: left;
+}
+.trckclass{
+   float:left;
+   height: 45px;
+   margin-top: 6px;
+}
+
+.fontbold{
+    font-weight:bold;
+}

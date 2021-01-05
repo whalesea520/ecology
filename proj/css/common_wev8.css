@@ -1,0 +1,22 @@
+.InputStyle{width:30%!important;}
+.inputstyle{width:30%!important;}
+.Inputstyle{width:30%!important;}
+.inputStyle{width:30%!important;}
+.e8_os{width:30%!important;}
+select.InputStyle{width:10%!important;} 
+select.inputstyle{width:10%!important;} 
+select.inputStyle{width:10%!important;} 
+select.Inputstyle{width:10%!important;} 
+textarea.InputStyle{width:70%!important;}
+span.num{
+	background-color: #00f;
+	background-image: -webkit-linear-gradient(top, #0ff, #60f); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #0ff, #600); /* FF3.6+ */
+	background-image:     -ms-linear-gradient(top, #0ff, #600); /* IE10 */
+	background-image:      -o-linear-gradient(top, #0ff, #600); /* Opera 11.10+ */	
+	color:#fff;
+	font-weight:normal;
+	padding:2px 5px;
+	margin-left:5px!important;
+	border-radius:60px;
+}

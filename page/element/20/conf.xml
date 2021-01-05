@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<id>20</id>  <!--只能是唯一的英文字母-->
+	<title>新回复文档</title>
+	<titleEN>New Reply Docs</titleEN>
+	<desc>查看回复自己创建的文档的回复文档</desc>
+	<icon>resource/image/20_wev8.gif</icon>
+	<linkMode>2</linkMode>
+	<loginView>0</loginView>
+	<type>1</type>
+	<perpage>5</perpage>
+	<private>
+		<jsList> 
+		</jsList>
+	</private>
+	<public>
+		<jsIdList>  
+		</jsIdList>
+		<cssIdList>
+		</cssIdList>
+	</public>
+	<view>
+		<url>/page/element/compatible/view.jsp</url>
+		<method>getNewReplyDocsSppb</method>
+	</view>
+	<setting>
+		<url>/page/element/compatible/setting.jsp</url>
+		<method>getNewReplyDocs_mSettingStr</method>
+	</setting>
+	<more>
+		<url>#</url>
+		<method/>
+	</more>
+	<operation>/page/element/compatible/operation.jsp</operation>
+</root>

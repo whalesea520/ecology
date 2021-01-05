@@ -1,0 +1,91 @@
+/*设置Messager的边框*/
+.corner-top-left{
+	height:4px;width:4px;
+	background:url('corner-top-left_wev8.gif') no-repeat;	
+}
+.corner-top-right{
+	height:4px;width:4px;
+	background:url('corner-top-right_wev8.gif') no-repeat;
+}
+.corner-bottom-left{
+	height:4px;width:4px;
+	background:url('corner-bottom-left_wev8.gif') no-repeat;
+}
+.corner-bottom-right{
+	height:4px;width:4px;
+	background:url('corner-bottom-right_wev8.gif') no-repeat;
+}
+.line-x{
+	height:4px;
+	background:url('line_wev8.gif') repeat-x;
+}
+.line-y{
+	width:4px;
+	background:url('line_wev8.gif') repeat-y;
+}
+#divMessager  .title{ /*设置Messager的Title*/
+	height:31px;
+	background:#BE9219 url('panel_title_wev8.gif') no-repeat;	
+
+	color:#ffffff;
+	font-family:Arial;
+	font-weight:bold;
+	font-size:12px;
+	padding-left:35px;
+	padding-top:8px;
+	position:relative;	
+	cursor:move;
+}
+#divMessager .content{ /*设置整个面板底色*/
+	background:#BE9219;
+}
+
+#userName_panel{ /*设直聊天面板上姓名的相关字体等*/
+	color:#ffffff;
+	font-weight:bold;
+	font-size:14px;
+}
+
+#userState_panel{ /*设直聊天面板上的在线状态的相关字体等*/
+	color:#E2E4A7;
+	font-size:12px;
+}
+
+.alink_panel font{
+	color:#FBF0BA;
+}
+/*设置面板上的链接方式*/
+.alink_panel A{
+	font-size:12px;COLOR: #FBF0BA;  TEXT-DECORATION: none
+}
+.alink_panel A:hover {
+	COLOR: #FBF0BA; TEXT-DECORATION: underline
+}
+
+.alink_panel A:link {
+	COLOR: #FBF0BA; 
+}
+.alink_panel A:visited {
+	COLOR: #FBF0BA;
+}
+
+/*设置logo图像*/
+.divMyLogo{
+	border:1px solid #C8BC72;
+	width:62px;
+    margin-left:10px;
+	cursor:hand;
+}
+.divMyLogo_selected{
+	border:1px solid #ffffff;
+}
+.tab2unselected{
+	color:#ffffff;
+}
+.tab2selected{
+	background-image:url('tab2bgtdselected_wev8.gif');
+	color:#034A7C;
+}
+.window .content .title{
+	background:#BE9219;
+}

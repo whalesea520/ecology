@@ -1,0 +1,58 @@
+.lbsContainer{
+	display: inline-block;
+}
+.lbsContainer a{
+	display: block;
+	padding: 5px 0px 8px 18px;
+	position: relative;
+	text-decoration: none;
+}
+.lbsContainer img.icon{
+	position: absolute;
+	top: 4px;
+	left: 0px;
+	width: 14px;
+	height: 15px;
+}
+.lbsContainer .text{
+	font-weight: normal;
+}
+.ui-btn-_p_lbs{
+	font-size: 12px;
+	background-image: url("/mobilemode/images/mpc/lbs_wev8.png?1") !important;
+	background-repeat: no-repeat !important;
+	background-position: 6px 6px !important;
+	padding-left: 28px !important;
+	padding-right: 10px !important;
+	padding-bottom: 0.6em !important;
+}
+.lbsContainer .lbsEntery{
+	display: inline-block;
+	position: relative;
+	padding-top: 3px;
+	padding-right:8px;
+}
+.lbsContainer .lbsEntery .lbsContent{
+	background-image: url('/mobilemode/images/mpc/lbs2_wev8.png');
+	background-repeat: no-repeat;
+	background-position: 6px center;
+	background-color: rgb(249, 249, 249);
+	padding: 8px 12px 8px 25px;
+	font-size: 11px !important;
+	font-family: 'Microsoft Yahei', Arial;
+	border: 1px solid #EAEBED;
+	border-radius: 20px;
+	color: #0095cc;
+	-webkit-tap-highlight-color:transparent;
+}
+.lbsContainer .lbsEntery .lbsDelete{
+	background-image: url("/mobilemode/images/delete_wev8.png");
+	background-repeat: no-repeat;
+	background-position: right 0px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 26px;
+	height: 26px;
+	-webkit-tap-highlight-color:transparent;
+}

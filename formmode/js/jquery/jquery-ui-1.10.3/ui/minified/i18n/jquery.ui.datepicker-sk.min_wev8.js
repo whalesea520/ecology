@@ -1,0 +1,4 @@
+﻿/*! jQuery UI - v1.10.3 - 2013-05-03
+* http://jqueryui.com
+* Copyright 2013 jQuery Foundation and other contributors; Licensed MIT */
+jQuery(function(e){e.datepicker.regional.sk={closeText:"Zavrie钮",prevText:"&#x3C;Predch谩dzaj煤ci",nextText:"Nasleduj煤ci&#x3E;",currentText:"Dnes",monthNames:["janu谩r","febru谩r","marec","apr铆l","m谩j","j煤n","j煤l","august","september","okt贸ber","november","december"],monthNamesShort:["Jan","Feb","Mar","Apr","M谩j","J煤n","J煤l","Aug","Sep","Okt","Nov","Dec"],dayNames:["nede木a","pondelok","utorok","streda","拧tvrtok","piatok","sobota"],dayNamesShort:["Ned","Pon","Uto","Str","艩tv","Pia","Sob"],dayNamesMin:["Ne","Po","Ut","St","艩t","Pia","So"],weekHeader:"Ty",dateFormat:"dd.mm.yy",firstDay:1,isRTL:!1,showMonthAfterYear:!1,yearSuffix:""},e.datepicker.setDefaults(e.datepicker.regional.sk)});

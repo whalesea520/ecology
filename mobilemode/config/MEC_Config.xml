@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEC-Config>
+	<MEC>
+		<id>navigation</id>
+		<type>Navigation</type>
+		<cssClass>navigation</cssClass>
+		<text>导航栏</text>
+		<isEnabled>1</isEnabled>
+		<contentTemplate>
+			<![CDATA[
+			    <ul class="navContainer">
+			    	$mec_forstart$
+			    	<li class="${groupClass}" onclick="${action}">
+			    		<div class="icon"><table width="100%" height="100%"><tr><td align="center" valign="middle"><img src="${iconpath}" style="${iconstyle}"/></td></tr></table></div>
+			    		<div class="uiname">${uiname}</div><span class="MEC_NumberRemind ${remindclass}" style="display:${reminddisplay};">${remindnum}</span>
+			    		<div class="rightFlag"><img src="/mobilemode/images/homepage/homepage_right_wev8.png"/></div>
+			    	</li>
+			    	$mec_forend$
+			    </ul>			
+			]]>
+		</contentTemplate>
+	</MEC>
+	
+	<MEC>
+		<id>slide</id>
+		<type>Slide</type>
+		<cssClass>slide</cssClass>
+		<text>幻灯片</text>
+		<isEnabled>1</isEnabled>
+		<contentTemplate>
+			<![CDATA[
+				<div id="silde${theId}" class="swipe slide" style="height: ${height}px;">
+					<div class='swipe-wrap'>
+						$mec_forstart$
+						<div onclick="${action}">
+							<img class="pic" src="${pic_path}"/>
+							<div class="desc">${pic_desc}</div>
+						</div>
+						$mec_forend$
+					</div>
+					<div class="slide-point">
+						$mec_forstart$
+						<b class="${pointClass}"></b>
+						$mec_forend$
+					</div>
+				</div>
+			]]>
+		</contentTemplate>
+	</MEC>
+	
+	<MEC>
+		<id>list</id>
+		<type>List</type>
+		<cssClass>list</cssClass>
+		<text>列表</text>
+		<isEnabled>1</isEnabled>
+		<contentTemplate>
+			<![CDATA[
+				<div id="listsearch${theId}" class="listSearch" style="display:${searchDisplay};">
+					<input class="searchKey" type="text" value="" placeholder="请输入..." data-role="none"/>
+					<a class="searchBtn" href="javascript:void(0);" data-role="none">搜索</a>
+				</div>
+				
+				<ul id="list${theId}" swipe="${swipe}" swipeType="${swipeType}" class="listContainer" data-role="listview">
+					$mec_forstart$
+					<li dataurl="${dataurl}">
+						<table>
+							<tr>
+								<td class="imgPart" style="display:${imgPartDisplay};">
+									<div class="imgRowWrap">
+										${imgfield}
+									</div>
+								</td>
+								<td class="fieldPart">
+									<div class="titleRowWrap">
+										${titlefield}
+									</div>
+									
+									$mec_list_row_forstart$
+									<div class="rowWrap">
+										$mec_list_col_forstart$
+										<div class="colWrap">
+											${colfield}
+										</div>
+										$mec_list_col_forend$
+									</div>
+									$mec_list_row_forend$
+								</td>
+							</tr>
+						</table>
+						<div class="slideBtnContainer" style="position: absolute;top:0px;right:-999px;height:100%;overflow:hidden;">
+							${swipeContent}
+						</div>
+					</li>
+					$mec_forend$
+				</ul>
+			]]>
+		</contentTemplate>
+	</MEC>
+	
+	<MEC>
+		<id>html</id>
+		<type>Html</type>
+		<cssClass>html</cssClass>
+		<text>Html</text>
+		<isEnabled>1</isEnabled>
+		<contentTemplate>
+			<![CDATA[
+			
+			]]>
+		</contentTemplate>
+	</MEC>
+	
+	<MEC>
+		<id>toolbar</id>
+		<type>Toolbar</type>
+		<cssClass>toolbar</cssClass>
+		<text>工具栏</text>
+		<isEnabled>1</isEnabled>
+		<contentTemplate>
+			<![CDATA[
+				<table id="toolbar${theId}" class="toolbarContainer">
+					<tr>
+						$mec_forstart$
+						<td>
+							<span class="tbar" onclick="${action}">
+						    	<span class="icon"><img src="${iconpath}" style="${iconstyle}"/><span class="MEC_NumberRemind ${remindclass}" style="display:${reminddisplay};">${remindnum}</span></span>
+					    		<span class="uiname">${uiname}</span>
+					    		<span class="split" style="display: ${splitdisplay};"></span>
+					    	</span>
+						</td>
+						$mec_forend$
+					</tr>
+				</table>
+			]]>
+		</contentTemplate>
+	</MEC>
+	
+	<MEC>
+		<id>chart</id>
+		<type>Chart</type>
+		<cssClass>chart</cssClass>
+		<text>图表</text>
+		<isEnabled>1</isEnabled>
+		<contentTemplate>
+			<![CDATA[
+			]]>
+		</contentTemplate>
+	</MEC>
+	
+	<MEC>
+		<id>map</id>
+		<type>Map</type>
+		<cssClass>map</cssClass>
+		<text>地图</text>
+		<isEnabled>1</isEnabled>
+		<contentTemplate>
+			<![CDATA[
+			]]>
+		</contentTemplate>
+	</MEC>
+	<MEC>
+		<id>timelinr</id>
+		<type>Timelinr</type>
+		<cssClass>timelinr</cssClass>
+		<text>时间轴</text>
+		<isEnabled>1</isEnabled>
+		<contentTemplate>
+			<![CDATA[
+				<table id="timelinr${theId}" class="timelinrContainer">
+					$mec_forstart$
+					<tr>
+						<td class="timePart" style="display:${timePartDisplay};">
+							<div class="timearraw"></div>
+							<div class="timeRowWrap">
+								<div class="year">${year}</div>
+								<div class="monthday">${monthday}</div>
+							</div>
+						</td>
+						<td class="fieldPart">
+							<div class="arrow"></div>
+							<div class="contentPart">
+								$mec_timelinr_group_forstart$
+								<div class="timelinrGroupWrap">
+									<div class="titleRowWrap" onclick="${action}">
+										${titlefield}
+									</div>
+									
+									$mec_timelinr_row_forstart$
+									<div class="rowWrap">
+										$mec_timelinr_col_forstart$
+										<div class="colWrap">
+											${colfield}
+										</div>
+										$mec_timelinr_col_forend$
+									</div>
+									$mec_timelinr_row_forend$
+								</div>
+								<div class="line"></div>
+								$mec_timelinr_group_forend$
+							</div>
+						</td>
+					</tr>
+					$mec_forend$
+				</table>
+			]]>
+		</contentTemplate>
+	</MEC>
+	<MEC>
+		<id>topbutton</id>
+		<type>TopButton</type>
+		<cssClass>topbutton</cssClass>
+		<text>顶部按钮</text>
+		<isEnabled>1</isEnabled>
+		<contentTemplate>
+			<![CDATA[
+				<table class="topBtnContainer">
+	    			<tr>
+	    				<td class="leftTD" width="18%">
+	    					<div style="display:${leftBtnDisplay};">${leftBtnName}</div>
+	    				</td>
+	    				<td class="centerTD" width="*">
+	    					<div>${appName}</div>
+	    				</td>
+	    				<td class="rightTD" width="18%">
+	    					<div style="display:${rightBtnDisplay};">${rightBtnName}</div>
+	    				</td>
+	    			</tr>
+	    		</table>
+			]]>
+		</contentTemplate>
+	</MEC>
+	<MEC>
+		<id>navpanel</id>
+		<type>NavPanel</type>
+		<cssClass>navpanel</cssClass>
+		<text>导航面板</text>
+		<isEnabled>1</isEnabled>
+		<contentTemplate>
+			<![CDATA[
+				<table class="navPanelContainer ${containerclass}">
+					$mec_row_forstart$
+					<tr>
+						$mec_col_forstart$
+						<td onclick="${action}">
+							<span class="nPanel">
+						    	<span class="icon"><img src="${iconpath}" style="${iconstyle}"/><span class="MEC_NumberRemind ${remindclass}" style="display:${reminddisplay};">${remindnum}</span></span>
+					    		<span class="uiname">${uiname}</span>
+					    	</span>
+						</td>
+						$mec_col_forend$
+					</tr>
+					$mec_row_forend$
+				</table>
+			]]>
+		</contentTemplate>
+	</MEC>
+	<MEC>
+		<id>tree</id>
+		<type>Tree</type>
+		<cssClass>tree</cssClass>
+		<text>树形</text>
+		<isEnabled>1</isEnabled>
+		<contentTemplate>
+			<![CDATA[
+				<div id="tree${theId}" class="treeContainer">
+					<div class="treeloading">
+						<div class="treeloading_mask"></div>
+						<div class="treeloading_text"></div>
+					</div>
+					
+					<div class="treesearch">
+						<input class="searchKey" type="text" value="" placeholder="请输入..." data-role="none"/>
+						<a class="searchBtn" href="javascript:void(0);" data-role="none">搜索</a>
+					</div>
+					
+					<div class="treetitle">
+						<ul>
+						</ul>
+						<div class="toParent">
+							<i class="arrow"></i>
+						</div>
+						<div class="searchText">
+							<div class="searchInnerTextWrap">
+								<div class="searchInnerText"></div>
+								<div class="searchCanel"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			]]>
+		</contentTemplate>
+	</MEC>
+	
+	<MEC>
+		<id>touchbutton</id>
+		<type>TouchButton</type>
+		<cssClass>touchbutton</cssClass>
+		<text>浮动按钮</text>
+		<isEnabled>1</isEnabled>
+		<unique>1</unique> <!-- 是否唯一，如果值为1则在自定义页面中一个页面最多只能添加一个这种控件，不为1或者不填写此属性则没有此限制 -->
+		<contentTemplate>
+			<![CDATA[
+				
+			]]>
+		</contentTemplate>
+	</MEC>
+	
+	
+	<MEC>
+		<id>countdown</id>
+		<type>Countdown</type>
+		<cssClass>countdown</cssClass>
+		<text>倒计时</text>
+		<isEnabled>1</isEnabled>
+		<contentTemplate>
+			<![CDATA[
+				
+			]]>
+		</contentTemplate>
+	</MEC>
+	
+	<MEC>
+		<id>urllist</id>
+		<type>UrlList</type>
+		<cssClass>urllist</cssClass>
+		<text>Url列表</text>
+		<isEnabled>1</isEnabled>
+		<contentTemplate>
+			<![CDATA[
+				<div id="listsearch${theId}" class="listSearch" style="display:${searchDisplay};">
+					<input class="searchKey" type="text" value="" placeholder="请输入..." data-role="none"/>
+					<a class="searchBtn" href="javascript:void(0);" data-role="none">搜索</a>
+				</div>
+					
+				<ul id="list${theId}" swipe="${swipe}" swipeType="${swipeType}" class="listContainer" data-role="listview">
+					$mec_forstart$
+					<li dataurl="${dataurl}">
+						<table>
+							<tr>
+								<td class="imgPart" style="display:${imgPartDisplay};">
+									<div class="imgRowWrap">
+										${imgfield}
+									</div>
+								</td>
+								<td class="fieldPart">
+									<div class="titleRowWrap">
+										${titlefield}
+									</div>
+									
+									$mec_list_row_forstart$
+									<div class="rowWrap">
+										$mec_list_col_forstart$
+										<div class="colWrap">
+											${colfield}
+										</div>
+										$mec_list_col_forend$
+									</div>
+									$mec_list_row_forend$
+								</td>
+							</tr>
+						</table>
+						<div class="slideBtnContainer" style="position: absolute;top:0px;right:-999px;height:100%;overflow:hidden;">
+							${swipeContent}
+						</div>
+					</li>
+					$mec_forend$
+				</ul>
+			]]>
+		</contentTemplate>
+	</MEC>
+	
+	<MEC>
+		<id>form</id>
+		<type>Form</type>
+		<cssClass>form</cssClass>
+		<text>表单</text>
+		<isEnabled>1</isEnabled>
+		<isFormComponent>1</isFormComponent>
+		<contentTemplate>
+			<![CDATA[
+				
+			]]>
+		</contentTemplate>
+	</MEC>
+	
+	<MEC>
+		<id>finputtext</id>
+		<type>FInputText</type>
+		<cssClass>finputtext</cssClass>
+		<text>单行文本</text>
+		<isEnabled>1</isEnabled>
+		<isFormComponent>1</isFormComponent>
+		<contentTemplate>
+			<![CDATA[
+				<div class="Design_FInputText_Field ${Design_Field_Required}" id="div${theId}">
+					<div class="Design_FInputText_Fieldlabel">${fieldlabel}</div>
+					<div class="Design_FInputText_Fielddom">
+						<input name="fieldname_${fieldname}" id="${theId}" value="${value}" data-role="none" fieldlabel="${fieldlabel}" require="${required}"></input>
+					</div>
+				</div>
+			]]>
+		</contentTemplate>
+	</MEC>
+	
+	<MEC>
+		<id>fhidden</id>
+		<type>FHidden</type>
+		<cssClass>fhidden</cssClass>
+		<text>隐藏域</text>
+		<isEnabled>1</isEnabled>
+		<isFormComponent>1</isFormComponent>
+		<contentTemplate>
+			<![CDATA[
+			<div class="Design_FHidden_Container" id="div${theId}">
+				<div class="Design_FHidden_Tip">
+					<input type="hidden" name="fieldname_${fieldname}" value="${value}"></input>
+				</div>
+			</div>
+			]]>
+		</contentTemplate>
+	</MEC>
+	
+	<MEC>
+		<id>ftextarea</id>
+		<type>FTextarea</type>
+		<cssClass>ftextarea</cssClass>
+		<text>多行文本</text>
+		<isEnabled>1</isEnabled>
+		<isFormComponent>1</isFormComponent>
+		<contentTemplate>
+			<![CDATA[
+				<div class="Design_FTextarea_Field ${Design_Field_Required}" id="div${theId}">
+					<div class="Design_FTextarea_Fieldlabel">${fieldlabel}</div>
+					<div class="Design_FTextarea_Fielddom">
+						<textarea name="fieldname_${fieldname}" id="${theId}" data-role="none" fieldlabel="${fieldlabel}" require="${required}">${value}</textarea>
+					</div>
+				</div>
+			]]>
+		</contentTemplate>
+	</MEC>
+	
+	<MEC>
+		<id>fselect</id>
+		<type>FSelect</type>
+		<cssClass>fselect</cssClass>
+		<text>选择项</text>
+		<isEnabled>1</isEnabled>
+		<isFormComponent>1</isFormComponent>
+		<contentTemplate>
+			<![CDATA[
+				<div class="Design_FSelect_Field ${Design_Field_Required}" id="div${theId}">
+					<div class="Design_FSelect_Fieldlabel">${fieldlabel}</div>
+					<div class="Design_FSelect_Fielddom">
+						<select class="MADFS_Left_Select" name="fieldname_${fieldname}" data-role="none" id="${theId}" fieldlabel="${fieldlabel}" require="${required}">
+			          		$mec_forstart$
+								<option value="${value}" ${defSelected}>${name}</option>
+			          		$mec_forend$
+			          	</select>
+				  	</div>
+				</div>
+			]]>
+		</contentTemplate>
+	</MEC>
+	
+	<MEC>
+		<id>fbutton</id>
+		<type>FButton</type>
+		<cssClass>fbutton</cssClass>
+		<text>表单按钮</text>
+		<isEnabled>1</isEnabled>
+		<unique>1</unique> <!-- 是否唯一，如果值为1则在自定义页面中一个页面最多只能添加一个这种控件，不为1或者不填写此属性则没有此限制 -->
+		<isFormComponent>1</isFormComponent>
+		<contentTemplate>
+			<![CDATA[
+				<div class="fButtons" id="fButtons${theId}">
+					$mec_forstart$
+					<div class="fButton" id="${id}" formid="${formid}" action="${action}" title="${title}">${buttonname}</div>
+					$mec_forend$
+				</div>
+			]]>
+		</contentTemplate>
+	</MEC>
+	
+</MEC-Config>

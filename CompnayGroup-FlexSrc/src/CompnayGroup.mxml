@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" 
+				xmlns="http://www.degrafa.com/2007"
+				width="100%" height="100%"
+				paddingLeft="5" paddingRight="5" paddingTop="0" paddingBottom="0"
+				backgroundColor="white" historyManagementEnabled="false"
+				horizontalScrollPolicy="auto" verticalScrollPolicy="auto"
+				layout="vertical" applicationComplete="init()" 
+				xmlns:control="control.*" 
+				xmlns:flexlib="http://code.google.com/p/flexlib/">	
+	
+	
+	<mx:Style>	
+		
+		Application {
+			font-size:12px;
+			font-style: normal;
+			font-weight:bold;
+		}
+
+		
+		TextInput {
+			color: #666666;
+			fontSize: 12;
+			fontWeight: normal;
+			
+		}
+		
+		TextArea {
+			color: #666666;
+			fontSize: 12;
+			fontWeight: normal;
+			
+		}
+		
+		
+		Button {
+			fillAlphas: 1, 1, 1, 1;
+			fillColors: #51a7d6, #51a7d6, #51a7d6, #51a7d6;
+			color: #ffffff;
+			textRollOverColor: #ffffff;
+			textSelectedColor: #ffffff;
+			borderColor: #0b60a1;
+			themeColor: #0b60a1;
+			fontSize: 12;
+			fontWeight: normal;
+			paddingLeft:0;
+			paddingRight:0;
+			letterSpacing: 0;
+			
+		}
+		ControlBar {
+			highlightAlphas: 0.38, 0;
+			fillAlphas: 1, 0;
+			fillColors: #ffffff, #ffffff;
+			backgroundAlpha: 1;
+			cornerRadius: 0;
+			dropShadowEnabled: true;
+			backgroundImage:Embed(source='assets/bg-foot.png');
+			borderSkin:ClassReference( 'com.asfusion.skins.BoxModel' );
+			backgroundRepeat: repeat-x;
+		}
+		
+		Label{
+			fontSize:12;
+			color:#07629B;
+		}
+		
+		ToolTip{
+			fontSize:12;
+		}
+		ComboBox{
+			fontSize:12;
+			fontWeight: normal;
+		}
+		HSlider {
+			dataTipOffset: -41;
+			showTrackHighlight: false;
+			invertThumbDirection: true;
+			labelStyleName: "myhSliderLabelStyle";
+		}
+		
+		.myhSliderLabelStyle {
+			fontSize: 11;
+			fontWeight: normal;
+		}
+		
+		.companyNode{
+			cornerRadius:0;
+		}
+		
+		.companyNodeSelected{
+			cornerRadius:0;
+			fillColors: #05fb45, #05fb45, #05fb45, #05fb45;
+		}
+		.labelText{
+			cornerRadius:0;
+			fillAlphas: 0, 0, 0, 0;
+			color: #686868;
+			textRollOverColor: #686868;
+			textSelectedColor: #686868;
+			borderColor: #E0E0E0;
+			themeColor: #E0E0E0;
+			highlightAlphas: 0, 0;
+		}
+		.test{
+			color:#000000;
+		}
+		
+		Validator {
+			
+			fontSize: 12;
+			
+		}
+	</mx:Style>
+
+	<mx:Script source="zoom.as" />
+	<mx:Script source="biz.as" />
+	<mx:Script source="magnifier.as" />
+	<mx:Script source="other.as" />
+	
+	<mx:Metadata> 
+		[ResourceBundle("resources")] 
+	</mx:Metadata> 
+	
+	<mx:Script>
+		<![CDATA[
+			import control.DefaultOrgChartNode;
+			import control.IOrgChartNode;
+			import control.OrgChartEvent;
+			
+			import mx.controls.Alert;
+			import mx.controls.listClasses.IListItemRenderer;
+			import mx.effects.easing.Bounce;
+			import mx.resources.ResourceManager;
+			
+			private function init():void{
+				staticObj = new StaticObj; 
+				canEdit=ExternalInterface.call("getCanEdit");
+				oc.canEdit = canEdit;
+				oc.canView =true;
+				initZoom();
+				initBiz();
+				
+				var http:HTTPService = new HTTPService();
+				http.addEventListener(ResultEvent.RESULT,rightOpen);
+				http.url="/companygroup/manage/companyoperation.jsp?method=getOpenright"
+				http.method = "post";
+				http.resultFormat = "text";
+				var val:URLVariables = new URLVariables;
+				val.random = Math.random();
+				http.send(val);
+				
+				
+				
+				var http03:HTTPService = new HTTPService;
+				http03.url="/companygroup/manage/companyoperation.jsp?method=getUserLanguage";
+				http03.addEventListener(ResultEvent.RESULT,setUserLanguage);
+				http03.method = "post";
+				http03.resultFormat = "text";
+				http03.send()
+					
+				//添加回车监听
+				this.addEventListener(KeyboardEvent.KEY_DOWN,KeyboardListener);
+				
+				
+			}
+			
+			//监听enter事件
+			private function KeyboardListener(event:KeyboardEvent):void{
+				if(event.keyCode==Keyboard.ENTER){
+					doSearch();
+				}
+			}
+			
+			public function setUserLanguage(event:ResultEvent):void{
+				
+				var mess:Object=event.result;
+				var UserLanguage:String = StringUtil.trim(mess.toString());
+				if(UserLanguage=="7"){
+					//简体中文
+					ResourceManager.getInstance().localeChain=["zh_CN"]; 		
+					
+				}else if(UserLanguage=="8"){
+					//英文
+					ResourceManager.getInstance().localeChain=["en_US"]; 		
+					
+				}else if(UserLanguage=="9"){
+					//繁体中文
+					ResourceManager.getInstance().localeChain=["zh_TW"]; 		
+				}
+				
+				
+				
+				var s : String = resourceManager.getString("resources", 'LM001'); 
+				LM001.text=s;
+				s = resourceManager.getString("resources", 'LM002'); 
+				LM002.label=s;
+				s = resourceManager.getString("resources", 'LM003'); 
+				LM003.label=s;
+				s = resourceManager.getString("resources", 'LM004'); 
+				LM004.text=s;
+				s = resourceManager.getString("resources", 'LM005'); 
+				LM005.text=s;
+				s = resourceManager.getString("resources", 'LM006'); 
+				LM006.text=s;
+				s = resourceManager.getString("resources", 'LM007'); 
+				LM007.text=s;
+				s = resourceManager.getString("resources", 'LM008'); 
+				LM008.text=s;
+				s = resourceManager.getString("resources", 'LM009'); 
+				LM009.text=s;
+				s = resourceManager.getString("resources", 'LM010'); 
+				LM010.text=s;
+				s = resourceManager.getString("resources", 'LM011'); 
+				LM011.text=s;
+				s = resourceManager.getString("resources", 'zoomSlider'); 
+				
+				var s12 : String = resourceManager.getString("resources", 'LM012'); 
+				var s13 : String = resourceManager.getString("resources", 'LM013'); 
+				var s14 : String = resourceManager.getString("resources", 'LM014'); 
+				var myArray:Array = [s12, s13, s14];
+				
+				zoomSlider.labels=myArray;
+				//zoomSlider.labels(myArray);
+				
+				//text="集团列表" id="LM001"
+				//label="A-B公司关系"  id="LM002"
+				//label="刷新" id="LM003"
+				//text="业务类型" id="LM004"
+				//text="公司归属" id="LM005"
+				//text="关键字" id="LM006"
+				//text="公司注册" id="LM007"
+				//text="公司资料" id="LM008"
+				//text="保存&amp;版本" id="LM009"
+				//text="版本管理" id="LM010"
+				//text="日志" id="LM011"
+				//zoomSlider   labels="[缩小,标准,放大]"
+				
+				
+			}
+			public function rightOpen(event:ResultEvent):void{
+				
+				var mess:Object=event.result;
+				var teststr:String = StringUtil.trim(mess.toString());
+				if(teststr=="ok"){
+					gszc_zzl01.visible=false;//隐藏对象
+					gszc_zzl01.includeInLayout=false;//也没不占空间
+					gszc_zzl02.visible=false;//隐藏对象
+					gszc_zzl02.includeInLayout=false;//也没不占空间
+					gszc_zzl03.visible=false;//隐藏对象
+					gszc_zzl03.includeInLayout=false;//也没不占空间
+					gszc_zzl04.visible=false;//隐藏对象
+					gszc_zzl04.includeInLayout=false;//也没不占空间
+				}else{
+					gszc_zzl01.visible=true;//隐藏对象
+					gszc_zzl01.includeInLayout=true;//也没不占空间
+					gszc_zzl02.visible=true;//隐藏对象
+					gszc_zzl02.includeInLayout=true;//也没不占空间
+					gszc_zzl03.visible=true;//隐藏对象
+					gszc_zzl03.includeInLayout=true;//也没不占空间
+					gszc_zzl04.visible=true;//隐藏对象
+					gszc_zzl04.includeInLayout=true;//也没不占空间
+					
+				}
+				
+			}
+			
+			private function onOrgTreeClick(event:Event):void{
+				//Alert.show("selected value="+ event + Tree(event.target).selectedItem);
+				//oc.selected = Tree(event.target).selectedItem;
+			}
+			
+			private function onOrgChartSelected(event:OrgChartEvent):void{
+				var node:DefaultOrgChartNode =  event.node as DefaultOrgChartNode;
+				var spw:Number = event.node.x - orgChartContainer.width/2;
+				var spv:Number = event.node.y - orgChartContainer.height/2;
+				orgChartContainer.horizontalScrollPosition = spw;
+				if(selectedEffect.isPlaying){
+					selectedEffect.end();
+				} 
+				//selectedEffect.play([node]);
+				//var index:Number = orgTree.getItemIndex(node.data);
+				//orgTree.selectedIndex = index;
+				//orgTree.expandItem(node.data,true);
+				//orgTree.expandChildrenOf(node.data, true);
+				//orgTree.scrollToIndex(index);
+				//var item:IListItemRenderer = orgTree.indexToItemRenderer(index);
+				//orgTree.verticalScrollPosition = item.y - orgTree.height/2;
+			}
+		]]>
+	</mx:Script>
+	<mx:HTTPService id="httpService" showBusyCursor="true" 
+					result="resultHandler1(event)"  fault="faultHandler(event)"
+					url="{serverURL}" resultFormat="e4x" /> 
+		
+		<!--<control:Circle width="5" height="5" radius="2" 
+					   backgroundColor="0xFF0000" borderColor="0xFF0000"  x="0">
+			
+		</control:Circle>	
+	-->
+	<mx:ControlBar horizontalAlign="center" horizontalGap="0" width="100%">
+		<mx:VBox  >
+			<mx:HBox verticalAlign="middle" horizontalGap="1">
+				
+				<!--集团列表-->
+				<mx:Label  id="LM001" width="60" paddingLeft="0">
+				</mx:Label>
+				<mx:ComboBox id="groupList" height="20" creationComplete="loadGroupList()" itemRenderer="mx.controls.Label"   change="changeGroup()" width="255" >
+					
+				</mx:ComboBox>
+				
+				
+				<mx:Button  id="LM002" width="85" click="showPopUpA_B()"  height="20">
+					
+				</mx:Button>
+				
+				
+				
+				<mx:Button  id="LM003" height="20"  width="85" click="showCompanys('all','0')">
+				</mx:Button>
+				
+				
+				
+			</mx:HBox>
+			<mx:HBox verticalAlign="middle">
+				<mx:VBox width="380" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+					<mx:HBox horizontalGap="1" horizontalAlign="middle" >
+							
+						<!--业务类型-->
+						<mx:Label  id="LM004"  width="60" paddingLeft="0">
+						</mx:Label>
+						<mx:ComboBox id="businesstypeList"  paddingLeft="0"   height="20"  width="100" dataProvider="{searchType.businesstypeList}" maxWidth="100" >
+						</mx:ComboBox>
+						
+						<mx:Label   width="15"></mx:Label>
+						<!--公司归属-->
+						<mx:Label  id="LM005"  width="60" paddingLeft="0">
+							
+						</mx:Label>
+						
+						<mx:ComboBox id="companyvestinList" height="20" width="100"  dataProvider="{searchType.companyvestinList}"   maxWidth="100" >
+							
+						</mx:ComboBox>
+						
+					</mx:HBox>
+					<mx:HBox horizontalGap="1" horizontalAlign="middle" width="420">
+						
+						<!--关键字-->
+						<mx:Label  id="LM006" width="60" paddingLeft="0">
+						</mx:Label>
+						<mx:ComboBox id="region" dataProvider="{searchType.searchTypeList}"  height="20" width="100">
+						</mx:ComboBox>
+						
+						<mx:Label   width="15"></mx:Label>
+						<mx:TextInput id="keyValue" width="160">
+							
+						</mx:TextInput>
+						
+					</mx:HBox>
+				</mx:VBox>
+				<mx:VBox >
+					<!--搜索按钮-->	
+					<mx:Image id="searchIcon" source="@Embed(source='assets/BI_16.jpg')" buttonMode="true"  click="doSearch()">
+					</mx:Image>
+				</mx:VBox>
+			</mx:HBox>
+			
+			
+		</mx:VBox>
+		<mx:VBox>
+			
+			
+			<mx:HBox paddingLeft="10">
+				<mx:Image source="{line}" id="gszc_zzl01">
+					
+				</mx:Image>
+				<mx:VBox horizontalAlign="center" buttonMode="true"  id="gszc_zzl02" click="navigateToURL(new URLRequest('/cpcompanyinfo/CompanyInfoSurvey.jsp?openNew=T'),'_blank')">
+					<mx:Image source="@Embed(source='assets/image1.png')">
+						
+					</mx:Image>
+					<mx:Label  id="LM007">
+						
+					</mx:Label>
+				</mx:VBox>
+				<mx:Image source="{line}">
+					
+				</mx:Image>
+				<mx:VBox horizontalAlign="center" buttonMode="true" click="navigateToURL(new URLRequest('/cpcompanyinfo/CompanyInfoSurvey.jsp'),'_blank')">
+					<mx:Image source="@Embed(source='assets/image2.png')">
+						
+					</mx:Image>
+					<mx:Label  id="LM008">
+						
+					</mx:Label>
+				</mx:VBox>
+				<mx:Image source="{line}" id="gszc_zzl03">
+					
+				</mx:Image>
+				
+				<mx:VBox horizontalAlign="center" click="saveAndCreateVersion()" buttonMode="true"  id="gszc_zzl04">
+					<mx:Image source="@Embed(source='assets/image4.png')">
+						
+					</mx:Image>
+					<mx:Label id="LM009">
+						
+					</mx:Label>
+				</mx:VBox>
+				<mx:Image source="{line}">
+					
+				</mx:Image>
+				<mx:VBox horizontalAlign="center" click="showGroupVersionListPopUp()" buttonMode="true">
+					<mx:Image source="@Embed(source='assets/image5.png')">
+						
+					</mx:Image>
+					<mx:Label id="LM010">
+						
+					</mx:Label>
+				</mx:VBox>
+				<mx:Image source="{line}">
+					
+				</mx:Image>
+				<mx:VBox horizontalAlign="center" paddingLeft="12" paddingRight="12" click="showLogList()" buttonMode="true">
+					<mx:Image source="@Embed(source='assets/image6.png')">
+						
+					</mx:Image>
+					<mx:Label id="LM011">
+						
+					</mx:Label>
+				</mx:VBox>
+				<mx:Image source="{line}">
+					
+				</mx:Image>
+			</mx:HBox>
+			
+			
+			<mx:HBox width="100%">
+				<mx:HSlider id="zoomSlider" width="100%" maximum="100" minimum="0"  change="zoomInOrOut()" showDataTip="false" tickInterval="50" value="50" snapInterval="10"
+							>
+					
+				</mx:HSlider>
+			</mx:HBox>
+		</mx:VBox>
+		
+		
+		
+	</mx:ControlBar>
+		<flexlib:DragScrollingCanvas 
+			id="orgChartContainer" 
+			width="100%" height="100%"
+			horizontalCenter="0"
+			verticalCenter="0"
+			childrenDoDrag="true"
+			mouseDown="onChartMouseDown(event)" 
+			mouseUp="onChartMouseUp(event)" 
+			horizontalScrollPolicy="auto" verticalScrollPolicy="auto" >
+			<control:OrgChart id="oc" visible="false"  themeColor="0x000000"
+							  horizontalSpacing="20" verticalSpacing="60"
+							  
+							  minWidth="{orgChartContainer.width}"
+							  creationCompleteEffect="{fadeIn}" 
+							  resize="setHorizontalCenterOrNot()"
+							  creationComplete="setHorizontalCenterOrNot()"
+							  show="setHorizontalCenterOrNot()"
+							  nodeSelected="onOrgChartSelected(event)"
+							  nodeClick="onNodeClick(event)" scaleX="1" scaleY="1"
+							  container="{orgChartContainer}"/>
+		</flexlib:DragScrollingCanvas>	
+		
+				
+		
+		<mx:Fade id="fadeIn" alphaFrom="0" alphaTo="1" duration="500" />
+		
+		<mx:Resize id="resizeEffect" duration="300"/>
+		<mx:Zoom id="zoomEffect" duration="400" target="{oc}" />
+		<mx:Sequence id="selectedEffect">
+			<mx:Rotate />
+		</mx:Sequence>
+
+	<mx:Script>
+		<![CDATA[
+			import common.StaticObj;
+			import com.adobe.serialization.json.JSON;
+			import mx.collections.ArrayCollection;
+
+			import mx.core.IFlexDisplayObject;
+			import mx.events.CloseEvent;
+			import mx.managers.PopUpManager;
+			import mx.utils.StringUtil;
+			
+			import util.CompanyType;
+			import util.SearchType;
+			
+			import view.ComnaySelectView;
+			import view.CompanyInfoView;
+			import view.GroupVersionView;
+			import view.GroupVersionListView;
+			import view.LogListView;
+			import view.GroupSelectView;
+
+			import view.GroupVersionDetailView;
+			
+			[bindable]
+			public var searchType:SearchType=SearchType.getOne();
+			
+			[bindable]
+			private var companyType:CompanyType=CompanyType.getOne();
+			
+			[Embed(source="assets/line.png")]
+			[bindable]
+			public var line:Class;
+			[bindable]
+			public var staticObj:StaticObj;
+			
+			public var canEdit:Boolean=false;
+			
+			
+			private function addSearchType():void{
+				searchType.addSearchType("aaa","aaa");
+			}
+			
+			public function showCompany(id:String):void {
+				
+				staticObj.companyinfo.queryById(id);
+					
+			}
+			
+			public function showCompanys(key:String,value:String):void{
+				//oc.savePolyLineInfo();
+				var http:HTTPService = new HTTPService();
+				
+				http.addEventListener(ResultEvent.RESULT,reFresh);
+				http.addEventListener(FaultEvent.FAULT,myFaultErrorEvent);
+				//if(event.result != null && event.result is XML){
+				http.url="/companygroup/manage/companyoperation.jsp?method=getCompanysByKeyWord"
+				http.method = "post";
+				http.resultFormat = "e4x";
+				
+				var val:URLVariables = new URLVariables;
+				val.key = key;
+				val.value=value;
+				val.groupid = staticObj.groupid;
+				val.random = Math.random();
+				
+				http.send(val);
+				
+			
+			}
+			
+			public function doSearch(){
+				var keyword:String = StringUtil.trim(keyValue.text);
+				//if(keyword==""){
+					//Alert.okLabel="确定";
+					//Alert.show("请输入关键字！");
+					//return;
+				//}
+				var key:String = region.selectedItem.data;
+				var jt_key:String=groupList.selectedItem.data;
+				var yw_key:String=businesstypeList.selectedItem.data;
+				var gs_key:String=companyvestinList.selectedItem.data;
+				
+				//Alert.show("公司董事还是法人"+key);
+				//Alert.show("集团的id"+jt_key);
+				//Alert.show("业务类型的id"+yw_key);
+				//Alert.show("公司归属的id"+gs_key);
+				
+				//win = PopUpManager.createPopUp(this.parent,GroupSelectView,true)
+				//win.width=435;
+				//win.height=345;
+				//win.addEventListener(CloseEvent.CLOSE, titleWindow_close);   
+				//PopUpManager.centerPopUp(win);
+				
+				var http:HTTPService = new HTTPService();
+				
+				http.addEventListener(ResultEvent.RESULT,reFresh);
+				http.addEventListener(FaultEvent.FAULT,myFaultErrorEvent);
+				//if(event.result != null && event.result is XML){
+				http.url="/companygroup/manage/companyoperation.jsp?method=getCompanysByKeyWord"
+				http.method = "post";
+				http.resultFormat = "e4x";
+				
+				var val:URLVariables = new URLVariables;
+				val.key = keyword;
+				val.value=key;
+				val.jt_key=jt_key;
+				val.yw_key=yw_key;
+				val.gs_key=gs_key;
+				val.groupid = staticObj.groupid;
+				val.random = Math.random();
+				
+				http.send(val);
+				
+				
+				
+			}
+			
+			
+			public function reFresh(event:ResultEvent):void{
+				
+				oc.clear();
+				try{
+					if(event.result != null && event.result is XML){
+						var result:XML = event.result as XML;
+						//orgTree.dataProvider = result;
+						
+						var data:ICollectionView = new XMLListCollection(new XMLList(result));
+						oc.dataProvider1 = data;
+						oc.visible = true;
+						
+					}
+				}catch(e:Error){
+					
+				}
+			}
+			
+			public function selectGroupid(event:ResultEvent):void{
+				
+				//oc.clear();
+				try{
+					if(event.result != null && event.result is XML){
+						var result:XML = event.result as XML;
+						//orgTree.dataProvider = result;
+						
+						var data:ICollectionView = new XMLListCollection(new XMLList(result));
+						oc.dataProvider1 = data;
+						oc.visible = true;
+					}
+				}catch(e:Error){
+					
+				}
+			}
+			
+			public function myFaultErrorEvent(myFaultEvent:FaultEvent):void{    //异常处理函数   
+				//Alert.show("333");
+				trace(myFaultEvent.message);   
+			}  
+			
+			public function saveAndCreateVersion(){
+				if(canEdit){
+					oc.savePolyLine();
+				}else{
+					Alert.okLabel="确定";
+					Alert.show("您没有权限!")
+				}
+			}
+		
+			
+			public var win:IFlexDisplayObject;
+			/*显示公司信息*/
+			public function showCompanyPopUp():void{
+					//创建弹出窗口
+					win = PopUpManager.createPopUp(this.parent,CompanyInfoView,true)
+					win.width=490;
+					win.height=415;
+					win.addEventListener(CloseEvent.CLOSE, titleWindow_close);   
+					//titleWindow.addChild(label);    
+					PopUpManager.centerPopUp(win);
+			
+			}
+			
+			public function showGroupVersionPopUp():void{
+				
+				win = PopUpManager.createPopUp(this.parent,GroupVersionView,true)
+				win.width=490;
+				win.height=300;
+				win.addEventListener(CloseEvent.CLOSE, titleWindow_close);   
+				//titleWindow.addChild(label);    
+				PopUpManager.centerPopUp(win);
+				
+			}
+			
+			public function showGroupVersionListPopUp():void{
+				win = PopUpManager.createPopUp(this.parent,GroupVersionListView,true)
+				win.width=490;
+				win.height=300;
+				win.addEventListener(CloseEvent.CLOSE, titleWindow_close);   
+				//titleWindow.addChild(label);    
+				PopUpManager.centerPopUp(win);
+			}
+			
+			public function showVersionDetail(id:String):void{
+				//Alert.show(id);
+				win = PopUpManager.createPopUp(this.parent,GroupVersionDetailView,true)
+				win.y=30;
+				win.width=800;
+				win.height=500;
+				win.name=id;
+				win.addEventListener(CloseEvent.CLOSE, titleWindow_close);   
+				//titleWindow.addChild(label);    
+				PopUpManager.centerPopUp(win);
+			}
+			
+			private function showPopUpA_B():void{
+				win = PopUpManager.createPopUp(this,view.ComnaySelectView,true)
+				
+				win.addEventListener(CloseEvent.CLOSE, titleWindow_close);
+				PopUpManager.centerPopUp(win);
+			}
+			
+			
+			/**
+			 * 关闭弹出窗口
+			 */ 
+			private function titleWindow_close(evt:CloseEvent):void {   
+				PopUpManager.removePopUp(win);   
+			} 
+			
+			
+			/**
+			 * 放大与缩小
+			 */ 
+			private function zoomInOrOut():void{
+				//Alert.show(zoomSlider.value+"");
+				if(zoomSlider.value>50){
+					oc.scaleX = 1+(zoomSlider.value-50)/10*.2;
+					oc.scaleY = 1+(zoomSlider.value-50)/10*.2;
+				
+				}else if(zoomSlider.value<50){
+					oc.scaleX = 1-(50-zoomSlider.value)/10*.2;
+					oc.scaleY = 1-(50-zoomSlider.value)/10*.2;
+					if(oc.scaleX<0.1){
+						oc.scaleX = 0.15
+						oc.scaleY = 0.15
+					}
+				}else{
+					oc.scaleX = 1;
+					oc.scaleY = 1;
+				}
+			}
+			
+			/**
+			 * 获取所有集团列表		 
+			 */
+			private function loadGroupList(){
+				var http:HTTPService = new HTTPService();
+				
+				http.addEventListener(ResultEvent.RESULT,bindGroupInfo);
+				http.addEventListener(FaultEvent.FAULT,myFaultErrorEvent);
+				
+				http.url="/companygroup/manage/companyoperation.jsp?method=getGroupList"
+				http.method = "post";
+				http.resultFormat = "e4x";
+				
+			
+				http.send();
+			}
+			
+			/**
+			 * 绑定集团下拉选择框数据
+			 */ 
+			private function bindGroupInfo(event:ResultEvent):void{
+				
+//				Alert.show(rawData);
+				//zzl-判断返回的数据是否是xml文件
+				if(event.result != null && event.result is XML){
+					var rawData:String = String(event.result); 
+					var arr:Array = (JSON.decode(rawData) as Array); 
+					var content:ArrayCollection = new ArrayCollection(arr); 
+					groupList.dataProvider=content;
+					staticObj.groupid = groupList.selectedItem.data;
+					groupList.dropdown.toolTip = groupList.toolTip
+						
+				}
+				
+			}
+			
+			private function changeGroup(){
+				//Alert.show(groupList.selectedItem.data);
+				businesstypeList.selectedIndex=0;
+				companyvestinList.selectedIndex=0;
+				staticObj.groupid = groupList.selectedItem.data;
+				
+				var http:HTTPService = new HTTPService();
+				
+				http.addEventListener(ResultEvent.RESULT,reFresh);
+				http.addEventListener(FaultEvent.FAULT,myFaultErrorEvent);
+				
+				http.url="/companygroup/manage/companyoperation.jsp?method=getGroupInfo"
+				http.method = "post";
+				http.resultFormat = "e4x";
+				var val:URLVariables = new URLVariables;
+				val.groupid = staticObj.groupid;
+				val.random = Math.random();
+				http.send(val);
+			}
+			
+			private function showLogList(){
+				win = PopUpManager.createPopUp(this.parent,LogListView,true)
+				win.width=730;
+				win.height=390;
+				win.addEventListener(CloseEvent.CLOSE, titleWindow_close);   
+				//titleWindow.addChild(label);    
+				PopUpManager.centerPopUp(win);
+			}
+			
+		]]>
+	</mx:Script>
+	
+	
+	
+	
+	
+	
+</mx:Application>

@@ -1,0 +1,2 @@
+CREATE OR REPLACE PROCEDURE bill_CptFetchDetail_Select (cptfetchid1 	integer, flag out integer , msg out varchar2, thecursor IN OUT cursor_define.weavercursor)  AS begin open thecursor for SELECT * from  bill_CptFetchDetail WHERE ( cptfetchid	 = cptfetchid1) order by id; end;
+/

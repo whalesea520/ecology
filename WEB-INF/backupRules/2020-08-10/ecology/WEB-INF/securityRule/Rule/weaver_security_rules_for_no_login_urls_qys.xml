@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<no-login-urls>
+		<url>/interface/Entrance.jsp</url>
+		<url>/dateformat/timezone.jsp</url>
+	</no-login-urls>
+</root>

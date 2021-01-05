@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<id>fnaBudgetAssistant</id>  <!--只能是唯一的英文字母-->
+	<title>费用报销智能助手</title>
+	<titleEN>Intelligent assistant</titleEN>
+	<desc>费用报销智能助手</desc>
+	<icon>/page/element/fnaBudgetAssistant/image/fna_wev8.gif</icon>
+	<linkMode>-1</linkMode>
+	<loginView>1</loginView>
+	<type>2</type>
+	<perpage>-1</perpage>
+	<private>
+		<jsList> 
+			<js></js>
+		</jsList>
+	</private>
+	<public>
+		<jsIdList>  
+			<jsId>jquery</jsId>
+		</jsIdList>
+		<cssIdList>
+		</cssIdList>
+	</public>
+	<view>
+		<url>/page/element/fnaBudgetAssistant/View.jsp</url>
+		<method></method>
+	</view>
+	<setting>
+		<url>/page/element/fnaBudgetAssistant/setPage.jsp</url>
+		<method></method>
+	</setting>
+	<more>
+		<url></url>
+		<method></method>
+	</more>
+	<operation>/page/element/fnaBudgetAssistant/setPageOperation.jsp</operation>
+</root> 

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components>
+	<component desc="富文本" type="2" ptype="2" client="pc" name="richtext">
+	   <pubresources>
+		<link><![CDATA[]]></link>
+		<script><![CDATA[
+		
+		]]></script>
+		<style><![CDATA[]]></style>
+		</pubresources>
+	   <params>
+	      <p name="" />	   
+	   </params>
+		<template>
+			<edit>
+			<content><![CDATA[
+			<textarea class="Inputstyle" temptype="2" viewtype="0" temptitle="${label}" id="field${id}" name="field${id}" rows="4"  onchange="checkinput2('field${id}','field${id}span',this.getAttribute('viewtype'));checkLengthfortext('field${id}','0','${label}','文本长度不能超过','1个中文字符等于2个长度')" cols="40" style="width:90%;word-break:break-all;word-wrap:break-word">${value}</textarea>
+<span id="field${id}span"></span><script> 
+function funcField${id}(){
+	FCKEditorExt.initEditor('frmmain','field${id}',7,FCKEditorExt.NO_IMAGE, 200);
+	FCKEditorExt.checkText('field${id}span','field${id}');
+	FCKEditorExt.toolbarExpand(false,"field${id}");
+}
+</script>
+			               ]]></content>
+				  <resources>
+					<link><![CDATA[]]></link>
+					<script><![CDATA[
+					if (window.addEventListener){
+	    window.addEventListener("load", funcField${id}, false);
+	}else if (window.attachEvent){
+	    window.attachEvent("onload", funcField${id});
+	}else{
+	    window.onload=funcField${id};
+	}
+					]]></script>
+					<style><![CDATA[]]></style>
+				  </resources>             
+		    </edit>
+			<view><content><![CDATA[
+			<IFRAME style="HEIGHT: 150px" id=FCKiframe${id} height=170 marginHeight=0 src="/ServiceAction/ui.servlet.RichtextAction?action=getcontent&requestid=${businessid}&userid=${cuserid}&fieldid=${id}&rowno=-1" frameBorder=0 width="100%" allowTransparency name=FCKiframe${id} marginWidth=0></IFRAME>
+			]]></content></view>
+			<setting><content><![CDATA[<INPUT id="${fieldid}" class="InputStyle"  name="field${id}" value="${label}">]]></content></setting>
+		</template>
+	</component>
+	<component name="单行" id="" pid="" client="mobile">
+		<params>
+		    <p name=""/>
+		</params>
+		<template>
+			<edit></edit>
+			<view></view>
+			<setting></setting>
+		</template>
+	</component>
+</components>

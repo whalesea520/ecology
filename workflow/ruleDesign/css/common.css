@@ -1,0 +1,74 @@
+*{
+	font-family:"微软雅黑";
+}
+
+.clearboth {
+	clear: both;
+}
+
+p.pagenav {
+  text-align:center;
+  color: #787F8A;
+}
+
+button {
+  outline: none;
+}
+
+button.nav {
+  color: #787F8A;
+  height: 24px;
+  border: none;
+  font-size: 12px;
+  margin: 0px 10px;
+}
+
+button.pre {
+  cursor:pointer;
+  padding-left: 30px;
+  background: url('/images/manager/V50/left.png');
+  background-repeat: no-repeat;
+}
+
+button.pre:hover {
+  color:#6CADFF;
+  background: url('/images/manager/V50/left-hover.png');
+  background-repeat: no-repeat;
+}
+
+button.dispre {
+  padding-left: 30px;
+  background: url('/images/manager/V50/left-disable.png');
+  background-repeat: no-repeat;
+}
+
+button.next {
+  cursor:pointer;
+  padding-right: 30px;
+  background: url('/images/manager/V50/right.png');
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+button.next:hover  {
+  color:#6CADFF;
+  background: url('/images/manager/V50/right-hover.png');
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+button.disnext {
+  padding-right: 30px;
+  background: url('/images/manager/V50/right-disable.png');
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+input[type=text],select{
+  vertical-align:middle;
+}
+
+.numberonly {
+  text-align: right;
+  ime-mode: disabled;
+}

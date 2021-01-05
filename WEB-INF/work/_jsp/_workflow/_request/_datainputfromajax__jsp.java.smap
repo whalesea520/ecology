@@ -1,0 +1,12 @@
+SMAP
+_datainputfromajax__jsp.java
+JSP
+*S JSP
+*F
++ 1 DataInputFromAjax.jsp
+workflow/request/DataInputFromAjax.jsp
+*L
+1#1:37
+6#1,40:38
+45#1:78
+*E

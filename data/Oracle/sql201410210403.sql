@@ -1,0 +1,32 @@
+insert into hrmSysMaintenanceLog (relatedid,relatedname,operatetype,operatedesc,operateitem,operateuserid,operatedate,operatetime,clientaddress,istemplate,operatesmalltype,operateusertype)  select relatedid,relatedname,operatetype,operatedesc,operateitem,operateuserid,operatedate,operatetime,clientaddress,istemplate,operatesmalltype,operateusertype from SysMaintenanceLog where operateitem=60 and operatedate like '2000%'
+/
+insert into hrmSysMaintenanceLog (relatedid,relatedname,operatetype,operatedesc,operateitem,operateuserid,operatedate,operatetime,clientaddress,istemplate,operatesmalltype,operateusertype)  select relatedid,relatedname,operatetype,operatedesc,operateitem,operateuserid,operatedate,operatetime,clientaddress,istemplate,operatesmalltype,operateusertype from SysMaintenanceLog where operateitem=60 and operatedate like '2001%'
+/
+insert into hrmSysMaintenanceLog (relatedid,relatedname,operatetype,operatedesc,operateitem,operateuserid,operatedate,operatetime,clientaddress,istemplate,operatesmalltype,operateusertype)  select relatedid,relatedname,operatetype,operatedesc,operateitem,operateuserid,operatedate,operatetime,clientaddress,istemplate,operatesmalltype,operateusertype from SysMaintenanceLog where operateitem=60 and operatedate like '2002%'
+/
+insert into hrmSysMaintenanceLog (relatedid,relatedname,operatetype,operatedesc,operateitem,operateuserid,operatedate,operatetime,clientaddress,istemplate,operatesmalltype,operateusertype)  select relatedid,relatedname,operatetype,operatedesc,operateitem,operateuserid,operatedate,operatetime,clientaddress,istemplate,operatesmalltype,operateusertype from SysMaintenanceLog where operateitem=60 and operatedate like '2003%'
+/
+insert into hrmSysMaintenanceLog (relatedid,relatedname,operatetype,operatedesc,operateitem,operateuserid,operatedate,operatetime,clientaddress,istemplate,operatesmalltype,operateusertype)  select relatedid,relatedname,operatetype,operatedesc,operateitem,operateuserid,operatedate,operatetime,clientaddress,istemplate,operatesmalltype,operateusertype from SysMaintenanceLog where operateitem=60 and operatedate like '2004%'
+/
+insert into hrmSysMaintenanceLog (relatedid,relatedname,operatetype,operatedesc,operateitem,operateuserid,operatedate,operatetime,clientaddress,istemplate,operatesmalltype,operateusertype)  select relatedid,relatedname,operatetype,operatedesc,operateitem,operateuserid,operatedate,operatetime,clientaddress,istemplate,operatesmalltype,operateusertype from SysMaintenanceLog where operateitem=60 and operatedate like '2005%'
+/
+insert into hrmSysMaintenanceLog (relatedid,relatedname,operatetype,operatedesc,operateitem,operateuserid,operatedate,operatetime,clientaddress,istemplate,operatesmalltype,operateusertype)  select relatedid,relatedname,operatetype,operatedesc,operateitem,operateuserid,operatedate,operatetime,clientaddress,istemplate,operatesmalltype,operateusertype from SysMaintenanceLog where operateitem=60 and operatedate like '2006%'
+/
+insert into hrmSysMaintenanceLog (relatedid,relatedname,operatetype,operatedesc,operateitem,operateuserid,operatedate,operatetime,clientaddress,istemplate,operatesmalltype,operateusertype)  select relatedid,relatedname,operatetype,operatedesc,operateitem,operateuserid,operatedate,operatetime,clientaddress,istemplate,operatesmalltype,operateusertype from SysMaintenanceLog where operateitem=60 and operatedate like '2007%'
+/
+insert into hrmSysMaintenanceLog (relatedid,relatedname,operatetype,operatedesc,operateitem,operateuserid,operatedate,operatetime,clientaddress,istemplate,operatesmalltype,operateusertype)  select relatedid,relatedname,operatetype,operatedesc,operateitem,operateuserid,operatedate,operatetime,clientaddress,istemplate,operatesmalltype,operateusertype from SysMaintenanceLog where operateitem=60 and operatedate like '2008%'
+/
+insert into hrmSysMaintenanceLog (relatedid,relatedname,operatetype,operatedesc,operateitem,operateuserid,operatedate,operatetime,clientaddress,istemplate,operatesmalltype,operateusertype)  select relatedid,relatedname,operatetype,operatedesc,operateitem,operateuserid,operatedate,operatetime,clientaddress,istemplate,operatesmalltype,operateusertype from SysMaintenanceLog where operateitem=60 and operatedate like '2009%'
+/
+insert into hrmSysMaintenanceLog (relatedid,relatedname,operatetype,operatedesc,operateitem,operateuserid,operatedate,operatetime,clientaddress,istemplate,operatesmalltype,operateusertype)  select relatedid,relatedname,operatetype,operatedesc,operateitem,operateuserid,operatedate,operatetime,clientaddress,istemplate,operatesmalltype,operateusertype from SysMaintenanceLog where operateitem=60 and operatedate like '2010%'
+/
+insert into hrmSysMaintenanceLog (relatedid,relatedname,operatetype,operatedesc,operateitem,operateuserid,operatedate,operatetime,clientaddress,istemplate,operatesmalltype,operateusertype)  select relatedid,relatedname,operatetype,operatedesc,operateitem,operateuserid,operatedate,operatetime,clientaddress,istemplate,operatesmalltype,operateusertype from SysMaintenanceLog where operateitem=60 and operatedate like '2011%'
+/
+insert into hrmSysMaintenanceLog (relatedid,relatedname,operatetype,operatedesc,operateitem,operateuserid,operatedate,operatetime,clientaddress,istemplate,operatesmalltype,operateusertype)  select relatedid,relatedname,operatetype,operatedesc,operateitem,operateuserid,operatedate,operatetime,clientaddress,istemplate,operatesmalltype,operateusertype from SysMaintenanceLog where operateitem=60 and operatedate like '2012%'
+/
+insert into hrmSysMaintenanceLog (relatedid,relatedname,operatetype,operatedesc,operateitem,operateuserid,operatedate,operatetime,clientaddress,istemplate,operatesmalltype,operateusertype)  select relatedid,relatedname,operatetype,operatedesc,operateitem,operateuserid,operatedate,operatetime,clientaddress,istemplate,operatesmalltype,operateusertype from SysMaintenanceLog where operateitem=60 and operatedate like '2013%'
+/
+insert into hrmSysMaintenanceLog (relatedid,relatedname,operatetype,operatedesc,operateitem,operateuserid,operatedate,operatetime,clientaddress,istemplate,operatesmalltype,operateusertype)  select relatedid,relatedname,operatetype,operatedesc,operateitem,operateuserid,operatedate,operatetime,clientaddress,istemplate,operatesmalltype,operateusertype from SysMaintenanceLog where operateitem=60 and operatedate like '2014%'
+/
+Create index HrmSysMaintenanceLog_ind on HrmSysMaintenanceLog (relatedid,operateitem,operatetype)
+/

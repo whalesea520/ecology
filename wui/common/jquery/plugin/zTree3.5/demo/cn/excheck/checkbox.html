@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> ZTREE DEMO - checkbox</TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../../../css/demo.css" type="text/css">
+	<link rel="stylesheet" href="../../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="../../../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../../js/jquery.ztree.core-3.5.js"></script>
+	<script type="text/javascript" src="../../../js/jquery.ztree.excheck-3.5.js"></script>
+	<!--
+	<script type="text/javascript" src="../../../js/jquery.ztree.exedit-3.5.js"></script>
+	-->
+	<SCRIPT type="text/javascript">
+		<!--
+		var setting = {
+			check: {
+				enable: true
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			}
+		};
+
+		var zNodes =[
+			{ id:1, pId:0, name:"闅忔剰鍕鹃€?1", open:true},
+			{ id:11, pId:1, name:"闅忔剰鍕鹃€?1-1", open:true},
+			{ id:111, pId:11, name:"闅忔剰鍕鹃€?1-1-1"},
+			{ id:112, pId:11, name:"闅忔剰鍕鹃€?1-1-2"},
+			{ id:12, pId:1, name:"闅忔剰鍕鹃€?1-2", open:true},
+			{ id:121, pId:12, name:"闅忔剰鍕鹃€?1-2-1"},
+			{ id:122, pId:12, name:"闅忔剰鍕鹃€?1-2-2"},
+			{ id:2, pId:0, name:"闅忔剰鍕鹃€?2", checked:true, open:true},
+			{ id:21, pId:2, name:"闅忔剰鍕鹃€?2-1"},
+			{ id:22, pId:2, name:"闅忔剰鍕鹃€?2-2", open:true},
+			{ id:221, pId:22, name:"闅忔剰鍕鹃€?2-2-1", checked:true},
+			{ id:222, pId:22, name:"闅忔剰鍕鹃€?2-2-2"},
+			{ id:23, pId:2, name:"闅忔剰鍕鹃€?2-3"}
+		];
+		
+		var code;
+		
+		function setCheck() {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			py = $("#py").attr("checked")? "p":"",
+			sy = $("#sy").attr("checked")? "s":"",
+			pn = $("#pn").attr("checked")? "p":"",
+			sn = $("#sn").attr("checked")? "s":"",
+			type = { "Y":py + sy, "N":pn + sn};
+			zTree.setting.check.chkboxType = type;
+			showCode('setting.check.chkboxType = { "Y" : "' + type.Y + '", "N" : "' + type.N + '" };');
+		}
+		function showCode(str) {
+			if (!code) code = $("#code");
+			code.empty();
+			code.append("<li>"+str+"</li>");
+		}
+		
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			setCheck();
+			$("#py").bind("change", setCheck);
+			$("#sy").bind("change", setCheck);
+			$("#pn").bind("change", setCheck);
+			$("#sn").bind("change", setCheck);
+		});
+		//-->
+	</SCRIPT>
+</HEAD>
+
+<BODY>
+<h1>Checkbox 鍕鹃€夋搷浣?/h1>
+<h6>[ 鏂囦欢璺緞: excheck/checkbox.html ]</h6>
+<div class="content_wrap">
+	<div class="zTreeDemoBackground left">
+		<ul id="treeDemo" class="ztree"></ul>
+	</div>
+	<div class="right">
+		<ul class="info">
+			<li class="title"><h2>1銆乻etting 閰嶇疆淇℃伅璇存槑</h2>
+				<ul class="list">
+				<li class="highlight_red">浣跨敤 checkbox锛屽繀椤昏缃?setting.check 涓殑鍚勪釜灞炴€э紝璇︾粏璇峰弬瑙?API 鏂囨。涓殑鐩稿叧鍐呭</li>
+				<li><p>鐖跺瓙鍏宠仈鍏崇郴锛?br/>
+						琚嬀閫夋椂锛?input type="checkbox" id="py" class="checkbox first" checked /><span>鍏宠仈鐖?/span>
+						<input type="checkbox" id="sy" class="checkbox first" checked /><span>鍏宠仈瀛?/span><br/>
+						鍙栨秷鍕鹃€夋椂锛?input type="checkbox" id="pn" class="checkbox first" checked /><span>鍏宠仈鐖?/span>
+						<input type="checkbox" id="sn" class="checkbox first" checked /><span>鍏宠仈瀛?/span><br/>
+						<ul id="code" class="log" style="height:20px;"></ul></p>
+				</li>
+				</ul>
+			</li>
+			<li class="title"><h2>2銆乼reeNode 鑺傜偣鏁版嵁璇存槑</h2>
+				<ul class="list">
+				<li class="highlight_red">1)銆佸鏋滈渶瑕佸垵濮嬪寲榛樿鑺傜偣琚嬀閫夛紝璇疯缃?treeNode.checked 灞炴€э紝璇︾粏璇峰弬瑙?API 鏂囨。涓殑鐩稿叧鍐呭</li>
+				<li class="highlight_red">2)銆佸鏋滄煇鑺傜偣绂佺敤 checkbox锛岃璁剧疆 treeNode.chkDisabled 灞炴€э紝璇︾粏璇峰弬瑙?API 鏂囨。涓殑鐩稿叧鍐呭 鍜?'chkDisabled 婕旂ず'</li>
+				<li class="highlight_red">3)銆佸鏋滄煇鑺傜偣涓嶆樉绀?checkbox锛岃璁剧疆 treeNode.nocheck 灞炴€э紝璇︾粏璇峰弬瑙?API 鏂囨。涓殑鐩稿叧鍐呭 鍜?'nocheck 婕旂ず'</li>
+				<li class="highlight_red">4)銆佸鏋滄洿鎹?checked 灞炴€э紝璇峰弬鑰?API 鏂囨。涓?setting.data.key.checked 鐨勮缁嗚鏄?/li>
+				<li>5)銆佸叾浠栬鍙傝€?API 鏂囨。涓?treeNode.checkedOld / getCheckStatus / check_Child_State / check_Focus 鐨勮缁嗚鏄?/li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+</BODY>
+</HTML>

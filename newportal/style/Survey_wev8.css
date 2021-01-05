@@ -1,0 +1,32 @@
+/*---------------网上调查------------------*/
+
+.SurveyLeft{width:165px;float:left;background:url(../images/survey_01_wev8.gif) no-repeat;}
+
+.SurveyScroll{overflow-x:hidden; overflow-y:scroll;height:400px; padding-left:4px; width:154px;}
+
+.SurveyNav{width:134px;float:left;}
+
+.SurveyNav li{background:url(../images/Hover3_wev8.gif) repeat-x left -25px;text-align:left; float:left}
+
+.SurveyNav li a{width:124px;line-height:25px;height:25px;padding-left:10px; display:block;}
+
+.SurveyNav li a:hover, .SurveyNav li.hover{background:url(../images/survey_04_wev8.gif) repeat-x top;}
+
+.SurveyNav li a:hover em, .SurveyNav li.hover em{ color:#37669a; font-weight:bold}
+
+.SurveyNav li div a{background:url(../images/survey_03_wev8.gif) no-repeat 5px  15px; border-bottom:1px dashed #9aabad; padding-left:13px; float:left; height:44px; line-height:20px; padding-top:10px;}
+
+.SurveyNav li div a:hover, .SurveyNav li div a.hover{background:url(../images/Arrow3_wev8.gif) no-repeat 5px  15px;}
+
+.SurveyNav li div a:hover p, .SurveyNav li div a.hover p{font-weight:bold; color:#27578d}
+
+.SurveyRight{width:656px;float:right;height:250px}
+
+.SurveyTit{background:url(../images/survey_08_wev8.gif)  repeat-x top; margin-top:4px; height:27px; line-height:27px; padding-left:10px; text-align:left}
+
+
+.SurveyScroll2{overflow-x:hidden; overflow-y:scroll;height:370px;width:636px; padding-left:10px; padding-right:10px;}
+
+.SurveyTit2 td{border-bottom:1px dashed #b0b0b0; height:27px; line-height:27px;}
+
+

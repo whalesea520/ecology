@@ -1,0 +1,20 @@
+@IMPORT url("/js/ecology8/jNice/jNice/jNice_wev8.css");
+@IMPORT url("/css/ecology8/request/requestView_wev8.css");
+@IMPORT url("/js/ecology8/base/jquery-ui_wev8.css");
+@IMPORT url("/js/dragBox/ereportstyle_wev8.css");
+@IMPORT url("/css/ecology8/request/seachBody_wev8.css");
+@IMPORT url("/css/ecology8/request/hoverBtn_wev8.css");
+@IMPORT url("/js/jquery-autocomplete/jquery.autocomplete_wev8.css");
+@IMPORT url("/js/jquery-autocomplete/browser_wev8.css");
+@IMPORT url("/wui/theme/ecology8/jquery/js/e8_zDialog_btn_wev8.css");
+@IMPORT url("/js/select/style/selectForK13_wev8.css");
+@IMPORT url("/js/checkbox/jquery.tzCheckbox_wev8.css");
+@IMPORT url("/js/ecology8/selectbox/css/jquery.selectbox_wev8.css");
+@IMPORT url("/css/ecology8/request/searchInput_wev8.css");
+@IMPORT url("/css/commonCss_wev8.css");
+@IMPORT url("/js/poshytip-1.2/tip-yellowsimple/tip-yellowsimple_wev8.css");
+
+@IMPORT url("/wui/common/css/w7OVFont_wev8.css");
+html {
+	height:100%;
+}

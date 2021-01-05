@@ -1,0 +1,124 @@
+html {
+	-ms-touch-action: none;
+}
+body {
+    overflow: hidden;
+}
+
+#scroll_wrapper {
+	position:absolute; z-index:1;
+	top:0px; bottom:0px; left:0;
+	width:100%;
+	background:transparent;
+	overflow: hidden;
+	background-color: rgb(240, 240, 240);
+}
+
+#scroll_scroller {
+	position:absolute; z-index:1;
+/*	-webkit-touch-callout:none;*/
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	width:100%;
+	padding:0;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+
+/**
+ *
+ * Pull down styles
+ *
+ */
+#pullDown {
+	background:#fff;
+	height:40px;
+	line-height:40px;
+	padding:5px 10px;
+	border-bottom:1px solid #ccc;
+	font-weight:bold;
+	font-size:14px;
+	color:#888;
+	text-align: center;
+	display: none;
+}
+#pullDown .pullDownIcon  {
+	display:block; 
+	position: absolute;
+	top:5px;
+	left: 20%;
+	width:40px; height:40px;
+	background:url("/mobilemode/images/pull-icon@2x_wev8.png") 0 0 no-repeat;
+	-webkit-background-size:40px 80px; background-size:40px 80px;
+	-webkit-transition-property:-webkit-transform;
+	-webkit-transition-duration:250ms;	
+}
+#pullDown .pullDownIcon {
+	-webkit-transform:rotate(0deg) translateZ(0);
+}
+
+#pullDown.flip .pullDownIcon {
+	-webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+
+#pullDown.loading .pullDownIcon {
+	background-position:0 100%;
+	-webkit-transform:rotate(0deg) translateZ(0);
+	-webkit-transition-duration:0ms;
+
+	-webkit-animation-name:loading;
+	-webkit-animation-duration:2s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:linear;
+}
+
+#pullDown.refresh_success .pullDownIcon {
+	background-image: url("/mobilemode/images/right_black_wev8.png");
+	background-repeat: no-repeat;	
+	-webkit-background-size:16px 13px; background-size:16px 13px;
+	background-position: center center;
+	-webkit-transform:none;
+	-webkit-transition-duration:none;
+	-webkit-animation-name:none;
+	-webkit-animation-duration:none;
+	-webkit-animation-iteration-count:none;
+	-webkit-animation-timing-function:none;
+	display: none;
+}
+
+#pullDown .pullDownLabel{
+	font-size: 15px;
+}
+
+#pullDown.refresh_success .pullDownLabel{
+	background-image: url("/mobilemode/images/right_black_wev8.png");
+	background-repeat: no-repeat;	
+	background-position: left center;
+	padding-left: 30px;	
+	margin-left: -30px;
+}
+
+#scroll_footer {
+	position:absolute; z-index:2;
+	bottom:0; left:0;
+	width:100%;
+	background-color: #fafafa;
+	display: none;
+}
+#right_view{
+	overflow: hidden;
+}

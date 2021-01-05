@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<http-method>GET,POST,HEAD</http-method>
+</root>

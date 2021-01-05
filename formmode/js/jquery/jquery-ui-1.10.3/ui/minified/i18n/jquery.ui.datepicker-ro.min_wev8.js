@@ -1,0 +1,4 @@
+﻿/*! jQuery UI - v1.10.3 - 2013-05-03
+* http://jqueryui.com
+* Copyright 2013 jQuery Foundation and other contributors; Licensed MIT */
+jQuery(function(e){e.datepicker.regional.ro={closeText:"脦nchide",prevText:"&#xAB; Luna precedent膬",nextText:"Luna urm膬toare &#xBB;",currentText:"Azi",monthNames:["Ianuarie","Februarie","Martie","Aprilie","Mai","Iunie","Iulie","August","Septembrie","Octombrie","Noiembrie","Decembrie"],monthNamesShort:["Ian","Feb","Mar","Apr","Mai","Iun","Iul","Aug","Sep","Oct","Nov","Dec"],dayNames:["Duminic膬","Luni","Mar牛i","Miercuri","Joi","Vineri","S芒mb膬t膬"],dayNamesShort:["Dum","Lun","Mar","Mie","Joi","Vin","S芒m"],dayNamesMin:["Du","Lu","Ma","Mi","Jo","Vi","S芒"],weekHeader:"S膬pt",dateFormat:"dd.mm.yy",firstDay:1,isRTL:!1,showMonthAfterYear:!1,yearSuffix:""},e.datepicker.setDefaults(e.datepicker.regional.ro)});

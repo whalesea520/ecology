@@ -1,0 +1,15 @@
+html5离线缓存更新说明：(以appHomepageViewWrap.jsp为例)
+(一)如修改了页面引用到的js和css,完成缓存更新的步骤如下：
+1.在其后添加(或修改)版本后缀，格式为v=年月日数字，如v=2015101401，其中01为当天修改多次的累加，修改第二次则为02，依次累加。
+2.将修改后的引用链接更新到appHomepageViewWrap.appcache文件中。
+3.更新appHomepageViewWrap.appcache文件中的注释时间戳。
+
+举例：
+如我在2015年10月14日修改了/mobilemode/css/mobile_homepagewrap_wev8.css中的内容。
+1.将<link rel="stylesheet" type="text/css" href="/mobilemode/css/mobile_homepagewrap_wev8.css" />
+改为<link rel="stylesheet" type="text/css" href="/mobilemode/css/mobile_homepagewrap_wev8.css?v=2015101401" />
+2.将appHomepageViewWrap.appcache中的缓存清单：/mobilemode/css/mobile_homepagewrap_wev8.css 改为 /mobilemode/css/mobile_homepagewrap_wev8.css?v=2015101401
+3.修改appHomepageViewWrap.appcache中的时间注释，从 # 2015-10-11 09:11 修改为  # 2015-10-14 11:43 (取当前日期时间保证不和之前一样即可)
+
+(二)如修改了页面html内容本身，完成缓存更新的步骤如下：
+1.更新appHomepageViewWrap.appcache文件中的注释时间戳。

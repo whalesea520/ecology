@@ -1,0 +1,112 @@
+/** Toolbar **/
+/** MADT : MEC_Attr_Design_Toolbar **/
+.MADT_Table{
+	width: 100%;
+	border-collapse: collapse;
+}
+.MADT_Table thead td{
+	color: #A4A9AE;
+	border-bottom: 1px solid #DFDFDF;
+	font-weight: bold;
+	padding-bottom: 5px;	
+}
+.MADT_Table tbody td{
+	padding: 6px 0px 6px 0px;
+}
+.MADT_Table tbody td.bemove{
+	background: url("/mobilemode/images/tr_move2_wev8.png") no-repeat center;
+	cursor: move;
+}
+.MADT_Table tbody td .delFlag{
+	background: url("/images/messageimages/delete_wev8.gif") no-repeat center;
+	position: absolute;
+	right: 1px;
+	top: 1px;
+	width: 9px;
+	height: 9px;
+	display: none;
+	cursor: pointer;
+}
+
+.MADT_Toolbar_Item_Img{
+	cursor: pointer;
+	position: relative;
+	padding-top: 2px;
+	padding-left: 5px;
+}
+
+.MADT_Toolbar_Item_Img img{
+	width: 16px;
+	height: 16px;		
+}
+
+.MADT_Table tbody tr{
+}
+.MADT_Table tbody tr:HOVER{
+}
+.MADT_Table tbody tr:HOVER td{
+	background-color: #efefef;
+}
+.MADT_Table tbody tr:HOVER td .delFlag{
+	display: block;	
+}
+
+.MADT_Table input.textStyle{
+	border: 1px solid #DFDFDF !important;
+	width: 80% !important;	
+}
+
+.MADT_Table select.selectStyle{
+	border: 1px solid #DFDFDF !important;
+	width: 75px !important;	
+}
+.MADT_Table .jNiceCheckbox{
+	margin-bottom: -1px;	
+}
+.MADT_Table .numremindEditFlag{
+	background: url("/mobilemode/images/toolbar/tbar01_wev8.png") no-repeat;
+	position: absolute;
+	top: 8px;
+	left: 17px;
+	width: 15px;
+	height: 18px;
+	cursor: pointer;
+	display: none;
+}
+.MADT_Bottom{
+	text-align: right;
+	padding: 5px 3px;
+	margin: 10px 0px 0px 0px;
+	position: relative;
+}
+.MADT_AddItem{
+	padding-left: 16px;
+	background:url('/mobilemode/images/blue_add_wev8.png') no-repeat left center;
+	color: #5d9cec;
+	cursor: pointer;	
+}
+.MADT_SaveBtn{
+	position:absolute;
+	top: 0px;
+	left: 7px;
+	background-color: rgb(107, 163, 237);
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	box-sizing: border-box;
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+	display: block;
+	font-family: 'Microsoft Yahei', Arial, sans-serif;
+	font-size: 14px;
+	height: 26px;
+	line-height: 26px;
+	margin: 0px;
+	text-align: center;
+	width: 73px;
+	zoom: 1;
+}
+#content_editor_bottom .toolbarContainer{
+	border-top: 1px solid #ddd;
+}

@@ -1,0 +1,24 @@
+SMAP
+_myrequestviewajax__jsp.java
+JSP
+*S JSP
+*F
++ 1 MyRequestViewAjax.jsp
+workflow/request/MyRequestViewAjax.jsp
+*L
+1#1:41
+11#1,2:42,7
+12#1,2:55
+13#1:57,6
+13#1,2:62
+14#1:64,6
+14#1,2:69
+15#1:71,6
+15#1,2:76
+16#1:78,6
+16#1,2:83
+17#1:85,6
+17#1,458:90
+474#1:548
+476#1:549
+*E

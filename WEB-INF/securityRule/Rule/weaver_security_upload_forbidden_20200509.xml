@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+  <forbidden-url>
+		<urls>
+			<url>/page/exportImport/uploadOperation.jsp</url>
+		</urls>
+	</forbidden-url>
+	<need-check-urls>
+		<url>/page/exportImport/uploadOperation.jsp</url>
+	</need-check-urls>
+</root>

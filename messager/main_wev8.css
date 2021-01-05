@@ -1,0 +1,24 @@
+body,td {
+	FONT-SIZE: 12px; MARGIN: 0px; FONT-FAMILY: Verdana; 
+}
+
+.content{	
+	vertical-align:top;
+}
+
+.content .info{	
+	/*padding-top:5px;*/
+}
+.content .messagers{
+	height:210px;
+	overflow:auto;
+	/*padding-top:5px;*/
+}
+.content .group{		
+	padding-top:5px;
+}
+
+.chatButtons,.divBlock{
+	cursor:hand;border-bottom:1px solid #f0f0f0;height:36;padding:2px
+}
+

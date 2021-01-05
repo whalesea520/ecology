@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow workflowId="">
+	<!-- name. 传递的参数,name不能修改.   column 表单(数据库) 对应的字段名-->
+	<field name="userId" column="resourceId"></field>
+	<field name="departmentId" column="departmentId"></field>
+	<field name="subcompanyId" column=""></field>
+	<field name="leaveType" column="newLeaveType"></field>
+	<field name="begindate" column="fromDate"></field>
+	<field name="begintime" column="fromTime"></field>
+	<field name="enddate" column="toDate"></field>
+	<field name="endtime" column="toTime"></field>
+	<field name="days" column="leaveDays"></field>
+	<field name="content" column="leaveReason"></field>
+	<field name="lastyearannual" column="lastyearannualdays"></field>
+	<field name="thisyearannual" column="thisyearannualdays"></field>
+	<field name="allyearannual" column="allannualdays"></field>
+	<field name="lastyearpsl" column="lastyearpsldays"></field>
+	<field name="thisyearpsl" column="thisyearpsldays"></field>
+	<field name="allyearpsl" column="allpsldays"></field>
+	<field name="manager" column="manager"></field>
+</workflow>

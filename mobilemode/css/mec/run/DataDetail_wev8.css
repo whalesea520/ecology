@@ -1,0 +1,212 @@
+.dataDetailContainer ul.dataDetailUlFields {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+}
+
+.dataDetailContainer ul.dataDetailUlFields li {
+	border-top: 1px solid #f0f0f0;
+	padding: 7px 0px 7px 10px;
+	font-size: 12px;
+	background-color: #fff;
+	display: flex;
+}
+
+.dataDetailContainer ul.dataDetailUlFields li span.entryContent {
+	display: inline-block;
+	text-align: right;
+	right: 0px;
+	width: 70%;
+	padding-right: 5px;
+	font-size: 12px;
+	color: #999;
+	word-break: break-all;
+}
+
+.dataDetailContainer ul.dataDetailUlFields li span.entryName {
+	display: inline-block;
+	font-size: 12px;
+	width: 28%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.dataDetailContainer ul.dataDetailUlFields li:first-child {
+	border-top: 1px solid #ddd;
+}
+
+.dataDetailContainer ul.dataDetailUlFields li:last-child {
+	border-bottom: 1px solid #ddd;
+}
+
+.dataDetailContainer .list-title {
+	padding: 7px 20px 5px 10px;
+	font-size: 12px;
+	color: #999;
+}
+
+.noDataDetail {
+	color: #bbb;
+	font-size: 14px;
+	font-family: 'Microsoft Yahei', Arial, Helvetica, sans-serif;
+	padding: 9px 5px 9px 22px;
+}
+
+.dataDetailContainer .DataDetail_Photo_Container{
+	border-bottom: 1px solid rgb(238, 238, 238);
+	padding-top: 12px;
+	padding-bottom: 12px;
+	position:relative;
+}
+.dataDetailContainer .DataDetail_Photo_Fieldlabel{
+	position: relative;
+	height:25px;
+	line-height: 20px;
+	background-image: none;
+}
+.dataDetailContainer .DataDetail_Photo_EntryWrap{
+	padding: 2px 0px 3px 5px;
+	overflow: hidden;
+}
+.dataDetailContainer .DataDetail_Photo_EntryBorder{
+	padding-top: 5px;
+	position: relative;
+	float: left;
+}
+.dataDetailContainer .DataDetail_Photo_Entry{
+	margin-right: 8px;
+}
+.dataDetailContainer .DataDetail_Photo_Entry img{
+	width: 53px;
+	height: 53px;
+	border-radius:3px;
+	border: 1px solid #ccc;
+}
+.dataDetailContainer .DataDetail_Photo_DeleteBtn{
+	width: 16px;
+	height: 18px;
+	position: absolute;
+	top: 0px;
+	right: 2px;
+	background: url("/images/delete_wev8.gif") no-repeat;
+	background-position: -3px -3px;
+	z-index: 99999;
+}
+.dataDetailContainer .DataDetail_Photo_EntryBtn{
+	margin-right: 8px;
+	background: url("/mobilemode/images/emobile/photo_wev8.png") no-repeat;
+	background-size: 54px 54px;
+}
+.dataDetailContainer .DataDetail_Photo_EntryBtn .upLoadFile{
+	position: absolute;
+	font-size: 20px;
+	width: 61px;
+	height: 61px;
+	bottom: 0px;
+	left: 0px;
+	filter: alpha(opacity=0);
+	opacity: 0;
+	cursor: pointer;
+}
+
+.dataDetailContainer .DataDetail_File_Container{
+	border-bottom: 1px solid rgb(238, 238, 238);
+	padding-top: 12px;
+	padding-bottom: 12px;
+	position:relative;
+}
+.dataDetailContainer .DataDetail_File_Fieldlabel{
+	position: relative;
+	height:25px;
+	line-height: 20px;
+	background-image: none;
+}
+.dataDetailContainer .DataDetail_File_EntryWrap{
+	padding: 2px 0px 3px 5px;
+	overflow: hidden;
+}
+.dataDetailContainer .DataDetail_File_EntryBorder{
+	padding-top: 5px;
+	padding-right:20px;
+	position: relative;
+}
+.dataDetailContainer .DataDetail_File_EntryBorder_View{
+	width:100%;
+}
+
+.dataDetailContainer .DataDetail_File_DeleteBtn{
+	width: 16px;
+	height: 20px;
+	position: absolute;
+	top: 10px;
+	right: 2px;
+	background: url("/mobilemode/images/mec/lego_icon_del.png") no-repeat;
+	background-position: 1px 2px;
+	background-size: 13px 12px;
+	cursor:pointer;
+	z-index: 99999;
+}
+.dataDetailContainer .DataDetail_File_EntryBtn{
+	margin-right: 8px;
+	background: url("/mobilemode/images/emobile/photo_wev8.png") no-repeat;
+	background-size: 54px 54px;
+}
+.dataDetailContainer .DataDetail_File_EntryBtn .upLoadFile{
+	position: absolute;
+	font-size: 20px;
+	width: 61px;
+	height: 61px;
+	bottom: 0px;
+	left: 0px;
+	filter: alpha(opacity=0);
+	opacity: 0;
+	cursor: pointer;
+}
+.dataDetailContainer .DataDetail_File_EntryBorder .DataDetail_File_Entry td.icon{
+	width: 24px;
+}
+.dataDetailContainer .DataDetail_File_EntryBorder .DataDetail_File_Entry td.icon img{
+	position:relative;
+	top:2px;
+	width:18px;
+	height:18px;
+}
+.dataDetailContainer .DataDetail_File_EntryBorder .DataDetail_File_Entry td.name{
+	font-size: 10pt;
+	padding:5px 0;
+	font-weight: bold;
+	width: 100%;
+	overflow: hidden;
+	display: inline-block;
+	white-space: nowrap;
+	word-break: break-all;
+	text-overflow: ellipsis;
+}
+.dataDetailContainer .DataDetail_File_EntryBorder .DataDetail_File_Entry td.size{
+	width: 60px;
+	text-align: right;
+	color: #777;
+	font-size: 10pt;
+	white-space: nowrap;
+	word-break: break-all;
+	overflow: hidden;
+	vertical-align: middle;
+}
+.dataDetailContainer .DataDetail_File_EntryBorder .DataDetail_File_Entry td.flag{
+	width: 20px;
+}
+
+.dataDetailContainer .DataDetail_File_EntryBorder .DataDetail_File_Entry td.flag span{
+	display:inline-block;
+	width: 20px;
+	height: 20px;
+	background: url("/mobilemode/images/mec/right.png") no-repeat;
+	background-position: 5px 4px;
+	background-size: 7px 14px;
+	cursor:pointer;
+	z-index: 99999;
+}
+.dataDetailContainer .DataDetail_File_EntryBorder .DataDetail_File_Entry td{
+	border: none !important;
+}

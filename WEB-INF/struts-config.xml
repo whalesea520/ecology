@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+       <form-beans >
+            <form-bean name="uploadForm" type="com.weaver.form.UploadForm"></form-bean>
+       </form-beans>
+		<action-mappings>
+		<action path="/uploadzip" type="com.weaver.action.EcologyUpgrade" parameter="uploadzip" name="uploadForm"  scope="request">
+			<forward name="canUpgrade" path="/jsp/check.jsp" ></forward>
+			<forward name="canUpgradeOrNot" path="/jsp/skippackage.jsp" ></forward>
+		    <forward name="cannotUpgrade" path="/jsp/error.jsp" ></forward>
+		    <forward name="canNotUpgradeCheck" path="/jsp/keyCheck.jsp" ></forward>
+		    
+		</action>
+		
+		<action path="/backup" type="com.weaver.action.EcologyUpgrade" parameter="backup" >
+		</action>
+		<action path="/check" type="com.weaver.action.EcologyUpgrade" parameter="check" >
+			<forward name="canUpgrade" path="/jsp/upgradefiles.jsp" ></forward>
+			<forward name="canUpgradeOrNot" path="/jsp/skippackage.jsp" ></forward>
+		    <forward name="cannotUpgrade" path="/jsp/error.jsp" ></forward>
+		    <forward name="canNotUpgradeCheck" path="/jsp/keyCheck.jsp" ></forward>
+		</action>
+		<action path="/checkProcess" type="com.weaver.action.EcologyUpgrade" parameter="checkProcess" >
+		
+		</action>
+		<action path="/changebeanname" type="com.weaver.action.EcologyUpgrade" parameter="changebeanname" >
+		
+		</action>
+		<action path="/backProcess" type="com.weaver.action.EcologyUpgrade" parameter="backProcess" >
+		</action>
+		
+		<action path="/remoteupgrade" type="com.weaver.action.EcologyUpgrade" parameter="remoteupgrade" >
+		</action>
+		<action path="/writeprop" type="com.weaver.action.EcologyUpgrade" parameter="writeprop" >
+		</action>
+		<action path="/recoverfiles" type="com.weaver.action.EcologyUpgrade" parameter="recoverfiles" >
+		</action>
+		<action path="/upgradeready" type="com.weaver.action.EcologyUpgrade" parameter="upgradeready" >
+		</action>
+		<action path="/processSql" type="com.weaver.action.EcologyUpgrade" parameter="processSql"> 
+		</action>
+		<action path="/getProcess" type="com.weaver.action.EcologyUpgrade" parameter="getProcess" >
+		</action>
+		<action path="/upgrade" type="com.weaver.action.EcologyUpgrade" parameter="upgrade">
+		</action>
+		<action path="/skipall" type="com.weaver.action.EcologyUpgrade" parameter="skipall">
+		</action>
+		<action path="/downloadfile" type="com.weaver.action.EcologyUpgrade" parameter="downloadfile">
+		</action>
+		<action path="/coverfiles" type="com.weaver.action.EcologyUpgrade" parameter="coverfiles">
+		</action>
+		<action path="/writeLog" type="com.weaver.action.EcologyUpgrade" parameter="writeLog">
+		     <forward name="error" path="/jsp/recoverDB.jsp" ></forward>
+		</action>
+		<action path="/prepareToRecover" type="com.weaver.action.EcologyUpgrade" parameter="prepareToRecover">
+		     <forward name="prepareToRecover" path="/jsp/recoverfiles.jsp" ></forward>
+		     <forward name="errordir" path="/jsp/selectdirectory.jsp" ></forward>
+		     <forward name="error" path="/jsp/error.jsp" ></forward>
+		</action>
+		<action path="/verifyBeforeForward" type="com.weaver.action.EcologyUpgrade" parameter="verifyBeforeForward">
+			<forward name="local" path="/jsp/checkDB.jsp" ></forward>
+			<forward name="remote" path="/jsp/remoteupgrade.jsp" ></forward>
+			<forward name="errordir" path="/jsp/selectdirectory.jsp" ></forward>
+			<forward name="error" path="/jsp/error.jsp" ></forward>
+		</action>
+		<action path="/login" type="com.weaver.action.EcologyUpgrade" parameter="login" >
+		</action>
+		<action path="/change" type="com.weaver.action.EcologyUpgrade" parameter="change" >
+		</action>
+		</action-mappings>
+		<controller maxFileSize="2G"></controller>
+</struts-config>
+
+
+
+
+
+
+

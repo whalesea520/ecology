@@ -1,0 +1,15 @@
+SMAP
+_syncdata__jsp.java
+JSP
+*S JSP
+*F
++ 1 syncData.jsp
+mobile/plugin/syncData.jsp
+*L
+1#1:37
+8#1,2:38,7
+9#1,2:51
+10#1:53,6
+10#1,70:58
+79#1,2:128
+*E

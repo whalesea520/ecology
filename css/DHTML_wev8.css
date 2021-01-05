@@ -1,0 +1,236 @@
+.tbToolbar
+{
+    BACKGROUND-COLOR: buttonface;
+    BORDER-BOTTOM: buttonshadow 1px solid;
+    BORDER-LEFT: buttonhighlight 1px solid;
+    BORDER-RIGHT: buttonshadow 1px solid;
+    BORDER-TOP: buttonhighlight 1px solid;
+    HEIGHT: 27px;
+    LEFT: 0px;
+    POSITION: relative;
+    TOP: 0px
+}
+.tbButton
+{
+    BACKGROUND-COLOR: buttonface;
+    BORDER-BOTTOM: buttonface 1px solid;
+    BORDER-LEFT: buttonface 1px solid;
+    BORDER-RIGHT: buttonface 1px solid;
+    BORDER-TOP: buttonface 1px solid;
+    HEIGHT: 23px;
+    POSITION: absolute;
+    TOP: 1px;
+    WIDTH: 23px
+}
+.tbIcon
+{
+    LEFT: -1px;
+    POSITION: absolute;
+    TOP: -1px
+}
+.tbSeparator
+{
+    BORDER-LEFT: buttonshadow 1px solid;
+    BORDER-RIGHT: buttonhighlight 1px solid;
+    FONT-SIZE: 0px;
+    HEIGHT: 22px;
+    POSITION: absolute;
+    TOP: 1px;
+    WIDTH: 1px
+}
+.tbMenu
+{
+    BACKGROUND-COLOR: buttonface;
+    BORDER-BOTTOM: buttonface 1px solid;
+    BORDER-LEFT: buttonface 1px solid;
+    BORDER-RIGHT: buttonface 1px solid;
+    BORDER-TOP: buttonface 1px solid;
+    CURSOR: default;
+    FONT-FAMILY: MS Sans Serif;
+    FONT-SIZE: 8px;
+    PADDING-BOTTOM: 2px;
+    PADDING-TOP: 4px;
+    POSITION: absolute;
+    TOP: 1px;
+    WIDTH: 1px
+}
+.tbMenuItem
+{
+    CURSOR: default;
+    DISPLAY: none;
+    FONT-FAMILY: MS Sans Serif;
+    FONT-SIZE: 8px
+}
+.tbSubmenu
+{
+    CURSOR: default;
+    DISPLAY: none;
+    FONT-FAMILY: MS Sans Serif;
+    FONT-SIZE: 8px
+}
+.tbGeneral
+{
+    HEIGHT: 22px;
+    POSITION: absolute;
+    TOP: 2px
+}
+.tbHandleDiv
+{
+    BACKGROUND-COLOR: buttonface;
+    BORDER-LEFT: buttonhighlight 1px solid;
+    BORDER-RIGHT: buttonshadow 1px solid;
+    BORDER-TOP: buttonhighlight 1px solid;
+    FONT-SIZE: 1px;
+    HEIGHT: 22px;
+    POSITION: absolute;
+    TOP: 1px;
+    WIDTH: 3px
+}
+.tbButtonMouseOverUp
+{
+    BACKGROUND-COLOR: buttonface;
+    BORDER-BOTTOM: buttonshadow 1px solid;
+    BORDER-LEFT: buttonhighlight 1px solid;
+    BORDER-RIGHT: buttonshadow 1px solid;
+    BORDER-TOP: buttonhighlight 1px solid;
+    HEIGHT: 23px;
+    POSITION: absolute;
+    TOP: 1px;
+    WIDTH: 24px
+}
+.tbButtonMouseOverDown
+{
+    BACKGROUND-COLOR: buttonface;
+    BORDER-BOTTOM: buttonhighlight 1px solid;
+    BORDER-LEFT: buttonshadow 1px solid;
+    BORDER-RIGHT: buttonhighlight 1px solid;
+    BORDER-TOP: buttonshadow 1px solid;
+    HEIGHT: 23px;
+    POSITION: absolute;
+    TOP: 1px;
+    WIDTH: 24px
+}
+.tbButtonDown
+{
+    BACKGROUND-COLOR: gainsboro;
+    BORDER-BOTTOM: buttonhighlight 1px solid;
+    BORDER-LEFT: buttonshadow 1px solid;
+    BORDER-RIGHT: buttonhighlight 1px solid;
+    BORDER-TOP: buttonshadow 1px solid;
+    HEIGHT: 23px;
+    POSITION: absolute;
+    TOP: 1px;
+    WIDTH: 24px
+}
+.tbIconDown
+{
+    LEFT: 0px;
+    POSITION: absolute;
+    TOP: 0px
+}
+.tbIconDownPressed
+{
+    LEFT: 1px;
+    POSITION: absolute;
+    TOP: 1px
+}
+.tbMenuBodyOuterDiv
+{
+    BACKGROUND-COLOR: menu;
+    BORDER-BOTTOM: threeddarkshadow 1px solid;
+    BORDER-LEFT: buttonface 1px solid;
+    BORDER-RIGHT: threeddarkshadow 1px solid;
+    BORDER-TOP: buttonface 1px solid;
+    CURSOR: default;
+    POSITION: absolute
+}
+.tbMenuBodyInnerDiv
+{
+    BORDER-BOTTOM: buttonshadow 1px solid;
+    BORDER-LEFT: buttonhighlight 1px solid;
+    BORDER-RIGHT: buttonshadow 1px solid;
+    BORDER-TOP: buttonhighlight 1px solid;
+    CURSOR: default
+}
+.tbMenuBodyTable
+{
+    BORDER-BOTTOM: menu 1px solid;
+    BORDER-LEFT: menu 1px solid;
+    BORDER-RIGHT: menu 1px solid;
+    BORDER-TOP: menu 1px solid;
+    CURSOR: default
+}
+.tbMenuSeparator
+{
+    DISPLAY: none
+}
+.tbMenuSeparatorTop
+{
+    BORDER-BOTTOM: buttonshadow 1px solid;
+    FONT-SIZE: 0px;
+    HEIGHT: 5px;
+    POSITION: relative;
+    WIDTH: 94%
+}
+.tbMenuSeparatorBottom
+{
+    BORDER-TOP: buttonhighlight 1px solid;
+    FONT-SIZE: 0px;
+    HEIGHT: 5px;
+    POSITION: relative;
+    WIDTH: 94%
+}
+.tbMenuBlankSpace
+{
+    WIDTH: 20px
+}
+.tbSubmenuGlyph
+{
+    FONT-FAMILY: webdings;
+    TEXT-ALIGN: right;
+    WIDTH: 20px
+}
+.tbMenuItemChecked
+{
+    FONT-FAMILY: webdings;
+    TEXT-ALIGN: right;
+    WIDTH: 20px
+}
+.tbMenuIcon
+{
+    BACKGROUND-COLOR: buttonface;
+    BORDER-BOTTOM: buttonface 1px solid;
+    BORDER-LEFT: buttonface 1px solid;
+    BORDER-RIGHT: buttonface 1px solid;
+    BORDER-TOP: buttonface 1px solid
+}
+.tbMenuIconChecked
+{
+    BACKGROUND-COLOR: threedlightshadow;
+    BORDER-BOTTOM: buttonhighlight 1px solid;
+    BORDER-LEFT: buttonshadow 1px solid;
+    BORDER-RIGHT: buttonhighlight 1px solid;
+    BORDER-TOP: buttonshadow 1px solid
+}
+.tbMenuIconMouseOver
+{
+    BACKGROUND-COLOR: buttonface;
+    BORDER-BOTTOM: buttonshadow 1px solid;
+    BORDER-LEFT: buttonhighlight 1px solid;
+    BORDER-RIGHT: buttonshadow 1px solid;
+    BORDER-TOP: buttonhighlight 1px solid
+}
+.tbMenuIconCheckedMouseOver
+{
+    BACKGROUND-COLOR: buttonface;
+    BORDER-BOTTOM: buttonhighlight 1px solid;
+    BORDER-LEFT: buttonshadow 1px solid;
+    BORDER-RIGHT: buttonhighlight 1px solid;
+    BORDER-TOP: buttonshadow 1px solid
+}
+.tbScriptlet
+{
+    CURSOR: default;
+    POSITION: absolute;
+    VISIBILITY: hidden
+}

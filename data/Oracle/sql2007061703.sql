@@ -1,0 +1,3 @@
+ALTER TABLE SysFavourite
+MODIFY url VARCHAR2(1000)
+/

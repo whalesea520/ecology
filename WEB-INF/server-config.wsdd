@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployment name="defaultClientConfig"
+            xmlns="http://xml.apache.org/axis/wsdd/"
+            xmlns:java="http://xml.apache.org/axis/wsdd/providers/java"
+            xmlns:handler="http://xml.apache.org/axis/wsdd/providers/handler">
+
+ <globalConfiguration>
+   <parameter name="disablePrettyXML" value="true"/>
+   <requestFlow>
+     <handler type="java:org.apache.axis.handlers.JWSHandler">
+        <parameter name="scope" value="session"/>
+     </handler>
+     <handler type="java:org.apache.axis.handlers.JWSHandler">
+        <parameter name="scope" value="request"/>
+        <parameter name="extension" value=".jwr"/>
+     </handler>
+    
+   </requestFlow>
+  
+ </globalConfiguration>
+
+ <handler type="java:org.apache.axis.handlers.http.URLMapper" name="URLMapper"/>
+ <handler type="java:org.apache.axis.transport.local.LocalResponder" name="LocalResponder"/>
+ <handler type="java:org.apache.axis.handlers.SimpleAuthenticationHandler" name="Authenticate"/>
+ 
+ <transport name="http">
+  <parameter name="qs:list" 
+               value="org.apache.axis.transport.http.QSListHandler"/>
+  <parameter name="qs:method" 
+               value="org.apache.axis.transport.http.QSMethodHandler"/>
+  <parameter name="qs:wsdl" 
+               value="org.apache.axis.transport.http.QSWSDLHandler"/>
+  <requestFlow>
+   <handler type="URLMapper"/>
+   <handler type="java:org.apache.axis.handlers.http.HTTPAuthHandler"/>
+  </requestFlow>
+ </transport>
+
+ <transport name="local">
+  <responseFlow>
+   <handler type="LocalResponder"/>
+  </responseFlow>
+ </transport>
+ 
+<!-- ************************** weaver web services**************************** -->
+
+ 
+<service name="HrmService" style="RPC" use="encoding">
+  <namespace>http://www.weaver.com.cn/ws/hrm</namespace>
+  <parameter name="allowedMethods" value="getUsers getDepartments getSubcompanys"/>
+  <parameter name="className" value="weaver.soa.hrm.HrmService"/>
+  <typeMapping
+      xmlns:ns="http://www.weaver.com.cn/ws/hrm"
+      qname="ns:SimpleUser"
+      languageSpecificType="java:weaver.soa.hrm.SimpleUser"
+      serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+      deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+      encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+
+ <typeMapping
+      xmlns:ns="http://www.weaver.com.cn/ws/hrm"
+      qname="ns:SimpleDepartment"
+      languageSpecificType="java:weaver.soa.hrm.SimpleDepartment"
+      serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+      deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+      encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+ <typeMapping
+      xmlns:ns="http://www.weaver.com.cn/ws/hrm"
+      qname="ns:SimpleSubCompany"
+      languageSpecificType="java:weaver.soa.hrm.SimpleSubCompany"
+      serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+      deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+      encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+</service>
+
+<service name="RequestBaseService" style="RPC" use="encoding">
+  <namespace>http://www.weaver.com.cn/workflow/request</namespace>
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="className" value="weaver.soa.workflow.request.RequestBaseService"/>
+  <typeMapping
+      xmlns:ns="http://www.weaver.com.cn/workflow/request"
+      qname="ns:RequestBase"
+      languageSpecificType="java:weaver.soa.workflow.request.RequestBase"
+      serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+      deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+      encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+</service>
+    
+<service name="RequestService" style="wrapped" use="literal">
+  <namespace>http://www.weaver.com.cn/ws/workflow/request</namespace>
+  <parameter name="allowedMethods" value="getRequest createRequest"/>
+  <parameter name="className" value="weaver.soa.workflow.request.RequestService"/>
+  <wsdlFile>RequestService.wsdl</wsdlFile>
+  <operation name="getRequest" qname="getRequest" returnQName="RequestInfo">
+        <parameter qname="requestId"/>
+ </operation>
+ <typeMapping
+      xmlns:ns="http://www.weaver.com.cn/ws/workflow/request"
+      qname="ns:createRequest"
+      languageSpecificType="java:weaver.soa.workflow.request.CreateRequest"
+      serializer="org.apache.axis.encoding.ser.castor.CastorSerializerFactory"
+      deserializer="org.apache.axis.encoding.ser.castor.CastorDeserializerFactory"
+      encodingStyle=""/>
+ <typeMapping
+      xmlns:ns="http://www.weaver.com.cn/ws/workflow/request"
+      qname="ns:RequestInfo"
+      languageSpecificType="java:weaver.soa.workflow.request.RequestInfo"
+      serializer="weaver.soa.ser.WeaverSerializerFactory"
+      deserializer="org.apache.axis.encoding.ser.castor.CastorDeserializerFactory"
+      encodingStyle=""/>
+ <typeMapping
+      xmlns:ns="http://www.weaver.com.cn/ws/workflow/request"
+      qname="ns:MainTableInfo"
+      languageSpecificType="java:weaver.soa.workflow.request.MainTableInfo"
+      serializer="org.apache.axis.encoding.ser.castor.CastorSerializerFactory"
+      deserializer="org.apache.axis.encoding.ser.castor.CastorDeserializerFactory"
+      encodingStyle=""/>
+ <typeMapping
+      xmlns:ns="http://www.weaver.com.cn/ws/workflow/request"
+      qname="ns:DetailTable"
+      languageSpecificType="java:weaver.soa.workflow.request.DetailTable"
+      serializer="org.apache.axis.encoding.ser.castor.CastorSerializerFactory"
+      deserializer="org.apache.axis.encoding.ser.castor.CastorDeserializerFactory"
+      encodingStyle=""/>
+<typeMapping
+      xmlns:ns="http://www.weaver.com.cn/ws/workflow/request"
+      qname="ns:DetailTableInfo"
+      languageSpecificType="java:weaver.soa.workflow.request.DetailTableInfo"
+      serializer="org.apache.axis.encoding.ser.castor.CastorSerializerFactory"
+      deserializer="org.apache.axis.encoding.ser.castor.CastorDeserializerFactory"
+      encodingStyle=""/>
+ <typeMapping
+      xmlns:ns="http://www.weaver.com.cn/ws/workflow/request"
+      qname="ns:Property"
+      languageSpecificType="java:weaver.soa.workflow.request.Property"
+      serializer="org.apache.axis.encoding.ser.castor.CastorSerializerFactory"
+      deserializer="org.apache.axis.encoding.ser.castor.CastorDeserializerFactory"
+      encodingStyle=""/>
+ <typeMapping
+      xmlns:ns="http://www.weaver.com.cn/ws/workflow/request"
+      qname="ns:Row"
+      languageSpecificType="java:weaver.soa.workflow.request.Row"
+      serializer="org.apache.axis.encoding.ser.castor.CastorSerializerFactory"
+      deserializer="org.apache.axis.encoding.ser.castor.CastorDeserializerFactory"
+      encodingStyle=""/>
+ <typeMapping
+      xmlns:ns="http://www.weaver.com.cn/ws/workflow/request"
+      qname="ns:Cell"
+      languageSpecificType="java:weaver.soa.workflow.request.Cell"
+      serializer="org.apache.axis.encoding.ser.castor.CastorSerializerFactory"
+      deserializer="org.apache.axis.encoding.ser.castor.CastorDeserializerFactory"
+      encodingStyle=""/>
+ <typeMapping
+      xmlns:ns="http://www.weaver.com.cn/ws/workflow/request"
+      qname="ns:RequestLog"
+      languageSpecificType="java:weaver.soa.workflow.request.RequestLog"
+      serializer="org.apache.axis.encoding.ser.castor.CastorSerializerFactory"
+      deserializer="org.apache.axis.encoding.ser.castor.CastorDeserializerFactory"
+      encodingStyle=""/>
+ <typeMapping
+      xmlns:ns="http://www.weaver.com.cn/ws/workflow/request"
+      qname="ns:Log"
+      languageSpecificType="java:weaver.soa.workflow.request.Log"
+      serializer="org.apache.axis.encoding.ser.castor.CastorSerializerFactory"
+      deserializer="org.apache.axis.encoding.ser.castor.CastorDeserializerFactory"
+      encodingStyle=""/>
+ 
+</service>
+</deployment>

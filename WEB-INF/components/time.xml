@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components>
+	<component desc="时间" type="19" ptype="3" client="pc" name="time">
+	   <params>
+	      <p name="" />	   
+	   </params>
+		<template>
+			<edit><content><![CDATA[<BUTTON class=Browser title=选择 onclick="onShowBrowser2('${id}','/systeminfo/Clock.jsp','','19','0')"></BUTTON>
+			               <INPUT onpropertychange="checkLengthbrow('field${id}','field${id}span','4000','${label}','文本长度不能超过','1个中文字符等于2个长度',field${id}.getAttribute('viewtype'))" 
+						   value="${value}" type=hidden name=field${id} temptitle="${label}" viewtype="0">
+						   <SPAN id=field${id}span realValue="${value}" My97Mark="false">${value}</SPAN>
+			               ]]></content></edit>
+			<view><content><![CDATA[<SPAN id=field${id}span>${value}</SPAN>]]></content></view>
+			<setting><content><![CDATA[<INPUT id="${fieldid}" class="InputStyle"  name="field${id}" value="${label}">]]></content></setting>
+		</template>
+	</component>
+	<component desc="时间" type="19" ptype="3"  client="mobile" name="time">
+		<params>
+		    <p name=""/>
+		</params>
+		<template>
+			<edit><content><![CDATA[
+			<div class="field_inputTime_container">
+				<input class="field_inputTime timeStyle" type="text" data-role="none" id="field${id}" name="field${id}" ismust="${must}" value="${value}" onchange="showClearBtn(${id});" fieldid="${id}" fieldname="${fieldname}">
+				<div class="field_inputTime_sub" id="fieldSub${id}"></div>
+			</div>
+			]]></content></edit>
+			<view><content><![CDATA[<SPAN id="field${id}span" class="field_viewText">${value}</SPAN><input value ="${value}" name=field${id} id=field${id} lablename="${label}" type="hidden">]]></content></view>
+			<setting><content><![CDATA[<INPUT id="${fieldid}" class="InputStyle"  name="field${id}" value="${label}">]]></content></setting>
+			<hidden><content><![CDATA[<input value ="${value}" name=field${id} id=field${id} lablename="${label}" type="hidden">]]></content></hidden>
+		</template>
+	</component>
+</components>

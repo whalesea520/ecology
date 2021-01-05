@@ -1,0 +1,60 @@
+错误时间
+  12:14:42
+错误位置
+  sql201707050203.sql第2行:
+错误语句
+ delete from wf_browser_config where type ='wf'
+错误原因
+  com.microsoft.sqlserver.jdbc.SQLServerException: 对象名 'wf_browser_config' 无效。
+
+
+错误时间
+  12:16:49
+错误位置
+  sql201707050203.sql第4行:
+错误语句
+ insert into wf_browser_config(type,clazz,description) values('-99991','com.api.browser.service.impl.WorkflowBrowserService','路径')
+错误原因
+  com.microsoft.sqlserver.jdbc.SQLServerException: 对象名 'wf_browser_config' 无效。
+
+
+错误时间
+  12:33:18
+错误位置
+  sql201707050203.sql第6行:
+错误语句
+ delete from wf_browser_config where type ='22'
+错误原因
+  com.microsoft.sqlserver.jdbc.SQLServerException: 对象名 'wf_browser_config' 无效。
+
+
+错误时间
+  12:42:34
+错误位置
+  sql201707050203.sql第8行:
+错误语句
+ insert into wf_browser_config(type,clazz,description) values('22','com.api.browser.service.impl.BudgetfeeTypeBrowserService','报销费用类型')
+错误原因
+  com.microsoft.sqlserver.jdbc.SQLServerException: 对象名 'wf_browser_config' 无效。
+
+
+错误时间
+  12:42:41
+错误位置
+  sql201707050203.sql第10行:
+错误语句
+ delete from wf_browser_config where type ='251'
+错误原因
+  com.microsoft.sqlserver.jdbc.SQLServerException: 对象名 'wf_browser_config' 无效。
+
+
+错误时间
+  12:42:49
+错误位置
+  sql201707050203.sql第12行:
+错误语句
+ insert into wf_browser_config(type,clazz,description) values('251','com.api.browser.service.impl.CostCenterBrowserService','成本中心')
+错误原因
+  com.microsoft.sqlserver.jdbc.SQLServerException: 对象名 'wf_browser_config' 无效。
+
+

@@ -1,0 +1,192 @@
+/*工商资料*/
+@charset "utf-8";
+/*---头部---*/
+.BHeadr{background:url(../images/O_02_wev8.jpg) repeat-x top;width:100%;height:49px;float:left;}
+
+.BHeadr h1{width:130px;height:42px;float:left;background:url(../images/OLogo_wev8.png) no-repeat 10px center;}
+
+.BHeadr h2{width:200px;padding-left:10px;float:left;height:42px;font-size:13px;line-height:42px;}
+
+.BHeadr ul{width:600px;float:right;padding-top:15px;}
+
+.BHeadr ul li{min-width:50px;width:auto!important;width:50px; white-space:nowrap;float:right;margin-left:15px;display:inline}
+
+.BHeadr ul li img{margin-bottom:-3px;margin-right:5px;}
+
+/*---共用---*/
+.BBoxW{width:950px;margin:0 auto;}
+
+
+/*---导航---*/
+.BNav li{min-width:85px;width:auto!important;width:85px;height:26px;float:left;margin-right:2px;display:inline;background:url(../images/O_10_wev8.jpg) repeat-x; text-align:center;line-height:26px;}
+
+.BNav li a{min-width:85px;width:auto!important;width:85px;float:left;display:block;height:25px;border:1px solid #e0e0e0; border-bottom:none;}
+
+.BNav li a:hover,.BNav li a.hover{background:url(../images/O_08_wev8.jpg) repeat-x top center;color:#FFF;border:1px solid #0887c7; border-bottom:none;}
+
+.BNav li a:hover div,.BNav li a.hover div{min-width:85px;width:auto!important;width:85px;background:url(../images/O_06_wev8.jpg) no-repeat left top;}
+
+.BNav li a:hover div div,.BNav li a.hover div div{background:url(../images/O_07_wev8.jpg) no-repeat right top;}
+
+.BSubnavMsg li{min-width:50px;width:auto!important;width:50px;white-space:nowrap;float:left; margin-right:10px;display:inline}
+
+/*----筛选条件-----*/
+
+.BFilter li{padding-left:20px;text-align:left;float:left;min-width:80px;width:auto!important;width:80px; white-space:nowrap;height:28px;line-height:28px;}
+
+.BFilter2 li{width:120px;padding-left:13px;float:left;margin:5px 0px;}
+
+/*---表单---*/
+.BInput{background:url(../images/O_30_wev8.jpg) no-repeat left top;border:#d0d0d0 1px solid;border-left:none;height:17px;line-height:17px;}
+.BInputH{height:45px;}
+
+.BInput2{background:url(../images/O_43_wev8.jpg) top repeat-x #fff;border:#d0d0d0 1px solid;padding:0px 0px;}
+
+
+/*---按钮样式---*/
+.BBtnUl li, .BBtnUl li em, .BBtnUl li em i, .BBtnUl li em i a{min-width:30px;width:auto!important;width:30px;float:left;white-space:nowrap;height:20px;line-height:20px;display:block;}
+
+.BBtnUl li{background:url(../images/O_29_wev8.gif) repeat-x   left -30px;margin-right:3px; display:inline}
+
+.BBtnUl li em{background:url(../images/O_29_wev8.gif) no-repeat left top;}
+
+.BBtnUl li em i{background:url(../images/O_29_wev8.gif) no-repeat right -60px;padding:0px 5px; text-align:center}
+
+.BContRightMsg li{min-width:20px;width:auto!important;width:20px;height:20px;line-height:17px;float:left;display:inline;text-align:center;margin-right:1px;}
+
+.BContRightMsg li a{min-width:20px;width:auto!important;width:20px;float:left;display:block;height:20px;line-height:17px;padding-left:5px; white-space:nowrap}
+
+.BContRightMsg li a div{padding-right:5px;height:20px;line-height:17px;}
+
+.OContRightMsg li a div,.BContRightMsg li a div div{min-width:20px;width:auto!important;width:20px;}
+
+.BContRightMsg li a:hover,.BContRightMsg li a.hover{background:url(../images/O_20_wev8.png) no-repeat top left;}
+
+.BContRightMsg li a:hover div,.BContRightMsg li a.hover div{background:url(../images/O_20_wev8.png) no-repeat right -60px;}
+
+.BContRightMsg li a:hover div div,.BContRightMsg li a.hover div div{background:url(../images/O_20_wev8.png) repeat-x left -30px;padding:0px;}
+
+
+/*-滚动条-*/
+.BContRightScroll{overflow-y:scroll; overflow-x:hidden;color:#626262}
+
+.BScrollHeight1{height:395px;}
+
+.BScrollHeight2{height:80px;}
+
+.picR{background:url(../images/IconBg_wev8.png) no-repeat center -20px;width:19px;height:19px;line-height:19px;display:block;font-size:0px;}
+
+.picG{background:url(../images/IconBg_wev8.png) no-repeat center -40px;width:19px;height:19px;line-height:19px;display:block;font-size:0px;}
+
+.picO{background:url(../images/IconBg_wev8.png) no-repeat center 0px;width:19px;height:19px;line-height:19px;display:block;font-size:0px;}
+
+.picB{background:url(../images/IconBg_wev8.png) no-repeat center -60px;width:19px;height:19px;line-height:19px;display:block;font-size:0px;}
+
+/*---------表格---------*/
+
+#BTable2 td, .BTable2{background:url(../images/Bg5_wev8.gif) repeat-x top;line-height:24px;height:24px;padding-top:0px;padding-bottom:0px;}
+
+
+.ModeR, .ModeG, .ModeO, .ModeB, .ModeORed{width:20px;height:20px;line-height:19px;display:block;font-size:0px;}
+
+.ModeR{background:url(../images/IconBg_wev8.png) no-repeat center -20px;}
+
+.ModeG{background:url(../images/IconBg_wev8.png) no-repeat center -40px;}
+
+.ModeO{background:url(../images/IconBg_wev8.png) no-repeat center 0px;}
+
+.ModeB{background:url(../images/IconBg_wev8.png) no-repeat center -60px;}
+
+.ModeORed{background:url(../images/img03_wev8.gif) no-repeat center -3px;}
+
+.BTable{background:#dde3e1}
+
+.BTable td{background:#fff; padding-top:4px; padding-bottom:3px;}
+
+.BTable tr.alt td {background:#f2f2f2;}
+
+.BTable tr.over td {background:#ccdfed;}
+
+
+/*--------*/
+
+.BTotal{background:url(../images/BI_05_wev8.jpg) repeat-x top;height:26px;}
+
+.BTotal li{min-width:80px;padding-left:50px;background:url(../images/BI_06_wev8.jpg) no-repeat 34px center;float:left;}
+
+
+
+/*--------弹出层-------*/
+
+.BHeaderLayer{width:943px;height:400px;z-index:100;top:50%;left:50%;margin-left:-472px;margin-top:-202px;}
+
+.BHeaderLayerTit{background:url(../images/O_41_wev8.jpg) repeat-x top;height:38px;line-height:38px;}
+
+.BHeaderLayerW{width:943px;}
+
+.BLayerLeft{padding-left:25px;width:460px;float:left; padding-top:10px;}
+
+.BLayerRight{background:url(../images/BO_08_wev8.jpg) no-repeat left;width:455px;padding-top: 15px;text-align:center;height:500px;}
+
+.BLayerRight2{background:url(../images/BO_08_wev8.jpg) no-repeat left;width:455px;padding-top: 15px;height:350px;}
+
+.BHeaderLayer2{width:490px;height:620px;z-index:100;top:50%;left:50%;margin-left:-245px;margin-top:-310px;}
+
+.BHeaderLayerW2{width:490px;}
+
+.BHeaderLayerCont{padding:0px 30px; padding-top:15px;}
+
+
+/*---列表--*/
+
+.BContRightList{padding:10px 15px 5px 15px;}
+
+.BContRightList li{background:url(../images/O_25_wev8.jpg) no-repeat left 7px; padding-left:20px; height:25px;line-height:25px;border-bottom:1px solid #edf0f1;}
+
+.BContRightList2{padding:10px 15px 5px 15px;}
+
+.BContRightList2 li{height:25px;line-height:25px;border-bottom:1px solid #edf0f1;}
+
+
+/*-按钮-*/
+.BContRightMsg2 li{min-width:30px;width:auto!important;width:30px;height:20px;line-height:17px;float:left;display:inline;text-align:center;margin-right:2px;}
+
+.BContRightMsg2 li a{min-width:30px;width:auto!important;width:30px;float:left;display:block;height:17px;line-height:20px;padding-left:5px; white-space:nowrap}
+
+.BContRightMsg2 li a div{padding-right:5px;}
+
+.BContRightMsg2 li a div,.BContRightMsg2 li a div div{min-width:30px;width:auto!important;width:30px;}
+
+.BContRightMsg2 li a div div{padding:0px;}
+
+.BContRightMsg2 li a:hover,.BContRightMsg2 li a.hover{background:url(../images/O_32_wev8.png) no-repeat top left;color:#FFF  !important;}
+
+.BContRightMsg2 li a:hover div,.BContRightMsg2 li a.hover div{background:url(../images/O_32_wev8.png) no-repeat right -60px;}
+
+.BContRightMsg2 li a:hover div div,.BContRightMsg2 li a.hover div div{background:url(../images/O_32_wev8.png) repeat-x left -30px;}
+
+.BBoxWBg{background:url(../images/O_28_wev8.jpg) repeat-x top;}
+
+.BBoxWBg2{background:url(../images/BI_11_wev8.jpg) repeat-x top;height:38px;line-height:38px;}
+
+
+.BBoxTit{background:url(../images/BI_04_wev8.jpg) repeat-x top;height:27px; margin-top:-1px;}
+
+.BContLeft{width:382px;float:left}
+
+.BContLeft li{width:162px;height:134px;float:left;margin-right:27px;background:url(../images/BI_13_wev8.jpg) no-repeat left top;_display:inline}
+
+.BContLeft li a{width:162px;height:67px;display:block;text-align:center;padding-top:25px;}
+
+.BContLeft li a:hover,.BContLeft li a.hover{background:url(../images/BI_14_wev8.jpg) top left;}
+
+.BContLeft li a:hover span,.BContLeft li a.hover span{color:#FFF;}
+
+.BContLeft li a:hover p,.BContLeft li a.hover p{color:#b2d4e9;}
+
+.BContRight{width:534px;float:left;background:url(../images/BI_15_wev8.jpg) repeat-y left top;height:405px;padding-left:33px;}
+
+.BContRightTitW{width:534px;}
+
+
+

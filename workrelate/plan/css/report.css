@@ -1,0 +1,388 @@
+.tabbt {
+	width: 112px;
+	height: 30px;
+	display: inline-block;
+	_display: inline;
+	line-height: 30px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 13px;
+}
+
+.tabbtBlur {
+	background: none;
+}
+
+.tabbtFocs {
+	background: url("/workrelate/images/tabbg.png") bottom center;
+	background-color: #3E86E2;
+}
+
+.tabbt a {
+	color: white !important;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.tabbt a:hover {
+	color: white !important;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.yearpanel {
+	width: 85px;
+	line-height: 26px;
+	height: 26px;
+	border: 1px #ECECEC solid;
+	margin-right: 10px;
+	cursor: pointer;
+	background: url('../images/btn_down.png') right center no-repeat;
+	float: left;
+	font-size: 13px;
+}
+
+.yearselect {
+	width: 85px;
+	height: auto;
+	border: 1px #ECECEC solid;
+	position: absolute;
+	display: none;
+	background: #fff;
+	z-index: 100;
+}
+
+.yearoption {
+	width: 100%;
+	line-height: 22px;
+	font-size: 13px;
+}
+
+.yearoption_hover {
+	background: #0080C0;
+	color: #fff;
+}
+
+.title {
+	background: #F3F3F3;
+	color: #333333;
+	display: block;
+}
+
+.tab {
+	width: 55px;
+	float: left;
+	line-height: 26px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 13px;
+	margin-top: 0px;
+	color: #333333;
+	border-top: 1px #DBDBDB solid;
+	border-bottom: 1px #DBDBDB solid;
+	border-left: 1px #DBDBDB solid;
+	background: #FAFAFA;
+}
+
+.tab2 {
+	width: 35px;
+	float: left;
+	line-height: 28px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 12px;
+	border: 0px;
+	color: #626262;
+	font-weight: normal;
+}
+
+.tab2_click {
+	color: #105FB8;
+	border-bottom: 3px solid #75ACEA;
+	height: 25px;
+	line-height: 25px;
+}
+
+.tab2_panel {
+	height: 28px;
+	width: auto;
+	background: url('../images/tab_bg.png') repeat-x;
+	border-left: 1px #DBDBDB solid;
+	border-right: 1px #DBDBDB solid;
+	float: left;
+}
+
+.tab_click {
+	background: #4F95E4;
+	color: #fff;
+	border-color: #4F95E4;
+}
+
+.searchtable {
+	width: 100%;
+}
+
+.searchtable td {
+	line-height: 30px;
+	padding-left: 4px;
+}
+
+.btn1 {
+    width: 55px !important;
+    height: 20px !important;
+    line-height: 20px !important;
+    text-align: center;
+    border: 1px #C5C5C5 solid !important;
+    color: #808080;
+    cursor: pointer;
+    margin-left: 5px;
+    padding: 0px !important;
+}
+
+.btn_hover {
+	background: #5581DA;
+	color: #fff;
+	border-color: #5581DA;
+}
+
+.maintitle {
+	float: left;
+	line-height: 28px;
+	color: #999999;
+	font-size: 12px;
+	margin-left: 10px;
+}
+
+.listTable {
+	table-layout: fixed;
+}
+
+.listTable td {
+	padding: 3px 6px 3px 12px;
+	border-bottom: 1px solid #ECECEC;
+	height: 34px;
+	line-height: 24px;
+	word-break: keep-all;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.listTable thead td {
+	color: #999999;
+	border-bottom: 1px solid #59D445;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 6px 6px 6px 12px;
+}
+
+.icons label {
+	margin: 0 20px 0 6px;
+	color: #999999;
+}
+
+.icons {
+	text-align: right;
+	height: 28px;
+	border-bottom: 1px solid #ECECEC;
+}
+
+.weekselect {
+	width: 302px;
+	height: auto;
+	border: 1px #ECECEC solid;
+	position: absolute;
+	display: none;
+	background: #fff;
+	z-index: 100;
+	overflow: hidden;
+}
+
+.weekoption,.weekoption2 {
+	width: 50px;
+	line-height: 22px;
+	text-align: center;
+	float: left;
+	color: #999999;
+}
+
+.weekoption_current {
+	background: #F8EFEF;
+}
+
+.weekoption_hover,.weekoption_select {
+	background: #0080C0;
+	color: #fff;
+}
+
+.week_txt {
+	float: left;
+	line-height: 28px;
+	width: 56px;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	font-weight: normal;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.week_btn1 {
+	float: left;
+	width: 16px;
+	height: 28px;;
+	margin: 0px;
+	padding: 0px;
+	background: url('../images/prev.png') center no-repeat;
+}
+
+.week_prev {
+	cursor: pointer;
+}
+
+.week_prev_hover {
+	background: url('../images/prev_hover.png') center no-repeat;
+}
+
+.week_btn2 {
+	float: left;
+	width: 16px;
+	height: 28px;;
+	margin: 0px;
+	padding: 0px;
+	background: url('../images/next.png') center no-repeat;
+}
+
+.week_next {
+	cursor: pointer;
+}
+
+.week_next_hover {
+	background: url('../images/next_hover.png') center no-repeat;
+}
+
+.week_show,.week_show2 {
+	width: 160px;
+	line-height: 28px;
+	text-align: center;
+	color: #969696;
+	float: left;
+	font-weight: normal;
+	font-size: 12px;
+}
+
+.watchdetail {
+	width: 80px;
+	height: 24px;
+	line-height: 24px;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.watchdetailHover {
+	background: #54C20B;
+	color: #FFFFFF;
+}
+
+.headerTb {
+	background: #4F93EA;
+	margin-bottom: 8px;
+	width: 99%;
+}
+
+.orgHeader td {
+	border: 1px solid #59D445;
+}
+
+#showImgLeftContr {
+	width: 12px;
+	height: 502px;
+	top: 40px;
+	position: absolute;
+	left: 0px;
+	float: left;
+	cursor: pointer;
+	background:
+		url(/wui/theme/ecology7/skins/default/page/main/leftBlockContraction_wev8.png)
+		no-repeat;
+	background-position: 0 25;
+}
+
+#showImgRightContr {
+	width: 12px;
+	height: 502px;
+	top: 40px;
+	position: absolute;
+	right: 0px;
+	float: right;
+	cursor: pointer;
+	background:
+		url(/wui/theme/ecology7/skins/default/page/main/leftBlockExpand_wev8.png)
+		no-repeat;
+	background-position: 0 25;
+}
+
+#imgContainer {
+	height: 100%;
+	float: left;
+	margin-left: 12px;
+	background: #F1F1F1;
+	filter: alpha(Opacity = 90);
+	-moz-opacity: 0.9;
+	opacity: 0.9;
+}
+
+#showImgContainer {
+	width: 1300px;
+	height: 702px;
+	left: 1280px;
+	top: 0px;
+	position: absolute;
+	float: left;
+	background:#ffffff;
+	z-index:9;
+}
+
+.msgcls {
+	position: absolute;
+	width: 270px;
+	line-height: 30px;
+	text-align: center;
+	left: 100px;
+	top: 300px;
+	background: #FBFDFF;
+	color: #808080;
+	font-size: 14px;
+	font-family: '微软雅黑';
+	display: none;
+	border: 1px #1A8CFF solid;
+	box-shadow: 0px 0px 1px #1A8CFF;
+	-moz-box-shadow: 0px 0px 1px #1A8CFF;
+	-webkit-box-shadow: 0px 0px 1px #1A8CFF;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+.dataconatiner{
+	background: #ffffff;
+	overflow-y:scroll;
+	overflow-x:hidden;
+	width:100%;
+	height:100%
+}
+body{
+	 padding-left:12px;
+	 background: #ffffff;
+	 width:100%;
+	 height:100%;
+	 overflow:hidden;
+}
+.timecls{
+    width:100%;
+    line-height:30px;
+    height:30px;
+    background:url('/workrelate/images/wrbrowser.png') center left no-repeat !important;
+    cursor: pointer;
+    padding-left:30px;
+}

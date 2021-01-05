@@ -1,0 +1,348 @@
+BODY {
+	FONT-SIZE: 9pt; MARGIN: 0px; FONT-FAMILY: Verdana; LIST-STYLE-TYPE: circle
+}
+TABLE {
+	FONT-SIZE: 9pt; FONT-FAMILY: Verdana
+}
+TABLE.Form {
+	BORDER-RIGHT: medium none; PADDING-RIGHT: 0px; BORDER-TOP: medium none; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: medium none; WIDTH: 100%; BORDER-BOTTOM: medium none
+}
+TABLE.Form TR {
+	
+}
+TABLE.Form TR.Section {
+	
+}
+TABLE.Form TR.Section TH {
+	TEXT-INDENT: -1pt; TEXT-ALIGN: left
+}
+TABLE.Form TR.Separator {
+	HEIGHT: 4px
+}
+TABLE.Form TD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+TABLE.Form TD.Field {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 2px; BACKGROUND-COLOR: #efefef
+}
+TABLE.Form TD.Sep1 {
+	BACKGROUND-IMAGE: url(../Images/Sep1_wev8.gif); BACKGROUND-REPEAT: repeat-x; HEIGHT: 3px
+}
+TABLE.Form TD.Sep2 {
+	BACKGROUND-IMAGE: url(../Images/Sep2_wev8.gif); BACKGROUND-REPEAT: repeat-x; HEIGHT: 3px
+}
+TABLE.Form TD.Sep3 {
+	BACKGROUND-IMAGE: url(../Images/Sep3_wev8.gif); BACKGROUND-REPEAT: repeat-x; HEIGHT: 3px
+}
+TABLE.ListShort {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 100%; PADDING-TOP: 0px; BORDER-BOTTOM: 0px
+}
+TABLE.ListShort TR {
+	
+}
+TABLE.ListShort TR.Section {
+	
+}
+TABLE.ListShort TR.Section TH {
+	TEXT-ALIGN: left
+}
+TABLE.ListShort TR.Separator {
+	HEIGHT: 3px
+}
+TABLE.ListShort TR.Header {
+	COLOR: #000000; BACKGROUND-COLOR: #c1daff
+}
+TABLE.ListShort TR.Header TD {
+	BORDER-RIGHT: #c5c5c5 1pt solid; PADDING-RIGHT: 3pt; BORDER-TOP: #c5c5c5 1pt solid; FONT-WEIGHT: normal; VERTICAL-ALIGN: text-top; BORDER-LEFT: #c5c5c5 1pt solid; PADDING-TOP: 2pt; BORDER-BOTTOM: #c5c5c5 1pt solid; TEXT-ALIGN: left
+}
+TABLE.ListShort TR.Header TH {
+	BORDER-RIGHT: #c5c5c5 1pt solid; PADDING-RIGHT: 3pt; BORDER-TOP: #c5c5c5 1pt solid; FONT-WEIGHT: normal; VERTICAL-ALIGN: text-top; BORDER-LEFT: #c5c5c5 1pt solid; PADDING-TOP: 2pt; BORDER-BOTTOM: #c5c5c5 1pt solid; TEXT-ALIGN: left
+}
+TABLE.ListShort TR.DataDark {
+	BACKGROUND-COLOR: #e7e7e7
+}
+TABLE.ListShort TR.DataDark TD {
+	PADDING-RIGHT: 4pt; PADDING-LEFT: 1pt; LINE: 100%
+}
+TABLE.ListShort TR.DataLight {
+	BACKGROUND-COLOR: #f5f5f5
+}
+TABLE.ListShort TR.DataLight TD {
+	PADDING-RIGHT: 4pt; PADDING-LEFT: 1pt; LINE: 100%
+}
+TABLE.ListShort TR.DataField {
+	BACKGROUND-COLOR: #efefef
+}
+TABLE.ListShort TR.DataField TD {
+	PADDING-RIGHT: 4pt; PADDING-LEFT: 1pt; LINE: 100%
+}
+TABLE.ListShort TR.Selected {
+	CURSOR: hand; COLOR: #ffffff; BACKGROUND-COLOR: #959595
+}
+TABLE.ListShort TR.Selected TD {
+	PADDING-RIGHT: 4pt; PADDING-LEFT: 1pt
+}
+TABLE.ListShort TR.DataOutline1 {
+	FONT-WEIGHT: bold; COLOR: #ce0031; BACKGROUND-COLOR: #ffffff
+}
+TABLE.ListShort TR.DataOutline1 TD {
+	PADDING-RIGHT: 4pt; BORDER-TOP: #daacb7 1pt solid; PADDING-LEFT: 1pt
+}
+TABLE.ListShort TR.DataOutline2 {
+	FONT-WEIGHT: bold; COLOR: #1d9dff; BACKGROUND-COLOR: #ffffff
+}
+TABLE.ListShort TR.DataOutline2 TD {
+	PADDING-RIGHT: 4pt; PADDING-LEFT: 1pt
+}
+TABLE.ListShort TR.DataOutline3 {
+	FONT-WEIGHT: bold; COLOR: #939393; BACKGROUND-COLOR: #ffffff
+}
+TABLE.ListShort TR.DataOutline3 TD {
+	PADDING-RIGHT: 4pt; PADDING-LEFT: 1pt
+}
+TABLE.ListShort TR.DataOutline4 {
+	FONT-WEIGHT: bold; COLOR: #fbaa2b; BACKGROUND-COLOR: #ffffff
+}
+TABLE.ListShort TR.DataOutline4 TD {
+	PADDING-RIGHT: 4pt; PADDING-LEFT: 1pt
+}
+TABLE.ListShort TR.Total TD {
+	BORDER-RIGHT: #b4b4b4 1pt solid; PADDING-RIGHT: 4pt; BORDER-TOP: #b4b4b4 1pt solid; PADDING-LEFT: 1pt; FONT-WEIGHT: bold; VERTICAL-ALIGN: text-top; BORDER-LEFT: #b4b4b4 1pt solid; BORDER-BOTTOM: #b4b4b4 1pt solid
+}
+TABLE.ListShort TD.Sep1 {
+	BACKGROUND-IMAGE: url(/Images/Sep1_wev8.gif); BACKGROUND-REPEAT: repeat-x; HEIGHT: 3px
+}
+TABLE.ListShort TD.Sep2 {
+	BACKGROUND-IMAGE: url(/Images/Sep2_wev8.gif); BACKGROUND-REPEAT: repeat-x; HEIGHT: 3px
+}
+TABLE.ListShort TD.Sep3 {
+	BACKGROUND-IMAGE: url(/Images/Sep3_wev8.gif); BACKGROUND-REPEAT: repeat-x; HEIGHT: 3px
+}
+TABLE.Monitor {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 9pt; PADDING-BOTTOM: 0px; MARGIN: 0px; WIDTH: 100%; PADDING-TOP: 0px; HEIGHT: 22px
+}
+TABLE.Monitor TD.Entity {
+	BORDER-RIGHT: #7a90b2 1pt solid; BORDER-TOP: #7a90b2 1pt solid; PADDING-LEFT: 2pt; BORDER-LEFT: #7a90b2 1pt solid; BORDER-BOTTOM: #7a90b2 1pt solid; BACKGROUND-COLOR: #e0ecfc
+}
+BUTTON.btn {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; PADDING-LEFT: 8px; FONT-SIZE: 8pt; BACKGROUND-IMAGE: url(../Images/BacoButton_wev8.gif); PADDING-BOTTOM: 2px; MARGIN: 2px 0px 1px 2px; OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 114px; CURSOR: hand; COLOR: #512e0b; PADDING-TOP: 1px; BORDER-BOTTOM: medium none; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Verdana; HEIGHT: 20px; BACKGROUND-COLOR: transparent; TEXT-ALIGN: left
+}
+BUTTON.btnEdit {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-TOP: 2px; PADDING-LEFT: 24px; FONT-SIZE: 8pt; BACKGROUND-IMAGE: url(../Images/btnEdit_wev8.gif); MARGIN-BOTTOM: 1px; PADDING-BOTTOM: 2px; MARGIN-LEFT: 2px; OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 114px; CURSOR: hand; COLOR: #512e0b; PADDING-TOP: 1px; BORDER-BOTTOM: medium none; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Verdana; HEIGHT: 20px; BACKGROUND-COLOR: transparent; TEXT-ALIGN: left
+}
+BUTTON.btnSave {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-TOP: 2px; PADDING-LEFT: 24px; FONT-SIZE: 8pt; BACKGROUND-IMAGE: url(../Images/btnSave_wev8.gif); MARGIN-BOTTOM: 1px; PADDING-BOTTOM: 2px; MARGIN-LEFT: 2px; OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 114px; CURSOR: hand; COLOR: #512e0b; PADDING-TOP: 1px; BORDER-BOTTOM: medium none; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Verdana; HEIGHT: 20px; BACKGROUND-COLOR: transparent; TEXT-ALIGN: left
+}
+BUTTON.btnNew {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-TOP: 2px; PADDING-LEFT: 24px; FONT-SIZE: 8pt; BACKGROUND-IMAGE: url(../Images/btnNew_wev8.gif); MARGIN-BOTTOM: 1px; PADDING-BOTTOM: 2px; MARGIN-LEFT: 2px; OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 114px; CURSOR: hand; COLOR: #512e0b; PADDING-TOP: 1px; BORDER-BOTTOM: medium none; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Verdana; HEIGHT: 20px; BACKGROUND-COLOR: transparent; TEXT-ALIGN: left
+}
+BUTTON.btnDelete {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-TOP: 2px; PADDING-LEFT: 24px; FONT-SIZE: 8pt; BACKGROUND-IMAGE: url(../Images/btnDelete_wev8.gif); MARGIN-BOTTOM: 1px; PADDING-BOTTOM: 2px; MARGIN-LEFT: 2px; OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 114px; CURSOR: hand; COLOR: #512e0b; PADDING-TOP: 1px; BORDER-BOTTOM: medium none; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Verdana; HEIGHT: 20px; BACKGROUND-COLOR: transparent; TEXT-ALIGN: left
+}
+BUTTON.btnCopy {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-TOP: 2px; PADDING-LEFT: 24px; FONT-SIZE: 8pt; BACKGROUND-IMAGE: url(../Images/btnCopy_wev8.gif); MARGIN-BOTTOM: 1px; PADDING-BOTTOM: 2px; MARGIN-LEFT: 2px; OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 114px; CURSOR: hand; COLOR: #512e0b; PADDING-TOP: 1px; BORDER-BOTTOM: medium none; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Verdana; HEIGHT: 20px; BACKGROUND-COLOR: transparent; TEXT-ALIGN: left
+}
+BUTTON.btnMove {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-TOP: 2px; PADDING-LEFT: 24px; FONT-SIZE: 8pt; BACKGROUND-IMAGE: url(../Images/btnCopy_wev8.gif); MARGIN-BOTTOM: 1px; PADDING-BOTTOM: 2px; MARGIN-LEFT: 2px; OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 114px; CURSOR: hand; COLOR: #512e0b; PADDING-TOP: 1px; BORDER-BOTTOM: medium none; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Verdana; HEIGHT: 20px; BACKGROUND-COLOR: transparent; TEXT-ALIGN: left
+}
+BUTTON.btnRefresh {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-TOP: 2px; PADDING-LEFT: 24px; FONT-SIZE: 8pt; BACKGROUND-IMAGE: url(../Images/btnRefresh_wev8.gif); MARGIN-BOTTOM: 1px; PADDING-BOTTOM: 2px; MARGIN-LEFT: 2px; OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 114px; CURSOR: hand; COLOR: #512e0b; PADDING-TOP: 1px; BORDER-BOTTOM: medium none; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Verdana; HEIGHT: 20px; BACKGROUND-COLOR: transparent; TEXT-ALIGN: left
+}
+BUTTON.btnLog {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-TOP: 2px; PADDING-LEFT: 24px; FONT-SIZE: 8pt; BACKGROUND-IMAGE: url(../Images/btnLog_wev8.gif); MARGIN-BOTTOM: 1px; PADDING-BOTTOM: 2px; MARGIN-LEFT: 2px; OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 114px; CURSOR: hand; COLOR: #512e0b; PADDING-TOP: 1px; BORDER-BOTTOM: medium none; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Verdana; HEIGHT: 20px; BACKGROUND-COLOR: transparent; TEXT-ALIGN: left
+}
+BUTTON.btnPrint {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-TOP: 2px; PADDING-LEFT: 24px; FONT-SIZE: 8pt; BACKGROUND-IMAGE: url(../Images/btnPrint_wev8.gif); MARGIN-BOTTOM: 1px; PADDING-BOTTOM: 2px; MARGIN-LEFT: 2px; OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 114px; CURSOR: hand; COLOR: #512e0b; PADDING-TOP: 1px; BORDER-BOTTOM: medium none; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Verdana; HEIGHT: 20px; BACKGROUND-COLOR: transparent; TEXT-ALIGN: left
+}
+BUTTON.btnCustomize {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-TOP: 2px; PADDING-LEFT: 24px; FONT-SIZE: 8pt; BACKGROUND-IMAGE: url(../Images/btnCustomize_wev8.gif); MARGIN-BOTTOM: 1px; PADDING-BOTTOM: 2px; MARGIN-LEFT: 2px; OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 114px; CURSOR: hand; COLOR: #512e0b; PADDING-TOP: 1px; BORDER-BOTTOM: medium none; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Verdana; HEIGHT: 20px; BACKGROUND-COLOR: transparent; TEXT-ALIGN: left
+}
+BUTTON.btnSearch {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-TOP: 2px; PADDING-LEFT: 24px; FONT-SIZE: 8pt; BACKGROUND-IMAGE: url(../Images/btnSearch_wev8.gif); MARGIN-BOTTOM: 1px; PADDING-BOTTOM: 2px; MARGIN-LEFT: 2px; OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 114px; CURSOR: hand; COLOR: #512e0b; PADDING-TOP: 1px; BORDER-BOTTOM: medium none; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Verdana; HEIGHT: 20px; BACKGROUND-COLOR: transparent; TEXT-ALIGN: left
+}
+BUTTON.btnReset {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-TOP: 2px; PADDING-LEFT: 24px; FONT-SIZE: 8pt; BACKGROUND-IMAGE: url(../Images/btnReset_wev8.gif); MARGIN-BOTTOM: 1px; PADDING-BOTTOM: 2px; MARGIN-LEFT: 2px; OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 114px; CURSOR: hand; COLOR: #512e0b; PADDING-TOP: 1px; BORDER-BOTTOM: medium none; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Verdana; HEIGHT: 20px; BACKGROUND-COLOR: transparent; TEXT-ALIGN: left
+}
+BUTTON.btnAdvanced {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-TOP: 2px; PADDING-LEFT: 24px; FONT-SIZE: 8pt; BACKGROUND-IMAGE: url(../Images/btnAdvanced_wev8.gif); MARGIN-BOTTOM: 1px; PADDING-BOTTOM: 2px; MARGIN-LEFT: 2px; OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 114px; CURSOR: hand; COLOR: #512e0b; PADDING-TOP: 1px; BORDER-BOTTOM: medium none; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Verdana; HEIGHT: 20px; BACKGROUND-COLOR: transparent; TEXT-ALIGN: left
+}
+BUTTON.btnCount {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-TOP: 2px; PADDING-LEFT: 24px; FONT-SIZE: 8pt; BACKGROUND-IMAGE: url(../Images/btnCount_wev8.gif); MARGIN-BOTTOM: 1px; PADDING-BOTTOM: 2px; MARGIN-LEFT: 2px; OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 114px; CURSOR: hand; COLOR: #512e0b; PADDING-TOP: 1px; BORDER-BOTTOM: medium none; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Verdana; HEIGHT: 20px; BACKGROUND-COLOR: transparent; TEXT-ALIGN: left
+}
+BUTTON.btnNext {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-TOP: 2px; PADDING-LEFT: 7px; FONT-SIZE: 8pt; BACKGROUND-IMAGE: url(../Images/BacoButton2_wev8.gif); MARGIN-BOTTOM: 1px; PADDING-BOTTOM: 2px; MARGIN-LEFT: 2px; OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 101px; CURSOR: hand; COLOR: #512e0b; PADDING-TOP: 1pt; BORDER-BOTTOM: medium none; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Verdana; HEIGHT: 20px; BACKGROUND-COLOR: transparent; TEXT-ALIGN: left
+}
+BUTTON.btnTop {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-TOP: 2px; PADDING-LEFT: 7px; FONT-SIZE: 8pt; BACKGROUND-IMAGE: url(../Images/BacoButton2_wev8.gif); MARGIN-BOTTOM: 1px; PADDING-BOTTOM: 2px; MARGIN-LEFT: 2px; OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 101px; CURSOR: hand; COLOR: #512e0b; PADDING-TOP: 1pt; BORDER-BOTTOM: medium none; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Verdana; HEIGHT: 20px; BACKGROUND-COLOR: transparent; TEXT-ALIGN: left
+}
+BUTTON.btnHelp {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BACKGROUND-IMAGE: url(../Images/btnHelp_wev8.gif); OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 20px; CURSOR: hand; BORDER-BOTTOM: medium none; BACKGROUND-REPEAT: no-repeat; HEIGHT: 20px; BACKGROUND-COLOR: transparent
+}
+BUTTON.btnFavorite {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BACKGROUND-IMAGE: url(../Images/btnFavorite_wev8.gif); OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 20px; CURSOR: hand; BORDER-BOTTOM: medium none; BACKGROUND-REPEAT: no-repeat; HEIGHT: 20px; BACKGROUND-COLOR: transparent
+}
+BUTTON.btnBack {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BACKGROUND-IMAGE: url(../Images/WeaverBack_wev8.gif); OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 20px; CURSOR: hand; BORDER-BOTTOM: medium none; BACKGROUND-REPEAT: no-repeat; HEIGHT: 20px; BACKGROUND-COLOR: transparent
+}
+BUTTON.btnValidate {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BACKGROUND-IMAGE: url(../Images/btnValidate_wev8.gif); OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 20px; CURSOR: hand; BORDER-BOTTOM: medium none; BACKGROUND-REPEAT: no-repeat; HEIGHT: 20px; BACKGROUND-COLOR: transparent
+}
+BUTTON.Browser {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BACKGROUND-IMAGE: url(../Images/BacoBrowser_wev8.gif); OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 16px; CURSOR: hand; BORDER-BOTTOM: medium none; BACKGROUND-REPEAT: no-repeat; HEIGHT: 16px; BACKGROUND-COLOR: transparent
+}
+BUTTON.Calendar {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BACKGROUND-IMAGE: url(../Images/BacoCalendar_wev8.gif); OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 16px; CURSOR: hand; BORDER-BOTTOM: medium none; BACKGROUND-REPEAT: no-repeat; HEIGHT: 16px; BACKGROUND-COLOR: transparent
+}
+BUTTON.Calculate {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BACKGROUND-IMAGE: url(../Images/BacoCalculate_wev8.gif); OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 16px; CURSOR: hand; BORDER-BOTTOM: medium none; BACKGROUND-REPEAT: no-repeat; HEIGHT: 16px; BACKGROUND-COLOR: transparent
+}
+BUTTON.Clock {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BACKGROUND-IMAGE: url(../Images/BacoCalendar_wev8.gif); OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 16px; CURSOR: hand; BORDER-BOTTOM: medium none; BACKGROUND-REPEAT: no-repeat; HEIGHT: 16px; BACKGROUND-COLOR: transparent
+}
+BUTTON.btnCancel {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BACKGROUND-IMAGE: url(../Images/btnCancel_wev8.gif); OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 29px; CURSOR: hand; BORDER-BOTTOM: medium none; BACKGROUND-REPEAT: no-repeat; HEIGHT: 22px
+}
+BUTTON.btnOk {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BACKGROUND-IMAGE: url(../Images/btnOk_wev8.gif); OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 29px; CURSOR: hand; BORDER-BOTTOM: medium none; BACKGROUND-REPEAT: no-repeat; HEIGHT: 22px
+}
+BUTTON.btnClear {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BACKGROUND-IMAGE: url(../Images/btnClear_wev8.gif); OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 29px; CURSOR: hand; BORDER-BOTTOM: medium none; BACKGROUND-REPEAT: no-repeat; HEIGHT: 22px; BACKGROUND-COLOR: transparent
+}
+DIV.Btnbar {
+	
+}
+DIV.HdrTitle {
+	BACKGROUND-COLOR: #f4f4f4
+}
+DIV.HdrProps {
+	PADDING-LEFT: 2pt; FONT-SIZE: 9pt; COLOR: #676767; HEIGHT: 14px; BACKGROUND-COLOR: #e5e5e5
+}
+DIV.HdrProps TD {
+	COLOR: #676767
+}
+DIV.Chart {
+	LEFT: 10px; POSITION: relative; TOP: 10px
+}
+TABLE.ChartTop {
+	BORDER-RIGHT: 2px outset; BORDER-TOP: 2px outset; BORDER-LEFT: 2px outset; CURSOR: hand; COLOR: white; BORDER-BOTTOM: 2px outset; BACKGROUND-COLOR: #0066cc
+}
+TABLE.ChartGroup {
+	BORDER-RIGHT: 2px outset; BORDER-TOP: 2px outset; BORDER-LEFT: 2px outset; CURSOR: hand; BORDER-BOTTOM: 2px outset; BACKGROUND-COLOR: #66cccc; TEXT-ALIGN: center
+}
+TABLE.ChartCompany {
+	BORDER-RIGHT: 2px outset; BORDER-TOP: 2px outset; BORDER-LEFT: 2px outset; CURSOR: hand; BORDER-BOTTOM: 2px outset; BACKGROUND-COLOR: #ffcc66; TEXT-ALIGN: center
+}
+TABLE.ChartInactive {
+	BORDER-RIGHT: 2px outset; BORDER-TOP: 2px outset; BORDER-LEFT: 2px outset; CURSOR: hand; COLOR: gray; BORDER-BOTTOM: 2px outset; BACKGROUND-COLOR: #ffcccc; TEXT-ALIGN: center
+}
+TABLE.ChartDisabled {
+	BORDER-RIGHT: 2px outset; BORDER-TOP: 2px outset; BORDER-LEFT: 2px outset; COLOR: gray; BORDER-BOTTOM: 2px outset; BACKGROUND-COLOR: #ffcc00; TEXT-ALIGN: center
+}
+TD.ChartTop {
+	COLOR: white; HEIGHT: 100%; BACKGROUND-COLOR: #0066cc; TEXT-ALIGN: center
+}
+TD.ChartGroup {
+	COLOR: black; HEIGHT: 100%; BACKGROUND-COLOR: #66cccc; TEXT-ALIGN: center
+}
+TD.ChartCompany {
+	COLOR: black; HEIGHT: 100%; BACKGROUND-COLOR: #ffcc66; TEXT-ALIGN: center
+}
+TD.ChartInactive {
+	COLOR: gray; HEIGHT: 100%; BACKGROUND-COLOR: #ffcc99; TEXT-ALIGN: center
+}
+TD.ChartDisabled {
+	COLOR: gray; HEIGHT: 100%; BACKGROUND-COLOR: #ffcc66; TEXT-ALIGN: center
+}
+TD.ChartDescription {
+	COLOR: black; BACKGROUND-COLOR: gainsboro; TEXT-ALIGN: left
+}
+TD.ChartValue {
+	COLOR: black; BACKGROUND-COLOR: gainsboro; TEXT-ALIGN: right
+}
+TD.ChartCell {
+	WIDTH: 100px; COLOR: black; BACKGROUND-COLOR: gainsboro; TEXT-ALIGN: right
+}
+TD.ChartValueLow {
+	COLOR: black; BACKGROUND-COLOR: #ff9900; TEXT-ALIGN: right
+}
+TD.ChartValueHigh {
+	COLOR: black; BACKGROUND-COLOR: #99ff33; TEXT-ALIGN: right
+}
+TD.Selected
+{
+    CURSOR: hand;
+    COLOR: #FFFFFF;
+    BACKGROUND-COLOR: #959595
+}
+.FieldLong {
+	WIDTH: 267px
+}
+.FieldLongB {
+	WIDTH: 242px
+}
+.FieldxLong {
+	WIDTH: 696px
+}
+.FieldShort {
+	WIDTH: 126px
+}
+.FieldxShort {
+	WIDTH: 50px
+}
+.saveHistory {
+	BEHAVIOR: url(#default#savehistory)
+}
+INPUT.text {
+	FONT-SIZE: 100% 
+}
+SELECT {
+	FONT-SIZE: 100%
+}
+TEXTAREA {
+	FONT-SIZE: 100%; FONT-FAMILY: 宋体, MS Sans Serif, Arial
+}
+FORM {
+	MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px
+}
+PRE {
+	FONT-SIZE: 14pt
+}
+
+.titlename {
+ 	FONT-WEIGHT: bold; FONT-SIZE: 16pt
+ }
+
+ .redgraph {
+	BACKGROUND-IMAGE: url(/images/BDStatRed_wev8.jpg); BACKGROUND-REPEAT: repeat-x
+}
+.bluegraph {
+	BACKGROUND-IMAGE: url(/images/BDStatBlue_wev8.jpg); BACKGROUND-REPEAT: repeat-x
+}
+.greengraph {
+	BACKGROUND-IMAGE: url(/images/BDStatGreen_wev8.jpg); BACKGROUND-REPEAT: repeat-x
+}
+.yellowgraph {
+	BACKGROUND-IMAGE: url(/images/BDStatYellow_wev8.jpg); BACKGROUND-REPEAT: repeat-x
+}
+BUTTON.DELROW {
+	BORDER-RIGHT: medium none;
+	BORDER-TOP: medium none;
+	BACKGROUND-IMAGE: url(/images/BacoDelete_wev8.GIF);
+	OVERFLOW: hidden;
+	BORDER-LEFT: medium none;
+	CURSOR: hand;
+	WIDTH: 16px;
+	HEIGHT: 16px;
+	BORDER-BOTTOM: medium none;
+	BACKGROUND-REPEAT: no-repeat;
+	BACKGROUND-COLOR: transparent;
+}
+
+.smallfont {
+	FONT-SIZE: 10pt
+}
+
+BUTTON.Login {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BACKGROUND-IMAGE: url(../imagesyzj/ddd_wev8.gif); OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 69px; CURSOR: hand; BORDER-BOTTOM: medium none; BACKGROUND-REPEAT: no-repeat; HEIGHT: 24px; BACKGROUND-COLOR: transparent
+}
+

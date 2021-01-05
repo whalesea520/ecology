@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!--Special encoding path-->
+	<!--<dev-list>
+		<special>
+			<encoding>GBK</encoding>
+			<paths>
+				<path>/tdinfo/</path>
+				<path>/knowledgetool/</path>
+			</paths>
+		</special>
+	</dev-list>-->
+	<!--Do not check xss-->
+	<!--<excepts>
+		<url>/keygenerator/KeyGeneratorOperation.jsp</url>
+	</excepts>-->
+   <!--referer xss detect white list-->
+	<!--<ref-list>
+		<ref>app:/wmForWeb.swf</ref>
+	</ref-list>-->
+	<!--url cheat-->
+	<!--<url-params>
+		<param>url</param>
+	</url-params>-->
+	<!--valid host list-->
+	<!--<host-list>
+		<host>127.0.0.1:80</host>
+		<host>127.0.0.1</host>
+		<host>localhost:80</host>
+		<host>localhost</host>
+	</host-list>-->
+	<!--need filter word-->
+	<!--<xss-filter-list>
+		<word>src[\r\n]*=[\r\n]*['"](.*?)['"]</word>
+	</xss-filter-list>-->
+	<!--special rule-->
+	<!--<special-non>
+		<urls>
+			<url>
+				<value>/customerservice/data/ContactRecordOperation.jsp</value>
+				<params>
+					<param>
+						<value>remark</value>
+						<rules>
+							<rule></rule>
+						</rules>
+					</param>
+				</params>
+			</url>
+		</urls>
+	</special-non>-->
+	<!--regexp params-->
+	<!--<special-reg>
+		<urls>
+			<url>
+				<value>/customersystem/wfrelate/WFCreateQC.jsp</value>
+				<params>
+					<param>
+						<value>fieldsql\d+</value>
+						<rules>
+							<rule>##sqlkeyword1##</rule>
+						</rules>
+					</param>
+				</params>
+			</url>
+		</urls>
+	</special-reg>-->
+	<!--webservice allowed client ip-->
+	<!--<webservice-ip-list>
+		<ip>127.0.0.1</ip>
+		<ip>0:0:0:0:0:0:0:1</ip>
+	</webservice-ip-list>-->
+	<!--webservice white list-->
+	<!--<webservice-list>
+		<webservice>/services/.*</webservice>
+	</webservice-list>-->
+	
+	
+	
+	
+	
+	
+	
+	
+	<no-login-urls>
+<url>/weaver/weaver.homepage.HomepageCreateImage</url>
+</no-login-urls>
+
+</root>

@@ -1,0 +1,50 @@
+TABLE.MenuPopUp
+{
+    BACKGROUND-COLOR: #0066FF;
+    BORDER-BOTTOM: #a8a8a8 4px outset;
+    BORDER-LEFT: #a8a8a8 4px outset;
+    BORDER-RIGHT: #a8a8a8 4px outset;
+    BORDER-TOP: #a8a8a8 4px outset;
+    FILTER: alpha(OPACITY=100);
+    FONT-SIZE: 8pt;
+    MARGIN: 0px;
+    WIDTH: 100%
+}
+TR.MenuPopUp
+{
+    BACKGROUND-COLOR: #0066FF;
+    PADDING-BOTTOM: 2px;
+    PADDING-TOP: 2px
+}
+TD.MenuPopUp
+{
+    COLOR: white;
+    HEIGHT: 24px;
+    PADDING-LEFT: 3px;
+    TEXT-ALIGN: left
+}
+TD.MenuPopUpFocus
+{
+    COLOR: red;
+    CURSOR: hand;
+    HEIGHT: 24px;
+    PADDING-LEFT: 3px;
+    TEXT-ALIGN: left;
+    BBORDER: #660099 2px inset;
+    BBACKGROUND-COLOR: #000033
+}
+TD.MenuPopUpSelected
+{
+    COLOR: white;
+    HEIGHT: 24px;
+    TEXT-ALIGN: left
+}
+
+.line
+{ 
+    font-size: 1px; 
+    position: absolute; 
+    z-index: 50; 
+    border-left: 1px solid black; 
+    border-bottom: 1px solid black 
+}

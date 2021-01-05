@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root>
+  <special-reg>
+    <urls>
+      <url>
+        <value>/mobilemode/formComponentAction.jsp</value>
+        <params>
+          <param>
+            <value>^file_\d{1,5}_data_[a-zA-Z0-9_]+?$</value>
+            <rules>
+              <rule>##CONST:CODE##</rule>
+            </rules>
+          </param>
+        </params>
+      </url>
+    </urls>
+  </special-reg>
+</root>

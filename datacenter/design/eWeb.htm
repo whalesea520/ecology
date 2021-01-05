@@ -1,0 +1,686 @@
+<html>
+
+<head>
+<META name=VI60_defaultClientScript content=VBScript>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+
+<!--Style Sheets First one to adjust fonts on input fields.-->
+<LINK rel=stylesheet type=text/css HREF="chinaexcel.css">
+
+<SCRIPT  LANGUAGE=VBSCRIPT src="functions.vbs"></SCRIPT>
+
+<SCRIPT  LANGUAGE=JAVASCRIPT src="commands.js"></SCRIPT>
+
+<title>数据中心报表设计器</title>
+
+<SCRIPT LANGUAGE=javascript>
+<!--
+function InitFontname(){
+	strFontnames = CellWeb1.GetDisplayFontNames();
+	var arrFontname = strFontnames.split('|');
+	arrFontname.sort();
+	var i;
+	var sysFont;
+	sysFont = "宋体";
+		
+	for( i =0; i < arrFontname.length;i++ ){
+		if(arrFontname[i] != "")
+		{
+			var oOption = document.createElement("OPTION");
+			FontNameSelect.options.add(oOption);
+			oOption
+			oOption.innerText = arrFontname[i];
+			oOption.value = arrFontname[i];
+			if( arrFontname[i] == sysFont ) oOption.selected = true;
+		}
+	}
+}
+
+function window_onresize() {
+	var lWidth = document.body.offsetWidth;
+	if( lWidth <= 0) lWidth = 1;
+	CellWeb1.style.width = lWidth;
+
+	var lHeight = document.body.offsetHeight - parseInt(CellWeb1.style.top);
+	if( lHeight <= 0 ) lHeight = 1;
+	CellWeb1.style.height = lHeight;
+}
+
+function menu_init()
+{
+	var nMenuID;
+	var bPrint;
+	
+	nMenuID = MenuOcx.GetMenuID("SetRowAutoSize");
+	MenuOcx.SetMenuChecked(nMenuID,CellWeb1.IsRowAutoSize());
+	if(CellWeb1.GetJumpStyle() ==1)
+	{
+		nMenuID = MenuOcx.GetMenuID("JumpNextCol");
+		MenuOcx.SetMenuChecked(nMenuID,true);
+		nMenuID = MenuOcx.GetMenuID("JumpNextRow");
+		MenuOcx.SetMenuChecked(nMenuID,false);
+	}
+	else
+	{
+		nMenuID = MenuOcx.GetMenuID("JumpNextCol");
+		MenuOcx.SetMenuChecked(nMenuID,false);
+		nMenuID = MenuOcx.GetMenuID("JumpNextRow");
+		MenuOcx.SetMenuChecked(nMenuID,true);
+	}
+	nMenuID = MenuOcx.GetMenuID("SetAutoJumpNextRowCol");
+	MenuOcx.SetMenuChecked(nMenuID,CellWeb1.IsAutoJumpNextRowCol());
+	nMenuID = MenuOcx.GetMenuID("ShowErrorMsgBox");
+	MenuOcx.SetMenuChecked(nMenuID,CellWeb1.ShowErrorMsgBox);
+	nMenuID = MenuOcx.GetMenuID("DesignMode")
+	MenuOcx.SetMenuChecked(nMenuID,CellWeb1.DesignMode);
+	nMenuID = MenuOcx.GetMenuID("ShowGrid");
+	MenuOcx.SetMenuChecked(nMenuID,CellWeb1.ShowGrid);
+	nMenuID = MenuOcx.GetMenuID("ShowHeader");
+	MenuOcx.SetMenuChecked(nMenuID,CellWeb1.ShowHeader);
+	nMenuID = MenuOcx.GetMenuID("FormProtect");
+	MenuOcx.SetMenuChecked(nMenuID,CellWeb1.FormProtect);
+	nMenuID = MenuOcx.GetMenuID("SetProtectFormShowCursor");
+	MenuOcx.SetMenuChecked(nMenuID,CellWeb1.GetProtectFormShowCursor());
+	nMenuID = MenuOcx.GetMenuID("SetShowPopupMenu");
+	MenuOcx.SetMenuChecked(nMenuID,CellWeb1.GetShowPopupMenu());
+	nMenuID = MenuOcx.GetMenuID("SetAllowRowResizing");
+	MenuOcx.SetMenuChecked(nMenuID,CellWeb1.IsAllowRowResizing());
+	nMenuID = MenuOcx.GetMenuID("SetAllowColResizing");
+	MenuOcx.SetMenuChecked(nMenuID,CellWeb1.IsAllowColResizing());
+	nMenuID = MenuOcx.GetMenuID("SetDClickLabelCanSort");
+	MenuOcx.SetMenuChecked(nMenuID,CellWeb1.GetDClickLabelCanSort());
+	bPrint = CellWeb1.IsCellCanPrint(CellWeb1.Row,CellWeb1.Col);
+	nMenuID = MenuOcx.GetMenuID("SetCellCanPrint");
+	MenuOcx.SetMenuChecked(nMenuID,bPrint);
+	bPrint = CellWeb1.IsCellOnlyPrintText(CellWeb1.Row,CellWeb1.Col);
+	nMenuID = MenuOcx.GetMenuID("SetCellOnlyPrintText");
+	MenuOcx.SetMenuChecked(nMenuID,bPrint);
+	nMenuID = MenuOcx.GetMenuID("SetRowLabel");
+	MenuOcx.SetMenuChecked(nMenuID,CellWeb1.GetRowLabel());
+	nMenuID = MenuOcx.GetMenuID("SetColLabel");
+	MenuOcx.SetMenuChecked(nMenuID,CellWeb1.GetColLabel());
+	nMenuID = MenuOcx.GetMenuID("SetPrintFormBackground");
+	MenuOcx.SetMenuChecked(nMenuID,CellWeb1.IsPrintFormBackground());
+	nMenuID = MenuOcx.GetMenuID("SetNotPrintFormBackground");
+	MenuOcx.SetMenuChecked(nMenuID,!CellWeb1.IsPrintFormBackground());
+}
+
+function menu_onload()
+{
+	MenuOcx.style.left = 0;
+	MenuOcx.style.top = 0;
+
+	var lWidth = document.body.offsetWidth;
+	if( lWidth <= 0) lWidth = 1;
+	MenuOcx.style.width = lWidth;
+
+	var href = window.document.location;//取得完整的url路径
+	var  re;         // 声明变量。
+	s = href.toString();
+	//alert(s);
+    re = /http/;    // 创建正则表达式模式。
+    if( ! s.search(re) )   // 尝试匹配搜索字符串。是web上
+    {
+   		href = unescape(href);
+		end = href.lastIndexOf("/");
+		href = href.substring(0, end + 1);//web服务器的情况下
+		href = href + "menu.xml";
+		//alert("web")
+    }
+    else
+    {
+    	href = window.location.pathname; //取得本地路径或相对的url路径
+   		href = unescape(href);
+		start = href.indexOf("/");
+		end = href.lastIndexOf("\\");
+		href = href.substring(start + 1, end + 1);
+		href = href + "menu.xml";
+	 	//alert("disk");
+    }	
+	//alert(href);
+	MenuOcx.SetMenuFromXML(href);
+}
+
+function window_onload() {
+
+	MenuOcx.Login("上海泛微网络技术有限公司","4f203da914960b091b0d58b2cff7ec44",0);
+
+	var aw = screen.availWidth; 
+	var ah = screen.availHeight;
+	//self.moveTo(0,0);
+	//self.resizeTo(aw, ah);
+
+	CellWeb1.border = 0;
+	CellWeb1.style.left = 0;	
+	
+	CellWeb1.style.top = idTBFormat.offsetTop + idTBFormat.offsetHeight;
+	var lWidth = document.body.offsetWidth;
+	if( lWidth <= 0) lWidth = 1;
+	CellWeb1.style.width = lWidth;
+	
+	var lHeight = document.body.offsetHeight - parseInt(CellWeb1.style.top);
+	if( lHeight <= 0 ) lHeight = 1;
+	CellWeb1.style.height = lHeight;
+
+	CellWeb1.style.display="";
+	CellWeb1.SetMaxRows(18);
+	CellWeb1.SetMaxCols(8);
+	CellWeb1.DesignMode = true;
+	CellWeb1.SetShowPopupMenu(false);
+	InitFontname();
+	menu_onload();
+	menu_init();
+	CellWeb1.GetFocus();
+}
+
+//-->
+-->
+</SCRIPT>
+
+<!--BUTTON-->
+<SCRIPT FOR="cbButton" EVENT="onmousedown()"	LANGUAGE="JavaScript" >
+	return onCbMouseDown(this);
+</SCRIPT>
+
+<SCRIPT FOR="cbButton" EVENT="onclick()"		LANGUAGE="JavaScript" >
+	return onCbClickEvent(this);
+</SCRIPT>
+
+<SCRIPT FOR="cbButton" EVENT="oncontextmenu()"	LANGUAGE="JavaScript" >
+	return(event.ctrlKey);
+</SCRIPT>
+
+<SCRIPT ID=clientEventHandlersVBS LANGUAGE=vbscript>
+</SCRIPT>
+</HEAD>
+<BODY id="mainbody" class="mainBody" LANGUAGE=javascript onresize="return window_onresize()" onload="return window_onload()">
+<script language=javascript src="/workflow/mode/chinaexcelmenu.js"></script>
+<!--Top Toolbar-->
+<TABLE class="cbToolbar" id="idTBGeneral" cellpadding='0' cellspacing='0' width="100%">
+	<TR>
+	<TD NOWRAP><A class=tbButton id=cmdFileNew title=新建 href="#" name=cbButton><IMG align=absMiddle src="images/new.gif" width="16" height="16"></A></TD>
+	<TD NOWRAP><A class=tbButton id=cmdFileOpen title=打开文档 href="#" name=cbButton><IMG align=absMiddle src="images/open.gif" width="16" height="16"></A></TD>
+	<TD NOWRAP><A class=tbButton id=cmdWebFileOpen title=打开远程文档 href="#" name=cbButton><IMG align=absMiddle src="images/openweb.gif" width="16" height="16"></A></TD>
+	<TD NOWRAP><A class=tbButton id=cmdFileSave title=保存 href="#" name=cbButton><IMG align=absMiddle src="images/save.gif" width="16" height="16"></A></TD>
+	<TD NOWRAP><A class=tbButton id=cmdFilePrint title=打印 href="#" name=cbButton><IMG align=absMiddle src="images/print.gif" width="16" height="16"></A></TD>
+	<TD class="tbDivider" NOWRAP><A class=tbButton id=cmdFilePrintPreview title=打印预览 href="#" name=cbButton><IMG align=absMiddle src="images/printpreview.gif" width="16" height="16"></A></TD>
+	<TD NOWRAP><A class=tbButton id=cmdEditCut title=剪切 href="#" name=cbButton><IMG align=absMiddle src="images/cut.gif" width="16" height="16"></A></TD>
+	<TD NOWRAP><A class=tbButton id=cmdEditCopy title=复制 href="#" name=cbButton><IMG align=absMiddle src="images/copy.gif" width="16" height="16"></A></TD>
+	<TD NOWRAP><A class=tbButton id=cmdEditPaste title=粘贴 href="#" name=cbButton><IMG align=absMiddle src="images/paste.gif" width="16" height="16"></A></TD>
+	<TD class="tbDivider" NOWRAP><A class=tbButton id=cmdEditFind title=查找 href="#" name=cbButton><IMG align=absMiddle src="images/find.gif" width="16" height="16"></A></TD>
+	<TD NOWRAP><A class=tbButton id=cmdFunctionList title=函数列表 href="#" name=cbButton><IMG align=absMiddle src="images/formula.gif" width="16" height="16"></A></TD>
+	<TD NOWRAP><A class=tbButton id=cmdFormulaSumH title=水平求和 href="#" name=cbButton><IMG align=absMiddle src="images/sumh.gif" width="16" height="16"></A></TD>
+	<TD NOWRAP><A class=tbButton id=cmdFormulaSumV title=垂直求和 href="#" name=cbButton><IMG align=absMiddle src="images/sumv.gif" width="16" height="16"></A></TD>
+	<TD class="tbDivider" NOWRAP><A class=tbButton id=cmdFormulaSumHV title=双向求和 href="#" name=cbButton><IMG align=absMiddle src="images/sum.gif" width="16" height="16"></A></TD>
+	<TD NOWRAP width="21"><A class=tbButton id=cmdInsertCol title=插入列 href="#" name=cbButton><IMG align=absMiddle src="images/insertcol.gif" width="16" height="16"></A></TD>
+	<TD NOWRAP width="21"><A class=tbButton id=cmdInsertRow title=插入行 href="#" name=cbButton><IMG align=absMiddle src="images/insertrow.gif" width="16" height="16"></A></TD>
+	<TD NOWRAP width="21"><A class=tbButton id=cmdInsertCell title=插入单元 href="#" name=cbButton><IMG align=absMiddle src="images/insertcell.gif" width="16" height="16"></A></TD>
+	<TD class="tbDivider" NOWRAP width="21"><A class=tbButton id=cmdDeleteCell title=删除单元 href="#" name=cbButton><IMG align=absMiddle src="images/deletecell.gif" width="16" height="16"></A></TD>
+	<TD NOWRAP width="21"><A class=tbButton id=cmdDeleteCol title=删除列 href="#" name=cbButton><IMG align=absMiddle src="images/deletecol.gif" width="16" height="16"></A></TD>
+	<TD NOWRAP width="21"><A class=tbButton id=cmdDeleteRow title=删除行 href="#" name=cbButton><IMG align=absMiddle src="images/deleterow.gif" width="16" height="16"></A></TD>
+	<TD NOWRAP width="21"><A class=tbButton id=cmdMergeCell title=组合单元格 href="#" name=cbButton><IMG align=absMiddle src="images/mergecell.gif" width="16" height="16"></A></TD>
+	<TD class="tbDivider" NOWRAP width="21"><A class=tbButton id=cmdUnMergeCell title=取消单元格组合 href="#" name=cbButton><IMG align=absMiddle src="images/unmergecell.gif" width="16" height="16"></A></TD>
+	<TD NOWRAP id="cmdBoderType" Title="边框类型">
+		<SELECT name="BorderTypeSelect" ACCESSKEY="v" size="1">
+          <option value="0" selected>细线</option>
+          <option value="1">中线</option>
+          <option value="2">粗线</option>
+          <option value="3">点线</option>
+          <option value="4">虚线</option>
+          <option value="5">点划线</option>
+          <option value="6">点点划线</option>
+        </SELECT>
+	</TD>
+    <TD NOWRAP id="cmdDrawColor" Title="框线颜色">
+		<SELECT name="BorderColor" ACCESSKEY="v" size="1" onchange="cmdDrawType.focus()">
+          <option value="0" selected style="background-color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="16711680" style="background-color:blue">&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="32768" style="background-color:#008000">&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="16776960" style="background-color:#00FFFF">&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="255" style="background-color:red">&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="16711935" style="background-color:#FF00FF">&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="65535" style="background-color:#FFFF00">&nbsp;&nbsp;&nbsp;&nbsp;</option>  
+          <option value="16777215" style="background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="128" style="background-color:#800000">&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="65280" style="background-color:#00FF00">&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="32896" style="background-color:#808000">&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="8388608" style="background-color:#000080">&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="8388736" style="background-color:#800080">&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="8421376" style="background-color:#008080">&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="12632256" style="background-color:#C0C0C0">&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="8421504" style="background-color:#808080">&nbsp;&nbsp;&nbsp;&nbsp;</option>
+        </SELECT>
+	</TD>
+    <!--TD NOWRAP><A class=tbButton id=cmdDrawColor title=框线颜色 href="#" name=cbButton><IMG align=absMiddle src="images/bordercolor.bmp" width="16" height="16"></A></TD-->
+    <TD NOWRAP id="cmdDrawType" Title="画边框类型">
+		<SELECT name="DrawTypeSelect" ACCESSKEY="v" size="1">
+          <option value="0" selected>画所有框线</option>
+          <option value="1">画外框线</option>
+          <option value="2">画上框线</option>
+          <option value="3">画下框线</option>
+          <option value="4">画左框线</option>
+          <option value="5">画右框线</option>
+          <option value="6">画上下框线</option>
+          <option value="7">画左右框线</option>
+          <option value="8">画内框线</option>
+          <option value="9">画横框线</option>
+          <option value="10">画竖框线</option>
+        </SELECT>
+	</TD>
+    <TD NOWRAP><A class=tbButton id=cmdDrawBorder title=画边框线 href="#" name=cbButton><IMG align=absMiddle src="images/border.gif" width="16" height="16"></A></TD>
+
+	<TD class="tbDivider" NOWRAP></TD>
+	<TD NOWRAP width="100%"></TD>
+	</TR>
+</TABLE>
+<TABLE class="cbToolbar" id="idTBFormat" cellpadding='0' cellspacing='0' width="100%">
+	<TR>
+	<TD NOWRAP id="cmdFontName" Title="字体">
+		<SELECT name="FontNameSelect" style="WIDTH: 225px; HEIGHT: 23px" onChange="changeFontName(FontNameSelect.value)" ACCESSKEY="v" size="1">
+        &nbsp; </SELECT>
+	</TD>
+	<TD NOWRAP class="tbDivider" id="cmdFontSize" Title="字号">
+		<SELECT name="FontSizeSelect" style="WIDTH: 67px; HEIGHT: 23px" onChange="changeFontSize(FontSizeSelect.value)" ACCESSKEY="v" size="1">
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option selected value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="14">14</option>
+          <option value="16">16</option>
+          <option value="18">18</option>
+          <option value="20">20</option>
+          <option value="22">22</option>
+          <option value="24">24</option>
+          <option value="26">26</option>
+          <option value="28">28</option>
+          <option value="30">30</option>
+          <option value="36">36</option>
+          <option value="42">42</option>
+          <option value="48">48</option>
+          <option value="72">72</option>
+          <option value="100">100</option>
+          <option value="150">150</option>
+          <option value="300">300</option>
+          <option value="500">500</option>
+          <option value="800">800</option>
+          <option value="1200">1200</option>
+          <option value="2000">2000</option>
+        </SELECT>
+	</TD>
+
+	<TD NOWRAP><A class=tbButton id=cmdBold title=粗体 href="#" name=cbButton><IMG align=absMiddle src="images/bold.gif" width="16" height="16"></A></TD>
+	<TD NOWRAP><A class=tbButton id=cmdItalic title=斜体 href="#" name=cbButton><IMG align=absMiddle src="images/italic.gif" width="16" height="16"></A></TD>
+	<TD NOWRAP><A class=tbButton id=cmdUnderline title=下划线 href="#" name=cbButton><IMG align=absMiddle src="images/underline.gif" width="16" height="16"></A></TD>
+	<TD NOWRAP><A class=tbButton id=cmdBackColor title=背景色 href="#" name=cbButton><IMG align=absMiddle src="images/backcolor.gif" width="16" height="16"></A></TD>
+	<TD class="tbDivider" NOWRAP><A class=tbButton id=cmdForeColor title=前景色 href="#" name=cbButton><IMG align=absMiddle src="images/forecolor.gif" width="16" height="16"></A></TD>
+	<TD NOWRAP><A class=tbButton id=cmdWordWrap title=自动折行 href="#" name=cbButton><IMG align=absMiddle src="images/wordwrap.gif" width="16" height="16"></A></TD>
+	<TD NOWRAP><A class=tbButton id=cmdAlignLeft title=居左对齐 href="#" name=cbButton><IMG align=absMiddle src="images/alignleft.gif" width="16" height="16"></A></TD>
+	<TD NOWRAP><A class=tbButton id=cmdAlignCenter title=居中对齐 href="#" name=cbButton><IMG align=absMiddle src="images/aligncenter.gif" width="16" height="16"></A></TD>
+	<TD NOWRAP><A class=tbButton id=cmdAlignRight title=居右对齐 href="#" name=cbButton><IMG align=absMiddle src="images/alignright.gif" width="16" height="16"></A></TD>
+	<TD NOWRAP><A class=tbButton id=cmdAlignTop title=居上对齐 href="#" name=cbButton><IMG align=absMiddle src="images/aligntop.gif" width="16" height="16"></A></TD>
+	<TD NOWRAP><A class=tbButton id=cmdAlignMiddle title=垂直居中 href="#" name=cbButton  sticky="true"><IMG align=absMiddle src="images/alignmiddle.gif" width="16" height="16"></A></TD>
+	<TD class="tbDivider" NOWRAP><A class=tbButton id=cmdAlignBottom title=居下对齐 href="#" name=cbButton><IMG align=absMiddle src="images/alignbottom.gif" width="16" height="16"></A></TD>
+    <TD NOWRAP id="cmdEraseType" Title="抹边框类型">
+		<SELECT name="EraseTypeSelect" ACCESSKEY="v" size="1">
+          <option value="0" selected>抹所有框线</option>
+          <option value="1">抹外框线</option>
+          <option value="2">抹上框线</option>
+          <option value="3">抹下框线</option>
+          <option value="4">抹左框线</option>
+          <option value="5">抹右框线</option>
+          <option value="6">抹上下框线</option>
+          <option value="7">抹左右框线</option>
+          <option value="8">抹内框线</option>
+          <option value="9">抹横框线</option>
+          <option value="10">抹竖框线</option>
+        </SELECT>
+	</TD>
+	<TD class="tbDivider" NOWRAP><A class=tbButton id=cmdEraseBorder title=抹边框线 href="#" name=cbButton><IMG align=absMiddle src="images/erase.gif" width="16" height="16"></A></TD>
+	<TD NOWRAP width="100%"></TD>
+	</TR>
+</TABLE>
+
+<div style="LEFT: 0px; POSITION: relative">正在装载超级报表插件模块......</div>
+
+<p>
+
+ <script language=javascript src="/workflow/mode/chinaexcelweb.js"></script>
+</p>
+
+<SCRIPT LANGUAGE="VBScript">
+<!--
+Sub MenuOcx_MenuItemClick(name, nID)
+	'   Call MsgBox(name)
+	name = ucase(name)
+	select case name
+	case "ONFILENEW"
+	   mnuFileNew_click
+	case "ONFILEOPEN"
+	   mnuFileOpen_click
+	case "ONFILESAVE"
+	   mnuFileSave_click
+	case "ONFILESAVEAS"
+	   mnuFileSaveAs_click
+	case "ONFILESAVEASHTML"
+	   CellWeb1.OnSaveAsHtmlFile
+	case "ONFILEPRINT"
+	   mnuFilePrint_click
+	case "ONFILEPRINTPREVIEW"
+	   mnuFilePrintPreview_click
+	case "ONPROPERTY"
+	   CellWeb1.OnProperty
+
+	'编辑菜单
+	case "ONCOPY"
+	   mnuEditCopy_click
+	case "ONCUT"
+	   mnuEditCut_click
+	case "ONPASTE"
+	   mnuEditPaste_click
+	case "ONGOTOCELL"
+	   CellWeb1.OnGoToCell
+	case "ONINSERTBEFOREROW"
+	   CellWeb1.OnInsertBeforeRow
+	case "ONINSERTNEXTROW"
+	   CellWeb1.OnInsertNextRow
+	case "ONINSERTFORMATROWS"
+	   CellWeb1.OnInsertFormatRows
+	case "ONCOPYFORMATROW"
+	   CellWeb1.OnCopyRowCellFormat
+	case "ONINSERTBEFORECOL"
+	   CellWeb1.OnInsertBeforeCol
+	case "ONINSERTNEXTCOL"
+	   CellWeb1.OnInsertNextCol
+	case "ONINSERTFORMATCOLS"
+	   CellWeb1.OnInsertFormatCols
+	case "ONCOPYFORMATCOL"
+	   CellWeb1.OnCopyColCellFormat
+	case "ONINSERTCELL"
+	   CellWeb1.OnInsertCell
+	case "ONINSERTCELLDOWN"
+	   CellWeb1.OnInsertCellDown
+	case "ONINSERTCELLRIGHT"
+	   CellWeb1.OnInsertCellRight
+	case "ONCLEARCELLALL"
+	   CellWeb1.OnClearCell
+	case "ONCLEARCELLTEXT"
+	   mnuClearCellText_click
+	case "ONDELETEROW"
+	   CellWeb1.OnDeleteRow
+	case "ONDELETECOL"
+	   CellWeb1.OnDeleteCol
+	case "ONDELETECELL"
+	   CellWeb1.OnDeleteCell
+	case "ONDELETECELLUP"
+	   CellWeb1.OnDeleteCellUp
+	case "ONDELETECELLLEFT"
+	   CellWeb1.OnDeleteCellLeft
+	case "ONSORTROWASC"
+	   mnuOnSortRowAsc_click
+	case "ONSORTROWDEC"
+	   mnuOnSortRowDec_click
+	case "ONSORTROWASCALL"
+	   mnuOnSortRowAscAll_click
+	case "ONSORTROWDECALL"
+	   mnuOnSortRowDecAll_click
+	case "ONSORTCOLASC"
+	   mnuOnSortCOLAsc_click
+	case "ONSORTCOLDEC"
+	   mnuOnSortColDec_click
+	case "ONSORTCOLASCALL"
+	   mnuOnSortCOLAscAll_click
+	case "ONSORTCOLDECALL"
+	   mnuOnSortColDecAll_click
+	   
+	'设置菜单
+	case "ONSETMAXROWCOL"
+	   mnuMaxRowCol_click
+	case "ONSETPAPERCOLOR"
+	   CellWeb1.OnSetPaperColor
+	case "ONSETSYSGRIDLINE"
+	   CellWeb1.OnSetSysGridLine
+	case "ONSETCELLUSERVALUE"
+	   CellWeb1.OnSetCellUserValue
+	case "ONSETCELLUSERSTRINGVALUE"
+	   CellWeb1.OnSetCellUserStringValue
+	case "ONSETCELLVARNAME"
+	   CellWeb1.OnSetCellVarName
+	case "ONSETCELLHIDEPROTECT"
+	   CellWeb1.OnSetCellHideProtect
+	case "SETROWAUTOSIZE"
+	   mnuSetRowAutoSize_click
+	case "JUMPNEXTCOL"
+	   mnuJumpNextCol_click
+	case "JUMPNEXTROW"
+	   mnuJumpNextRow_click
+	case "SETAUTOJUMPNEXTROWCOL"
+	   mnuSetAutoJumpNextRowCol_click
+	case "SETCELLKEYNOTFOCUS"
+	   mnuSetCellKeyNotFocus_click   
+	case "SHOWERRORMSGBOX"
+	   mnuShowErrorMsgBox_Click
+	case "DESIGNMODE"
+	   mnuDesignMode_Click
+	case "SHOWGRID"
+	   mnuShowGrid_Click
+	case "SHOWHEADER"
+	   mnuShowHeader_Click
+	case "FORMPROTECT"
+	   mnuFormProtect_click
+	case "SETPROTECTFORMSHOWCURSOR"
+	   mnuSetProtectFormShowCursor_Click
+	case "SETSHOWPOPUPMENU"
+	   mnuSetShowPopupMenu_Click
+	case "SETALLOWROWRESIZING"
+	   mnuSetAllowRowResizing_Click
+	case "SETALLOWCOLRESIZING"
+	   mnuSetAllowColResizing_Click
+	case "SETDCLICKLABELCANSORT"
+	   mnuSetDClickLabelCanSort_Click
+	   
+	'格式主菜单
+	case "ONTEXTALIGN"
+	   CellWeb1.OnTextAlign
+	case "ONSETCELLTEXTSPAN"
+	   CellWeb1.OnSetCellTextSpan
+	case "SETCELLCHECKBOXTYPE"
+	   mnuSetCellCheckBoxType_click
+	case "ONSETCELLCOMBOTYPE"
+	   CellWeb1.OnSetCellComboType
+	case "SETCELLLARGETEXTTYPE"
+	   mnuSetCellLargeTextType_click
+	case "ONSETCELLDATETIMETYPE"
+	   CellWeb1.OnSetCellDateTimeType
+	case "SETCELLURLTYPE"
+	   mnuSetCellUrlType_click
+	case "SETCELLNUMERICTYPE"
+	   mnuSetCellNumericType_click
+	case "SETCELLCOMPLEXTYPE"
+	   mnuSetCellComplexType_click
+	case "SETCELLNORMALTYPE"
+	   mnuSetCellNormalType_click
+	case "SETCELLFINANCEHEADTYPE"
+	   mnuFinanceHeader_click
+	case "SETCELLFINANCETYPE"
+	   mnuFinance_click
+	case "SETCELLFINANCEDAXIE"
+	   mnuFinanceDaXie_click
+	case "SETCELLSHAPE3D"
+	   mnuShape3D_click
+	case "AUTOWRAP"
+	   cmdWordWrap_click
+	case "ONSETLINESTYLE"
+	   CellWeb1.OnSetLineStyle
+	case "ONSETTEXTCOLOR"
+	   CellWeb1.OnSetTextColor
+	case "ONCHOOSEFONT"
+	   CellWeb1.OnChooseFont
+	case "ONSETCELLBKCOLOR"
+	   CellWeb1.OnSetCellBkColor
+	case "ONDATABINDCELLCOLOR"
+	   CellWeb1.OnDataBindCellColor
+	case "ONSETCELLSHOWSTYLE"
+	   CellWeb1.OnSetCellShowStyle
+	case "ONSETROWSIZE"
+	   CellWeb1.OnSetRowSize
+	case "SETROWHIDE"
+	   mnuSetRowHide_click
+	case "SETROWUNHIDE"
+	   mnuSetRowUnHide_click
+	case "AUTOSIZEROW"
+	   mnuAutoSizeRow_click
+	case "AUTOSIZEROW1"
+	   mnuAutoSizeRow1_click
+	case "ONSETCOLSIZE"
+	   CellWeb1.OnSetColSize
+	case "SETCOLHIDE"
+	   mnuSetColHide_click
+	case "SETCOLUNHIDE"
+	   mnuSetColUnHide_click
+	case "AUTOSIZECOL"
+	   mnuAutoSizeCol_click
+	case "AUTOSIZECOL1"
+	   mnuAutoSizeCol1_click
+	case "ONCELLCOMBINATION"
+	   CellWeb1.OnCellCombiNation true
+	case "ONCELLUNCOMBINATION"
+	   CellWeb1.OnCellCombiNation false
+	case "ONSLASHSET"
+	   CellWeb1.OnSlashSet
+	case "ONDEFAULTSET"
+	   CellWeb1.OnDefaultSet
+	   
+	'公式脚本
+	case "ONFUNCTIONLIST"
+	   CellWeb1.OnFunctionList
+	case "USERFUNCTIONGUIDE"
+	   CellWeb1.UserFunctionGuide
+	case "EXPORTUSERFUNCTIONS"
+	   mnuExportUserFunctions_click
+	case "IMPORTUSERFUNCTIONS"
+	   mnuImportUserFunctions_click
+	case "AUTOSUMVERT"
+	   cmdFormulaSumV_click
+	case "AUTOSUMHORZ"
+	   cmdFormulaSumH_click
+	case "AUTOSUMALL"
+	   cmdFormulaSumHV_click
+	case "ONSETFORMLOADSCRIPT"
+	   CellWeb1.OnSetFormLoadScript
+	case "ONRUNSCRIPT"
+	   CellWeb1.OnRunScript
+	case "RECALCULATE"
+	   CellWeb1.ReCalculate
+	   
+	 '图形图表
+	 case "ONCHARTWIZARD"
+	    CellWeb1.OnChartWizard
+	 case "ONDRAWLINE"
+	    CellWeb1.OnDrawLine
+	 case "ONDRAWRECT"
+	    CellWeb1.OnDrawRect
+	 case "ONDRAWROUNDRECT"
+	    CellWeb1.OnDrawRoundRect
+	 case "ONDRAWELLIPSE"
+	    CellWeb1.OnDrawEllipse
+	 case "ONOBJECTLINECOLOR"
+	    CellWeb1.OnObjectLineColor
+	 case "ONOBJECTFILLCOLOR"
+	    CellWeb1.OnObjectFillColor
+	 case "ONOBJECTMOVETOFRONT"
+	    CellWeb1.OnObjectMoveToFront
+	 case "ONOBJECTMOVETOBACK"
+	    CellWeb1.OnObjectMoveToBack
+	 case "ONOBJECTMOVEFORWARD"
+	    CellWeb1.OnObjectMoveForward
+	 case "ONOBJECTMOVEBACK"
+	    CellWeb1.OnObjectMoveBack
+	 case "REFRESHALLOBJECTDATA"
+	    CellWeb1.RefreshAllObjectData
+	    
+	 '图片菜单
+	 case "INSERTIMAGEFILE"
+	    CellWeb1.InsertImageFile false
+	 case "INSERTCELLIMAGE"
+	    CellWeb1.InsertImageFile true
+	 case "SETCELLIMAGEORIGINALSIZE"
+	    mnuSetCellImageOriginalSize_click
+	 case "SETCELLIMAGECELLSIZE"
+	    mnuSetCellImageCellSize_click
+	 case "DELETECELLIMAGE"
+	    mnuDeleteCellImage_click
+	 case "ONINSERTBACKGROUNDIMAGEORIGINALSIZE"
+	    CellWeb1.OnInsertBackgroundImage true
+	 case "ONINSERTBACKGROUNDIMAGEFORMSIZE"
+	    CellWeb1.OnInsertBackgroundImage false
+	 case "SETBACKGROUNDIMAGEORIGINALSIZE"
+	    CellWeb1.SetBackgroundImageSize true
+	 case "SETBACKGROUNDIMAGEFORMSIZE"
+	    CellWeb1.SetBackgroundImageSize false
+	 case "DELETEBACKGROUNDIMAGE"
+	    CellWeb1.DeleteBackgroundImage
+	    
+	 '统计
+	 case "ONSTATWEBWIZARD"
+	    CellWeb1.OnStatWebWizard
+	 
+	 '打印设置
+	 case "SETROWLABEL"
+	    mnuRowLabel_click
+	 case "SETCOLLABEL"
+	    mnuColLabel_click
+	 case "SETPAGEPREFOOTERROWS"
+	    mnuSetPagePreFooterRows_click
+	 case "SETPAGEFOOTERROWS"
+	    mnuSetPageFooterRows_click
+	 case "SETONEPRINTPAGEDETAILZONEROWS"
+	    mnuSetOnePrintPageDetailZoneRows_click
+	 case "ONPRINTPAPERSET"
+	    CellWeb1.OnPrintPaperSet
+	 case "ONPRINTSETUP"
+	    CellWeb1.OnPrintSetup
+	 case "SETCELLCANPRINT"
+		mnuSetCellCanPrint_click
+	 case "SETCELLONLYPRINTTEXT"
+		mnuSetCellOnlyPrintText_click
+	 case "SETPRINTFORMBACKGROUND"
+	    CellWeb1.SetPrintFormBackground true
+    	nMenuID = MenuOcx.GetMenuID("SetPrintFormBackground")
+		MenuOcx.SetMenuChecked nMenuID,CellWeb1.IsPrintFormBackground()
+    	nMenuID = MenuOcx.GetMenuID("SetNotPrintFormBackground")
+		MenuOcx.SetMenuChecked nMenuID,not CellWeb1.IsPrintFormBackground()
+	 case "SETNOTPRINTFORMBACKGROUND"
+	    CellWeb1.SetPrintFormBackground false
+    	nMenuID = MenuOcx.GetMenuID("SetPrintFormBackground")
+		MenuOcx.SetMenuChecked nMenuID,CellWeb1.IsPrintFormBackground()
+    	nMenuID = MenuOcx.GetMenuID("SetNotPrintFormBackground")
+		MenuOcx.SetMenuChecked nMenuID,not CellWeb1.IsPrintFormBackground()
+   end select
+End Sub
+
+Sub CellWeb1_ShowCellChanged(Row, Col)
+	bPrint = CellWeb1.IsCellCanPrint(CellWeb1.Row,CellWeb1.Col)
+	nMenuID = MenuOcx.GetMenuID("SetCellCanPrint")
+	MenuOcx.SetMenuChecked nMenuID,bPrint
+
+	bPrint = CellWeb1.IsCellOnlyPrintText(CellWeb1.Row,CellWeb1.Col)
+	nMenuID = MenuOcx.GetMenuID("SetCellOnlyPrintText")
+	MenuOcx.SetMenuChecked nMenuID,bPrint
+
+	nMenuID = MenuOcx.GetMenuID("AutoWrap")
+	MenuOcx.SetMenuChecked nMenuID,CellWeb1.AutoWrap
+	
+	FontSizeSelect.Value = CellWeb1.CellFontSize
+	FontNameSelect.value = CellWeb1.CellFontName
+End Sub
+-->
+</SCRIPT>
+
+</BODY>
+</HTML>

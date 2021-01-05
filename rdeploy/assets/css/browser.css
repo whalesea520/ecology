@@ -1,0 +1,89 @@
+body{
+    padding-top:130px;
+}
+
+.addFile,.cancelAllUpload{
+    display:inline-block;
+    width:49%;
+    position:relative;
+}
+
+.cancelAllUpload{
+    border-left:2px solid #E9E7E9;
+}
+.addFile span,.cancelAllUpload span{
+    padding-left:30px;
+}
+.addFile span{
+	background:url("../img/doc/upload_file_normal.png") no-repeat left center;
+}
+.cancelAllUpload span{
+     background:url("../img/doc/cancel_all.png") no-repeat left center;
+}
+.addFile span:hover,.addFile.hover span,.calcelAllDiv .cancelAllUpload span:hover{
+   color: #4ba9df;
+   cursor:pointer;
+}
+.addFile span:hover,.addFile.hover span{
+    background-image:url("../img/doc/upload_hot.png");
+}
+.calcelAllDiv .cancelAllUpload span:hover{
+     background-image:url("../img/doc/cancelall_hot.png");
+}
+.nocalcelAllDiv .cancelAllUpload span{
+    color:#b8b8b8;
+}
+.swfuploadbtn{
+    z-index:99;
+}
+#uploadList .swfuploadbtn{
+    left : 110px;
+    top:auto;
+    bottom:5px;
+}
+#uploadList.hideBody .swfuploadbtn{
+    bottom:-200px;
+}
+#swfuploadbtnLi{
+    left:-200px;
+    background-color:#ffffff;
+    filter:alpha(opacity=0); 
+	-moz-opacity:0; 
+	opacity:0;
+}
+#swfuploadbtnLi.swfuploadbtn,#swfuploadbtnLi.swfuploadbtn object{
+    width:146px !important;
+    height:27px !important;
+}
+#swfuploadbtn.swfuploadbtn,#swfuploadbtn.swfuploadbtn object{
+    cursor:pointer;
+}
+.selectDiv .optionDiv{
+	position:static;
+}
+.optionDiv:hover{
+    height:25px;
+}
+.optionDiv:hover .selectOption{
+    border-color:#ffffff;
+    background-color:#ffffff;
+}
+.optionDiv .selectOption.first{
+    background-image:none;
+}
+.optionDiv:hover .selectOption.first{
+    cursor:default;
+    background-color:#ffffff;
+    border-bottom-color:#ffffff;
+}
+.norecord_uploadDiv{
+    position:static;
+    margin-left:43%;
+    margin-top:15%;
+}
+#uploadButton{
+    display:none;
+}
+.noupload #swfuploadbtn.swfuploadbtn{
+    left:-200px;
+}

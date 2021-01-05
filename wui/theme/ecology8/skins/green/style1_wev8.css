@@ -1,0 +1,75 @@
+	
+/*For lisbox*/
+
+.listbox1 {
+	padding-right:100px;
+}
+
+.listbox1 .t-left{
+	width:6px;
+	height:20px;
+	
+	background-position:center right;
+}
+.listbox1 .t-right{
+	width:8px;
+	height:20px;
+	
+	
+}
+.listbox1 .t-center {
+    height: 20px;
+   
+}
+
+.listbox1 .flag_1{
+    background: url(listbox/page_copy_wev8.png) no-repeat;width:16px;height:16px;
+	top:10px;
+	left:12px;
+}
+
+.listbox1 .title_1{
+	position:relative;
+	top:-2px; 
+	left:10px;
+	color:#4f6b72;
+	font-weight:bold;
+}
+
+.listbox1 ul {
+    margin:-10 0 0 0;
+	padding:10px 20px 25px 44px;
+	list-style:none;
+}
+
+.listbox1 ul li {
+
+	background-position:0 8 ;
+	padding-left:10px;
+    height: 20px;
+    line-height: 20px;
+}
+.listbox1 ol {
+	padding:2 0 2 20;
+	list-style:none;
+	margin:0;
+}
+.listbox1 ol li {
+	background:url(listbox/item_wev8.png) no-repeat;
+	background-position:0 8 ;
+	padding-left:10px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.listbox1 .flag_2_forDocList_open{
+	background:url(listbox/open2_wev8.png) no-repeat;
+	background-position:0 5 ;
+	padding-left:15px;
+}
+
+.listbox1 .flag_2_forDocList_close{
+	background:url(listbox/close2_wev8.png) no-repeat;
+	background-position:0 5 ;
+	padding-left:15px;
+}

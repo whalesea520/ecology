@@ -1,0 +1,399 @@
+CREATE INDEX idx_fnaBudgetInfo_1 ON FnaBudgetInfo 
+(
+	budgetorganizationid 
+)
+/
+
+CREATE INDEX idx_fnaBudgetInfo_2 ON FnaBudgetInfo 
+(
+	organizationtype 
+)
+/
+
+CREATE INDEX idx_fnaBudgetInfo_3 ON FnaBudgetInfo 
+(
+	budgetperiods 
+)
+/
+
+CREATE INDEX idx_fnaBudgetInfo_4 ON FnaBudgetInfo 
+(
+	status 
+)
+/
+
+CREATE INDEX idx_fnaBudgetInfoDtl_1 ON FnaBudgetInfoDetail 
+(
+	budgetperiods 
+)
+/
+
+CREATE INDEX idx_fnaBudgetInfoDtl_2 ON FnaBudgetInfoDetail 
+(
+	budgettypeid 
+)
+/
+
+CREATE INDEX idx_fnaBudgetInfoDtl_3 ON FnaBudgetInfoDetail 
+(
+	budgetperiodslist 
+)
+/
+
+CREATE INDEX idx_fnaExpenseInfo_1 ON FnaExpenseInfo 
+(
+	organizationid 
+)
+/
+
+CREATE INDEX idx_fnaExpenseInfo_2 ON FnaExpenseInfo 
+(
+	organizationtype 
+)
+/
+
+CREATE INDEX idx_fnaExpenseInfo_3 ON FnaExpenseInfo 
+(
+	occurdate 
+)
+/
+
+CREATE INDEX idx_fnaExpenseInfo_4 ON FnaExpenseInfo 
+(
+	status 
+)
+/
+
+CREATE INDEX idx_fnaExpenseInfo_5 ON FnaExpenseInfo 
+(
+	subject 
+)
+/
+
+CREATE INDEX idx_fnaExpenseInfo_6 ON FnaExpenseInfo 
+(
+	requestid 
+)
+/
+
+CREATE INDEX idx_fnaYearP_1 ON FnaYearsPeriods 
+(
+	fnayear 
+)
+/
+
+CREATE INDEX idx_fnaYearP_2 ON FnaYearsPeriods 
+(
+	startdate 
+)
+/
+
+CREATE INDEX idx_fnaYearP_3 ON FnaYearsPeriods 
+(
+	enddate 
+)
+/
+
+CREATE INDEX idx_fnaYearP_4 ON FnaYearsPeriods 
+(
+	status 
+)
+/
+
+CREATE INDEX idx_fnaYearPList_1 ON FnaYearsPeriodsList 
+(
+	fnayearid 
+)
+/
+
+CREATE INDEX idx_fnaYearPList_2 ON FnaYearsPeriodsList 
+(
+	Periodsid 
+)
+/
+
+CREATE INDEX idx_fnaYearPList_3 ON FnaYearsPeriodsList 
+(
+	startdate 
+)
+/
+
+CREATE INDEX idx_fnaYearPList_4 ON FnaYearsPeriodsList 
+(
+	enddate 
+)
+/
+
+CREATE INDEX idx_fnaYearPList_5 ON FnaYearsPeriodsList 
+(
+	fnayearperiodsid 
+)
+/
+
+CREATE INDEX idx_fnaExpenseInfo_id ON FnaExpenseInfo 
+(
+	id 
+)
+/
+
+
+
+
+
+
+CREATE INDEX idx_FNALOANINFO_id ON FNALOANINFO 
+(
+	ID
+)
+/
+
+CREATE INDEX idx_FNALOANINFO_1 ON FNALOANINFO 
+(
+	LOANTYPE
+)
+/
+
+CREATE INDEX idx_FNALOANINFO_2 ON FNALOANINFO 
+(
+	ORGANIZATIONID
+)
+/
+
+CREATE INDEX idx_FNALOANINFO_3 ON FNALOANINFO 
+(
+	ORGANIZATIONTYPE
+)
+/
+
+CREATE INDEX idx_FNALOANINFO_4 ON FNALOANINFO 
+(
+	OCCURDATE
+)
+/
+
+CREATE INDEX idx_FNALOANINFO_5 ON FNALOANINFO 
+(
+	REQUESTID
+)
+/
+
+
+
+
+
+
+CREATE INDEX idx_FNARULESET_1 ON FNARULESET 
+(
+	ROLEID
+)
+/
+
+CREATE INDEX idx_FNARULESET_2 ON FNARULESET 
+(
+	ALLOWZB
+)
+/
+
+
+
+
+
+
+CREATE INDEX idx_FNARULESETDTL_1 ON FNARULESETDTL 
+(
+	MAINID
+)
+/
+
+CREATE INDEX idx_FNARULESETDTL_2 ON FNARULESETDTL 
+(
+	SHOWID
+)
+/
+
+CREATE INDEX idx_FNARULESETDTL_3 ON FNARULESETDTL 
+(
+	SHOWIDTYPE
+)
+/
+
+
+
+
+
+
+CREATE INDEX idx_FNARULESETDTL1_1 ON FNARULESETDTL1 
+(
+	MAINID
+)
+/
+
+CREATE INDEX idx_FNARULESETDTL1_2 ON FNARULESETDTL1 
+(
+	SHOWID
+)
+/
+
+CREATE INDEX idx_FNARULESETDTL1_3 ON FNARULESETDTL1 
+(
+	SHOWIDTYPE
+)
+/
+
+
+
+
+
+
+CREATE INDEX idx_FNARULESETDTLFCC_1 ON FNARULESETDTLFCC 
+(
+	MAINID
+)
+/
+
+CREATE INDEX idx_FNARULESETDTLFCC_2 ON FNARULESETDTLFCC 
+(
+	SHOWID
+)
+/
+
+CREATE INDEX idx_FNARULESETDTLFCC_3 ON FNARULESETDTLFCC 
+(
+	SHOWIDTYPE
+)
+/
+
+
+
+
+
+
+CREATE INDEX idx_BUDGETAUTOMOVE_1 ON BUDGETAUTOMOVE 
+(
+	ORGTYPE
+)
+/
+
+CREATE INDEX idx_BUDGETAUTOMOVE_2 ON BUDGETAUTOMOVE 
+(
+	ORGID
+)
+/
+
+CREATE INDEX idx_BUDGETAUTOMOVE_3 ON BUDGETAUTOMOVE 
+(
+	BUDGETPERIODS
+)
+/
+
+CREATE INDEX idx_BUDGETAUTOMOVE_4 ON BUDGETAUTOMOVE 
+(
+	BUDGETPERIODSLIST
+)
+/
+
+CREATE INDEX idx_BUDGETAUTOMOVE_5 ON BUDGETAUTOMOVE 
+(
+	FEEPERIOD
+)
+/
+
+
+
+
+
+
+CREATE INDEX IDX_FNAFEEWFINFOFIELD_2 ON FNAFEEWFINFOFIELD 
+(
+	WORKFLOWID
+)
+/
+
+CREATE INDEX IDX_FNAFEEWFINFOFIELD_3 ON FNAFEEWFINFOFIELD 
+(
+	FORMID
+)
+/
+
+CREATE INDEX IDX_FNAFEEWFINFOFIELD_4 ON FNAFEEWFINFOFIELD 
+(
+	ISDTL
+)
+/
+
+CREATE INDEX IDX_FNAFEEWFINFOFIELD_5 ON FNAFEEWFINFOFIELD 
+(
+	FCSGUID1
+)
+/
+
+
+
+
+
+
+CREATE INDEX IDX_FNAFEEWFINFO_2 ON FNAFEEWFINFO 
+(
+	ENABLE
+)
+/
+
+
+
+
+
+
+CREATE INDEX IDX_FNABUDGETFEETYPE_1 ON FNABUDGETFEETYPE 
+(
+	NAME
+)
+/
+
+CREATE INDEX IDX_FNABUDGETFEETYPE_2 ON FNABUDGETFEETYPE 
+(
+	FEEPERIOD
+)
+/
+
+CREATE INDEX IDX_FNABUDGETFEETYPE_4 ON FNABUDGETFEETYPE 
+(
+	FEETYPE
+)
+/
+
+CREATE INDEX IDX_FNABUDGETFEETYPE_5 ON FNABUDGETFEETYPE 
+(
+	SUPSUBJECT
+)
+/
+
+CREATE INDEX IDX_FNABUDGETFEETYPE_6 ON FNABUDGETFEETYPE 
+(
+	ARCHIVE
+)
+/
+
+CREATE INDEX IDX_FNABUDGETFEETYPE_7 ON FNABUDGETFEETYPE 
+(
+	FEECTLLEVEL
+)
+/
+
+CREATE INDEX IDX_FNABUDGETFEETYPE_8 ON FNABUDGETFEETYPE 
+(
+	GROUPCTRL
+)
+/
+
+CREATE INDEX IDX_FNABUDGETFEETYPE_9 ON FNABUDGETFEETYPE 
+(
+	CODENAME
+)
+/
+
+CREATE INDEX IDX_FNABUDGETFEETYPE_10 ON FNABUDGETFEETYPE 
+(
+	BUDGETAUTOMOVE
+)
+/
+

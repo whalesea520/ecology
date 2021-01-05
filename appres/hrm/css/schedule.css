@@ -1,0 +1,115 @@
+#header{
+	height:6%;
+	text-align:center;
+	font-size:0;
+}
+#header:after,#header span{
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	width:0;
+	height:100%;
+	vertical-align:middle;
+}
+#header:after{
+	content:'';
+}
+#header p{
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	vertical-align:middle;
+	font-size:12px;
+}
+.wspan {
+	margin-left:30px;
+	font-size:12px;
+}
+.wtable {
+	width:85%;
+	margin:auto;
+	text-align:center;
+	border-collapse:collapse;
+	border:1px solid rgb(121,121,121);
+}
+.ltd {
+	width:30%;
+	height:25px;
+	background:rgb(248,248,248);
+}
+.rtd {
+	width:70%;
+	height:25px;
+	background:white;
+}
+.ctd {
+	width:70%;
+	height:25px;
+}
+.dtable {
+	width:95%;
+	margin:auto;
+	text-align:center;
+	border-collapse:collapse;
+	border:1px solid rgb(121,121,121);
+}
+.dtd {
+	width:15%;
+	height:25px;
+	background:rgb(248,248,248);
+}
+.wtd {
+	width:17%;
+	height:25px;
+	background:rgb(248,248,248);
+}
+.ntd {
+	width:18%;
+	height:25px;
+}
+.ttd {
+	width:50%;
+	height:25px;
+}
+table.altrowstable {
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #E6E6E6;
+	border-collapse: collapse;
+}
+table.altrowstable th, table.altrowstable td  {
+	height: 30px;
+	border-left:1px solid #E6E6E6;
+	border-right:1px solid #E6E6E6;
+} 
+table.altrowstable td {
+	border-bottom:1px solid #E6E6E6;
+}
+table.yearTable {
+	width:98%;
+	height:100%;
+	border-collapse:collapse;
+	margin:0px auto;
+	margin-top:10px;
+}
+table.yearTable td {
+	padding-right:10px;
+	padding-bottom:10px;
+}
+table.yearTable div {
+	background:white;
+	height:100%;
+}
+table.monthTable {
+	width:100%;
+	height:100%;
+	border-collapse:collapse;
+	text-align:center
+}
+.monthName {
+	text-align:left;
+	padding:10px 0px 10px 10px;
+	font-size:13px;
+}

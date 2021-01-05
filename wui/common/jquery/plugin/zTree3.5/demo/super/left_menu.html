@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> ZTREE DEMO - left_menu</TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../../css/demo.css" type="text/css">
+	<link rel="stylesheet" href="../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="../../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ztree.core-3.0.js"></script>
+	<!--  <script type="text/javascript" src="../../js/jquery.ztree.excheck-3.0.js"></script>
+	  <script type="text/javascript" src="../../js/jquery.ztree.exedit-3.0.js"></script>-->
+	<SCRIPT LANGUAGE="JavaScript">
+		<!--
+		var curMenu = null, zTree_Menu = null;
+		var setting = {
+			view: {
+				showLine: true,
+				selectedMulti: false,
+				dblClickExpand: false
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			callback: {
+				onNodeCreated: this.onNodeCreated,
+				beforeClick: this.beforeClick,
+				onClick: this.onClick
+			}
+		};
+
+		var zNodes =[
+			{ id:1, pId:0, name:"涓昏彍鍗?1", open:true},
+			{ id:11, pId:1, name:"瀛愯彍鍗?1"},
+			{ id:111, pId:11, name:"鍙跺瓙鑺傜偣11"},
+			{ id:112, pId:11, name:"鍙跺瓙鑺傜偣12"},
+			{ id:113, pId:11, name:"鍙跺瓙鑺傜偣13"},
+			{ id:114, pId:11, name:"鍙跺瓙鑺傜偣14"},
+			{ id:12, pId:1, name:"瀛愯彍鍗?2"},
+			{ id:121, pId:12, name:"鍙跺瓙鑺傜偣21"},
+			{ id:122, pId:12, name:"鍙跺瓙鑺傜偣22"},
+			{ id:123, pId:12, name:"鍙跺瓙鑺傜偣23"},
+			{ id:124, pId:12, name:"鍙跺瓙鑺傜偣24"},
+			{ id:2, pId:0, name:"涓昏彍鍗?2"},
+			{ id:21, pId:2, name:"瀛愯彍鍗?3"},
+			{ id:211, pId:21, name:"鍙跺瓙鑺傜偣31"},
+			{ id:212, pId:21, name:"鍙跺瓙鑺傜偣32"},
+			{ id:213, pId:21, name:"鍙跺瓙鑺傜偣33"},
+			{ id:214, pId:21, name:"鍙跺瓙鑺傜偣34"},
+			{ id:22, pId:2, name:"瀛愯彍鍗?4"},
+			{ id:221, pId:22, name:"鍙跺瓙鑺傜偣41"},
+			{ id:222, pId:22, name:"鍙跺瓙鑺傜偣42"},
+			{ id:223, pId:22, name:"鍙跺瓙鑺傜偣43"},
+			{ id:224, pId:22, name:"鍙跺瓙鑺傜偣44"},
+			{ id:3, pId:0, name:"涓昏彍鍗?3"},
+			{ id:31, pId:3, name:"瀛愯彍鍗?5"},
+			{ id:311, pId:31, name:"鍙跺瓙鑺傜偣51"},
+			{ id:312, pId:31, name:"鍙跺瓙鑺傜偣52"},
+			{ id:313, pId:31, name:"鍙跺瓙鑺傜偣53"},
+			{ id:314, pId:31, name:"鍙跺瓙鑺傜偣54"},
+			{ id:32, pId:3, name:"瀛愯彍鍗?6"},
+			{ id:321, pId:32, name:"鍙跺瓙鑺傜偣61"},
+			{ id:322, pId:32, name:"鍙跺瓙鑺傜偣62"},
+			{ id:323, pId:32, name:"鍙跺瓙鑺傜偣63"},
+			{ id:324, pId:32, name:"鍙跺瓙鑺傜偣64"}
+			
+		];
+
+		function beforeClick(treeId, node) {
+			if (node.isParent) {
+				if (node.level === 0) {
+					var pNode = curMenu;
+					while (pNode && pNode.level !==0) {
+						pNode = pNode.getParentNode();
+					}
+					if (pNode !== node) {
+						var a = $("#" + pNode.tId + "_a");
+						a.removeClass("cur");
+						zTree_Menu.expandNode(pNode, false);
+					}
+					a = $("#" + node.tId + "_a");
+					a.addClass("cur");
+
+					var isOpen = false;
+					for (var i=0,l=node.childs.length; i<l; i++) {
+						if(node.childs[i].open) {
+							isOpen = true;
+							break;
+						}
+					}
+					if (isOpen) {
+						zTree_Menu.expandNode(node, true);
+						curMenu = node;
+					} else {
+						zTree_Menu.expandNode(node.childs[0], true);
+						curMenu = node.childs[0];
+					}
+				} else {
+					zTree_Menu.expandNode(node);
+				}
+			}
+			return !node.isParent;
+		}
+		function onClick(e, treeId, node) {
+			alert("Do what you want to do!");
+		}
+
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			zTree_Menu = $.fn.zTree.getZTreeObj("treeDemo");
+			curMenu = zTree_Menu.getNodes()[0].childs[0].childs[0];
+			zTree_Menu.selectNode(curMenu);
+			var a = $("#" + zTree_Menu.getNodes()[0].tId + "_a");
+			a.addClass("cur");
+		});
+		//-->
+	</SCRIPT>
+	<style type="text/css">
+.ztree li a.level0 {width:200px;height: 20px; text-align: center; display:block; background-color: #0B61A4; border:1px silver solid;}
+.ztree li a.level0.cur {background-color: #66A3D2; }
+.ztree li a.level0 span {display: block; color: white; padding-top:3px; font-size:12px; font-weight: bold;word-spacing: 2px;}
+.ztree li a.level0 button {	float:right; margin-left: 10px; visibility: visible;display:none;}
+.ztree li button.switch.level0 {display:none;}
+	</style>
+ </HEAD>
+
+<BODY>
+<h1>鐢ㄦ潵褰撳仛宸︿晶鑿滃崟鐨?zTree</h1>
+<h6>[ 鏂囦欢璺緞锛歞emo/super/left_menu.html ]</h6>
+<div class="content_wrap">
+	<div class="zTreeDemoBackground left">
+		<ul id="treeDemo" class="ztree"></ul>
+	</div>
+	<div class="right">
+		<ul class="info">
+			<li class="title"><h2>瀹炵幇鏂规硶璇存槑</h2>
+				<ul class="list">
+				<li>鍦?鈥淒emo 婕旂ず鈥濅腑鐨勫乏渚ц彍鍗曞氨鏄敤 zTree 瀹炵幇鐨勶紝涓昏鏄潬 css 鏍峰紡璐熻矗鎺掔増锛屽埄鐢?setting 涓殑閰嶇疆杩涜鍔熻兘鍒朵綔锛屾湰 Demo 瀵瑰疄鐜?宸︿晶鑿滃崟杩涜绠€鍗曠殑浠嬬粛锛屼綘涔熷彲浠ラ€氳繃鏌ョ湅 鈥淒emo 婕旂ず鈥濋〉闈㈢殑婧愮爜娣卞叆浜嗚В銆?/li>
+				<li class="highlight_red">1銆佸叧浜?css 瀹屽叏鍙互鏍规嵁鑷繁鐨勯渶瑕佽繘琛屼釜鎬у寲璋冩暣锛屼緥濡傦細姝?Demo 鐨勮彍鍗曟牱寮?灏?涓?鈥淒emo 婕旂ず鈥濋〉闈㈢殑涓嶄竴鏍凤紝浠呬緵瀵规瘮鍙傝€?/li>
+				<li class="highlight_red">2銆佷富瑕佺敤鍒扮殑閰嶇疆鏈夛細<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;setting.view.showIcon / showLine / selectedMulti / dblClickExpand<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;setting.callback.onNodeCreated / beforeClick / onClick
+				</li>
+				<li>3銆佹槸鍚﹂渶瑕侀檺鍒跺崟涓€璺緞灞曞紑锛屽畬鍏ㄧ敱浣犵殑闇€姹傝€屽畾锛屽疄鐜颁唬鐮佸彲鍙傝€?"淇濇寔灞曞紑鍗曚竴璺緞"</li>
+				<li>4銆佸叾浠栬緟鍔╄鍒欙紝璇锋牴鎹疄闄呮儏鍐佃嚜琛岀紪鍐?/li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+</BODY>
+</HTML>

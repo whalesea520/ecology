@@ -1,0 +1,11 @@
+.SwfUploadPanel_iconAdd {
+	background-image:url('/js/extjs/source/ux/SwfUploadPanel/add_wev8.png') !important;
+}
+
+.SwfUploadPanel_iconUpload {
+	background-image:url('/js/extjs/source/ux/SwfUploadPanel/arrow_up_wev8.png') !important;
+}
+
+.SwfUploadPanel_iconCancel {
+	background-image:url('/js/extjs/source/ux/SwfUploadPanel/delete_wev8.png') !important;
+}

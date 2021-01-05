@@ -1,0 +1,14 @@
+<deeptreeconfig>
+  <TopXMLSrc>http://localhost/xtree.jsp</TopXMLSrc>
+  <TreeLabel>DeepTree</TreeLabel>
+  <ShowTitle>N</ShowTitle>
+  <ShowStatus>Y</ShowStatus>
+  <StartPage>/main.jsp</StartPage>
+  <ErrorPage>/error.jsp</ErrorPage>
+  <ContentTarget>top.mainFrame</ContentTarget>
+  <TreeId>DeepTree</TreeId>
+  <TreeRootPath></TreeRootPath>
+  <Locale>gb-ch</Locale>
+  <LocaleTextDirection>LTR</LocaleTextDirection>
+</deeptreeconfig>
+

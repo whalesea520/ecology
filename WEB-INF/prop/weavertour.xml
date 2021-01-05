@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<weavertour>
+
+	<pathtour url="/homepage/Homepage.jsp?hpid=91">
+		<!--每种对应一种展示方式 -->
+		<fetures tourway="slider">
+			<feture>
+				<itemid>item_29597</itemid>
+				<title>团队生活：成长的足迹</title>
+				<describe><![CDATA[<div style='width:100%;height: 50px;line-height:50px;font-weight:600;padding-bottom: -3px;'><img src='/images/sitetour/image02.png' style='
+    padding-top: 11px;
+    '> <span style='padding-bottom: 6px;margin-top: -60px;display: block;margin-left: 49px;'>快了你我！</span></div>
+<div style='line-height: 21px;padding-top: 11px;'>成长的脚印，从过去到现在，都是泛微人最美好的回忆！</div>]]></describe>
+				<bgimg></bgimg>
+				<position>right</position>
+			</feture>
+		</fetures>
+		
+		<fetures tourway="tooltip">
+			<feture>
+				<itemid>item_29589</itemid>
+				<title>前进的脚步</title>
+				<describe><![CDATA[<div style='width:100%;height: 50px;line-height:50px;font-weight:600;padding-bottom: -3px;'><img src='/images/sitetour/image01.png' style='
+    padding-top: 11px;
+    '> <span style='padding-bottom: 6px;margin-top: -60px;display: block;margin-left: 49px;'>泛微发展缩影！</span></div>
+<div style='line-height: 21px;padding-top: 11px;'>记录泛微各阶段重大事件。了解泛微点点滴滴！</div>]]></describe>
+				<bgimg></bgimg>
+				<position>bottom</position>
+			</feture>
+		</fetures>
+		
+	</pathtour>
+	
+		<pathtour url="/middlecenter/index.jsp">
+			<fetures tourway="steps">
+			    <feture>
+					<itemid>mainmenu</itemid>
+					<title>后端顶部菜单</title>
+					<describe><![CDATA[<div style='width:100%;height: 50px;line-height:50px;font-weight:600;padding-bottom: -3px;'><img src='/images/sitetour/image01.png' style='
+    padding-top: 11px;
+    '> <span style='padding-bottom: 6px;margin-top: -60px;display: block;margin-left: 49px;'>顶部菜单</span></div>
+<div style='line-height: 21px;padding-top: 11px;'>顶部菜单包含子菜单，子菜单在界面的左侧展示。顶部菜单包含组织权限中心、流程引擎、门户引擎、内容引擎等菜单。！-------凝聚分撒智慧，协同提升发展--携手共进，未来精彩，你我共创！</div>]]></describe>
+					<bgimg></bgimg>
+					<position>bottom</position>
+				</feture>
+				<feture>
+					<itemid>leftMenu</itemid>
+					<title>后端左侧菜单</title>
+					<describe><![CDATA[<div style='width:100%;height: 50px;line-height:50px;font-weight:600;padding-bottom: -3px;'><img src='/images/sitetour/image01.png' style='
+    padding-top: 11px;
+    '> <span style='padding-bottom: 6px;margin-top: -60px;display: block;margin-left: 49px;'>左侧菜单</span></div>
+<div style='line-height: 21px;padding-top: 11px;'>展示顶部的子菜单，子菜单内容将在右侧区域展示。！-------凝聚分撒智慧，协同提升发展--携手共进，未来精彩，你我共创！</div>]]></describe>
+					<bgimg></bgimg>
+					<position>right</position>
+				</feture>
+				
+			</fetures>
+	</pathtour>
+	
+	
+</weavertour>

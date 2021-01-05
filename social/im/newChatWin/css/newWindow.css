@@ -1,0 +1,146 @@
+body {
+    font-family: 'Microsoft YaHei';
+    overflow: hidden;
+    cursor: initial;
+}
+* {
+    padding: 0;
+    margin: 0;
+    font-size:12px;
+}
+.canAero-body {
+    padding: 5px 5px;
+}
+
+.clear {
+    clear: both;
+}
+.can-drag {
+    -webkit-app-region: drag;
+}
+.no-drag {
+    -webkit-app-region: no-drag;
+}
+
+.newWindow {
+    background-color: #fff;
+}
+.canAero-newWindow {
+    width: 310px;
+    height: 185px;
+    box-shadow:rgba(0,0,0,0.25)  0 0 5px 1px ;
+}
+
+.newWindow > .header {
+    height: 32px;
+    background-color: #248AC8;
+}
+.newWindow > .header > .title {
+    width: 200px;
+    height: 32px;
+    line-height: 32px;
+    float: left;
+    padding-left: 10px;
+    color: #fff;
+}
+.newWindow > .header > .newWindow-close {
+    cursor: pointer;
+    width: 40px;
+    height: 32px;
+    float: right;
+    margin-right: 5px;
+    background: url('../images/newWindow-close.png') no-repeat right center;
+}
+
+.newWindow > .center {
+}
+.newWindow > .center > .newWindow-content {
+    height: 40px;
+    color: #334754;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 22px;
+    margin-bottom: 10px;
+}
+.newWindow > .center > .newWindow-content:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.newWindow > .center > .newWindow-details {
+    height: 30px;
+    color: #6e7478;
+    line-height: 24px;
+}
+.bottom .bottom-right{
+    cursor: pointer;
+    float: right;
+    margin-right: 10px;
+    margin-top: 16px;
+}
+.bottom .bottom-left{
+    float: left;
+    margin-left: 20px;
+    margin-top: 18px;
+    width: 245px;
+    text-align:center;
+}
+.bottom .bottom-right .bottom-right-left{
+    width: 18px;
+    height: 20px;
+    float: right;
+    margin-right: 4px;
+    background: url('../../images/set3.png') no-repeat center
+}
+.bottom-right:hover{
+    text-decoration: none;
+    color: #018efb !important;
+}
+.prev{
+    top: 98px;
+    width: 10px;
+    height: 10px;
+    margin-left: 2px;
+    cursor: pointer;
+    position: absolute;
+    background: url('../../images/left.png') no-repeat center
+}
+.next{
+    top: 98px;
+    width: 10px;
+    height: 10px;
+    margin-left: 297px;
+    cursor: pointer;
+    position: absolute;    
+    background: url('../../images/right.png') no-repeat center
+}
+.prev:hover{
+    background: url('../../images/lefthover.png') no-repeat center
+}
+.next:hover{
+    background: url('../../images/righthover.png') no-repeat center
+}
+.bottom-ul{
+    display: inline-block;
+}
+.bottom-ul li {
+    background-color: #DCDCDC;
+}
+
+.bottom-ul li.active {
+    background-color: #5BB4D8 !important;
+}
+.bottom-ul li.marread{
+    background-color: #ff0000;
+}
+.bottom-ul li{
+    list-style-type: none;
+    margin-right: 9px;
+    float: left;
+    cursor: pointer;
+    width: 6px;
+    height: 6px;
+    border-radius: 9999px;
+}

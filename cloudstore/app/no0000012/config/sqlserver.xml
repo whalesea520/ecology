@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?><sql>
+<statement key="1">
+create table no0000012_wfdetailset (
+id int identity(1,1) not null,
+wfId int not null,
+nodeIds varchar(512) not null,
+detailtable varchar(512) not null,
+canAdd int default 0,
+canEditOld int default 0,
+canDelOld int default 1,
+mustAdd int default 0,
+del int default 1
+) 
+</statement>
+<statement key="2">
+create table no0000012_wfdetailsetitem (
+id int identity(1,1) not null,
+wdsId int not null,
+fieldId int not null,
+edittype int not null,
+del int default 1
+)
+</statement>
+<statement key="3">
+alter table no0000012_wfdetailset add paging int default 1
+</statement>
+<statement key="4">
+alter table no0000012_wfdetailset add excelImport int default 1
+</statement>
+<statement key="5">
+alter table no0000012_wfdetailset add excelOutput int default 1
+</statement>
+<statement key="6">
+alter table no0000012_wfdetailset add searching int default 1
+</statement>
+<statement key="7">
+alter table no0000012_wfdetailsetitem add authType int default -1
+</statement>
+<statement key="8">
+create table no0000012_wfdetailkey (
+dbId int not null,
+dbKey varchar(512) not null
+)
+</statement>
+<statement key="9">
+alter table no0000012_wfdetailset add canDel int default 0
+</statement>
+<statement key="10">
+alter table no0000012_wfdetailset add isTreetable int default 1
+</statement>
+<statement key="11">
+alter table no0000012_wfdetailset add isModal int default 1
+</statement>
+<statement key="12">
+alter table no0000012_wfdetailset add defaultrow int default 0
+</statement>
+<statement key="13">
+alter table no0000012_wfdetailset add treenode varchar(512) default ''
+</statement>
+<statement key="14">
+alter table no0000012_wfdetailset add excelOutputAll int default 1
+</statement>
+<statement key="15">
+alter table no0000012_wfdetailkey add requestid int default 0
+</statement>
+<statement key="16">
+alter table no0000012_wfdetailset add width varchar(512) default '1024'
+</statement>
+<statement key="17">
+alter table no0000012_wfdetailsetitem add width varchar(512) default '150'
+</statement>
+<statement key="18">
+alter table no0000012_wfdetailsetitem add fixed varchar(512) default ''
+</statement>
+<statement key="19">
+alter table no0000012_wfdetailkey add dn int
+</statement>
+<statement key="20">
+create table no0000012_wfdetaillink (
+wdsId int not null,
+fDn int not null,
+cDn int not null,
+fShowField varchar(512),
+fLinkField varchar(512), 
+cLinkField varchar(512),
+linkType int not null
+)
+</statement>
+<statement key="21">
+alter table no0000012_wfdetailkey add fDbKey varchar(512) default ''
+</statement>
+<statement key="22">
+alter table no0000012_wfdetailset add nodeId int default 0
+</statement>
+<statement key="23">
+alter table no0000012_wfdetailsetitem add mergeRow int default 1
+</statement>
+<statement key="24">
+alter table no0000012_wfdetailsetitem add chDetail varchar(512) default ''
+</statement>
+<statement key="25">
+alter table no0000012_wfdetailset add impTypeAuth varchar(512) default ''
+</statement>
+<statement key="26">
+alter table no0000012_wfdetailset add height varchar(512) default '0'
+</statement>
+<statement key="27">
+alter table no0000012_wfdetailsetitem add defaultValue varchar(512) default ''
+</statement>
+<statement key="28">
+alter table no0000012_wfdetailsetitem add chDetailLink varchar(512) default ''
+</statement>
+<statement key="29">
+alter table no0000012_wfdetailsetitem add chDetailLinkType varchar(512) default ''
+</statement>
+<statement key="30">
+alter table no0000012_wfdetailsetitem add numCon int default 1
+</statement>
+<statement key="31">
+alter table no0000012_wfdetailsetitem add cdata varchar(512) default ''
+</statement>
+<statement key="32">
+alter table no0000012_wfdetailsetitem add cdataOrder float default 0
+</statement>
+<statement key="33">
+alter table no0000012_wfdetailsetitem add tdata varchar(512) default ''
+</statement>
+<statement key="34">
+alter table no0000012_wfdetailsetitem add tdataField varchar(512) default ''
+</statement>
+<statement key="35">
+alter table no0000012_wfdetailset add tdatashowonly int default 0
+</statement>
+<statement key="36">
+update no0000012_wfdetailset set tdatashowonly = 0
+</statement>
+<statement key="37">
+alter table no0000012_wfdetailset add pageSize int default 10
+</statement>
+<statement key="38">
+update no0000012_wfdetailset set pageSize = 10
+</statement>
+<statement key="39">
+alter table no0000012_wfdetailsetitem add shownamecolor varchar(512) default '#111'
+</statement>
+<statement key="40">
+alter table no0000012_wfdetailsetitem add detailbackgroudcolor varchar(512) default '#fff'
+</statement>
+<statement key="41">
+alter table no0000012_wfdetailset add searchingforcol int default 1
+</statement>
+<statement key="42">
+create table no0000012_wfdetailRemark (
+id int identity(1,1) not null,
+remarkstatus int default 0,
+remarkstring varchar(512) not null,
+dbid varchar(512) not null,
+wffieldid varchar(512) not null,
+reqId varchar(512) not null,
+detailtable varchar(512) not null
+) 
+</statement>
+<statement key="43">
+create table no0000012_wfdetailRemarkLog (
+id int identity(1,1) not null,
+oldvalue  varchar(512) not null,
+newvalue varchar(512) not null,
+dbid varchar(512) not null,
+wffieldid varchar(512) not null,
+reqId varchar(512) not null,
+detailtable varchar(512) not null,
+userid varchar(512) not null,
+updatetimes datetime
+) 
+</statement>
+<statement key="44">
+alter table no0000012_wfdetailset add canRemark int default 0
+</statement>
+<statement key="45">
+alter table no0000012_wfdetailsetitem add noZeroEnd int default 1
+</statement>
+<statement key="46">
+alter table no0000012_wfdetailset add showsn int default 0
+</statement>
+<statement key="47">
+update no0000012_wfdetailset set showsn = 0
+</statement>
+<statement key="48">
+create table no0000012_wfdetailRemarkMarginLog (
+id int identity(1,1) not null,
+mainid varchar(512) not null,
+content varchar(512) not null,
+operate varchar(512) not null,
+userid varchar(512) not null,
+time datetime
+) 
+</statement>
+<statement key="49">
+alter table no0000012_wfdetailRemarkMarginLog add dbid varchar(512) not null
+</statement>
+<statement key="50">
+alter table no0000012_wfdetailRemarkMarginLog add wffieldid varchar(512) not null
+</statement>
+<statement key="51">
+alter table no0000012_wfdetailRemarkMarginLog add reqId varchar(512) not null
+</statement>
+<statement key="52">
+alter table no0000012_wfdetailRemarkMarginLog add detailtable varchar(512) not null
+</statement>
+<statement key="53">
+alter table no0000012_wfdetailsetitem add cdatadbname varchar(512) default ''
+</statement>
+<statement key="54">
+alter table no0000012_wfdetailset add isMobile int default 0
+</statement>
+<statement key="55">
+alter table no0000012_wfdetailset add mustHide varchar(512) default ''
+</statement>
+</sql><!--
+fDn 父表ID，下标按formtable_main_dtn 的n来
+cDn 子表
+fShowField 显示链接的字段
+fLinkField 合计或取余字段
+cLinkField 合计或取余字段
+linkType 0 合计 1 取平均
+--><!-- 
+drop table cloudstore_sqlrun
+go
+drop table cloudstore_role
+go
+drop table cloudstore_rolemember
+
+1、参开配置如下：
+<sql>
+<statement>
+create table ...
+</statement>
+</sql>
+2、系统打开后会自动按顺序执行statement，如果有错误会在xml中体现，执行完成会有如下提示，也可以手动标记executed="true"达到不执行的效果，如果有错误会出现error标签
+<sql>
+<statement executed="true" error="">
+create table ...
+</statement>
+</sql>
+3、开发者在语句错误的时候直接获取此文件即可
+
+
+<statement>
+insert into cloudstore_role111(a,b,c) 
+</statement>
+<statement>
+update cloudstore_role
+</statement>
+<statement>
+drop table cloudstore_role
+</statement>
+<statement>
+delete from cloudstore_role
+</statement>
+<statement>
+create view cloudstore_role as
+select * from hrmresource 
+</statement>
+<statement>
+create proc cloudstore_role as
+select * from hrmresource 
+</statement>
+ --><!-- 
+
+create table cloudstore_role (
+id int identity(1,1) not null, 主键自增
+rolename varchar(512) not null, 角色名
+rolecode varchar(512) not null, 角色编码
+del int default 1 是否删除：0是 1否
+) 
+create table cloudstore_rolemenber (
+id int identity(1,1) not null, 主键自增
+roleid int not null, 角色id
+membertype int not null,0个人 1分部 2部门
+memberobj int not null,type是个人选人，是分部选分部，是部门选部门
+rolelevel int not null, 0总部 1分部 2部门
+roleobj int not null, 0代表都为自己的部门、分部、总部，其它就是和rolelevel绑定，它选择什么类型这里就存放什么类型
+del int default 1 是否删除：0是 1否
+)
+ -->

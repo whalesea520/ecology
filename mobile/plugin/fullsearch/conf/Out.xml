@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow workflowId="">
+	<!-- name. 传递的参数,name不能修改.   column 表单(数据库) 对应的字段名  defaultV 默认值 -->
+	<field name="userId" column="resourceId"></field>
+	<field name="departmentId" column="departmentId"></field>
+	<field name="subcompanyId" column=""></field>
+	<field name="outType" column="" defaultV="4" defaultN="其他事由"></field>
+	<field name="begindate" column="fromDate"></field>
+	<field name="begintime" column="fromTime"></field>
+	<field name="enddate" column="toDate"></field>
+	<field name="endtime" column="toTime"></field>
+	<field name="days" column=""></field>
+	<field name="content" column="evectionReason"></field>
+	<field name="remark" column=""></field>
+	<field name="crmId" column=""></field>
+	<field name="prjId" column=""></field>
+	<field name="manager" column=""></field>
+</workflow>

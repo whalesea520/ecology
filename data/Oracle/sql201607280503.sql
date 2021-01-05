@@ -1,0 +1,2 @@
+alter table RULE_EXPRESSIONBASE modify ELEMENTLABEL1 varchar2(4000)
+/

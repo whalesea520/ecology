@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> ZTREE DEMO - radio select menu</TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../../../css/demo.css" type="text/css">
+	<link rel="stylesheet" href="../../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="../../../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../../js/jquery.ztree.core-3.5.js"></script>
+	<script type="text/javascript" src="../../../js/jquery.ztree.excheck-3.5.js"></script>
+<!--	<script type="text/javascript" src="../../../js/jquery.ztree.exedit-3.5.js"></script>-->
+	<SCRIPT type="text/javascript">
+		<!--
+		var setting = {
+			check: {
+				enable: true,
+				chkStyle: "radio",
+				radioType: "all"
+			},
+			view: {
+				dblClickExpand: false
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			callback: {
+				onClick: onClick,
+				onCheck: onCheck
+			}
+		};
+
+		var zNodes =[
+			{id:1, pId:0, name:"鍖椾含"},
+			{id:2, pId:0, name:"澶╂触"},
+			{id:3, pId:0, name:"涓婃捣"},
+			{id:6, pId:0, name:"閲嶅簡"},
+			{id:4, pId:0, name:"娌冲寳鐪?, open:true, nocheck:true},
+			{id:41, pId:4, name:"鐭冲搴?},
+			{id:42, pId:4, name:"淇濆畾"},
+			{id:43, pId:4, name:"閭兏"},
+			{id:44, pId:4, name:"鎵垮痉"},
+			{id:5, pId:0, name:"骞夸笢鐪?, open:true, nocheck:true},
+			{id:51, pId:5, name:"骞垮窞"},
+			{id:52, pId:5, name:"娣卞湷"},
+			{id:53, pId:5, name:"涓滆帪"},
+			{id:54, pId:5, name:"浣涘北"},
+			{id:6, pId:0, name:"绂忓缓鐪?, open:true, nocheck:true},
+			{id:61, pId:6, name:"绂忓窞"},
+			{id:62, pId:6, name:"鍘﹂棬"},
+			{id:63, pId:6, name:"娉夊窞"},
+			{id:64, pId:6, name:"涓夋槑"}
+		 ];
+
+		function onClick(e, treeId, treeNode) {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+			zTree.checkNode(treeNode, !treeNode.checked, null, true);
+			return false;
+		}
+
+		function onCheck(e, treeId, treeNode) {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			nodes = zTree.getCheckedNodes(true),
+			v = "";
+			for (var i=0, l=nodes.length; i<l; i++) {
+				v += nodes[i].name + ",";
+			}
+			if (v.length > 0 ) v = v.substring(0, v.length-1);
+			var cityObj = $("#citySel");
+			cityObj.attr("value", v);
+		}
+
+		function showMenu() {
+			var cityObj = $("#citySel");
+			var cityOffset = $("#citySel").offset();
+			$("#menuContent").css({left:cityOffset.left + "px", top:cityOffset.top + cityObj.outerHeight() + "px"}).slideDown("fast");
+
+			$("body").bind("mousedown", onBodyDown);
+		}
+		function hideMenu() {
+			$("#menuContent").fadeOut("fast");
+			$("body").unbind("mousedown", onBodyDown);
+		}
+		function onBodyDown(event) {
+			if (!(event.target.id == "menuBtn" || event.target.id == "citySel" || event.target.id == "menuContent" || $(event.target).parents("#menuContent").length>0)) {
+				hideMenu();
+			}
+		}
+
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+		});
+		//-->
+	</SCRIPT>
+	<style type="text/css">
+	</style>
+ </HEAD>
+
+<BODY>
+<h1>甯?radio 鐨勫崟閫変笅鎷夎彍鍗? -- zTree</h1>
+<h6>[ 鏂囦欢璺緞: super/select_menu_radio.html ]</h6>
+<div class="content_wrap">
+	<div class="zTreeDemoBackground left">
+		<ul class="list">
+			<li class="title">&nbsp;&nbsp;<span class="highlight_red">鍕鹃€?radio 鎴栬€?鐐瑰嚮鑺傜偣 杩涜閫夋嫨</span></li>
+			<li class="title">&nbsp;&nbsp;Test: <input id="citySel" type="text" readonly value="" style="width:120px;" onclick="showMenu();" />
+		&nbsp;<a id="menuBtn" href="#" onclick="showMenu(); return false;">select</a></li>
+		</ul>
+	</div>
+	<div class="right">
+		<ul class="info">
+			<li class="title"><h2>瀹炵幇鏂规硶璇存槑</h2>
+				<ul class="list">
+				<li>鐢?radio 涔熷彲浠ヨ交鏉惧疄鐜板崟閫夌殑涓嬫媺鑿滃崟</li>
+				<li>鍗曢€夊叾瀹炴病鏈夊繀瑕佷娇鐢?radio, 姝?Demo 涓昏鐢ㄤ簬 鍜?鍏朵粬涓嬫媺鑿滃崟杩涜瀵规瘮</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div id="menuContent" class="menuContent" style="display:none; position: absolute;">
+	<ul id="treeDemo" class="ztree" style="margin-top:0; width:180px; height: 300px;"></ul>
+</div>
+</BODY>
+</HTML>

@@ -1,0 +1,54 @@
+/*leftmenu8*/
+.mailMenu{}
+.mailMenu .item{color:#c3c3c3} 
+.mailMenu .active{background:#ffffff;background: rgba(255, 255, 255, 0.2);filter: alpha(opacity=10);color:#fffefe}
+.mailMenu .icon{margin-left:20px;margin-right:25px;height:40px;width:16px;}
+.mailMenu .inbox_icon_a{background: url('/email/images/mail_inbox_wev8.png') no-repeat center}
+.mailMenu .inbox_icon{background: url('/email/images/mail_inbox_wev8.png') no-repeat center}
+.mailMenu .outbox_icon_a{background: url('/email/images/mail_outbox_wev8.png') no-repeat center}
+.mailMenu .outbox_icon{background: url('/email/images/mail_outbox_wev8.png') no-repeat center}
+
+.mailMenu .drafbox_icon_a{background: url('/email/images/mail_drafbox_wev8.png') no-repeat center}
+.mailMenu .drafbox_icon{background: url('/email/images/mail_drafbox_wev8.png') no-repeat center}
+
+.mailMenu .delbox_icon_a{background: url('/email/images/mail_delbox_wev8.png') no-repeat center}
+.mailMenu .delbox_icon{background: url('/email/images/mail_delbox_wev8.png') no-repeat center}
+
+.mailMenu .delbox_clear{height:40px; background: url(/email/images/clear_wev8.png) no-repeat center center;}
+
+.mailMenu .active .delbox_clear{background: url(/email/images/clear_wev8.png) no-repeat center center;}
+
+.mailMenu .internal_icon_a{background: url('/email/images/mail_internal_wev8.png') no-repeat center}
+.mailMenu .internal_icon{background: url('/email/images/mail_internal_wev8.png') no-repeat center}
+
+.mailMenu .star_icon_a{background: url('/email/images/mail_star_wev8.png') no-repeat center}
+.mailMenu .star_icon{background: url('/email/images/mail_star_wev8.png') no-repeat center}
+
+.mailMenu .setting_icon_a{background: url('/email/images/mail_setting_wev8.png') no-repeat center}
+.mailMenu .setting_icon{background: url('/email/images/mail_setting_wev8.png') no-repeat center}
+
+.mailMenu .contacts_icon_a{background: url('/email/images/mail_contacts_wev8.png') no-repeat center}
+.mailMenu .contacts_icon{background: url('/email/images/mail_contacts_wev8.png') no-repeat center}
+
+.mailMenu .attachment_icon_a{background: url('/email/images/mail_attachment_wev8.png') no-repeat center}
+.mailMenu .attachment_icon{background: url('/email/images/mail_attachment_wev8.png') no-repeat center}
+
+.mailMenu .forder_icon_a{background: url('/email/images/mail_forder_wev8.png') no-repeat center}
+.mailMenu .forder_icon{background: url('/email/images/mail_forder_wev8.png') no-repeat center}
+
+.mailMenu .folderManage{height:40px; background: url(/email/images/manage_wev8.png) no-repeat center center ;}
+.mailMenu .active .folderManage{background: url(/email/images/manage_wev8.png) no-repeat center center;}
+
+.mailMenu .tag_icon_a{background: url('/email/images/mail_tag_wev8.png') no-repeat center}
+.mailMenu .tag_icon{background: url('/email/images/mail_tag_wev8.png') no-repeat center}
+
+.mailMenu .waitdeal_icon_a{background: url('/email/images/mail_set_waitdeal_wev8.png') no-repeat center}
+.mailMenu .waitdeal_icon{background: url('/email/images/mail_set_waitdeal_wev8.png') no-repeat center} 
+
+.mailMenu .addMailsBtn{width:30px;height:30px;;background:url('/email/images/mail_arrow_wev8.png') no-repeat center center;}
+.mailMenu .accountsBtn{width:30px;height:30px;;background:url('/email/images/mail_arrow_wev8.png') no-repeat center center;}
+.mailMenu .addMailsBtnDown li{
+	font-weight: normal;line-height:25px;height:25px;padding-left:30px !important;
+}
+.right{float:right}
+/*leftmenu8*/

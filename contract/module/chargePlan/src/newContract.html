@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="/wui/common/jquery/jquery.min_wev8.js"></script>
+	</head>
+	<body>
+		<div id="">
+			<iframe name="newContract" id="newContract"  width='100%' height='520' scrolling="auto" frameBorder="none">
+			</iframe>
+		</div>
+		<script type="text/javascript">
+		window.onload = function(){
+			//modeId=3705&formId=-6130&type=1   199434,1   199443,10
+			///console.log(window.location.search);
+			document.getElementById("newContract").src= "/formmode/view/AddFormModeIframe.jsp"+window.location.search;
+		}
+			function dosubmit(parm,val){
+				jQuery("#billid",window.frames["newContract"].document).after(jQuery("<input type='hidden' value=1 name='fromCard'/>"));
+				newContract.window.doSubmit(parm,val); //保存
+			}
+			function dosubnew(parm,val){
+					jQuery("#billid",window.frames["newContract"].document).after(jQuery("<input type='hidden' value=1 name='fromCard'/>"));
+				newContract.window.doSubNew(parm,val); //保存并新建
+			}
+			
+			var doafter = null;
+			//dosub();
+		</script>
+	</body>
+</html>

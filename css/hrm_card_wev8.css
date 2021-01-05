@@ -1,0 +1,68 @@
+.persionalInfoDetailItem{
+	border-bottom:1px solid #D0D0D0;/*height:28px;line-height:28px;*/padding-left:38px;padding-top:5px;padding-bottom:5px;
+}
+.persionalInfoDetailItem span{vertical-align: top}
+
+.persionalInfoDetailItemHead{
+	/*float:left;white-space:nowrap;word-break:keep-all;*/width:100px;display: inline-block;padding-right:3px; 
+}
+#pertionalInfo_sort{
+	margin:0;padding:0;height:116px;background-color: #F3F3F3;;
+}
+#pertionalInfo_sort .headInfo{
+	width:446px;float:left;
+}
+#pertionalInfo_sort .title{
+	margin-top:-8px;padding-left:22px;color:black;height:34px;font-size:14px;font-weight:600;z-index:100;
+	position:relative;
+}
+
+#pertionalInfo_sort .legend{
+	float:right;
+	text-align:right;
+	width:100%;
+	padding-right:10px;
+	padding-top:10px;
+	color:black;
+}
+#pertionalInfo_sort .legend a:link,#pertionalInfo_sort .legend a:visited{
+	color:black !important;
+}
+#pertionalInfo_sort .legend a:hover{
+
+	text-decoration:underline !important;
+}
+#pertionalInfo_sort .headDetail{
+	height:52px;margin-top:6px;
+}
+#pertionalInfo_sort .headDetail .headFace{
+	width:108px;height:52px;float:left;background:url(/images/card/peopleHead_wev8.png) no-repeat right;
+}
+#pertionalInfo_sort .headDetail .headFace .headFacePic{
+	float:right;margin-right:6px;margin-top:6px;height:38px;width:38px;overflow:hidden;
+}
+#pertionalInfo_sort .headDetail .sortInfo{
+	margin-left:120px;width:200px;color:black;
+}
+#pertionalInfo .mainContent{
+	margin:0;padding:10px;width:auto;margin-left:11px; border-top:0px; z-index:4; 
+}
+#pertionalInfo .rightspace{
+	position:relative;float:right;height:200px; width:20px;  
+}
+#pertionalInfo .photo_area{
+	position:relative;margin-top:-76px;margin-right:-4px;float:right;width:280px;margin-bottom:4px;
+}
+#pertionalInfo .photo_first_level_bg{
+	background:url(/images/card/bg-hrm_wev8.png);background-position:right; padding-bottom:4px;
+}
+#pertionalInfo .photo_second_level_bg{
+	position:relative;padding:10px;padding-bottom:6px;background:white;margin-right:4px;margin-top:-4px;overflow:hidden;
+}
+#pertionalInfo .photo_third_level_bg{
+	width:auto;overflow:hidden;
+}
+#resourceimage{
+	width:100%;
+	display:block;
+}

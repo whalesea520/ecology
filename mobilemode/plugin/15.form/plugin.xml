@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEC>
+	<id>Form</id>	<!-- id 插件唯一标识 -->
+	<text>128145</text>  <!-- 表单 -->
+	<type>2</type>	<!-- 类型，方便对插件进行区分，目前已有：1.普通功能插件，2.表单插件 -->
+	<isEnabled>1</isEnabled>	<!-- 是否启用，1或者不填写为启用，0或者其他非1值为禁用 -->
+	<order>15</order>	<!-- 插件显示顺序，值越小则显示越靠前，不填写或者无此标签将为整数的最大值 -->
+	
+	<!-- 插件设计信息配置 -->
+	<design>
+		<unique>0</unique> <!-- 是否唯一，如果值为1则在自定义页面设计时一个页面最多只能添加一个这种控件，不为1或者不填写此属性则没有此限制 -->
+		<resources>	<!-- 依赖资源 -->
+			<resource type="js">/mobilemode/js/mec/handler/form/Form_wev8.js?v=2018050901</resource>
+			<resource type="css">/mobilemode/css/mec/run/form/Form_wev8.css</resource>
+			<resource type="css">/mobilemode/css/mec/handler/form/Form_wev8.css?v=2017062801</resource>
+		</resources>
+	</design>
+	
+	<!-- 插件运行信息配置 -->
+	<run java="com.weaver.formmodel.mobile.mec.handler.form.Form">
+		<resources>	<!-- 依赖资源 -->
+			<resource type="js">/mobilemode/js/mec/run/form/Form_wev8.js?v=2018050901</resource>
+			<resource type="js">/mobilemode/js/mec/run/form/FormExt_wev8.js?v=2018012401</resource>
+			<resource type="css">/mobilemode/css/mec/run/form/Form_wev8.css?v=2018050901</resource>
+		</resources>
+	</run>
+	
+	<!-- 内容模板 -->
+	<contentTemplate>
+		<![CDATA[
+			<iframe name="formSubmitIframe${theId}" style="display: none;"></iframe>
+			<form target="formSubmitIframe${theId}" class="mobileform" style="position:relative" isSubmitting="false" id="${theId}" name="${theId}" enctype="multipart/form-data" method="post" action="${formsuburl}?action=${action}">
+				<div class="Form_Msg"></div>
+				<input type="hidden" id="datasource" name="datasource" value="${datasource}" />
+				<input type="hidden" id="formtype" name="formtype" value="${formtype}" />
+				<input type="hidden" id="tablename" name="tablename" value="${tablename}" />
+				<input type="hidden" id="keyname" name="keyname" value="${keyname}" />
+				<input type="hidden" id="actiontype" name="actiontype" value="${actiontype}" />
+				<input type="hidden" id="billid" name="billid" value="${billid}" />
+				<input type="hidden" id="workflowid" name="workflowid" value="${workflowid}" />
+				<input type="hidden" id="workflowtitle" name="workflowtitle" value="${workflowtitle}" />
+				<input type="hidden" id="modelid" name="modelid" value="${modelid}" />
+				<input type="hidden" name="validateScript" value="${validateScript}" />
+				<input type="hidden" id="appid" name="appid" value="${appid}"/>
+				<input type="hidden" id="formid" name="formid" value="${formid}" />
+			</form>
+		]]>
+	</contentTemplate>
+</MEC>

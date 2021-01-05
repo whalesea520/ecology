@@ -1,0 +1,2105 @@
+.imToptab {
+    height: 38px;
+    width: 100%;
+    background: #f4f9f8;
+    float: left;
+    border-bottom: 1px solid #d9dbdf
+}
+
+.imToptab .tabitem {
+    float: left;
+    padding: 7px 10px 0 9px;
+    cursor: pointer;
+    width: 74px
+}
+
+.imToptab .tabitem .tabicon {
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    background-size: 22px 22px
+}
+
+.imToptab .tabitem .tabname {
+    text-align: right;
+    color: #9eadcb;
+    line-height: 22px;
+    width: 52%;
+    float: right;
+}
+
+.imToptab .tabitem .tabresent {
+    background-image: url('/social/images/im/im_resent_wev8.png')
+}
+
+.imToptab .tabitem .tabgroup {
+    background-image: url('/social/images/im/im_group_wev8.png')
+}
+
+.imToptab .tabitem .tabcontact {
+    background-image: url('/social/images/im/im_contact_wev8.png');
+    background-position-x: 8px
+}
+
+.imToptab .activeitem .tabresent {
+    background-image: url('/social/images/im/im_resent_h_wev8.png')
+}
+
+.imToptab .activeitem .tabgroup {
+    background-image: url('/social/images/im/im_group_h_wev8.png')
+}
+
+.imToptab .activeitem .tabcontact {
+    background-image: url('/social/images/im/im_contact_h_wev8.png')
+}
+
+.imToptab .activeitem .tabname {
+    color: #5cb5d8
+}
+
+.imToptab .tabline {
+    border-top: 1px solid #e3e6f0
+}
+
+.imToptab .tabitem .recentmsgcount {
+    text-align: center;
+    min-width: 10px;
+    padding: 2px 5px;
+    border-radius: 10px;
+    background-color: #FF4F00;
+    color: #fff;
+    line-height: 15px;
+    position: absolute;
+    top: 150px;
+    left: 65px;
+    font-size: 11px;
+    display: none
+}
+
+.conTabs {
+    height: 35px;
+    line-height: 35px;
+    background: #f4f9f8;
+    position: relative;
+    border-bottom: 1px solid #d9dbdf
+}
+
+.conTabs .conTabItem {
+    float: left;
+    width: 75px;
+    text-align: center;
+    color: #9eadcb;
+    cursor: pointer
+}
+
+.conTabs .conActItem {
+    color: #5cb5d8
+}
+
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 8px solid #7ec9e3;
+    left: 132px;
+    position: absolute;
+    top: -8px
+}
+
+.leftMenudiv .chatItem {
+    border-bottom: 1px solid #e1e8f5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    padding-left: 15px
+}
+
+.leftMenudiv .activeChatItem {
+    background-color: #fffde8
+}
+
+.leftMenudiv .chatItem .itemleft {
+    float: left;
+    margin-right: 10px
+}
+
+.leftMenudiv .chatItem .itemcenter {
+    float: left;
+    margin-right: 10px;
+    width: 110px
+}
+
+.leftMenudiv .chatItem .itemright {
+    float: left;
+    width: 110px
+}
+
+.leftMenudiv .chatItem .itemconverright {
+    float: left;
+    width: 240px
+}
+
+.leftMenudiv .chatItem .lastName,.leftMenudiv .chatItem .jobtitle {
+    color: #384560 !important;
+    width: 110px;
+    height: 18px;
+    line-height: 18px
+}
+
+.leftMenudiv .chatItem .deptName,.leftMenudiv .chatItem .subName,.leftMenudiv .chatItem .mobile {
+    color: #b4c2d5 !important;
+    width: 110px;
+    height: 18px;
+    line-height: 18px
+}
+
+.leftMenudiv .chatItem .latestTime {
+    color: #b4c2d5;
+    text-align: right
+}
+
+.leftMenudiv .chatItem .msgcontent {
+    color: #b4c2d5;
+    width: 200px
+}
+
+.leftMenudiv .chatItem .targetName {
+    color: #384560;
+    width: 180px
+}
+
+.leftMenudiv .chatItem .targetName .signatures{
+	color: #b4c2d5;
+	overflow: hidden;   
+    text-overflow:ellipsis;   
+    white-space: nowrap;
+    max-width:120px;
+    padding-left:5px;
+}
+
+.chatItem .itemcenter .lastName .name{
+	overflow: hidden;   
+    text-overflow:ellipsis;   
+    white-space: nowrap;
+    max-width:60px;
+    display:inline-block;  
+}
+
+.chatItem .itemcenter .lastName .signatures{
+	overflow: auto;
+	display:inline-block;  
+}
+
+.leftMenudiv .chatItem .groupName {
+    color: #384560;
+    height: 35px;
+    line-height: 35px
+}
+
+.leftMenudiv .chatItem .msgcount,.imLeftdiv .chatIMTabItem .msgcount {
+    text-align: center;
+    min-width: 13px;
+    padding: 0 4px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #FF4F00;
+    color: #fff;
+    line-height: 20px;
+    display: none
+}
+
+.imLeftdiv .chatIMTabItem .msgcount {
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    right: 5px
+}
+
+.imMainbox {
+	font-size: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 600px;
+    width: 1083px;
+    z-index: 101
+}
+
+.imMainbox .imLeftdiv {
+    background: #f4f9f8;
+    width: 130px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    border-right: 1px solid #e1e8f5;
+    display: none
+}
+
+.imMainbox .imCenterdiv {
+    height: 100%;
+    position: absolute;
+    left: 131px;
+    width: 650px;
+    top: 0;
+    display: none
+}
+
+.imMainbox .chatIMdivBox {
+    overflow: hidden;
+    z-index: 11;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    height: 600px
+}
+
+.imMainbox .imRightdiv {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 311px;
+    height: 600px;
+    background: #5cb5d8
+}
+
+.chatIMTabs .chatIMTabItem {
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+    cursor: pointer
+}
+
+.chatIMTabs .chatIMTabActiveItem {
+    background-color: #a7d6e8;
+    color: #394560
+}
+
+.chatIMTabs .chatIMTabItem .headicon {
+    margin-right: 5px;
+    float: left
+}
+
+.chatIMTabs .chatIMTabItem .targetName {
+    height: 28px;
+    line-height: 28px;
+    width: 85px;
+    float: left
+}
+
+.chatIMTabs .chatIMTabItem .tabClostBtn {
+    width: 16px;
+    height: 16px;
+    border-radius: 10px;
+    background: #708c96;
+    position: absolute;
+    right: 5px;
+    top: 13px;
+    text-align: center;
+    line-height: 12px;
+    color: #fff;
+    display: none
+}
+
+.chatIMTabs .chatIMTabItem .tabClostBtn:hover {
+    background: #a66666;
+    //fe4643 cursor: pointer
+}
+
+.chatIMTabs .chatIMTabItem:hover .tabClostBtn {
+    display: block
+}
+
+.chatIMTabs .chatIMTabItem:hover .msgcount {
+    display: none !important
+}
+
+.imMainbox .imCoseBtn {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer
+}
+
+.imMainbox .imCoseBtn:hover {
+    color: #fe4643
+}
+
+.imMainbox .addressTitle {
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    font-size: 15px
+}
+
+.imMainbox .imSearchdiv {
+    height: 35px;
+    background: #7cc3e0;
+    line-height: 35px;
+    padding-left: 15px;
+    border-bottom: 1px solid #7bc5df
+}
+
+.imMainbox .imSearchBtn {
+    height: 35px;
+    float: left;
+    width: 18px;
+    background: url('/social/images/im_search_wev8.png') no-repeat center center
+}
+
+.imMainbox .imInputdiv {
+    background: #7cc3e0;
+    color: #fff;
+    border: 0;
+    height: 25px;
+    line-height: 25px;
+    width: 216px;
+    overflow: visible;
+    font-size: 12px;
+}
+
+input::-ms-clear {
+    display: none
+}
+
+.imMainbox .defaultdiv {
+    left: 0;
+    width: 772px;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    background: #fff
+}
+
+.imMainbox .discussInfo {
+    position: absolute;
+    background-color: #fff;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    height: 55px;
+    padding-left: 5px;
+    padding-top: 10px;
+    display: none;
+    border-bottom: 1px solid #e3e6f0;
+    z-index: 11
+}
+
+.imMainbox .discussInfo .mitem {
+    width: 60px;
+    text-align: center;
+    float: left
+}
+
+.imMainbox .discussInfo .mname {
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #394560
+}
+
+.chatdiv .chattop .imSetting {
+    float: right;
+    background: url('/social/images/im_setting_wev8.png') no-repeat center center;
+    width: 20px;
+    height: 50px;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+    cursor: pointer;
+    margin-top:-5px;
+    margin-left:20px;
+}
+
+.hrmOrg span.department {
+    background: url(/images/treeimages/subCopany_Colse_wev8.gif) 0 center no-repeat
+}
+
+.IMbg {
+    position: absolute;
+    opacity: .4;
+    filter: alpha(opacity=40);
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    z-index: 100
+}
+
+.chatdiv .imtitle {
+    height: 24px;
+    line-height: 24px;
+    margin-left: 15px;
+    cursor: default
+}
+
+.chatdiv .imtitle span {
+    display: inline-block
+}
+
+.chatdiv .imtitle img {
+    vertical-align: sub;
+    display: none
+}
+
+.chatdiv .imtitle .imtitleName {
+    color: #5cb5d8;
+    cursor: pointer
+}
+.chatdiv .imtitle .imtitlePrivateBack{
+    color: #989494;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.chatdiv .imtitle .imtitleNameEllipsis {
+    overflow: hidden;   
+    text-overflow:ellipsis;   
+    white-space: nowrap;
+    max-width:60px
+}
+
+
+.chatdiv .imtitle .imtitleBlock {
+    position: absolute;
+    right: 0;
+    left: 215px;
+    height: 24px
+}
+
+.chatdiv .imtitle .contactPhone {
+    vertical-align: middle;
+    color: #798498;
+    height: 24px;
+    vertical-align:text-bottom;
+    line-height:18px;
+}
+
+.chatdiv .imtitle .contactPhone .deptEllipsis{
+    overflow: hidden;   
+    text-overflow:ellipsis;   
+    white-space: nowrap;
+    max-width:108px;
+    vertical-align:text-bottom;
+    line-height:initial
+}
+
+.chatdiv .imtitle .contactPhone .mobilephoneEllipsis{
+    overflow: hidden;   
+    text-overflow:ellipsis;   
+    white-space: nowrap;
+    max-width:100px;
+    vertical-align:text-bottom;
+    line-height:initial
+}
+
+.chatdiv .imtitle .contactPhone .mobilephoneEllipsis1{
+    overflow: hidden;   
+    text-overflow:ellipsis;   
+    white-space: nowrap;
+    max-width:300px;
+    vertical-align:text-bottom;
+    line-height:initial
+}
+
+.chatdiv .imtitle .contactPhone .fixphoneEllipsis1{
+    max-width:150px;
+    overflow: hidden;   
+    text-overflow:ellipsis;   
+    white-space: nowrap;
+    vertical-align:text-bottom;
+    line-height:initial;
+}
+
+.chatdiv .imtitle .contactPhone .fixphoneEllipsis2{
+    max-width:300px;
+    overflow: hidden;   
+    text-overflow:ellipsis;   
+    white-space: nowrap;
+    vertical-align:text-bottom;
+    line-height:initial;
+}
+
+.dept_hover {
+    color: #5cb5d8;
+    cursor: pointer
+}
+
+.chatdiv .chatIMtop {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 24px;
+    height: 40px;
+    border: 0;
+    border-bottom: 1px solid #e3e6f0;
+    border-top: 0;
+    z-index: 10000;
+    background: #fff
+}
+
+.chatdiv .chattop .chattabdiv .imchat {
+    background: url('/social/images/im/im_chat_wev8.png') no-repeat left center
+}
+
+.chatdiv .chattop .chattabdiv .imfile {
+    background: url('/social/images/im/im_file_wev8.png') no-repeat left center
+}
+
+.chatdiv .chattop .chattabdiv .imnote {
+    background: url('/social/images/im/im_note_wev8.png') no-repeat left center
+}
+.chatdiv .chattop .chattabdiv .imvote {
+    background: url('/social/images/icon_im_vote.png') no-repeat left center
+}
+.chatdiv .chattop .chatActiveTab .imchat {
+    background: url('/social/images/im/im_chat_h_wev8.png') no-repeat left center
+}
+
+.chatdiv .chattop .chatActiveTab .imfile {
+    background: url('/social/images/im/im_file_h_wev8.png') no-repeat left center
+}
+
+.chatdiv .chattop .chatActiveTab .imnote {
+    background: url('/social/images/im/im_note_h_wev8.png') no-repeat left center
+}
+.chatdiv .chattop .chatActiveTab .imvote {
+    background: url('/social/images/icon_im_h_vote.png') no-repeat left center
+}
+.chatdiv .chattop .chattab {
+    cursor: pointer;
+    margin-left: 15px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    padding-left: 30px
+}
+
+#searchResultListDiv {
+    position: relative;
+    background: #f4f9f8
+}
+
+.chatdiv .chatbottom .faceBox {
+    top: -185px
+}
+
+.chatdiv .chatbottom .faceBox span {
+    padding: 3px
+}
+
+.imSearchInputdiv {
+    background: #f4f9f8;
+    z-index: 999;
+    color: #242424;
+    border: 0;
+    width: 280px;
+    height: 36px;
+    line-height: 36px;
+    position: absolute;
+    left: 0
+}
+
+.imSearchClose {
+    position: absolute;
+    right: 0;
+    z-index: 999;
+    width: 18px;
+    height: 18px;
+    padding: 9px;
+    cursor: pointer
+}
+
+.imSearchList {
+    position: absolute;
+    z-index: 999;
+    top: 36px;
+    width: 294px;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto
+}
+
+.scroll-pane {
+    outline: 0
+}
+
+.jspPane {
+    position: inherit
+}
+
+.chatList .chatItemdiv .locationdiv {
+    width: 280px;
+    position: relative;
+    cursor: pointer
+}
+
+.chatList .chatItemdiv .locationdiv .locationimg {
+    width: 280px
+}
+
+.chatList .chatItemdiv .locationdiv .locationpoi {
+    position: absolute;
+    bottom: 0;
+    width: 280px;
+    background-color: #100101;
+    opacity: .5;
+    filter: alpha(opacity=50);
+    color: #fff;
+    height: 22px;
+    line-height: 22px
+}
+
+.chatNote .chatContent {
+    background: url("/social/images/group_notice_l_logo_wev8.png") no-repeat !important;
+    border: 1px solid #ffd181;
+    padding-top: 8px;
+    padding-top: 20px !important;
+    min-width: 150px
+}
+
+.chatNote .chatArrow {
+    background: url(/social/images/group_notice_l_arrow_wev8.png) no-repeat !important;
+    background-position: left top
+}
+
+.chatNote .chatContentdiv {
+    position: relative
+}
+
+.chatNote .chatContentdiv .chatnoteMark {
+    padding: 5px;
+    padding-left: 0;
+    color: #999;
+    text-align: left;
+    border-top: 1px solid #e3e6f0;
+    margin-top: 5px
+}
+
+.chatRItem .chatNote .chatContentdiv .chatnoteMark {
+    text-align: right
+}
+
+.chatLItem .chatNote .chatArrow {
+    background: url('../images/group_notice_l_arrow_wev8.png') no-repeat !important;
+    top: 24px !important;
+    z-index: 10
+}
+
+.chatRItem .chatNote .chatArrow {
+    background: url('../images/group_notice_r_arrow_wev8.png') no-repeat !important;
+    top: 24px !important;
+    z-index: 10
+}
+
+.chatLItem .chatNote .chatContent {
+    background: url('../images/group_notice_l_logo_wev8.png') no-repeat !important;
+    background-color: #fff !important;
+    background-position: right top !important;
+    padding-right: 15px !important
+}
+
+.chatRItem .chatNote .chatContent {
+    background: url('../images/group_notice_r_logo_wev8.png') no-repeat !important;
+    background-color: #fff !important;
+    background-position: left top !important;
+    padding-left: 15px !important
+}
+
+.chatLItem .chatNote .chatContentdiv .borderLayer {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: 0;
+    left: 0;
+    border-left: 1px solid #fff
+}
+
+.chatRItem .chatNote .chatContentdiv .borderLayer {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: 0;
+    right: 0;
+    border-right: 1px solid #fff
+}
+
+.noteJLink {
+    width: 46px;
+    cursor: pointer;
+    text-align: center
+}
+
+.chatItemdiv .chatVoice {
+    height: 24px;
+    width: 40px;
+    cursor: pointer
+}
+
+.chatList .chatItemdiv .chatLItem .chatVoiceTime {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 10px
+}
+
+.chatList .chatItemdiv .chatRItem .chatVoiceTime {
+    float: right;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 10px
+}
+
+.chatRItem .chatContent .chatVoice {
+    text-align: right
+}
+
+.chatLItem .chatContent .chatVoice {
+    text-align: left
+}
+
+.chatdiv .chattop .chatArrow {
+    position: absolute;
+    width: 17px;
+    height: 11px;
+    background: url('/social/images/chat_arrow_wev8.png');
+    top: 31px;
+    right: 128px
+}
+
+.chatList .chatItemdiv .chatLItem .chatHead {
+    margin-left: 5px
+}
+
+.noteList {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 59px;
+    background: #fff;
+    overflow: hidden;
+    z-index: 10;
+}
+.emessgevoteList {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 59px;
+    background: #fff;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.chatList .chatNotice {
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 8px
+}
+
+.chatList .chatNotice span {
+    text-align: center;
+    background: #edeff7;
+    text-align: center;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 30px;
+    line-height: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px
+}
+
+.chatContent .chatcontentimg {
+    cursor: pointer
+}
+
+.chatContent .chatcontentimg img {
+    max-width: 240px;
+    max-height: 240px
+}
+
+.sendtype .checkpane,.screenshot .checkpane {
+    width: 30px;
+    height: 30px;
+    background-color: #f2f2f2 !important;
+    margin-left: 0;
+    position: absolute;
+    z-index: -1
+}
+
+.chatoption .chatsendtip {
+    float: left;
+    padding-left: 20px;
+    margin-left: 10px;
+    background: url('/social/images/tip_info_wev8.png') no-repeat left center;
+    height: 40px;
+    line-height: 40px;
+    color: #b0bdd6
+}
+
+.chatoption .remindDownClient,
+.chatoption .quickreply {
+    height: 40px;
+    line-height: 40px;
+    color: #b0bdd6;
+    cursor: pointer
+}
+
+.chatoption .remindDownClient{
+	float: left;
+    margin-left: 30px;
+}
+
+.chatoption .quickreply {
+	position: absolute;
+    right: 102px;
+}
+
+.chatoption .remindDownClient:hover,
+.chatoption .quickreply:hover {
+    color: #5bb4d8;
+    text-decoration: underline;
+    cursor: pointer
+}
+
+#quickreplyDiv{
+	position: absolute;
+    z-index: 1000;
+    border: 1px solid #e6e6e6;
+    background: #fff;
+    bottom: 45px;
+    right: 376px;
+    width: 200px;
+    box-shadow: 0 0px 6px rgba(0,0,0,0.25);
+}
+
+#quickreplyDiv .headDiv{
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    padding: 0 8px;
+    background: #ededed;
+    overflow: hidden;
+    outline: none;
+}
+
+#quickreplyDiv .btnDiv{
+    width: 20px;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    background: url('/social/images/im_setting_wev8.png') no-repeat center center;
+    cursor: pointer;
+    float: right;
+}
+
+#quickreplyDiv .itemBlock {
+    font-size: 12px;
+    padding: 5px 15px;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+#quickreplyDiv .itemBlock:hover {
+	background: #dbeeff;
+}
+#quickreplyDiv .listDiv{
+	max-height: 131px;
+	width: 100%;
+}
+#quickreplyDiv .listDiv .noneText{
+	display: block;
+    text-align: center;
+    margin: 6px 0px;
+    color: #ECECEC;
+    font-size: 14px;
+}
+
+.sendtype span {
+    margin-left: 25px
+}
+.screenshot span{
+    margin-left: 25px
+}
+.chatSend .sendtypeSet {
+    float: left;
+    width: 30px;
+    height: 25px
+}
+
+.chatSend .down {
+    background: url('/social/images/arrow_down_wev8.png') no-repeat center center
+}
+
+.chatSend .up {
+    background: url('/social/images/arrow_up_wev8.png') no-repeat center center
+}
+
+.sendtype .active,.screenshot .active {
+    background: url("/social/images/sendtype_ok_wev8.png") no-repeat;
+    background-position: center center
+}
+
+.sendSplitLine {
+    float: left;
+    width: 1px;
+    height: 25px;
+    background: url('/social/images/send_split_line_wev8.png') no-repeat;
+    background-size: 1px 10px;
+    background-position: center center;
+    margin-left: 5px;
+    margin-right: -1px
+}
+
+.sendError {
+    text-align: right
+}
+
+.sendError img {
+    cursor: pointer
+}
+
+.sendError .resendwrap {
+    float: right;
+    width: 25px;
+    text-align: left;
+    display: inline-block;
+    position: relative;
+}
+
+.sendError .resendwrap .resendBtn {
+    width: 16px;
+    height: 16px;
+    border: 1px solid red;
+    display: block;
+    text-align: center;
+    background: red;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    line-height: 16px;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -9px;
+    margin-left: -9px;
+}
+
+.sendError .resendwrap .altText {
+    width: 15px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer
+}
+
+.imRightdiv .adddiscussDiv {
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    float: right;
+    color: #fff;
+    margin-top: 5px;
+    margin-right: 5px;
+    border-radius: 15px;
+    background: #7bc4e0 url('/social/images/im_add_group_wev8.png') no-repeat 10px center
+}
+
+.imRightdiv .adddiscussDiv:hover {
+    background: #80cceb url('/social/images/im_add_group_wev8.png') no-repeat 10px center
+}
+
+.imRightdiv .rightNavdiv {
+    margin-top: 5px;
+    margin-left: 6px;
+    width: 156px;
+    float: left
+}
+
+.imRightdiv .rightNavbox {
+    float: left;
+    width: 26px;
+    height: 26px;
+    cursor: pointer
+}
+
+.imRightdiv .menuNav {
+    background: url('/social/images/im/im_menu_wev8.png') no-repeat center
+}
+
+.imRightdiv .menuNav:hover {
+    background: url('/social/images/im/im_menu_h_wev8.png') no-repeat center
+}
+
+.imRightdiv .pcsettingNav {
+    background: url('/social/images/im/im_pcsetting_wev8.png') no-repeat center
+}
+
+.imRightdiv .pcsettingNav:hover {
+    background: url('/social/images/im/im_pcsetting_h_wev8.png') no-repeat center
+}
+
+.imRightdiv .bingNav {
+    background: url('/social/images/im_go_bing_wev8.png') no-repeat center
+}
+
+.imRightdiv .bingNav:hover {
+    background: url('/social/images/im_go_bing_hot_wev8.png') no-repeat center
+}
+
+.imRightdiv .favourateNav {
+    background: url('/social/images/im_go_favourate_wev8.png') no-repeat center
+}
+
+.imRightdiv .favourateNav:hover {
+    background: url('/social/images/im_go_favourate_hot_wev8.png') no-repeat center
+}
+
+.imRightdiv .chatrecNav {
+    background: url('/social/images/im/im_chatrecord_wev8.png') no-repeat center
+}
+
+.imRightdiv .chatrecNav:hover {
+    background: url('/social/images/im/im_chatrecord_h_wev8.png') no-repeat center
+}
+
+.imRightdiv .sysBroadcastNav {
+    background: url('/social/images/im/im_sysbroadcast_wev8.png') no-repeat center
+}
+.imRightdiv .sysBroadcastNav:hover {
+    background: url('/social/images/im/im_sysbroadcast_h_wev8.png') no-repeat center
+}
+
+.imRightdiv .privateChatNav {
+    background: url('/social/images/im_go_private_wev8.png') no-repeat center
+}
+.imRightdiv .privateChatNav:hover {
+    background: url('/social/images/im_go_private_hot_wev8.png') no-repeat center
+}
+
+.imRightdiv .rightNavbox:hover {
+    background-color: #7bc4e0
+}
+
+.rightMenudiv {
+    max-width: 120px;
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    background: #fff;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.rightMenuItem {
+    color: #666;
+    height: 25px;
+    line-height: 25px;
+    border: 1px solid silver;
+    padding: 0 6px;
+    cursor: pointer;
+    box-shadow: 1px 1px 2px 0 #ccc;
+    -webkit-box-shadow: 1px 1px 2px 0 #ccc;
+    -moz-box-shadow: 1px 1px 2px 0 #ccc
+}
+
+.rightMenuItem .rightMenuItemLayer {
+    background: #5cb5d8;
+    line-height: 23px;
+    padding: 0 5px;
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    text-align: center
+}
+
+.clearTopBorder {
+    border-top: 0
+}
+
+.hiddenLayer {
+    position: absolute;
+    z-index: 9999;
+    background: #fff;
+    display: none;
+    opacity: 1;
+    filter: alpha(opacity=100)
+}
+
+.chatRecord .accitem {
+    background-color: #fff;
+    position: relative
+}
+
+.chatRecord .accitem .accicon {
+    float: left;
+    height: 55px;
+    width: 50px
+}
+
+.chatRecord .accitem .accContent {
+    float: right;
+    padding: 5px
+}
+
+.chatRecord .accitem .sendok {
+    margin-top: 2px;
+    color: #727e96;
+    height: 20px
+}
+
+.chatRecord .accitem .filesize {
+    font-size: 13px;
+    color: #384560;
+}
+
+.chatRecord .accitem .filename {
+    font-size: 13px;
+    cursor: pointer;
+    color: #384560;
+}
+
+.chatRecord .accitem .filename:hover {
+    color: #018efb !important
+}
+
+.chatRecord .accitem .accline {
+    border-bottom: 1px solid #e3e5f1;
+    margin-top: 5px;
+    margin-bottom: 3px
+}
+
+.chatRecord .accitem .optiondiv {
+    height: 20px;
+    line-height: 20px;
+    text-align: right
+}
+
+.chatRecord .accitem .acccomplete {
+    background: url('/social/images/acc_complete_wev8.png') no-repeat center center;
+    float: left;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    border-radius: 30px
+}
+
+.chatRecord .accitem .accerror {
+    background: url('/social/images/acc_error_wev8.png') no-repeat center center;
+    float: left;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    border-radius: 30px
+}
+
+.acclist {
+    overflow-y: hidden;
+    outline: 0;
+    padding-left: 20px;
+    padding-right: 15px;
+    position: absolute;
+    top: 61px;
+    bottom: 0;
+    left: 0;
+    right: 0
+}
+
+.acclist .accitem {
+    height: 85px;
+    border-bottom: 1px solid #e0e8f5
+}
+
+.acclist .accitem .accicon {
+    float: left;
+    height: 85px;
+    width: 50px
+}
+
+.acclist .accitem .acccdiv {
+    float: left;
+    padding-top: 22px
+}
+
+.acclist .accitem .imDownload {
+    float: right;
+    margin-top: 25px;
+    width: 55px;
+    display: none
+}
+
+.acclist .accitem .fileSize {
+    color: #5c667f
+}
+
+.acclist .accitem .senderName {
+    color: #727e96
+}
+
+.acclist .accitem .fileCount {
+    color: #5ab4d7;
+    margin-left: 3px
+}
+
+.fileList .fileListTop {
+    height: 55px;
+    line-height: 55px;
+    border-bottom: 1px solid #e3e6f0
+}
+
+.fileList .fileListTop .fileCount {
+    color: #8f8f8f
+}
+
+.fileList .fileListTop .bSearchdiv {
+    display: table;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    border: 1px solid #e9e9e9;
+    background-color: #fff;
+    float: left;
+    margin: 12px
+}
+
+.fileList .fileListTop .bSearchdiv .keyword {
+    width: 198px !important;
+    height: 30px;
+    line-height: 30px;
+    border: 0;
+    padding: 0 5px
+}
+
+.fileList .fileListTop .bSearchdiv .input-group-btn {
+    display: table-cell;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 30px;
+    text-align: center;
+    background: url(/rdeploy/assets/img/cproj/searchbtn.png) center center no-repeat;
+    cursor: pointer
+}
+
+.fileList .accNoneBg {
+    width: 100%;
+    height: 68%;
+    margin: 0 auto;
+    background: url('/social/images/file_none_wev8.png') no-repeat center bottom
+}
+
+.fileList .accNoneCap {
+    width: 100%;
+    height: 32%;
+    margin: 0 auto;
+    color: #8f8f8f;
+    text-align: center
+}
+
+.chatList .chatItemdiv .textImgMsgItem {
+    cursor: pointer
+}
+
+.textImgMsgItem .content {
+    display: table;
+    padding: 7px;
+    background: #FFF
+}
+
+.textImgMsgItem .imgcot {
+    display: table-cell;
+    vertical-align: middle;
+    width: 45px;
+    height: 45px;
+    background: #3497f3;
+    text-align: center;
+    border-radius: 3px;
+    line-height: 9px
+}
+
+.textImgMsgItem .imgcot img {
+    max-width: 45px;
+    max-height: 45px
+}
+
+.textImgMsgItem .textcot {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 9px;
+    max-width: 200px
+}
+
+.chatList .chatItemdiv .shareMsgItem .shareTitle {
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+    padding-left: 25px;
+    color: #fff;
+    border-radius: 5px 5px 0 0;
+    text-align: left
+}
+
+.chatList .chatItemdiv .shareMsgItem .sharewf {
+    background: #3597f1 url('/social/images/im_share_wf_wev8.png') no-repeat 5px center
+}
+
+.chatList .chatItemdiv .shareMsgItem .sharedoc {
+    background: #3597f1 url('/social/images/im_share_doc_wev8.png') no-repeat 5px center
+}
+
+.chatList .chatItemdiv .shareMsgItem .sharecrm {
+    background: #3597f1 url('/social/images/im_share_crm_wev8.png') no-repeat 5px center
+}
+
+.chatList .chatItemdiv .shareMsgItem .shareDetail {
+    padding: 5px;
+    text-align: right;
+    color: #676767;
+    cursor: pointer;
+    padding-bottom: 0
+}
+.chatList .chatItemdiv .voteMsgItem .voteMsgDetail:hover,
+.chatList .chatItemdiv .shareMsgItem .shareDetail:hover {
+    color: #3598f0
+}
+
+.chatList .chatItemdiv .chatRItem .chatShare .chatArrow {
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-left: 12px solid #3597f1;
+    border-bottom: 6px solid transparent;
+    position: absolute;
+    right: 0;
+    background: 0
+}
+
+.chatList .chatItemdiv .chatLItem .chatShare .chatArrow {
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-right: 12px solid #3597f1;
+    border-bottom: 6px solid transparent;
+    position: absolute;
+    left: 0;
+    background: 0
+}
+
+.chatList .chatItemdiv .taskMsgItem .taskMsgTitle {
+    background: #f4b723 url("/rdeploy/im/img/chat_title_task_wev8.png") no-repeat 5px center;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 25px;
+    color: #fff;
+    border-radius: 5px 5px 0 0;
+    text-align: left
+}
+
+.chatList .chatItemdiv .taskMsgItem .taskComplete {
+    width: 56px;
+    height: 25px;
+    border: 1px solid #e6e6e6;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 25px;
+    color: #5cb5d8;
+    border-radius: 3px;
+    cursor: pointer
+}
+
+.chatList .chatItemdiv .taskMsgItem .taskComplete:hover {
+    background: #4ba9df;
+    color: #FFF
+}
+
+.chatList .chatItemdiv .taskMsgItem .taskCompleted {
+    background: url("/rdeploy/im/img/task_completed_wev8.png") no-repeat center left;
+    text-align: right;
+    margin: 0 auto;
+    width: 58px;
+    line-height: 25px;
+    height: 25px
+}
+
+.chatList .chatItemdiv .taskMsgItem .taskDelete {
+    background: url("/rdeploy/im/img/task_deleted_wev8.png") no-repeat center left;
+    text-align: right;
+    margin: 0 auto;
+    width: 93px;
+    line-height: 25px;
+    height: 25px
+}
+
+.chatList .chatItemdiv .chatRItem .chatTask .chatArrow {
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-left: 12px solid #f4b723;
+    border-bottom: 6px solid transparent;
+    position: absolute;
+    right: 0;
+    background: 0
+}
+
+.chatList .chatItemdiv .chatLItem .chatTask .chatArrow {
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-right: 12px solid #f4b723;
+    border-bottom: 6px solid transparent;
+    position: absolute;
+    left: 0;
+    background: 0
+}
+
+.chatList .chatItemdiv .taskMsgItem .taskMsgDetail {
+    padding: 5px;
+    padding-bottom: 0
+}
+/*------voteMsgcss start-----*/
+.chatList .chatItemdiv .voteMsgItem .sharevote {
+    background: #9999ff url('/social/images/im_share_vote_wev8.png') no-repeat 5px center
+}
+
+.chatList .chatItemdiv .chatLItem .chatVote .chatArrow {
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-right: 12px solid #9999ff;
+    border-bottom: 6px solid transparent;
+    position: absolute;
+    left: 0;
+    background: 0
+}
+.chatList .chatItemdiv .chatRItem .chatVote .chatArrow {
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-left: 12px solid #9999ff;
+    border-bottom: 6px solid transparent;
+    position: absolute;
+    right: 0;
+    background: 0
+}
+.chatList .chatItemdiv .voteMsgItem .voteMsgTitle {
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+    padding-left: 25px;
+    color: #fff;
+    border-radius: 5px 5px 0 0;
+    text-align: left
+}
+.chatList .chatItemdiv .voteMsgItem .accline {
+    border-bottom: 1px solid #e3e5f1;
+    margin-top: 63px;
+}
+.chatList .chatItemdiv .voteMsgItem .accicon {
+    float: left;
+    height: 54px;
+    width: 54px;
+    margin-top: 4px;
+}
+.chatList .chatItemdiv .voteMsgItem .voteImg {
+    border-radius: 4px;
+    height: 42px;
+    width: 40px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.chatList .chatItemdiv .voteMsgItem .voteMsgContent .voteMsgDeadline {
+    color: #a5a5a5;
+    margin-top: 5px;
+}
+.chatList .chatItemdiv .voteMsgItem .voteMsgContent .voteDetail {
+    color: #333333;
+    margin-top: 8px;
+    font-size: 16px;
+}
+.chatList .chatItemdiv .voteMsgItem .voteMsgDetail{
+    padding: 5px;
+    text-align: right;
+    color: #676767;
+    cursor: pointer;
+    padding-bottom: 5px;
+}
+/*------voteMsgcss end-----*/
+.chatItemdiv .chatCard .chatContent {
+    border: 1px solid #5bb4d8;
+    padding-top: 8px;
+    min-width: 150px
+}
+
+.chatCard .chatContentdiv {
+    position: relative
+}
+
+.chatCard .chatContentdiv .chatCardInfo {
+    padding: 5px;
+    padding-left: 0;
+    color: #999;
+    text-align: left;
+    border-top: 1px solid #e3e6f0;
+    margin-top: 5px;
+    padding-top: 10px
+}
+
+.chatCard .chatContentdiv .chatCardInfo .hrmName {
+    color: #384560;
+    cursor: pointer
+}
+
+.chatRItem .chatCard .chatContentdiv .chatnoteMark {
+    text-align: right
+}
+
+.chatList .chatItemdiv .chatCard .chatArrow {
+    width: 12px;
+    height: 7px;
+    line-height: 7px;
+    position: absolute;
+    top: 24px;
+    z-index: 1;
+    background-color: #fff;
+    color: #3597f1;
+    font-size: 17px;
+    background-image: none
+}
+
+.chatList .chatItemdiv .chatLItem .chatCard .chatArrow {
+    left: 0
+}
+
+.chatList .chatItemdiv .chatRItem .chatCard .chatArrow {
+    right: 0
+}
+
+.chatLItem .chatCard .chatContent {
+    background-color: #fff !important;
+    background-position: right top !important
+}
+
+.chatRItem .chatCard .chatContent {
+    background-color: #fff !important;
+    background-position: left top !important
+}
+
+.imMainbox .imSlideDiv {
+    border: 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+    display: none;
+    width: 0;
+    height: 600px;
+    position: absolute;
+    z-index: 9995;
+    right: 281px;
+    top: 0;
+    background-color: #fff;
+    font-size: 12px
+}
+
+.imMainbox .imDiscussSetting .dsTitle {
+    background: #5cb5d8
+}
+
+.imMainbox .imDiscussSetting .dsBody {
+    background-color: #f4f9f8
+}
+
+.console-error-level .console-message-text {
+    color: red
+}
+
+.console-warning-level .console-message-text {
+    color: orange
+}
+
+.console-log-level .console-message-text {
+    color: green
+}
+
+.hrmecho {
+    cursor: pointer;
+    text-decoration: none !important;
+    margin-right: 8px !important;
+    white-space: nowrap;
+}
+
+.uploadProcess .fileProgress img {
+    height: 2px !important
+}
+
+.chatFloatmenu {
+    color: #FFF;
+    background: #8e9598;
+    height: 30px;
+    border-radius: 3px;
+    display: table-row;
+    position: absolute;
+    bottom: 3px;
+    z-index: 1;
+    min-width: 50px
+}
+
+.chatFloatmenuWrap {
+    max-width: 250px;
+    min-width: 50px;
+    height: 36px;
+    position: absolute;
+    z-index: 9999;
+    font-size: 12px;
+    display: none
+}
+
+.chatFloatmenu .floatmenuItem {
+    display: table-cell;
+    width: 50px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    position: relative
+}
+
+.chatFloatmenu .floatmenuItem:hover {
+    background: #798184;
+    border-radius: 3px
+}
+
+.chatFloatmenu .lastItem {
+    border-bottom: none !important
+}
+
+.chatFloatmenu .imFloatSubMenu {
+    width: 125px;
+    border: 1px solid #e4e4e4;
+    border-radius: 3px;
+    background: #FFF;
+    color: #3c4350;
+    margin-top: 3px;
+    display: none;
+    float: right
+}
+
+.chatFloatmenu .imFloatSubMenu .floatSubMenuItem {
+    height: 45px;
+    border-bottom: 1px solid #e4e4e4;
+    cursor: pointer;
+    line-height: 45px;
+    text-align: left;
+    padding: 0 10px
+}
+
+.chatFloatmenu .imFloatSubMenu .floatSubMenuItem span {
+    margin-left: 10px;
+    vertical-align: middle
+}
+
+.chatFloatmenu .imFloatSubMenu .floatSubMenuItem img {
+    vertical-align: middle
+}
+
+.chatFloatmenu .imFloatSubMenu .floatSubMenuItem:hover {
+    background: #f0fbff
+}
+
+.chatFloatmenu .rightSplit {
+    width: 1px;
+    height: 12px;
+    background: #a5aaad;
+    position: absolute;
+    right: 0;
+    top: 9px
+}
+
+.chatgroupmsg_bottom{
+    position: relative;
+    bottom: 72px;
+    z-index: 1;
+    width: 100%;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    background-color: #D6E8F9;
+}
+
+#relatedMsgdiv {
+    position: absolute;
+    top: 65px;
+    z-index: 1;
+    width: 100%;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    background-color: #d6e8f9;
+    display: none
+}
+
+#relatedMsgdiv .relatedContent,.chatgroupmsg_bottom .relatedContent {
+    float: left;
+    margin-left: 10px;
+    word-break: break-all;
+    max-width: 460px
+}
+
+#relatedMsgdiv .relatedHead, .chatgroupmsg_bottom .relatedHead {
+    float: left;
+    margin-left: 15px;
+    margin-top: 1px
+}
+
+.chatWinFloatMsgdiv {
+    margin-top: 42px;
+    width: 100%;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    background-color: #d6e8f9;
+    box-shadow: 0 0 7px 0 rgba(0,0,0,0.25);
+    display: none
+}
+
+.chatWinFloatMsgdiv .msgContent {
+    float: left;
+    margin-left: 10px;
+    word-break: break-all;
+    max-width: 460px;
+    height: 20px;
+    line-height: 20px
+}
+
+.chatWinFloatMsgdiv .levelType {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-left: 12px;
+    background: url("/social/images/public/notice_normal_wev8.png") center center no-repeat
+}
+
+.chatWinFloatMsgdiv .error {
+    background: url("/social/images/public/notice_err_wev8.png") center center no-repeat
+}
+
+.chatWinFloatMsgdiv .warn {
+    background: url("/social/images/public/notice_warn_wev8.png") center center no-repeat
+}
+
+.btn-radius-small {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    border-radius: 9px;
+    color: #fff;
+    background: #5cb5d8
+}
+
+#atMessage{
+	width: 100px;
+	height: 30px;
+	background: #ffffff;
+	position: absolute;
+	z-index: 1092;
+	display: none;
+	border: 1px solid #ccc;
+	overflow: auto;
+	margin: auto;
+	box-shadow: 1px 1px 2px 0 #ccc;
+	-webkit-box-shadow: 1px 1px 2px 0 #ccc;
+	-moz-box-shadow: 1px 1px 2px 0 #ccc;
+}
+
+#atName{
+	font-size: 12px;
+	color: #394560;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	max-width: 90px;
+	max-height: 30px;
+	text-align: center;
+	line-height: 30px;
+}
+
+#imSignaturesTitle{
+	max-width:276px;
+	max-height:55px;
+	background: #ffffff;
+	position: absolute;
+    z-index: 1090;
+    display: none;
+    border: 1px solid #ccc;
+    overflow: auto;
+    margin: auto;
+    box-shadow: 1px 1px 2px 0 #ccc;
+    -webkit-box-shadow: 1px 1px 2px 0 #ccc;
+    -moz-box-shadow: 1px 1px 2px 0 #ccc;
+    font-size: 12px;
+}
+
+#imSignaturesTitle > #signTitle{
+	color:#78808f;
+	padding-top: 12px;
+	padding-bottom: 13px;
+	/*text-align: center;*/
+	padding-left:12px;
+	padding-right:12px;
+}
+
+#imSignaturesMessage{
+	width:298px;
+	height:129px;
+	background: #ffffff;
+	position: absolute;
+    z-index: 1100;
+    display: none;
+    border: 1px solid #ccc;
+    overflow: auto;
+    margin: auto;
+    box-shadow: 1px 1px 2px 0 #ccc;
+    -webkit-box-shadow: 1px 1px 2px 0 #ccc;
+    -moz-box-shadow: 1px 1px 2px 0 #ccc;
+}
+
+.imPic{
+	width:100px;
+	height:100px;
+	-webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+#imToken{
+	display:inline-block;
+	padding-top: 14px;
+	padding-left: 16px;
+	padding-bottom: 14px;
+}
+
+#imMessage{
+	display:inline-block;
+	padding-left: 18px;
+	vertical-align: top;
+	padding-top: 20px;
+	font-size: 12px;
+}
+
+#imName{
+	font-size: large;
+	color: #394560;
+	overflow: hidden;   
+    text-overflow:ellipsis;   
+    white-space: nowrap;
+    max-width:150px;
+}
+
+#imJob{
+	color: #394560;
+	padding-top: 5px;
+	overflow: hidden;   
+    text-overflow:ellipsis;   
+    white-space: nowrap;
+    max-width:150px;
+}
+
+#imPhone{
+	color: #394560;
+	display:inline-block;
+	overflow: hidden;   
+    text-overflow:ellipsis;   
+    white-space: nowrap;
+    max-width:120px;
+}
+
+#imSign{
+	padding-top:3px;
+	color:#969696;
+	width:155px;
+}
+
+#userMiniCard {
+    position: absolute;
+    z-index: 1001;
+    display: none;
+    background: white;
+    width: 160px;
+    height: 60px;
+    border: 1px solid #ccc;
+    overflow: auto;
+    margin: auto;
+    box-shadow: 1px 1px 2px 0 #ccc;
+    -webkit-box-shadow: 1px 1px 2px 0 #ccc;
+    -moz-box-shadow: 1px 1px 2px 0 #ccc
+}
+
+#userMiniCard .userMiniCardTable {
+    width: 150px;
+    height: 60px;
+    vertical-align: middle;
+    margin: auto;
+    table-layout: fixed
+}
+
+#userMiniCard #userMiniCardName {
+    word-break: break-all;
+    color: #242424;
+    font-size: 12px
+}
+
+#userMiniCard #userMiniCardJob {
+    color: #b4c2d5 !important;
+    font-size: 12px
+}
+
+#userMiniCard #userMiniCardMobilephone {
+    color: #b4c2d5 !important;
+    font-size: 12px
+}
+
+.userStatusPanel{
+	/*width:100px;
+    background: white;
+    box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.25);
+    border-radius: 6px;
+    display: none;
+    position: relative;
+    z-index: 1000;
+    margin-top: 56px;
+    margin-left: 10px;*/
+    position:absolute;
+    /*overflow:hidden;*/
+    display:none;
+    margin-top: 56px;
+}
+
+.userStatusPanel .arrow
+{
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #f4f9f8;
+    /* box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.25); */
+    width: 0;
+    height:0;
+    position:absolute;
+    z-index: 1300;
+    margin-top: -6px;
+    margin-left: 30px;
+}
+
+.userStatusPanelList{
+    background: white;
+    box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.25);
+    border-radius: 6px;
+    position: relative;
+    z-index: 1000;
+    width: 100px;
+    border-radius:6px;
+    -moz-border-radius: 6px;
+    font-size: 12px;
+}
+
+.userStatusPanel .userStatusPanelList > li{
+    height: 20px;
+    list-style: none;
+    width:85px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    border-radius:6px;
+}
+
+.userStatusPanel .userStatusPanelList > li:hover{background-color: #ededed;}
+
+#discussListNav{
+	position: absolute;
+    z-index: 1001;
+    display: none;
+	 -webkit-transition:all 0.3s ease-out;
+    -moz-transition:all 0.3s ease-out;
+    -o-transition:all 0.3s ease-out;
+    -webkit-box-shadow:2px 2px 4px #888;
+    -moz-box-shadow:2px 2px 4px #888;
+    -o-box-shadow:2px 2px 4px #888;
+}
+
+#discussListNav ul.nav{
+	width:140px;
+	background:white;
+	height:105px;
+}
+
+#discussListNav ul.nav li{
+	width: 140px;
+	height: 35px;
+	background:white;
+}
+
+#discussListNav ul.nav li:hover ul{background: rgba(6, 172, 236, 0.19) url() no-repeat;}
+
+#discussListNav ul.nav li a{
+    background:white url() no-repeat;color:#174867;
+	padding:7px 15px 7px 15px;
+	display:block;
+    -webkit-transition:all 0.3s ease-out;
+    -moz-transition:all 0.3s ease-out;
+    -o-transition:all 0.3s ease-out;
+    -webkit-box-shadow:2px 2px 4px #888;
+    -moz-box-shadow:2px 2px 4px #888;
+    -o-box-shadow:2px 2px 4px #888;
+	height:21px;
+}
+
+#discussListNav ul.nav li a:hover{background: rgba(6, 172, 236, 0.19) url() no-repeat;padding:7px 15px}
+
+.text{
+  font-family:'微软雅黑 Regular', '微软雅黑';
+  font-weight:400;
+  font-style:normal;
+  font-size:12px;
+  color:#333333;
+  text-align:left;
+  line-height:normal;
+}
+
+.chatContent a:hover {
+	text-decoration: underline !important;
+	color: unset !important;
+}
+
+
+.accTempdivLayer {
+	position: absolute !important;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	opacity: .4;
+    filter: alpha(opacity=40);
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    line-height: 74px;
+    font-size: 16px;
+    
+}
+
+#atwho-container {
+	font-size: 12px;
+}

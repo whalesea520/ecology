@@ -1,0 +1,161 @@
+/* 样式覆盖调整 */
+.wea-new-top-req-wapper {
+  height: 100%;
+  padding-top: 70px;
+  position: relative;
+  .wea-new-top-req {
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #eaeaea;
+    position: absolute;
+    top: 0;
+    left: 0;
+    // 进度条
+    .ant-progress.ant-progress-line,
+    .ant-progress.ant-progress-line>div,
+    .ant-progress.ant-progress-line .ant-progress-outer{
+      line-height:0;
+    }
+    .ant-progress.ant-progress-line{
+      position: absolute;
+      top: -1px;
+      left: 0;
+      z-index: 999;
+    }
+    .ant-progress.ant-progress-line.ant-progress-status-active .ant-progress-bg:before{
+      background: #2db7f5;
+    }
+    // btn
+    .ant-btn{
+      border-radius: 2px;
+      &[disabled],
+      &[disabled]:hover{
+        background-color: #d9d9d9;
+        color: #fff;
+      }
+    }
+    .icon-button.wea-new-top-req-btn-clicked{
+      color:#0077d1;
+    }
+    .wea-new-top-req-drop-btn{
+      display: inline-block;
+      height: 40px;
+      padding: 0 14px 0 20px;
+      line-height: 46px;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+    .wea-new-top-req-drop-menu {
+      max-width: 200px;
+      position: absolute;
+      right: 0;
+      top: 42px;
+      border: 1px solid #dadada;
+      box-shadow: 0 0 2px #dadada;
+      z-index: 1000;
+      box-sizing: border-box;
+      .wea-new-top-req-drop-btn{
+        display: block;
+        height: 40px;
+        line-height: 37px;
+        position: absolute;
+        right: 0;
+        top: -40px;
+        padding: 0 13px;
+        border: 1px solid #dadada;
+        border-bottom: 0;
+        box-shadow: 0px -1px 2px -1px #dadada;
+        background-color: #fff;
+        box-sizing: border-box;
+      }
+    }
+    // main
+    &-main {
+      padding: 6px 0 0 80px;
+      position: relative;
+      height: 70px;
+      padding-left: 65px;
+      padding-top: 13px;
+      .wea-new-top-req-icon {
+        position: absolute;
+        width: 40px;
+        left: 24px;
+        top: 15px;
+        .icon-circle-base {
+          color: #fff;
+          margin: 0;
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          font-size: 22px;
+        }
+      }
+      .wea-new-top-req-title-text {
+        padding-left: 8px;
+        font-weight: 500;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 14px;
+        line-height: 20px;
+        height: 20px;
+        color: #333;
+        &>span {
+          vertical-align: middle;
+        }
+      }
+    }
+    &-title {
+      line-height: 35px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      .ant-tabs-bar {
+        margin-bottom: 0px;
+        border-bottom: none;
+      }
+      .ant-tabs {
+        &-nav {
+          .ant-tabs-tab {
+            margin-top: 1px;
+            &-inner {
+              color: #484848;
+              font-size: 12px;
+              line-height: 1;
+              height: auto;
+              padding: 13px 8px 14px;
+              &:hover {
+                color: #484848;
+              }
+            }
+          }
+          .ant-tabs-tab-active {
+            .ant-tabs-tab-inner {
+              color: #67aff7;
+            }
+          }
+        }
+        &-ink-bar {
+          color: #67aff7;
+          height: 2px;
+          bottom: 2px;
+        }
+      }
+      &>div {
+        width: auto;
+        &:last-child {
+          position: absolute;
+          right: 0;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+  .wea-new-top-req-content {
+    width: 100%;
+    overflow: auto;
+    background-color: #f1f1f1;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}

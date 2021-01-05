@@ -1,0 +1,310 @@
+body{
+	background-color: #d4d4d4;
+	FONT-FAMILY: 微软雅黑;
+	FONT-SIZE: 9pt; 
+	MARGIN: 0px; 
+}
+
+#content{
+	margin-top:2px;
+	margin-left:10px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+	width:100%;
+	height:100%;
+}
+
+#left{
+	float:left;
+	width:65%;
+	height:100%;
+}
+
+.debug{
+	cursor:pointer;
+	padding-top:8px;
+	font-size:12pt;
+}
+
+#right{
+	float:right;
+	width:33%;
+	height:100%;
+}
+
+.imgTxt{
+	vertical-align:middle;
+}
+
+tr,td{
+	vertical-align: middle;
+	font-size: 9pt;
+}
+
+.contentHead{
+	background-image:url(../images/t_left_wev8.png);
+	width:30px;
+	height:30px;
+}
+
+.contentCenter{
+	background-image:url(../images/t_center_wev8.png);
+	background-repeat:repeat;
+}
+
+.contentBottom{
+	background-image:url(../images/t_right_wev8.png);
+	width:30px;
+	height:30px;
+}
+
+.cLeft{
+	background-image:url(../images/c_left_wev8.png);
+	width:30px;
+}
+
+.cCenter{
+	background-image:url(../images/c_center_wev8.png);
+	background-repeate:repeat;
+}
+
+.cRight{
+	background-image:url(../images/c_right_wev8.png);
+	width:30px;
+}
+
+.btnStart{
+	background-image:url(../images/bg_start_wev8.png);
+	width:138px;
+	height:45px;
+	vertical-align:middle;
+}
+
+.btnPoint{
+	background-image:url(../images/group_btn_bg_wev8.png);
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	width:376px;
+	height:39px;
+	text-align:center;
+	padding-top:10px;
+}
+
+.downloadLeft{
+	background-image:url(../images/btn_center_left_wev8.png);
+	width:15px;
+	height:27px;
+}
+
+.downloadCenter{
+	background-image:url(../images/btn_center_cterbg_wev8.png);
+	background-repeat:repeat;
+	height:27px;
+}
+
+.downloadRight{
+	background-image:url(../images/btn_center_right_wev8.png);
+	width:15px;
+	height:27px;
+}
+
+.uploadL{
+	background-image:url(../images/search_left_wev8.png);
+	width:15px;
+	height:27px;
+}
+
+.uploadC{
+	background-image:url(../images/search_center_wev8.png);
+	background-repeat:repeat;
+	height:27px;
+}
+
+.uploadR{
+	background-image:url(../images/search_right_wev8.png);
+	width:62px;
+	height:27px;
+	display:none;
+}
+
+.btnUpload{
+	background-image:url(../images/btn_bg_import_wev8.png);
+	width:132px;
+	height:28px;
+	text-align:center;
+	vertical-align:middle;
+}
+
+.debugTL{
+	background-image:url(../images/log_t_left_wev8.png);
+	width:15px;
+	height:15px;
+}
+
+.debugTC{
+	background-image:url(../images/log_t_center_wev8.png);
+	background-repeat:repeat;
+}
+
+.debugTR{
+	background-image:url(../images/log_t_right_wev8.png);
+	width:15px;
+	height:15px;
+}
+
+.debugCL{
+	background-image:url(../images/log_c_left_wev8.png);
+	width:15px;
+	height:15px;
+}
+
+.debugCC{
+	background-image:url(../images/log_c_center_wev8.png);
+	background-repeat:repeat;
+}
+
+.debugCR{
+	background-image:url(../images/log_c_right_wev8.png);
+	width:15px;
+	height:15px;
+}
+
+.debugFL{
+	background-image:url(../images/log_f_left_wev8.png);
+	width:15px;
+	height:15px;
+}
+
+.debugFC{
+	background-image:url(../images/log_f_center_wev8.png);
+	background-repeat:repeat;
+}
+
+.debugFR{
+	background-image:url(../images/log_f_right_wev8.png);
+	width:15px;
+	height:15px;
+}
+
+.pointTL{
+	background-image:url(../images/bp_bg_t_left_wev8.png);
+	width:15px;
+	height:15px;
+}
+
+.pointTC{
+	background-image:url(../images/bp_bg_t_center_wev8.png);
+	background-repeat:repeat;
+}
+
+.pointTR{
+	background-image:url(../images/bp_bg_t_right_wev8.png);
+	width:15px;
+	height:15px;
+}
+
+.pointCL{
+	background-image:url(../images/bp_bg_c_left_wev8.png);
+	width:15px;
+	height:15px;
+}
+
+.pointCC{
+	background-image:url(../images/bp_bg_c_center_wev8.png);
+	background-repeat:repeat;
+	height:100%;
+}
+
+.pointCR{
+	background-image:url(../images/bp_bg_c_right_wev8.png);
+	width:15px;
+	height:15px;
+}
+
+.pointFL{
+	background-image:url(../images/bp_bg_f_left_wev8.png);
+	width:15px;
+	height:15px;
+}
+
+.pointFC{
+	background-image:url(../images/bp_bg_f_center_wev8.png);
+	background-repeat:repeat;
+}
+
+.pointFR{
+	background-image:url(../images/bp_bg_f_right_wev8.png);
+	width:15px;
+	height:15px;
+}
+
+.addPoint{
+	width:100%;
+	height:15px;
+	text-align:center;
+	color: #fff;
+	background-image:url(../images/log_t_center_wev8.png);
+	background-repeat:repeat;
+	cursor:pointer;
+}
+
+.pointList{
+	background-image:url(../images/btn_center_left_wev8.png);
+	width:15px;
+	height:27px;
+}
+
+.pointOper{
+	background-image:url(../images/btn_center_cterbg_wev8.png);
+	background-repeat:repeat;
+	height:27px;
+}
+
+.btnCR{
+	background-image:url(../images/btn_center_right_wev8.png);
+	width:15px;
+	height:27px;
+}
+
+.bodyFL{
+	background-image:url(../images/f_left_wev8.png);
+	width:30px;
+	height:30px;
+}
+
+.bodyFC{
+	background-image:url(../images/f_center_wev8.png);
+	background-repeat:repeat;
+}
+
+.bodyFR{
+	background-image:url(../images/f_right_wev8.png);
+	width:30px;
+	height:30px;
+}
+
+.btnImp{
+	cursor:pointer;
+	padding-top:4px;
+	color: #fff;
+}
+
+.scrollbar{
+	overflow:auto;
+	/*scrollbar-face-color: #EAEAEA;
+	scrollbar-shadow-color: #EAEAEA;
+	scrollbar-highlight-color: #EAEAEA;
+	scrollbar-3dlight-color: #EAEAEA;
+	scrollbar-darkshadow-color: #697074;
+	scrollbar-track-color: #F7F7F7;
+	scrollbar-arrow-color: #666666;*/
+}
+
+.output{
+	background-image:url(../images/log_c_center_wev8.png);
+	background-repeat:repeat;
+	color: #fff;
+	width:100%;
+	height:100%;
+	border:none;
+}

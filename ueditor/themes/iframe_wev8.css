@@ -1,0 +1,25 @@
+/*可以在这里添加你自己的css*/
+a{
+	color:#123885 !important;
+}
+a:hover{
+	color:red !important;
+	cursor: pointer;
+}
+a:visited{
+	color:red !important;
+	cursor: pointer;
+}
+td{
+  font-family: '微软雅黑';
+  font-size: 12px;
+}
+.wfsigntbl{
+  	border-spacing: 0px;
+  	font-size: 12px;
+}
+.wfsigntbl td{
+	border:#ccc solid 1px !important;
+	border-spacing: 0px;
+	font-size: 12px;
+}

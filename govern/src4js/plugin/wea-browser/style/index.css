@@ -1,0 +1,255 @@
+.wea-db-search .ant-select-selection {
+    border-radius: 0;
+    box-shadow: none !important;
+    min-height: 28px !important;
+}
+
+.wea-db-search .ant-select-selection:active {
+    box-shadow: none !important;
+}
+
+.wea-db-search .ant-select {
+    font-size: inherit;
+    color: inherit;
+}
+
+.wea-db-search .ant-btn {
+    background-color: #fff;
+    border-radius: 0;
+    border: none;
+    margin-right: 1px;
+}
+
+.wea-db-search .ant-select-selection--multiple .ant-select-selection__choice {
+    padding: 5px 0px 0 2px;
+    background-color: #fff;
+    line-height: initial !important;
+    height: initial !important;
+    margin-top: 0px;
+}
+
+.wea-db-search .ant-select-selection--multiple .ant-select-search--inline {
+    height: 20px !important;
+    line-height: 20px !important;
+    margin-top: 0px;
+    padding-top: 4px;
+    width: 2px;
+}
+
+.wea-db-single .ant-select-selection--multiple .ant-select-selection__choice {
+}
+
+.wea-db-single .ant-select-dropdown-menu.ant-select-dropdown-menu-vertical.ant-select-dropdown-menu-root{
+    display:none;
+}
+
+.wea-db-search.wea-db-single .ant-select-selection--multiple .ant-select-search--inline {
+    width: 0px;
+}
+
+.wea-db-search .ant-select-selection--multiple .ant-select-selection__choice__remove {
+    visibility: hidden;
+    right: -3px;
+    font-size: 12px !important;
+    top: 50%;
+    margin-top: -6px;
+    text-decoration: none;
+    position: static;
+    padding: 0;
+}
+
+.wea-db-search .ant-select-selection--multiple .ant-select-selection__choice:hover .ant-select-selection__choice__remove{
+    visibility: visible;
+}
+
+/* loading*/
+.wea-db-search .anticon-loading {
+    position: absolute;
+    top: 8px;
+    right: 29px;
+}
+
+.wea-db-search-mult .anticon-loading {
+    right: 36px !important;
+}
+
+.wea-hide-selected.ant-select-dropdown {
+    border: 0px solid transparent;
+}
+
+.wea-hide-selected .ant-select-dropdown-menu {
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+}
+
+.wea-hide-selected .ant-select-dropdown-menu-item-selected {
+    display: none;
+}
+
+.wea-hide-selected .ant-select-dropdown-menu.no-border {
+    border: none;
+}
+
+.wea-db-search {
+    position: relative;
+    padding-right: 20px;
+}
+
+.wea-db-search.wea-field-readonly {
+    padding-right: 0;
+}
+
+.wea-db-search .ant-select {
+    width: 100% !important;
+    display: block;
+}
+
+.wea-db-search .ant-input-group-wrap {
+    background-color: #fff;
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+}
+
+.wea-db-search .ant-input-group-wrap.custom {
+    width: 28px;
+    padding-left: 7px;
+}
+
+.wea-db-search.ext-btn {
+    padding-right: 40px;
+}
+
+.wea-db-search.ext-btn .ant-input-group-wrap {
+    right: 20px;
+}
+
+.wea-db-search.ext-btn.custom .ant-input-group-wrap {
+    right: 28px;
+}
+
+.wea-db-search .ant-input-group-wrap button {
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+}
+
+.wea-db-search.ext-btn .ant-input-group-wrap.extbtn {
+    right: 0;
+    background-color: #f4f4f4;
+    border-left: 1px solid #d9d9d9;
+    cursor: pointer;
+}
+
+.wea-db-search.ext-btn .ant-input-group-wrap.extbtn.hasAddGroup {
+    background-color: #fff;
+    border-left: none;
+}
+
+.wea-db-search.ext-btn .ant-input-group-wrap.extbtn .add-icon {
+    position: relative;
+    font-weight: bolder;
+}
+
+.wea-db-search.ext-btn .ant-input-group-wrap.extbtn .add-icon:before {
+    position: relative;
+    top: 7px;
+}
+
+.wea-db-search.ext-btn .ant-input-group-wrap.extbtn.hasAddGroup button {
+    color: #111;
+    height: 26px;
+    font-size: 13px;
+}
+
+.wea-db-search.ext-btn .ant-input-group-wrap.extbtn.hasAddGroup button[disabled] {
+    color: #ccc;
+}
+
+/*表单内输入框不居中问题*/
+.wea-db-search .ant-search-input.ant-input-group .ant-input:first-child,
+.wea-db-search .ant-search-input.ant-input-group .ant-select:first-child{
+    top: 0;
+}
+
+.wea-db-search .ant-input-group {
+    border-collapse: inherit;
+}
+.wea-db-search .ant-select-selection--multiple .ant-select-selection__rendered {
+    padding-left: 0;
+    padding-right: 2px;
+    padding-bottom: 0;
+}
+
+.wea-db-search.resize {
+    display: inline-block;
+    width: auto !important;
+    max-width: 100%;
+}
+
+.wea-db-search {
+    border: 1px solid #d9d9d9;
+}
+
+.wea-db-search .ant-select-selection__choice__content {
+    text-align: left;
+}
+
+.wea-db-search .ant-select-selection--multiple .ant-select-selection__choice {
+    margin-right: 0px;
+    max-width: 100%;
+}
+
+.wea-db-search .ant-select-selection {
+    border: none;
+}
+
+.wea-db-search.wea-db-single .ant-select{
+    position: static !important;
+}
+
+.wea-db-search.wea-db-single .ant-input-group-wrap {
+    vertical-align: top;
+}
+
+.wea-db-click .child-item {
+    color: #123885;
+}
+
+.wea-db-click .child-item:hover {
+    color: red;
+}
+
+.wea-db-click .ant-select-selection__choice__content .cursor-pointer {
+    color: #123885;
+}
+
+.wea-db-click .ant-select-selection__choice__content:hover .cursor-pointer {
+    color: red;
+}
+
+/* 折行的样式*/
+.wea-db-search .ant-select-selection--multiple .ant-select-selection__choice__content {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: initial;
+}
+
+.wea-db-search .ant-input-group-wrap i {
+    color: #b2b2b2;
+}
+
+.wea-db-search .hrmlistDom {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    left: -1px;
+    top: 0px;
+    color: transparent !important;
+}
+
+.wea-req-operate-group span {
+    font-size: 12px !important;
+}

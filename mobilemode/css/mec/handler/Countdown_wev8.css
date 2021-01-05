@@ -1,0 +1,164 @@
+.MADCD_Title{
+	border-bottom: 1px solid rgb(223, 223, 223);
+	font-size: 12px;
+	color: rgb(164, 169, 174);
+	font-weight: bold;
+	padding: 0px 0px 6px 10px;	
+	margin-bottom: 10px;
+}
+.MADCD_DataSource{
+	color: rgb(166, 167, 171);	
+}
+.MADCD_DataSource div{
+	margin-bottom: 4px;
+}
+.MADCD_DataSource .MADCD_DataSource_Label{
+	width: 60px;
+	display: inline-block;
+	text-align: right;
+	margin-right: 0px;	
+}
+.MADCD_DataSource .MADCD_DataSource_Label_style8{
+	width: 72px;
+}
+.MADCD_DataSource .MADCD_DataSource_Label1{
+	position: absolute;
+	top: 3px;
+	left: 0px;
+}
+.MADCD_DataSource .MADCD_DataSource_Label1_style8{
+	position: absolute;
+	top: 3px;
+	left: 0px;
+	width:80px;
+}
+.MADCD_Text{
+	-webkit-appearance: none;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+	-webkit-rtl-ordering: logical;
+	-webkit-user-select: text;
+	-webkit-writing-mode: horizontal-tb;
+	border: 1px solid rgb(223, 223, 223);
+	background-color: rgb(255, 255, 255);
+	border-image-outset: 0px;
+	border-image-repeat: stretch;
+	border-image-slice: 100%;
+	border-image-source: none;
+	border-image-width: 1;
+	box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+	box-sizing: border-box;
+	cursor: auto;
+	display: inline-block;
+	font-family: 'Microsoft Yahei',Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	height: 26px;
+	letter-spacing: normal;
+	line-height: 19px;
+	margin-bottom: 0px;
+	margin-left: 10px;
+	margin-right: 0px;
+	margin-top: 0px;
+	outline-color: rgb(0, 0, 255);
+	outline-style: none;
+	outline-width: 0px;
+	padding-bottom: 3px;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-top: 3px;
+	text-align: start;
+	text-indent: 7px;
+	text-shadow: none;
+	text-transform: none;
+	width: 205px;
+	word-spacing: 0px;
+	writing-mode: lr-tb;
+	zoom: 1;	
+}
+.MADCD_Text_style8{
+	margin-left:25px;
+}
+.MADCD_BaseInfo{
+	padding-left: 10px;
+	margin-bottom: 15px;
+	color: rgb(166, 167, 171);	
+}
+.MADCD_BaseInfo .MADCD_BaseInfo_Entry{
+	margin-bottom: 8px;	
+}
+.MADCD_BaseInfo .MADCD_BaseInfo_Entry_Label{
+	color: rgb(166,167,171);
+	padding-right: 8px;
+}
+.MADCD_Select{
+	border: 1px solid rgb(204, 204, 204);
+	height: 25px;
+	margin-left:10px;
+}
+.MADCD_Select_style8{
+	margin-left:15px;
+}
+.MADCD_BaseInfo .jNiceCheckbox{
+	margin-bottom: -2px;	
+}
+.MADCD_BaseInfo .cbboxEntry{
+	display: inline-block;position: relative;
+}
+.MADCD_BaseInfo .cbboxEntry1{
+	width: 80px;
+}
+.MADCD_BaseInfo .cbboxEntry2{
+	width: 98px;
+}
+.MADCD_BaseInfo .cbboxEntry_style8{
+	width: 200px;
+	display: block;
+}
+.MADCD_BaseInfo .cbboxLabel{
+	color: #999;font-size: 11px;position: absolute;top:2px;left:20px;
+}
+.actionContent{
+	
+}
+.MADCD_Textarea{
+	border: 1px solid rgb(223, 223, 223);
+	width: 335px;
+	height: 106px;
+	font-family: 'Microsoft Yahei',Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	overflow: auto;
+	padding: 5px;
+}
+
+.MADCD_Textarea_Focus{
+	border: 1px solid #5D9CEC;
+}
+
+.MADCD_Bottom{
+	padding: 5px 0px 0px 0px;
+	margin-bottom: 5px;		
+}
+.MADCD_SaveBtn{
+	background-color: rgb(107, 163, 237);
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	box-sizing: border-box;
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+	display: block;
+	font-family: 'Microsoft Yahei', Arial, sans-serif;
+	font-size: 14px;
+	height: 28px;
+	line-height: 28px;
+	margin: 0px;
+	text-align: center;
+	width: 100%
+	zoom: 1;	
+}
+.Design_Countdown_Tip{
+	color: #bbb;
+	font-size: 14px;
+	font-family: 'Microsoft Yahei',Arial, Helvetica, sans-serif;
+	padding: 9px 5px 9px 22px;	
+}

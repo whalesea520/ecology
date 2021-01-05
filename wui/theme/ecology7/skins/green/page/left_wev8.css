@@ -1,0 +1,28 @@
+.leftmenubottomnavtbl {
+    border-right : 1px solid #b6c19f!important;
+    border-bottom : 1px solid #b6c19f!important;
+    border-top : 1px solid #d1de5c!important;
+    border-left : 1px solid #b6c19f!important;
+}
+.leftmenubottomnavdiv {
+    border-top : 1px solid #b6c19f!important;
+}
+#drillcrumb {
+    border-right : 1px solid #b6c19f!important;
+    background : #b8cc44!important;
+    border-bottom : 1px solid #b6c19f!important;
+    border-top : 1px solid #d1de5c!important;
+    border-left : 1px solid #b6c19f!important;
+}
+.leftmenutopnavdiv {
+    border-top : 1px solid #b6c19f!important;
+}
+.leftMenuBottomNavDiv {
+    background : #b8cc44!important;
+}
+#leftmenu-bottom {
+    background-color : #ffffff!important;
+}
+#leftmenucontainer {
+    background : #dee1d8!important;
+}

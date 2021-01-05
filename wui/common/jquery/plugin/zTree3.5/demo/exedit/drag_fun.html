@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> ZTREE DEMO - copyNode / moveNode</TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../../css/demo.css" type="text/css">
+	<link rel="stylesheet" href="../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="../../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ztree.core-3.0.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ztree.excheck-3.0.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ztree.exedit-3.0.js"></script>
+	<SCRIPT LANGUAGE="JavaScript">
+		<!--
+		var setting = {
+			view: {
+				selectedMulti: false
+			},
+			edit: {
+				enable: true,
+				showRemoveBtn: false,
+				showRenameBtn: false
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			callback: {
+				beforeDrag: beforeDrag,
+				beforeClick: beforeClick
+			}
+		};
+
+		var zNodes =[
+			{ id:1, pId:0, name:"鐖惰妭鐐?", open:true},
+			{ id:11, pId:1, name:"鍙跺瓙鑺傜偣1"},
+			{ id:12, pId:1, name:"鍙跺瓙鑺傜偣2"},
+			{ id:13, pId:1, name:"鍙跺瓙鑺傜偣3"},
+			{ id:2, pId:0, name:"鐖惰妭鐐?", open:true},
+			{ id:21, pId:2, name:"鍙跺瓙鑺傜偣1"},
+			{ id:22, pId:2, name:"鍙跺瓙鑺傜偣2"},
+			{ id:23, pId:2, name:"鍙跺瓙鑺傜偣3"},
+			{ id:3, pId:0, name:"鐖惰妭鐐?", open:true },
+			{ id:31, pId:3, name:"鍙跺瓙鑺傜偣1"},
+			{ id:32, pId:3, name:"鍙跺瓙鑺傜偣2"},
+			{ id:33, pId:3, name:"鍙跺瓙鑺傜偣3"}
+		];
+
+		function fontCss(treeNode) {
+			var aObj = $("#" + treeNode.tId + "_a");
+			aObj.removeClass("copy").removeClass("cut");
+			if (treeNode === curSrcNode) {
+				if (curType == "copy") {
+					aObj.addClass(curType);
+				} else {
+					aObj.addClass(curType);
+				}			
+			}
+		}
+
+		function beforeDrag(treeId, treeNodes) {
+			return false;
+		}
+
+		function beforeClick(treeId, treeNode) {
+			return !treeNode.isCur;
+		}
+
+		var curSrcNode, curType;
+		function setCurSrcNode(treeNode) {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+			if (curSrcNode) {
+				delete curSrcNode.isCur;
+				var tmpNode = curSrcNode;
+				curSrcNode = null;
+				fontCss(tmpNode);
+			}
+			curSrcNode = treeNode;
+			if (!treeNode) return;
+
+			curSrcNode.isCur = true;			
+			zTree.cancelSelectedNode();
+			fontCss(curSrcNode);
+		}
+		function copy(e) {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			nodes = zTree.getSelectedNodes();
+			if (nodes.length == 0) {
+				alert("璇峰厛閫夋嫨涓€涓妭鐐?);
+				return;
+			}
+			curType = "copy";
+			setCurSrcNode(nodes[0]);
+		}
+		function cut(e) {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			nodes = zTree.getSelectedNodes();
+			if (nodes.length == 0) {
+				alert("璇峰厛閫夋嫨涓€涓妭鐐?);
+				return;
+			}
+			curType = "cut";
+			setCurSrcNode(nodes[0]);
+		}
+		function paste(e) {
+			if (!curSrcNode) {
+				alert("璇峰厛閫夋嫨涓€涓妭鐐硅繘琛?澶嶅埗 / 鍓垏");
+				return;
+			}
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			nodes = zTree.getSelectedNodes(),
+			targetNode = nodes.length>0? nodes[0]:null;
+			if (curSrcNode === targetNode) {
+				alert("涓嶈兘绉诲姩锛屾簮鑺傜偣 涓?鐩爣鑺傜偣鐩稿悓");
+				return;
+			} else if (curType === "cut" && ((!!targetNode && curSrcNode.parentTId === targetNode.tId) || (!targetNode && !curSrcNode.parentTId))) {
+				alert("涓嶈兘绉诲姩锛屾簮鑺傜偣 宸茬粡瀛樺湪浜?鐩爣鑺傜偣涓?);
+				return;
+			} else if (curType === "copy") {
+				targetNode = zTree.copyNode(targetNode, curSrcNode, "inner");
+			} else if (curType === "cut") {
+				targetNode = zTree.moveNode(targetNode, curSrcNode, "inner");
+				if (!targetNode) {
+					alert("鍓垏澶辫触锛屾簮鑺傜偣鏄洰鏍囪妭鐐圭殑鐖惰妭鐐?);
+				}
+				targetNode = curSrcNode;
+			}
+			setCurSrcNode();
+			delete targetNode.isCur;
+			zTree.selectNode(targetNode);
+		}
+		
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			$("#copy").bind("click", copy);
+			$("#cut").bind("click", cut);
+			$("#paste").bind("click", paste);
+		});
+		//-->
+	</SCRIPT>
+	<style type="text/css">
+.ztree li a.copy{padding-top:0; background-color:#316AC5; color:white; border:1px #316AC5 solid;}
+.ztree li a.cut{padding-top:0; background-color:silver; color:#111; border:1px #316AC5 dotted;}
+	</style>
+</HEAD>
+
+<BODY>
+<h1>鐢?zTree 鏂规硶 绉诲姩 / 澶嶅埗鑺傜偣</h1>
+<h6>[ 鏂囦欢璺緞锛歞emo/exedit/drag_fun.html ]</h6>
+<div class="content_wrap">
+	<div class="zTreeDemoBackground left">
+		<ul id="treeDemo" class="ztree"></ul>
+	</div>
+	<div class="right">
+		<ul class="info">
+			<li class="title"><h2>1銆乧opyNode / moveNode 鏂规硶鎿嶄綔璇存槑</h2>
+				<ul class="list">
+				<li>鍒╃敤 copyNode / moveNode 鏂规硶涔熷彲浠ュ疄鐜?澶嶅埗 / 绉诲姩 鑺傜偣鐨勭洰鐨勶紝杩欓噷绠€鍗曟紨绀轰娇鐢ㄦ柟娉?/li>
+				<li><p>瀵硅妭鐐硅繘琛?澶嶅埗 / 鍓垏锛岃瘯璇曠湅锛?br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;[ <a id="copy" href="#" title="澶嶅埗" onclick="return false;">澶嶅埗</a> ]
+					&nbsp;&nbsp;&nbsp;&nbsp;[ <a id="cut" href="#" title="鍓垏" onclick="return false;">鍓垏</a> ]
+					&nbsp;&nbsp;&nbsp;&nbsp;[ <a id="paste" href="#" title="绮樿创" onclick="return false;">绮樿创</a> ]</p>
+				<li class="highlight_red">浣跨敤 zTreeObj.copyNode / moveNode 鏂规硶锛岃缁嗚鍙傝 API 鏂囨。涓殑鐩稿叧鍐呭</li>
+				</ul>
+			</li>
+			<li class="title"><h2>2銆乻etting 閰嶇疆淇℃伅璇存槑</h2>
+				<ul class="list">
+				<li>鍚?"鎷栨嫿 鑺傜偣 鍩烘湰鎺у埗"</li>
+				</ul>
+			</li>
+			<li class="title"><h2>3銆乼reeNode 鑺傜偣鏁版嵁璇存槑</h2>
+				<ul class="list">
+				<li>鍚?"鎷栨嫿 鑺傜偣 鍩烘湰鎺у埗"</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+</BODY>
+</HTML>

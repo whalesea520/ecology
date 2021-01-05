@@ -1,0 +1,1 @@
+Ext.namespace("Ext.ux.layout");Ext.ux.layout.CardLayout=Ext.extend(Ext.layout.CardLayout,{setActiveItem:function(a){a=this.container.getComponent(a);if(this.activeItem!=a){if(this.activeItem){this.activeItem.hide()}if(this.activeItem&&!this.activeItem.hidden){return}this.activeItem=a;a.show();this.layout()}}});

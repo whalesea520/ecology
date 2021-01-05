@@ -1,0 +1,192 @@
+.detailtable_btn{
+	position: relative;
+    display: inline-block;
+    padding: 6px 12px;
+	margin-top: 8px;
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: top;
+    cursor: pointer;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+	float:right;
+	color: #fff;
+	background-color: #007aff;
+	border: 1px solid #007aff;
+}
+
+.Design_DetailTable_FormPanel{
+	margin-bottom:10px;
+	margin-top:10px;
+}
+.Design_DetailTable_DataCtrlBtns:after {
+  	content: "";
+  	display: block;
+  	clear: both;
+  	height: 0;
+}
+.Design_DetailTable_DataCtrlBtns .detailtable_btn:first-child{
+	margin-right:0;
+}
+.Design_DetailTable_DataCtrlBtns .detailtable_btn{
+    margin-right: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: #666;
+    color: #fff;
+    padding:3px 10px;
+	border: 1px solid #666;
+    cursor: pointer;
+}
+.Design_DetailTable_Datadetails{
+	border:1px solid #ddd;
+	padding-bottom:1px;
+	overflow-x: auto;
+	overflow-y:hidden;
+    -webkit-overflow-scrolling: touch;
+}
+.Design_DetailTable_Datadetails .DetailTable_ContentWrap{
+	overflow-y:auto;
+	overflow-x:hidden;
+	min-height:20px;
+}
+.Design_DetailTable_Datadetails .DetailTable_ContentWrap .Design_FFile_EntryBorder{
+	padding-right:0;
+}
+.Design_DetailTable_Datadetails .DetailTable_ContentWrap .Design_FPhoto_DeleteBtn,
+.Design_DetailTable_Datadetails .DetailTable_ContentWrap .Design_FFile_DeleteBtn{
+	display:none;
+}
+.Design_DetailTable_Datadetails table{
+	width:100%;
+	table-layout: fixed;
+    border-collapse: collapse;
+}
+.Design_DetailTable_Datadetails .DetailTable_Title{
+	color:#666;
+}
+
+.Design_DetailTable_Datadetails .dt_title_tr > td, .Design_DetailTable_Datadetails .dt_content_tr > td{
+	width:80px;
+	border: 1px solid #ddd;
+    padding: 8px 5px;
+    font-size:14px;
+    background-color: #e8e8e8;
+    word-break:break-all;
+}
+.Design_DetailTable_Datadetails .DetailTable_Content .dt_content_tr > td{
+	border: 1px solid #eee;
+    background-color:#fff;
+	color:#333;
+}
+.Design_DetailTable_Datadetails .DetailTable_Content .dt_content_tr:nth-child(odd) > td{
+	background-color:#fefefe;
+}
+.Design_DetailTable_Datadetails .DetailTable_Content .dt_content_tr.checked > td{
+	background-color:#f8f8f8;
+}
+.Design_DetailTable_Datadetails .DetailTable_Content .dt_content_tr:first-child td{
+	border-top:none;
+}
+.Design_DetailTable_Datadetails .DetailTable_Content .dt_content_tr:last-child td{
+	border-bottom:none;
+}
+.Design_DetailTable_Datadetails .dt_title_tr > td:first-child, .Design_DetailTable_Datadetails .dt_content_tr > td:first-child{
+	border-left:none;
+	text-align:center;
+	width:30px;
+}
+.Design_DetailTable_Datadetails .dt_title_tr > td:last-child, .Design_DetailTable_Datadetails .dt_content_tr > td:last-child{
+	border-right:none;
+}
+.Design_DetailTable_Datadetails .DetailTable_Title .dt_title_tr td{
+	text-align:center;
+	border-top:none;
+}
+.Design_DetailTable_Datadetails .DetailTable_Content .dt_content_tr td span.rowindex{
+	display:block;
+	text-align:center;
+}
+.Design_DetailTable_Datadetails .DetailTable_Content .dt_content_tr td:first-child i{
+	width: 14px;
+    height: 14px;
+    display: block;
+    margin: 0 auto;
+	background-size: 14px;
+    background-image: url(/mobilemode/images/mec/box_unchecked.png);
+}
+.Design_DetailTable_Datadetails .DetailTable_Content .dt_content_tr.checked td:first-child i{
+	background-image: url(/mobilemode/images/mec/box_checked.png);
+}
+.Design_DetailTable_AddDataPanel{
+	position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    z-index: 999999;
+	display: none;
+}
+.Design_DetailTable_AddDataPanel .Design_DetailTable_AddDataMask{
+	width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0;
+    -webkit-transition: opacity .282s ease-in-out;
+    transition: opacity .282s ease-in-out;
+}
+.Design_DetailTable_AddDataPanel .Design_DetailTable_AddDataMask.show{
+	opacity: 0.75;
+}
+.Design_DetailTable_AddDataPanel .Design_DetailTable_AddDataContent{
+	max-height: 80%;
+	overflow-y: auto;
+	position: absolute;
+	left: 0px;
+	bottom: 44px;
+	right: 0px;
+	background-color: #fff;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+.Design_DetailTable_AddDataPanel .Design_DetailTable_AddDataContent.hide{
+	/* -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0); */
+}
+.Design_DetailTable_AddDataPanel .Design_DetailTable_AddDataContent .detailtableform{
+	padding-right:15px;
+	padding-left: 15px;
+}
+.Design_DetailTable_AddDataPanel .Design_DetailTable_AddDataFooter{
+	position: absolute;
+	overflow: hidden;
+	height:44px;
+	left: 0px;
+	bottom: 0px;
+	width: 100%;
+	background: #fff;
+	border-top: 1px solid #e8e8e8;
+	box-shadow: 0 0 5px rgba(0,0,0,.1);
+}
+.Design_DetailTable_AddDataPanel .Design_DetailTable_AddDataFooter .detailtable_btn{
+	width:50%;
+	margin-top:0px;
+	margin-right:0px;
+	border-radius:0;
+	height:100%;
+}
+.Design_DetailTable_AddDataPanel .Design_DetailTable_AddDataFooter .detailtable_adddata_cancel_btn{
+	background-color: #bbb;
+    color: #fff;
+    border: 1px solid #bbb;
+}
+.Design_DetailTable_AddDataPanel .Design_DetailTable_AddDataFooter .detailtable_adddata_ok_btn{
+	background-color: #666;
+    color: #fff;
+    border: 1px solid #666;
+}

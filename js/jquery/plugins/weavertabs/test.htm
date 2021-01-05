@@ -1,0 +1,32 @@
+<SCRIPT language="javascript" src="/js/jquery/jquery_wev8.js"></script>
+<SCRIPT language="javascript" src="/js/jquery/plugins/weavertabs/jquery.weavertabs_wev8.js"></script>
+<link href="/js/jquery/plugins/weavertabs/weavertabs_wev8.css" type="text/css" rel=stylesheet>
+<div  class="weavertabs">
+	<table  class="weavertabs-nav" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td target="weavertabs-content-sub-1">内容</td>
+			<td target="weavertabs-content-sub-2">样式</td>
+			<td target="weavertabs-content-sub-3">共享</td>
+		</tr>
+	</table>	
+
+	<div  class="weavertabs-content">
+			<div id="weavertabs-content-sub-1">			
+				aaa
+			</div>
+			<div id="weavertabs-content-sub-2">
+				bbb
+			</div>
+			<div  id="weavertabs-content-sub-3">
+				cccc
+			</div>
+	</div>
+</div>
+
+<SCRIPT LANGUAGE="JavaScript">
+$(document).ready(function(){	
+	$(".weavertabs").weavertabs({selected:0,call:function(divId){
+		//alert(divId);
+	}});
+});
+</SCRIPT>

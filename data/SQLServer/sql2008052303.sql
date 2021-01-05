@@ -1,0 +1,2 @@
+drop trigger Tri_U_CptCapitalAssortment
+go

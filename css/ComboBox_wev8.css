@@ -1,0 +1,67 @@
+.combo-button {
+	cursor:			hand;
+	cursor:			pointer;	
+	height:			20px;
+	border:			1px solid rgb(120,172,255);
+	padding:		0;
+	background:		rgb(234,242,255);
+	width:			14px;
+	vertical-align:	baseline;
+	font-size:		8pt;
+	font-family:	Webdings, Marlett;
+}
+.combo-hilite {
+	cursor:			hand;
+	cursor:			pointer;
+	background:		rgb(234,242,255);
+	border:			1px solid rgb(120,172,255);
+	color:			black;
+	font-family:	verdana;
+	font-size:		9pt;
+}
+.combo-item   {
+	cursor:			hand;
+	cursor:			pointer;
+	background:		white;
+	border:			1px solid white;
+	color:			black;
+	font-family:	verdana;
+	font-size:		9pt;
+}
+
+.combo-input  {
+    BORDER-LEFT-STYLE: none;
+    BORDER-RIGHT-STYLE: none;
+    BORDER-TOP-STYLE: none ;
+    BORDER-BOTTOM: #000000 1px solid;
+	vertical-align:	baseline;
+}
+
+.combo-list table {
+	table-layout:	fixed;
+	width:			149px;
+}
+
+.combo-list {
+	border:				1px solid black;
+	background:			white;
+	padding:			1px;
+	width:  			149px;
+	
+    /*
+	height:				200px;
+	overflow:			auto;
+	overflow-x:			visible;
+	overflow-y:			auto;
+
+    scrollbar-base-color:		rgb(234,242,255);
+	scrollbar-highlight-color:	rgb(234,242,255);
+	scrollbar-3dlight-color:	rgb(120,172,255);
+	scrollbar-darkshadow-color:	rgb(120,172,255);
+	scrollbar-shadow-color:		rgb(234,242,255);
+	scrollbar-face-color:		rgb(234,242,255);
+    */
+    scrollbar-track-color:		white;
+	scrollbar-arrow-color:		black;
+
+}

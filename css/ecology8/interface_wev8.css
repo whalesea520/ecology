@@ -1,0 +1,66 @@
+.bgcolor-DDD9C3{
+	background-color:#DDD9C3;
+}
+
+.tdborder{
+	border:1px solid #F2F2F2;
+}
+
+.tab{
+	float:left; 
+	cursor:pointer;
+	width:150px;
+	height:35px;
+	vertical-align:middle;
+	line-height:35px;
+	text-align:center;
+}
+
+.boder-D8{
+	border-bottom: #D8D8D8 1px solid;
+}
+
+.unSelectTabColor{
+	color:#fff;
+	background-color:#BFBFBF;
+}
+
+.selectTabColor{
+	color:#000;
+	background-color:#fff;
+	border-top: #D8D8D8 1px solid;
+}
+
+.btnCustom{
+	height:35px !important;
+	width:150px;
+}
+
+.uploadDiv{
+	text-align:center;
+	height: 80px;
+	line-height:80px;
+}
+
+.msgSpan{
+	border-bottom:#D8D8D8 1px solid;
+}
+
+.msgDiv{
+	border-bottom:#D8D8D8 1px solid;
+}
+
+
+li{list-style:none;}
+
+.lia{ background:url(/images/ecology8/03a_wev8.gif) no-repeat center left;width:95px; height:23px; float:left;}
+.liCommon{
+	width:95px; height:23px; float:left;padding-left:6px;color:#666666; line-height:23px;text-align:left;
+}
+.lib{ background:url(/images/ecology8/04a_wev8.gif) no-repeat center left;}
+.lic{ background:url(/images/ecology8/04_wev8.gif) no-repeat center left;color:#fff;}
+.lid{ background:url(/images/ecology8/03_wev8.gif) no-repeat center left;width:95px; height:23px; float:left;}
+.c2{ width:400px; height:50px;margin:0 auto;}
+.c2 ul{
+	width:500px; 
+}

@@ -1,0 +1,37 @@
+var rMsg={
+	loadding:"正在登录聊天服务器...",
+	offline:"离线",
+	loginHere:"点击此处登录",
+	clickDownload:"请点此下载",
+	fileShareToYou:"此文件也同时共享给您",
+	sendFile:"发送了文件",
+	onlySaveOneDay:"此文件仅暂存服务器1天",
+	FlashVerErr:"Flash版本不对,不能传送文件！",
+	sendAccs:"发送文件",
+	err:{
+		authenticationFailed:"验证失败",
+		registerErr:"注册失败,请选择其它用户名！",
+		msgErr:"Messager服务器出错或此用户已在别处登录!",
+		errThenRetry:"服务器出错,请重试。"
+	},
+	autoSearchCompleteNotFound:"沒有搜索到相關人員!",
+	controlUserMessageHave:"您有",
+	controlUserMessageCount:"條聊天消息!",
+	controlUserQuit:"當前即時聊天在線，真的需要退出系統嗎？",
+	baseWindowCanNotBeEmpty:"不能為空！",
+	chatWindowJoinMeeting:"加入了會議！",
+	chatWindowLeaveMeeting:"離開了會議！",
+	chatWindowAdminCloseMeeting:"管理員已關閉此會議！",
+	messageWindowChatWith:"與",
+	messageWindowChat:"對話中",
+	messageWindowSend:"發送",
+	pageOnline:"在線",
+	pageMeetingRoomSet:"會議室設置",
+	pageSureToCloseMeeting:"確認要關閉會議",
+	
+	toolSendEmail:"發送郵件",
+	toolSendSMS:"發送短消息",
+	toolProp:"人員信息",
+	toolHistory:"消息歷史",
+	headIcon:"个人头像"
+}

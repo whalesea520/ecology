@@ -1,0 +1,183 @@
+.MADPB_Title {
+	border-bottom: 1px solid rgb(223, 223, 223);
+	color: rgb(164, 169, 174);
+	font-weight: bold;
+	padding: 0px 0px 6px 10px;	
+	margin-bottom: 10px;
+}
+.MADPB_BaseInfo {
+	padding-left: 10px;
+	margin-bottom: 15px;
+	color: rgb(166, 167, 171);
+}
+.MADPB_BaseInfo div {
+	margin-bottom: 5px;
+}
+.MADPB_FontColorContent,.MADPB_BGColorContent,.MADPB_CommonContent {
+	margin-bottom: 10px !important;
+	margin-right: 10px;
+	position: relative;
+}
+.MADPB_BaseInfo_Label {
+	width: 86px;
+	display: inline-block;
+	text-align: right;
+}
+.MADPB_BaseInfo_Label_style8{
+	width: 93px;
+	display: inline-block;
+	text-align: left;
+}
+.MADPB_Text {
+	width: 65px;
+	border: 1px solid #ccc;
+	height: 20px;
+	padding-left: 3px;
+}
+.MADPB_BGColorContent button,
+.MADPB_FontColorContent button {
+	border: 1px solid #ccc;
+	width: 20px;
+	height: 20px;
+	margin-left: 10px;
+	position: absolute;
+	top: 1px;
+	background-color: rgb(248, 248, 248);
+}
+.MADPB_BGColorContent_style8 button{
+	top: 2px;
+}
+.MADPB_FontColorContent_style8 button {
+	top: 2px;
+}
+.MADPB_Tip {
+	margin-left: 10px;
+}
+.MADPB_Tip_style8{
+	margin-left: 0px;
+	display:block;
+}
+.progressbar_btn_title {
+	position: relative;
+	border-bottom: 1px solid rgb(223, 223, 223);
+	font-weight: bold;
+	padding: 0px 0px 6px 0px;
+	margin-bottom: 10px !important;
+}
+.progressbar_color_title {
+	position: relative;
+	border-bottom: 1px solid rgb(223, 223, 223);
+	font-weight: bold;
+	padding: 0px 0px 6px 0px;
+	margin-bottom: 5px !important;
+}
+.MADPB_DataSource {
+	position: relative;
+	padding-left: 86px;
+}
+.MADPB_DataSource_Label {
+	width: 86px;
+	text-align: right;
+	position: absolute;
+	top: 3px;
+	left: 0px;
+}
+.MADPB_Select {
+	border: 1px solid #ccc;
+	height: 25px;
+}
+.MADPB_Textarea {
+	border: 1px solid #dfdfdf;
+	width: 318px;
+	height: 106px;
+	font-family: 'Microsoft Yahei',Arial,Helvetica,sans-serif;
+	font-size: 12px;
+	overflow: auto;
+	padding: 5px;
+}
+.progressbar_btn_add {
+	padding-left: 16px;
+	padding-right: 2px;
+	background: url('/mobilemode/images/blue_add_wev8.png') no-repeat left center;
+	color: #5d9cec;
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: normal;
+	position: absolute;
+	right: 0px;
+	bottom: 1px;
+}
+.progressbar_btn_content ul {
+	list-style: none;
+}
+.progressbar_btn_content ul input {
+	border: 1px solid #ccc;
+	height: 20px;
+	padding-left: 3px;
+}
+.progressbar_btn_content ul button {
+	border: 1px solid #ccc;
+	width: 20px;
+	height: 20px;
+	margin-left: 10px;
+}
+.progressbar_btn_content ul li table{
+	width: 100%;	
+	border-collapse: collapse;
+}
+.progressbar_btn_content ul li table td{
+	padding: 5px 0;
+	border-bottom: 1px dashed #ccc;
+}
+.progressbar_btn_content ul li table td.bemove{
+	background: url("/mobilemode/images/tr_move2_wev8.png") no-repeat;
+	background-position: left center;
+	cursor: move;
+}
+.pbparam_btn_del {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	background: url("/mobilemode/images/mec/lego_icon_d5b6388_wev8.png") no-repeat;
+	cursor: pointer;
+	margin-bottom: -2px;
+}
+.pbparam_btn_del {
+	background-position: -10px -12px;
+}
+.progressbar_btn_empty_tip {
+	color: #ccc;
+	font-size: 14px;
+	padding: 9px 5px 9px 10px;
+	border: 1px dashed #ccc;
+	display: none;
+}
+.MADPB_Bottom{
+	padding: 0px 9px 0px 9px;
+	margin-bottom: 5px;		
+}
+.MADPB_SaveBtn{
+	background-color: rgb(107, 163, 237);
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	box-sizing: border-box;
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+	display: block;
+	font-family: 'Microsoft Yahei', Arial, sans-serif;
+	font-size: 14px;
+	height: 28px;
+	line-height: 28px;
+	margin: 0px;
+	text-align: center;
+	width: 100%
+	zoom: 1;	
+}
+.Design_ProgressBar_Tip{
+	color: #bbb;
+	font-size: 14px;
+	font-family: 'Microsoft Yahei',Arial, Helvetica, sans-serif;
+	padding: 9px 5px 9px 22px;	
+}

@@ -1,0 +1,218 @@
+	
+	/*顶部菜单*/
+	.topMenuTitle *{
+		Font-Family:"微软雅黑" !important;
+	}
+	
+	/*顶部菜单*/
+	.topMenuTitle{
+		vertical-align:middle;
+		height:40px;
+		margin:0px;
+		width:100%;
+		border-bottom:1px solid #DADADA;
+		position:relative;
+		background-color:#F9F9F9;
+		z-index:2;
+	}
+	
+	#topTitle{
+		display:none;
+	}
+	
+	#tabDiv{
+		display:none;
+	}
+		
+
+	/*
+	 * 按钮
+	 */
+	.btn,.e8_btn,.e8_btn_top,.e8_btn_cancel,.e8_btn_submit{
+		border:0px;
+		cursor:pointer;
+		overflow:visible;
+	}
+	
+	.btn,.e8_btn,.e8_btn_cancel,.e8_btn_submit{
+		padding-left:18px !important;
+		padding-right:18px !important;
+		height:30px;
+		line-height:30px;
+	}
+	
+	.e8_btn_top{
+		padding-left:5px !important;
+		padding-right:5px !important;
+		height:23px;
+		line-height:23px;
+		color:#333333;
+		background-color:#F9F9F9;
+		vertical-align:middle;
+	}	
+	
+	/*常规按钮*/
+	.e8_btn,.e8_btn_submit{
+		background-color:#2597F0;
+		color:WHITE;
+	}
+	
+	/*取消按钮*/
+	.e8_btn_cancel{
+		background-color:#E4E4E4;
+		color:#117CD3;
+	}
+	
+	/*按钮-悬浮*/
+	.btn.btnHover,.e8_btn.btnHover,.e8_btn_submit.btnHover{
+		background-color:#27ADF1;
+	}
+	
+	/*取消按钮-悬浮*/
+	.e8_btn_cancel.btnHover{
+		background-color:#EAEAEA;
+		color:#117CD3;
+	}
+	
+	.e8_btn_submit_hover{
+		background-color:#0170C1 !important;
+		color:white;
+	}
+	
+
+	
+
+	
+	/*顶部菜单中的按钮-悬浮*/
+	.e8_btn_top.btnHover{
+		background-color:#2690E3;
+		color:white;
+	}
+	
+	/*顶部菜单中的按钮-鼠标按住*/
+	.e8_btn_top.e8_btn_mousedown{
+		background-color:#107DD3;
+	}
+	
+	/*取消按钮-按下*/
+	.e8_btn_mousedown.e8_btn_cancel{
+		background-color:#DEDEDE !important;
+	}
+	
+	/*按钮-按下*/
+	.btn.e8_btn_mousedown,.e8_btn.e8_btn_mousedown,.e8_btn_submit.e8_btn_mousedown{
+		background-color:#2092ED !important;
+	}
+	
+	.btnHoverAdvance{
+		background-color: white !important;
+	}
+	
+	
+	/*
+	 * 
+	 */
+	.middle{
+		vertical-align:middle;
+	}
+	
+	.advancedSearch{
+		display:-moz-inline-box;
+		display:inline-block;
+		cursor:pointer;
+		position: relative;
+		z-index:2;
+		margin-bottom:0px;
+		height:40px;
+		padding-left:18px;
+		padding-right:18px;
+		border-left:solid 1px #DADADA;
+		border-right:solid 1px #DADADA;
+		line-height:40px;
+		font-size:12px;
+	}
+	
+	.advancedSearch.click{
+		border-left: 1px solid #dadada;
+		border-right: 1px solid #dadada;
+		border-bottom:none;
+		/*top:3px;
+		height:36px;
+		line-height:36px;*/
+		background-color:white !important;
+		
+		/*
+		background-image:url(/images/ecology8/request/arrow-bottom_wev8.png);
+		background-repeat:no-repeat;
+		background-position:95% center;
+		*/
+	}
+	
+	#advancedSearchOuterDiv{
+		display:none;
+		position: absolute;
+		background: white;
+		border-bottom: 1px solid #dadada;
+		border-right: 1px solid #dadada;
+		z-index:1;
+		top:0px;
+		overflow:hidden;
+	}
+	.advancedSearchDiv{
+		position:relative;
+		display:none;
+	}
+	
+	.e8_shadowDiv{
+		position:absolute;
+		background:transparent;
+		border:none;
+		z-index:1;
+		display:none;
+		height:2px !important;
+		background-image:url(/images/ecology8/shadow_wev8.png);
+		background-repeat:repeat-x;
+	}
+	
+	.advancedSearchDiv .ViewForm{
+		border-top:1px solid #dadada;
+		margin-top:15px !important;
+	}
+	
+	TABLE.ViewForm TR.e8_advanceTR{
+		border-top:1px solid #dadada;
+		border-bottom:1px solid #dadada;
+		height:15px;
+	}
+	
+	table.TopTitle{
+		display:none !important;
+	}
+	div.divTopTitle {
+		display:none !important;
+	}
+	
+	.xTable_infoTop{
+		display:none !important;
+	}
+	
+	._xTableSplit{
+		margin:0px !important;
+		padding:0px !important;
+	}
+	
+	._xTableOuter{
+		margin:0px !important;
+		padding:0px !important;
+	}
+	
+	.ListStyle{
+		margin:0px !important;
+	}
+	
+	.HeaderForXtalbe{
+		height:30px !important;
+	}
+	.HeaderForXtalbe td{
+		height:30px !important;
+	}

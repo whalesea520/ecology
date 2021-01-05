@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<xss-filter-list>
+		<word>(onmousedown|onmouseup|onmouseover|onmousemove|onmouseout|onkeypress|onkeydown|onkeyup|onabort|onbeforeunload|onerror|onload|onmove|onresize|onstop|onunload|onblur|onchange|onfocus|onreset|onsubmit|onbounce|onfinish|onstart|onbeforecopy|onbeforecut|onbeforeeditfocus|onbeforepaste|onbeforeupdate|oncontextmenu|oncopy|oncut|ondrag|ondragdrop|ondragend|ondragenter|ondragleave|ondragover|ondragstart|ondrop|onlosecapture|onpaste|onselect|onselectstart|onafterupdate|oncellchange|ondataavailable|ondatasetchanged|ondatasetcomplete|onerrorupdate|onrowenter|onrowenter|onrowexit|onrowsdelete|onrowsinserted|onafterprint|onbeforeprint|onfilterchange|onhelp|onpropertychange|onreadystatechange|ontoggle|onscroll|onresizeend|onresizestart|ondeactivate|onmousewheel|oncontrolselect|onbeforedeactivate|onactivate|onbeforeactivate)[^a-zA-Z]</word>
+	</xss-filter-list>
+
+</root>

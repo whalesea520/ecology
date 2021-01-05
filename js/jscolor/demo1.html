@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jscolor colorpicker js棰滆壊閫夋嫨鍣ㄦ彃浠跺绉嶉€夊彇棰滆壊鏂规硶涓庡彇鍊?/title>
+<meta name="description" content="javascript js棰滆壊閫夋嫨鍣╦scolor鎻掍欢鍔熻兘寮哄ぇ锛屽寘鎷€夊彇棰滆壊涓庡彇鍊硷紝10澶氱璋冪敤婕旂ず鏂规硶锛岄€氳繃鐩存帴鏀瑰彉棰滆壊鐨勫€艰儗鏅鑹蹭篃闅忕潃鍙樺寲锛屾槸涓€娆惧鍔熻兘js棰滆壊閫夋嫨鍣ㄣ€? />
+<script type="text/javascript" src="jscolor_wev8.js"></script>
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font:12px/180% Arial, Helvetica, sans-serif;}
+.jscolorstyle h3{font-size:14px;margin:20px;}
+.jscolorstyle p{padding:0 0 0 40px;margin:10px 0;}
+</style>
+</head>
+
+<body>
+	<div class="jscolorstyle">
+	
+		<h3>1銆佸熀纭€鍒楀瓙</h3>
+		<p>鐐瑰嚮姝ゅ: <input class="color" value="66ff00"></p>
+		
+		<h3>2銆佸甫鍏抽棴鎸夐挳鐨勫垪瀛?/h3>
+		<p>鐐瑰嚮姝ゅ: <input class="color {pickerClosable:true}"></p>
+		
+		<h3>3銆侀鏂欐牱寮忓垪瀛?/h3>
+		<p> 鑹插僵澶栬竟鐣?  <input class="color {pickerBorderColor:'red green blue yellow'}"></p>
+		<p> 鑹插僵鎻掑浘杈圭晫: <input class="color {pickerInsetColor:'#9F9 #090 #090 #9F9'}"></p>
+		<p> 棰滆壊閫夊彇鏉?   <input class="color {pickerFaceColor:'#01BABE'}"></p>
+		<p> 閫忔槑鐨勯€夊彇:   <input class="color {pickerFaceColor:'transparent',pickerFace:3,pickerBorder:0,pickerInsetColor:'black'}"></p>
+		
+		<h3>4銆侀鑹蹭笌鍙栧€?/h3>
+		<p> 鏇存敼棰滆壊鍊? <input class="color {valueElement:'myValue'}"> <input id="myValue"></p>
+		<p> 鏇存敼棰滆壊鏍峰紡: <input class="color {styleElement:'myStyle'}"> <input id="myStyle"></p>
+		<p> 鏇存敼棰滆壊鍊间笌鏍峰紡:  <input class="color {valueElement:'myBoth',styleElement:'myBoth'}"> <input id="myBoth"></p>
+		
+		<h3>5銆佽幏鍙栭鑹茬殑RGB涓嶩SV鍊?/h3>
+		<p>R<input id="red" size="5">  G<input id="grn" size="5">  B<input id="blu" size="5">  - - -
+		H<input id="hue" size="5">  S<input id="sat" size="5">  V<input id="val" size="5"></p>
+		<p> 閫夋嫨浠讳綍棰滆壊: <input class="color" id="myColor" onChange="
+			document.getElementById('red').value = this.color.rgb[0]*100 + '%';
+			document.getElementById('grn').value = this.color.rgb[1]*100 + '%';
+			document.getElementById('blu').value = this.color.rgb[2]*100 + '%';
+			document.getElementById('hue').value = this.color.hsv[0]* 60 + '&deg;';
+			document.getElementById('sat').value = this.color.hsv[1]*100 + '%';
+			document.getElementById('val').value = this.color.hsv[2]*100 + '%';"></p>
+		
+		<h3>6銆丠SV閫夋嫨棰滆壊灞炴€т笌HVS閫夋嫨棰滆壊灞炴€?/h3>
+		<p>HSV 灞炴€? <input class="color {pickerMode:'HSV'}"> HVS 灞炴€? <input class="color {pickerMode:'HVS'}"></p>
+		
+		<h3>5銆乯avascript 瀹氫箟閫夋嫨棰滆壊鍊?/h3>
+		<p><input id="myField1">
+		<script type="text/javascript">
+		var myPicker = new jscolor.color(document.getElementById('myField1'), {})
+		myPicker.fromString('99FF33')  // now you can access API via 'myPicker' variable
+		</script></p>
+		
+		<h3>6銆侀€夋嫨棰滆壊鍙樺寲浜嬩欢 鍒楀瓙</h3>
+		<p> 鏀瑰彉鑳屾櫙: <input class="color" onchange="document.getElementsByTagName('BODY')[0].style.backgroundColor = '#'+this.color"></p>	
+		
+		<h3>7銆侀鑹叉祴璇曞垪瀛?/h3>
+		<p><input onClick="add()" type="button" value="Add 100 pickers">
+		<script type="text/javascript">
+		function add() {
+			var count = 100
+		
+			for(var i=0; i<count; i++) {
+				var input = document.createElement('INPUT')
+				input.style.width = '5em'
+		
+				// bind jscolor
+				var col = new jscolor.color(input)
+				col.fromHSV(6/count*i, 1, 1)
+		
+				document.getElementsByTagName('BODY')[0].appendChild(input)
+			}
+		}
+		</script>
+		</p>
+		
+		<h3>8銆佽嚜瀹氫箟浣嶇疆鍒楀瓙</h3>
+		<p style="margin-left:210px">宸﹁竟:  <input class="color {pickerPosition:'left'}"></p>
+		<p style="margin-left:90px"> 鍙宠竟: <input class="color {pickerPosition:'right'}"></p>
+		<p style="margin-top:65px">  椤堕儴:   <input class="color {pickerPosition:'top'}"></p>
+		
+		<h3>9銆侀紶鏍囨粦杩囨樉绀轰笌闅愯棌</h3>
+		<p><input class="color {pickerOnfocus:false}" id="myColortest"> 鍙栨秷鑷姩鏄剧ず/闅愯棌鐨勯€夊彇</p>
+		<p style="margin-left:155px;"> 灏嗛紶鏍囩Щ鍚戣繖浜涙寜閽?
+		<input type="button" value="鏄剧ず"
+			onmousemove="document.getElementById('myColortest').color.showPicker()">
+		<input type="button" value="闅愯棌"
+			onmousemove="document.getElementById('myColortest').color.hidePicker()"></p>
+		
+		<h3>10銆侀鑹查€夋嫨鍣ㄦ牱寮忓昂瀵?/h3>
+		<p>鍔犲己杈圭晫: <input class="color {pickerBorder:3,pickerInset:10}"></p>
+		<p>鍔犲己闈㈡澘: <input class="color {pickerFace:20}"></p>
+	
+	</div>
+
+	<div style="height:140px;"></div>
+</body>
+</html>

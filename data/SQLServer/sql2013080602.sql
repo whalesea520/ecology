@@ -1,0 +1,2 @@
+DELETE FROM LeftMenuInfo WHERE id=10
+GO

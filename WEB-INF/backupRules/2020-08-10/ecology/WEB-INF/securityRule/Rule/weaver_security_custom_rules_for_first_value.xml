@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<only-check-first-value-paths>
+		<url>
+			<value>/workflow/search/WFSearchResult.jsp</value>
+			<params>
+				<param>fromselfSql</param>
+			</params>
+		</url>
+	</only-check-first-value-paths>
+</root>

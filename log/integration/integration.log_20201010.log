@@ -1,0 +1,221 @@
+2020-10-10 09:10:17,893 INFO  [Thread:Thread-23] weaver.general.InitServerXMLtoDBThread.checkEndUpgrade() - 升级进行中,sleep...
+2020-10-10 09:10:18,964 INFO  [Thread:Thread-23] weaver.general.InitServerXMLtoDBThread.run() - 升级完成，执行 InitServiceXMLtoDB ...
+2020-10-10 09:10:19,011 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initDB() - 创建表：INITSERVICEXMLSTATE ……
+2020-10-10 09:10:19,011 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(INITSERVICEXMLSTATE) exist
+2020-10-10 09:10:19,011 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(INITSERVICEXMLSTATE) exist
+2020-10-10 09:10:19,027 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (INITSERVICEXMLSTATE.E8CLEAR) exist
+2020-10-10 09:10:19,027 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(INITSERVICEXMLSTATE) exist
+2020-10-10 09:10:19,027 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (INITSERVICEXMLSTATE.SMS) exist
+2020-10-10 09:10:19,027 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(INITSERVICEXMLSTATE) exist
+2020-10-10 09:10:19,043 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (INITSERVICEXMLSTATE.CHECKERRORDATA) exist
+2020-10-10 09:10:19,058 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(INITSERVICEXMLSTATE) exist
+2020-10-10 09:10:19,074 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (INITSERVICEXMLSTATE.XMLINITTODB) exist
+2020-10-10 09:10:19,074 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initDB() - 创建表：DATASOURCESETTING ……
+2020-10-10 09:10:19,089 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(DATASOURCESETTING) exist
+2020-10-10 09:10:19,089 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initDB() - 创建表：SCHEDULESETTING ……
+2020-10-10 09:10:19,105 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(SCHEDULESETTING) exist
+2020-10-10 09:10:19,105 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initDB() - 创建表：SMSPROPERTIS ……
+2020-10-10 09:10:19,105 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(SMSPROPERTIS) exist
+2020-10-10 09:10:19,105 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(actionsettingdetail) exist
+2020-10-10 09:10:19,121 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (actionsettingdetail.isdatasource) exist
+2020-10-10 09:10:19,136 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(datashowset) exist
+2020-10-10 09:10:19,183 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (datashowset.searchByName) exist
+2020-10-10 09:10:19,183 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (datashowset.customid) exist
+2020-10-10 09:10:19,199 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(SCHEDULESETTING) exist
+2020-10-10 09:10:19,199 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (SCHEDULESETTING.createdate) exist
+2020-10-10 09:10:19,199 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(SCHEDULESETTING) exist
+2020-10-10 09:10:19,214 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (SCHEDULESETTING.createtime) exist
+2020-10-10 09:10:19,214 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(SCHEDULESETTING) exist
+2020-10-10 09:10:19,214 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (SCHEDULESETTING.modifydate) exist
+2020-10-10 09:10:19,214 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(SCHEDULESETTING) exist
+2020-10-10 09:10:19,230 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (SCHEDULESETTING.modifytime) exist
+2020-10-10 09:10:19,246 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initCache() - 开始初始化缓存......
+2020-10-10 09:10:19,355 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initCache() - System Init Message:mainControlIp= localIp:[192.168.56.1, 192.168.97.232]
+2020-10-10 09:10:19,355 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initCache() -   初始化计划任务缓存Start ......
+2020-10-10 09:10:19,480 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initCache() -   初始化数据源缓存 ......
+2020-10-10 09:10:19,496 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initCache() -   初始化Action缓存 ......
+2020-10-10 09:10:20,652 ERROR [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initCache() - Action加入缓存异常(com.shxiv.hfwh.workflow.action.HfKhAction)：java.lang.NoClassDefFoundError: com/shxiv/jqkj/workflow/action/ClAction
+2020-10-10 09:10:21,120 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initCache() -   初始化浏览框缓存 ......
+2020-10-10 09:10:22,088 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initCache() -   初始化HR缓存 ......
+2020-10-10 09:10:22,104 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initCache() -   初始化短信缓存 ......
+2020-10-10 09:10:22,213 INFO  [Thread:Thread-23] weaver.servicefiles.BrowserXML.<init>() - BrowserXML init start ....
+2020-10-10 09:10:22,291 INFO  [Thread:Thread-23] weaver.servicefiles.BrowserXML.<init>() - BrowserXML init end ....
+2020-10-10 09:10:22,323 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initCache() - 初始化缓存结束......
+2020-10-10 09:10:22,495 ERROR [Thread:Thread-23] weaver.interfaces.schedule.ScheduleManage.start() - Schedule Cron Job 缓存（schedule.deleteEML）
+2020-10-10 09:10:22,604 ERROR [Thread:Thread-23] weaver.interfaces.schedule.ScheduleManage.start() - Schedule Cron Job 缓存（schedule.Mode4CptCalculateDeprecationJob）
+2020-10-10 09:10:22,604 ERROR [Thread:Thread-23] weaver.interfaces.schedule.ScheduleManage.start() - Schedule Cron Job 缓存（schedule.CptLowInventoryRemindJob）
+2020-10-10 09:10:22,604 ERROR [Thread:Thread-23] weaver.interfaces.schedule.ScheduleManage.start() - Schedule Cron Job 缓存（schedule.Mode4CptDulldaysInventoryRemindJob）
+2020-10-10 09:10:22,620 ERROR [Thread:Thread-23] weaver.interfaces.schedule.ScheduleManage.start() - Schedule Cron Job 缓存（schedule.Mode4CptHighInventoryRemindJob）
+2020-10-10 09:10:22,620 ERROR [Thread:Thread-23] weaver.interfaces.schedule.ScheduleManage.start() - Schedule Cron Job 缓存（schedule.Mode4CptLowInventoryRemindJob）
+2020-10-10 09:10:22,620 ERROR [Thread:Thread-23] weaver.interfaces.schedule.ScheduleManage.start() - Schedule Cron Job 缓存（schedule.HttpServiceImpl）
+2020-10-10 09:10:22,620 ERROR [Thread:Thread-23] weaver.interfaces.schedule.ScheduleManage.start() - Schedule Cron Job 缓存（schedule.HttpKaoQin）
+2020-10-10 09:40:38,271 ERROR [Thread:http--8080-10$38202636] weaver.interfaces.workflow.browser.BaseBrowser.searchByIdLocal() - com.microsoft.sqlserver.jdbc.SQLServerException: 在将 nvarchar 值 '1,16,15,6,14,7,25,17,5,4' 转换成数据类型 int 时失败。
+2020-10-10 09:41:03,666 ERROR [Thread:http--8080-15$116718449] weaver.interfaces.workflow.browser.BaseBrowser.searchByIdLocal() - com.microsoft.sqlserver.jdbc.SQLServerException: 在将 nvarchar 值 '1,16,15,6,14,7,25,17,5,4' 转换成数据类型 int 时失败。
+2020-10-10 09:49:23,805 ERROR [Thread:http--8080-1$263872229] weaver.interfaces.workflow.browser.BaseBrowser.searchByIdLocal() - com.microsoft.sqlserver.jdbc.SQLServerException: 在将 nvarchar 值 '1,16,15,6,14,7,25,17,5,4' 转换成数据类型 int 时失败。
+2020-10-10 09:49:39,950 ERROR [Thread:http--8080-14$970982506] weaver.interfaces.workflow.browser.BaseBrowser.searchByIdLocal() - com.microsoft.sqlserver.jdbc.SQLServerException: 在将 nvarchar 值 '1,16,15,6,14,7,25,17,5,4' 转换成数据类型 int 时失败。
+2020-10-10 09:50:41,366 ERROR [Thread:http--8080-1$263872229] weaver.interfaces.workflow.browser.BaseBrowser.searchByIdLocal() - com.microsoft.sqlserver.jdbc.SQLServerException: 在将 nvarchar 值 '1,16,15,6,14,7,25,17,5,4' 转换成数据类型 int 时失败。
+2020-10-10 09:52:30,220 ERROR [Thread:http--8080-14$970982506] weaver.interfaces.workflow.browser.BaseBrowser.searchByIdLocal() - com.microsoft.sqlserver.jdbc.SQLServerException: 在将 nvarchar 值 '1,16,15,6,14,7,25,17,5,4' 转换成数据类型 int 时失败。
+2020-10-10 10:10:13,485 ERROR [Thread:http--8080-14$970982506] weaver.interfaces.workflow.browser.BaseBrowser.searchByIdLocal() - com.microsoft.sqlserver.jdbc.SQLServerException: 在将 nvarchar 值 '1,16,15,6,14,7,25,17,5,4' 转换成数据类型 int 时失败。
+2020-10-10 10:15:23,484 ERROR [Thread:http--8080-5$1056358822] weaver.interfaces.workflow.browser.BaseBrowser.searchByIdLocal() - com.microsoft.sqlserver.jdbc.SQLServerException: 在将 nvarchar 值 '1,16,15,6,14,7,25,17,5,4' 转换成数据类型 int 时失败。
+2020-10-10 10:16:28,530 ERROR [Thread:http--8080-10$38202636] weaver.interfaces.workflow.browser.BaseBrowser.searchByIdLocal() - com.microsoft.sqlserver.jdbc.SQLServerException: 在将 nvarchar 值 '1,16,15,6,14,7,25,17,5,4' 转换成数据类型 int 时失败。
+2020-10-10 10:17:22,916 ERROR [Thread:http--8080-13$1824173718] weaver.interfaces.workflow.browser.BaseBrowser.searchByIdLocal() - com.microsoft.sqlserver.jdbc.SQLServerException: 在将 nvarchar 值 '1,16,15,6,14,7,25,17,5,4' 转换成数据类型 int 时失败。
+2020-10-10 13:28:14,859 ERROR [Thread:http--8080-15$2087835121] weaver.interfaces.workflow.browser.BaseBrowser.searchByIdLocal() - com.microsoft.sqlserver.jdbc.SQLServerException: 在将 nvarchar 值 '1,16,15,6,14,7,25,17,5,4' 转换成数据类型 int 时失败。
+2020-10-10 13:31:31,515 ERROR [Thread:http--8080-1$263872229] weaver.interfaces.workflow.browser.BaseBrowser.searchByIdLocal() - com.microsoft.sqlserver.jdbc.SQLServerException: 在将 nvarchar 值 '1,16,15,6,14,7,25,17,5,4' 转换成数据类型 int 时失败。
+2020-10-10 13:56:08,396 ERROR [Thread:http--8080-12$1858202388] weaver.interfaces.workflow.browser.BaseBrowser.searchByIdLocal() - com.microsoft.sqlserver.jdbc.SQLServerException: 在将 nvarchar 值 '1,16,15,6,14,7,25,17,5,4' 转换成数据类型 int 时失败。
+2020-10-10 14:01:37,046 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,064 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,084 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,090 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,094 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,099 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,103 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,107 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,112 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,118 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,123 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,129 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,133 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,138 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,143 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,148 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,152 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,157 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,161 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,165 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,168 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,173 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,176 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,181 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,185 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,190 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,194 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,200 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,205 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,212 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,216 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,222 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,226 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,231 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,235 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,241 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,244 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,248 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,251 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,257 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,261 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,266 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,270 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,275 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,279 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,284 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,288 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,293 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,296 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,301 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,303 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,307 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,310 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,317 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,321 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,326 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,330 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,335 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,339 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,344 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,348 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,354 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,358 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,364 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,368 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,374 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,378 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,384 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,388 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,394 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,398 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:01:37,404 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:01:37,407 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - qygs: searchForImport sql1 : select id,qygs,qygs from uf_qygs where qygs  =  ? 
+2020-10-10 14:01:37,417 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - sspp: searchForImport sql1 : select id,pp,pp from uf_sspp where pp  =  ? 
+2020-10-10 14:02:19,140 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,146 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,150 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,156 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,159 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,164 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,167 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,173 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,178 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,185 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,190 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,197 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,202 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,208 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,213 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,219 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,224 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,231 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,237 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,244 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,252 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,257 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,261 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,266 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,270 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,275 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,278 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,284 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,287 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,292 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,296 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,301 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,304 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,309 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,314 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,318 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,322 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,327 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,331 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,336 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,340 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,345 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,349 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,354 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,357 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,363 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,366 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,371 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,375 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,380 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,383 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,388 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,391 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,396 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,399 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,404 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,407 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,411 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,414 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,418 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,420 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,425 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,427 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,431 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,434 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,438 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,441 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,445 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,448 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,452 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,455 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - bsqssj: searchForImport sql1 : select id,bsqgs,bsqgs from uf_bsqssj where bsqgs  =  ? and zt=1
+2020-10-10 14:02:19,459 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:02:19,461 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - qygs: searchForImport sql1 : select id,qygs,qygs from uf_qygs where qygs  =  ? 
+2020-10-10 14:02:19,464 INFO  [Thread:pool-10-thread-3] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - sspp: searchForImport sql1 : select id,pp,pp from uf_sspp where pp  =  ? 
+2020-10-10 14:06:26,433 INFO  [Thread:pool-10-thread-5] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - qygs: searchForImport sql1 : select id,qygs,qygs from uf_qygs where qygs  =  ? 
+2020-10-10 14:06:26,437 INFO  [Thread:pool-10-thread-5] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - sspp: searchForImport sql1 : select id,pp,pp from uf_sspp where pp  =  ? 
+2020-10-10 14:09:10,623 INFO  [Thread:pool-10-thread-9] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 
+2020-10-10 14:15:14,447 ERROR [Thread:http--8080-8$896936586] weaver.interfaces.workflow.browser.BaseBrowser.searchByIdLocal() - com.microsoft.sqlserver.jdbc.SQLServerException: 在将 nvarchar 值 '1,16,15,6,14,7,25,17,5,4' 转换成数据类型 int 时失败。
+2020-10-10 14:15:17,613 ERROR [Thread:http--8080-8$896936586] weaver.interfaces.workflow.browser.BaseBrowser.searchByIdLocal() - com.microsoft.sqlserver.jdbc.SQLServerException: 在将 nvarchar 值 '1,16,15,6,14,7,25,17,5,4' 转换成数据类型 int 时失败。
+2020-10-10 14:15:56,514 ERROR [Thread:http--8080-8$896936586] weaver.interfaces.workflow.browser.BaseBrowser.searchByIdLocal() - com.microsoft.sqlserver.jdbc.SQLServerException: 在将 nvarchar 值 '1,16,15,6,14,7,25,17,5,4' 转换成数据类型 int 时失败。
+2020-10-10 14:20:55,484 ERROR [Thread:http--8080-16$1976622599] weaver.interfaces.workflow.browser.BaseBrowser.searchByIdLocal() - com.microsoft.sqlserver.jdbc.SQLServerException: 在将 nvarchar 值 '1,16,15,6,14,7,25,17,5,4' 转换成数据类型 int 时失败。
+2020-10-10 14:27:06,928 ERROR [Thread:http--8080-16$1976622599] weaver.interfaces.workflow.browser.BaseBrowser.searchByIdLocal() - com.microsoft.sqlserver.jdbc.SQLServerException: 在将 nvarchar 值 '1,16,15,6,14,7,25,17,5,4' 转换成数据类型 int 时失败。
+2020-10-10 14:31:03,581 INFO  [Thread:pool-10-thread-1] weaver.interfaces.workflow.browser.BaseBrowser.searchForImport() - nf2: searchForImport sql1 : select id,nf,nf from uf_nf where nf  =  ? 

@@ -1,0 +1,2 @@
+alter table DOCMOULDFILE modify (MOULDPATH VARCHAR2(200))
+/

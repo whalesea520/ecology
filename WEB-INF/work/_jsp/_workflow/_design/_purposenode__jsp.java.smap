@@ -1,0 +1,16 @@
+SMAP
+_purposenode__jsp.java
+JSP
+*S JSP
+*F
++ 1 purposenode.jsp
+workflow/design/purposenode.jsp
+*L
+1#1:35
+6#1,2:36,7
+7#1,2:44
+8#1:46,6
+8#1,2:51
+9#1,79:53
+87#1,2:132
+*E

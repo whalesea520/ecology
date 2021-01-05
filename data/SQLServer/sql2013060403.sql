@@ -1,0 +1,2 @@
+ALTER TABLE PluginMessages ADD msgType VARCHAR(100)
+GO

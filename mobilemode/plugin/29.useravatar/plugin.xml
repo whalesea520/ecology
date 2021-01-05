@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEC>
+	<id>UserAvatar</id>	<!-- id 插件唯一标识 -->
+	<text>128129</text>  <!-- 用户头像 -->
+	<type>1</type>	<!-- 类型，方便对插件进行区分，目前已有：1.普通功能插件，2.表单插件 -->
+	<isEnabled>1</isEnabled>	<!-- 是否启用，1或者不填写为启用，0或者其他非1值为禁用 -->
+	<order>29</order>	<!-- 插件显示顺序，值越小则显示越靠前，不填写或者无此标签将为整数的最大值 -->
+	
+	<!-- 插件设计信息配置 -->
+	<design>
+		<unique>0</unique> <!-- 是否唯一，如果值为1则在自定义页面设计时一个页面最多只能添加一个这种控件，不为1或者不填写此属性则没有此限制 -->
+		<resources>	<!-- 依赖资源 -->
+			<resource type="js">/mobilemode/js/mec/handler/UserAvatar_wev8.js</resource>
+			<resource type="css">/mobilemode/css/mec/handler/UserAvatar_wev8.css</resource>
+			<resource type="css">/mobilemode/css/mec/run/UserAvatar_wev8.css</resource>
+		</resources>
+	</design>
+	
+	<!-- 插件运行信息配置 -->
+	<run java="com.weaver.formmodel.mobile.mec.handler.UserAvatar">
+		<resources>	<!-- 依赖资源 -->
+			<resource type="js">/mobilemode/js/mec/run/UserAvatar_wev8.js</resource>
+			<resource type="css">/mobilemode/css/mec/run/UserAvatar_wev8.css</resource>
+		</resources>
+	</run>
+	
+	<!-- 内容模板 -->
+	<contentTemplate>
+		<![CDATA[
+			<div id="NMEC_${theId}" class="userAvatarContainer ${class2}">
+				<div class="avatarInfo"><img data-key="messagerUrls" data-fill="src" src="javascript:void(0);"></div>
+				<div class="baseInfo">
+					<div class="userName" data-key="userName" data-fill="text"></div>
+					<div class="orgInfo">
+						<span class="deptName" data-key="deptName" data-fill="text"></span>
+						<span class="jobtitleName" data-key="jobTitlesName" data-fill="text"></span>
+					</div>
+				</div>
+			</div>
+		]]>
+	</contentTemplate>
+</MEC>

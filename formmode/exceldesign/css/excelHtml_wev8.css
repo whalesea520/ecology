@@ -1,0 +1,175 @@
+@IMPORT url("/formmode/exceldesign/css/tabPage_wev8.css");
+@IMPORT url("/css/ecology8/WorkflowSignInput_wev8.css");
+@IMPORT url("/ueditor/ueditorext_wf_wev8.css");
+
+.excelOuterTable{
+	border:0px; margin:0px; padding:0px;
+	width:100% !important;
+}
+
+.excelMainTable{
+	border:0px; margin:0px; padding:0px; border-collapse:collapse;
+}
+
+table.excelMainTable ol{
+	padding-left:16px;
+}
+
+.excelTabTable{
+	width:100%; border:0px; margin:0px; padding:0px; border-collapse:collapse;
+}
+
+.excelDetailTable{
+	border:0px; margin:0px; padding:0px; border-collapse:collapse;
+}
+
+.excelDetailTable .header{
+	height:30px !important;
+}
+.detailButtonDiv{
+	float:right; text-align:right;
+}
+.detailRowHideArea{
+	display:none;
+}
+.detail_hide_col{
+	display:none;
+}
+.detailSumTd{
+	background: #FFF !important;
+}
+.warnInfoSpan{
+	color:red !important;
+	font-size:16px !important;
+}
+.edesign_hide{
+	display:none !important;
+}
+.excelMainTable .td_etype_5 img{
+	max-width:90% !important;
+}
+
+.addbtn_p{ 	
+	border:none; background: url(/wui/theme/ecology8/jquery/js/button/add_wev8.png) no-repeat;
+	color:#333; width: 21px; height:21px; text-align:left; cursor:pointer; 
+	padding-left:10px; padding-top:2px; margin-right:5px; background-position:50% 50%;
+}
+.addbtn_p:hover{ 	
+	border:none; background: url(/wui/theme/ecology8/jquery/js/button/add2_wev8.png) no-repeat;
+	color:#333; width: 21px; height:21px; text-align:left; cursor:pointer; 
+	padding-left:10px; padding-top:2px; margin-right:5px; background-position:50% 50%;
+}
+.delbtn_p{ 	
+	border:none; background: url(/wui/theme/ecology8/jquery/js/button/delete_wev8.png) no-repeat;
+	color:#333; width: 21px; height:21px; text-align:left; cursor:pointer;
+	padding-left:10px; padding-top:2px; margin-right:5px; background-position:50% 50%;
+}
+.delbtn_p:hover{ 	
+	border:none; background: url(/wui/theme/ecology8/jquery/js/button/delete2_wev8.png) no-repeat;
+	color:#333; width: 21px; height:21px; text-align:left; cursor:pointer; 
+	padding-left:10px; padding-top:2px; margin-right:5px; background-position:50% 50%;
+}
+.copybtn_p{ 	
+	border:none; background: url(/wui/theme/ecology8/jquery/js/button/copy_wev8.png) no-repeat;
+	color:#333; width: 21px; height:21px; text-align:left; cursor:pointer;
+	padding-left:10px; padding-top:2px; margin-right:5px; background-position:50% 50%;
+}
+.copybtn_p:hover{ 	
+	border:none; background: url(/wui/theme/ecology8/jquery/js/button/copy2_wev8.png) no-repeat;
+	color:#333; width: 21px; height:21px; text-align:left; cursor:pointer; 
+	padding-left:10px; padding-top:2px; margin-right:5px; background-position:50% 50%;
+}
+.sapbtn_p{
+	border:none; background: url(/formmode/exceldesign/image/button/sap_wev8.png) no-repeat;
+	color:#333;	width: 21px; height:21px; text-align:left; cursor:pointer;
+	padding-left:10px; padding-top:2px; margin-right:5px; background-position:50% 50%;
+}
+.sapbtn_p:hover{
+	border:none; background: url(/formmode/exceldesign/image/button/saphot_wev8.png) no-repeat;
+	color:#333;	width: 21px; height:21px; text-align:left; cursor:pointer;
+	padding-left:10px; padding-top:2px; margin-right:5px; background-position:50% 50%;
+}
+.addbtn_m{
+	border:none; background: url(/formmode/exceldesign/image/button/addBtn_m_wev8.png) no-repeat;
+	color:#333; width: 35px; height:35px; text-align:left; cursor:pointer; 
+	padding-top:2px; margin-left:5px; margin-right:5px; background-position:0px 0px;
+}
+.delbtn_m{
+	border:none; background: url(/formmode/exceldesign/image/button/delBtn_m_wev8.png) no-repeat;
+	color:#333; width: 35px; height:35px; text-align:left; cursor:pointer; 
+	padding-top:2px; margin-left:5px; margin-right:5px; background-position:0px 0px;
+}
+.sapbtn_m{
+	border:none; background: url(/formmode/exceldesign/image/button/sapBtn_m_wev8.png) no-repeat;
+	color:#333; width: 35px; height:35px; text-align:left; cursor:pointer; 
+	padding-top:2px; margin-left:5px; margin-right:5px; background-position:0px 0px;
+}
+
+.ftitlediv{width:100%; height:100%; overflow:hidden; text-align:center;}
+.ftitlediv .ftop{width:100%; height:50%; overflow:hidden; border-bottom:solid 1px black;}
+.ftitlediv .fbottom{width:100%; height:50%; overflow:hidden;}
+.ffielddiv{height:100%; overflow:hidden; text-align:center;}
+.fintable{height:100%; float:right; border:0px; border-spacing:0px !important;}
+.fborder1{border-right:solid 1px black; }
+.fborder2{border-right:solid 2px red; }
+.fborder3{border-right:solid 2px blue; }
+
+
+.portalLoading{height:100px; line-height:100px; text-align:center; background:#ffffff;}
+.iframeLoading{text-align:center; background:#ffffff;}
+
+.scancode{vertical-align:middle;}
+.qrcodeimg{min-height:50px; height:50px;}
+.barcodeimg{min-height:50px; height:50px; width:100%;}
+
+
+._uploadForClass .progressBarInProgress {
+	height:2px;
+	background:#6b94fe;
+	margin:0!important;
+}
+._uploadForClass .progressWrapper {
+	height:30px!important;
+	width:100%!important;
+	border-bottom:1px solid #dadada;
+}
+._uploadForClass .progressContainer  {
+	background-color:#f5f5f5!important;
+	border:solid 0px!important;
+	padding-top:5px!important;
+	padding-left:0px!important;
+	padding-right:0px!important;
+	padding-bottom:5px!important;
+	margin:0px!important;
+}
+._uploadForClass .progressCancel {
+	width:20px!important;
+	height:20px!important;
+	background-image:url('/images/ecology8/workflow/fileupload/cancle_wev8.png')!important;
+}
+._uploadForClass .progressBarStatus {
+	display:none!important;
+}
+._uploadForClass .edui-for-wfannexbutton{
+	cursor:pointer!important;
+}
+._uploadForClass .progressName{
+	width:350px!important;
+	height:18px;
+	padding-left:5px;
+	font-size:12px;
+	font-family:΢Microsoft YaHei;
+	font-weight:normal!important;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	color:#242424;
+	word-wrap: normal;
+}
+.annexblocktblclass tr td {
+	padding-left:0px!important;
+}
+
+.annexblocktblclass TR.Selected td {
+	padding-left:0px!important;
+}

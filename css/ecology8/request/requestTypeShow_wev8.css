@@ -1,0 +1,87 @@
+.mainItem{
+	 margin: 0 0 0 0;
+	 padding: 0px;
+	 list-style: none;
+}
+
+.centerItem{
+	height: 30px;
+    line-height: 30px;
+	border-bottom:1px dashed #f0f0f0;
+	padding-left: 0px;
+	position: relative;
+}
+.centerItem a{
+	color: black;
+	margin-left:8px;
+	margin-right:12px;
+}
+.imageItem{
+	position: absolute;
+	right: 0;
+	height: 30px;
+	display:none;
+	z-index:101;
+}
+.fontItem{
+	float: left;
+	cursor:pointer;
+}
+.imgspan{
+	height:26px;
+	width:50px;
+	float:left;
+	margin-top:4px;
+}
+.imgdiv{
+	background-color:rgb(153, 153, 153);
+	border:1px solid #e0e0e0;
+	border-bottom:none;
+}
+.imgspan img{
+	margin-top:3px;
+	margin-left:17px;
+	cursor:pointer;
+}
+.agentlistdata{
+	position: absolute;
+	background-color:#f5f5f5;
+	border:1px solid #e0e0e0;
+	z-index:100;
+	min-width:50px;
+}
+.agenter{
+	float:left;
+	border-bottom-style:solid;
+	border-bottom:1px solid #e2e3e4;
+	margin-bottom:13px;
+	margin-left:15px;
+	margin-right:15px;
+	height:24px;
+	line-height:24px;
+}
+.importwf{
+	position: absolute;
+	background-color:#f5f5f5;
+	border:1px solid #e0e0e0;
+	z-index:100;
+	width:226px;
+	height:50px;
+	display:none;
+}
+.importTxt{
+	
+}
+.importSpan{
+	margin-top:5px;
+	width:206px;
+	background-color:#fff;
+	margin-left:10px;
+	margin-right:10px;
+}
+.importSpan img{
+	float: right;
+	margin-top: 7;
+	position: relative;
+	top: -30;
+}

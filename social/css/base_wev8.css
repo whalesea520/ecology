@@ -1,0 +1,2950 @@
+
+.clear {
+    clear: both
+}
+
+.hidden {
+    display: none
+}
+
+.wordbrek {
+    word-break: break-all;
+    white-space: normal
+}
+
+.left {
+    float: left
+}
+
+.right {
+    float: right
+}
+
+.w100 {
+    width: 100px
+}
+
+.w200 {
+    width: 200px !important
+}
+
+.w240 {
+    width: 240px
+}
+
+.w180 {
+    width: 180px
+}
+
+.h30 {
+    height: 30px !important
+}
+
+.m-l-10 {
+    margin-left: 10px
+}
+
+.m-t-10 {
+    margin-top: 10px
+}
+
+.uimg {
+    max-width: 300px
+}
+
+.navToptab {
+    height: 60px
+}
+
+.navToptab .tabitem {
+    float: left;
+    padding: 10px 10px 0 9px;
+    cursor: pointer
+}
+
+.navToptab .tabitem .tabicon {
+    height: 24px;
+    width: 36px;
+    background-repeat: no-repeat;
+    background-position: center center
+}
+
+.navToptab .tabitem .tabname {
+    width: 36px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 3px
+}
+
+.navToptab .activeitem {
+    border-bottom: 2px solid #995dd8
+}
+
+.navToptab .tabitem .tabhome {
+    background-image: url('/social/images/icon_home_wev8.png')
+}
+
+.navToptab .tabitem .tabgroup {
+    background-image: url('/social/images/icon_group_wev8.png')
+}
+
+.navToptab .tabitem .tabworkers {
+    background-image: url('/social/images/icon_workers_wev8.png')
+}
+
+.navToptab .tabitem .tabbaike {
+    background-image: url('/social/images/icon_baike_wev8.png')
+}
+
+.navToptab .activeitem .tabhome {
+    background-image: url('/social/images/icon_home_hot_wev8.png')
+}
+
+.navToptab .activeitem .tabgroup {
+    background-image: url('/social/images/icon_group_hot_wev8.png')
+}
+
+.navToptab .activeitem .tabworkers {
+    background-image: url('/social/images/icon_workers_hot_wev8.png')
+}
+
+.navToptab .activeitem .tabbaike {
+    background-image: url('/social/images/icon_baike_hot_wev8.png')
+}
+
+.navToptab .tabline {
+    border-top: 1px solid #e3e6f0
+}
+
+.leftMenus {
+    padding-top: 10px
+}
+
+.leftMenus .leftMenudiv {
+    display: block
+}
+
+.leftMenus .menuItemdiv {
+    padding-left: 20px;
+    height: 35px;
+    cursor: pointer
+}
+
+.leftMenus .menuItemdiv .menuItem {
+    padding-left: 30px;
+    height: 25px;
+    padding-top: 10px
+}
+
+.leftMenus .menuActiveItemdiv {
+    border-left: 2px solid #995dd8;
+    background: #eff6fb;
+    padding-left: 18px
+}
+
+.leftMenus .menuItemdiv .menuItem .menuItemName {
+    color: #394661
+}
+
+.leftMenus .menuItemdiv .menuItem .menugroupdwon {
+    background: url('../images/group_down_wev8.png') no-repeat 155px center
+}
+
+.leftMenus .menuItemdiv .menuItem .menugroupup {
+    background: url('../images/group_up_wev8.png') no-repeat 155px center
+}
+
+.leftMenus .childrenMenus {
+    display: none
+}
+
+.leftMenus .childrenMenus .childrenItem {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 65px;
+    cursor: pointer
+}
+
+.leftMenus .childrenMenus .childrenItem .menuName {
+    float: left;
+    width: 80px;
+    height: 18px
+}
+
+.leftMenus .menuCount {
+    float: left;
+    background-color: #f47663;
+    width: 32px;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    height: 18px
+}
+
+.leftMenus .clearchat {
+    display: none;
+    float: right;
+    background: url('/social/images/left_clear_chat_wev8.png') no-repeat center center;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    opacity: .3;
+    filter: alpha(opacity=30);
+    margin-right: 7px
+}
+
+.leftMenus .clearchat:hover {
+    opacity: 1;
+    filter: alpha(opacity=100)
+}
+
+.sharetable {
+    width: 100%;
+    margin-top: 10px
+}
+
+.sharetable .head_img {
+    height: 35px;
+    width: 45px;
+    background-position: center center;
+    background-repeat: no-repeat
+}
+
+.sharetable .head_name {
+    color: #384560;
+    margin-top: 3px;
+    margin-left: 10px
+}
+
+.baike_title {
+    background: url('/social/images/title_icon_baike_wev8.png') no-repeat left center;
+    padding-left: 18px
+}
+
+.forword_content {
+    margin: 15px;
+    padding: 10px 0 12px;
+    overflow: hidden
+}
+
+.forword_main {
+    background: none repeat scroll 0 0 #eff6fb;
+    border: 1px solid #f0f0f0;
+    border-radius: 3px 3px 3px 3px;
+    clear: both;
+    line-height: 19px;
+    margin: 10px 0
+}
+
+.sharetable .sharetd {
+    background: #eff6fb;
+    padding-left: 9px;
+    position: relative
+}
+
+.sharetable .share_contentArrow {
+    background: url('../images/icon_arrow.png');
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+.sharetable .share_contentdiv {
+    position: relative;
+    background: #fff
+}
+
+.sharetable .share_contentdiv .new {
+    background: url('../images/icon_new.png') no-repeat center center;
+    width: 11px;
+    height: 11px;
+    top: 0;
+    right: 0;
+    position: absolute
+}
+
+.sharetable .share_contentdiv .time {
+    float: left;
+    margin-left: 8px;
+    color: #adbfd8
+}
+
+.sharetable .share_contentdiv .att {
+    float: right;
+    width: 12px;
+    height: 12px;
+    background: url('../images/icon_att.png') no-repeat center center;
+    height: 18px;
+    margin-right: 8px
+}
+
+.sharetable .share_contentdiv .top {
+    float: right;
+    width: 12px;
+    height: 12px;
+    background: url('../images/icon_top.png') no-repeat center center;
+    height: 18px;
+    margin-right: 8px
+}
+
+.sharetable .share_contentdiv .recom {
+    float: right;
+    width: 12px;
+    height: 12px;
+    background: url('../images/iocn_recom_wev8.png') no-repeat center center;
+    height: 18px;
+    margin-right: 8px
+}
+
+.sharetable .share_contentdiv .share_content {
+    padding: 10px;
+    line-height: 20px;
+    padding-top: 0;
+    word-break: break-all;
+    white-space: normal
+}
+
+.sharetable .share_contentdiv .share_options {
+    border-bottom: 1px solid #eff6fb;
+    height: 24px
+}
+
+.sharetable .share_contentdiv .share_options .option {
+    float: right;
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+    cursor: pointer
+}
+
+.sharetable .share_contentdiv .share_options .more {
+    background: url('../images/icon_more.png') no-repeat center center
+}
+
+.sharetable .share_contentdiv .share_options .farovate {
+    background: url('../images/icon_farovate.png') no-repeat center center
+}
+
+.sharetable .share_contentdiv .share_options .farovate2 {
+    background: url('../images/icon_farovate_2_wev8.png') no-repeat center center
+}
+
+.sharetable .share_contentdiv .share_options .forword {
+    background: url('../images/icon_forword.png') no-repeat center center
+}
+
+.sharetable .share_contentdiv .share_options .comment {
+    background: url('../images/icon_comment.png') no-repeat center center
+}
+
+.sharetable .share_contentdiv .share_options .zan {
+    background: url('../images/iocon_zan.png') no-repeat center center
+}
+
+.sharetable .share_contentdiv .share_options .zan2 {
+    background: url('../images/iocon_zan_2_wev8.png') no-repeat center center
+}
+
+.sharetable .share_contentdiv .share_options .moreOption {
+    width: 104px;
+    background: #abb1d5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    color: #fff;
+    z-index: 1
+}
+
+.sharetable .share_contentdiv .share_options .moreOption .optionitem {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 16px;
+    line-height: 16px;
+    margin-left: 15px;
+    cursor: pointer
+}
+
+.sharetable .share_contentdiv .share_accdiv {
+    height: 22px;
+    padding: 15px 10px 15px 10px;
+    border-bottom: 1px solid #eff6fb
+}
+
+.downloadAll {
+    float: left;
+    background-color: #b0bdd6;
+    width: 55px;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    height: 25px;
+    line-height: 25px;
+    margin-left: 8px
+}
+
+.sharetable .share_contentdiv .share_accdiv .showAll {
+    float: right;
+    width: 20px;
+    height: 20px;
+    background: url('../images/icon_acc_down.png') no-repeat center center
+}
+
+.sharetable .share_contentdiv .share_replylist {
+    background: #f9fcfe
+}
+
+.sharetable .share_contentdiv .share_replylist .replyitem {
+    padding: 15px 10px 15px 10px;
+    border-bottom: 1px solid #eff6fb
+}
+
+.sharetable .share_contentdiv .share_replylist .replyitem .replyhead {
+    height: 35px;
+    width: 35px
+}
+
+.sharetable .share_contentdiv .share_replylist .replyitem .replyname {
+    float: left;
+    color: #5bb4d8
+}
+
+.sharetable .share_contentdiv .share_replylist .replyitem .replytime {
+    float: right;
+    margin-right: 8px;
+    color: #adbfd8
+}
+
+.sharetable .share_contentdiv .share_replylist .replyitem .replycontent {
+    margin: 5px 5px 5px 0
+}
+
+.sharemoreFoot {
+    float: right;
+    color: #585858;
+    height: 30px;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    background-color: #e3e5f1;
+    line-height: 30px;
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: center
+}
+
+.sharemoreFoot:hover {
+    background-color: #e8eaf6
+}
+
+.sharetable .timepoint {
+    width: 100%;
+    height: 16px;
+    background: url('/social/images/time_point_wev8.png') no-repeat center center
+}
+
+.sharetable .timedate {
+    width: 100%;
+    text-align: center;
+    height: 24px;
+    line-height: 24px;
+    color: #505c74
+}
+
+.sharetable .timeline {
+    border-left: 2px solid #e0e8f5;
+    position: absolute;
+    top: 0;
+    bottom: -10px;
+    top: 40px;
+    left: 26px
+}
+
+.timelinediv {
+    position: relative;
+    margin-top: 10px
+}
+
+.timelinediv .timeicon {
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: url('/social/images/time_line_wev8.png') no-repeat;
+    margin-left: 18px
+}
+
+.timelinediv .dataleft {
+    float: left;
+    width: 17px;
+    height: 21px;
+    background: url('/social/images/date_l_wev8.png') no-repeat
+}
+
+.timelinediv .datacenter {
+    float: left;
+    height: 21px;
+    background: url('/social/images/date_c_wev8.png');
+    line-height: 21px;
+    color: #fff
+}
+
+.timelinediv .dataright {
+    float: left;
+    width: 11px;
+    height: 21px;
+    background: url('/social/images/date_r_wev8.png') no-repeat
+}
+
+.timelinediv .timeline {
+    border-left: 2px solid #e0e8f5;
+    position: absolute;
+    top: 0;
+    bottom: -10px;
+    top: 20px;
+    left: 26px
+}
+
+.sharetable .timeline2 {
+    border-left: 2px solid #e0e8f5;
+    position: absolute;
+    bottom: -10px;
+    top: 15px;
+    left: 26px
+}
+
+.remarkdiv .remarkappdiv {
+    display: none
+}
+
+.remarkdiv .remarkappdiv .app {
+    float: left;
+    width: 16px;
+    height: 25px;
+    margin-right: 8px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer
+}
+
+.remarkdiv .remarkappdiv .moreApp {
+    width: 75px;
+    background: #717e99;
+    position: absolute;
+    left: 125px;
+    top: 30px;
+    display: none;
+    color: #fff;
+    z-index: 1
+}
+
+.remarkdiv .remarkappdiv .moreApp .appitem {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 16px;
+    line-height: 16px;
+    margin-left: 10px;
+    cursor: pointer
+}
+
+.appimg {
+    background-image: url('/social/images/app_img.png')
+}
+
+.appimg2 {
+    background-image: url('/social/images/app_img2_wev8.png')
+}
+
+.appacc {
+    background-image: url('/social/images/icon_acc.png')
+}
+
+.appacc2 {
+    background-image: url('/social/images/icon_acc2_wev8.png')
+}
+
+.dynamicdiv {
+    margin-top: 10px
+}
+
+.dynamicdiv .dselect {
+    color: #707b92;
+    font-size: 14px;
+    font-weight: bold;
+    float: left;
+    margin-right: 6px
+}
+
+.dynamicdiv .ddown {
+    background: url('../images/icon_down.png') no-repeat center center;
+    width: 12px;
+    height: 20px;
+    float: left
+}
+
+.dynamicdiv .drefresh {
+    float: right;
+    background: url('../images/icon_refresh.png');
+    width: 20px;
+    height: 20px;
+    cursor: pointer
+}
+
+.dynamicdiv .selitem {
+    cursor: pointer;
+    color: #707b92;
+    padding: 4px 0 4px 8px;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: none
+}
+
+.dynamicdiv .selitem:hover {
+    background-color: #e1e9f4
+}
+
+.dynamicdiv .dynmain {
+    position: relative
+}
+
+.dynamicdiv .dynmain2 {
+    border: 1px solid #e3e6f0;
+    background-color: #fff;
+    z-index: 1
+}
+
+.msgdiv {
+    margin-top: 10px;
+    border: 1px solid #d5e0f1;
+    background-color: #e1e8f5;
+    height: 50px
+}
+
+.msgdiv .msgicon {
+    float: left;
+    background: url('../images/head_group.png') no-repeat center center;
+    width: 35px;
+    height: 45px;
+    line-height: 45px;
+    margin-left: 10px
+}
+
+.msgdiv .msgname {
+    float: left;
+    height: 45px;
+    line-height: 45px;
+    margin-left: 20px
+}
+
+.msgdiv .msgcount {
+    float: left;
+    color: #394661;
+    height: 45px;
+    line-height: 45px;
+    font-weight: bold;
+    margin-left: 20px
+}
+
+.msgdiv .msgcontentdiv {
+    float: right;
+    height: 45px;
+    line-height: 45px
+}
+
+.msgdiv .msgtime {
+    float: right;
+    color: #384560;
+    margin-left: 10px;
+    margin-right: 15px
+}
+
+.msgdiv .scroll_vertical {
+    height: 60px;
+    width: auto;
+    padding: 0;
+    background: 0
+}
+
+.msgdiv .scroll_vertical .box {
+    top: 0;
+    height: 45px
+}
+
+.msgdiv .scroll_vertical .list {
+    right: 0
+}
+
+.msgdiv .scroll_vertical .list li {
+    height: 45px
+}
+
+.msg_note {
+    background: url('/social/images/msg_note.png');
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    cursor: pointer
+}
+
+.msg_none {
+    background: url('/social/images/msg_none.png');
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    cursor: pointer
+}
+
+.socialremind {
+    position: absolute;
+    top: 30px;
+    z-index: 999999;
+    width: 204px;
+    display: none;
+    height: 0
+}
+
+.socialremindul {
+    background: #fff;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: 1px solid #e3e6f0;
+    border-top: 0
+}
+
+.socialremindul .nodata {
+    line-height: 30px;
+    text-align: center;
+    display: block
+}
+
+.socialremindul li {
+    background: #fff;
+    color: #919191;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 12px;
+    cursor: pointer;
+    list-style-type: none
+}
+
+.socialremindul li span {
+    float: right;
+    margin-right: 20px;
+    color: #fe9348
+}
+
+.socialremindul .liOver {
+    background: #f0f0f0 !important
+}
+
+.socialremind .title {
+    height: 33px;
+    background: #33a3ff
+}
+
+.socialremind .title .name {
+    color: #fff;
+    float: left;
+    line-height: 33px;
+    width: 130px;
+    height: 100%
+}
+
+.socialremind .title .icon {
+    float: left;
+    width: 36px;
+    height: 100%;
+    background: url('/wui/theme/ecology8/page/images/remind/icon_wev8.png');
+    background-position: center center;
+    background-repeat: no-repeat
+}
+
+.socialremind .title .closebtn {
+    float: right;
+    width: 36px;
+    height: 100%;
+    background: url('/wui/theme/ecology8/page/images/remind/close_wev8.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer
+}
+
+.socialremind .bottomfoot {
+    width: 100%;
+    height: 12px;
+    background: url('/social/images/social_main_remind.png') 20px;
+    background-repeat: no-repeat
+}
+
+.grouprighttop {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative
+}
+
+.groupnone {
+    width: 260px;
+    height: 120px;
+    background: url('../images/group_none_wev8.png') #78c4e3;
+    margin-top: 25px;
+    margin-left: 15px;
+    cursor: pointer
+}
+
+.groupnone:hover {
+    background-color: #5bb4d8
+}
+
+.workersnone {
+    width: 260px;
+    height: 120px;
+    background: url('../images/works_none_wev8.png') #f58a7c;
+    margin-top: 25px;
+    margin-left: 15px;
+    cursor: pointer
+}
+
+.workersnone:hover {
+    background-color: #f47564
+}
+
+.baikenone {
+    width: 260px;
+    height: 120px;
+    background: url('../images/baike_none_wev8.png') #ffc165;
+    margin-top: 25px;
+    margin-left: 15px;
+    cursor: pointer
+}
+
+.baikenone:hover {
+    background-color: #faae3e
+}
+
+.grouprighttop .noneTip {
+    padding-top: 70px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center
+}
+
+.recomdiv {
+    margin-top: 10px
+}
+
+.recomdiv .recomtop {
+    height: 45px;
+    background: #4fc3b9;
+    line-height: 45px
+}
+
+.recomdiv .recomg {
+    color: #fff;
+    font-size: 14px;
+    float: left;
+    margin-left: 20px
+}
+
+.recomdiv .recomchange {
+    color: #fff;
+    font-size: 14px;
+    float: right;
+    background: #299988;
+    font-size: 14px;
+    width: 65px;
+    height: 25px;
+    line-height: 25px;
+    margin-top: 10px;
+    margin-right: 10px;
+    text-align: center
+}
+
+.recomdiv .recomchange:hover {
+    background-color: #0a8472
+}
+
+.recomdiv .recomitemdiv {
+    padding-left: 10px;
+    margin-right: 5px
+}
+
+.recomdiv .recomitem {
+    width: 100%;
+    margin-top: 15px
+}
+
+.recomdiv .recomitem .recomhead {
+    height: 35px;
+    width: 45px;
+    text-align: center
+}
+
+.recomdiv .recomitem .recomusername {
+    width: 45px;
+    text-align: center;
+    margin-top: 3px
+}
+
+.recomdiv .recomitem .recomname {
+    color: #5bb4d8
+}
+
+.recomdiv .recomitem .recomlabel {
+    margin-top: 8px
+}
+
+.recomdiv .recomitem .recomapply {
+    background: #4fc3b9;
+    width: 86px;
+    height: 25px;
+    line-height: 25px;
+    color: #fff;
+    margin-top: 8px
+}
+
+.recomdiv .recomitem .recomadd {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 3px
+}
+
+.recomdiv .shreLeft1 {
+    margin-left: 20px;
+    float: left;
+    width: 6px;
+    height: 25px;
+    background: url('/social/images/share_left1_wev8.png') no-repeat left center
+}
+
+.recomdiv .shreRight2 {
+    margin-left: 20px;
+    float: left;
+    width: 6px;
+    height: 25px;
+    background: url('/social/images/share_right2_wev8.png') no-repeat left center
+}
+
+.groupadd {
+    float: right;
+    width: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    cursor: pointer
+}
+
+.groupadd:hover {
+    background-color: #f2f2f2
+}
+
+.recomdiv .workerhot {
+    background: #8146bc
+}
+
+.recomdiv .workerhot:hover {
+    background-color: #6830a0
+}
+
+.recomitem .comment {
+    background: url('/social/images/icon_comment.png') no-repeat center center;
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px
+}
+
+.recomitem .zan {
+    background: url('/social/images/iocon_zan.png') no-repeat center center;
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px
+}
+
+.recomitem .option {
+    color: #b0b0b0;
+    float: left;
+    margin-right: 20px;
+    line-height: 20px
+}
+
+.recomdiv .baikerecom {
+    background: #c67c0a;
+    cursor: pointer
+}
+
+.recomdiv .baikerecom:hover {
+    background: #ae6f0d
+}
+
+.visitdiv {
+    margin-left: 10px;
+    margin-right: 10px;
+    border-top: 1px solid #f1f5fb
+}
+
+.visitdiv .visittop {
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+.visitdiv .visittitle {
+    float: left;
+    font-size: 14px
+}
+
+.visitdiv .visititem {
+    float: left;
+    width: 56px
+}
+
+.visitdiv .visititem .visithead {
+    height: 35px;
+    width: 35px;
+    margin-bottom: 3px;
+    padding-left: 10px
+}
+
+.visitdiv .visititem .visittime {
+    color: #afbed6;
+    text-align: center
+}
+
+.groupMsgdiv {
+    margin-top: 10px;
+    border: 1px solid #d5e0f1;
+    background-color: #fff;
+    height: 80px;
+    cursor: pointer
+}
+
+.groupMsgatt {
+    float: left;
+    width: 18px;
+    height: 18px;
+    background: url('/social/images/group_att_wev8.png') no-repeat center center;
+    margin-left: 10px;
+    height: 28px;
+    cursor: pointer
+}
+
+.groupMsgatt2 {
+    float: left;
+    width: 18px;
+    height: 18px;
+    background: url('/social/images/group_att_2_wev8.png') no-repeat center center;
+    margin-left: 10px;
+    height: 28px;
+    cursor: pointer
+}
+
+.groupMsgup {
+    float: left;
+    width: 18px;
+    height: 18px;
+    background: url('/social/images/group_totop_wev8.png') no-repeat center center;
+    margin-left: 10px;
+    height: 28px;
+    cursor: pointer
+}
+
+.groupMsgup2 {
+    float: left;
+    width: 18px;
+    height: 18px;
+    background: url('/social/images/group_totop_2_wev8.png') no-repeat center center;
+    margin-left: 10px;
+    height: 28px;
+    cursor: pointer
+}
+
+.groupMsgdiv .groupmsgicon {
+    margin-right: 20px;
+    float: left;
+    background: url('../images/head_group.png') no-repeat center center;
+    width: 35px;
+    height: 45px;
+    line-height: 45px;
+    margin-left: 10px
+}
+
+.groupMsgdiv .groupmsgname {
+    float: left
+}
+
+.groupMsgdiv .groupmsgcount {
+    float: left;
+    color: #394661;
+    font-weight: bold;
+    margin-left: 20px
+}
+
+.groupMsgdiv .groupmsgcontentdiv {
+    height: 28px;
+    line-height: 28px;
+    margin-right: 15px
+}
+
+.groupMsgdiv .groupmsgtime {
+    float: right;
+    color: #384560;
+    margin-right: 15px
+}
+
+.chatList {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 170px;
+    top: 61px;
+    overflow-y: hidden;
+    background-color: #fafafa;
+}
+
+.chatList .loadmorediv {
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    width: 90px;
+    margin-left: -45px;
+    background: #fafafa;
+    text-align: center
+}
+
+.chatList .loadmorediv>span {
+    cursor: pointer;
+    color: #5cb5d8;
+    margin-left: 4px
+}
+
+.chatList .loadmorediv * {
+    vertical-align: middle
+}
+
+.chatList .loadmorediv>span:hover {
+    text-decoration: underline
+}
+
+.chatList .uimg {
+    cursor: pointer
+}
+
+.chatList .chatItemdiv .chatLItem,.chatList .chatItemdiv .chatRItem {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+.chatList .chatItemdiv .chatLItem .chatHead,.chatList .chatItemdiv .chatRItem .chatHead {
+    height: 35px;
+    width: 45px
+}
+.headblur{
+    filter: blur(6px);
+    -webkit-filter: blur(6px);
+    -moz-filter: blur(6px);
+    -ms-filter: blur(6px);
+    -o-filter: blur(6px);
+}
+.chatList .chatItemdiv .chatLItem .chattd,.chatList .chatItemdiv .chatRItem .chattd {
+    position: relative;
+    width: 73%
+}
+
+.chatList .chatItemdiv .chatLItem .chattd {
+    float: left
+}
+
+.chatList .chatItemdiv .chatLItem .chatHead {
+    float: left
+}
+
+.chatList .chatItemdiv .chatLItem .chatName {
+    height: 18px;
+    line-height: 18px;
+    float: left;
+    color: #8f8f8f
+}
+
+.chatList .chatItemdiv .chatLItem .chatArrow {
+    background: url('../images/chat_l_arrow_wev8.png');
+    width: 8px;
+    height: 15px;
+    position: absolute;
+    left: 2px;
+    top: 24px
+}
+
+.chatList .chatItemdiv .chatLItem .chatContentdiv {
+    margin-left: 9px;
+    width: 90%;
+    word-break: break-all
+}
+
+.chatList .chatItemdiv .chatLItem .chatContent {
+    background: #edeff7;
+    float: left;
+    padding: 8px;
+    border-radius: 5px;
+    max-width: 75%;
+    word-wrap: break-word;
+    word-break: normal;
+}
+
+.chatList .chatItemdiv .chatLItem .msgUnreadCount {
+    float: left;
+    color: #b4c2d5;
+    padding-left: 10px;
+}
+.chatList .chatItemdiv .chatLItem .msgUnreadCount:hover {
+    color: #7eacf5;
+    cursor: pointer
+}
+.chatList .chatItemdiv .chatLItem .chatFloatmenu {
+    float: left;
+    left: 0
+}
+.chatList .chatItemdiv .chatLItem .beforeAndAfterMsg {
+    float: left;
+    color: #b4c2d5;
+    padding-left: 10px
+}
+
+.chatList .chatItemdiv .chatLItem .beforeAndAfterMsg:hover {
+    color: #7eacf5;
+    cursor: pointer
+} 
+.chatList .chatItemdiv .chatLItem .chatFloatmenuWrap {
+    float: left;
+    left: 8px
+}
+
+.chatList .chatItemdiv .chatRItem .chattd {
+    float: right;
+    width: 70%
+}
+
+.chatList .chatItemdiv .chatRItem .chatHead {
+    float: right
+}
+
+.chatList .chatItemdiv .chatRItem .chatName {
+    height: 18px;
+    line-height: 18px;
+    float: right;
+    margin-right: 5px;
+    color: #8f8f8f
+}
+
+.chatList .chatItemdiv .chatRItem .chatArrow {
+    background: url('../images/chat_r_arrow_wev8.png');
+    width: 8px;
+    height: 15px;
+    right: 2px;
+    position: absolute;
+    top: 24px
+}
+
+.chatList .chatItemdiv .arrow_bubble_color .chatArrow {
+    height: 0px;
+    right: -5px;
+    border-left: 7px solid #87e2f2;
+    border-top: 7px solid transparent;
+    border-bottom: 6px solid transparent;
+    background: unset;
+}
+
+.chatList .chatItemdiv .arrow_l_bubble_color .chatArrow {
+    height: 0px;
+    left: -5px;
+    border-left: unset;
+    border-right: 7px solid #87e2f2;
+    border-top: 7px solid transparent;
+    border-bottom: 6px solid transparent;
+    background: unset;
+}
+
+.chatList .chatItemdiv .chatRItem .chatContentdiv {
+    margin-right: 9px;
+    width: 100%;
+    float: right;
+    word-break: break-all;
+    word-break: break-word;
+}
+
+.chatList .chatItemdiv .chatRItem .chatContent {
+    float: right;
+    background: #87e2f2;
+    padding: 8px;
+    border-radius: 5px;
+    max-width: 75%;
+    word-wrap: break-word;
+    word-break: normal;
+}
+
+.chatList .chatItemdiv .chatRItem .msgUnreadCount {
+    float: right;
+    color: #b4c2d5;
+    padding-right: 10px
+}
+
+.chatList .chatItemdiv .chatRItem .msgUnreadCount:hover {
+    color: #7eacf5;
+    cursor: pointer
+}
+.chatList .chatItemdiv .chatRItem .beforeAndAfterMsg {
+    float: right;
+    color: #b4c2d5;
+    padding-right: 10px
+}
+
+.chatList .chatItemdiv .chatRItem .beforeAndAfterMsg:hover {
+    color: #7eacf5;
+    cursor: pointer
+} 
+.chatList .chatItemdiv .chatRItem .chatFloatmenu {
+    float: right;
+    right: 0
+}
+
+.chatList .chatItemdiv .chatRItem .chatFloatmenuWrap {
+    float: right;
+    right: 8px
+}
+
+.chatList .chatItemdiv .defLinkWrap {
+    background: #3497f3;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px
+}
+
+.chatList .chatTime {
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: #afbed3
+}
+
+.fileList {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 61px;
+    z-index: 10;
+    background-color: #fff
+}
+
+.chatdivBox {
+    position: fixed;
+    left: 223px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #fff
+}
+
+.chatdiv .chatclose {
+    width: 14px;
+    height: 14px;
+    background: url('../images/chat_close_wev8.png');
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 10
+}
+
+.chatleft {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0
+}
+
+.chatdiv .chattop {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 60px;
+    border: 1px solid #e3e6f0;
+    border-top: 0
+}
+
+.chatdiv .chattop .signatures{
+	width:360px;
+	overflow: hidden;   
+    text-overflow:ellipsis;   
+    white-space: nowrap;
+    vertical-align:text-bottom;
+    line-height:initial;
+	color: #aaaaaa;
+	padding-top:11px;
+	padding-left:15px;
+}
+
+.chatdiv .chattop .chattab {
+    cursor: pointer;
+    margin-left: 25px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 14px;
+    padding-left: 30px
+}
+
+.chatdiv .chattop .chattabdiv .chatitem {
+    background: url('../images/chat_chat_wev8.png') no-repeat left center
+}
+
+.chatdiv .chattop .chattabdiv .fileitem {
+    background: url('../images/chat_file_wev8.png') no-repeat left center
+}
+
+.chatdiv .chattop .chatActiveTab .chatitem {
+    background: url('../images/chat_chat_check_wev8.png') no-repeat left center
+}
+
+.chatdiv .chattop .chatActiveTab .fileitem {
+    background: url('../images/chat_file_check_wev8.png') no-repeat left center
+}
+
+.chatdiv .chatbottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-height: 168px;
+    border: 1px solid #e3e6f0;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0
+    background: #fff;
+}
+
+.chatdiv .chatbottom .chatremarkdiv {
+    padding: 10px 10px 5px 10px;
+    background: #fff
+}
+
+.chatdiv .chatbottom .chatAppdiv {
+    position: relative
+}
+
+.chatdiv .chatbottom .chatapp {
+    float: left;
+    width: 16px;
+    height: 25px;
+    padding: 0 5px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+    overflow: hidden;
+    border: 1px solid #fff;
+}
+.chatdiv .chatbottom .chatapp:hover{
+    border:1px solid #E3E6F0;
+}
+.chatdiv .chatbottom .chatapp .screenshotup{
+    float: right;
+    width: 10px;
+    height: 25px; 
+    background-repeat: no-repeat;
+    background-position: center center; 
+    cursor: pointer; 
+    overflow: hidden; 
+    border: 1px solid #fff;
+}
+.chatdiv .chatbottom .chatapp .screenshotup:active{
+     background-position: 50% 60%; 
+}
+.chatdiv .chatbottom .chatapp_active {
+    background-color: #F5FAFB;
+    border: 1px solid #eee;
+}
+
+/*FontBox begin*/
+.fontBox {
+	border-top: 1px solid #e3e6f0;
+    position: absolute;
+    height: 36px;
+    bottom: 38px;
+    left: -10px;
+    right: -10px;
+    background: #fff;
+}
+.fontBox:hover {
+	cursor: default;
+}
+
+.fontBox .fs_selector {
+	width: 60px;
+}
+
+
+.fontBox .btn_color_pick {
+	border: 1px solid #eee;
+    border-radius: 3px;
+    display: inline-block;
+    width: 53px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    cursor: pointer;
+    margin: 3px;
+}
+
+.fontBox .btn_spec {
+	text-align: center;
+    border: 1px solid #eee;
+    cursor: pointer;
+    color: #b4c2d5;
+}
+
+.fontBox .btn_spec:hover {
+	color: #03a996;
+	border: 1px solid #ccc;
+}
+
+.color_default {background-color: #87e2f2 !important;}
+.color_purple {background-color: #BDCCF5  !important;}
+.color_pink {background-color: #FED2EB  !important;}
+.color_red {background-color: #FFC8D1  !important;}
+.color_orange {background-color: #FFE49D  !important;}
+.color_green {background-color: #E4F2D9  !important;}
+.color_blue {background-color: #D8F2F1  !important;}
+
+.arrow_color_default {border-left: 7px solid #87e2f2 !important;}
+.arrow_color_purple {border-left: 7px solid #BDCCF5  !important;}
+.arrow_color_pink {border-left: 7px solid #FED2EB  !important;}
+.arrow_color_red {border-left: 7px solid #FFC8D1  !important;}
+.arrow_color_orange {border-left: 7px solid #FFE49D  !important;}
+.arrow_color_green {border-left: 7px solid #E4F2D9  !important;}
+.arrow_color_blue {border-left: 7px solid #D8F2F1  !important;}
+
+.arrow_l_color_default {border-right: 7px solid #87e2f2 !important;}
+.arrow_l_color_purple {border-right: 7px solid #BDCCF5  !important;}
+.arrow_l_color_pink {border-right: 7px solid #FED2EB  !important;}
+.arrow_l_color_red {border-right: 7px solid #FFC8D1  !important;}
+.arrow_l_color_orange {border-right: 7px solid #FFE49D  !important;}
+.arrow_l_color_green {border-right: 7px solid #E4F2D9  !important;}
+.arrow_l_color_blue {border-right: 7px solid #D8F2F1  !important;}
+
+.font9 div {font-size: 9px !important}
+.font10 div {font-size: 10px !important}
+.font11 div {font-size: 11px !important}
+.font12 div {font-size: 12px !important}
+.font13 div {font-size: 13px !important}
+.font14 div {font-size: 14px !important}
+.font15 div {font-size: 15px !important}
+.font16 div {font-size: 16px !important}
+.font17 div {font-size: 17px !important}
+.font18 div {font-size: 18px !important}
+.font19 div {font-size: 19px !important}
+.font20 div {font-size: 20px !important}
+.font21 div {font-size: 21px !important}
+.font22 div {font-size: 22px !important}
+
+.fontBox .color_pick_pane {
+	display: none;
+	border: 1px solid #E8EEF8;
+    position: relative;
+    z-index: 10;
+    width: 324px;
+    min-height: 65px;
+    left: 216px;
+    background: #fff;
+    overflow-y: visible;
+    overflow-wrap: break-word;
+    padding: 2px;
+}
+
+.fontBox .arrow {
+	position: absolute;
+    z-index: 11;
+    width: 12px;
+    height: 7px;
+    left: 71px;
+    top: -7px;
+    background: url("/social/images/chat_arrow_wev8.png") no-repeat center center;
+}
+
+.fontBox form, .fontBox table {
+	width: 100%;
+	height: 100%;
+}
+
+.fontBox span {
+	padding: 0 10px;
+	vertical-align: middle;
+}
+
+/*FontBox end*/
+.chatdiv .chatbottom .moreApp {
+    width: 75px;
+    background: #717e99;
+    position: absolute;
+    left: 75px;
+    bottom: 35px;
+    display: none;
+    color: #fff;
+    z-index: 1
+}
+
+.chatdiv .chatbottom .moreApp .appitem {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 16px;
+    line-height: 16px;
+    margin-left: 12px;
+    cursor: pointer
+}
+
+.chatdiv .chatbottom .chatcontent {
+    min-height: 85px;
+    resize: none;
+    color: #000;
+    border: 0;
+    outline: 0;
+    overflow: auto;
+    word-break: normal;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    overflow-wrap: break-word;
+    overflow-x: hidden;
+    bottom: 41px;
+    position: absolute;
+    right: 5px;
+    left: 5px;
+    top: 40px
+}
+
+.chatdiv .chatbottom .chatoption {
+    border-top: 1px solid #e3e6f0;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0
+}
+
+.chatdiv .chatbottom .chatSend {
+    float: right;
+    margin-top: 8px;
+    height: 25px;
+    line-height: 25px;
+    color: #fff;
+    background: #5cb5d8;
+    margin-left: 20px;
+    cursor: pointer;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius:0px;
+    border-bottom-left-radius: 6px;
+}
+.chatdiv .chatbottom .chatSendType {
+    float: right;
+    margin-top: 8px;
+    margin-right: 10px;
+    height: 25px;
+    line-height: 25px;
+    color: #fff;
+    background: #5cb5d8;
+    cursor: pointer;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 0px;
+	background-image : url('/social/images/arrow_up_wev8.png');
+	background-repeat : no-repeat;
+	background-position :center
+}
+.chatdiv .chatbottom .chatSend:hover {
+    background: #75cdf0
+}
+
+.chatdiv .chatbottom .chatRecord {
+    float: right;
+    background: url('/social/images/chat_record_wev8.png') no-repeat left center;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 20px;
+    cursor: pointer
+}
+
+.chatdiv .chatbottom .relatedHrmBox {
+    width: 160px;
+    position: absolute;
+    left: 0;
+    top: -225px;
+    color: #fff;
+    z-index: 1;
+    border: 1px solid #e3e6f0;
+    background: #fff
+}
+
+.chatdiv .chatbottom .relatedHrmBox .relatedSearch {
+    padding: 5px;
+    border-bottom: 1px solid #e3e6f0
+}
+
+.chatdiv .chatbottom .relatedHrmBox .relatedList {
+    height: 135px;
+    overflow-y: auto;
+    padding-top: 5px
+}
+
+.chatdiv .chatbottom .relatedHrmBox .relatedBottm {
+    height: 35px;
+    border-top: 1px solid #e3e6f0;
+    line-height: 35px
+}
+
+.chatdiv .chatbottom .faceBox {
+    position: absolute;
+    left: 0;
+    top: -95px;
+    color: #fff;
+    z-index: 91;
+    border: 1px solid #e3e6f0;
+    background: #fff;
+    padding: 10px;
+    max-width: 513px
+}
+
+.chatdiv .chatbottom .sendtype {
+    position: absolute;
+    right: -1px;
+    bottom: 40px;
+    z-index: 1;
+    border: 1px solid #e3e6f0;    
+    background: #fff;
+    width: 180px
+}
+
+.chatdiv .chatbottom .sendtypeItme {
+    height: 27px;
+    line-height: 26px;
+    padding-left: 5px;
+    padding-right: 8px;
+    cursor: pointer
+}
+
+.chatdiv .chatbottom .sendtypeItme:hover {
+    background-color: #0084ff;
+    color: #fff;
+    opacity: .6;
+    filter: alpha(opacity=60)
+}
+/*----screenshot----*/
+.chatdiv .chatbottom .screenshot {
+    position: absolute;
+    left: 126px;
+    top: 43px;
+    z-index: 1;
+    border: 1px solid #e3e6f0;    
+    background: #fff;
+    width: 152px
+}
+
+.chatdiv .chatbottom .screenshotItme {
+    height: 27px;
+    line-height: 26px;
+    padding-left: 5px;
+    padding-right: 8px;
+    cursor: pointer
+}
+
+.chatdiv .chatbottom .screenshotItme:hover {
+    background-color: #0084ff;
+    color: #fff;
+    opacity: .6;
+    filter: alpha(opacity=60)
+}
+/*----screenshot----*/
+.clearmsg {
+    float: right;
+    background: url('/social/images/left_clear_chat_wev8.png') no-repeat center center;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    opacity: .3;
+    filter: alpha(opacity=30);
+    margin-right: 7px;
+    margin-top: 3px
+}
+
+.clearmsg:hover {
+    opacity: 1;
+    filter: alpha(opacity=100)
+}
+
+.chatdiv .chatbottom .mitem {
+    cursor: pointer
+}
+
+.chatdiv .chatbottom .mitem:hover {
+    background-color: #f4fcfa
+}
+
+.chatdiv .chatbottom .mitem .mhead {
+    float: left;
+    margin-left: 8px;
+    height: 30px;
+    line-height: 30px;
+    width: 30px
+}
+
+.chatdiv .chatbottom .mitem .mname {
+    height: 30px;
+    line-height: 30px;
+    color: #3a4360
+}
+
+.chatdiv .chatRight {
+    position: absolute;
+    width: 309px;
+    right: 0;
+    top: 0;
+    bottom: 0
+}
+
+.memberitem {
+    margin-top: 10px
+}
+
+.memberitem .mhead {
+    float: left;
+    margin-left: 8px;
+    height: 45px;
+    line-height: 45px;
+    width: 45px
+}
+
+.memberitem .mname,.memberitem .msub,.memberitem .mjob,.memberitem .mdept {
+    height: 45px;
+    line-height: 45px
+}
+
+.memberitem .mname,.memberitem .mjob {
+    color: #3a4360
+}
+
+.memberitem .msub,.memberitem .mdept {
+    color: #727e96;
+    float: right
+}
+
+.head60 {
+    width: 60px;
+    height: 60px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    cursor: pointer
+}
+
+.head50 {
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    cursor: pointer
+}
+
+.head35 {
+    width: 35px;
+    height: 35px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    cursor: pointer
+}
+
+.head28 {
+    width: 28px;
+    height: 28px;
+    -webkit-border-radius: 28px;
+    -moz-border-radius: 28px;
+    border-radius: 28px;
+    cursor: pointer
+}
+
+.head40 {
+    width: 40px;
+    height: 40px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    cursor: pointer
+}
+
+.head22 {
+    width: 22px;
+    height: 22px;
+    -webkit-border-radius: 22px;
+    -moz-border-radius: 22px;
+    border-radius: 22px;
+    cursor: pointer
+}
+
+.msgbox {
+    position: fixed;
+    left: 223px;
+    right: 319px;
+    top: 0;
+    bottom: 0;
+    background: #fff;
+    display: none;
+    z-index: 111
+}
+
+.msgbox .msgclose {
+    width: 14px;
+    height: 14px;
+    background: url('/social/images/chat_close_wev8.png');
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    z-index: 10
+}
+
+.msgbox .msgtop {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 60px;
+    border: 1px solid #e3e6f0;
+    border-top: 0
+}
+
+.msgbox .msgtop .msgtab {
+    cursor: pointer;
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    font-size: 14px;
+    margin-left: 40px;
+    position: relative
+}
+
+.msgbox .msgtop .msgtotal {
+    width: 35px;
+    height: 20px;
+    border-radius: 10px;
+    top: 5px;
+    right: -30px;
+    line-height: 20px;
+    text-align: center;
+    color: #adbfd8
+}
+
+.msgbox .msgtop .msgArrow {
+    position: absolute;
+    width: 12px;
+    height: 7px;
+    background: url('/social/images/chat_chat_arrow_wev8.png');
+    top: 54px;
+    left: 40px
+}
+
+.msgbox .msgcenter {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 61px;
+    background: #eff6fb
+}
+
+.msgbox .msgitem {
+    height: 85px;
+    background: #fff;
+    border-bottom: 1px solid #e3e6f0
+}
+
+.msgbox .msgitem .msghead {
+    float: left;
+    width: 45px;
+    margin-left: 30px;
+    margin-top: 20px
+}
+
+.msgbox .msgitem .msgcdiv {
+    float: left;
+    margin-top: 18px
+}
+
+.msgbox .msgitem .msgcdiv div {
+    height: 20px;
+    line-height: 20px
+}
+
+.msgbox .msgitem .msgsdiv {
+    float: right;
+    height: 60px;
+    width: 235px;
+    margin-top: 10px;
+    margin-right: 10px
+}
+
+.msgbox .msgitem .msgmicon {
+    float: left;
+    width: 60px;
+    height: 60px
+}
+
+.msgbox .msgitem .msgshare {
+    float: left;
+    width: 175px;
+    padding-top: 15px
+}
+
+.msgbox .msgworkersitem {
+    border-left: 2px solid #f47564
+}
+
+.msgbox .msgworkersitem .msgsdiv {
+    border: 1px dashed #f47564;
+    background: #ffece8
+}
+
+.msgbox .msgworkersitem .msgmicon {
+    background: url('/social/images/icon_workers_wev8.png') no-repeat center center
+}
+
+.msgbox .msgworkersitem .msgshare {
+    color: #f47564
+}
+
+.personatthead {
+    padding-top: 15px;
+    border-bottom: 1px solid #f1f5fb;
+    padding-bottom: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative
+}
+
+.personatthead .headatt {
+    position: absolute;
+    right: 40px;
+    top: 18px;
+    width: 49px;
+    height: 17px;
+    color: #09f;
+    text-align: right;
+    cursor: pointer
+}
+
+.msgbox .msgbaikeitem {
+    border-left: 2px solid #faae3e
+}
+
+.msgbox .msgbaikeitem .msgsdiv {
+    border: 1px dashed #faae3e;
+    background: #fff5e9
+}
+
+.msgbox .msgbaikeitem .msgmicon {
+    background: url('/social/images/icon_baike_wev8.png') no-repeat center center
+}
+
+.msgbox .msgbaikeitem .msgshare {
+    color: #faae3e
+}
+
+.msgtop .morelabel {
+    background: url('/social/images/icon_more.png') no-repeat center center;
+    cursor: pointer;
+    float: left;
+    width: 30px;
+    margin-left: 20px
+}
+
+.msgtop .moreOption {
+    float: left;
+    background: #abb1d5;
+    position: absolute;
+    color: #fff;
+    z-index: 1;
+    display: none
+}
+
+.msgtop .optionitem {
+    cursor: pointer;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    paddposition: relative;
+    width: 86px;
+    text-align: center
+}
+
+.msgtop .optionitem:hover {
+    background-color: #8a91bd
+}
+
+.msgtop .searchbaike {
+    float: right;
+    border: 1px solid #f1f5fb;
+    height: 30px;
+    width: 150px;
+    margin-top: 10px;
+    margin-right: 50px
+}
+
+.searchbaike .seacrhinput {
+    width: 129px;
+    height: 100%;
+    vertical-align: top;
+    border: 0
+}
+
+.searchbaike .searchbtn {
+    float: right;
+    width: 20px;
+    height: 100%;
+    background: url('/social/images/search_wev8.png') no-repeat center center;
+    cursor: pointer
+}
+
+.searchbaike .searchbtnon {
+    border: 1px solid #717e99
+}
+
+.searchbaike .searchleft {
+    float: left;
+    height: 100%
+}
+
+.searchbaike .baikeseacrhdiv {
+    height: 30px;
+    color: #afbed8;
+    line-height: 30px;
+    width: 129px
+}
+
+.msgbox .msgchatitem {
+    border-left: 2px solid #58b5d6
+}
+
+.msgbox .msgchatitem .msgsdiv {
+    border: 1px dashed #58b5d6;
+    background: #e7f8ff
+}
+
+.msgbox .msgchatitem .msgmicon {
+    background: url('/social/images/icon_group_wev8.png') no-repeat center center
+}
+
+.msgbox .msgchatitem .msgshare {
+    color: #58b5d6
+}
+
+.searchRdiv {
+    width: 145px;
+    height: 24px;
+    border: 1px solid #f1f5fb
+}
+
+.searchRdiv .searchleft {
+    float: left;
+    height: 24px
+}
+
+.searchRdiv .searchinput {
+    width: 125px;
+    height: 100%;
+    border: 0;
+    vertical-align: top
+}
+
+.searchRdiv .searchbtn {
+    float: right;
+    width: 20px;
+    height: 100%;
+    background: url('/social/images/search_wev8.png') no-repeat center center;
+    cursor: pointer
+}
+
+.searchRdiv .searchbtn2 {
+    float: right;
+    width: 20px;
+    height: 36px;
+    background: url('/social/images/search2_wev8.png') no-repeat center center;
+    cursor: pointer;
+    background-color: #adbcd3
+}
+
+.searchLdiv {
+    width: 200px;
+    height: 30px;
+    border: 1px solid #f1f5fb
+}
+
+.searchLdiv .searchleft {
+    float: left;
+    height: 100%
+}
+
+.searchLdiv .searchinput {
+    width: 147px;
+    height: 100%;
+    border: 0;
+    vertical-align: top;
+    margin-left: 5px
+}
+
+.searchLdiv .searchbtn {
+    float: left;
+    width: 20px;
+    height: 100%;
+    background: url('/social/images/search_wev8.png') no-repeat center center
+}
+
+.searchleft .searchclose {
+    display: none;
+    float: right;
+    background: url('/social/images/search_close_wev8.png') no-repeat center center;
+    width: 18px;
+    height: 100%;
+    cursor: pointer;
+    opacity: .3;
+    filter: alpha(opacity=30)
+}
+
+.searchleft .searchclose:hover {
+    opacity: 1;
+    filter: alpha(opacity=100)
+}
+
+.hoverborder:hover {
+    outline: 0;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed
+}
+
+.hoverborder_white:hover {
+    outline: 0;
+    border-color: #fff;
+    box-shadow: 0 0 20px #fff
+}
+
+.mainbox {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0
+}
+
+.mainbox .leftbox {
+    position: absolute;
+    left: 0;
+    width: 223px;
+    bottom: 0;
+    top: 0
+}
+
+.mainbox .centerbox {
+    position: absolute;
+    left: 223px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: auto
+}
+
+.mainbox .centerLeftbox {
+    position: absolute;
+    left: 0;
+    right: 309px;
+    top: 0;
+    background: #eff6fb;
+    padding: 10px
+}
+
+.mainbox .centerRightbox {
+    position: absolute;
+    right: 0;
+    width: 309px;
+    top: 0;
+    bottom: 0
+}
+
+.mainbox .remarkMain .remarkdiv {
+    border: 1px solid #e3e6f0;
+    padding: 10px 10px 5px 10px;
+    background: #fff
+}
+
+.remarkMain .contentdiv {
+    height: 20px;
+    width: 100%;
+    color: #afbed8;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    overflow-y: auto
+}
+
+.deletelabel {
+    background: url('/social/images/icon_delete_wev8.png') no-repeat center center;
+    width: 11px;
+    height: 11px;
+    top: 0;
+    right: 0;
+    position: absolute
+}
+
+.remarkMain .remarkappdiv .faceBox {
+    position: absolute;
+    left: 0;
+    top: 25px;
+    color: #fff;
+    z-index: 1;
+    border: 1px solid #e3e6f0;
+    background: #fff;
+    padding: 10px
+}
+
+.faceBox .facetable {
+    color: black;
+    border-collapse: collapse;
+    background: url('/social/images/face_bg_wev8.png') no-repeat 3px 0
+}
+
+.faceBox td {
+    width: 29px;
+    height: 29px;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle
+}
+
+.relatedHrmBox {
+    width: 160px;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    color: #fff;
+    z-index: 1;
+    border: 1px solid #e3e6f0;
+    background: #fff
+}
+
+.remarkMain .remarkappdiv .relatedHrmBox .relatedSearch {
+    padding: 5px;
+    border-bottom: 1px solid #e3e6f0
+}
+
+.remarkMain .remarkappdiv .relatedHrmBox .relatedList {
+    height: 135px;
+    overflow-y: auto;
+    padding-top: 5px
+}
+
+.remarkMain .remarkappdiv .relatedHrmBox .relatedBottm {
+    height: 35px;
+    border-top: 1px solid #e3e6f0;
+    line-height: 35px
+}
+
+.remarkMain .sendBtn {
+    float: right;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    background: #aab2d4;
+    width: 95px;
+    margin-left: 20px;
+    cursor: pointer
+}
+
+.remarkMain .sendBtn:hover {
+    background: #979dc4
+}
+
+.imgBox {
+    padding: 10px;
+    width: 195px;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    z-index: 1;
+    border: 1px solid #e3e6f0;
+    background: #fff;
+    display: none
+}
+
+.imgBox .imgAdddiv {
+    width: 60px;
+    height: 60px;
+    border: 2px dashed #d0d0d0
+}
+
+.imgBox .imgAdddiv .imgAdd {
+    height: 28px;
+    width: 28px;
+    line-height: 24px;
+    background: url('/social/images/img_add_wev8.png') no-repeat center center;
+    margin-left: 16px;
+    margin-top: 16px;
+    cursor: pointer
+}
+
+.imgBox .imgAdddiv:hover {
+    border: 2px dashed #2abaee
+}
+
+.imgBox .imgAdddiv .imgAdd:hover {
+    background: url('/social/images/img_add_hot_wev8.png') no-repeat center center
+}
+
+.imgBox .delimg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+    background: #fff;
+    color: #c6c6c6;
+    border: 1px solid #e0e0e0;
+    height: 13px;
+    width: 13px;
+    line-height: 11px;
+    display: none
+}
+
+.imgBox .delimg:hover {
+    background: #ccc;
+    color: #fff
+}
+
+.imgBox .imgitemdiv {
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    width: 60px;
+    position: relative
+}
+
+.imgBox .imgitem {
+    height: 60px;
+    line-height: 60px;
+    background: #dadada;
+    text-align: center
+}
+
+.imgBox .swfupload,.accBox .swfupload {
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    margin-left: 5px
+}
+
+.imgBox .imgArrow,.address .imgArrow {
+    position: absolute;
+    width: 15px;
+    height: 8px;
+    top: -8px;
+    left: 75px;
+    background: url('/social/images/arrow1_wev8.png')
+}
+
+.imgBox .fileProgress {
+    height: 2px;
+    line-height: 2px;
+    position: absolute;
+    bottom: 2px
+}
+
+.accBox {
+    padding: 5px;
+    width: 160px;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    z-index: 1;
+    border: 1px solid #e3e6f0;
+    background: #fff
+}
+
+.accBox .accArrow {
+    position: absolute;
+    width: 15px;
+    height: 8px;
+    top: -8px;
+    left: 100px;
+    background: url('/social/images/arrow1_wev8.png')
+}
+
+.accBox .accAdd {
+    height: 24px;
+    width: 28px;
+    line-height: 24px;
+    margin-top: 5px;
+    background: url('/social/images/img_add_wev8.png') no-repeat center center;
+    margin-left: 75px;
+    cursor: pointer
+}
+
+.accBox .accAdd:hover {
+    background: url('/social/images/img_add_hot_wev8.png') no-repeat center center
+}
+
+.accBox .delacc {
+    text-align: center;
+    background: #fff;
+    color: #c6c6c6;
+    border: 1px solid #e0e0e0;
+    height: 13px;
+    width: 13px;
+    line-height: 11px;
+    margin-top: 8px
+}
+
+.accBox .delacc:hover {
+    background: #ccc;
+    color: #fff
+}
+
+.accBox .fileProgress {
+    height: 2px;
+    line-height: 2px;
+    bottom: 2px
+}
+
+.address {
+    width: 220px;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    color: #fff;
+    z-index: 1;
+    border: 1px solid #e3e6f0;
+    background: #fff
+}
+
+.address .relatedSearch {
+    padding: 5px;
+    border-bottom: 1px solid #e3e6f0
+}
+
+.address .relatedList {
+    height: 165px;
+    overflow-y: auto;
+    padding-top: 5px
+}
+
+.address .relatedBottm {
+    height: 35px;
+    border-top: 1px solid #e3e6f0;
+    line-height: 35px
+}
+
+.address .relatedList .mitem {
+    cursor: pointer
+}
+
+.address .relatedList .mitem:hover {
+    background-color: #f4fcfa
+}
+
+.address .relatedList .mitem .mhead {
+    float: left;
+    margin-left: 8px;
+    height: 30px;
+    line-height: 30px;
+    width: 30px
+}
+
+.address .relatedList .mitem .mname {
+    height: 30px;
+    line-height: 30px;
+    color: #3a4360
+}
+
+.dataLoading #loadingdiv {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000
+}
+
+.dataLoading #loadingMsg {
+    background: url(/express/task/images/loading1_wev8.gif) center 35% no-repeat;
+    z-index: 1000;
+    position: fixed;
+    width: 240px;
+    height: 60px;
+    border: 1px solid #dadada;
+    background-color: #fff;
+    top: 40%;
+    left: 40%
+}
+
+.dataLoading #loadingMsg div {
+    margin-top: 40px;
+    color: #666;
+    text-align: center
+}
+
+.labelBtn {
+    width: 72px;
+    height: 25px;
+    line-height: 25px;
+    color: #aab2d4;
+    border: 1px solid #aab2d4;
+    border-radius: 10px;
+    cursor: pointer
+}
+
+.labelBtn:hover {
+    border: 1px solid #30b5ff;
+    color: #30b5ff
+}
+
+.labelBtn .labelLeft {
+    font-size: 18px;
+    margin-left: 12px
+}
+
+.labelBtn .labelRight {
+    margin-left: 3px
+}
+
+.labeldiv {
+    cursor: pointer;
+    float: left;
+    background-color: #cad7ef;
+    width: 83px;
+    border-radius: 5px;
+    color: #000;
+    text-align: center;
+    height: 22px;
+    line-height: 22px;
+    margin-left: 11px;
+    margin-bottom: 10px
+}
+
+.grouplabeldiv {
+    cursor: pointer;
+    float: left;
+    background-color: #fff;
+    padding: 2px 12px 2px 12px;
+    color: #000;
+    text-align: center;
+    height: 18px;
+    line-height: 18px;
+    margin-left: 10px;
+    margin-bottom: 7px;
+    border-radius: 10px;
+    border: 1px solid #abb1d5
+}
+
+.grouplabellist {
+    float: left;
+    background-color: #abb1d5;
+    padding: 2px 5px 2px 5px;
+    color: #fff;
+    text-align: center;
+    height: 16px;
+    line-height: 16px;
+    margin-left: 5px;
+    margin-bottom: 3px;
+    border-radius: 2px
+}
+
+.grouplabelitem {
+    OVERFLOW-Y: auto;
+    position: absolute;
+    top: 160px;
+    z-index: 99999;
+    width: 270px;
+    height: 150px;
+    background-color: #fff;
+    border: 1px solid #abb1d5;
+    display: none;
+    border-radius: 3px
+}
+
+.labeldel {
+    cursor: pointer;
+    background: url('/social/images/icon_delete2_wev8.png') no-repeat center center;
+    width: 8px;
+    height: 8px;
+    top: 7px;
+    right: 2px;
+    position: absolute;
+    display: none
+}
+
+.labpanelclose {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    cursor: pointer;
+    background: url('/social/images/chat_close_wev8.png') no-repeat center center;
+    width: 9px;
+    height: 9px
+}
+
+.grouplabelitem .addlabel {
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #abb1d5
+}
+
+.grouplabelitem .addlabel span {
+    font-size: 20px;
+    line-height: 15px
+}
+
+.grouplabelitem .addlabel:hover {
+    color: #fff;
+    background-color: #abb1d5
+}
+
+.attbtn {
+    float: right;
+    color: #585858;
+    height: 30px;
+    width: 95px;
+    cursor: pointer;
+    position: relative;
+    border: solid 1px #d8d8d8;
+    background-color: #fff;
+    line-height: 30px;
+    margin-top: 15px;
+    font-size: 14px;
+    margin-right: 10px;
+    text-align: center;
+    border-radius: 10px
+}
+
+.attbtn:hover {
+    background-color: #0084ff;
+    color: #fff;
+    border: 1px solid #0084ff
+}
+
+.attArrow {
+    position: absolute;
+    width: 12px;
+    height: 7px;
+    background: url('/social/images/chat_chat_arrow_wev8.png');
+    top: 54px;
+    left: 50px
+}
+
+.btnGreen {
+    height: 24px;
+    width: 140px;
+    text-align: center;
+    line-height: 20px;
+    overflow: visible;
+    width: 60px;
+    color: #555;
+    border: 1px solid #bababa;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    display: inline-block
+}
+
+.btnGreen:hover {
+    background-color: #0084ff;
+    color: #fff;
+    border: 1px solid #0084ff
+}
+
+.btnGray {
+    height: 24px;
+    margin-left: 2px;
+    margin-right: 1px;
+    padding-right: 5px;
+    line-height: 20px;
+    overflow: visible;
+    width: 60px;
+    color: #555;
+    border: 1px solid #bababa;
+    background-color: #f5f5f5;
+    cursor: pointer
+}
+
+.btn1 {
+    background-color: #b0bdd6;
+    width: 55px;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    height: 25px;
+    line-height: 25px;
+    margin-left: 8px;
+    cursor: pointer
+}
+
+.btn1:hover {
+    background-color: #5cb5d7
+}
+
+.uploadProcess {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #dadada;
+    width: 240px;
+    padding: 5px;
+    display: none
+}
+
+.replybox .remarkdiv {
+    border: 1px solid #e3e6f0;
+    padding: 10px 10px 5px 10px;
+    background: #fff
+}
+
+.replybox .replycontent {
+    height: 20px;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    overflow-y: auto
+}
+
+.replybox .saveBtn {
+    float: right;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    background: #aab2d4;
+    width: 95px;
+    margin-left: 20px;
+    cursor: pointer
+}
+
+.replybox .saveBtn:hover {
+    background: #979dc4
+}
+
+.replybox .replycontentdiv {
+    padding: 0 10px 5px 10px
+}
+
+.replybox .optiondiv {
+    height: 40px;
+    background: #e3e5f1;
+    color: #384560
+}
+
+.replybox .closebox {
+    text-align: center;
+    background: #fff;
+    color: #c6c6c6;
+    height: 15px;
+    width: 15px;
+    line-height: 14px;
+    cursor: pointer;
+    margin-top: 5px;
+    position: absolute;
+    top: -3px;
+    right: 5px;
+    font-size: 16px
+}
+
+.replybox .closebox:hover {
+    background: #ccc;
+    color: #fff
+}
+
+.searchkeyword {
+    color: #fa6235
+}
+
+.searchtlediv {
+    height: 35px;
+    color: #afbed8;
+    line-height: 35px;
+    margin-left: 5px
+}
+
+.nodatapanel {
+    background: url('/social/images/social_no_data_wev8.png') no-repeat center center;
+    text-align: center
+}
+
+.hrmcard {
+    position: absolute;
+    color: #4b5f78;
+    width: 285px;
+    height: 260px;
+    border: 1px solid #dadada;
+    background: #fff;
+    box-shadow: 2px 2px 2px 2px #9e9e9e;
+    display: none;
+    z-index: 100000
+}
+
+.hrmcard .ctop {
+    height: 100px;
+    background: url('/social/images/card_bg_wev8.png') no-repeat;
+    text-align: center
+}
+
+.hrmcard .ccenter {
+    padding-left: 60px;
+    padding-top: 5px
+}
+
+.hrmcard .cbottom {
+    text-align: center;
+    margin-top: 10px
+}
+
+.btn2 {
+    width: 95px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #e1e7f5;
+    background: #fff;
+    color: #4b5f78;
+    text-align: center;
+    cursor: pointer
+}
+
+.m-l-40 {
+    margin-left: 40px
+}
+
+.m-l-25 {
+    margin-left: 25px
+}
+
+.h24 {
+    height: 24px;
+    line-height: 24px
+}
+@keyframes change {
+    0%{ text-shadow: 0 0 4px #FFE49D}
+    50%{ text-shadow: 0 0 40px #FFE49D}
+    100%{ text-shadow: 0 0 4px #FFE49D}
+}

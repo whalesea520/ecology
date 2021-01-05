@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TitleWindow xmlns:mx="http://www.adobe.com/2006/mxml"  width="490" height="300" title="{resourceManager.getString('resources', 'LM038')}" showCloseButton="true" fontSize="12" fontWeight="bold" color="#000000">
+	<mx:Style>
+		
+		
+	</mx:Style>
+	<mx:HBox width="100%" paddingTop="20" paddingLeft="20"  verticalAlign="middle">
+		<mx:Label text="{resourceManager.getString('resources', 'LM034')}:" >
+			
+		</mx:Label>
+		<mx:TextInput id="no" text="" editable="true" width="40%"  maxChars="8" restrict="0-9\."  focusOut="showChinaDate()">
+			
+		</mx:TextInput>
+		<mx:Image source="@Embed(source='images/BacoError.gif')"  id="img_s1"></mx:Image>
+		<mx:Label id="bbmsg" ></mx:Label>
+		
+	</mx:HBox>
+	<mx:HBox width="100%"  paddingLeft="20"  verticalAlign="middle">
+		<mx:Label text="{resourceManager.getString('resources', 'LM035')}:" >
+			
+		</mx:Label>
+		<mx:TextInput id="vname" text="" editable="true"  width="70%"    focusOut="showChinaDate2()">
+			
+		</mx:TextInput>
+		<mx:Image source="@Embed(source='images/BacoError.gif')" id="img_s2"></mx:Image>
+	</mx:HBox>
+	<mx:HBox width="100%"  paddingLeft="20"  verticalAlign="middle">
+		<mx:Label text="{resourceManager.getString('resources', 'LM039')}:" >
+			
+		</mx:Label>
+		<mx:DateField id="createdate" showToday="true"  formatString="YYYY-MM-DD"  width="100"  focusOut="showChinaDate3()">
+			
+		</mx:DateField>
+		<mx:Image source="@Embed(source='images/BacoError.gif')" id="img_s3"></mx:Image>
+	</mx:HBox>
+	<mx:HBox width="100%"  paddingLeft="20"  verticalAlign="middle">
+		<mx:Label text="{resourceManager.getString('resources', 'LM037')}:" >
+			
+		</mx:Label>
+		<mx:TextArea id="desc" text="" editable="true"  height="60"  width="70%" >
+			
+		</mx:TextArea>
+	</mx:HBox>
+	
+	<mx:HBox  paddingLeft="300">
+		<mx:Button label="{resourceManager.getString('resources', 'LM040')}" id="btSave" paddingLeft="20" paddingRight="20" click="createVersion()">
+			
+		</mx:Button>
+	</mx:HBox>
+	<mx:Validator id="v1" source="{no}" property="text" requiredFieldError="{resourceManager.getString('resources', 'LM041')}" trigger="{btSave}" triggerEvent="click"/>
+	<mx:Validator id="v2" source="{vname}" property="text" requiredFieldError="{resourceManager.getString('resources', 'LM042')}" trigger="{btSave}" triggerEvent="click"/>
+	<mx:Validator id="v3" source="{createdate}" property="text" requiredFieldError="{resourceManager.getString('resources', 'LM043')}" trigger="{btSave}" triggerEvent="click"/> 
+	<mx:Style>
+		
+		
+		
+		Label{
+			fontSize:12;
+			color:#cccccc;
+		}
+		Button {
+			fillAlphas: 1, 1, 1, 1;
+			fillColors: #51a7d6, #51a7d6, #51a7d6, #51a7d6;
+			color: #ffffff;
+			textRollOverColor: #ffffff;
+			textSelectedColor: #ffffff;
+			borderColor: #0b60a1;
+			themeColor: #0b60a1;
+			fontSize: 12;
+			fontWeight: normal;
+			paddingLeft:0;
+			paddingRight:0;
+			letterSpacing: 0;
+		}
+	</mx:Style>
+	<mx:Script>
+		<![CDATA[
+			import com.adobe.utils.StringUtil;
+			
+			import common.StaticObj;
+			
+			import mx.controls.Alert;
+			import mx.core.Application;
+			import mx.managers.PopUpManager;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+			import mx.rpc.http.HTTPService;
+			[bindable]
+			var staticObj :StaticObj=Application.application.staticObj;
+			//import model.CompanyInfo;
+			//var company:CompanyInfo = 
+
+			protected function createVersion():void
+			{
+				var check:Array=Validator.validateAll([v1,v2,v3]); 
+				if (check.length!=0){ 
+					Alert.okLabel=""+resourceManager.getString('resources', 'LM044');
+					Alert.show(resourceManager.getString('resources', 'LM045')+"!");
+					return ;    
+				}
+				var http:HTTPService = new HTTPService();
+				
+				http.addEventListener(ResultEvent.RESULT,parseObj);
+				http.addEventListener(FaultEvent.FAULT,myFaultErrorEvent);
+				
+				http.url="/companygroup/manage/companyoperation.jsp?method=createVersion"
+				http.method = "post";
+				http.resultFormat = "e4x";
+				
+				var val:URLVariables = new URLVariables;
+				val.no = no.text;
+				val.name = vname.text;
+				//Alert.show(createdate.text);
+				val.createdate = createdate.text;
+				val.desc = desc.text;
+				val.groupid = staticObj.groupid;
+				val.random = Math.random();
+				
+				http.send(val);
+				// TODO Auto-generated method stub
+			}
+			
+			//失去焦点
+			public function showChinaDate2():void{
+				var teststr:String = StringUtil.trim(vname.text);
+				if(teststr!=""){
+					img_s2.visible=false;
+					img_s2.includeInLayout=false;
+				}else{
+					img_s2.visible=true;
+					img_s2.includeInLayout=true;
+				}
+			}
+			
+			//失去焦点
+			public function showChinaDate3():void{
+				var teststr:String = StringUtil.trim(createdate.text);
+				if(teststr!=""){
+					img_s3.visible=false;
+					img_s3.includeInLayout=false;
+				}else{
+					img_s3.visible=true;
+					img_s3.includeInLayout=true;
+				}
+			}
+			
+			//失去焦点，验证版本号是否重复
+			public function showChinaDate():void{
+				var teststr:String = StringUtil.trim(no.text);
+				if(teststr!=""){
+					bbmsg.setStyle("color","black");
+					bbmsg.text=resourceManager.getString('resources', 'LM046')+".........";
+					var http:HTTPService = new HTTPService();
+					http.addEventListener(ResultEvent.RESULT,checkOK);
+					http.addEventListener(FaultEvent.FAULT,checkNoOK);
+					//if(event.result != null && event.result is XML){
+					http.url="/companygroup/manage/companyoperation.jsp?method=checkVersion"
+					http.method = "post";
+					http.resultFormat = "text";
+					var val:URLVariables = new URLVariables;
+					val.groupid = staticObj.groupid;
+					val.no = no.text;
+					val.random = Math.random();
+					http.send(val);
+				}else{
+					img_s1.visible=true;
+					img_s1.includeInLayout=true;
+				}
+				
+			}
+			
+			
+			public function checkOK(event:ResultEvent):void{  
+				
+				var mess:Object=event.result;
+				var teststr:String = StringUtil.trim(mess.toString());
+				if(teststr=="ok"){
+					Alert.okLabel = ""+resourceManager.getString('resources', 'LM044');
+					//Alert.show("该版本号可以注册!");
+					bbmsg.setStyle("color","blue");
+					bbmsg.text=""+resourceManager.getString('resources', 'LM047');
+					btSave.visible=true;
+					btSave.includeInLayout=true;
+					img_s1.visible=false;
+					img_s1.includeInLayout=false;//也没不占空间
+				}else{
+					Alert.okLabel = ""+resourceManager.getString('resources', 'LM044');
+					//Alert.show("该版本号已被占用！");
+					bbmsg.setStyle("color","red");
+					bbmsg.text=""+resourceManager.getString('resources', 'LM048');
+					btSave.visible=false;
+					btSave.includeInLayout=false;
+					img_s1.visible=true;
+					img_s1.includeInLayout=true;
+
+				}
+				
+				
+			}
+			public function checkNoOK(event:ResultEvent):void{  
+				
+				Alert.okLabel = ""+resourceManager.getString('resources', 'LM044');
+				Alert.show(resourceManager.getString('resources', 'LM049')+"！");
+				img_s1.visible=true;
+				img_s1.includeInLayout=true;
+			}
+			
+			
+			
+			
+			
+			
+			public function parseObj(xmlContent:ResultEvent):void{
+				
+				PopUpManager.removePopUp(this); 
+				Alert.yesLabel = ""+resourceManager.getString('resources', 'LM044');
+				Alert.show(resourceManager.getString('resources', 'LM050')+"！");
+				
+				
+			}
+			
+			public function myFaultErrorEvent(myFaultEvent:FaultEvent):void{    //异常处理函数   
+				//Alert.show("333");
+				trace(myFaultEvent.message);   
+			}   
+
+		]]>
+	</mx:Script>
+</mx:TitleWindow>

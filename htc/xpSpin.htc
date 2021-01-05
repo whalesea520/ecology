@@ -1,0 +1,332 @@
+<PUBLIC:COMPONENT
+    lightWeight = true
+>
+
+<PUBLIC:DEFAULTS
+    contentEditable = false
+    tabStop = true
+/>
+
+<PUBLIC:attach event="ondocumentready" onevent="initElement()" />
+<PUBLIC:attach event="ondetach" onevent="cleanupElement()" />
+<PUBLIC:attach event="onfocus" onevent="elementOnFocus()" />
+<PUBLIC:attach event="onpropertychange" onevent="elementOnPropertyChange()" />
+
+<PUBLIC:property name="min" value=-32768 />
+<PUBLIC:property name="max" value=32768 />
+<PUBLIC:property name="value" value=0 />
+
+<script language="VBScript">
+
+' ----------------------------------------------------
+' ieWidgets: xpSpin                                                  
+' ----------------------------------------------------
+
+option explicit
+
+dim inProc
+dim absoluteX
+dim absoluteY
+dim prevAbsoluteX
+dim prevAbsoluteY
+dim offsetParentArray
+
+dim elementCaption
+dim elementButton
+dim elementButtonChildUp
+dim elementButtonChildDown
+
+dim buttonTimer
+dim timerCounter
+
+' ----------------------------------------------------
+' initialize/terminate functions   
+' ----------------------------------------------------
+
+function initElement()
+	set elementCaption = document.createElement("<input class='xpSpinInput' name='finish' type='text' tabindex='" & element.tabindex & "'>")
+	set elementButton = document.createElement("<span class='xpSpinButton'>")
+	set elementButtonChildUp = document.createElement("<span class='xpSpinButtonText'>")
+	set elementButtonChildDown = document.createElement("<span class='xpSpinButtonText'>")
+	element.insertAdjacentElement "afterBegin", elementCaption
+	element.insertAdjacentElement "afterBegin", elementButton
+	with elementCaption
+		.attachEvent "onfocus", GetRef("captionOnFocus")
+		.attachEvent "onselectstart", GetRef("elementActDisabled")
+		.attachEvent "oncontextmenu", GetRef("elementActDisabled")
+		.attachEvent "onchange", GetRef("captionOnChange")
+		with .style
+			.fontFamily =  cstr(element.style.fontFamily)
+			.fontSize =   cstr(element.style.fontSize)
+			.fontWeight =  cstr(element.style.fontWeight)
+		end with
+	end with
+	with elementButton
+		.tabIndex = -1
+		.insertAdjacentElement "afterBegin", elementButtonChildDown
+		.insertAdjacentElement "afterBegin", elementButtonChildUp
+		with elementButtonChildUp
+			.innerText = "5"
+			.tabIndex = -1
+			.style.lineHeight = ((.offsetHeight / 2) - 2) & "pt"
+			.attachEvent "onmouseover", GetRef("buttonOnMouseOver")
+			.attachEvent "onmouseout", GetRef("buttonOnMouseOut")
+			.attachEvent "onmousedown", GetRef("buttonOnMouseDown")
+			.attachEvent "onmouseup", GetRef("buttonOnMouseUp")
+		end with
+		with elementButtonChildDown
+			.innerText = "6"
+			.tabIndex = -1
+			.style.lineHeight = ((.offsetHeight / 2) - 2) & "pt"
+			.attachEvent "onmouseover", GetRef("buttonOnMouseOver")
+			.attachEvent "onmouseout", GetRef("buttonOnMouseOut")
+			.attachEvent "onmousedown", GetRef("buttonOnMouseDown")
+			.attachEvent "onmouseup", GetRef("buttonOnMouseUp")
+		end with
+	end with
+	window.attachEvent "onload", GetRef("actionOnLoad")
+end function
+
+function cleanupElement()
+	dim i
+	for i = lbound(offsetParentArray) to ubound(offsetParentArray)
+		offsetParentArray(i).detachEvent "onmove", GetRef("elementOnResize")
+		set offsetParentArray(i) = nothing
+	next
+	window.detachEvent "onload", GetRef("actionOnLoad")
+	with elementButtonChildUp
+		.detachEvent "onmouseover", GetRef("buttonOnMouseOver")
+		.detachEvent "onmouseout", GetRef("buttonOnMouseOut")
+		.detachEvent "onmousedown", GetRef("buttonOnMouseDown")
+		.detachEvent "onmouseup", GetRef("buttonOnMouseUp")
+		.removenode true
+	end with
+	with elementButtonChildDown
+		.detachEvent "onmouseover", GetRef("buttonOnMouseOver")
+		.detachEvent "onmouseout", GetRef("buttonOnMouseOut")
+		.detachEvent "onmousedown", GetRef("buttonOnMouseDown")
+		.detachEvent "onmouseup", GetRef("buttonOnMouseUp")
+		.removenode true
+	end with
+	with elementButton
+		.removenode true
+	end with
+	with elementCaption
+		.detachEvent "onfocus", GetRef("captionOnFocus")
+		.detachEvent "onselectstart", GetRef("elementActDisabled")
+		.detachEvent "oncontextmenu", GetRef("elementActDisabled")
+		.detachEvent "onchange", GetRef("captionOnChange")
+		.removenode true
+	end with
+	set elementCaption = nothing
+	set elementButton = nothing
+	set elementButtonChildUp = nothing
+	set elementButtonChildDown = nothing
+end function
+
+function actionOnLoad()
+	dim i
+	dim elHeight
+	dim elWidth
+	initOffsets element, true
+	prevAbsoluteX = absoluteX
+	prevAbsoluteY = absoluteY
+	with element
+		.tabIndex = -1
+		.hideFocus = true
+		elHeight = .offsetHeight
+		elWidth = .offsetWidth
+	end with
+	with elementButton.style
+		.top = cstr(absoluteY) & "px"
+		.left = cstr(absoluteX + elWidth - 16) & "px"
+		.height = cstr(elHeight) & "px"
+		.width = "16px"
+	end with
+	with elementButtonChildUp
+		.style.lineHeight = cstr((elHeight / 4) - .5) & "pt"
+	end with
+	with elementButtonChildDown
+		.style.lineHeight = cstr((elHeight / 4) - 1) & "pt"
+	end with
+	with elementCaption
+		.value = element.value & "%"
+		with .style
+			.top = cstr(absoluteY) & "px"
+			.left = cstr(absoluteX) & "px"
+			.height = cstr(elHeight) & "px"
+			.width = cstr(elWidth - 15) & "px"
+		end with
+	end with
+	for i = lbound(offsetParentArray) to ubound(offsetParentArray)
+		offsetParentArray(i).attachEvent "onmove", GetRef("elementOnResize")
+	next
+end function
+
+
+' ----------------------------------------------------
+' internal functions   
+' ----------------------------------------------------
+
+sub initOffsets(el, blnCreateArray)
+	dim i
+	dim tArray()
+	dim tElement
+	i = -1
+	absoluteX = 0
+	absoluteY = 0
+	set tElement = el
+	do while (not tElement is nothing)
+		if lcase(tElement.id) = "bodydiv" then exit do
+		absoluteY = absoluteY + tElement.offsetTop
+		absoluteX = absoluteX + tElement.offsetLeft
+		set tElement = tElement.offsetParent
+		if blnCreateArray then
+			if not tElement is nothing then
+				i = i + 1
+				redim preserve tArray(i)
+				set tArray(i) = tElement
+			end if
+		end if
+	loop
+	if el.style.position = "relative" then
+		absoluteX = -1
+		absoluteY = -1
+	end if
+	if blnCreateArray then offsetParentArray = tArray
+	set tElement = nothing
+end sub
+
+function incrementValue()
+	dim timerIncrement
+	window.clearTimeout(buttonTimer)
+	if element.value = "" then element.value = 0
+	element.value = clng(element.value + 1)
+	if clng(element.value) > clng(element.max) then element.value = element.max
+	elementCaption.value = element.value & "%"
+	timerCounter = timerCounter + 1
+	if timerCounter < 5 then timerIncrement = 300 else timerIncrement = 100
+	buttonTimer = window.setTimeout(getRef("incrementValue"), timerIncrement)		
+end function
+
+function decrementValue()
+	dim timerIncrement
+	window.clearTimeout(buttonTimer)
+	if element.value = "" then element.value = 0
+	element.value = clng(element.value - 1)
+	if clng(element.value) < clng(element.min) then element.value = element.min
+	elementCaption.value = element.value & "%"
+	timerCounter = timerCounter + 1
+	if timerCounter < 5 then timerIncrement = 300 else timerIncrement = 100
+	buttonTimer = window.setTimeout(getRef("decrementValue"), timerIncrement)		
+end function
+
+
+' ----------------------------------------------------
+' element functions   
+' ----------------------------------------------------
+
+function elementOnFocus()
+	elementCaption.select()
+end function
+
+function elementOnResize()
+	if inProc then exit function
+	inProc = true
+	initOffsets element, false
+	if prevAbsoluteX = absoluteX and prevAbsoluteY = absoluteY then
+		inProc = false
+		exit function
+	end if
+	prevAbsoluteX = absoluteX
+	prevAbsoluteY = absoluteY
+	with elementButton.style
+		.top = cstr(prevAbsoluteY) & "px"
+		.left = cstr(prevAbsoluteX + element.offsetWidth - 16) & "px"
+	end with
+	with elementCaption.style
+		.top = cstr(absoluteY) & "px"
+		.left = cstr(absoluteX) & "px"
+	end with
+	inProc = false
+end function
+
+function elementActDisabled()
+	with window.event
+		if element.disabled then
+			.cancelBubble = true
+			.returnValue = false
+			elementActDisabled = false
+		end if
+	end with
+end function
+
+sub elementOnPropertyChange()
+	if window.event.propertyName = "disabled" then
+		elementCaption.disabled = element.disabled
+		elementCaption.value = element.value
+	elseif window.event.propertyName = "value" then
+		elementCaption.value = element.value
+	end if
+end sub
+
+
+' ----------------------------------------------------
+' element caption functions   
+' ----------------------------------------------------
+
+function captionOnFocus()
+	elementCaption.focus()
+end function
+
+'added by hubo 050830
+function captionOnChange()
+	On Error Resume Next
+	if InStr(elementCaption.value,"%")=0 then
+		element.value = elementCaption.value
+	else
+		element.value = Left(elementCaption.value, Len(elementCaption.value)-1)
+	end if
+
+	if (not IsNumeric(element.value)) then element.value = 0
+	if clng(element.value) > clng(element.max) then element.value = element.max
+	if clng(element.value) < clng(element.min) then element.value = element.min
+end function
+
+
+' ----------------------------------------------------
+' element button functions   
+' ----------------------------------------------------
+
+function buttonOnMouseOver()
+	if element.disabled then exit function
+	window.event.srcElement.className = "xpSpinButtonTextOver"
+end function
+
+function buttonOnMouseOut()
+	if element.disabled then exit function
+	window.event.srcElement.className = "xpSpinButtonText"
+end function
+
+function buttonOnMouseDown()
+	if element.disabled then exit function
+	window.event.srcElement.className = "xpSpinButtonTextDown"
+	timerCounter = 0
+	select case true
+		case window.event.srcElement is elementButtonChildUp
+			buttonTimer = window.setTimeout(getRef("incrementValue"), 1)		
+		case window.event.srcElement is elementButtonChildDown
+			buttonTimer = window.setTimeout(getRef("decrementValue"), 1)		
+	end select
+end function
+
+function buttonOnMouseUp()
+	if element.disabled then exit function
+	window.event.srcElement.className = "xpSpinButtonTextOver"
+	window.clearTimeout(buttonTimer)
+	elementCaption.focus()
+end function
+
+</script>
+
+</PUBLIC:COMPONENT>

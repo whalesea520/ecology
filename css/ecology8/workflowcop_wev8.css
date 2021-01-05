@@ -1,0 +1,19 @@
+.signpage:hover{
+	cursor: hand;
+	color: blue;
+	TEXT-DECORATION: none;
+}
+.signpage:link{
+	cursor: hand;
+	color: blue;
+	TEXT-DECORATION: none;
+}
+.dragScroll{
+	_position:absolute;
+	_top:expression(jQuery(".titlePanel").offset().top>document.body.scrollTop?jQuery(".titlePanel").offset().top:document.body.scrollTop);
+	width:expression(jQuery(".titlePanel").offset().top>document.body.scrollTop?"100%":document.body.clientWidth-4);
+}
+.panelScroll{
+	height:expression(jQuery(".titlePanel").offset().top>document.body.scrollTop?"40px":"40px");
+	width:expression(jQuery(".titlePanel").offset().top>document.body.scrollTop?"100%":document.body.clientWidth-4);
+}

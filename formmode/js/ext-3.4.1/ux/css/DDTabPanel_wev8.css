@@ -1,0 +1,15 @@
+.dd-arrow-down .dd-arrow-down-invisible {
+	display: none;
+}
+
+.dd-arrow-down {
+	background-image: url(./images/pos_wev8.gif);
+	display: block;
+	visibility: visible;
+	z-index: 20000;
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	top: 0;
+	left: 0;
+}

@@ -1,0 +1,10 @@
+	@Override
+	public void validate() {
+		if ("".equals(users.getUsername().trim())) {
+			this.addFieldError("usernameError", "用户名不能为空!");
+		}
+		if ("".equals(users.getPassword().trim())) {
+			this.addFieldError("passwordError", "密码能为空!");
+		}		
+		
+	}

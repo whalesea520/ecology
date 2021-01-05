@@ -1,0 +1,316 @@
+[
+    {
+        "appnum": "no0000012",
+        "page": [
+            "/workflow/request/AddRequestIframe",
+            "/workflow/request/ManageRequestIframe",
+            "/workflow/request/ViewRequestIframe",
+            "/workflow/request/ManageRequestNoFormIframe"
+        ],
+        "use": true,
+        "resource": [
+            {
+                "data": "<meta http-equiv='X-UA-Compatible'content='IE=8'/>",
+                "type": "meta",
+                "version": "7",
+                "sufficx": "1.0",
+                "use": true
+            },
+            {
+                "data": "/cloudstore/resource/pc/e7/css/workflow.css",
+                "type": "css",
+                "params": {
+                    "rel": "stylesheet",
+                    "type": "text/css"
+                },
+                "version": "7",
+                "sufficx": "1.0",
+                "use": true
+            },
+            {
+                "data": "<meta http-equiv='X-UA-Compatible' content='IE=9'/>",
+                "type": "meta",
+                "version": "8",
+                "sufficx": "1.0",
+                "use": true
+            },
+            {
+                "data": "/cloudstore/resource/pc/shim/shim.min.js",
+                "type": "js",
+                "params": {
+                    "type": "text/javascript"
+                },
+                "version": "all",
+                "use": true
+            },
+            {
+                "data": "/cloudstore/resource/pc/jquery/jquery-1.8.3.min.js",
+                "type": "js",
+                "params": {
+                    "type": "text/javascript"
+                },
+                "version": "all",
+                "sufficx": "1.0",
+                "use": true
+            },
+            {
+                "data": "/cloudstore/resource/pc/react/react-with-addons.min.js",
+                "type": "js",
+                "params": {
+                    "type": "text/javascript"
+                },
+                "version": "all",
+                "sufficx": "1.0",
+                "use": true
+            },
+            {
+                "data": "/cloudstore/resource/pc/react/react-dom.min.js",
+                "type": "js",
+                "params": {
+                    "type": "text/javascript"
+                },
+                "version": "all",
+                "sufficx": "1.0",
+                "use": true
+            },
+            {
+                "data": "/cloudstore/resource/pc/com/index.min-1.css",
+                "type": "css",
+                "params": {
+                    "rel": "stylesheet",
+                    "type": "text/css"
+                },
+                "version": "all",
+                "sufficx": "1.0",
+                "use": true
+            },
+            {
+                "data": "/cloudstore/resource/pc/com/index.min-2.css",
+                "type": "css",
+                "params": {
+                    "rel": "stylesheet",
+                    "type": "text/css"
+                },
+                "version": "all",
+                "sufficx": "1.0",
+                "use": true
+            },
+            {
+                "data": "/cloudstore/resource/pc/promise/promise.min.js",
+                "type": "js",
+                "params": {
+                    "type": "text/javascript"
+                },
+                "version": "all",
+                "sufficx": "1.0",
+                "use": true
+            },
+            {
+                "data": "/cloudstore/resource/pc/fetch/fetch.min.js",
+                "type": "js",
+                "params": {
+                    "type": "text/javascript"
+                },
+                "version": "all",
+                "sufficx": "1.0",
+                "use": true
+            },
+            {
+                "data": "/cloudstore/resource/pc/com/index.min.js",
+                "type": "js",
+                "params": {
+                    "type": "text/javascript",
+                    "charset": "utf-8"
+                },
+                "version": "all",
+                "sufficx": "1.0",
+                "use": true
+            },
+            {
+                "data": "/cloudstore/app/no0000012/js/wfDetail.js",
+                "type": "js",
+                "params": {
+                    "type": "text/javascript",
+                    "charset": "utf-8"
+                },
+                "version": "all",
+                "sufficx": "1.0",
+                "use": true
+            }
+        ]
+    },
+    {
+        "appnum": "no00000012",
+        "page": [
+            "/workflow/request/AddRequest",
+            "/workflow/request/ManageRequest",
+            "/workflow/request/ManageRequestNoForm",
+            "/workflow/request/ViewRequest",
+            "/workflow/request/RequestView.jsp",
+            "/workflow/request/RequestType.jsp",
+            "/workflow/request/RequestTypeShow.jsp",
+            "/workflow/request/menuCount.jsp",
+            "/workflow/request/RequestViewAjaxCount.jsp"
+        ],
+        "use": true,
+        "resource": [
+            {
+                "data": "<style>html{height:100%}</style>",
+                "type": "style",
+                "version": "all",
+                "sufficx": "1.0",
+                "use": true
+            }
+        ]
+    },
+    {
+        "appnum": "no00000012",
+        "page": [
+            "/mobile/plugin/1/view.jsp",
+            "/mobile/plugin/1/client.jsp",
+            "/client.do"
+        ],
+        "use": true,
+        "resource": [
+            {
+                "data": "<meta http-equiv='X-UA-Compatible'content='IE=8'/>",
+                "type": "meta",
+                "version": "7",
+                "sufficx": "1.0",
+                "use": true
+            },
+            {
+                "data": "/cloudstore/resource/pc/e7/css/workflow.css",
+                "type": "css",
+                "params": {
+                    "rel": "stylesheet",
+                    "type": "text/css"
+                },
+                "version": "7",
+                "sufficx": "1.0",
+                "use": true
+            },
+            {
+                "data": "<meta http-equiv='X-UA-Compatible' content='IE=9'/>",
+                "type": "meta",
+                "version": "8",
+                "sufficx": "1.0",
+                "use": true
+            },
+            {
+                "data": "/cloudstore/resource/pc/shim/shim.min.js",
+                "type": "js",
+                "params": {
+                    "type": "text/javascript"
+                },
+                "version": "all",
+                "use": true
+            },
+            {
+                "data": "/cloudstore/resource/pc/jquery/jquery-1.8.3.min.js",
+                "type": "js",
+                "params": {
+                    "type": "text/javascript"
+                },
+                "version": "all",
+                "sufficx": "1.0",
+                "use": true
+            },
+            {
+                "data": "/cloudstore/resource/pc/react/react-with-addons.min.js",
+                "type": "js",
+                "params": {
+                    "type": "text/javascript"
+                },
+                "version": "all",
+                "sufficx": "1.0",
+                "use": true
+            },
+            {
+                "data": "/cloudstore/resource/pc/react/react-dom.min.js",
+                "type": "js",
+                "params": {
+                    "type": "text/javascript"
+                },
+                "version": "all",
+                "sufficx": "1.0",
+                "use": true
+            },
+            {
+                "data": "/cloudstore/resource/pc/com/index.min-1.css",
+                "type": "css",
+                "params": {
+                    "rel": "stylesheet",
+                    "type": "text/css"
+                },
+                "version": "all",
+                "sufficx": "1.0",
+                "use": true
+            },
+            {
+                "data": "/cloudstore/resource/pc/com/index.min-2.css",
+                "type": "css",
+                "params": {
+                    "rel": "stylesheet",
+                    "type": "text/css"
+                },
+                "version": "all",
+                "sufficx": "1.0",
+                "use": true
+            },
+            {
+                "data": "/cloudstore/resource/pc/promise/promise.min.js",
+                "type": "js",
+                "params": {
+                    "type": "text/javascript"
+                },
+                "version": "all",
+                "sufficx": "1.0",
+                "use": true
+            },
+            {
+                "data": "/cloudstore/resource/pc/fetch/fetch.min.js",
+                "type": "js",
+                "params": {
+                    "type": "text/javascript"
+                },
+                "version": "all",
+                "sufficx": "1.0",
+                "use": true
+            },
+            {
+                "data": "/cloudstore/resource/pc/com/index.min.js",
+                "type": "js",
+                "params": {
+                    "type": "text/javascript",
+                    "charset": "utf-8"
+                },
+                "version": "all",
+                "sufficx": "1.0",
+                "use": true
+            },
+            {
+                "data": "/cloudstore/app/no0000012/js/index4mobile.js",
+                "type": "js",
+                "params": {
+                    "type": "text/javascript",
+                    "charset": "utf-8"
+                },
+                "version": "all",
+                "sufficx": "1.0",
+                "use": true
+            },
+            {
+                "data": "/cloudstore/app/no0000012/js/index4mobile.css",
+                "type": "css",
+                "params": {
+                    "rel": "stylesheet",
+                    "type": "text/css"
+                },
+                "version": "all",
+                "sufficx": "1.0",
+                "use": true
+            }
+        ]
+    }
+]

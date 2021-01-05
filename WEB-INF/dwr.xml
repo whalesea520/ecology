@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 1.0//EN" "http://www.getahead.ltd.uk/dwr/dwr10.dtd">
+<dwr>
+  <allow>
+     <create creator="new" javascript="Validator">
+      <param name="class" value="weaver.dwr.Validator"/>
+    </create>
+    <create creator="new" javascript="CptDwrUtil">
+      <param name="class" value="weaver.cpt.util.CptDwrUtil"/>
+    </create>
+     <create creator="new" javascript="HrmUtil">
+      <param name="class" value="weaver.dwr.HrmUtil"/>
+    </create>
+    <create creator="new" javascript="MsgUtil">
+      <param name="class" value="weaver.workflow.msg.MsgUtil"/>
+    </create>
+    <create creator="new" javascript="BudgetHandler">
+      <param name="class" value="weaver.fna.budget.BudgetHandler"/>
+	  <include method="getBudgetKPI"/>
+	  <include method="getLoanAmount"/>
+	  <include method="getBudgetByDate"/>	        
+    </create>
+    <create creator="new" javascript="DocReceiveUnitUtil">
+      <param name="class" value="weaver.docs.senddoc.DocReceiveUnitUtil"/>
+    </create>
+    <create creator="new" javascript="WorkflowSubwfSetUtil">
+      <param name="class" value="weaver.workflow.workflow.WorkflowSubwfSetUtil"/>
+    </create>
+    <create creator="new" javascript="DocTreeDocFieldUtil">
+      <param name="class" value="weaver.docs.category.DocTreeDocFieldUtil"/>
+    </create>
+    <create creator="new" javascript="DocReadTagUtil">
+      <param name="class" value="weaver.docs.docs.DocReadTagUtil"/>
+    </create>
+     <create creator="new" javascript="ProjTaskUtil">
+      <param name="class" value="weaver.proj.Maint.ProjTaskUtil"/>
+    </create>
+    <create creator="new" javascript="DocCheckInOutUtil">
+      <param name="class" value="weaver.docs.docs.DocCheckInOutUtil"/>
+    </create>
+    <create creator="new" javascript="DocDetailLogWrite">
+      <param name="class" value="weaver.docs.DocDetailLog"/>
+      <include method="writeDetailLog"/>
+    </create>
+    <create creator="new" javascript="DocDwrUtil">
+      <param name="class" value="weaver.docs.docs.DocDwrUtil"/>
+      <include method="ifCanRepeatName"/>
+      <include method="ifCheckOutByCurrentUser"/>
+      <include method="checkInNewsDsp"/>
+      <include method="ifNewsCheckOutByCurrentUser"/>
+    </create>
+	<filter class="weaver.filter.DwrLangFilter"></filter>
+  </allow>
+</dwr>

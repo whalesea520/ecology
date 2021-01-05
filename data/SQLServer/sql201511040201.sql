@@ -1,0 +1,12 @@
+DELETE FROM HtmlLabelIndex WHERE id=125963 
+GO
+DELETE FROM HtmlLabelInfo WHERE indexid=125963 
+GO
+INSERT INTO HtmlLabelIndex VALUES(125963,'含下级') 
+GO
+INSERT INTO HtmlLabelInfo VALUES(125963,'含下级',7) 
+GO
+INSERT INTO HtmlLabelInfo VALUES(125963,'includeSub',8) 
+GO
+INSERT INTO HtmlLabelInfo VALUES(125963,'含下級',9) 
+GO

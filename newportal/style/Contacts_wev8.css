@@ -1,0 +1,46 @@
+/*---------通讯录样式表------------*/
+.ContactsBox,.ContactsFoot, .Contacts{width:886px;}
+
+.Contacts{ left:7px; top:0px;}
+
+.ContactsBox{background:url(../images/bgCenter_wev8.png) repeat-y; float:left }
+
+.ContactsTop{padding-top:7px;padding-left:7px;background:url(../images/bgTop2_wev8.png) no-repeat;}
+
+.ContactsFoot{height:20px;background:url(../images/bgBottom_wev8.png) no-repeat left bottom;}
+
+.ContactsBg{background:url(../images/bg10_wev8.gif) repeat-y center #fafbfb; width:866px; border:1px solid #ccc; padding-top:50px; padding-bottom:25px;}
+
+.ContactsLeft{width:345px; float:left; padding-left:30px;}
+
+.ContactsSearch{width:345px; height:405px; overflow-x:hidden;overflow-y:scroll; float:left}
+
+
+
+.ContactsBox2 span{width:340px; height:16px; line-height:16px; background:url(../images/pic_20_wev8.gif) repeat-x top; padding-left:10px; display:block}
+
+.ContactsBox2 ul{border-left:1px solid #dfdfdf;border-right:1px solid #dfdfdf; padding:1px 1px 10px 1px;}
+
+.ContactsBox2 ul li{ background:url(../images/IconRed_wev8.gif) no-repeat 10px center; padding-left:17px; margin-bottom:1px;border-bottom:1px dashed #b0b0b0; line-height:25px;height:25px;}
+
+.ContactsBox2 ul li em{float:left; display:block; width:54px;height:25px; line-height:25px;}
+
+.ContactsBox2Hover span{ background:url(../images/contacts_04_wev8.gif) repeat-x top; }
+
+.ContactsBox2Hover ul li.Lihover{background:url(../images/IconRed_wev8.gif) no-repeat 10px center #e7eaed;}
+
+.ContactsBox2Hover ul li.Lihover em{ font-weight:bold}
+
+
+.ContactsAvatar{padding:6px; background:url(../images/contacts_03_wev8.gif) no-repeat center #fff; border:1px solid #5f96b7;width:50px;}
+
+.ContactsRight{width:345px; float:right; margin-right:30px; display:inline;}
+
+.ContactsList li{line-height:25px; height:25px; padding-left:15px;}
+
+#ContactsListTit{background:url(../images/contacts_01_wev8.gif) repeat-x top;}
+
+.ContactsList li.alt{background:#e7eaed;}
+
+.ContactsList li.over{background:#ccdfed;}
+

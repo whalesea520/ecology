@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<special-non>
+		<urls>
+			<url>
+				<value>/weaver/weaver.page.maint.common.CustomResourceServlet</value>
+				<params>
+					<param>
+						<value>dirname</value>
+						<rules>
+							<rule>##CONST:FILETYPE##</rule>
+						</rules>
+					</param>
+				</params>
+			</url>
+		</urls>
+	</special-non>
+</root>

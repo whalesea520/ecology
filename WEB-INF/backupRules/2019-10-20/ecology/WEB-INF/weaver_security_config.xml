@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root>
+  <status>1</status>
+  <sys-debug>true</sys-debug>
+  <intervalTime>480</intervalTime>
+  <scanTime>30</scanTime>
+  <skip-ref>true</skip-ref>
+  <skip-host>true</skip-host>
+  <must-xss>true</must-xss>
+  <xss-type>0</xss-type>
+  <xss-debug>false</xss-debug>
+  <skip-rule>false</skip-rule>
+  <enable-webservice-check>false</enable-webservice-check>
+  <enable-service-check>true</enable-service-check>
+</root>

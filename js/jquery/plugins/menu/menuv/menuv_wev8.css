@@ -1,0 +1,25 @@
+div.sdmenu {
+	width: 150px;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	padding-bottom: 10px;
+	background: url(bottom_wev8.gif) no-repeat  right bottom;
+	color: #fff;
+}
+
+div.sdmenu div.collapsed {
+	height: 25px;
+}
+div.sdmenu div span {
+	display: block;
+	padding: 5px 25px;
+	font-weight: bold;
+	color: white;
+	
+	cursor: default;	
+}
+
+
+div.sdmenu div a.current {
+	background : #ccc;
+}

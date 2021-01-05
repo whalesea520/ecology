@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<special-non>
+		<urls>
+			<url>
+				<value>/mobile/plugin/contract/base/getHrmInfo.jsp</value>
+				<params>
+					<param>
+						<value>userid</value>
+						<rules>
+							<rule>##CONST:MULTINUMBER##</rule>
+						</rules>
+					</param>
+				</params>
+			</url>
+			<url>
+				<value>/login/VerifyLoginWeaversso.jsp</value>
+				<params>
+					<param>
+						<value>loginid</value>
+						<rules>
+							<rule>##CONST:LOGINID##</rule>
+						</rules>
+					</param>
+					<param>
+						<value>message</value>
+						<rules>
+							<rule>##CONST:MULTINUMBER##</rule>
+						</rules>
+					</param>
+					<param>
+						<value>logintype</value>
+						<rules>
+							<rule>##CONST:MULTINUMBER##</rule>
+						</rules>
+					</param>
+					<param>
+						<value>appid</value>
+						<rules>
+							<rule>##CONST:LETTERS##</rule>
+						</rules>
+					</param>
+				</params>
+			</url>
+		</urls>
+	</special-non>
+</root>

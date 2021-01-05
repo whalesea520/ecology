@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!--enable or disable firewall, 1 enable, 0 disable-->
+    <status>1</status>
+	<!--enable auto update security rules-->
+	<auto-update-rule>false</auto-update-rule>
+	<!--enable session timeout check-->
+	<is-check-session-timeout>true</is-check-session-timeout>
+	<!--sesstion timeout time,default 30 min-->
+	<session-timeout>30</session-timeout>
+	<!--reset cookie flag when back to login|logout page-->
+	<is-reset-cookie>false</is-reset-cookie>
+    <!-- Xss Filter tools debug switch,default is false -->
+    <debug-xss-tool>false</debug-xss-tool>
+	<!-- enabled or disabled File Monitor ,default is enabled -->
+	<file-monitor-enable>true</file-monitor-enable>
+	<!-- File Monitor thread run time,default is night 03:00 am -->
+	<file-monitor-time>3</file-monitor-time>
+	<!-- Proxy IP-->
+	<proxy-ip></proxy-ip>
+	<!--enable or disable debug mode-->
+	<sys-debug>false</sys-debug>
+	<!--cache params remove time,Default 480 min-->
+	<intervalTime>480</intervalTime>
+	<!--Thread scan time,default30 min-->
+    <scanTime>30</scanTime>
+	<!--Sikp all referer xss -->
+	<skip-ref>true</skip-ref>
+	<!--Sikp all host check, check host header attack-->
+	<skip-host>true</skip-host>
+	<!--is must be execute xss filter-->
+	<must-xss>true</must-xss>
+	<!--xss type  0: black list, according xss-keyword-list filter-->
+	<xss-type>0</xss-type>
+	<!--print value info when xss filter-->
+	<xss-debug>false</xss-debug>
+	<!--is enable rule check-->
+	<skip-rule>false</skip-rule>
+	<!--enable or disable webservice security check, true|false, default is true-->
+	<enable-service-check>true</enable-service-check>
+	<!--enable or disable httponly,true|false,default is true-->
+	<httponly>true</httponly>
+	<!--CR LF attack(http header attack)-->
+	<http-sep>true</http-sep>
+	<!-- check param name valid  -->
+	<param-key>true</param-key>
+	<!-- cookie and ip bind after login -->
+	<cookie-ip-check>false</cookie-ip-check>
+	<!-- login check -->
+	<is-login-check>true</is-login-check>
+	<!-- forbidden ip info set -->
+	<forbidden-info>
+		<!-- enable forbidden ip function,default is 1. 0:disable 1:warning  2:auto intercept but not send email  3:auto intercpet and send email -->
+		<enable-forbidden-ip>1</enable-forbidden-ip>
+		<!-- forbidden ip intercept time,default 120 minutes -->
+		<intercept-time>120</intercept-time>
+		<!-- intercept level,default is 1,only forbidden common rules,2 if set is forbidden beat special rules -->
+		<forbidden-level>1</forbidden-level>
+		<!-- forbidden count when attack greater than this count,then join the forbidden ip list -->
+		<forbidden-count>3</forbidden-count>
+		<!-- warn time default 3 minutes-->
+		<warn-time>3</warn-time>
+		<!-- warn count default 10 -->
+		<warn-count>10</warn-count>
+		<!-- send mail info -->
+		<send-mail-smtp>smtp.163.com</send-mail-smtp>
+		<send-mail-username>fwtest@163.cn</send-mail-username>
+		<send-mail-password></send-mail-password>
+		<receive-mail>security@weaver.com.cn</receive-mail>
+	</forbidden-info>
+	<!-- change the session-id in resin.conf need to change this-->
+	<session-id>JSESSIONID</session-id>
+</root>

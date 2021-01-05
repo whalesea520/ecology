@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>jQuery cxScroll 间歇式无缝滚动 » 在线演示 - 前端开发仓库</title>
+<LINK href="jquery.cxscroll.layout_wev8.css" type=text/css rel=STYLESHEET>
+
+<style>
+.scroll_vertical{height:60px}
+.scroll_vertical .box{top:0px;height:40px;}
+.scroll_vertical .list li{height:40px;text-align:center;}
+</style>
+
+
+</head>
+<body>
+<div id="pic_list_33" class="scroll_vertical">
+	<div class="box">
+		<ul class="list">
+			<li>111111111111111111111111</li>
+			<li>222222222222222222222222</li>
+			<li>333333333333333333333333</li>
+		</ul>
+	</div>
+</div>
+
+<script src="/js/jquery/jquery_wev8.js"></script>
+<script src="jquery.cxscroll.js"></script>
+<script>
+$('#pic_list_33').cxScroll({
+	direction: 'bottom',
+	speed: 500,
+	time: 1500,
+	plus: false,
+	minus: false,
+	prevBtn:false,
+	nextBtn:false
+});
+</script>
+
+</body></html>

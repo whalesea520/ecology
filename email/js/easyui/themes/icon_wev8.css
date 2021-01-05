@@ -1,0 +1,64 @@
+.icon-blank{
+	background:url('icons/blank_wev8.gif') no-repeat center center;
+}
+.icon-add{
+	background:url('icons/edit_add_wev8.png') no-repeat center center;
+}
+.icon-edit{
+	background:url('icons/pencil_wev8.png') no-repeat center center;
+}
+.icon-remove{
+	background:url('icons/edit_remove_wev8.png') no-repeat center center;
+}
+.icon-save{
+	background:url('icons/filesave_wev8.png') no-repeat center center;
+}
+.icon-cut{
+	background:url('icons/cut_wev8.png') no-repeat center center;
+}
+.icon-ok{
+	background:url('icons/ok_wev8.png') no-repeat center center;
+}
+.icon-no{
+	background:url('icons/no_wev8.png') no-repeat center center;
+}
+.icon-cancel{
+	background:url('icons/cancel_wev8.png') no-repeat center center;
+}
+.icon-reload{
+	background:url('icons/reload_wev8.png') no-repeat center center;
+}
+.icon-search{
+	background:url('icons/search_wev8.png') no-repeat center center;
+}
+.icon-print{
+	background:url('icons/print_wev8.png') no-repeat center center;
+}
+.icon-help{
+	background:url('icons/help_wev8.png') no-repeat center center;
+}
+.icon-undo{
+	background:url('icons/undo_wev8.png') no-repeat center center;
+}
+.icon-redo{
+	background:url('icons/redo_wev8.png') no-repeat center center;
+}
+.icon-back{
+	background:url('icons/back_wev8.png') no-repeat center center;
+}
+.icon-sum{
+	background:url('icons/sum_wev8.png') no-repeat center center;
+}
+.icon-tip{
+	background:url('icons/tip_wev8.png') no-repeat center center;
+}
+
+.icon-mini-add{
+	background:url('icons/mini_add_wev8.png') no-repeat center center;
+}
+.icon-mini-edit{
+	background:url('icons/mini_edit_wev8.png') no-repeat center center;
+}
+.icon-mini-refresh{
+	background:url('icons/mini_refresh_wev8.png') no-repeat center center;
+}

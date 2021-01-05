@@ -1,0 +1,92 @@
+#webHeadContainer_top{
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 50px !important;
+	z-index: 9999;
+	font-family: 'Microsoft Yahei', Arial;
+	overflow: hidden;
+	display: none;
+}
+.has-header #webHeadContainer_top{
+	display: block;
+}
+.webClientHeadContainer_top{
+	width: 100%;
+	height: 50px;	
+	background-color: rgb(0, 122, 251);
+	border-collapse: collapse;
+	border: none;
+}
+.webClientHeadContainer_top td{
+	vertical-align: top;
+}
+.webClientHeadContainer_top td.leftTD_top{
+	text-align: left;
+	padding-left: 10px;	
+}
+.webClientHeadContainer_top td.leftTD_top #leftButtonName_top{
+	font-size: 16px;
+	background: url('/mobilemode/images/emobile/fanhui.png') no-repeat;
+	background-position: -4px center;
+	background-size: 26px;
+	padding-left: 14px;
+	height:100%;
+	line-height: 50px;
+}
+.webClientHeadContainer_top td.leftTD_top #leftButtonName_top_change{
+	display:none;
+	height: 100%;
+	position: relative;
+}
+#leftButtonName_top_change > img{
+	position: absolute;
+	left: 0px;
+	top: 9px;
+	width: 32px;
+	height: 32px;
+}
+.webClientHeadContainer_top td.centerTD_top{
+	text-align: center;
+}
+.webClientHeadContainer_top td.centerTD_top div .menu_arrow_up{
+	margin-left:5px;
+	width:9px;
+	height:9px;
+	display:none;
+}
+.webClientHeadContainer_top td.centerTD_top div .menu_arrow_down{
+	margin-left:5px;
+	width:9px;
+	height:9px;
+	display:none;
+}
+#middleBtnName_top{
+	height: 100%;
+}
+#middlePageName_top{
+	height: 100%;
+	line-height: 50px;
+}
+.webClientHeadContainer_top td.rightTD_top{
+	text-align: right;	
+	padding-right: 10px;
+}
+#rightBtnName_top{
+	height: 100%;
+	position: relative;
+}
+#rightBtnName_top > img{
+	position: absolute;
+	top: 9px;
+	right: 0px;
+	width: 32px;
+	height: 32px;
+}
+.webClientHeadContainer_top td div{
+	color: #fff;	
+}
+.webClientHeadContainer_top td.centerTD_top div{
+	font-size: 18px;
+	font-weight: bold;
+}

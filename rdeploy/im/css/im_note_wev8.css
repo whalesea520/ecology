@@ -1,0 +1,171 @@
+/*ÈºÁÄ¹«¸æ*/
+.note-editor{
+  color: #333333;
+  margin: 10px;
+  border: 1px solid #E3E6F0;
+}
+#noteEdit_img {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:594px;
+	height:32px;
+}
+#noteEdit_input {
+	position:absolute;
+	left:2px;
+	top:8px;
+	width:590px;
+	word-wrap:break-word;
+	text-align: left;
+}
+
+.noteEdit {
+  height: 35px;
+  line-height: 35px;
+  color: #CCCCCC;
+  background-color: #fff;
+  margin: 10px;
+  padding-left: 10px;
+  border: 1px solid #E3E6F0;
+  cursor:pointer;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.gg_edit_area {
+	color: #000;
+	overflow: auto;
+	resize: none;
+	width: 100%;
+	min-height: 100px;
+	border: 0px;
+}
+
+.note_editwrap {
+	background:url('/social/images/noteEdit_border_head_wev8.png') no-repeat;
+}
+
+.note_ctrl {
+	height:30px;
+	padding: 9px;
+	background-color: #fff;
+}
+
+.note_ctrl .wordLen {
+	float: left;
+  	height: 32px;
+  	line-height: 32px;
+  	color: #ccc;
+}
+
+.gg_border_area {
+	background-image:url('/social/images/noteEdit_border_center_wev8.png');
+	background-repeat:repeat-y;
+	background-position:center;
+}
+
+#cancelRelease {
+	width: 50px;
+	height: 30px;
+	float: left;
+	border: 1px solid #cccccc;
+	color: #333333;
+	line-height: 30px;
+	cursor: pointer;
+}
+
+#releaseNote {
+	width: 70px;
+	height: 30px;	
+	border: 1px solid #cccccc;
+	color: #fff;
+	background-color: rgb(40, 164, 255);
+	line-height: 30px;
+	cursor: pointer;
+	float:left;
+	text-align:center;
+}
+
+#releaseNote:after {
+	clear: both;	
+}
+
+.note_title {
+	  width: 100%;
+	  height: 30px;
+	  text-align: center;
+	  color: #ccc;
+	  margin: 20px auto;
+	  background: url("/social/images/note_title_bg_line_wev8.png") no-repeat;
+	  background-size: 488px 1px;
+	  background-position: center center;
+	  margin-bottom: 10px;
+}
+
+.note_title .tip {
+	  width: 85px;
+	  margin: 0px auto;
+	  line-height: 30px;
+	  background-color: #FFF;
+}
+
+.note-track {
+	color: #CCCCCC;
+  	text-align: left;
+  	overflow-x: hidden;
+  	overflow-y: auto;
+  	//position: absolute;
+  	margin: 15px 27px;
+  	//border: 1px solid red;
+}
+
+.note_item_split {
+	border-bottom: 1px solid #E3E6F0;
+	padding-bottom: 5px;
+}
+
+.note-bottom-pane {
+	margin-top: 10px;	
+}
+
+.note-content-pane {
+	width: 100%;
+	color: #333333;	
+	margin-top: 5px;
+  	margin-bottom: 5px;
+  	word-break: break-all;
+}
+
+.bottom-left-control {
+	float: left;	
+}
+
+.bottom-left-control a:link {
+	color: rgb(40, 164, 255);
+}
+
+.bottom-right-sender {
+	width:300px;
+	height:20px;
+	line-height:20px;
+	text-align:right;		
+	margin-left: auto;
+}
+
+.bottom-right-sender:after {
+	clear: both;
+}
+
+.note-bottom-pane {
+	margin-top: 10px;	
+}
+
+.note-content-pane {
+	width: 100%;
+	color: #333333;	
+	margin-top: 5px;
+  	margin-bottom: 5px;
+  	word-break: break-all;
+}

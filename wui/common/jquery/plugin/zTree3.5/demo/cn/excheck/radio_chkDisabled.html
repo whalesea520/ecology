@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> ZTREE DEMO - Radio chkDisabled</TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../../../css/demo.css" type="text/css">
+	<link rel="stylesheet" href="../../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="../../../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../../js/jquery.ztree.core-3.5.js"></script>
+	<script type="text/javascript" src="../../../js/jquery.ztree.excheck-3.5.js"></script>
+	<!--
+	<script type="text/javascript" src="../../../js/jquery.ztree.exedit-3.5.js"></script>
+	-->
+	<SCRIPT type="text/javascript">
+		<!--
+		var setting = {
+			check: {
+				enable: true,
+				chkStyle: "radio",
+				radioType: "level"
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			}
+		};
+
+		var zNodes =[
+			{ id:1, pId:0, name:"闅忔剰鍕鹃€?1", open:true},
+			{ id:11, pId:1, name:"闅忔剰鍕鹃€?1-1", open:true},
+			{ id:111, pId:11, name:"disabled 1-1-1", chkDisabled:true, checked:true},
+			{ id:112, pId:11, name:"闅忔剰鍕鹃€?1-1-2"},
+			{ id:12, pId:1, name:"disabled 1-2", chkDisabled:true, open:true},
+			{ id:121, pId:12, name:"disabled 1-2-1", checked:true},
+			{ id:122, pId:12, name:"disabled 1-2-2"},
+			{ id:2, pId:0, name:"闅忔剰鍕鹃€?2", checked:true, open:true},
+			{ id:21, pId:2, name:"闅忔剰鍕鹃€?2-1"},
+			{ id:22, pId:2, name:"闅忔剰鍕鹃€?2-2", open:true},
+			{ id:221, pId:22, name:"闅忔剰鍕鹃€?2-2-1", checked:true},
+			{ id:222, pId:22, name:"闅忔剰鍕鹃€?2-2-2"},
+			{ id:23, pId:2, name:"闅忔剰鍕鹃€?2-3"}
+		];
+		
+		function disabledNode(e) {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			disabled = e.data.disabled,
+			nodes = zTree.getSelectedNodes();
+			if (nodes.length == 0) {
+				alert("璇峰厛閫夋嫨涓€涓妭鐐?);
+			}
+
+			for (var i=0, l=nodes.length; i<l; i++) {
+				zTree.setChkDisabled(nodes[i], disabled);
+			}
+		}
+
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			$("#disabledTrue").bind("click", {disabled: true}, disabledNode);
+			$("#disabledFalse").bind("click", {disabled: false}, disabledNode);
+
+		});
+		//-->
+	</SCRIPT>
+</HEAD>
+
+<BODY>
+<h1>Radio chkDisabled 婕旂ず</h1>
+<h6>[ 鏂囦欢璺緞: excheck/radio_chkDisabled.html ]</h6>
+<div class="content_wrap">
+	<div class="zTreeDemoBackground left">
+		<ul id="treeDemo" class="ztree"></ul>
+	</div>
+	<div class="right">
+		<ul class="info">
+			<li class="title"><h2>1銆乻etChkDisabled 鏂规硶鎿嶄綔璇存槑</h2>
+				<ul class="list">
+				<li>setChkDisabled 鏂规硶鍙互璁剧疆鑺傜偣 checkbox / radio 绂佺敤 鎴?鍙栨秷绂佺敤锛岃缁嗚鍙傝 API 鏂囨。涓殑鐩稿叧鍐呭</li>
+				<li><p>璇曡瘯鐪嬶細<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;[ <a id="disabledTrue" href="#" title="set checkbox to be disabled." onclick="return false;">绂佺敤</a> ]
+					&nbsp;&nbsp;&nbsp;&nbsp;[ <a id="disabledFalse" href="#" title="set checkbox to be abled." onclick="return false;">鍙栨秷绂佺敤</a> ]</p>
+				</li>
+				</ul>
+			</li>
+			<li class="title"><h2>2銆乻etting 閰嶇疆淇℃伅璇存槑</h2>
+				<ul class="list">
+				<li>杩欎釜 Demo 鍙畝鍗曟紨绀?chkDisabled 鐨勪娇鐢ㄦ柟娉曪紝璇︾粏閰嶇疆淇℃伅璇峰弬鑰?鈥楻adio 鍕鹃€夋搷浣溾€?/li>
+				</ul>
+			</li>
+			<li class="title"><h2>3銆乼reeNode 鑺傜偣鏁版嵁璇存槑</h2>
+				<ul class="list">
+				<li class="highlight_red">1)銆佸鏋滄煇鑺傜偣涓嶆樉绀?radio锛岃璁剧疆 treeNode.chkDisabled 灞炴€э紝璇︾粏璇峰弬瑙?API 鏂囨。涓殑鐩稿叧鍐呭</li>
+				<li>2)銆佸叾浠栬鍙傝€?鈥楻adio 鍕鹃€夋搷浣溾€?/li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+</BODY>
+</HTML>

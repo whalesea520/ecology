@@ -1,0 +1,22 @@
+.magic-line {
+	background-image:url("/images/wf/tab_wev8.png");
+}
+
+.tab_box {
+	border-top:1px solid #4ba4fd;
+}
+.topMenuTitle {
+	border-bottom:0px;
+}
+.tab_menu li.current a{
+	color: #4ba4fd !important;
+} 
+.tab_menu {
+	background: #efefef;
+}
+.topMenuTitle {
+	background: #efefef;
+}
+.e8_box {
+	background: #efefef;
+}

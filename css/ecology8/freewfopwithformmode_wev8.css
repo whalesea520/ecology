@@ -1,0 +1,73 @@
+.outertable{
+ 
+   border:none !important;
+ }
+
+TABLE.ViewForm TD{
+  padding:0px;
+}
+
+
+.fname {
+height: 20px !important;
+background-color: #f7f7f7 !important;
+font-size: 10pt !important;
+border-style: solid !important;
+border-color: #e6e6e6 !important;
+border-width: 1px !important;
+padding-left: 10px !important;
+}
+.fvalue {
+height: 20px !important;
+background-color: #ffffff !important;
+border-style: solid !important;
+border-color: #e6e6e6 !important;
+border-width: 1px !important;
+padding-left: 5px !important;
+}
+.detailtitle {
+height: 20px !important;
+font-size: 10pt !important;
+background-color: #ffffff!important;
+border-style: solid !important;
+border-color: #e6e6e6 !important;
+border-width: 0px !important;
+border-bottom: 2px solid #B7E0FE !important;
+}
+.detailfield {
+background-color: #FFFFFF !important;
+border-bottom-style: solid !important;
+border-bottom-color: #e6e6e6 !important;
+border-bottom-width: 1px !important;
+}
+.detailtable {
+border-collapse: collapse !important;
+border-style: solid !important;
+border-color: #e6e6e6 !important;
+border-width: 1px !important;
+}
+TABLE.Form  TR:first-child {
+height: 0px;
+}
+TABLE.Form  TR:first-child  td{
+height: 0px;
+}
+input, select, textarea {
+border: #e7e7e7 1px solid;
+}
+.reqformtitle {
+text-align: left;
+margin-top: -17px;
+padding-bottom: 8px;
+background: #Fff;
+}
+
+.reqname {
+color: #000000 !important;
+font-size: 12pt !important;
+font-weight: bold !important;
+}
+
+.fvalue  td{
+background:#ffffff !important;
+}

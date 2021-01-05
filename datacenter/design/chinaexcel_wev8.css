@@ -1,0 +1,76 @@
+.mainBody
+{
+	BACKGROUND-COLOR:buttonface;
+	MARGIN:0;
+	OVERFLOW-Y:hidden;
+}
+.cbToolbar
+{
+	HEIGHT:27px; 
+	WIDTH:100%;
+	PADDING:0px;
+	BACKGROUND-COLOR:buttonface;
+}
+.tbDivider
+{
+	BORDER-RIGHT:2px groove;
+}
+.tbButton, .tbButtonDown, .tbButtonRaise
+{
+	COLOR:buttontext;
+	CURSOR:hand;
+	HEIGHT:23;
+	BORDER:1px solid buttonface;
+	PADDING:2px 2px 2px 2px;
+	TEXT-DECORATION:none;
+	MARGIN-TOP:0;
+}
+.tbButtonDown
+{
+	BORDER-COLOR:threeddarkshadow threedhighlight threedhighlight threeddarkshadow;
+}
+.tbDisabled
+{
+	FILTER:alpha(opacity=35);
+	CURSOR:hand;
+}
+.fbButton
+{
+	BORDER:1px solid;
+	BORDER-COLOR:menu; 
+	HEIGHT:18px; 
+	WIDTH:18px;
+	CURSOR:hand;
+	MARGIN:0;
+	PADDING:0;
+	MARGIN:0;
+	VERTICAL-ALIGN:TOP;
+}
+
+.AttachTable, .cbToolbar, .cbSubmenu, .fldFont, .fldText, .msgHeader, .fldLabel,
+.trButtons, .msgViewer, .appointment, .rnOnlineBar, .viewStatusBar,
+.appointmentBody, .tabHeader, BODY
+{
+	FONT-SIZE:x-small;
+}
+.cbToolbar IMG, .cbSubmenu IMG
+{
+	BORDER:none;
+	HEIGHT:16px;
+	WIDTH:16px;
+	MARGIN-RIGHT:3px;
+}
+.cbToolbar TD
+{
+	VERTICAL-ALIGN:middle;
+}
+.monthlyDayHeader, .FORMATBAR, .cbToolbar, .btnRecip, .tbButtonRaise,
+.tbButton A:hover, .tbButton:hover
+{
+	BORDER:1px solid;
+	BORDER-COLOR:threedhighlight threedshadow threedshadow threedhighlight;
+}
+SELECT, INPUT, TEXTAREA, BUTTON, TABLE
+{
+	FONT-SIZE:100%;
+}

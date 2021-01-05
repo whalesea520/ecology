@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root>
+    <name>明细表增强插件</name>
+    <desc></desc>
+    <appImg>1461930323227174ff3.png</appImg>
+    <code>no0000012</code>
+    <number>no0000012</number>
+    <version>4.5</version>
+    <pages>
+        <page>
+            <key>1</key>
+            <name>明细表插件配置</name>
+            <url>/cloudstore/app/no0000012/wfDetailSet.jsp</url>
+        </page>
+    </pages>
+    <mobilePages>
+        <mobilePage>
+            <key>1</key>
+            <name>入口</name>
+            <url>/cloudstore/app/no0000012/index-m.jsp</url>
+        </mobilePage>
+    </mobilePages>
+</root>

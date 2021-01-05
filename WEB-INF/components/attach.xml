@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components>
+	<component desc="附件" type="1" ptype="6" client="pc" name="attach">
+	   <params>
+	      <p name="burl" />	   
+	   </params>
+		<template>
+			<edit><content><![CDATA[
+<TABLE id=field${id}_tab cols=3>
+<COLGROUP>
+<COL width="50%">
+<COL width="25%">
+<COL width="25%">
+<TBODY>
+${list name=attachlist}
+<TR>
+<TD><INPUT id=field${id}_del_${attachindex} value=0 type=hidden name=field${id}_del_${attachindex}> <IMG border=0 src="${attachimg}" width=20 height=20> <A style="CURSOR: hand" onclick="addDocReadTag('${value}');openAccessory('849478')">${vtext}</A>&nbsp; <INPUT id=field${id}_id_${attachindex} value="${value}" type=hidden name=field${id}_id_${attachindex}> </TD>
+<TD><BUTTON accessKey=1 class=btnFlow onclick="onChangeSharetype('span${id}_id_${attachindex}','field${id}_del_${attachindex}','0',oUpload${id})"><U>0</U>-删除</BUTTON> <SPAN style="VISIBILITY: hidden" id=span111_id_0 name="span${id}_id_${attachindex}"><B><FONT color=#ff0033>√</FONT></B></SPAN> </TD>
+<TD><SPAN id=selectDownload><BUTTON accessKey=1 class=btnFlowd onclick="addDocReadTag('${value}');downloads('849478')"><U>0</U>-下载 (1K)</BUTTON><BUTTON accessKey=1 class=btnFlowd onclick="addDocReadTag('${value}');downloadsBatch('1475427,1475430','1873046')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;全部下载</BUTTON> </SPAN></TD></TR>
+${/list}
+<TR>
+<TD colSpan=3>
+<TABLE class=ViewForm>
+<TBODY>
+<TR>
+<TD colSpan=2>
+<DIV><SPAN>
+<OBJECT id=SWFUpload_0 class=swfupload data="/js/swfupload/swfupload.swf?swfuploadrnd=333656824" 
+width=100 height=18 type1="application/x-shockwave-flash" StartUpload="null" ReturnUploadStart="null"
+ StopUpload="null" CancelUpload="null" GetStats="null" SetStats="null" GetFile="null" GetFileByIndex="null" 
+ AddFileParam="null" RemoveFileParam="null" SetUploadURL="null" SetPostParams="null" SetFileTypes="null"
+  SetFileSizeLimit="null" SetFileUploadLimit="null" SetFileQueueLimit="null" SetFilePostName="null" 
+  SetUseQueryString="null" SetRequeueOnError="null" SetHTTPSuccess="null" SetDebugEnabled="null" 
+  SetButtonImageURL="null" SetButtonDimensions="null" SetButtonText="null" SetButtonTextPadding="null" 
+  SetButtonTextStyle="null" SetButtonAction="null" SetButtonDisabled="null" SetButtonCursor="null"
+  >
+  </OBJECT>
+  </SPAN>&nbsp;&nbsp;
+  <SPAN style="COLOR: #262626; CURSOR: hand; TEXT-DECORATION: none" 
+  id=btnCancel${id} disabled onclick=oUpload${id}.cancelQueue();showmustinput(oUpload${id});> <SPAN>
+  <IMG border=0 src="/js/swfupload/delete_wev8.gif"></SPAN> 
+  <SPAN style="HEIGHT: 19px"><FONT style="MARGIN: 0px 0px 0px -1px">清除所有选择</FONT></SPAN> </SPAN>
+  <SPAN id=uploadspan>(此目录下最大只能上传100M/个的附件)</SPAN>
+   <SPAN id=field${id}span></SPAN></DIV><INPUT id=field${id} class=InputStyle size=60 type=hidden name=field${id} temptitle="上传附件" viewtype="0">
+    </TD></TR>
+<TR>
+<TD colSpan=2>
+<DIV id=fsUploadProgress${id} class="fieldset flash"></DIV>
+<DIV id=divStatus${id}></DIV></TD></TR></TBODY></TABLE>
+<INPUT id=mainId value=82 type=hidden name=mainId> 
+<INPUT id=subId value=357 type=hidden name=subId> 
+<INPUT id=secId value=1305 type=hidden name=secId> 
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+			               
+			               ]]></content></edit>
+			<view><content><![CDATA[<TABLE id=field111_tab cols=3>
+<TBODY>
+<COLGROUP>
+<COL width="50%">
+<COL width="25%">
+<COL width="25%">
+<TBODY>
+<TR>
+<TD colSpan=3>${attachimg}<A style="CURSOR: hand" onclick="addDocReadTag('${value}');openDocExt('${value}','${docversion}','${attachid}',0)">${vtext}</A>&nbsp; <SPAN id=selectDownload><BUTTON accessKey=1 class=btnFlowd onclick="addDocReadTag('${value}');top.location='/weaver/weaver.file.FileDownload?fileid=${attachid}&amp;download=1&amp;requestid=1836807'"><U>0</U>-下载 (${attachsize})</BUTTON> </SPAN><BUTTON accessKey=1 style="TEXT-ALIGN: center; PADDING-LEFT: 0px" class=btnFlow onclick="openFullWindowHaveBar('/docview/main.jsp?fileid=${attachid}')">预览</BUTTON> </TD></TR><INPUT id=field${id}_idnum value=1 type=hidden name=field${id}_idnum> <INPUT value=${value} type=hidden name=field${id}> </TBODY></TABLE>]]></content></view>
+			<setting><content><![CDATA[<INPUT id="${fieldid}" class="InputStyle"  name="field${id}" value="${label}">
+			]]></content></setting>
+		</template>
+	</component>
+	<component desc="附件" name="attach" type="1" ptype="6" client="mobile">
+		<params>
+		    <p name=""/>
+		</params>
+		<template>
+			<edit><content><![CDATA[
+			<div class="field_upload_container">
+				<div id="entryWrap${id}" class="field_upload_entryWrap">
+					${list name=attachlist}
+					<div class="attach_upload_entryborder" style="padding-right: 30px;">
+						<a onclick="javascript:downloadattach('${attachid}','${filename}');" href="javascript:void('0');">
+							<div class="attach_upload_entry">
+								<table style="width: 100%; table-layout: fixed;">
+									<tr>
+										<td class="icon">${attachimg}</td>
+										<td class="name">${filename}</td>
+										<td class="size">${filesize}</td>
+										<td class="flag"><img width="20" height="20" src="/mobilemode/images/mec/arrow_right_wev8.png"></td>
+									</tr>
+								</table>
+							</div>
+						</a>
+						<div class="attach_upload_DeleteBtn" onclick="delUpload(this, '${id}','${docid}');"></div>
+					</div>
+					${/list}
+					<div class="attach_add_entryBorder" id="attachBorder${id}">
+						<div class="attach_add_entryBtn" id="entryBtn${id}" style="width:55px;height:55px;">
+							<input id="file${id}" type="file" name="file" fileNum="0" class="upLoadFile" single="single"  onchange="addUploadattach('${id}');"  data-role="none"/>
+						</div>
+					</div>
+				</div>
+				<input type="hidden"  id="field${id}" name="field${id}"  ismust="${must}" value="${value}" fieldname="${fieldname}"/>
+				<input type="hidden"  name="photoField${id}" id="photoField${id}" value="0"/>
+			</div>
+			]]></content></edit>
+			<view><content><![CDATA[
+			<div class="field_upload_container">
+				<div id="entryWrap${id}" class="field_upload_entryWrap">
+					${list name=attachlist}
+					<div class="attach_upload_entryborder">
+						<a onclick="javascript:downloadattach('${attachid}','${filename}');" href="javascript:void('0');" attachid="${attachid}" docid="${docid}">
+							<div class="attach_upload_entry">
+								<table style="width: 100%; table-layout: fixed;">
+									<tr>
+										<td class="icon">${attachimg}</td>
+										<td class="name">${filename}</td>
+										<td class="size">${filesize}</td>
+										<td class="flag"><img width="20" height="20" src="/mobilemode/images/mec/arrow_right_wev8.png"></td>
+									</tr>
+								</table>
+							</div>
+						</a>
+					</div>
+					${/list}
+				</div>
+			</div>
+			<input type="hidden" id="field${id}" name="field${id}" value="${value}"/>
+			]]></content></view>
+			<setting><content><![CDATA[<INPUT id="${fieldid}" class="InputStyle"  name="field${id}" value="${label}">
+			]]></content></setting>
+			<hidden><content><![CDATA[<input type="hidden" id="field${id}" name="field${id}" value="${value}"/>]]></content></hidden>
+		</template>
+	</component>
+</components>

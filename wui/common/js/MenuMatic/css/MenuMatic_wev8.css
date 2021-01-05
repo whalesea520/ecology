@@ -1,0 +1,189 @@
+/* Based partially on Matthew Carroll's keyboard accessible flavor of Suckerfish 
+ * Dropdowns by Patrick Griffiths and Dan Webb. 
+ * http://carroll.org.uk/sandbox/suckerfish/bones2.html
+ */
+
+/* ----[ LINKS ]----*/
+
+
+
+/* all menu links */
+#navFav a, #subMenusContainer a{
+	text-decoration:none;
+	display:block;
+	height:20px;
+}
+
+#contentUl{
+	/*padding: 2px 4px!important;*/
+	
+}
+.smOW ul{
+	/*padding: 2px 4px!important;*/
+	
+}
+
+#contentUl li{
+	padding-top: 0px;
+	padding-bottom: 1px;
+	min-height: 18px;
+	
+}
+
+#contentUl li ul li{
+	padding-top: 1px;
+	padding-bottom: 1px;
+	min-height: 18px;
+	
+}
+
+li a{
+   vertical-align:middle;  
+} 
+
+
+/* Just main menu links --[for non-javascript users this applies to submenu links as well]*/
+#navFav a{
+	margin:0;
+	float:left;	
+}
+
+/* Just sub menu links */
+#subMenusContainer a, #navFav li li a{
+	text-align:left;
+}
+
+/* All menu links on hover or focus */
+#subMenusContainer a:hover, #subMenusContainer a:focus,  #subMenusContainer a.subMenuParentBtnFocused{
+	background-color:#f9f9f9 ;
+	color:#656565!important;
+}
+
+/* sub menu links on hover or focus */
+#subMenusContainer a:hover, 
+#subMenusContainer a:focus, 
+ 
+#subMenusContainer a.subMenuParentBtnFocused,
+{
+	background-color:#F6C739 ;
+	color:#FFF;
+}
+
+/* Parent Sub Menu Links ---[javascript users only]*/
+.subMenuParentBtn{ 
+	background: url(../img/arrow_right_wev8.gif) right center no-repeat;  
+}
+
+/* Parent Sub Menu Links on hover or focus ---[javascript users only]*/
+.subMenuParentBtnFocused{ 
+	background: url(../img/arrow_right_over_wev8.gif) right center no-repeat;  
+	
+}
+
+/* Parent Main Menu Links ---[javascript users only]*/
+
+/* Parent Main Menu Links on hover or focus ---[javascript users only]*/
+.mainMenuParentBtnFocused{	
+	
+}
+
+/* ----[ OLs ULs, LIs, and DIVs ]----*/
+
+/* Submenu Outer Wrapper - each submenu is inside a div with this class - javascript users only */
+.smOW{ 
+	display:none; 
+	position: absolute; 
+	overflow:hidden; 
+	/*the 2px left & right padding lets you have a 1px border 
+	  on the ul or ol inside since overflow is set to hidden*/
+	padding:0px 2px;
+	*padding:0px 0px!important;
+	width: auto!important;
+	min-height: 18px;
+	top:50px;
+	
+}
+
+
+/* All ULs and OLs */
+#navFav, #navFav ul, #navFav ol, #subMenusContainer ul, #subMenusContainer ol { 
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	line-height: 1em;
+}
+
+
+
+/* All submenu OLs and ULs */
+#navFav ol, #navFav ul, #subMenusContainer ul, #subMenusContainer ol {	
+	/*border around submenu goes here*/	 
+	
+	background:#fff;	
+	border-left:1px solid #d0d0d0;
+	border-right:1px solid #d0d0d0;
+	border-bottom:1px solid #d0d0d0;
+	left:0;
+}
+
+.subsmOW{
+	border-top:1px solid rgb(142,197,238);
+}
+
+
+/* List items in main menu --[for non-javascript users this applies to submenus as well]  */
+#navFav li { 
+	/*great place to use a background image as a divider*/
+	display:block;
+	list-style:none;
+	position:relative;
+	float:left;
+	
+}
+
+#subMenusContainer li{
+	list-style: none;
+	height: 30px;
+	*height: auto!important;
+}
+#subMenusContainer a{
+	height: 30px;
+	*height: auto!important;
+	color:#656565;
+	line-height:30px;
+}
+
+#subMenusContainer a img{
+	vertical-align:middle;
+	padding-left:10px;
+	padding-right:5px;
+}
+
+
+
+
+#favLi{
+	border-bottom: solid #fff 0px;
+}
+
+
+#subMenusContainer{	display:block; 	position:absolute;	top:0;	left:0;	width:100%;	height:0;	overflow:visible;	z-index:1000000000; }
+
+
+/* --------------------------[ The below is just for non-javscript users ]--------------------------*/
+#navFav li li{	
+	float:none; 
+}
+
+#navFav li li a{ /* Just submenu links*/	
+	position:relative;
+	float:none;
+}
+
+#navFav li ul { /* second-level lists */
+	position: absolute;
+	width: 200px;
+	margin-left: -1000em; /* using left instead of display to hide menus because display: none isn't read by screen readers */
+	
+}
+

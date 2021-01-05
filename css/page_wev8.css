@@ -1,0 +1,29 @@
+.location{	
+	border:2px dashed  #BCBCBC;
+	margin-top:10px;
+	
+}
+.sparatorTr{			
+	height:1px;
+}
+.limitstr{
+	overflow:hidden;white-space:nowrap;text-overflow:ellipsis;cursor:pointer;		
+}		
+.solidbox {
+	BORDER-TOP: #D7D7D7 1px solid; 
+	BORDER-RIGHT: #D7D7D7 1px solid; 
+	BORDER-BOTTOM: #D7D7D7 1px solid;
+	BORDER-LEFT: #D7D7D7 1px solid; 
+}
+
+/*每栏元素列部分*/
+.group{
+	min-height: 100px;
+	height:40px;
+	height:auto;		
+}
+
+/*元素设置按钮部分*/
+.setting_button_row{
+	padding:5px;			
+}

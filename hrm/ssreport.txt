@@ -1,0 +1,67 @@
+Difference Report
+Project: $/ecology/hrm
+Working Folder: D:\ECOLOGY\hrm
+
+Local:
+   resource\HrmResource1.jsp
+   resource\HrmResource1Add.jsp
+   resource\HrmResource1Edit.jsp
+   resource\HrmResource2.jsp
+   resource\HrmResourceAbsense1.jsp
+   resource\HrmResourceAbsense1Add.jsp
+   resource\HrmResourceAbsense1Edit.jsp
+   resource\HrmResourceAbsense1Operation.jsp
+   resource\HrmResourceCertification.jsp
+   resource\HrmResourceCertificationAdd.jsp
+   resource\HrmResourceCertificationEdit.jsp
+   resource\HrmResourceCertificationOperation.jsp
+   resource\HrmResourceWelfare.jsp
+   resource\HrmResourceWelfareAdd.jsp
+   resource\HrmResourceWelfareEdit.jsp
+   resource\HrmResourceWelfareOperation.jsp
+   resource\HrmResourceWorkResumeIn.jsp
+   resource\HrmResourceWorkResumeInAdd.jsp
+   resource\HrmResourceWorkResumeInEdit.jsp
+   resource\HrmResourceWorkResumeInOperation.jsp
+
+Project:
+   resource/MutiResourceBrowser.jsp
+
+Modified:
+   Company/CostcenterBrowser.jsp
+   Company/DepartmentBrowser.jsp
+   Company/HrmDepartmentEdit.jsp
+   country/CountryBrowser.jsp
+   finance/BankBrowser.jsp
+   finance/HrmSalaryComponent.jsp
+   finance/HrmSalaryComponentBrowser.jsp
+   jobactivities/JobActivitiesBrowser.jsp
+   jobcall/JobCallBrowser.jsp
+   jobgroups/JobGroupsBrowser.jsp
+   jobtitles/HrmJobTitlesEdit.jsp
+   jobtitles/JobTitlesBrowser.jsp
+   jobtype/JobTypeBrowser.jsp
+   location/LocationBrowser.jsp
+   resource/HrmResource.jsp
+   resource/HrmResourceAdd.jsp
+   resource/HrmResourceEdit.jsp
+   resource/HrmResourceOperation.jsp
+   resource/HrmResourcePlan.jsp
+   resource/HrmResourcePrivateInfo.jsp
+   resource/PlanWake.jsp
+   resource/ResourceBrowser.jsp
+   roles/HrmRolesBrowser.jsp
+   roles/HrmRolesMembersOperation.jsp
+   Schedule/HrmPubHolidayCopy.jsp
+   search/HrmResourceSearch.jsp
+   search/HrmResourceSearchMouldOperation.jsp
+   search/HrmResourceSearchTmp.jsp
+   speciality/SpecialityBrowser.jsp
+   tools/RewardsTypeBrowser.jsp
+   tools/TrainTypeBrowser.jsp
+   transfer/HrmRightTransfer.jsp
+   transfer/HrmRightTransferDetail.jsp
+   usekind/UseKindBrowser.jsp
+   userdefine/HrmUserDefine.jsp
+   userdefine/UserDefineOperation.jsp
+

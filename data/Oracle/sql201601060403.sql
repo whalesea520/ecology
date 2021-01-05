@@ -1,0 +1,2 @@
+alter table FNABUDGETFEETYPE modify NAME VARCHAR2(600)
+/

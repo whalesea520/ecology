@@ -1,0 +1,4 @@
+ALTER TABLE AppHomepage_Model ADD sourceid VARCHAR2(50)
+/
+ALTER TABLE AppFormUI ADD isHide VARCHAR2(10)
+/

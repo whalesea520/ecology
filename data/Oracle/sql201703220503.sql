@@ -1,0 +1,23 @@
+CREATE TABLE RtxSendMsgLog(Id number(10) NOT NULL PRIMARY KEY,
+						   Userid number(10) NOT NULL,
+						   MsgType varchar2(10) NOT NULL,
+						   MsgUrl varchar2(500) NOT NULL,
+						   CreateDate  varchar2(10) NOT NULL,
+						   CreateTime  varchar2(8) NOT NULL 
+)
+/
+CREATE SEQUENCE RtxSendMsgLog_SEQ
+MINVALUE 1
+MAXVALUE 99999999999999999999
+START WITH 1
+INCREMENT BY 1
+CACHE 50
+ORDER
+/ 
+CREATE OR REPLACE TRIGGER RtxSendMsgLog_TRI 
+BEFORE INSERT ON RtxSendMsgLog 
+FOR EACH ROW
+BEGIN 
+  SELECT RtxSendMsgLog_SEQ.NEXTVAL INTO :NEW.ID FROM DUAL; 
+  END;
+/

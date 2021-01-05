@@ -1,0 +1,263 @@
+<link rel="stylesheet" href=winedit_wev8.css>
+<TITLE>WinLIKE API</TITLE>
+<BR>
+<P CLASS=DE>
+	<B>Basic Main Functions</B>
+</P>
+<P CLASS=DE>
+	<B>WinLIKE.version</B>()<BR>
+	Retrieves the used WinLIKE version.<BR>
+	Look at <A HREF="hlp-info.html" TARGET=info>hlp-info.html</A>
+	(<A HREF="./" NAME=WLoff_ TARGET=folder>winlike/winedit/</A>).
+	<BR><BR>
+	<B>WinLIKE.ie</B><BR>
+	Is true if WinLIKE is loaded into an Internet Explorer and false if a Mozilla based browser is used.
+	Is null when the page is loaded into a incompatible browser.<BR>
+	See files of <A HREF="../../50_develop_scripts.html" NAME=WLoff_ TARGET=sample>50_develop_scripts.html</A>
+	(<A HREF="../../samples/script/" NAME=WLoff_ TARGET=folder>samples/script/</A>).
+	<BR><BR>
+	<B>WinLIKE.browsersize().Height|.Width</B>()<BR>
+	Retrieves the size of the actual browser canvas.<BR>
+	See files of <A HREF="../../13_sample_relative.html" NAME=WLoff_ TARGET=sample>13_sample_relative.html</A>
+	(<A HREF="../../samples/relative/" NAME=WLoff_ TARGET=folder>samples/relative/</A>).
+	<BR><BR>
+	<B>WinLIKEerrorpage</B><BR>
+	Specify the errorpage of WinLIKE in case of using a not supported browser. This is not optional but can be set to null<BR>
+	See files of <A HREF="../../12_sample_skins.html" NAME=WLoff_ TARGET=sample>12_sample_skins.html</A>
+	(<A HREF="../../samples/skins/" NAME=WLoff_ TARGET=folder>samples/skins/</A>).
+	<BR><BR>
+	<B>WinLIKEfilepath</B> and <B>WinLIKEskinpath</B><BR>
+	Specify the paths of the WinLIKE folders. Do not forget to change the path in the skin definiton.<BR>
+	See <A HREF="../../11_sample_properties.html" NAME=WLoff_ TARGET=sample>11_sample_properties.html</A>.
+	<BR><BR>
+	<B>WinLIKE.definewindows</B><BR>
+	Defines the function for the windows definitions.<BR>
+	See files of <A HREF="../../12_sample_skins.html" NAME=WLoff_ TARGET=sample>12_sample_skins.html</A>
+	(<A HREF="../../samples/skins/" NAME=WLoff_ TARGET=folder>samples/skins/</A>).
+	<BR><BR>
+	<B>WinLIKE.init</B>()<BR>
+	Starts WinLIKE from the Body-onLoad-Function.<BR>
+	See files of <A HREF="../../12_sample_skins.html" NAME=WLoff_ TARGET=sample>12_sample_skins.html</A>
+	(<A HREF="../../samples/skins/" NAME=WLoff_ TARGET=folder>samples/skins/</A>).
+	<BR><BR>
+	<B>WinLIKE.onload</B><BR>
+	Defines the function which is called when WinLIKE loading process is completed.<BR>
+	See files of <A HREF="../../28_sample_cookies.html" NAME=WLoff_ TARGET=sample>28_sample_cookies.html</A>
+	(<A HREF="../../samples/cookies/" NAME=WLoff_ TARGET=folder>samples/cookies/</A>).
+	<BR><BR>
+	<B>WinLIKE.resizewindows</B>()<BR>
+	Body-onResize-Function. Redraws windows with actual positions and sizes.<BR>
+	See files of <A HREF="../../13_sample_relative.html" NAME=WLoff_ TARGET=sample>13_sample_relative.html</A>
+	(<A HREF="../../samples/relative/" NAME=WLoff_ TARGET=folder>samples/relative/</A>).
+	<BR><BR>
+	<B>WinLIKE.window</B>(window-name, x-pos, y-pos, width, height, z-index)<BR>
+	Creates a window. The last five values are only start values.<BR>
+	See files of <A HREF="../../12_sample_skins.html" NAME=WLoff_ TARGET=sample>12_sample_skins.html</A>
+	(<A HREF="../../samples/skins/" NAME=WLoff_ TARGET=folder>samples/skins/</A>).
+	<BR><BR>
+	<B>WinLIKE.addwindow</B>(window-object)<BR>
+	Adds a window to WinLIKE. Returns the actual window number. This number changes after closing
+	and reopening a window.<BR>
+	See files of <A HREF="../../12_sample_skins.html" NAME=WLoff_ TARGET=sample>12_sample_skins.html</A>
+	(<A HREF="../../samples/skins/" NAME=WLoff_ TARGET=folder>samples/skins/</A>).
+</P>
+<BR>
+<P CLASS=DE>
+	<B>Advanced Window Functions</B>
+</P>
+<P CLASS=DE>
+	<B>WinLIKE.createwindow</B>(window-object)<BR>
+	Creates a window at runtime alternative to WinLIKE.addwindow().<BR>
+	See files of <A HREF="../../50_develop_scripts.html" NAME=WLoff_ TARGET=sample>50_develop_scripts.html</A>
+	(<A HREF="../../samples/script/" NAME=WLoff_ TARGET=folder>samples/script/</A>)
+	and <A HREF="../../60_develop_debug_windows.html" NAME=WLoff_ TARGET=sample>60_develop_debug_windows.html</A>
+	(<A HREF="../../samples/debug/" NAME=WLoff_ TARGET=folder>samples/debug/</A>).
+	<BR><BR>
+	<B>WinLIKE.openaddress</B>(url, query-string, window-name, window-number, reopen, untouch z-Index)<BR>
+	Opens a window with the specified address or loads a page into a window.<BR>
+	See files of <A HREF="../../52_develop_inframe.html" NAME=WLoff_ TARGET=sample>52_develop_inframe.html</A>
+	(<A HREF="../../samples/inframe/" NAME=WLoff_ TARGET=folder>samples/inframe/</A>).
+	<BR><BR>
+	<B>WinLIKE.searchwindow</B>(window-name)<BR>
+	Searches the actual number of a window. This number changes after closing
+	and reopening a window.<BR>
+	See files of <A HREF="../../50_develop_scripts.html" NAME=WLoff_ TARGET=sample>50_develop_scripts.html</A>
+	(<A HREF="../../samples/script/" NAME=WLoff_ TARGET=folder>samples/script/</A>).
+	<BR><BR>
+	<B>WinLIKE.setlink</B>(href, window-number)<BR>
+	Retrieves the relative URL for changing a link per script because IE/NN-differences. <BR>
+	See files of <A HREF="../../50_develop_scripts.html" NAME=WLoff_ TARGET=sample>50_develop_scripts.html</A>
+	(<A HREF="../../samples/script/" NAME=WLoff_ TARGET=folder>samples/script/</A>) and <A HREF="../../55_develop_linkchange.html" NAME=WLoff_ TARGET=sample>55_develop_linkchange.html</A>
+	(<A HREF="../../samples/change/" NAME=WLoff_ TARGET=folder>samples/change/</A>).
+	<BR><BR>
+	<B>WinLIKE.windows</B>[window-number]<BR>
+	Array of current WinLIKE-windows.<BR>
+	See files of <A HREF="../../13_sample_relative.html" NAME=WLoff_ TARGET=sample>13_sample_relative.html</A>
+	(<A HREF="../../samples/relative/" NAME=WLoff_ TARGET=folder>samples/relative/</A>).
+	<BR><BR>
+	<B>WinLIKE.windows</B>[window-number]<B>.Ski</B> [also .Mn|.Nam|.Vis|...]<BR>
+	Sets a property of a window. Do not change the address (.Adr) in this way, use WinLIKE.openaddress!).<BR>
+	See <A HREF="javascript:parent.WinLIKE.openaddress('winlike/winedit/hlp-scripting.html',null,'WinLIKE_quick',true)">Properties API</A> and files from <A HREF="../../50_develop_scripts.html" NAME=WLoff_ TARGET=sample>50_develop_scripts.html</A>
+	(<A HREF="../../samples/script/" NAME=WLoff_ TARGET=folder>samples/script/</A>).
+	<BR><BR>
+	<B>WinLIKE.windows</B>[window-number]<B>.draw</B>()<BR>
+	Rerender the window skin after changing properties.<BR>
+	See files of <A HREF="../../50_develop_scripts.html" NAME=WLoff_ TARGET=sample>50_develop_scripts.html</A>
+	(<A HREF="../../samples/script/" NAME=WLoff_ TARGET=folder>samples/script/</A>).
+	<BR><BR>
+	<B>WinLIKE.windows</B>[window-number]<B>.close</B>()<BR>
+	Closes a window.<BR>
+	See files of <A HREF="../../50_develop_scripts.html" NAME=WLoff_ TARGET=sample>50_develop_scripts.html</A>
+	(<A HREF="../../samples/script/" NAME=WLoff_ TARGET=folder>samples/script/</A>).
+	<BR><BR>
+	<B>WinLIKE.windows</B>[window-number]<B>.front</B>()<BR>
+	Brings a window to front.<BR>
+	See files of <A HREF="../../50_develop_scripts.html" NAME=WLoff_ TARGET=sample>50_develop_scripts.html</A>
+	(<A HREF="../../samples/script/" NAME=WLoff_ TARGET=folder>samples/script/</A>).
+	<BR><BR>
+	<B>WinLIKE.windows</B>[window-number]<B>.hideshow</B>()<BR>
+	Hides or shows a window.<BR>
+	See files of <A HREF="../../51_develop_winlist.html" NAME=WLoff_ TARGET=sample>51_develop_winlist.html</A>
+	(<A HREF="../../samples/script/" NAME=WLoff_ TARGET=folder>samples/script/</A>).
+	<BR><BR>
+	<B>WinLIKE.windows</B>[window-number]<B>.minmax</B>()<BR>
+	Minimizes or restores a window.<BR>
+	See files of <A HREF="http://www.ceiton.com" NAME=WLoff_ TARGET=sample>www.ceiton.com</A> (the Minimize link).
+	<BR><BR>
+	<B>WinLIKE.windows</B>[window-number]<B>.innerframe</B>()<BR>
+	Retrieves the window inline frame object.<BR>
+	See files of <A HREF="../../54_develop_win_access.html" NAME=WLoff_ TARGET=sample>54_develop_win_access.html</A>
+	(<A HREF="../../samples/access/" NAME=WLoff_ TARGET=folder>samples/access/</A>).
+	<BR><BR>
+	<B>WinLIKE.windows</B>[window-number]<B>.innerdoc</B>()<BR>
+	Retrieves the window document object.<BR>
+	See files of <A HREF="../../54_develop_win_access.html" NAME=WLoff_ TARGET=sample>54_develop_win_access.html</A>
+	(<A HREF="../../samples/access/" NAME=WLoff_ TARGET=folder>samples/access/</A>).
+	<BR><BR>
+	<B>WinLIKE.windows</B>[window-number]<B>.ovlpos</B>()<BR>
+	Overloads/changes the position of the actual moving window.<BR>
+	See <A HREF="../../31_sample_snap_windows.html" NAME=WLoff_ TARGET=sample>31_sample_snap_windows.html</A>.
+	<BR><BR>
+	<B>WinLIKE.windows</B>[window-number]<B>.ovlsize</B>()<BR>
+	Overloads/changes the size of actual risizing window.<BR>
+	See <A HREF="../../31_sample_snap_windows.html" NAME=WLoff_ TARGET=sample>31_sample_snap_windows.html</A>.
+	<BR><BR>
+	<B>WinLIKE.maxvals</B>(left, top, right, bottom)<BR>
+	Defines the space between a maximized window and the browser.<BR>
+	See <A HREF="../../17_sample_maximizing.html" NAME=WLoff_ TARGET=sample>17_sample_maximizing.html</A>.
+	<BR><BR>
+	<B>WinLIKE.Actual</B><BR>
+	Retrieves the window number of the actual forground window.<BR>
+	See <A HREF="../../60_develop_debug_windows.html" NAME=WLoff_ TARGET=sample>60_develop_debug_windows.html</A>.
+	<BR><BR>
+	<B>WinLIKE_x|y</B><BR>
+	Retrieves or sets the actual WinLIKE mouse coordinates.<BR>
+	See <A HREF="../../30_sample_limit_areas.html" NAME=WLoff_ TARGET=sample>30_sample_limit_areas.html</A>.
+	<BR><BR>
+</P>
+<BR>
+<P CLASS=DE>
+	<B>WinList Functions</B>
+</P>
+<P CLASS=DE>
+	<B>WinLIKE.winlist.Adr</B><BR>
+	Address of the customized winlist.<BR>
+	See files of <A HREF="../../51_develop_winlist.html" NAME=WLoff_ TARGET=sample>51_develop_winlist.html</A>
+	(<A HREF="../../samples/winlist/" NAME=WLoff_ TARGET=folder>samples/winlist/</A>).
+	<BR><BR>
+	<B>WinLIKE.winlist.getitem</B>(window-number, active, title, window-name, skin)<BR>
+	Defines the style of the items of the winlist.<BR>
+	See files of <A HREF="../../51_develop_winlist.html" NAME=WLoff_ TARGET=sample>51_develop_winlist.html</A>
+	(<A HREF="../../samples/winlist/" NAME=WLoff_ TARGET=folder>samples/winlist/</A>).
+	<BR><BR>
+	<B>WinLIKE.winlist.create</B>()<BR>
+	Creates the window-list.<BR>
+	See files of <A HREF="../../51_develop_winlist.html" NAME=WLoff_ TARGET=sample>51_develop_winlist.html</A>
+	(<A HREF="../../samples/winlist/" NAME=WLoff_ TARGET=folder>samples/winlist/</A>).
+	<BR><BR>
+	<B>WinLIKE.winlist.show</B>()<BR>
+	Show or hide the winlist.<BR>
+	See files of <A HREF="../../51_develop_winlist.html" NAME=WLoff_ TARGET=sample>51_develop_winlist.html</A>
+	(<A HREF="../../samples/winlist/" NAME=WLoff_ TARGET=folder>samples/winlist/</A>).
+	<BR><BR>
+	<B>WinLIKE.winlist.Active</B><BR>
+	If true the WinList will be automaticaly loaded.<BR>
+	See files of <A HREF="../../51_develop_winlist.html" NAME=WLoff_ TARGET=sample>51_develop_winlist.html</A>
+	(<A HREF="../../samples/winlist/" NAME=WLoff_ TARGET=folder>samples/winlist/</A>).
+</P>
+<BR>
+<P CLASS=DE>
+	<B>Personalisation Functions</B>
+</P>
+<P CLASS=DE>
+	<B>WinLIKE.currentstates</B>(true, true)<BR>
+	Retrieves the window collection status.<BR>
+	See <A HREF="../../18_sample_drag&save.html" NAME=WLoff_ TARGET=sample>18_sample_drag&save.html</A>.
+	<BR><BR>
+	<B>WinLIKE.cookie.set</B>()<BR>
+	Saves the actual windows states into a cookie.<BR>
+	See <A HREF="../../18_sample_drag&save.html" NAME=WLoff_ TARGET=sample>18_sample_drag&save.html</A>.
+	<BR><BR>
+	<B>WinLIKE.cookie.get</B>()<BR>
+	Retrieves the WinLIKE cookie.<BR>
+	See <A HREF="../../18_sample_drag&save.html" NAME=WLoff_ TARGET=sample>18_sample_drag&save.html</A>.
+	<BR><BR>
+	<B>WinLIKE.cookie.Active</B><BR>
+	If true WinLIKE saves the windows states automatically into the cookie.<BR>
+	See <A HREF="../../29_sample_cookies_auto.html" NAME=WLoff_ TARGET=sample>29_sample_cookies_auto.html</A>.
+	<BR><BR>
+	<B>WinLIKE.reset</B>()<BR>
+	Reset the URL by removing the Deep- and Drag&Save-Part and deletes the WinLIKE cookie.<BR>
+	See <A HREF="../../18_sample_drag&save.html" NAME=WLoff_ TARGET=sample>18_sample_drag&save.html</A>.
+</P>
+<BR>
+<P CLASS=DE>
+	<B>Help Functions of winxtra_wev8.js</B>
+</P>
+<P CLASS=DE>
+	<B>recognizeWinLIKE_</B>(top)<BR>
+	Retrieves a referenz to the Frame containing WinLIKE.<BR>
+	See files of <A HREF="../../52_develop_inframe.html" NAME=WLoff_ TARGET=sample>52_develop_inframe.html</A>
+	(<A HREF="../../samples/inframe/" NAME=WLoff_ TARGET=folder>samples/inframe/</A>).
+	<BR><BR>
+	<B>actionWinLIKE_</B>(call-string, event)<BR>
+	WinLIKE-support-function like eval. You must not know where WinLIKE is.<BR>
+	See files of <A HREF="../../52_develop_inframe.html" NAME=WLoff_ TARGET=sample>52_develop_inframe.html</A>
+	(<A HREF="../../samples/inframe/" NAME=WLoff_ TARGET=folder>samples/inframe/</A>).
+	<BR><BR>
+	<B>submitWinLIKE_</B>(value)<BR>
+	Function for Form-Submits into windows.<BR>
+	See files of <A HREF="../../42_develop_submit_same.html" NAME=WLoff_ TARGET=sample>42_develop_submit_same.html</A>
+	(<A HREF="../../samples/submit_0/" NAME=WLoff_ TARGET=folder>samples/submit_0/</A>) and
+	<A HREF="../../43_develop_submit_other.html" NAME=WLoff_ TARGET=sample>43_develop_submit_other.html</A>
+	(<A HREF="../../samples/submit_1/" NAME=WLoff_ TARGET=folder>samples/submit_1/</A>) and
+	<A HREF="../../44_develop_submit_body.html" NAME=WLoff_ TARGET=sample>44_develop_submit_body.html</A>
+	(<A HREF="../../samples/submit_2/" NAME=WLoff_ TARGET=folder>samples/submit_2/</A>) and
+	<A HREF="../../46_develop_submit_summary.html" NAME=WLoff_ TARGET=sample>46_develop_submit_summary.html</A>.
+	<BR><BR>
+	<B>formfocusWinLIKE_</B>()<BR>
+	Sets the focus to the first INPUT field because of a very rare IE bug<BR>
+	See files of <A HREF="../../42_develop_submit_same.html" NAME=WLoff_ TARGET=sample>42_develop_submit_same.html</A>
+	(<A HREF="../../samples/submit_0/" NAME=WLoff_ TARGET=folder>samples/submit_0/</A>) and
+	<A HREF="../../43_develop_submit_other.html" NAME=WLoff_ TARGET=sample>43_develop_submit_other.html</A>
+	(<A HREF="../../samples/submit_1/" NAME=WLoff_ TARGET=folder>samples/submit_1/</A>) and
+	<A HREF="../../45_develop_submit_redirect-nn.html" NAME=WLoff_ TARGET=sample>45_develop_submit_redirect-nn.html</A>
+	(<A HREF="../../samples/submit_3/" NAME=WLoff_ TARGET=folder>samples/submit_3/</A>) and
+	<A HREF="../../46_develop_submit_summary.html" NAME=WLoff_ TARGET=sample>46_develop_submit_summary.html</A>.
+	<BR><BR>
+	<B>registerWinLIKE_</B>(object)<BR>
+	Use this function to register a frame for WinLIKE or to register a window after a redirect in Netscape.<BR>
+	See files of <A HREF="../../53_develop_frameset.html" NAME=WLoff_ TARGET=sample>53_develop_frameset.html</A>
+	(<A HREF="../../samples/frameset/" NAME=WLoff_ TARGET=folder>samples/frameset/</A>) and
+	<A HREF="../../45_develop_submit_redirect-nn.html" NAME=WLoff_ TARGET=sample>45_develop_submit_redirect-nn.html</A>
+	(<A HREF="../../samples/submit_3/" NAME=WLoff_ TARGET=folder>samples/submit_3/</A>).
+	<BR><BR>
+	<B>getWindowNumber_</B>()<BR>
+	Retrieves the window number, in which the content has been loaded.<BR>
+	See files of <A HREF="../../54_develop_win_access.html" NAME=WLoff_ TARGET=sample>54_develop_win_access.html</A>
+	(<A HREF="../../samples/access/" NAME=WLoff_ TARGET=folder>samples/access/</A>)
+	 and <A HREF="../../50_develop_scripts.html" NAME=WLoff_ TARGET=sample>50_develop_scripts.html</A>
+	 (<A HREF="../../samples/script/" NAME=WLoff_ TARGET=folder>samples/script/</A>).
+</P>
+<BR>
+</BODY>

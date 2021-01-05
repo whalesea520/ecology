@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<id></id>  <!--只能是唯一的英文字母-->
+	<title></title>
+	<titleEN></titleEN>
+	<desc></desc>
+	<icon></icon>
+	<linkMode></linkMode>
+	<type></type>
+	<perpage></perpage>
+	<private>
+		<jsList> 
+		</jsList>
+	</private>
+	<public>
+		<jsIdList>  
+		</jsIdList>
+		<cssIdList>
+		</cssIdList>
+	</public>
+	<view>
+		<url></url>
+		<method></method>
+	</view>
+	<setting>
+		<url></url>
+		<method></method>
+	</setting>
+	<more>
+		<url></url>
+		<method></method>
+	</more>
+	<operation></operation>
+</root> 

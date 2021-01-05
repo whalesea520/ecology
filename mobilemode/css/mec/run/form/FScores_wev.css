@@ -1,0 +1,84 @@
+/**/
+.score-rating {
+    overflow: hidden;
+	display: inline-block;
+    vertical-align: bottom;
+}
+.score-rating > b {
+    float: left;
+    width: 30px;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+    -webkit-tap-highlight-color:transparent;
+}
+.score-rating > b:before,
+.score-rating > b:after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+}
+.score-rating > b:before{
+	background-image: url(/mobilemode/images/favor.png);
+}
+.score-rating > b:after{
+	background-image: url(/mobilemode/images/favor_fill.png?v=1);
+	display: none;
+}
+.score-rating.score-fill > b:before
+{
+	display: none;
+}
+.score-rating.score-fill > b:after
+{
+	display: block;
+}
+.score-rating.score-fill > b.active ~ b:before
+{
+	display: block;
+}
+.score-rating.score-fill > b.active ~ b:after
+{
+	display: none;
+}
+
+.score-rating[data-editable]:hover > b:before
+{
+	display: none !important;
+}
+.score-rating[data-editable]:hover > b:after
+{
+	display: block !important;
+}
+.score-rating[data-editable] > b:hover ~ b:before
+{
+	display: block !important;
+}
+.score-rating[data-editable] > b:hover ~ b:after
+{
+	display: none !important;
+}
+.score-rating label{
+	color: #b4b4b4;
+	font-size: 14px;
+	height: 40px;
+    display: block;
+    line-height: 42px;
+    margin-left: 4px;
+    float: left;
+}
+.score-rating.mini > b{
+	width: 14px;
+	height: 14px;
+}
+.score-rating.mini > b:before, .score-rating.mini > b:after {
+	width: 12px;
+	height: 12px;
+}

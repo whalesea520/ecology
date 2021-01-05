@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JSCode-Config>
+	<JSCode>
+		<id>refresh</id>	<!-- 唯一标识，此文件中唯一 -->
+		<icon>images/toolbar/t05_wev8.png</icon>
+		<text>刷新</text>
+		<desc>调用此脚本可以刷新当前页面。</desc>
+		<type>1</type>	<!-- 类型: 0 : 动作类函数    1 : 功能性函数-->
+		<isEnabled>1</isEnabled>
+		<callIt>
+			Mobile_NS.refresh();
+		</callIt>
+		<codeDesc>
+			<![CDATA[
+				<div style="line-height: normal;padding-bottom: 3px;">调用该脚本可以刷新自定义页面。</div>
+			]]>
+		</codeDesc>
+		<codeExample>
+			<![CDATA[
+				<div style="line-height: normal;padding-bottom: 3px;">
+					&lt;a href="javascript: Mobile_NS.refresh();"&gt;刷新&lt;/a&gt;
+				</div>
+			]]>
+		</codeExample>
+	</JSCode>
+	
+	<JSCode>
+		<id>sql</id>	<!-- 唯一标识，此文件中唯一 -->
+		<icon>images/toolbar/t06_wev8.png</icon>
+		<text>SQL</text>
+		<desc>调用此脚本可以执行SQL语句</desc>
+		<type>1</type>	<!-- 类型: 0 : 动作类函数    1 : 功能性函数-->
+		<isEnabled>1</isEnabled>
+		<callIt>
+			Mobile_NS.SQL(sqlstr, datasource);
+		</callIt>
+		<codeDesc>
+			<![CDATA[
+				<div style="line-height: normal;padding-bottom: 3px;">调用该脚本可以向服务端发送请求执行指定的SQL语句。</div>
+				<div style="font-weight: bold;">关于insert, update, delete语句</div>
+				<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;执行Insert, Update, Delete语句，服务端会返回SQL语句执行状态，执行成功返回true，反之返回false。</div>
+				<div style="font-weight: bold;">关于select语句</div>
+				<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;执行select语句，服务端会返回SQL语句的查询结果集。如果查询结果仅为1行1列，则返回一个字符串，如"123"。如果查询结果为1行多列，则以如 ["id":"123", "name":"张三"] 这种json数据的形式返回。如果查询结果为多行，则以如 {["id":"123", "name":"张三"],["id":"456", "name":"李四"]} 这种json数据的形式返回。</div>
+				<div style="color:red;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;所有select语句的查询，如果无查询结果返回，服务端将统一返回空字符串，无论预期的查询结果为1行1列，1行多列或者多行，都是如此。</div>
+			]]>
+		</codeDesc>
+		<codeExample>
+			<![CDATA[
+				<div style="line-height: normal;padding-bottom: 3px;">var result = Mobile_NS.SQL("insert into person(id,name,sex) values('123','张三','男'");</div>
+				<div>alert(result);&nbsp;&nbsp;// true | false (执行成功 true, 执行失败 false)</div>
+				
+				<div style="margin-top: 10px;">var result2 = Mobile_NS.SQL("select name from person where id='123'");</div>
+				<div>alert(result2);&nbsp;&nbsp;// "张三"</div>
+				
+				<div style="margin-top: 10px;">var result3 = Mobile_NS.SQL("select name,sex from person where id='123'");</div>
+				<div>alert(result3.name);&nbsp;&nbsp;// "张三"</div>
+				<div>alert(result3.sex);&nbsp;&nbsp;// "男"</div>
+				
+				<div style="margin-top: 10px;">var result4 = Mobile_NS.SQL("select name,sex from person");</div>
+				<div>for(var i = 0; i &lt; result4.length; i++){</div>
+					<div style="margin-left: 20px;">alert(result4[i].name);</div>
+					<div style="margin-left: 20px;">alert(result4[i].sex);</div>
+				<div>}</div>
+				<div style="color:red;">如果不是需要使用外部数据源，第二个参数可不填写即可。</div>
+			]]>
+		</codeExample>
+	</JSCode>
+	
+	<JSCode>
+		<id>toMapPage</id>	<!-- 唯一标识，此文件中唯一 -->
+		<icon>images/toolbar/other_wev8.png</icon>
+		<text>链接地图页面</text>
+		<desc>调用此脚本可以链接到地图页面</desc>
+		<type>1</type>	<!-- 类型: 0 : 动作类函数    1 : 功能性函数-->
+		<isEnabled>1</isEnabled>
+		<callIt>
+			Mobile_NS.toMapPage(appHomepageId, addressKey, addressValue);
+		</callIt>
+		<codeDesc>
+			<![CDATA[
+				<div style="line-height: normal;padding-bottom: 3px;">调用该脚本可以链接到包含地图的自定义页面。</div>
+				<div style="font-weight: bold;">参数说明</div>
+				<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="display:inline-block;width:110px;text-align:right;">appHomepageId：</span>自定义页面的id</div>
+				<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="display:inline-block;width:110px;text-align:right;">addressKey：</span>地址的参数名称(和地图插件中的参数名称一致)</div>
+				<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="display:inline-block;width:110px;text-align:right;">addressValue：</span>具体的地址值</div>
+			]]>
+		</codeDesc>
+		<codeExample>
+			<![CDATA[
+				<div style="line-height: normal;padding-bottom: 3px;">
+					&lt;a href="javascript: Mobile_NS.toMapPage(12,'_dz', '上海市');"&gt;查看地图&lt;/a&gt;
+				</div>
+				<div style="color:red;margin-top: 15px;">该脚本常配合自定义页面的列表插件一起使用，可在列表插件的字段选择中输入自定义内容，如下：</div>	
+				<div style="color:red;margin: 5px 0px;">&lt;a href="javascript: Mobile_NS.toMapPage(12,'_dz', '{address}');"&gt;查看地图&lt;/a&gt;</div>
+				<div style="color:red;">{address}解释：address为列表字段的字段名称，引用方式为 {字段名称}，列表显示时会将其解析成真实值。</div>
+			]]>
+		</codeExample>
+	</JSCode>
+	
+	<JSCode>
+		<id>progressBar</id>	<!-- 唯一标识，此文件中唯一 -->
+		<icon>images/toolbar/others_wev8.png</icon>
+		<text>进度条</text>
+		<desc>调用此脚本可以转换成进度条显示</desc>
+		<type>1</type>	<!-- 类型: 0 : 动作类函数    1 : 功能性函数-->
+		<isEnabled>1</isEnabled>
+		<callIt>
+			Mobile_NS.progressBar(id, config);
+		</callIt>
+		<codeDesc>
+			<![CDATA[
+				<div style="line-height: normal;padding-bottom: 3px;">调用该脚本可以将指定元素内的数字转换成进度条显示。</div>
+				<div style="font-weight: bold;">参数说明</div>
+				<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="display:inline-block;width:50px;text-align:right;">id：</span>指定元素的id</div>
+				<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="display:inline-block;width:50px;text-align:right;">config：</span>配置参数，<span style="color:red;">非必需</span>。函数内部有一个默认的配置参数，其语法格式如：</div>
+				<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="display:inline-block;width:50px;text-align:right;"></span>{"0-40":"#da532c", "41-70":"#e3a21a", "71-100":"#99b433"}</div>
+				<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="display:inline-block;width:50px;text-align:right;"></span>其中key为一个值区间，value为对应的颜色，可定义多个值区间以及相应的颜色。</div>
+				<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="display:inline-block;width:50px;text-align:right;"></span><span style="color:red;">如果不是对进度条的颜色有较高的定制要求，可选择在调用脚本时忽略此参数。</span></div>
+			]]>
+		</codeDesc>
+		<codeExample>
+			<![CDATA[
+				<div style="line-height: normal;padding-bottom: 3px;">
+					&lt;div id="pb123"&gt;50&lt;/div&gt;
+				</div>
+				<div>&lt;script&gt;Mobile_NS.progressBar("pb123");&lt;/script&gt;</div>
+				
+				<div style="margin-top: 15px;">
+					&lt;div id="pb123"&gt;50&lt;/div&gt;
+				</div>
+				<div>
+					&lt;script&gt;
+					Mobile_NS.progressBar("pb123", {"0-60":"red", "60-100":"blue"});
+					&lt;/script&gt;
+				</div>
+				
+				<div style="color:red;margin-top: 15px;">该脚本常配合自定义页面的列表插件一起使用，可在列表插件的字段选择中输入自定义内容，如下：</div>	
+				<div style="color:red;margin-top: 5px;">&lt;div id="pb{id}"&gt;{progress}&lt;/div&gt;</div>
+				<div style="color:red;margin-bottom: 5px;">&lt;script&gt;Mobile_NS.progressBar("pb{id}");&lt;/script&gt;</div>
+				<div style="color:red;">{xxx}解释：xxx为列表字段的字段名称，引用方式为 {字段名称}，列表显示时会将其解析成真实值。</div>
+			]]>
+		</codeExample>
+	</JSCode>
+	
+	<JSCode>
+		<id>createTopfloorPage</id>	<!-- 唯一标识，此文件中唯一 -->
+		<icon>images/toolbar/new_window_wev8.png</icon>
+		<text>创建顶层页面</text>
+		<desc>调用此脚本可以创建顶层页面</desc>
+		<type>1</type>	<!-- 类型: 0 : 动作类函数    1 : 功能性函数-->
+		<isEnabled>1</isEnabled>
+		<callIt>
+			Mobile_NS.createTopfloorPage(pageIdOrUrl, param);
+		</callIt>
+		<codeDesc>
+			<![CDATA[
+				<div style="line-height: normal;padding-bottom: 3px;">调用该脚本可以将指定的自定义页面在最顶层显示。</div>
+				<div style="font-weight: bold;">参数说明</div>
+				<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="display:inline-block;width:120px;text-align:right;">pageIdOrUrl：</span>自定义页面的id 或  一个url</div>
+				<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="display:inline-block;width:120px;text-align:right;">param：</span>打开顶层页面时的一系列相关配置 <span style="padding-left:10px;">(可选，非必需)</font></div>
+				<div style="padding-left:36px;">系统默认的param配置为：<br/>
+				{<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bgcolor : "#fff",  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(背景色)<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; width : "70%",  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(宽度)<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; effect : "1",  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(滑出效果，1：从页面上层滑出，2：从左侧推出，3：从右侧推出)<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; maskBgColor : "rgba(0,0,0,0.2)",  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(遮罩层背景色)<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; speed : "0.5s"  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(滑出速度，0.5秒)<br/>
+				}<br/>
+				可根据需要覆写一个或多个param中的属性来改变其默认的效果
+				</div>
+				<div style="line-height: normal;padding: 10px 0px;">如果想通过代码关闭当前打开的顶层页面，调用：Mobile_NS.closeTopfloorPage();</div>
+			]]>
+		</codeDesc>
+		<codeExample>
+			<![CDATA[
+				&lt;a href="javascript: Mobile_NS.createTopfloorPage(1);"&gt;
+					<div style="padding-left:20px;">点击在最外层显示id为1的自定义页面</div>
+				&lt;/a&gt;
+			]]>
+		</codeExample>
+	</JSCode>
+	
+	<JSCode>
+		<id>backToHomepage</id>	<!-- 唯一标识，此文件中唯一 -->
+		<icon>images/toolbar/t01_wev8.png</icon>
+		<text>回到首页</text>
+		<desc>调用此脚本可以回到首页。</desc>
+		<type>1</type>	<!-- 类型: 0 : 动作类函数    1 : 功能性函数-->
+		<isEnabled>1</isEnabled>
+			<callIt>
+			Mobile_NS.backToHomepage();
+		</callIt>
+		<codeDesc>
+			<![CDATA[
+				<div style="line-height: normal;padding-bottom: 3px;">调用该脚本可以返回到首页。</div>
+			]]>
+		</codeDesc>
+		<codeExample>
+			<![CDATA[
+				<div style="line-height: normal;padding-bottom: 3px;">
+					&lt;a href="javascript: Mobile_NS.backToHomepage();"&gt;回到首页&lt;/a&gt;
+				</div>
+			]]>
+		</codeExample>
+	</JSCode>
+</JSCode-Config>

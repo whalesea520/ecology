@@ -1,0 +1,146 @@
+TABLE.ListStyle1 TR.DataLight:hover TD,
+TABLE.ListStyle1 TR.DataDark:hover TD{
+	background-color: #f4f4f4;
+	color:#000;
+	height:30px;
+	border-bottom:1px solid #DADADA;
+}
+.div_pager{
+	clear:both;
+	height:30px;
+	line-height:30px;
+	margin-top:3px;
+	color:#999999;
+	font-family:'微软雅黑';
+	font-weight:bold;
+	/*margin-right: 22px;*/
+    float: right;
+}
+.btn_go_input:hover{
+    border: 1px solid #dddddd !important;
+}
+.btn_go_input:focus{
+    border: 1px solid blue !important;
+}
+.div_pager a{
+	padding:2px 5px;
+	margin:2px 2px;
+	font-size:12px;
+	border:1px solid #eee;
+	background-color:#FFF;
+	color:#036cb4;
+	text-decoration:none;
+}
+
+.div_pager span{
+	padding:2px 5px;
+	margin:2px 2px;
+	font-size:12px;
+}
+
+.div_pager span.disabled{
+	padding:2px 5px;
+	margin:2px 2px;
+	font-size:12px;
+	border:1px solid #DFDFDF;
+	background-color:#FFF;
+	color:#DFDFDF;
+}
+
+.div_pager span.curr{
+	padding:2px 5px;
+	margin:2px 2px;
+	font-size:12px;
+	border:1px solid #01b0f1;
+	background-color:#01b0f1;
+	color:#FFF;
+}
+
+.div_pager a:hover{
+	border:1px solid #999;
+}
+
+.div_pager span.normalsize{
+	font-size:12px;
+}
+
+TABLE.ListStyle TR.DataDark TD, TABLE.ListStyle TR.DataLight TD, TABLE.BroswerStyle TR.DataDark TD, TABLE.BroswerStyle TR.DataLight TD {
+BACKGROUND-COLOR: rgb(251, 251, 251);
+color: #929393;
+height: 30px;
+border-bottom: 1px solid #E6E6E6;
+}
+TABLE.ListStyle1 TR.DataLight:hover TD, TABLE.ListStyle1 TR.DataDark:hover TD {
+background-color: rgb(253, 253, 253);
+color: #000;
+height: 30px;
+border-bottom: 1px solid #DADADA;
+}
+
+.x-tab-strip-wrap {
+width: 100%;
+overflow: hidden;
+position: relative;
+zoom: 1;
+background: rgb(248, 248, 248);
+color: #626262;
+}
+
+.advancedSearch{
+background: #F9F9F9;
+}
+/*
+table{
+   background:#ffffff;
+}
+
+#flowbody > table{
+
+  background:rgb(251, 251, 251);
+}
+
+#flowbody{
+    background:rgb(251, 251, 251);
+	overflow-y: scroll !important;
+}
+*/
+.pholder{
+
+	/*
+    background:rgb(251, 251, 251);
+    */
+    background:#f8f8f8;
+}
+#formitem{
+    background: #ffffff;
+}
+
+.btn, .e8_btn, .e8_btn_cancel, .e8_btn_submit {
+padding-left: 18px !important;
+padding-right: 18px !important;
+height: 26px !important;
+line-height: 26px !important;
+}
+.jNiceCheckbox {
+top: 3px;
+}
+
+.atmeClass_left {
+	width:8px;
+	height:16px;
+	background:url(/images/ecology8/workflow/atmecount_left_wev8.png) 0 0 no-repeat;
+}
+
+.atmeClass_center {
+	height:16px;
+	background:url(/images/ecology8/workflow/atmecount_center_wev8.png) 0 0 repeat-x;
+}
+
+.atmeClass_right {
+	width:8px;
+	height:16px;
+	background:url(/images/ecology8/workflow/atmecount_right_wev8.png) 0 0 no-repeat;
+}
+.signrighttdblock {
+	background:#fff;	
+}

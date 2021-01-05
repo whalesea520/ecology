@@ -1,0 +1,26 @@
+.pictureContainer{
+	overflow: hidden;
+	position: relative;
+}
+.picture-wrap{
+	overflow: hidden;
+  	position: relative;
+}
+.picture-wrap > div {
+  width:100%;
+  position: relative;
+}
+.pictureContainer .swipe-wrap{
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+}
+.pictureContainer .swipe-wrap > div {
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+}
+.pictureContainer img.pic{
+	max-width: 100%;
+	min-height: 50px;
+}

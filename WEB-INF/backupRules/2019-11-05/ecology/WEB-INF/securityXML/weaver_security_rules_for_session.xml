@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<no-timeout-urls>
+		<url>/wui/theme/ecology8/page/getremindinfo.jsp</url>
+		<url>/email/MailTimingDateReceiveOperation.jsp</url>
+		<url>/dwr/exec/msgutil.getpopupmsg</url>
+	</no-timeout-urls>	
+</root>

@@ -1,0 +1,13 @@
+delete from HtmlLabelIndex where id=126054 
+/
+delete from HtmlLabelInfo where indexid=126054 
+/
+INSERT INTO HtmlLabelIndex values(126054,'ƒ¨»œ√‹¬Î') 
+/
+INSERT INTO HtmlLabelInfo VALUES(126054,'ƒ¨»œ√‹¬Î',7) 
+/
+INSERT INTO HtmlLabelInfo VALUES(126054,'default password',8) 
+/
+INSERT INTO HtmlLabelInfo VALUES(126054,'ƒ¨’J√‹¥a',9) 
+/
+ 

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+ <forbidden>
+		<need-check-urls>
+			<url>/web/sp/</url>
+			<url>/page/exportImport/</url>
+		</need-check-urls>
+	</forbidden>
+</root>

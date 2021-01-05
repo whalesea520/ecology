@@ -1,0 +1,128 @@
+/*引入bootstrap样式*/
+.mengbanLayer{
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0.6;
+	filter:alpha(opacity=60);
+	-moz-opacity: 0.6;
+	-khtml-opacity: 0.6;
+	background: #0A0000;
+	z-index: 9999;
+	display:none;
+	overflow: hidden;
+	padding: 0;
+}
+/*拖动层*/
+.transLayer {
+	position: absolute;
+	/*border: 1px solid red;*/
+	display: none;
+	cursor: move;
+	background-image: url(#);
+}
+
+
+/*聊天窗口图片浏览*/
+.chatImgPagWrap {
+	z-index:99999;
+/*	border: 1px solid red; */
+	position:absolute;
+	left:0;
+	top:0;
+	display:none;
+	overflow: hidden;
+}
+
+
+.carousel-inner .item img {
+	
+}
+
+.carousel-inner .item .rotatetrans {
+	/*过渡效果*/
+  	transition: transform 0.5s;
+	-moz-transition: -moz-transform 0.5s;	/* Firefox 4 */
+	-webkit-transition: -webkit-transform 0.5s;	/* Safari 和 Chrome */
+	-o-transition: -o-transform 0.5s;	/* Opera */
+}
+
+/*编辑图片*/
+.carousel-fullpane .control-pane .rotate {
+	background: url('../img/editimg/rotate_wev8.png') no-repeat center center;
+}
+
+.carousel-fullpane .control-pane .rotate:hover {
+	background: url('../img/editimg/rotate_hot_wev8.png') no-repeat center center;
+}
+.carousel-fullpane .control-pane .enlarge {
+	background: url('../img/editimg/enlarge_wev8.png') no-repeat center center;
+}
+
+.carousel-fullpane .control-pane .enlarge:hover {
+	background: url('../img/editimg/enlarge_hot_wev8.png') no-repeat center center;
+}
+.carousel-fullpane .control-pane .shrink {
+	background: url('../img/editimg/shrink_wev8.png') no-repeat center center;
+}
+
+.carousel-fullpane .control-pane .shrink:hover {
+	background: url('../img/editimg/shrink_hot_wev8.png') no-repeat center center;
+}
+
+.carousel-fullpane .control-pane .copy {
+	background: url('../img/editimg/copy_wev8.png') no-repeat center center;
+}
+
+.carousel-fullpane .control-pane .copy:hover {
+	background: url('../img/editimg/copy_hot_wev8.png') no-repeat center center;
+}
+
+.carousel-fullpane .control-pane .download {
+	background: url('../img/editimg/download_wev8.png') no-repeat center center;
+	margin-right: 0px;
+}
+
+.carousel-fullpane .control-pane .download:hover {
+	background: url('../img/editimg/download_hot_wev8.png') no-repeat center center;
+}
+
+.carousel-inner .hide {
+	display: none;
+}
+
+.chatImgPag {
+	position:absolute;
+	/*background-color: #333;*/
+}
+
+.miniClose{
+	width: 30px;
+  	height: 30px;
+  	position: fixed;
+  	z-index: 10000;
+  	color: #fff;
+  	background: #5bb4d8;
+  	right: 10px;
+  	top: 10px;
+  	border-radius: 50%;
+  	font-size: 30px;
+  	text-align: center;
+  	line-height: 25px;
+  	/*过渡效果*/
+  	transition: background 0.5s;
+	-moz-transition: background 0.5s;	/* Firefox 4 */
+	-webkit-transition: background 0.5s;	/* Safari 和 Chrome */
+	-o-transition: background 0.5s;	/* Opera */
+}
+
+.miniClose:hover{
+	background:#DE553F;
+	cursor: pointer;
+}
+.clearSpacing{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+

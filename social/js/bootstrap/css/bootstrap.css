@@ -1,0 +1,316 @@
+/*!
+ * Bootstrap v2.3.2
+ *
+ * Copyright 2013 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world by @mdo and @fat.
+ */
+ .carousel {
+  position: relative;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  height:100%;
+  /*overflow: hidden;*/
+}
+
+.carousel-inner > .item {
+  position: relative;
+  display: none;
+  text-align: center;
+  -webkit-transition: 0.6s ease-in-out left, opacity 0.6s;
+     -moz-transition: 0.6s ease-in-out left, opacity 0.6s;
+       -o-transition: 0.6s ease-in-out left, opacity 0.6s;
+          transition: 0.6s ease-in-out left, opacity 0.6s;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  line-height: 1;
+  margin: 0 auto;
+}
+
+.carousel-inner > .active,
+.carousel-inner > .next,
+.carousel-inner > .prev {
+  display: block; 
+}
+
+.carousel-inner > .active {
+  left: 0;
+}
+
+.carousel-inner > .next,
+.carousel-inner > .prev {
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+}
+
+.carousel-inner > .next {
+  left: 100%;
+}
+
+.carousel-inner > .prev {
+  left: -100%;
+}
+
+.carousel-inner > .next.left,
+.carousel-inner > .prev.right {
+  left: 0;
+}
+
+.carousel-inner > .active.left {
+  left: -100%;
+}
+
+.carousel-inner > .active.right {
+  left: 100%;
+}
+
+.carousel-control{
+  position: absolute;
+  z-index: 9999;
+  top: 250px;
+  left: 15px;
+  width: 80px;
+  height: 80px;
+  margin-top: -20px;
+  font-size: 65px;
+  font-weight: 100;
+  line-height: 65px;
+  color: #fff !important;
+  text-align: center;
+  border: 1px solid #fff;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 23px;
+  border-radius: 40px;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  cursor: pointer;
+}
+
+.carousel-control.right {
+  right: 15px;
+  left: auto;
+  
+}
+
+.carousel-control:hover,
+.carousel-control:focus {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+
+.disabled:hover,
+.disabled:focus,
+.disabled {
+	opacity: 0.1;
+  	filter: alpha(opacity=10);
+}
+
+.carousel-indicators {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 10000;
+  margin: 0;
+  list-style: none;
+}
+
+.carousel-indicators li {
+  display: block;
+  float: left;
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+  text-indent: -999px;
+  background-color: #ccc;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+}
+
+.carousel-indicators .active {
+  background-color: #fff;
+}
+
+.carousel-caption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 15px;
+  background: #333333;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.carousel-caption h4,
+.carousel-caption p {
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.carousel-caption h4 {
+  margin: 0 0 5px;
+}
+
+.carousel-caption p {
+  margin-bottom: 0;
+}
+ 
+.carousel-fade .carousel-inner .item {
+	opacity:0;
+}
+
+.carousel-fade .carousel-inner .active {
+	opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+	left: 0;
+	opacity: 0;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .next.right,
+.carousel-fade .carousel-inner .prev.left,
+.carousel-fade .carousel-inner .prev.right{
+	opacity: 1;
+}
+
+.carousel-fullpane {
+	position: absolute;
+  	bottom: 0px;
+  	left: 0px;
+  	width: 100%;
+  	height: 46px;
+}
+
+.carousel-fullpane .control-pane {
+	margin: 0 auto;
+	width: 254px;
+	height: 100%;
+	background: #2F3F4D;
+	padding-right: 20px;
+	-webkit-border-radius: 20px;
+     -moz-border-radius: 20px;
+          border-radius: 20px;
+	  padding-left: 20px;
+	  position: relative;
+  	  z-index: 10000;
+}
+
+.carousel-fullpane .control-pane .ctrlbtn {
+	float: left;
+	width: 40px;
+	height: 46px;
+	cursor: pointer;
+	text-align: center;
+	margin-right: 13px;
+  -webkit-transition: background 0.4s;
+     -moz-transition: background 0.4s;
+       -o-transition: background 0.4s;
+          transition: background 0.4s;
+}
+
+
+
+
+.tooltip {
+  position: absolute;
+  z-index: 1030;
+  display: block;
+  font-size: 11px;
+  line-height: 1.4;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  visibility: visible;
+}
+
+.tooltip.in {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
+.tooltip.top {
+  padding: 5px 0;
+  margin-top: -3px;
+}
+
+.tooltip.right {
+  padding: 0 5px;
+  margin-left: 3px;
+}
+
+.tooltip.bottom {
+  padding: 5px 0;
+  margin-top: 3px;
+}
+
+.tooltip.left {
+  padding: 0 5px;
+  margin-left: -3px;
+}
+
+.tooltip-inner {
+  max-width: 200px;
+  padding: 8px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  background-color: #000000;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.tooltip.top .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-top-color: #000000;
+  border-width: 5px 5px 0;
+}
+
+.tooltip.right .tooltip-arrow {
+  top: 50%;
+  left: 0;
+  margin-top: -5px;
+  border-right-color: #000000;
+  border-width: 5px 5px 5px 0;
+}
+
+.tooltip.left .tooltip-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+  border-left-color: #000000;
+  border-width: 5px 0 5px 5px;
+}
+
+.tooltip.bottom .tooltip-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-bottom-color: #000000;
+  border-width: 0 5px 5px;
+}

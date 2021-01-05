@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> ZTREE DEMO - big data async</TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../../css/demo.css" type="text/css">
+	<link rel="stylesheet" href="../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="../../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ztree.core-3.0.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ztree.excheck-3.0.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ztree.exedit-3.0.js"></script>
+	<SCRIPT LANGUAGE="JavaScript">
+		<!--
+		var setting = {
+			async: {
+				enable: true,
+				url: getUrl
+			},
+			check: {
+				enable: true
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			view: {
+				expandSpeed: ""
+			},
+			callback: {
+				beforeExpand: beforeExpand,
+				onAsyncSuccess: onAsyncSuccess,
+				onAsyncError: onAsyncError
+			}
+		};
+
+		var zNodes =[
+			{name:"500涓妭鐐?, id:"1", count:500, times:1, isParent:true},
+			{name:"1000涓妭鐐?, id:"2", count:1000, times:1, isParent:true},
+			{name:"2000涓妭鐐?, id:"3", count:2000, times:1, isParent:true}
+		];
+
+		var log, className = "dark",
+		startTime = 0, endTime = 0, perCount = 100, perTime = 100;
+		function getUrl(treeId, treeNode) {
+			var curCount = (treeNode.childs) ? treeNode.childs.length : 0;
+			var getCount = (curCount + perCount) > treeNode.count ? (treeNode.count - curCount) : perCount;
+			var param = "id="+treeNode.id+"_"+(treeNode.times++) +"&count="+getCount;
+			return "../asyncData/getNodesForBigData.php?" + param;
+		}
+		function beforeExpand(treeId, treeNode) {
+			if (!treeNode.isAjaxing) {
+				startTime = new Date();
+				treeNode.times = 1;
+				ajaxGetNodes(treeNode, "refresh");
+				return true;
+			} else {
+				alert("zTree 姝ｅ湪涓嬭浇鏁版嵁涓紝璇风◢鍚庡睍寮€鑺傜偣銆傘€傘€?);
+				return false;
+			}
+		}
+		function onAsyncSuccess(event, treeId, treeNode, msg) {
+			if (!msg || msg.length == 0) {
+				return;
+			}
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			totalCount = treeNode.count;
+			if (treeNode.childs.length < totalCount) {
+				setTimeout(function() {ajaxGetNodes(treeNode);}, perTime);
+			} else {
+				treeNode.icon = "";
+				zTree.updateNode(treeNode);
+				zTree.selectNode(treeNode.childs[0]);
+				endTime = new Date();
+				var usedTime = (endTime.getTime() - startTime.getTime())/1000;
+				className = (className === "dark" ? "":"dark");
+				showLog("[ "+getTime()+" ]&nbsp;&nbsp;treeNode:" + treeNode.name );
+				showLog("鍔犺浇瀹屾瘯锛屽叡杩涜 "+ (treeNode.times-1) +" 娆″紓姝ュ姞杞? 鑰楁椂锛?+ usedTime + " 绉?);
+			}
+		}
+		function onAsyncError(event, treeId, treeNode, XMLHttpRequest, textStatus, errorThrown) {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+			alert("寮傛鑾峰彇鏁版嵁鍑虹幇寮傚父銆?);
+			treeNode.icon = "";
+			zTree.updateNode(treeNode);
+		}
+		function ajaxGetNodes(treeNode, reloadType) {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+			if (reloadType == "refresh") {
+				treeNode.icon = "../../css/zTreeStyle/img/loading.gif";
+				zTree.updateNode(treeNode);
+			}
+			zTree.reAsyncChildNodes(treeNode, reloadType, true);
+		}
+		function showLog(str) {
+			if (!log) log = $("#log");
+			log.append("<li class='"+className+"'>"+str+"</li>");
+			if(log.children("li").length > 4) {
+				log.get(0).removeChild(log.children("li")[0]);
+			}
+		}
+		function getTime() {
+			var now= new Date(),
+			h=now.getHours(),
+			m=now.getMinutes(),
+			s=now.getSeconds(),
+			ms=now.getMilliseconds();
+			return (h+":"+m+":"+s+ " " +ms);
+		}
+
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+
+		});
+		//-->
+	</SCRIPT>
+ </HEAD>
+
+<BODY>
+<h1>鍒嗘壒寮傛鍔犺浇澶ф暟鎹噺</h1>
+<h6>[ 鏂囦欢璺緞锛歞emo/bigdata/diy_async.html ]</h6>
+<div class="content_wrap">
+	<div class="zTreeDemoBackground left">
+		<ul>
+			<li class="highlight_red">&nbsp;&nbsp;&nbsp;&nbsp;姝?Demo 涓撻棬鐢ㄤ簬娴嬭瘯鍒嗘壒寮傛鍔犺浇锛屾瘡娆″睍寮€鑺傜偣閮借閲嶆柊杩涜寮傛鍔犺浇銆?/li>
+		</ul>
+		<ul id="treeDemo" class="ztree"></ul>
+	</div>
+	<div class="right">
+		<ul class="info">
+			<li class="title"><h2>1銆佸ぇ鏁版嵁閲忓姞杞借鏄?/h2>
+				<ul class="list">
+				<li>1)銆佸浜庢煇涓€绾ц妭鐐规暟澶氳揪鍑犲崈涓殑鏃跺€欙紝zTree 榛樿鐨勫欢杩熷姞杞芥槸鏃犳晥鐨勶紝姝?Demo 婕旂ず浜嗕竴绉嶅師鍏?zTree v2.6 鏃剁殑鍒嗘壒鍔犺浇鑺傜偣鐨勬柟娉曘€?/li>
+				<li class="highlight_red">2)銆佹鏂规硶閫傜敤浜?銆?鍗冧釜鑺傜偣蹇呴』鍏ㄩ儴鏄剧ず鐨勯渶姹傘€?/li>
+				<li class="highlight_red">3)銆佹鏂规硶骞朵笉鑳借В鍐冲姞杞芥參鐨勯棶棰橈紝鐩稿弽鍙細璁╂渶缁堢粨鏋滃嚭鐜扮殑鏇存參锛屽彧鏄彲浠ユ湁闄愬害鐨勯伩鍏嶆祻瑙堝櫒鍋囨锛岃€屼笖鏄剧ず鐨勮妭鐐硅秺澶氬氨瓒婃參銆?/li>
+				<li>4)銆佸浜庢煇涓€绾ц妭鐐规暟鑷冲皯鍑犲崈涓殑鎯呭喌锛屽彟涓€涓В鍐虫柟妗堟槸锛氬垎椤靛紓姝ュ姞杞姐€?br/>
+					async load log:<br/>
+					<ul id="log" class="log" style="height:85px"></ul></li>
+				</ul>
+			</li>
+			<li class="title"><h2>2銆乻etting 閰嶇疆淇℃伅璇存槑</h2>
+				<ul class="list">
+				<li>闇€瑕佽缃?setting.async 寮傛鍔犺浇閮ㄥ垎鐨勫弬鏁?/li>
+				<li>寤鸿鍏抽棴鍔ㄧ敾鏁堟灉 setting.view.expandSpeed = "";</li>
+				<li>鍏朵粬涓嶉渶瑕佽繘琛岀壒娈婄殑閰嶇疆锛屾牴鎹嚜宸辩殑闇€姹傝嚜琛岃缃?/li>
+				</ul>
+			</li>
+			<li class="title"><h2>3銆乼reeNode 鑺傜偣鏁版嵁璇存槑</h2>
+				<ul class="list">
+				<li>瀵?鑺傜偣鏁版嵁 娌℃湁鐗规畩瑕佹眰锛岀敤鎴峰彲浠ユ牴鎹嚜宸辩殑闇€姹傛坊鍔犺嚜瀹氫箟灞炴€?/li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+</BODY>
+</HTML>

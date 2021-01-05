@@ -1,0 +1,6 @@
+alter table FullSearch_CustomerSerDetail drop column subcompanyid
+GO
+alter table FullSearch_CustomerSerDetail drop column departmentid
+GO
+alter table FullSearch_CustomerSerDetail drop column jobId
+GO

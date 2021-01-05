@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<intentions>
+    <intention name="报表-班车" sort="1">
+        <rules>"name":"班车时刻表"&amp;&amp;"type":"FAQ"##"name":"班车"&amp;&amp;"type":"FAQ:2"##"reportType":"CUS_BUS"</rules>
+        <priority>2</priority>
+        <defaultJson>{"service":"FW_CMD_ES","text":"班车查询","semantic":{"slots":{"type":"FAQ:2","name":"班车"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="报表-报销报表" sort="2">
+        <rules>"reportType":"FNA_PERSON_FYQK"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_REPORT","text":"报销情况","semantic":{"slots":{"datetime":{"date_orig":"本月"},"who":"self","reportType":"FNA_PERSON_FYQK"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="报表-报销报表-团队" sort="3">
+        <rules>"reportType":"FNA_FYQK"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_REPORT","text":"团队报销情况","semantic":{"slots":{"datetime":{"date_orig":"本月"},"who":"self","reportType":"FNA_FYQK"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="报表-报销标准" sort="4">
+        <rules>"reportType":"FEE_STANDARD"</rules>
+        <priority>2</priority>
+        <defaultJson>{"service":"FW_REPORT","text":"报销标准","semantic":{"slots":{"reportType":"FEE_STANDARD"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="报表-采购费用" sort="5">
+        <rules>"reportType": "CUS_ZCCG"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_REPORT","text":"采购费用","semantic":{"slots":{"datetime":{"date_orig":"今年"},"reportType":"CUS_ZCCG"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="报表-个人工作汇总" sort="6">
+        <rules>"reportType":"HRM_SELF_TJ"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_REPORT","text":"工作汇总","semantic":{"slots":{"reportType":"HRM_SELF_TJ"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="报表-工资" sort="7">
+        <rules/>
+        <priority/>
+        <defaultJson/>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="报表-工作情况" sort="8">
+        <rules>"reportType":"HRM_TEAM_TJ"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_REPORT","text":"团队工作情况","semantic":{"slots":{"reportType":"HRM_TEAM_TJ","who":"team","who_all":"all"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="报表-合同收款" sort="9">
+        <rules>"reportType":"HTSK"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_REPORT","text":"合同收款","semantic":{"slots":{"reportType":"HTSK"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="报表-机构报表" sort="10">
+        <rules>"reportType":"RSC_JGRYQK"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_REPORT","text":"机构报表","semantic":{"slots":{"reportType":"RSC_JGRYQK"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="报表-机构人员" sort="11">
+        <rules>"reportType":"RSC_JGRYQK"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_REPORT","text":"机构报表","semantic":{"slots":{"reportType":"RSC_JGRYQK"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="报表-技术满意度" sort="12">
+        <rules>"reportType":"CUS_JSFWZXPH"</rules>
+        <priority>2</priority>
+        <defaultJson>{"service":"FW_REPORT","text":"技术满意度","semantic":{"slots":{"reportType":"CUS_JSFWZXPH"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="报表-绩效" sort="13">
+        <rules/>
+        <priority/>
+        <defaultJson/>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="报表-假期额度" sort="14">
+        <rules>"type":"SELECT"&amp;&amp;"which":"holiday"</rules>
+        <priority>2</priority>
+        <defaultJson>{"service":"FW_CMD","text":"假期额度","semantic":{"slots":{"type":"SELECT","which":"holiday"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="报表-借款" sort="15">
+        <rules>"reportType":"FNA_LOAN"</rules>
+        <priority>2</priority>
+        <defaultJson>{"service":"FW_REPORT","text":"借款情况","semantic":{"slots":{"reportType":"FNA_LOAN"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="报表-考勤" sort="16">
+        <rules>"functionName":"AttendanceReport"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_CMD","text":"考勤报表","semantic":{"slots":{"type":"SELECT","functionName":"AttendanceReport"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="报表-客户报表" sort="17">
+        <rules>"reportType":"CRM_KHFBQK"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_REPORT","text":"我们有多少客户","semantic":{"slots":{"reportType":"CRM_KHFBQK"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="报表-客户报表-行业" sort="18">
+        <rules>"reportType":"CRM_KHHYFBQK"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_REPORT","text":"客户行业分布","semantic":{"slots":{"reportType":"CRM_KHHYFBQK"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="报表-流程" sort="19">
+        <rules>"reportType":"WF_LCXLPH"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_REPORT","text":"流程效率排行","semantic":{"slots":{"reportType":"WF_LCXLPH"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="报表-培训活动" sort="20">
+        <rules>"reportType":"CUS_PXJHQK"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_REPORT","text":"培训活动","semantic":{"slots":{"reportType":"CUS_PXJHQK"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="报表-商机" sort="21">
+        <rules>"reportType":"CUS_SELL_CREATE"##"reportType":"CUS_SELL_ROLL"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_REPORT","text":"今天新进来的商机","semantic":{"slots":{"reportType":"CUS_SELL_CREATE"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="报表-微博" sort="22">
+        <rules>"type":"BLOG"&amp;&amp;"oper":"report"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_CMD","text":"请查一下部门微博填写情况","semantic":{"slots":{"who":"team","oper":"report","type":"BLOG"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="报表-文档数量" sort="23">
+        <rules>"reportType":"DOC_ZSWDQK"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_REPORT","text":"我们有多少文档","semantic":{"slots":{"reportType":"DOC_ZSWDQK"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="报表-项目验收" sort="24">
+        <rules>"reportType":"XMYS"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_REPORT","text":"项目验收","semantic":{"slots":{"people":"项目","who":"people","reportType":"XMYS"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="报表-新入职员工" sort="25">
+        <rules>"reportType":"RSC_XYGQK"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_REPORT","text":"新入职员工","semantic":{"slots":{"datetime":{"date_orig":"本月"},"reportType":"RSC_XYGQK"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="报表-业绩" sort="26">
+        <rules>"reportType":"CUS_YJ_TJ"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_REPORT","text":"我的业绩","semantic":{"slots":{"datetime":{"date_orig":"今年"},"who":"self","reportType":"CUS_YJ_TJ"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="报表-业绩排名" sort="27">
+        <rules>"reportType":"CUS_YJPM"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_REPORT","text":"业绩排名","semantic":{"slots":{"reportType":"CUS_YJPM"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="报表-员工数报表" sort="28">
+        <rules>"reportType":"RSC_RLZYQK"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_REPORT","text":"我们有多少人","semantic":{"slots":{"reportType":"RSC_RLZYQK"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="报表-直销合同" sort="29">
+        <rules>"reportType":"ZXHT"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_REPORT","text":"直销合同","semantic":{"slots":{"reportType":"ZXHT"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="报表-最热文档" sort="30">
+        <rules>"reportType":"DOC_ZSHYWD"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_REPORT","text":"最热文档","semantic":{"slots":{"reportType":"DOC_ZSHYWD"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="报表-座位" sort="31">
+        <rules>"reportType":"RSC_SEAT"</rules>
+        <priority>2</priority>
+        <defaultJson>{"service":"FW_REPORT","text":"某某某在哪","semantic":{"slots":{"reportType":"RSC_SEAT","name":"#person_name#"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="车辆-查询" sort="32">
+        <rules/>
+        <priority/>
+        <defaultJson/>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="车辆-预定" sort="33">
+        <rules>"type":"WF"&amp;&amp;"wftype":"Car"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_CMD","text":"预订车辆","semantic":{"slots":{"type":"WF","name":"用车","oper":"create","wftype":"Car"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="地图-查询" sort="34">
+        <rules>"operation":"POSITION"&amp;&amp;"service":"map"##"op":"map"&amp;&amp;"type":"CRM"##"name":&amp;&amp;"type":"CRM"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_CMD_ES","text":"去某某地方","semantic":{"slots":{"type":"CRM","op":"map","name":"#org_name#"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="地图-导航" sort="35">
+        <rules>"operation":"POSITION"&amp;&amp;"service":"map"##"op":"map"&amp;&amp;"type":"CRM"##"name":&amp;&amp;"type":"CRM"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_CMD_ES","text":"去某某地方","semantic":{"slots":{"type":"CRM","op":"map","name":"#org_name#"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="地图-位置" sort="36">
+        <rules>"op":"nearby"&amp;&amp;"type":"CRM"</rules>
+        <priority/>
+        <defaultJson/>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="电话-呼叫" sort="37">
+        <rules>"operation":"CALL"##"op":"superior"&amp;&amp;"people":&amp;&amp;"type":"RSC"</rules>
+        <priority/>
+        <defaultJson>{"semantic":{"slots":{"op":"CALL","name":"#person_name#","type":"RSC"}},"rc":0,"operation":"CALL","service":"telephone","text":"打电话给某某某"}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="会议-创建" sort="38">
+        <rules>"oper":"create"&amp;&amp;"type":"Meeting"</rules>
+        <priority>2</priority>
+        <defaultJson>{"service":"FW_CMD","text":"新建会议","semantic":{"slots":{"oper":"create","type":"Meeting"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="会议室-查询" sort="39">
+        <rules/>
+        <priority/>
+        <defaultJson/>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="客户联系-查询" sort="40">
+        <rules>"name":&amp;&amp;"type":"CRM"</rules>
+        <priority/>
+        <defaultJson/>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="客户联系-创建" sort="41">
+        <rules>"op":"CcrmContact"&amp;&amp;"type":"CRM"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_CMD_ES","text":"新建客户联系","semantic":{"slots":{"type":"CRM","op":"CcrmContact","oper":"create"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="流程-查询" sort="42">
+        <rules>"type":"WF"&amp;&amp;"oper":"query"##"type":"WF"&amp;&amp;!"oper"##"type":"WF"&amp;&amp;"newoper":"queryCreate"</rules>
+        <priority/>
+        <defaultJson/>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="流程-创建" sort="43">
+        <rules>"oper":"create"&amp;&amp;"type":"WF"</rules>
+        <priority>2</priority>
+        <defaultJson>{"service":"FW_CMD","text":"新建流程","semantic":{"slots":{"oper":"create","type":"WF"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="流程-待办" sort="44">
+        <rules>"newoper":"querylist"&amp;&amp;"type":"WF"</rules>
+        <priority>2</priority>
+        <defaultJson>{"service":"FW_CMD","text":"我的待办","semantic":{"slots":{"who":"self","newoper":"querylist","type":"WF"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="流程-已办" sort="45">
+        <rules/>
+        <priority/>
+        <defaultJson/>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="日程-查询" sort="46">
+        <rules>"type":"WKP"&amp;&amp;"oper":"query"##"service":"FW_CMD_ES"&amp;&amp;"type":"WKP"</rules>
+        <priority>2</priority>
+        <defaultJson>{"service":"FW_CMD_ES","text":"","semantic":{"slots":{"people":"#person_name#","type":"WKP","who":"people"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="日程-创建" sort="47">
+        <rules>"service":"FW_CMD"&amp;&amp;"type":"WKP"##"operation":"CREATE"&amp;&amp;"service":"schedule"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_CMD","text":"新建日程","semantic":{"slots":{"oper":"create","type":"WKP"}},"rc":0}</defaultJson>
+        <paserClazz>weaver.fullsearch.yunwen.parser.WkpContentParser</paserClazz>
+        <score/>
+    </intention>
+    <intention name="日程-取消" sort="48">
+        <rules/>
+        <priority/>
+        <defaultJson/>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="手机短信" sort="49">
+        <rules>"service":"message"&amp;&amp;"operation":"SEND"</rules>
+        <priority/>
+        <defaultJson>{"semantic":{"slots":{"name":"#person_name#"}},"rc":0,"operation":"SEND","service":"message","text":""}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="微博-查询" sort="50">
+        <rules>"functionName":"blogList"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_CMD","text":"","semantic":{"slots":{"people":"#person_name#","type":"SELECT","functionName":"blogList","who":"people"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="微博-创建" sort="51">
+        <rules>"oper":"create"&amp;&amp;"type":"BLOG"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_CMD","text":"写微博","semantic":{"slots":{"oper":"create","type":"BLOG"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="微博-关注" sort="52">
+        <rules/>
+        <priority/>
+        <defaultJson/>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="微搜-客户" sort="53">
+        <rules>"service":"FW_CMD_ES"&amp;&amp;"type":"CRM"</rules>
+        <priority/>
+        <defaultJson/>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="微搜-人员" sort="54">
+        <rules>"service":"FW_CMD_ES"&amp;&amp;"type":"RSC"</rules>
+        <priority/>
+        <defaultJson/>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="微搜-文档" sort="55">
+        <rules>"service":"FW_CMD_ES"&amp;&amp;"type":"DOC"##"service":"FW_CMD_ES"&amp;&amp;"type":"ALL"</rules>
+        <priority/>
+        <defaultJson/>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="项目-查询" sort="56">
+        <rules>"reportType":"PRJ_XMQK"</rules>
+        <priority/>
+        <defaultJson/>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="消息-发名片" sort="57">
+        <rules>"type":"Emsg"&amp;&amp;"emtype":"personcard"</rules>
+        <priority/>
+        <defaultJson/>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="消息-发送" sort="58">
+        <rules>"emtype":"msg"&amp;&amp;"type":"Emsg"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_CMD","text":"","semantic":{"slots":{"emtype":"msg","name":"#person_name#","oper":"create","type":"Emsg"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="消息-发位置" sort="59">
+        <rules>"emtype":"location"&amp;&amp;"type":"Emsg"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_CMD","text":"","semantic":{"slots":{"emtype":"location","to":"#person_name#","oper":"create","type":"Emsg"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="新闻-播报" sort="60">
+        <rules>"reportType":"DOC_FWTT"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_REPORT","text":"新闻头条","semantic":{"slots":{"reportType":"DOC_FWTT"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="邮件-查询" sort="61">
+        <rules/>
+        <priority/>
+        <defaultJson/>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="邮件-创建" sort="62">
+        <rules/>
+        <priority/>
+        <defaultJson/>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="指令-app操作" sort="63">
+        <rules>"name":&amp;&amp;"type":"APP"##"type":"APP"&amp;&amp;"all":"all"</rules>
+        <priority/>
+        <defaultJson/>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="指令-报销" sort="64">
+        <rules>"oper":"create"&amp;&amp;"type":"WF"&amp;&amp;"wftype":"Fna"</rules>
+        <priority>2</priority>
+        <defaultJson>{"service":"FW_CMD","text":"我要报销","semantic":{"slots":{"type":"WF","name":"报销","oper":"create","wftype":"Fna"}},"rc":0}</defaultJson>
+        <paserClazz>weaver.fullsearch.yunwen.parser.FeeTypeParser,weaver.fullsearch.yunwen.parser.MoneyParser</paserClazz>
+        <score/>
+    </intention>
+    <intention name="指令-出差" sort="65">
+        <rules>"oper":"create"&amp;&amp;"type":"WF"&amp;&amp;"wftype":"Out"</rules>
+        <priority>2</priority>
+        <defaultJson>{"service":"FW_CMD","text":"我要出差","semantic":{"slots":{"type":"WF","name":"出差","oper":"create","wftype":"Out"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="指令-订机票" sort="66">
+        <rules>"service":"flight"&amp;&amp;"operation":"QUERY"</rules>
+        <priority/>
+        <defaultJson/>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="指令-流程代理" sort="67">
+        <rules/>
+        <priority/>
+        <defaultJson/>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="指令-签到" sort="68">
+        <rules>"signtype":"checkin"&amp;&amp;"type":"SIGN"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_CMD","text":"签到","semantic":{"slots":{"signtype":"checkin","type":"SIGN"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="指令-签退" sort="69">
+        <rules>"signtype":"checkout"&amp;&amp;"type":"SIGN"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_CMD","text":"签退","semantic":{"slots":{"signtype":"checkout","type":"SIGN"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="指令-请假" sort="70">
+        <rules>"oper":"create"&amp;&amp;"type":"WF"&amp;&amp;"wftype":"Leave"</rules>
+        <priority>2</priority>
+        <defaultJson>{"service":"FW_CMD","text":"我要请假","semantic":{"slots":{"leaveType":"假","name":"假","who":"self","oper":"create","wftype":"Leave","type":"WF"}},"rc":0}</defaultJson>
+        <paserClazz>weaver.fullsearch.yunwen.parser.LeaveTypeParser,weaver.fullsearch.yunwen.parser.DaysParser</paserClazz>
+        <score/>
+    </intention>
+    <intention name="指令-天气" sort="71">
+        <rules>"service":"weather"</rules>
+        <priority/>
+        <defaultJson/>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="指令-外勤签到" sort="72">
+        <rules>"name":"外勤签到"&amp;&amp;"type":"APP"##"type":"SIGNTRACK"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_CMD","text":"外勤签到","semantic":{"slots":{"type":"SIGNTRACK"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="指令-预约专家" sort="73">
+        <rules>"need":"RSC"&amp;&amp;"type":"WKP"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_CMD_ES","text":"明天有空的专家","semantic":{"slots":{"datetime":{"date":"2018-01-04","date_orig":"明天"},"type":"WKP","time":"09:00:00","need":"RSC","timeEnd":"18:00:00"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+    <intention name="资产-领用" sort="74">
+        <rules>"name":"资产领用"&amp;&amp;"oper":"create"&amp;&amp;"type":"WF"</rules>
+        <priority/>
+        <defaultJson>{"service":"FW_CMD","text":"领一瓶酒","semantic":{"slots":{"name":"领用东西","needRscCache":"true"}},"rc":0}</defaultJson>
+        <paserClazz/>
+        <score/>
+    </intention>
+</intentions>

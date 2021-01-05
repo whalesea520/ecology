@@ -1,0 +1,100 @@
+.leftmainmenu{
+	height:25px;
+	/*background-image:url('../images/leftmainbg_wev8.png');*/
+	line-height:25px;
+	font-family:"微软雅黑","Arial"; 
+	/*color:#e5f6ff;*/
+	color:#3c3c3c;
+	font-size:10pt;
+	/*font-weight:bold;*/
+	padding-left:20px;
+	vertical-align:middle;
+	/*border-bottom:rgb(184,184,184) solid 1px;*/
+	border-bottom: #efefef 1px solid;
+}
+
+.leftmainmenuselected {
+	height:35px;
+	/*background-image:url('../images/leftmainselectedbgecology_wev8.png');*/
+	line-height:35px;
+	font-family:"微软雅黑","Arial"; 
+	/*color:#e5f6ff;*/
+	font-size:10pt;
+	/*font-weight:bold;*/
+	padding-left:20px;
+	vertical-align:middle;
+	background-color:(255,255,255);
+}
+.leftsubmenu{
+	height:22px;
+	line-height:22px;
+	font-family:"微软雅黑","Arial"; 
+	/*color:#e5f6ff;*/
+	color: #000;
+	font-size:12px;
+	/*font-weight:bold;*/
+	padding-left:30px;
+	vertical-align:middle;
+	border-bottom:1px solid #EFEFEF;
+}
+.leftsubmenuselected {
+	/*background-image:url('../images/leftsubselectedbg_wev8.png');*/
+	font-family:"微软雅黑","Arial"; 
+	/*color:#e5f6ff;*/
+	color: #000;
+	font-size:12px;
+	/*font-weight:bold;*/
+	/*padding-left:30px;*/
+	vertical-align:middle;
+}
+a{color:#000;text-decoration:none;}
+a:hover{text-decoration:none;}
+.leftMenuItemCenter{
+	color:#3C3C3C;
+}
+
+.liCss{
+	/*border-bottom: rgb(184,184,184) 2px solid;*/
+	background-color: rgb(255,255,255);
+}
+
+.liCss2{
+	/*border-bottom: rgb(184,184,184) 1px solid;*/
+	background-color: rgb(255,255,255);
+}
+
+.divCssSelected{
+	background-color: rgb(255,255,255);
+}
+
+.divCss{
+	background-color: rgb(255,255,255);
+	width:100%;
+	font-family:"微软雅黑","Arial"; 
+	vertical-align:middle;
+	height:30px;
+	line-height:30px;
+	padding-left:20px;
+	border-bottom: #efefef 1px solid;
+}
+
+.bzCls{
+	color: green;
+	padding-right:10px;
+}
+
+#leftMenu{
+	height:500px;
+	overflow:hidden;
+	position:relative;
+}
+
+#drillmenu{
+	/*height:250px;*/
+	overflow:hidden;
+}
+
+.toggleBtn{
+	cursor:pointer;
+	padding:5px;
+}

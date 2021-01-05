@@ -1,0 +1,167 @@
+/** NavPanel **/
+.MADNP_Title{
+	border-bottom: 1px solid rgb(223, 223, 223);
+	font-size: 12px;
+	color: rgb(164, 169, 174);
+	font-weight: bold;
+	padding: 0px 0px 6px 10px;	
+	margin-bottom: 10px;
+}
+.MADNP_BaseInfo{
+	padding-left: 10px;
+	margin-bottom: 15px;
+	color: rgb(166, 167, 171);
+	position: relative;	
+}
+.MADNP_BaseInfo > div{
+	margin-bottom: 5px;
+}
+.MADNP_Text{
+	-webkit-appearance: none;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+	-webkit-rtl-ordering: logical;
+	-webkit-user-select: text;
+	-webkit-writing-mode: horizontal-tb;
+	border: 1px solid rgb(223, 223, 223);
+	background-color: rgb(255, 255, 255);
+	border-image-outset: 0px;
+	border-image-repeat: stretch;
+	border-image-slice: 100%;
+	border-image-source: none;
+	border-image-width: 1;
+	box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+	box-sizing: border-box;
+	cursor: auto;
+	display: inline-block;
+	font-family: 'Microsoft Yahei',Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	height: 26px;
+	letter-spacing: normal;
+	line-height: 19px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	outline-color: rgb(0, 0, 255);
+	outline-style: none;
+	outline-width: 0px;
+	padding-bottom: 3px;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-top: 3px;
+	text-align: start;
+	text-indent: 7px;
+	text-shadow: none;
+	text-transform: none;
+	width: 205px;
+	word-spacing: 0px;
+	writing-mode: lr-tb;
+	zoom: 1;	
+}
+.MADNP_Table{
+	width: 100%;
+	border-collapse: collapse;
+}
+.MADNP_Table thead td{
+	color: #A4A9AE;
+	border-bottom: 1px solid #DFDFDF;
+	font-weight: bold;
+	padding-bottom: 5px;	
+}
+.MADNP_Table tbody td{
+	padding: 6px 0px 6px 0px;
+}
+.MADNP_Table tbody td.bemove{
+	background: url("/mobilemode/images/tr_move2_wev8.png") no-repeat center;
+	cursor: move;
+}
+.MADNP_Table tbody td .delFlag{
+	background: url("/images/messageimages/delete_wev8.gif") no-repeat center;
+	position: absolute;
+	right: 1px;
+	top: 1px;
+	width: 9px;
+	height: 9px;
+	display: none;
+	cursor: pointer;
+}
+
+.MADNP_Toolbar_Item_Img{
+	cursor: pointer;
+	position: relative;
+	padding-top: 2px;
+	padding-left: 5px;
+}
+
+.MADNP_Toolbar_Item_Img img{
+	width: 16px;
+	height: 16px;		
+}
+
+.MADNP_Table tbody tr{
+}
+.MADNP_Table tbody tr:HOVER{
+}
+.MADNP_Table tbody tr:HOVER td{
+	background-color: #efefef;
+}
+.MADNP_Table tbody tr:HOVER td .delFlag{
+	display: block;	
+}
+
+.MADNP_Table input.textStyle{
+	border: 1px solid #DFDFDF !important;
+	width: 80% !important;	
+}
+
+.MADNP_Table select.selectStyle{
+	border: 1px solid #DFDFDF !important;
+	width: 75px !important;	
+}
+.MADNP_Table .jNiceCheckbox{
+	margin-bottom: -1px;	
+}
+.MADNP_Table .numremindEditFlag{
+	background: url("/mobilemode/images/toolbar/tbar01_wev8.png") no-repeat;
+	position: absolute;
+	top: 8px;
+	left: 17px;
+	width: 15px;
+	height: 18px;
+	cursor: pointer;
+	display: none;
+}
+.MADNP_Bottom{
+	text-align: right;
+	padding: 5px 3px;
+	margin: 10px 0px 0px 0px;
+	position: relative;
+}
+.MADNP_AddItem{
+	padding-left: 16px;
+	background:url('/mobilemode/images/blue_add_wev8.png') no-repeat left center;
+	color: #5d9cec;
+	cursor: pointer;	
+}
+.MADNP_SaveBtn{
+	position:absolute;
+	top: 0px;
+	left: 7px;
+	background-color: rgb(107, 163, 237);
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	box-sizing: border-box;
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+	display: block;
+	font-family: 'Microsoft Yahei', Arial, sans-serif;
+	font-size: 14px;
+	height: 26px;
+	line-height: 26px;
+	margin: 0px;
+	text-align: center;
+	width: 73px;
+	zoom: 1;
+}

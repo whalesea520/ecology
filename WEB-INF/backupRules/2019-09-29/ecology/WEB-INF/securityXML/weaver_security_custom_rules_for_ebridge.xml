@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<no-login-urls>
+		<url>weaver.file.SignatureDownLoad</url>
+		<url>weaver.file.ImgFileDownload</url>
+		<url>/workflow/request/ShowFckEditorDesc.jsp</url>
+	</no-login-urls>
+	<dev-list>
+		<special>
+			<encoding>UTF-8</encoding>
+			<paths>
+				<path>/mobile/plugin/plus/cowork/data/coworkOperation.jsp</path>
+				<path>/mobile/plugin/plus/doc/data/docOperation.jsp</path>
+				<path>/mobile/plugin/plus/email/data/EmailView.jsp</path>
+				<path>/mobile/plugin/plus/hrm/data/hrmOperation.jsp</path>
+				<path>/mobile/plugin/plus/meeting/data/meetingOperation.jsp</path>
+				<path>/mobile/plugin/plus/vote/data/voteOperation.jsp</path>
+				<path>/mobile/plugin/plus/workflow/data/wfOperation.jsp</path>
+				<path>/mobile/plugin/plus/workplan/data/workPlanOperation.jsp</path>
+				<path>/wxinterface/data/Operation.jsp</path>
+			</paths>
+		</special>
+	</dev-list>
+	
+	<!--Special encoding path-->
+	<!--<dev-list>
+		<special>
+			<encoding>GBK</encoding>
+			<paths>
+				<path>/tdinfo/</path>
+				<path>/knowledgetool/</path>
+			</paths>
+		</special>
+	</dev-list>-->
+	<!--Do not check xss-->
+	<!--<excepts>
+		<url>/keygenerator/KeyGeneratorOperation.jsp</url>
+	</excepts>-->
+   <!--referer xss detect white list-->
+	<!--<ref-list>
+		<ref>app:/wmForWeb.swf</ref>
+	</ref-list>-->
+	<!--url cheat-->
+	<!--<url-params>
+		<param>url</param>
+	</url-params>-->
+	<!--valid host list-->
+	<!--<host-list>
+		<host>127.0.0.1:80</host>
+		<host>127.0.0.1</host>
+		<host>localhost:80</host>
+		<host>localhost</host>
+	</host-list>-->
+	<!--need filter word-->
+	<!--<xss-filter-list>
+		<word>src[\r\n]*=[\r\n]*['"](.*?)['"]</word>
+	</xss-filter-list>-->
+	<!--special rule-->
+	<!--<special-non>
+		<urls>
+			<url>
+				<value>/customerservice/data/ContactRecordOperation.jsp</value>
+				<params>
+					<param>
+						<value>remark</value>
+						<rules>
+							<rule></rule>
+						</rules>
+					</param>
+				</params>
+			</url>
+		</urls>
+	</special-non>-->
+	<!--regexp params-->
+	<!--<special-reg>
+		<urls>
+			<url>
+				<value>/customersystem/wfrelate/WFCreateQC.jsp</value>
+				<params>
+					<param>
+						<value>fieldsql\d+</value>
+						<rules>
+							<rule>##sqlkeyword1##</rule>
+						</rules>
+					</param>
+				</params>
+			</url>
+		</urls>
+	</special-reg>-->
+	<!--webservice allowed client ip-->
+	<!--<webservice-ip-list>
+		<ip>127.0.0.1</ip>
+		<ip>0:0:0:0:0:0:0:1</ip>
+	</webservice-ip-list>-->
+	<!--webservice white list-->
+	<!--<webservice-list>
+		<webservice>/services/.*</webservice>
+	</webservice-list>-->
+</root>

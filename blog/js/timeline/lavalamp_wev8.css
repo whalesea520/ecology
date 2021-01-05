@@ -1,0 +1,47 @@
+
+.lavaLampHead{
+     margin:5px auto;
+     width:100%;
+	 /**background-image:url(tbg_wev8.gif);**/
+	 font-size:9pt;
+	 height: 29px;
+     }
+.lavaLamp{
+   /* position: relative;*/
+    padding: 5px 5px 22px;
+    margin: 0px;
+    /*border-bottom:1px solid #b6b6b6 ;*/ 
+    }
+.lavaLamp li{
+     float: left; /*--重要--*/
+     list-style: none;
+     *padding-top:2px; /*IE*/
+     }
+.lavaLamp li.back{
+     border-bottom: 4px solid #fe8905 ;
+     width: 9px; 
+     height: 20px; /*--较为重要--*/
+     z-index: 1; /*--较为重要--*/
+     position: absolute; /*--重要--*/
+	 *margin-top:5px; /*IE*/
+     }
+.lavaLamp li a:link,.lavaLamp li a:visited,.lavaLamp li a:active{ 
+     z-index: 2; /*--重要--*/
+     font-variant:small-caps;
+     text-decoration:none !important;
+     position: relative; /*--重要--*/
+     margin: auto 10px;
+     color: #949494 !important;
+     }
+
+.lavaLamp li a:hover{
+     z-index: 2; /*--重要--*/
+     font-variant:small-caps;
+     text-decoration:none !important;
+     position: relative; /*--重要--*/
+     margin: auto 10px;
+     color: #0185fe !important;
+     }
+     
+
+     

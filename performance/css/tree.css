@@ -1,0 +1,41 @@
+.hrmOrg span.company { background: url(../images/company.png) 0 0 no-repeat; }
+.hrmOrg span.subcompany { background: url(../images/sub.png) 0 0 no-repeat; }
+.hrmOrg span.department { background: url(../images/depat.png) 0 0 no-repeat; }
+.hrmOrg span.person { background: url(../images/person.png) 0 0 no-repeat; }
+.mine{line-height:24px;padding-left:20px;background: url(../images/person.png) left center no-repeat;font-size:12px;cursor:pointer;}
+.divorg{
+	overflow-y: auto;
+	overflow-x: hidden;
+	SCROLLBAR-DARKSHADOW-COLOR: #EEEEEE;
+	SCROLLBAR-ARROW-COLOR: #F6F6F6;
+	SCROLLBAR-3DLIGHT-COLOR: #EEEEEE;
+	SCROLLBAR-SHADOW-COLOR: #EEEEEE;
+	SCROLLBAR-HIGHLIGHT-COLOR: #EEEEEE;
+	SCROLLBAR-FACE-COLOR: #EEEEEE;
+	scrollbar-track-color: #F6F6F6;
+}
+
+::-webkit-scrollbar-track-piece {
+	background-color: #F6F6F6;
+	-webkit-border-radius: 0;
+}
+
+::-webkit-scrollbar {
+	width: 12px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+	height: 50px;
+	background-color: #EEEEEE;
+	-webkit-border-radius: 1px;
+	outline: 0px solid #fff;
+	outline-offset: -2px;
+	border: 0px solid #fff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	height: 50px;
+	background-color: #D5D5D5;
+	-webkit-border-radius: 1px;
+}

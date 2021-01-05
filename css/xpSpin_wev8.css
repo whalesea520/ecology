@@ -1,0 +1,106 @@
+/* ---------------------------------------------------- */
+/* edit form styles                                     */
+/* ---------------------------------------------------- */
+.miniText
+{
+    font-family: Tahoma;
+    font-size: 7.5pt;
+}
+.smallText
+{
+    font-family: Verdana, Arial, Helvetica;
+    font-size: 8pt;
+}
+.formObject
+{
+    font-family: Verdana, Arial, Helvetica;
+    font-size: 10pt;
+    border: 1px solid buttonshadow;
+	padding: 2px;
+}
+.table3d
+{
+    background-color: buttonface;
+    border-top: buttonshadow 1pt solid;
+    border-bottom: buttonhighlight 1pt solid;
+    border-left: buttonshadow 1pt solid;
+    border-right: buttonhighlight 1pt solid;
+}
+
+
+/* ---------------------------------------------------- */
+/* xpSpin                                               */
+/* ---------------------------------------------------- */
+.xpSpin
+{
+	behavior: url(/htc/xpSpin.htc);	
+	background-color: window;
+    border: 1px solid buttonshadow;
+    font-family: Verdana, Arial, Helvetica;
+    font-size: 10pt;
+	height: 22px;
+	cursor: default;
+}
+.xpSpin1
+{
+	behavior: url(/htc/xpSpin1.htc);	
+	background-color: window;
+    border: 1px solid buttonshadow;
+    font-family: Verdana, Arial, Helvetica;
+    font-size: 10pt;
+	height: 22px;
+	cursor: default;
+}
+.xpSpinInput
+{
+    position: absolute;
+    border: 1px solid buttonshadow;
+	padding: 2px;
+}
+.xpSpinButton
+{
+    position: absolute;
+    border: buttonshadow 1pt solid;
+	overflow: hidden;
+	top: 0px;
+	left: 0px;
+	height: 0px;
+	width: 0px;
+}
+.xpSpinButtonText,
+.xpSpinButtonTextOver,
+.xpSpinButtonTextDown
+{
+	color: buttontext;
+	background-color: buttonface;
+    border: buttonface 1pt solid;
+    font-family: webdings!important;
+    font-size: 6pt;
+	overflow: hidden;
+    padding: 0px, 2px, 1px, 2px;
+    height: 50%;
+}
+.xpSpinButtonTextOver
+{
+    border-top: buttonhighlight 1pt solid;
+    border-right: buttonshadow 1pt solid;
+    border-bottom: buttonshadow 1pt solid;
+    border-left: buttonhighlight 1pt solid;
+    padding: 0px, 2px, 1px, 2px;
+}
+.xpSpinButtonTextDown
+{
+    border-top: buttonshadow 1pt solid;
+    border-right: buttonhighlight 1pt solid;
+    border-bottom: buttonhighlight 1pt solid;
+    border-left: buttonshadow 1pt solid;
+    padding: 1px, 1px, 0px, 3px;
+}
+
+.spin{ 
+	BORDER-LEFT-STYLE: none; 
+	BORDER-RIGHT-STYLE: none;
+	BORDER-TOP-STYLE: none ;
+	BORDER-BOTTOM: gray 1px solid;
+	width:45px;
+}

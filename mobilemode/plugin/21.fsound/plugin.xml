@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEC>
+	<id>FSound</id>	<!-- id 插件唯一标识 -->
+	<text>128154</text>  <!-- 语音 -->
+	<type>2</type>	<!-- 类型，方便对插件进行区分，目前已有：1.普通功能插件，2.表单插件 -->
+	<isEnabled>1</isEnabled>	<!-- 是否启用，1或者不填写为启用，0或者其他非1值为禁用 -->
+	<order>21</order>	<!-- 插件显示顺序，值越小则显示越靠前，不填写或者无此标签将为整数的最大值 -->
+	
+	<!-- 插件设计信息配置 -->
+	<design>
+		<unique>0</unique> <!-- 是否唯一，如果值为1则在自定义页面设计时一个页面最多只能添加一个这种控件，不为1或者不填写此属性则没有此限制 -->
+		<resources>	<!-- 依赖资源 -->
+			<resource type="js">/mobilemode/js/mec/handler/form/FSound_wev8.js</resource>
+			<resource type="css">/mobilemode/css/mec/handler/form/FSound_wev8.css</resource>
+		</resources>
+	</design>
+	
+	<!-- 插件运行信息配置 -->
+	<run java="com.weaver.formmodel.mobile.mec.handler.form.FSound">
+		<resources>	<!-- 依赖资源 -->
+			<resource type="js">/mobilemode/js/mec/run/form/FSound_wev8.js</resource>
+		</resources>
+	</run>
+	
+	<!-- 内容模板 -->
+	<contentTemplate>
+		<![CDATA[
+			<div class="Design_FSound_Container" id="div${theId}">
+				<div class="Design_FSound_Fieldlabel">${fieldlabel}</div>
+				<div class="Design_FSound_Entry" >
+					<div class="Design_FSound_Record" id="soundRecord${theId}" mecid="${theId}">
+						<div class="Design_FSound_Text_Record">${clicktip}</div>
+					</div>
+					<div class="Design_FSound_Delete" id="soundDelete${theId}">
+						<div class="Design_FSound_Text_Delete">${donetip}</div>
+						<div class="Design_FSound_Delete_Btn" id="deleteBtn${theId}" mecid="${theId}"></div>
+					</div>
+					<input type="hidden" name="fieldname_${fieldname}" id="soundContent${theId}" />
+					<input type="hidden" name="type_${fieldname}" value="sound" />
+				</div>
+			</div>
+		]]>
+	</contentTemplate>
+</MEC>

@@ -1,0 +1,17 @@
+.wea-form-cell .wea-date-group .ant-select-disabled .ant-select-selection {
+    color: #000;
+    border-color: #F2F2F2 !important;
+    background-color: #F8F8F8 !important;
+}
+
+.wea-date-group .ant-select-disabled .ant-select-selection {
+    color: #000;
+    border-color: #F2F2F2 !important;
+    background-color: #F8F8F8 !important;
+}
+
+.wea-date-group .ant-input[disabled].ant-calendar-range-picker {
+    color: #000;
+    background-color: #F8F8F8 !important;
+    border-color: #F2F2F2 !important;
+}

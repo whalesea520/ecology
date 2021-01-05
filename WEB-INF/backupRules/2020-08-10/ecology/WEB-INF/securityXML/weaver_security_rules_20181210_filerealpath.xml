@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<special-non>
+		<urls>
+			<url>
+				<value>/weaver/weaver.splitepage.transform.SptmForThumbnail</value>
+				<params>
+					<param>
+						<value>filerealpath</value>
+						<rules>
+							<rule>##CONST:NAMETITLE##</rule>
+						</rules>
+					</param>
+				</params>
+			</url>
+		</urls>
+	</special-non>	
+</root>

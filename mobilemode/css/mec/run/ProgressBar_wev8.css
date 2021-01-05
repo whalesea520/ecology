@@ -1,0 +1,16 @@
+.progress_bar_container {
+	margin: 10px;
+	border-radius: 4px;
+}
+.progress_bar_line {
+	text-align: center;
+	border-radius: 4px;
+	-webkit-transition: 0.6s linear;
+	-moz-transition: 0.6s linear;
+	-o-transition: 0.6s linear;
+	transition: 0.6s linear;
+	-webkit-transition-property: width, background-color;
+	-moz-transition-property: width, background-color;
+	-o-transition-property: width, background-color;
+	transition-property: width, background-color;
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<xss-filter-list>
+		<word>(onabort|onblur|onchange|ondblclick|onerror|onfocus|onkeydown|onkeypress|onkeyup|onload|onmousedown|onmousemove|onmouseout|onmouseover|onmouseup|onreset|onresize|onselect|onsubmit|onunload)(.{0,10})=.{5,32}</word>
+		<!--<word>data:.*?base64.*?,</word>-->
+		<word>\{toString:alert\}|pholcidCallback|expression(\(|`)(.*?)(\)|`)|\!\[.*?\]</word>
+		<word>(\(|`).*?(\)|`)\[['"][a-zA-Z0-9_]+['"]\]</word>
+		<word>Scripting\.FileSystemObject</word>
+		<word>document\.(cookie|title)|document\[[`'"](cookie|title)[`'"]\]</word>
+		<word>prompt(\(|`)*.?(\)|`)|eval(\(|`)|confirm(\(|`)|(alert|propmt)\s*?(\(|`).*?(\)|`)</word>
+		<word>document(\.|\[("'`]))(cookie|location|write|getElementById|getElementBy(Tag)?Name(NS)?)</word>
+		<word>(setTimeout(\(|`)|setInterval(\(|`)).*?(\)|`)</word>
+		<word>vbscript:|["']\s*javascript:\s*(?!(void|openFullWindowForXtable)).*?["']</word>
+		<word>&lt;/?iframe.*?&gt;</word>
+		<word>&lt;script.*?&gt;\s*(?!(initFlashVideo\(\);?)).*?&lt;/script&gt;</word>
+		<word>\[['"]location['"]\]|location((\.href|\[['`"]href['`"]\]))?\s*=|window\["location"\]=.*\]</word>
+		<word>\-\-&gt;&lt;(['"]|sc).{0,10}|\.\./|%df</word>
+		<word>new.{1,5}Function|@import|\|x=</word>
+		<word>\(\[\!\+\!\]\)|"\(\):;|'\(\):;</word>
+		<word>&lt;!ENTITY</word>
+		<word>(select|union|SLEEP|WAITFOR)(\(|\+|/|--|\*|\[|\{)</word>
+		<word>(union|SLEEP|WAITFOR)(\s)</word>
+		<word>(union)(\s).*?select</word>
+		<word>\\u00[0-7][0-F0-f]</word>
+	</xss-filter-list>
+</root>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components>
+	<component desc="选择框" type="5" ptype="5" client="pc" name="select">
+	   <params>
+	      <p name="" />	   
+	   </params>
+		<template>
+			<edit><content><![CDATA[<SELECT onblur="checkinput2('field${id}','field${id}span',this.getAttribute('viewtype'));" class="inputstyle styled" onchange=changeDisplay(this.value) name=field${id} id=field${id} temptitle="${label}" viewtype="1">
+			               ${option}</SELECT>			               
+			               ]]></content></edit>
+			<view><content><![CDATA[<SPAN id=field${id}span>${vtext}</SPAN>]]></content></view>
+			<setting><content><![CDATA[<INPUT id="${fieldid}" class="InputStyle" name="field${id}" value="${label}">]]></content></setting>
+		</template>
+	</component>
+	<component desc="选择框" type="5" ptype="5"  client="mobile" name="select">
+		<params>
+		    <p name=""/>
+		</params>
+		<template>
+			<edit><content><![CDATA[
+			<div class="field_styled_select">
+				<select class="field_select" lablename="${label}" data-role="none" name="field${id}" id="field${id}" ismust="${must}" onchange="fieldLinkfn(this);" fieldname="${fieldname}">
+					${option}
+				</select>
+			</div>
+			]]></content></edit>
+			<view><content><![CDATA[<SPAN id="field${id}span" class="field_viewText">${vtext}</SPAN><input type="hidden" id="field${id}" name="field${id}" value="${value}" jsonstr="${jsonstr}" />]]></content></view>
+			<setting><content><![CDATA[<INPUT id="${fieldid}" class="InputStyle" name="field${id}" value="${label}">]]></content></setting>
+			<hidden><content><![CDATA[<input type="hidden" id="field${id}" name="field${id}" value="${value}"/>]]></content></hidden>
+		</template>
+	</component>
+</components>

@@ -1,0 +1,12 @@
+delete from HtmlLabelIndex where id=83348 
+/
+delete from HtmlLabelInfo where indexid=83348 
+/
+INSERT INTO HtmlLabelIndex values(83348,'表单主表表名的别名为t1，明细表表名的别名为d1，格式为: t1.a=''1'' and d1.b = ''3''。') 
+/
+INSERT INTO HtmlLabelInfo VALUES(83348,'表单主表表名的别名为t1，明细表表名的别名为d1，格式为: t1.a=''1'' and d1.b = ''3''。',7) 
+/
+INSERT INTO HtmlLabelInfo VALUES(83348,'Table name aliases for the primary table of the form t1, table name aliases for the schedule d1, in the format: t1.a=''1'' and d1.b = ''3''.',8) 
+/
+INSERT INTO HtmlLabelInfo VALUES(83348,'表單主表表名的别名爲t1，明細表表名的别名爲d1，格式爲: t1.a=''1'' and d1.b = ''3''。',9) 
+/

@@ -1,0 +1,60 @@
+.bar-standard{
+	position:relative;
+	padding: 7px 10px;
+	background-color: #fff;
+	border-bottom: 1px solid #ddd;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	box-sizing: border-box;
+	font-family: 'Microsoft Yahei',Arial, Helvetica, sans-serif;
+}
+.bar-standard .segmented-control{
+	margin: 0 auto;
+	display: table;
+	overflow: hidden;
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 400;
+	background-color: #fff;
+	border: 1px solid #017afd;
+	border-radius: 3px;
+	box-sizing: border-box;
+	font-family: 'Microsoft Yahei',Arial, Helvetica, sans-serif;
+	border-collapse: separate;
+}
+.segmented-control .control-item{
+	display: table-cell;
+	width: 1%;
+	padding-top: 6px;
+	padding-bottom: 7px;
+	overflow: hidden;
+	line-height: 1;
+	color: #017afd;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	border-left: 1px solid #017afd;
+	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
+	box-sizing: border-box;
+	font-size: 14px;
+	font-weight: 400;
+	font-family: 'Microsoft Yahei',Arial, Helvetica, sans-serif;
+	cursor: pointer !important;
+}
+.segmented-control .control-item:first-child{
+	border-left-width: 0;
+}
+.segmented-control .control-item.active {
+	color: white;
+	background-color: #017afd !important;
+}
+.segmented-control .MEC_NumberRemind{
+	margin-left: 2px;
+}
+.segmented-control .MEC_NumberRemind:before {
+    content: '(';
+}
+.segmented-control .MEC_NumberRemind:after {
+    content: ')';
+}

@@ -1,0 +1,2 @@
+INSERT INTO  sms_interface(name, keyword, type, remark, clazzname, interfacetype, versinNo, dsporder)  VALUES ('玄武Webservice接口', '玄武', 'WebService', '广州市玄武无线科技有限公司 Webservice接口', 'weaver.sms.system.xuanwu.XuanWuSmsServiceImpl', 0, 1.00, 11.00)
+GO

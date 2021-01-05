@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> ZTREE DEMO - Hide With Radio Mode</TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../../../css/demo.css" type="text/css">
+	<link rel="stylesheet" href="../../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="../../../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../../js/jquery.ztree.core-3.5.js"></script>
+	<script type="text/javascript" src="../../../js/jquery.ztree.excheck-3.5.js"></script>
+<!--<script type="text/javascript" src="../../../js/jquery.ztree.exedit-3.5.js"></script>-->
+	<script type="text/javascript" src="../../../js/jquery.ztree.exhide-3.5.js"></script>
+	<SCRIPT type="text/javascript">
+		<!--
+		var setting = {
+			check: {
+				enable: true,
+				chkStyle: "radio"
+			},
+			data: {
+				key: {
+					title: "title"
+				},
+				simpleData: {
+					enable: true
+				}
+			},
+			callback: {
+				onCheck: onCheck
+			}
+		};
+
+		var zNodes =[
+			{ id:1, pId:0, name:"鐖惰妭鐐?", title:"", checked:true, open:true},
+			{ id:11, pId:1, name:"鐖惰妭鐐?1", title:"", checked:true},
+			{ id:111, pId:11, name:"鍙跺瓙鑺傜偣111", title:"", checked:true, isHidden:true},
+			{ id:112, pId:11, name:"鍙跺瓙鑺傜偣112", title:""},
+			{ id:113, pId:11, name:"鍙跺瓙鑺傜偣113", title:""},
+			{ id:12, pId:1, name:"鐖惰妭鐐?2", title:"", isHidden:true},
+			{ id:121, pId:12, name:"鍙跺瓙鑺傜偣121", title:""},
+			{ id:122, pId:12, name:"鍙跺瓙鑺傜偣122", title:"", isHidden:true},
+			{ id:123, pId:12, name:"鍙跺瓙鑺傜偣123", title:""},
+			{ id:2, pId:0, name:"鐖惰妭鐐?", title:""},
+			{ id:21, pId:2, name:"鐖惰妭鐐?1", title:"", isHidden:true},
+			{ id:211, pId:21, name:"鍙跺瓙鑺傜偣211", title:""},
+			{ id:212, pId:21, name:"鍙跺瓙鑺傜偣212", title:""},
+			{ id:213, pId:21, name:"鍙跺瓙鑺傜偣213", title:""},
+			{ id:22, pId:2, name:"鐖惰妭鐐?2", title:""},
+			{ id:221, pId:22, name:"鍙跺瓙鑺傜偣221", title:""},
+			{ id:222, pId:22, name:"鍙跺瓙鑺傜偣222", title:""},
+			{ id:223, pId:22, name:"鍙跺瓙鑺傜偣223", title:""}
+		];
+
+		function onCheck(e, treeId, treeNode) {
+			count();
+		}
+
+		function setTitle(node) {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+			var nodes = node ? [node]:zTree.transformToArray(zTree.getNodes());
+			for (var i=0, l=nodes.length; i<l; i++) {
+				var n = nodes[i];
+				n.title = "[" + n.id + "] isFirstNode = " + n.isFirstNode + ", isLastNode = " + n.isLastNode;
+				zTree.updateNode(n);
+			}
+		}
+		function count() {
+			function isForceHidden(node) {
+				if (!node.parentTId) return false;
+				var p = node.getParentNode();
+				return !!p.isHidden ? true : isForceHidden(p);
+			}
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			checkCount = zTree.getCheckedNodes(true).length,
+			nocheckCount = zTree.getCheckedNodes(false).length,
+			hiddenNodes = zTree.getNodesByParam("isHidden", true),
+			hiddenCount = hiddenNodes.length;
+
+			for (var i=0, j=hiddenNodes.length; i<j; i++) {
+				var n = hiddenNodes[i];
+				if (isForceHidden(n)) {
+					hiddenCount -= 1;
+				} else if (n.isParent) {
+					hiddenCount += zTree.transformToArray(n.children).length;
+				}
+			}
+
+			$("#isHiddenCount").text(hiddenNodes.length);
+			$("#hiddenCount").text(hiddenCount);
+			$("#checkCount").text(checkCount);
+			$("#nocheckCount").text(nocheckCount);
+		}
+		function showNodes() {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			nodes = zTree.getNodesByParam("isHidden", true);
+			zTree.showNodes(nodes);
+			setTitle();
+			count();
+		}
+		function hideNodes() {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			nodes = zTree.getSelectedNodes();
+			if (nodes.length == 0) {
+				alert("璇疯嚦灏戦€夋嫨涓€涓妭鐐?);
+				return;
+			}
+			zTree.hideNodes(nodes);
+			setTitle();
+			count();
+		}
+
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			$("#hideNodesBtn").bind("click", {type:"rename"}, hideNodes);
+			$("#showNodesBtn").bind("click", {type:"icon"}, showNodes);
+			setTitle();
+			count();
+		});
+		//-->
+	</SCRIPT>
+ </HEAD>
+
+<BODY>
+<h1>閰嶅悎 radio 鐨勯殣钘?/h1>
+<h6>[ 鏂囦欢璺緞: exhide/radio.html ]</h6>
+<div class="content_wrap">
+	<div class="zTreeDemoBackground left">
+		<ul id="treeDemo" class="ztree"></ul>
+	</div>
+	<div class="right">
+		<ul class="info">
+			<li class="title"><h2>1銆乻etting 閰嶇疆淇℃伅璇存槑</h2>
+				<ul class="list">
+				<li>浣跨敤闅愯棌鍔熻兘锛屾棤闇€璁剧疆浠讳綍鍙傛暟</li>
+				</ul>
+			</li>
+			<li class="title"><h2>2銆乼reeNode 鑺傜偣鏁版嵁璇存槑</h2>
+				<ul class="list">
+				<li class="highlight_red">鍒濆鍖栨椂锛岃缃?treeNode.isHidden = true; 鍙互璁╄妭鐐归殣钘?/li>
+				<li><p>闅愯棌銆佹樉绀鸿妭鐐癸紝鐪嬬湅鏍戠殑鍙樺寲锛?br/><br/>
+					璇曡瘯鐪嬶細[ <a id="hideNodesBtn" href="#" onclick="return false;">闅愯棌閫変腑鐨勮妭鐐?/a> ]
+					&nbsp;&nbsp;&nbsp;&nbsp;[ <a id="showNodesBtn" href="#" onclick="return false;">鏄剧ず鍏ㄩ儴琚殣钘忕殑鑺傜偣</a> ]<br/><br/>
+					<ul id="log" class="log" style="height:125px;">
+						<li>isHidden = true 鐨勮妭鐐瑰叡 <span id="isHiddenCount" class="highlight_red"></span> 涓?/li>
+						<li>琚殣钘忕殑鑺傜偣鍏?<span id="hiddenCount" class="highlight_red"></span> 涓?/li>
+						<li>褰撳墠琚嬀閫夌殑鑺傜偣鍏?<span id="checkCount" class="highlight_red"></span> 涓?/li>
+						<li>褰撳墠鏈鍕鹃€夌殑鑺傜偣鍏?<span id="nocheckCount" class="highlight_red"></span> 涓?/li>
+						<li>闅愯棌鑺傜偣鍚庯紝鍙互鐪嬬湅浠嶆樉绀鸿妭鐐圭殑 isFirstNode 鍜?isLastNode 灞炴€?/li>
+					</ul></p>
+				</li>
+				</ul>
+			</li>
+			<li class="title"><h2>3銆佸叾浠栬鏄?/h2>
+				<ul class="list">
+				<li>闅愯棌鑺傜偣鎿嶄綔锛屼細褰卞搷 isFirstNode 鍜?isLastNode 灞炴€э紝浣嗘槸瀵逛簬 getPreNode() 鍜?getNextNode() 鏂规硶鏃犲奖鍝?/li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+</BODY>
+</HTML>

@@ -1,0 +1,2 @@
+alter PROCEDURE HrmLocations_Delete (@id_1 	int, @flag integer output, @msg varchar(80) output ) AS declare @count0 int select @count0=count(*) from HrmLocations a join HrmResource b on a.id=b.locationid and a.id=@id_1 if @count0>0 begin set @flag=2 set @msg='办公地点在使用中' return end DELETE HrmLocations  WHERE  id= @id_1 if @@error<>0 begin set @flag=1 set @msg='插入储存过程失败' return end else begin set @flag=0 set @msg='插入储存过程成功' return end
+GO

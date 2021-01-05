@@ -1,0 +1,448 @@
+*{
+	font-family: Microsoft YaHei;
+	font-size: 12px;
+}
+html,body{
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+}
+a{
+	color: #1e7145;
+	text-decoration: none;
+}
+button.btnSubmit{
+	color: #fff;
+	background-color: #DA532C;
+	border: 0;
+	margin: 2px 0 2px 0;
+	padding: 4px 15px;
+}
+button.btnCancel{
+	background-color:#ccc;
+	border: 0;
+	margin: 2px 0 2px 0;
+	padding: 4px 15px;
+}
+.mainTable{
+	width: 100%;
+	height: 100%;
+	border-collapse: collapse;
+}
+.mainTable td{
+	/*border: 1px solid red;*/
+}
+.mainTable .header td{
+	height: 39px;
+	background: url("../images/log_wev8.png?1") no-repeat;
+	background-position: left bottom;
+	background-color: #1e7145;
+	font-size: 14px;
+	color: #fff;
+}
+.mainTable .center{
+}
+.mainTable .center .center_left{
+	width: 218px;
+	background-color: #E5E5E5;
+}
+.mainTable .center .center_left .version{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	padding-left: 15px;
+	padding-top: 15px;
+}
+.mainTable .center .center_left .version li{
+	float: left;
+	color: #000;
+	font-size: 14px;
+	font-weight: normal;
+	font-style: italic;
+	height: 22px;
+	width: 20px;
+	overflow: hidden;
+	text-align: center;
+	line-height: 18px;
+	font-family: arial;
+	cursor: pointer;
+}
+.mainTable .center .center_left .version li.beta{
+	color: #999;
+	font-weight: normal;
+	margin: 0 5px;
+	width: auto;
+	font-style: italic;
+}
+.mainTable .center .center_left .version li.curr{
+	font-weight: normal;
+	width: 18px;
+	height: 18px;
+  	background: none repeat scroll 0 0 #DA532C;
+	border-radius: 18px;
+	color: #fff;
+}
+
+.mainTable .center .center_left .searchContainer{
+	padding-left: 15px;
+	padding-top: 5px;
+	padding-bottom: 10px;
+	position: relative;
+}
+.mainTable .center .center_left .searchContainer .searchText{
+	height: 22px;
+	width: 180px;
+	border: 1px solid #BBB;
+	background-position: 162px center;
+	background-color: #E5E5E5;
+}
+.mainTable .center .center_left .searchContainer .searchBtn{
+	background: url("/formmode/images/btnSearch_wev8.png") no-repeat;
+	width:16px;
+	height: 16px;
+	position: absolute;
+	top: 11px;
+	left: 178px;
+	cursor:pointer;
+}
+
+.mainTable .center .center_left .shownewBtn{
+	background: url("/formmode/apps/ktree/images/BDNew_wev8.png") no-repeat;
+	width:26px;
+	height: 13px;
+	position: absolute;
+	top: 20px;
+	left: 175px;
+	cursor:pointer;
+}
+
+
+.mainTable .center .center_left .searchContainer .searchText_tip{
+	position: absolute;
+	top: 9px;
+	left: 20px;
+	color: #BBB;
+	font-style: italic;
+}
+
+
+.the_tree{
+	padding: 0px 0px 0px 0px;
+	margin: 0;
+}
+.the_tree li{
+	padding: 3px 0px 0 0px;
+}
+.the_tree li a{
+	text-decoration: none !important;
+}
+.the_tree li a.curSelectedNode{
+	height: 17px;
+	padding-top: 1px;
+	border: none;
+	background-color: transparent;
+}
+.the_tree li a span{
+	color: #444;
+}
+.the_tree li ul{
+	padding-left: 0px;
+}
+.the_tree li ul.level0{
+	margin-left: -5px;
+} 
+.the_tree li ul.level1{
+	margin-left: -19px;
+} 
+.the_tree li ul.level2{
+	margin-left: -33px;
+} 
+.the_tree li.level0 {
+	padding-left: 5px;
+}
+.the_tree li.level1 {
+	padding-left: 19px;
+}
+.the_tree li.level2 {
+	padding-left: 33px;
+}
+.the_tree li.level3 {
+	padding-left: 47px;
+}
+.the_tree li:hover{
+	background:url("/formmode/images/ztree_over_bg_wev8.png") repeat-x;	
+}
+.the_tree li:hover a span{
+	color: #333;
+}
+.the_tree li.noover{
+	background: none;
+}
+.the_tree li.ztreeNodeBgColor{
+	background:url("../images/treebg_wev8.png") no-repeat;
+	padding-bottom: 3px;
+}
+.the_tree li.ztreeNodeBgColor>a span{
+	font-weight: bold;
+	color: #000;
+}
+.the_tree li span.noline_docu.button,
+.the_tree li span.noline_close.button,
+.the_tree li span.noline_open.button{
+	margin-left: 5px;
+}
+.the_tree li span.noline_close.button{
+	background: url("../images/arrow_right_close_wev8.png") no-repeat center;
+}
+.the_tree li span.noline_open.button{
+	background: url("../images/arrow_right_wev8.png") no-repeat center;
+}
+
+.mainTable .center_right{
+	
+}
+
+.center_left_container{
+	height: 100%;
+	overflow: auto;	
+}
+.center_left_top{
+	position: fixed;
+	background-color: #E5E5E5;
+	z-index: 200;
+}
+.ztreeContainer{
+	padding-top: 76px;
+}
+
+.center_right_container{
+	height: 100%;
+	padding: 0px 20px 0px 20px;
+	overflow: auto;
+}
+.tabsContainer{
+	position: fixed;
+	padding: 15px 0;
+	background-color: #fff;	
+	z-index: 200;
+}
+.frameContainer{
+	padding: 85px 10px 10px 0px;;
+}
+
+.tabs{
+
+}
+.tabs ul{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	background-color: #fff;
+}
+.tabs ul li{
+	float: left;
+	padding: 5px 8px;
+}
+.tabs ul li a{
+	color: #333;
+	text-decoration: none;
+	cursor: pointer;
+}
+.tabs ul li.selected{
+	background-color: #f4f8f6;
+}
+.tabs ul li.selected a{
+	color: #0D6737;
+	font-weight: bold;
+}
+
+.subtabs{
+	display: none;
+}
+.subtabs ul{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	background-color: #f4f8f6;
+}
+.subtabs ul li{
+	float: left;
+	padding: 5px 8px 7px 8px;
+}
+.subtabs ul li a{color: #333;
+	text-decoration: none;
+	cursor: pointer;
+	padding-bottom: 2px;
+}
+.subtabs ul li.selected{
+
+}
+.subtabs ul li.selected a{
+	color: #0D6737;
+	font-weight: bold;
+	border-bottom: 2px solid #0D6737;
+}
+/*==============================================================右下角按钮*/
+#rightCornerMenu{
+	width: 40px;
+	position: fixed;
+	right: 40px;
+	bottom: 30px;
+}
+#rightCornerMenu img{
+	width: 40px;
+	margin-top: 3px;
+	-moz-opacity: 0.2;
+	opacity: 0.2;
+}
+#rightCornerMenu img:hover{
+	-moz-opacity: 1;
+	opacity: 1;
+}
+/*==============================================================封面*/
+#cover{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 99999999;
+	overflow: hidden;
+	background-color: #1e7145;
+	background-image: url("../images/coverbg_wev8.png");
+}
+#divComment ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+#divComment ul li{
+	height: 80px;
+	padding: 10px 0 12px 0;;
+	overflow: hidden;
+	color: #61987a;
+}
+.divCoverTitle{
+	font-size:30px;color:#fff;margin:110px 0 0 80px;
+}
+.divCoverMemo{
+	font-size: 12px;
+	color: #8eb5a0;
+	margin: 40px 0 0 80px;
+	line-height: 18px;
+	opacity: 0.7;
+}
+.divCommentBox{
+	width: 480px;
+	margin: 12px 0 0 80px;
+	padding-right: 20px;
+	background: url('../images/black05_wev8.png');
+}
+#divComment{
+	height:78px;overflow:hidden;
+}
+.imgAvator{
+	width:50px;height:50px;border-radius:25px;float:left;clear:both;margin:3px 10px 0 10px;
+}
+#divComment ul li{
+	color: #8eb5a0;
+	line-height: 18px;
+}
+#divComment .spanUsername{
+	color:#8eb5a0;
+	line-height: 22px;
+}
+#divComment .spanDate{
+	color: #8eb5a0;
+	font-size: 11px;
+	font-style: italic;
+	margin-left: 6px;
+}
+.divCount{
+	margin-left:70px;padding:10px 0;border-top:1px solid #337a54;color:#61987a;
+}
+.divCount .spanCount{
+	background-color: #da532c;
+	font-size: 10px;
+	font-style: italic;
+	color: #fff;
+	padding: 0 5px 0 3px;
+	border-radius: 6px;
+}
+#btnEnter{
+	margin:12px 0 0 80px;width:135px;height:32px;color:#fff;background-color:#da532c;border:0;
+}
+.divSlogan{
+	width:500px;padding:10px 0 0 0;margin:120px 0 0 80px;border-top:1px solid #357f58;color:#61987a;
+}
+
+/*==============================================================文档*/
+.divDocTitleIcon{
+	width: 50px;
+	float: left;
+	padding: 9px 0 0 5px;
+}
+.divDocTitle{
+	font-size: 28px;
+	line-height: 45px;
+	color: #333;
+	padding: 0;
+	margin-left: 60px;
+}
+.divDocDesc{
+	color: #999;
+	width: 400px;
+	float: left;
+	padding: 0 5px;
+}
+.divDocToolbar{
+	float: right;
+	width: 250px;
+	text-align: right;
+}
+.divDocContent{
+	padding: 5px 0 15px 0;
+	margin: 25px 0 0 60px;
+	border-top: 1px solid #eee;
+}
+.divDocBottom{
+	text-align: right;
+	margin-bottom: 20px;
+}
+
+.hd table td.nomal {
+	border-bottom:1px solid #ddd;
+	text-align: center;
+	cursor: pointer;
+	white-space: nowrap;
+	padding: 2px 8px;
+	color: #1e7145;
+}
+.hd table td.first, .hd table td.last {
+	border-bottom:1px solid #ddd;
+	text-align: center;
+	cursor: pointer;
+	white-space: nowrap;
+	padding: 2px 3px 2px 55px;
+	color: #1e7145;
+}
+.hd table td.activeTab{
+	border-top: 2px solid #1e7145;
+	border-bottom:1px solid #fff;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	color: #1e7145;
+}
+
+
+.divDiscussContent{
+	margin: 0 45px 0 45px;
+}
+.discussAvtor{
+	width: 56px;
+	height: 56px;
+	border-radius: 28px;
+}

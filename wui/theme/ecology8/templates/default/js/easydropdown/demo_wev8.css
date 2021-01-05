@@ -1,0 +1,20 @@
+.dropdown li, .dropdown span{
+	font-size: 12px!important;
+}
+
+.dropdown .selected,
+.dropdown li{
+
+	padding: 7px 12px!important;
+}
+
+.dropdown li.focus{
+	background: #0180d1!important;
+	position: relative;
+	z-index: 3;
+	color: #fff;
+}
+
+.dropdown {
+	border:1px solid #f7f7f2!important
+}

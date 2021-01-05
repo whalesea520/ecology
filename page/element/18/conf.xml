@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<id>18</id>  <!--只能是唯一的英文字母-->
+	<title>期刊中心</title>
+	<titleEN>Periodical Center</titleEN>
+	<desc>得到所有的期刊</desc>
+	<icon>resource/image/18_wev8.gif</icon>
+	<linkMode>2</linkMode>
+	<loginView>0</loginView>
+	<type>2</type>
+	<perpage>-1</perpage>
+	<private>
+		<jsList> 
+		</jsList>
+	</private>
+	<public>
+		<jsIdList>  
+		</jsIdList>
+		<cssIdList>
+		</cssIdList>
+	</public>
+	<view>
+		<url>/page/element/18/Magazine.jsp</url>
+		<method/>
+	</view>
+	<setting>
+		<url>/page/element/compatible/setting.jsp</url>
+		<method>getMagazineSettingStr</method>
+	</setting>
+	<more>
+		<url>#</url>
+		<method/>
+	</more>
+	<operation>/page/element/compatible/operation.jsp</operation>
+</root>

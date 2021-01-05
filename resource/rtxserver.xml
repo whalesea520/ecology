@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="GB2312" ?>
+<!-- 配置文件的说明 -->
+<!-- 配置项RTXSvrMain表示了本机启动的服务种类-->
+
+<!--配置项servers表示了需要到的各种类型的服务器配置信息-->
+<!--IP表示各个服务的IP地址,其他服务器是通过这个IP来知道该服务器的IP地址的 -->
+<!--Port表示各个服务器的TCP端口，如果是服务本身是根据这个端口来进行监听的。如果是其他服务器则根据这个Port知道该服务器的Port的-->
+<!--UDPPort表示各个服务器的UDP端口，如果是服务本身是根据这个端口来进行监听的。如果是其他服务器则根据这个UDPPort知道该服务器的UDPPort的-->
+
+
+<RTXServer>
+	<RTXSvrMain>
+		<Server Name="LicenseServer" Cmd="bin\LicenseServer.exe" StartType="start" Action="start"/>
+		<Server Name="DBServer" Cmd="bin\DBServer.exe" StartType="start" Action="start"/> 
+  		<Server Name="GroupServer" Cmd="bin\GroupServer.exe" StartType="start" Action="start"/> 
+    		<Server Name="ConnServer" Cmd="bin\ConnServer.exe" StartType="start" Action="start"/>
+          <Server Name="AppServer" Cmd="bin\AppServer.exe" StartType="start" Action="start"/>
+         	<Server Name="SDKServer" Cmd="bin\SDKServer.exe" StartType="start" Action="start"/> 
+           	<Server Name="FileServer" Cmd="bin\FileServer.exe" StartType="start" Action="start"/>
+                <Server Name="SessionServer" Cmd="bin\SessionServer.exe" StartType="start" Action="start"/>
+                <Server Name="InfoServer" Cmd="bin\InfoServer.exe" StartType="start" Action="start"/>
+<Server Name="AppManager" Cmd="bin\AppManager.exe" Param="-Tencentabc" StartType="start" Action="start"/>  
+                <Server Name="Upgradesvr" Cmd="bin\Upgradesvr.exe" StartType="start" Action="start"/>
+		<Server Name="Gateway" Cmd="bin\gateway.exe" StartType="start" Action="start"/>
+     	<Server Name="OutSupport" Cmd="bin\GW.exe" StartType="start" Action="start"/>
+</RTXSvrMain>
+
+	<Servers> 		
+		<DBServer AutoTransPwd="true" DBConnstring="Driver={Microsoft Access Driver (*.mdb)};DBQ=../db/rtxdb.mdb" IP="127.0.0.1" UDPPort="9000">
+            <ServerInfo name="HttpServer" type="3" IP="192.168.0.197" TCPPort="8012" UDPPort="8012"/>
+			<ServerInfo name="HttpServer_Wan" type="11" IP="58.240.75.21" TCPPort="8012" UDPPort="8012"/>
+
+			<ServerInfo name="SessionServer" type="2" IP="192.168.0.197" TCPPort="8880" UDPPort="8880"/>
+			<ServerInfo name="SessionServer_Wan" type="10" IP="58.240.75.21" TCPPort="8880" UDPPort="8880"/>
+
+			<ServerInfo name="FileServer" type="1" IP="192.168.0.197" TCPPort="8003" UDPPort="0"/>		
+			<ServerInfo name="FileServer_Wan" type="12" IP="58.240.75.21" TCPPort="8003" UDPPort="0"/>	
+	
+ 		<ServerInfo name="InfoServer" type="100" IP="192.168.0.197" TCPPort="8010" UDPPort="8010"/>
+		<ServerInfo name="InfoServer_Wan" type="200" IP="58.240.75.21" TCPPort="8010" UDPPort="8010"/>
+
+		<ServerInfo name="InfoServer_PHOTO" type="101" IP="192.168.0.197" TCPPort="8010" UDPPort="8010"/>
+		<ServerInfo name="InfoServer_ORGSTRUCT" type="102" IP="192.168.0.197" TCPPort="8010" UDPPort="8010"/>
+		<ServerInfo name="InfoServer_MAINFRAME" type="103" IP="192.168.0.197" TCPPort="8010" UDPPort="8010"/>
+
+		<ServerInfo name="InfoServer_PHOTO_Wan" type="201" IP="58.240.75.21" TCPPort="8010" UDPPort="8010"/>
+		<ServerInfo name="InfoServer_ORGSTRUCT_Wan" type="202" IP="58.240.75.21" TCPPort="8010" UDPPort="8010"/>
+		<ServerInfo name="InfoServer_MAINFRAME_Wan" type="203" IP="58.240.75.21" TCPPort="8010" UDPPort="8010"/>
+
+
+
+</DBServer>
+		
+		<LicenseServer IP="127.0.0.1" UDPPort="9004">
+		</LicenseServer>
+
+		<GroupServer IP="127.0.0.1" TCPPort="9001">
+		</GroupServer>
+		
+		<ConnServer IP="127.0.0.1" TCPPort="8000" UDPPort="8000" ForMsgCenterIP="127.0.0.1" ForMsgCenterUDPPort="8002" PushStateFreq="60" PushStateChildFreq="20" PushStateClientCount="30" PushExStateFreq="60" PushExStateChildFreq="20" PushExStateClientCount="30" RedirectFlag="0" RedirectSvrIP="127.0.0.1" RedirectSvrTCPPort="8000" RedirectSvrUDPPort="8000" >
+		</ConnServer>
+
+		<FileServer IP="192.168.0.197" TCPPort="8003">
+		</FileServer>
+
+		<SessionServer IP="127.0.0.1" TCPPort="8880" UDPPort="8880" EnableDyncChange="FALSE" MaxIncomingFlow="102400" MaxSendPackage="1024">
+		</SessionServer>
+
+		<Upgradesvr IP="192.168.0.197" TCPPort="8009"  AutoCheckSetupFile="TRUE" LoginCheckUpdate="TRUE">
+		</Upgradesvr>
+
+		<Gateway IP="127.0.0.1" UDPPort="8008"  BUin="" Password="0VrVcZOyZfV3/EtzC3WvXQ==" OuterService="start" BConnServer="bqqconn.tencent.com">
+
+		        <!--如果您的代理中的密码是明文保存并且长度短于16位系统会自动的把您的密码加密后保存-->
+                	<!-- HTTP代理设置-->
+                	<HttpProxy EnableProxy="false" ProxyServerIP="" ProxyServerPort="" UserName="" Password="" DomainName=""/>
+                	<!-- SOCKS5代理设置-->
+                	<Socks5Proxy EnableProxy="false" ProxyServerIP="" ProxyServerPort="" UserName="" Password=""/>
+   		</Gateway>
+
+		<APPServer IP="127.0.0.1" TCPPort="8006" ForMsgCenterIP="127.0.0.1" ForMsgCenterUDPPort="8007" >
+		</APPServer>		
+			
+		<SDKServer IP="127.0.0.1" TCPPort="6000" ForMsgCenterIP="127.0.0.1" ForMsgCenterUDPPort="8009" >
+		</SDKServer>	
+		<OutSupport IP="127.0.0.1" TCPPort="6005" UDPPort="6005"/>
+		<WanServer IP="remote.rtx.tencent.com" TCPPort="5002" UDPPort="5002"/>
+	<InfoServer IP="192.168.0.197" TCPPort="8010" UDPPort="8010"/>
+</Servers>
+</RTXServer>

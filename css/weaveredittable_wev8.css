@@ -1,0 +1,30 @@
+TABLE.ListStyle TR.HeaderForXtalbe TH, TABLE.ListStyle TR.header TH, TABLE.ListStyle TR.header TD {
+	height: 30px !important;
+	line-height: 30px;
+	padding: 0px 5px 0px 12px;
+	cursor: pointer;
+	color: #000;
+	background-color: rgb(248,248,248);
+	font-weight: normal;
+	border-bottom: 2px solid #B7E0FE;
+	border-collapse: collapse;
+	text-align: left;
+	font-size: 12px;
+}
+
+TABLE.ListStyle tbody tr td{
+	BACKGROUND-COLOR: #FFFFFF;
+	color: #242424;
+	height: 30px;
+	border-bottom: 1px solid #E6E6E6;
+}
+
+TABLE.ListStyle{
+	background-color:#fff;
+}
+
+input.InputStyle, input.Inputstyle, input.inputStyle, input.inputstyle, input[type="text"], input[type="password"], .e8_innerShowContent, textarea, .sbHolder {
+	border: 1px solid #E9E9E2;
+	border-top-color:#E9E9E2;
+	background-image:none;
+}

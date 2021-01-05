@@ -1,0 +1,168 @@
+* {
+	font-family:'Microsoft YaHei';
+	font-size:12px;
+}
+.personnel{
+	width:100%;
+	height:1px;
+	background: #eaeaea;
+}
+.leftrtnimg{
+	width:100%;
+	height:25px;
+}
+.rtnback{
+	margin-top:2px;
+	margin-left:5px;
+	width:20px;
+	height:20px;
+	background-image: url("/rdeploy/assets/img/workplan/rtnback.png");
+	background-repeat: no-repeat;
+	background-position:center;
+	cursor: pointer;
+}
+.personnelname{
+	float:left;
+	height:25px;
+	line-height: 25px;
+	font-size: 12px;
+	color: #606060;
+	text-align: center;
+}
+.planitem{
+	width:143px;
+	height:90px;
+}
+.itemchecked{
+	background: #f1faff;
+	border-top:1px solid #e0f1fb;
+	border-bottom:1px solid #e0f1fb;
+}
+.leftpart{
+	float:left;
+	width:94px;
+	height:90px;
+}
+.rightpart{
+	float:left;
+	width:49px;
+	height:90px;
+}
+.leftimg{
+	width:94px;
+	height:72px;
+}
+.leftimg img{
+	width:45px;
+	height:45px;
+	border-radius:30px;
+	margin-top:22px;
+	margin-left:49px;
+	cursor: pointer;
+}
+.leftname{
+	width:95px;
+	height:18px;
+	line-height: 18px;
+	font-family: 'Microsoft YaHei';
+	font-size: 14px;
+	color: #6d737c;
+	text-align: center;
+	margin-left:24px;
+}
+.rightimg{
+	width:49px;
+	height:42px;
+}
+.subordinate{
+	float:left;
+	width:28px;
+	height:40px;
+	cursor: pointer;
+}
+.subordinate img{
+	width:28px;
+	height:28px;
+	margin-top:15px;
+}
+.subordinatenum{
+	float:left;
+	width:21px;
+	height:15px;
+	line-height:15px;
+	border-radius:30px;
+	margin-top:10px;
+	margin-left:-12px;
+	background: #67b2ff;
+	color:#ffffff;
+	font-size: 12px;
+	text-align: center;
+	border:1px solid #ffffff;
+	cursor: pointer;
+}
+
+
+.e8_os {
+	width:120px!important;
+	height:30px!important;
+}
+
+.e8_innerShowContent {
+	border:0px!important;
+}
+.e8_browserInputMore {
+	height:30px!important;;
+}
+.ac_input {
+	height: 30px !important;
+	margin-left:5px;
+	display: inline!important;
+}
+
+.e8_innerShow {
+	min-height: 30px;
+	width: 15px;
+	margin-left: 0px;
+}
+
+.e8_innerShowContent div {
+	height: 30px;
+	font-size:14px;
+}
+
+.e8_spanFloat {
+	position: absolute;
+	top: 4px;
+}
+.e8_outScroll {
+	border:none;
+}
+.e8_browflow{
+	width:18px!important;
+}
+.e8_showNameClass{
+	margin-left:5px;
+}
+.e8_showNameClass a{
+	font-size: 12px;
+}
+.noplanitem{
+	width:143px;
+	height:132px;
+}
+.noplanitemimg{
+	width:143px;
+	height:102px;
+	text-align: center;
+	background-image: url("/rdeploy/assets/img/workplan/noplanitemimg.png");
+	background-repeat: no-repeat;
+	background-position:bottom;
+}
+.noplanitemname{
+	width:143px;
+	height:30px;
+	line-height: 30px;
+	font-size: 12px;
+	color: #e2e5e7;
+	text-align: center;
+}

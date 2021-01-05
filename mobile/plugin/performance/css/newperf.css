@@ -1,0 +1,297 @@
+html,body{
+	height:100%;
+	margin:0;
+	padding:0;
+	background: white;
+}
+*{font-size:16px;font-family: arial,Î¢ÈíÑÅºÚ;}
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+table {
+	border-collapse: separate;
+	border-spacing: 0px;
+}
+.showMoreTask {
+	height: 35px;
+	text-align: center;
+	line-height: 35px;
+	font-weight: bold;
+	color: #777878;
+	cursor: pointer;
+	background-color: #F8F8F8;
+	font-size:14px;
+}
+.taskTips{
+	text-align: center;
+    font-size: 14px;
+    color: #999;
+    padding: 10px 0;
+}
+.tabblank{width: 100%;height: 40px;position: relative;}
+.btn_browser{width:30px;height:22px;float: right;margin-right: 5px;margin-top: 9px;margin-bottom: 1px;cursor: pointer;
+				background: url('/mobile/plugin/plus/browser/images/search.png') center no-repeat !important;background-size: 20px !important;}
+#userChooseDiv{position:fixed;left: 100%;top: 0px;width: 100%;height: 100%;z-index: 99999;}
+body.hrmshow #userChooseDiv{left:0;}
+#userChooseFrame{width: 100%;height: 100%;}
+#departBrowserDiv{position:fixed;left: 100%;top: 0px;width: 100%;height: 100%;z-index: 99999;}
+#departBrowserFrame_eb{width: 100%;height: 100%;}
+#header{text-align:center;background-color:#0161c9;padding:12px 0 13px 0;}
+.Design_Reply_Btn {height: 40px;line-height: 40px;border-radius: 3px;font-size: 12px !important;
+    cursor: pointer;text-align: center;padding: 0 11px;overflow: hidden;
+    white-space: nowrap;text-overflow: ellipsis;position: absolute;right: 15px;box-sizing: border-box;
+    background-color: #0161c9;color: #fff;margin:2px 0px 2px 5px;float:left;
+}
+.Design_Reply_content{height: 40px;margin:2px 0px 2px 5px;line-height: 40px;border: 1px solid #e5e5e5;
+border-radius: 3px;font-size: 12px;padding: 0px 0px 0px 5px;box-sizing: border-box;box-shadow: none !important;-webkit-appearance: none;}
+.arrow-indicator:after {
+    content: " ";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-width: 2px 2px 0 0;
+    border-color: #c8c8cd;
+    border-style: solid;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.rescorefont{width: 14px;height: 15px;background: url('../images/rescore.png') center no-repeat;display:-moz-inline-box;display:inline-block;}
+ul.tab{list-style:none;margin:0;padding:0;}
+ul.tab li{display:inline;padding:4px 16px;margin:0 -6px 0 0;font-size:14px;color:#fff;border:1px solid #017afd;}
+ul.tab li.selected{color:#fff;background-color:#017afd;color:#fff;}
+.font_cl{font-size:14px !important;color:red;}
+.font_c2{font-size:14px !important;}
+.tabpanel{background-color:#fff;border-bottom:1px solid #e5e5e5;height:33px;}
+.tabpanel ul{list-style: none;margin:0;padding:3px 15px 0 15px;}
+.tabpanel ul li{display:inline;margin:0 15px 0 0;font-size:14px;line-height:28px;color:#333;padding:0 2px 6px 2px;}
+.tabpanel ul li.tab_click{color:#0161c9;border-bottom:2px solid #0161c9;}
+.main-panel{position: fixed;z-index:10000;top: 0;left: 0;width: 100%;overflow-x: hidden;overflow-y: auto;background-color:#0161c9;}
+div.listSearch {
+  background-color: #f0f0f0;
+  padding: 6px 15px;
+  position: relative;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+div.listSearch .btn {
+  position: absolute;
+  top: 13px;
+  left: 25px;
+  width: 14px;
+}
+
+div.listSearch input {
+  border: 1px solid #e5e5e5;
+  border-radius: 50px;
+  background-color: #fff;
+  padding: 0px 10px 0px 30px;
+  width: 100%;
+  height: 28px;
+  box-sizing: border-box;
+  font-size: 12px;
+  color: #666;
+  -webkit-appearance:none;
+}
+.as_btn {
+  height: 100%;
+  width: 60px;
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  z-index: 90;
+  padding-top: 15px;
+  padding-right: 6px;
+  padding-left: 32px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.as_btn div {background: #aaa;}
+.as_btn .line {
+  height: 1px;
+  width: 11px;
+  margin-left: 2px;
+  margin-bottom: 3px;
+}
+.as_btn .line.one {width: 14px;}
+.as_btn .line.three {width: 8px;}
+#searchDiv{position:fixed;left: 100%;top: 0px;width: 100%;height: 100%;z-index: 20000;background-color:#fff;}
+.searchTitle{
+	background-color: #0161c9;
+    color: #fff;
+    font-size: 16px;
+    padding: 11px 15px 11px 15px;
+    text-align:center;
+}
+#searchDiv .header-left {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 41px;
+    color: #fff;
+    padding-left: 0px;
+    line-height: 41px;
+    width: 40px;
+    background: url('/mobile/plugin/performance/images/back.png') no-repeat;
+    background-position: center;
+    background-size: 18px;
+}
+.newsfont{color: red;margin-left: 5px;font-style: italic;font-size: 11px;}
+.fButtons {
+    overflow: hidden;
+    padding: 0 15px;
+}
+.fButton {
+    border-radius: 3px;
+    font-size: 14px;
+	margin:15px 0;
+}
+.fSubmitButton {
+	border:1px solid #0161c9;
+    color: #0161c9;
+	padding: 5px 0;
+    text-align: center;
+}
+.Formfield-Wrap {
+    border-bottom: 1px solid #f0f0f0;
+    height: 40px;
+    padding-left: 80px;
+    position: relative;
+}
+.Formfield-Label {
+    color: #666;
+    font-size: 14px;
+    height: 40px;
+    left: 0;
+    line-height: 40px;
+    overflow: hidden;
+    padding-left: 15px;
+    padding-right: 5px;
+    position: absolute;
+    text-overflow: ellipsis;
+    top: 0;
+    white-space: nowrap;
+    width: 62px;
+}
+.MADFS_Left_Select{width:100%;border:0;height:40px;font-size:14px;background:transparent;-webkit-appearance:none}
+.Design_FSelect_Fielddom{overflow:hidden;background:url("../images/Pulldown.png") no-repeat;background-position:right center;vertical-align:middle;padding-left:5px;background-size: 16px;margin-right: 10px;}
+
+.Design_FInputText_Fielddom{padding-right: 15px;}
+.Design_FInputText_Fielddom .intext {border: 0 none;font-size: 14px;height: 40px;line-height: 40px;padding: 0;}
+.Design_FInputText_Fielddom select {border: 0 none;font-size: 14px;height: 40px;line-height: 40px;padding: 0;width: 100%;}
+.Design_FInputText_Fielddom select option{font-size: 14px;}
+.listContainer{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+.listContainer li{
+	border-bottom: 1px solid #f0f0f0;
+	overflow: hidden;
+	padding: 6px 15px;
+	background: #fff;
+	position: relative;
+}
+.listContainer li > table{
+	width: 100%;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+.listContainer li .fieldPart{
+	padding: 0;
+}
+.listContainer li .imgPart {
+    padding: 5px 10px 5px 0;
+    width: 18px;
+    vertical-align: top;
+}
+.listContainer li .imgPart .imgin{padding: 0 5px 5px 0;position: relative;float: left;border-radius: 3px;position: relative;}
+.listContainer li .imgPart .imgin img{border: 0;border-radius: 22px;width: 44px;height: auto;}
+.listContainer li .fieldPart .titleRowWrap span{
+	font-size: 15px !important;
+    color: #0161c9;
+	padding:0 15px 3px 0;
+}
+.listContainer li .fieldPart .colWrap span{
+	font-size: 13px !important;
+	color: #777;
+    margin-right: 10px;
+    display: inline;
+    line-height: 16px;
+    margin: 0;
+    padding: 0;
+}
+.listContainer li div.zt0 {
+    font-size: 13px;
+    font-weight: normal;
+    color: #fff;
+    background-color: #eb6100;
+    border-radius: 10px;
+    padding: 2px 8px;
+    margin: 2px 0 0 0;
+    float: right;
+    line-height: 17px;
+    width:40px;
+    text-align: center;
+}
+.listContainer li div.zt1 span {
+    font-size: 13px;
+    font-weight: normal;
+    color: #fff;
+    background-color: #0161c9;
+    border-radius: 10px;
+    padding: 2px 8px;
+    margin: 2px 0 0 0;
+    float: right;
+    line-height: 17px;
+    width:40px;
+    text-align: center;
+}
+.mec_refresh_loading{
+	display: none;
+}
+
+.spinner {
+  margin: 10px auto 10px;
+  text-align: center;
+}
+ 
+.spinner > div {
+  width: 10px;
+  height: 10px;
+  background-color: rgb(0, 122, 251);
+ 
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+ 
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+ 
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+@-webkit-keyframes bouncedelay {
+  00%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+ 
+@keyframes bouncedelay {
+  00%, 80%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}

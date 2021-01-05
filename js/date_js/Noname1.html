@@ -1,0 +1,27 @@
+
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <script language="javascript" type="text/javascript" src="WdatePicker_wev8.js"></script>
+  <script language="javascript" type="text/javascript">
+      function getValueTest(){
+	     document.getElementById('id1').value = "youzhi";
+	  }
+
+	  function putValueTest(){
+	    var valuetest = document.getElementById('startspan').value;
+		alert(valuetest);
+	  }
+  </script>
+ </HEAD>
+ <BODY>
+     <span id=startspan></span> 
+     <img src="skin/datePicker_wev8.gif" width="16" height="22" align="absmiddle" style="cursor:pointer" onClick="WdatePicker({el:'startspan',onpicked:function(dp){$dp.$('startspan').value = dp.cal.getDateStr()}})" />
+	 <input type="hidden" name="startspan" id="startspan"/> 
+
+	 <span id=endspan></span> 
+     <img src="skin/datePicker_wev8.gif" width="16" height="22" align="absmiddle" style="cursor:pointer" onClick="WdatePicker({el:'endspan'})" />
+	 <span id="demospan1"></span> 
+	 <img src="skin/datePicker_wev8.gif" width="16" height="22" align="absmiddle" style="cursor:pointer" onClick="WdatePicker({el:'demospan1',dateFmt:'H:mm:ss',minDate:'00:00:00',maxDate:'23:59:59'})" />
+ </BODY>
+</HTML>

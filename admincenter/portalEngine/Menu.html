@@ -1,0 +1,29 @@
+<html  xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+        <script type="text/javascript" src="/js/jquery/jquery_wev8.js"></script>
+        <style>
+            #box{width:150px; height:160px; overflow:hidden}
+            #top{ width:450px; height:150px;background:#930;}
+        </style>
+        <script>
+              
+            function slide(){
+                $("#box").animate({scrollLeft :200});
+            }
+            function slide1(){
+                $("#box").animate({scrollLeft :0});
+            }
+        </script>
+    </head>
+    <body>
+        <div id="box">
+            <div id="top">
+            jquery框架与coffeescript结合制作iphone苹果手机的IOS手机界面主触屏手指划过屏幕整个界面图片左右滑动的触摸效果。   文章主要介绍如何利用jQuery框架与CoffeeScript javascript创建一个类似于iphone苹果手机iOS的主屏幕。CoffeScript拥有一个清晰的语法介于Ruby和Python之间。如果你还没有使用其中的任何一种，不用担心 - 它不 ...
+            </div>
+        </div>
+          
+        <input type="button" onclick="slide();" value="slide"></input>
+        <input type="button" onclick="slide1();" value="slide"></input>
+    </body>
+</html>

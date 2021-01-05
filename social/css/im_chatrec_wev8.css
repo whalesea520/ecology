@@ -1,0 +1,133 @@
+/*消息记录*/
+.chatrec_div_top{
+	position:fixed;
+	padding-top:5px!important;
+	padding-bottom:5px!important;
+	background-color: #E6EEEE;
+	z-index:3;
+	top:0;
+	width:100%; 
+	border:none;
+	border-top:1px solid #dadedb;
+}
+
+.chatrec_div_top td,
+.chatrec_div_top {
+	background-color:#E6EEEE !important;
+	color: #8E9AA7;
+	line-height:30px;
+}
+
+.chatrec_div_top .inputStyle{
+	width: 120px !important;
+}
+
+.chatrec_div_top .imCalendar {
+	background: url(/social/images/calendar_wev8.png) no-repeat;
+	width: 16px;
+	height: 16px;
+}
+
+.chatrec_div_top .searchBtn {
+	color: #8E9AA7;
+	width: 56px;
+	height:25px;
+	padding-left: 15px;
+	padding-right: 15px;
+	cursor: pointer;
+	border: none;
+	background-color: #FFF;
+}
+.chatrec_div_top .searchBtn:hover{
+	background-color: #30b5ff;
+	color: #fff;
+}
+.chatrec_div_top .rightBtnGroup {
+	float: right;
+	line-height:26px;
+	height: 30px;
+	padding: 0;
+	margin-right:10px;
+}
+
+.chatrec_div_top .inputsGroup{
+	float: left;
+	line-height:26px;
+	height: 30px;
+	padding: 0;
+	width: 80%;
+	margin-left:10px;
+}
+
+.chatrec_div_top .inputsGroup .middle,
+.chatrec_div_top .rightBtnGroup .middle {
+	vertical-align: middle;
+}
+
+.zDialog_div_bottom .crPagination{
+	color: #ccc !important;
+	height: 30px !important;
+	text-align:center !important;
+}
+
+.zDialog_div_bottom .crPagination div {
+	font-weight:bold;
+	color: #888;
+	height: 30px;
+	line-height: 30px;
+	display: inline-block;
+	vertical-aign: top;
+}
+
+.zDialog_div_bottom .crPagination div.crLeft {
+	margin-right: 20px;	
+}
+
+.crPagination div.visitFirst {background: url(/social/images/pagination/first_wev8.png) no-repeat center center;}
+.crPagination div.visitPrev {background: url(/social/images/pagination/prev_wev8.png) no-repeat center center;}
+.crPagination div.visitNext {background: url(/social/images/pagination/next_wev8.png) no-repeat center center;}
+.crPagination div.visitLast {background: url(/social/images/pagination/last_wev8.png) no-repeat center center;}
+
+.crPagination div.visitFirst:hover {background: url(/social/images/pagination/first_hot_wev8.png) no-repeat center center;}
+.crPagination div.visitPrev:hover {background: url(/social/images/pagination/prev_hot_wev8.png) no-repeat center center;}
+.crPagination div.visitNext:hover {background: url(/social/images/pagination/next_hot_wev8.png) no-repeat center center;}
+.crPagination div.visitLast:hover {background: url(/social/images/pagination/last_hot_wev8.png) no-repeat center center;}
+
+.crPagination div.visitFirstGray:hover,
+.crPagination div.visitFirstGray {background: url(/social/images/pagination/first_gray_wev8.png) no-repeat center center;}
+.crPagination div.visitPrevGray:hover,
+.crPagination div.visitPrevGray {background: url(/social/images/pagination/prev_gray_wev8.png) no-repeat center center;}
+.crPagination div.visitNextGray:hover,
+.crPagination div.visitNextGray{background: url(/social/images/pagination/next_gray_wev8.png) no-repeat center center;}
+.crPagination div.visitLastGray:hover,
+.crPagination div.visitLastGray{background: url(/social/images/pagination/last_gray_wev8.png) no-repeat center center;}
+
+.crPagination div.crRight {
+	margin-left: 20px;	
+}
+
+.crPagination div.crLeft,
+.crPagination div.crRight{
+	cursor: pointer;
+	width: 30px;
+}
+
+.crPagination div.crDisabled,
+.crPagination div.disabled:hover{
+	cursor: default;
+}
+
+.crPagination .crCenter {
+	width: 80px;
+	vertical-align: top;
+}
+
+/*展示区域*/
+.chatRecord {
+  top: 43px !important;
+  bottom: 0px !important;
+  height: 460px !important;
+  overflow: hidden;
+  background-color: unset;
+}
+

@@ -1,0 +1,39 @@
+.photoContainer{
+	padding: 2px 0px 3px 0px;
+	overflow: hidden;
+}
+.photoContainer .photoEntryWrap{
+	padding-top: 5px;
+	position: relative;
+	float: left;
+}
+.photoContainer .photoEntryWrap .photoEntry{
+	border: 1px solid #ccc;
+	padding: 2px;
+	border-radius:3px;
+	margin-right: 8px;
+}
+.photoContainer .photoEntryWrap .photoEntry img{
+	width: 70px;
+	height: 80px;
+	border-radius:3px;
+}
+.photoContainer .photoEntryWrap .photoDel{
+	width: 16px;
+	height: 18px;
+	position: absolute;
+	top: 0px;
+	right: 2px;
+	background: url("/images/delete_wev8.gif") no-repeat;
+	background-position: -3px -3px;
+	z-index: 99999;
+}
+.ui-btn-_p_photo{
+	font-size: 12px;
+	background-image: url("/mobilemode/images/mpc/camera_blue_wev8.png") !important;
+	background-repeat: no-repeat !important;
+	background-position: 7px center !important;
+	padding-left: 28px !important;
+	padding-right: 10px !important;
+	padding-bottom: 0.6em !important;
+}

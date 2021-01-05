@@ -1,0 +1,12 @@
+html, body, #root {
+  height: 100%;
+}
+.Dblist .ant-steps-item {
+  margin-right: 4px;
+}
+.Dblist .ant-steps-small .ant-steps-item-title{
+  padding-right: 4px;
+}
+.Dblist .ant-card-body{
+  padding : 0px;
+}

@@ -1,0 +1,149 @@
+html, body {
+    margin:0;
+    padding:0;
+    font-family:'微软雅黑';
+    font-size:12px;
+    color:#3e4350;
+}
+
+/* 浅色字体颜色 */
+.color-2 {
+	color:#8e9598;
+}
+.size14 {
+    font-size:14px;
+}
+/* 内部页面头部背景色 */
+.title-bg {
+    background-color:#f7f7f7;
+}
+
+/* 内部页面头部高度40px */
+.title-h40 {
+    height:40px;
+    line-height:40px;
+}
+
+.width100 {
+    width:100%;
+}
+
+.h15 {
+    height:15px;
+}
+.h2 {
+    height:2px;
+}
+
+.h5 {
+    height:5px;
+}
+
+.h10 {
+    height:10px;
+}
+
+.margin-left-18 {
+    margin-left:18px;
+}
+
+.margin-right-18 {
+    margin-right:18px;
+}
+
+.padding-left-18 {
+    padding-left:18px;
+}
+
+.padding-right-18 {
+    padding-right:18px;
+}
+
+.padding-right-20 {
+    padding-right:20px;
+}
+
+/* 圆角 */
+.btn-border-radius {
+    border-radius:3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px; 
+}
+
+.btn-base {
+    padding:6px 16px;
+    cursor:pointer;
+}
+/* 绿色的按钮 */
+.btn-bg-blue {
+    background-color:#4baadf;
+    color:#fff;
+}
+
+.btn-bg-blue:hover {
+    background-color:#65c3f9;
+}
+/* 灰色按钮 */
+.btn-bg-gray {
+    background-color:#e4e4e4;
+    color:#000;
+}
+
+.btn-bg-gray:hover {
+    background-color:#cdcdcd;
+}
+
+.btn-bd-gray {
+    border:1px solid #e4e4e4;
+    color:#80d426;
+}
+.btn-bd-gray:hover {
+    background-color:#80d426;
+    color:#fff;
+}
+
+*:focus {outline: none;}
+
+
+/* 搜索区域 start */
+.input-group {
+    display: table;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    width: 244px;
+    border:1px solid #e9e9e9;
+    background-color:#fff;
+    float:right;
+}
+.form-control {
+    width:130px;
+    height:30px;
+    line-height:30px;
+    border: none;
+    font-family:'微软雅黑';
+    padding:0 5px;
+}
+
+.input-group-btn {
+    display: table-cell;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 30px;
+    text-align:center;
+    background:url(/rdeploy/assets/img/cproj/searchbtn.png) center center no-repeat;
+    cursor:pointer;
+}
+.input-group-advanced-btn {
+    display:inline-block;width:74px;text-align:center;border-left:1px solid #e9e9e9;
+    cursor:pointer;
+} 
+/* 搜索区域 end */
+
+
+.margin-top--4 {
+    margin-top:-4px;
+}

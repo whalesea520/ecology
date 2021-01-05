@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<homepage>
+<template enable="true" name="模板1" url="/mobilemode/images/mec/14053913509871794741123" crname="系统管理员" crdate="2014-09-03"><content><![CDATA[<style>
+*{
+	font-family: 'Microsoft Yahei', Arial;
+}
+</style>
+<div id="homepageContainer">
+	<div id="MEC_Design_Container">
+		#mec{"type":"Slide", "isCurr":"true"}#
+		#mec{"type":"Navigation"}#
+	</div>
+</div>
+]]></content>
+</template>
+
+<template name="模板2" enable="" url="/mobilemode/images/mec/14053913569921050051665" crname="系统管理员" crdate="2014-09-03"><content><![CDATA[<style>
+*{
+	font-family: 'Microsoft Yahei', Arial;
+}
+.homepage_head{
+	height:150px;
+	width:100%;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0px;
+	left:0px;
+}
+.homepage_head_bottom{
+	background: #fDE0C6;
+    height:67px;
+    width: 100%;
+	position: absolute;
+    left: 0px;
+    bottom:0px;
+    opacity: 0.8;
+}
+.homepage_head img{
+	height:150px;
+    width: 100%;
+}
+#MEC_Design_Container{
+     padding-top: 84px;
+     z-index:1001;
+     position: relative;
+}
+</style>
+<div id="homepageContainer">
+	<div class="homepage_head">
+	    <img src="/mobilemode/images/mec/defaultheader_wev8.jpg" changebyrightmenu="true">
+	    <div class="homepage_head_bottom"></div>
+	</div>
+	<div id="MEC_Design_Container">
+		#mec{"type":"Toolbar", "isCurr":"true"}#
+		#mec{"type":"Navigation"}#
+	</div>
+</div>
+]]></content></template></homepage>

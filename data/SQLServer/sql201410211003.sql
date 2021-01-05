@@ -1,0 +1,2 @@
+update Workflow_SubwfSetDetail set isCreateForAnyone=ifSplitField
+GO

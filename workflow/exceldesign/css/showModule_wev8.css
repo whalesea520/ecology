@@ -1,0 +1,74 @@
+@charset "UTF-8";
+body{
+	height:100%; width:100%; 
+	margin:0px; padding:0px;
+	font-size:12px;
+	overflow:hidden;
+}
+.topsearch{
+	height:25px; margin:4px 5px 10px 10px;
+}
+.topsearch .searchInput{
+	border:none!important; background-color:#fff; 
+	height:23px; width:250px;
+}
+.topsearch .searchInputSpan{
+	display:-moz-inline-box; display:inline-block; 
+	height:23px; border:1px solid #F5F2F2;
+}
+.topsearch .searchInputSpan img{
+	vertical-align: middle; cursor:pointer;
+}
+.layoutContent{
+	width:100%; height:610px; 
+	overflow-x:hidden; overflow-y:auto;
+}
+.nodeinfoDiv{
+	width:110px; height:100px; text-align:center; padding:4px 0px;
+}
+.nodeimg{height:78px; cursor:pointer;}
+.nodeimg_0{background: url("/workflow/exceldesign/image/shortBtn/module/nodetype_0_wev8.png") no-repeat 24px 10px;}
+.nodeimg_1{background: url("/workflow/exceldesign/image/shortBtn/module/nodetype_1_wev8.png") no-repeat 24px 10px;}
+.nodeimg_2{background: url("/workflow/exceldesign/image/shortBtn/module/nodetype_2_wev8.png") no-repeat 24px 10px;}
+.nodeimg_3{background: url("/workflow/exceldesign/image/shortBtn/module/nodetype_3_wev8.png") no-repeat 24px 10px;}
+.nodespan{display:block; word-break:break-all; word-wrap:break-word; white-space:normal;}
+.nodespan_0{color:#40cdcd;}
+.nodespan_1{color:#ba9bf3;}
+.nodespan_2{color:#3dc3f1;}
+.nodespan_3{color:#f282d2;}
+
+
+.layoutinfo_active{margin-bottom:12px;}
+.layoutinfo_history{margin-top:6px; margin-bottom:6px;}
+.nonelayout{height:30px; line-height:30px; font-size:16px;}
+.layoutname{height:30px; line-height:30px; font-size:16px; color:#0c3252;}
+.operinfo{height:30px; line-height:30px; font-size:12px; color:#9e9e9e;}
+.layoutname a{float:left; color:#0c3252 !important;}
+
+.operarea{height:54px;  float:right; margin-right:8px; display:none;}
+.operarea_active{margin-bottom:12px;}
+.operarea_history{ }
+.operbtn{width:68px; float:left; text-align:center; cursor:pointer; background:#e5ecf7;}
+.operbtn:hover{background:#c6d5e5;}
+.operbtn div{padding-top:30px; height:24px; line-height:24px;}
+.operbtn_create{background: url("/workflow/exceldesign/image/shortBtn/module/createBtn_wev8.png") no-repeat 26px 12px;}
+.operbtn_edit{background: url("/workflow/exceldesign/image/shortBtn/module/editBtn_wev8.png") no-repeat 26px 12px;}
+.operbtn_editdisabled{color:#c1c1c1; background: url("/workflow/exceldesign/image/shortBtn/module/editDisabledBtn_wev8.png") no-repeat 26px 12px;}
+.operbtn_choose{background: url("/workflow/exceldesign/image/shortBtn/module/chooseBtn_wev8.png") no-repeat 26px 12px;}
+.operbtn_delete{background: url("/workflow/exceldesign/image/shortBtn/module/deleteBtn_wev8.png") no-repeat 26px 12px;}
+.operbtn_deletedisabled{color:#c1c1c1; background: url("/workflow/exceldesign/image/shortBtn/module/deleteDisabledBtn_wev8.png") no-repeat 26px 12px;}
+.operbtn_excelimp{background: url("/workflow/exceldesign/image/shortBtn/module/excelimpBtn_wev8.png") no-repeat 26px 12px;}
+.operbtn_init{background: url("/workflow/exceldesign/image/shortBtn/module/initBtn_wev8.png") no-repeat 26px 12px;}
+.operbtn_sync{background: url("/workflow/exceldesign/image/shortBtn/module/syncBtn_wev8.png") no-repeat 26px 12px;}
+.operbtn_syncdisabled{color:#c1c1c1; background: url("/workflow/exceldesign/image/shortBtn/module/syncDisabledBtn_wev8.png") no-repeat 26px 12px;}
+
+.operbtn_setactive{width:68px; height:100%; float:left; cursor:pointer; background: url("/workflow/exceldesign/image/shortBtn/module/setactive_wev8.png") no-repeat 20px 12px;}
+
+.opertitle{height:24px; line-height:24px;}
+.layoutediting{
+	float:left; background:#eeeeee;
+	height:20px; line-height:20px; border-radius:2px;
+	margin-left:18px; margin-top:5px;
+	padding-left:6px; padding-right:6px;padding-bottom:2px;
+}
+.layoutediting span{margin-left:2px; font-size:12px; color:#5a6279;}

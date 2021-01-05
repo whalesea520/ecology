@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<id>Slide</id>  <!--只能是唯一的英文字母-->
+	<title>幻灯片</title>
+	<titleEN>Slideshow</titleEN>
+	<desc>幻灯片</desc>
+	<icon>resource/image/slide_wev8.gif</icon>
+	<linkMode>-1</linkMode>
+	<loginView>1</loginView>
+	<type>1</type>
+	<perpage>-1</perpage>
+	<private>
+		<jsList> 			
+			<js>/page/element/Slide/resource/js/jquery.cycle.all_wev8.js</js>
+			
+		</jsList>
+	</private>
+	<public>
+		<jsIdList>  
+			<jsId>jquery</jsId>
+		</jsIdList>
+		<cssIdList>
+		</cssIdList>
+	</public>
+	<view>
+		<url>View.jsp</url>
+		<method></method>
+	</view>
+	<setting>
+		<url>Setting.jsp</url>
+		<method></method>
+	</setting>
+	<more>
+		<url></url>
+		<method></method>
+	</more>
+	<operation>Operation.jsp</operation>
+</root> 

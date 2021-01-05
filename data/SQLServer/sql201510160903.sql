@@ -1,0 +1,22 @@
+ALTER TABLE fnaFeeWfInfo ADD isAllNodesControl int NULL
+GO
+update fnaFeeWfInfo set isAllNodesControl = 1
+GO
+CREATE TABLE [fnaFeeWfInfoNodeCtrl](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[mainid] [int] NULL,
+	[nodeid] [int] NULL,
+	[checkway] [int] NULL,
+ CONSTRAINT [PK_fnaFeeWfInfoNodeCtrl] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+CREATE NONCLUSTERED INDEX [idx_fnaFeeWfInfoNodeCtrl_mainid] ON [fnaFeeWfInfoNodeCtrl] 
+(
+	[mainid] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+GO

@@ -1,0 +1,215 @@
+.arrowsblock1 {
+	height:22px!important;
+	width:240!important;
+	position: absolute;
+	top:-14px;
+	padding-left: 32px;
+}
+._browcommgroupblock {
+	width:272px;POSITION:absolute;
+	border-radius: 4px;
+}
+
+._browcommgroupblock .cg_block {
+	width:272px;border:1px solid #D8D8D8;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=3);/*ie*/
+	-moz-box-shadow: 2px 2px 2px #D8D8D8;/*firefox*/
+	-webkit-box-shadow: 2px 2px 2px #D8D8D8;/*safari或chrome*/
+	box-shadow:2px 2px 2px #D8D8D8;/*opera或ie9*/
+	border-radius: 4px;
+}
+.cg_toptitle{
+	padding-top: 24px;
+	padding-left: 12px
+}
+
+._browcommgroupblock .cg_block ul {
+	width: 100%;
+	list-style-position: outside;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+._browcommgroupblock .cg_block ul li {
+	padding:3px 5px 3px 12px;
+	cursor:pointer;
+}
+
+.emptyRow {
+	width: 70px;
+	margin-top: 32px;
+}
+
+.dateArea {
+	text-align: center;
+	color: #c3c3c3;
+	width: 70px;
+	margin-top: 20px;
+}
+
+.discussView {
+	padding-top: 2px;
+}
+
+.left {
+	float: left
+}
+
+.right {
+	float: right
+}
+
+.clear {
+	clear: both
+}
+
+.signItem {
+	padding-top: 10px;
+	position: relative;
+}
+
+.signItem .discussitem {
+	border: none;
+	background: #fff;
+}
+
+.signItem .discussline {
+	border-left: 2px solid #e8e8e8;
+	position: absolute;
+	width: 1px;
+	top: 10px;
+	bottom: -10px;
+	margin-left: 30px;
+	z-index: 1;
+}
+
+.signItem .sortInfo {
+	width: 100%;
+	height: 20px;
+	margin-top: -15px
+}
+
+.signItem .sortInfo .name {
+	color: #bbbcbf;
+	float: left;
+	font-size: 14px;
+	margin-left: 8px;
+}
+
+.signItem .sortInfo .signtype {
+	color: #bbbcbf;
+	float: left;
+	font-size: 14px;
+	margin-left: 8px;
+}
+
+.signItem .sortInfo .worktime {
+	color: #c4c4c53;
+	float: left;
+	font-size: 14px;
+	margin-left: 8px;
+}
+
+.signItem .time {
+	height: 20px;
+	width: 20px;
+	position: absolute;
+	top: 10px;
+	left: 55px;
+	z-index: 10;
+}
+
+.signItem .sortInfo .signtype1 {
+	color: #1b82e3;
+	float: left;
+	font-size: 13px;
+	margin-left: 20px;
+}
+
+.signItem .sortInfo .signtype2 {
+	color: #28cb68;
+	float: left;
+	font-size: 13px;
+	margin-left: 20px;
+}
+
+.signItem .state {
+	height: 20px;
+	width: 20px;
+	position: absolute;
+	top: 2px;
+	left: 26px;
+	z-index: 10;
+}
+
+.signItem .splitstate {
+	height: 4px;
+	width: 4px;
+	position: absolute;
+	top: -2px;
+	left: 29px;
+	z-index: 10;
+}
+
+.signItem .substate {
+	height: 20px;
+	width: 20px;
+	position: relative;
+	left: 27px;
+	z-index: 10;
+}
+
+.signItem .reportContent table {
+	border-collapse: collapse;
+}
+
+.signItem .reportContent {
+	padding: 4px 4px 4px 10px;
+	word-break: break-all;
+	overflow: auto;
+	cursor: text;
+	text-align: left !important;
+}
+
+.reportContent p {
+	margin: 0px
+}
+
+.dotedLine {
+	border-bottom: 1px solid #D8D8D8;
+	margin-left: 30px;
+	line-height: 1px;
+	padding-top: 10px;
+}
+
+.signItem .img001 {
+	background: url(/hrm/css/signinfo/rili1_wev8.png) no-repeat;
+}
+
+.signItem .img003 {
+	background: url(/hrm/css/signinfo/blue_wev8.png) no-repeat;
+}
+
+.signItem .img004 {
+	background: url(/hrm/css/signinfo/green_wev8.png) no-repeat;
+}
+
+.signItem .img005 {
+	background: url(/hrm/css/signinfo/split_wev8.png) no-repeat;
+}
+
+.signItem .dateinfo {
+	margin: 0px 0px 0px 14px;
+	color: #4c4c53;
+	font-size: 16px;
+	position: absolute;
+  top: 10px;
+  left: 70px;
+}
+
+.img {
+	width: 12px;
+	height: 45px;
+	float: left;
+}

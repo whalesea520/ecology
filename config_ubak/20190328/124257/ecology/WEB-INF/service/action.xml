@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<module id="action" version="1.0.0">
+    <service-point id="WorkflowToDoc" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.interfaces.workflow.action.WorkflowToDoc"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="PrjGenerateAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.proj.wfactions.PrjGenerateAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="PrjApproveAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.proj.wfactions.PrjApproveAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="PrjTemplateApproveAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.proj.wfactions.PrjTemplateApproveAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="CptApplyAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.cpt.wfactions.CptApplyAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="CptFetchAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.cpt.wfactions.CptFetchAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="CptMoveAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.cpt.wfactions.CptMoveAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="CptLossAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.cpt.wfactions.CptLossAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="CptDiscardAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.cpt.wfactions.CptDiscardAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="CptLendAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.cpt.wfactions.CptLendAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="CptBackAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.cpt.wfactions.CptBackAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="CptMendAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.cpt.wfactions.CptMendAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="WorkflowToMode" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.formmode.interfaces.action.WorkflowToMode"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="ExchangeApprovalAgree" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.interfaces.workflow.action.ExchangeApprovalAgree"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="ExchangeApprovalDisagree" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.interfaces.workflow.action.ExchangeApprovalDisagree"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="ExchangeSetValueAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.interfaces.workflow.action.ExchangeSetValueAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="deduction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.hrm.attendance.action.HrmDeductionVacationAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="freeze" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.hrm.attendance.action.HrmFreezeVacationAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="release" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.hrm.attendance.action.HrmReleaseVacationAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="HrmResourceEntrant" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.hrm.pm.action.HrmResourceEntrantAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="HrmResourceTry" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.hrm.pm.action.HrmResourceTryAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="HrmResourceHire" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.hrm.pm.action.HrmResourceHireAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="HrmResourceExtend" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.hrm.pm.action.HrmResourceExtendAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="HrmResourceRedeploy" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.hrm.pm.action.HrmResourceRedeployAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="HrmResourceDismiss" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.hrm.pm.action.HrmResourceDismissAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="HrmResourceRetire" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.hrm.pm.action.HrmResourceRetireAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="HrmResourceFire" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.hrm.pm.action.HrmResourceFireAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="HrmResourceReHire" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.hrm.pm.action.HrmResourceReHireAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="HrmScheduleShift" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.hrm.schedule.action.HrmScheduleShiftAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="HrmPaidLeaveAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.hrm.attendance.action.HrmPaidLeaveAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="WorkflowFnaInWorkflowNew" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.interfaces.workflow.action.WorkflowFnaInWorkflowNew"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="WorkflowFnaEffectNew" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.interfaces.workflow.action.WorkflowFnaEffectNew"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="WorkflowFnaRejectNew" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.interfaces.workflow.action.WorkflowFnaRejectNew"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="FnaBorrowEffectNew" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.interfaces.workflow.action.FnaBorrowEffectNew"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="FnaBorrowFreezeNew" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.interfaces.workflow.action.FnaBorrowFreezeNew"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="FnaBorrowReleaseFreezeNew" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.interfaces.workflow.action.FnaBorrowReleaseFreezeNew"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="FnaBorrowReleaseNew" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.interfaces.workflow.action.FnaBorrowReleaseNew"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="FnaBorrowReverseNew" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.interfaces.workflow.action.FnaBorrowReverseNew"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="FnaChangeFreezeNew" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.interfaces.workflow.action.FnaChangeFreezeNew"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="FnaChangeEffectNew" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.interfaces.workflow.action.FnaChangeEffectNew"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="FnaChangeRejectNew" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.interfaces.workflow.action.FnaChangeRejectNew"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="FnaShareFreezeNew" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.interfaces.workflow.action.FnaShareFreezeNew"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="FnaShareEffectNew" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.interfaces.workflow.action.FnaShareEffectNew"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="FnaShareRejectNew" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.interfaces.workflow.action.FnaShareRejectNew"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="WFMeetingAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.meeting.action.WFMeetingAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="Mode4CptApplyAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.formmode.cuspage.cpt.wfactions.Mode4CptApplyAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="Mode4CptFetchAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.formmode.cuspage.cpt.wfactions.Mode4CptFetchAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="Mode4CptMoveAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.formmode.cuspage.cpt.wfactions.Mode4CptMoveAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="Mode4CptLossAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.formmode.cuspage.cpt.wfactions.Mode4CptLossAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="Mode4CptDiscardAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.formmode.cuspage.cpt.wfactions.Mode4CptDiscardAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="Mode4CptLendAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.formmode.cuspage.cpt.wfactions.Mode4CptLendAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="Mode4CptBackAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.formmode.cuspage.cpt.wfactions.Mode4CptBackAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="Mode4CptMendAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.formmode.cuspage.cpt.wfactions.Mode4CptMendAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="Mode4CptFrozenumAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.formmode.cuspage.cpt.wfactions.Mode4CptFrozenumAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="Mode4CptReleasenumAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.formmode.cuspage.cpt.wfactions.Mode4CptReleasenumAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="GeneratedWfNumberAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.interfaces.workflow.action.GeneratedWfNumberAction"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="qqxxhzb" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.interfaces.workflow.action.qqxxhzb"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="CreateTraceDocument" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.interfaces.workflow.action.CreateTraceDocument"/>
+        </invoke-factory>
+    </service-point>
+    <service-point id="CptChangeAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.cpt.wfactions.CptChangeAction"/>
+        </invoke-factory>
+    </service-point>
+</module>

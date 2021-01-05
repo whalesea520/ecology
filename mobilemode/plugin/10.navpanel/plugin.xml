@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEC>
+	<id>NavPanel</id>	<!-- id 插件唯一标识 -->
+	<text>128114</text>  <!-- 导航面板 -->
+	<type>1</type>	<!-- 类型，方便对插件进行区分，目前已有：1.普通功能插件，2.表单插件 -->
+	<isEnabled>1</isEnabled>	<!-- 是否启用，1或者不填写为启用，0或者其他非1值为禁用 -->
+	<order>10</order>	<!-- 插件显示顺序，值越小则显示越靠前，不填写或者无此标签将为整数的最大值 -->
+	
+	<!-- 插件设计信息配置 -->
+	<design>
+		<unique>0</unique> <!-- 是否唯一，如果值为1则在自定义页面设计时一个页面最多只能添加一个这种控件，不为1或者不填写此属性则没有此限制 -->
+		<resources>	<!-- 依赖资源 -->
+			<resource type="js">/mobilemode/js/mec/handler/NavPanel_wev8.js</resource>
+			<resource type="css">/mobilemode/css/mec/run/NavPanel_wev8.css</resource>
+			<resource type="css">/mobilemode/css/mec/handler/NavPanel_wev8.css</resource>
+		</resources>
+	</design>
+	
+	<!-- 插件运行信息配置 -->
+	<run java="com.weaver.formmodel.mobile.mec.handler.NavPanel">
+		<resources>	<!-- 依赖资源 -->
+			<resource type="css">/mobilemode/css/mec/run/NavPanel_wev8.css?v=2017062101</resource>
+			<resource type="js">/mobilemode/jqmobile4/plugins/swipe/swipe.min_wev8.js</resource>
+			<resource type="js">/mobilemode/js/mec/run/NavPanel_wev8.js</resource>
+		</resources>
+	</run>
+	
+	<!-- 内容模板 -->
+	<contentTemplate>
+		<![CDATA[
+		<div id="NMEC_${theId}" class="navPanelWrap">
+			<div class="navPanel-swipe-wrap">
+				$mec_forstart$
+				<div>
+				<table class="navPanelContainer">
+					$mec_row_forstart$
+					<tr>
+						$mec_col_forstart$
+						<td onclick="${action}">
+							<span class="nPanel">
+						    	<span class="icon ${iconClass}"><img src="${iconpath}"/><span class="MEC_NumberRemind ${remindclass}" style="display:${reminddisplay};">${remindnum}</span></span>
+					    		<span class="uiname">${uiname}</span>
+					    	</span>
+						</td>
+						$mec_col_forend$
+					</tr>
+					$mec_row_forend$
+				</table>
+				</div>
+				$mec_forend$
+			</div>
+			<div class="navPanel-point">
+				$mec_forstart$
+				<b class="${pointClass}"></b>
+				$mec_forend$
+			</div>
+		</div>
+		]]>
+	</contentTemplate>
+</MEC>

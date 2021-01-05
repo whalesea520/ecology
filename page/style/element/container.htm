@@ -1,0 +1,44 @@
+<!---------Element ${eid}:${title}------------->
+<style type="text/css">
+	${style}
+</style>
+<div  class='item' style='position:relative;' id='item_${eid}' eid='${eid}' ebaseid='${ebaseid}' cornerTop='${cornerTop}'  cornerTopRadian='${cornerTopRadian}'  cornerBottom='${cornerBottom}'  cornerBottomRadian='${cornerBottomRadian}'>
+	<div class='header' style='width:100%;position:relative' ${dragable} id='header_${eid}'>
+		<span class='icon' style='position:absolute;cursor:hand;' id='icon_${eid}'>${icon}</span>
+		<span class='title' style='position:absolute;' id='title_${eid}'>${title}</span>
+		<span class='toolbar' style='position:absolute;' id="toolbar_${eid}">${toolbar}</span>
+		<span class='toolbarSub' id="toolbarSub_${eid}">${toolbarSub}</span>		
+	</div>
+	
+	<div  class='content'  id="content_${eid}">		
+		<div class="setting" style="display:none" id="setting_${eid}" operationurl="${operationurl}">
+			<div  class="weavertabs">
+				<table  class="weavertabs-nav" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td target="weavertabs-content-${eid}">内容</td>
+						<td target="weavertabs-style-${eid}">样式</td>
+						<!--<td target="weavertabs-share-${eid}">共享</td>-->
+					</tr>
+				</table>	
+			
+				<div  class="weavertabs-content">
+						<div id="weavertabs-content-${eid}" url="${setting}"></div>
+						<div id="weavertabs-style-${eid}" url="${styleurl}"></div>
+						<div  id="weavertabs-share-${eid}" url="${shareurl}"></div>
+				</div>
+				<div class="setting_button_row" align="center">
+					  <A HREF="javascript:onUseSetting('${eid}','${ebaseid}')">确定使用此设置</A> 
+					  &nbsp;&nbsp;&nbsp;
+					  <A HREF="javascript:onNoUseSetting('${eid}')">取消使用此设置</A>
+				</div>
+			</div>
+		</div>
+		<div class="content_view" id="content_view_id_${eid}" url="${contentUrl}" ${contentstyle}>${content}</div>
+		<div id = "content_js_${eid}" style="display:none">${script}</div>
+		<div  class='footer' style='text-align:right;' id="footer_${eid}">		
+			${footer}
+		</div>	
+	</div>
+	
+</div>
+

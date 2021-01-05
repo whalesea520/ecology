@@ -1,0 +1,2 @@
+alter table WORKFLOW_BASE modify CUSTOMPAGE VARCHAR2(2000)
+/

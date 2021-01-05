@@ -1,0 +1,19 @@
+SMAP
+_requestbrowserfunction_0page_0select_0virtual__jsp.java
+JSP
+*S JSP
+*F
++ 1 RequestBrowserfunction_page_select_virtual.jsp
+workflow/browserdatadefinition/RequestBrowserfunction_page_select_virtual.jsp
+*L
+1#1:38
+11#1,2:39,7
+12#1,2:52
+13#1:54,6
+13#1,2:59
+14#1:61,6
+14#1:66
+16#1,30:67
+45#1,2:97
+46#1:99,6
+*E

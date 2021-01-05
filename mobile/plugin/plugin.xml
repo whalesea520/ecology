@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+  <!-- 插件名称 -->
+  <name>ecology</name>
+  <!-- 插件描述 -->
+  <discription>ecology plugin for E-Mobile</discription>
+  <!-- 插件版本 -->
+  <version>2.0</version>
+  <!-- 服务器编码 -->
+  <charset>UTF-8</charset>
+  <!-- 默认请求方法 -->
+  <default-method>get</default-method>
+  <!-- 默认返回格式 -->
+  <default-result>html</default-result>
+  <!-- 系统功能 -->  
+  <function> 
+    <!-- 登录 -->  
+    <login method="post" result="json"> 
+      <url>/mobile/plugin/VerifyLogin.jsp</url> 
+    </login>  
+    <!-- 非主插件登录 -->  
+    <quicklogin method="post" result="json"> 
+      <url>/mobile/plugin/VerifyQuickLogin.jsp</url> 
+    </quicklogin>  
+    <!-- 管理员登录 -->  
+    <admin method="post" result="json"> 
+      <url>/mobile/plugin/AdminVerifyLogin.jsp</url> 
+    </admin>  
+    <!-- 验证 -->  
+    <verify result="json"> 
+      <url>/mobile/plugin/VerifySessionKey.jsp</url> 
+    </verify>  
+    <!-- 取用户 -->  
+    <user result="json"> 
+      <url>/mobile/plugin/GetUser.jsp</url> 
+    </user>  
+    <!-- 同步用户条件 -->  
+    <sync method="post" result="json"> 
+      <url>/mobile/plugin/SyncUser.jsp</url> 
+    </sync>  
+    <!-- 同步用户信息 -->  
+    <syncuser method="post" result="json"> 
+      <url>/mobile/plugin/SyncUserInfo.jsp</url> 
+    </syncuser>  
+    <!-- 取得用户数 -->  
+    <usercount method="post" result="json"> 
+      <url>/mobile/plugin/UserCount.jsp</url> 
+    </usercount>  
+    <!-- 用户设置界面 -->  
+    <usersetting> 
+      <url>/mobile/plugin/browser/MobileUserBrowser.jsp</url> 
+    </usersetting>  
+    <!-- 模块设置界面 -->  
+    <modulesetting> 
+      <url>/mobile/plugin/browser/MobileModuleBrowser.jsp</url> 
+    </modulesetting>  
+    <!-- 预下载文件(返回文件HashCode) -->  
+    <predownload result="json"> 
+      <url>/mobile/plugin/PreDownload.jsp</url> 
+    </predownload>  
+    <!-- 下载文件 -->  
+    <download result="byte"> 
+      <url>/mobile/plugin/Download.jsp</url> 
+    </download>  
+    <!-- 上传文件 -->  
+    <upload method="post" result="json"> 
+      <url>/mobile/plugin/Upload.jsp</url> 
+    </upload>  
+    <!-- 检查服务器状态 -->  
+    <checkserver method="post" result="json"> 
+      <url>/mobile/plugin/CheckServer.jsp</url> 
+    </checkserver>  
+    <!-- mobile数据迁移 -->  
+    <update result="json"> 
+      <url>/mobile/plugin/Update.jsp</url> 
+    </update>  
+    <!-- 模块可用性控制 -->  
+    <componentConfig method="post" result="json"> 
+      <url>/mobile/plugin/ComponentConfig.jsp</url> 
+    </componentConfig>  
+    <!-- 数据同步 -->  
+    <syncData method="post" result="json"> 
+      <url>/mobile/plugin/syncData.jsp</url> 
+    </syncData>  
+    <!-- 插件属性 -->
+    <attr> 
+      <url>/mobile/plugin/attr.jsp</url> 
+    </attr>
+    <!-- 插件系统参数 -->
+    <config result="json">
+      <url>/mobile/plugin/config.jsp</url>
+    </config>
+    <!-- 配置文件地址 -->
+    <pluginFile result="byte">
+      <url>/mobile/plugin/plugin.xml</url>
+    </pluginFile>
+    <checkin result="json">
+      <url>/mobile/plugin/CheckIn.jsp</url>
+    </checkin>
+    <workcenter method="post" result="json">
+      <url>/mobile/plugin/WorkCenter.jsp</url>
+    </workcenter>
+  </function>
+  <wctcategorys>
+  	<wctcategory>
+  	  <id>1</id>
+  	  <name>流程</name>
+  	</wctcategory>
+  	<wctcategory>
+  	  <id>2</id>
+  	  <name>日程</name>
+  	</wctcategory>
+  	<wctcategory>
+  	  <id>3</id>
+  	  <name>会议</name>
+  	</wctcategory>
+  	<wctcategory>
+  	  <id>4</id>
+  	  <name>邮件</name>
+  	</wctcategory>
+  </wctcategorys>
+  <!-- 插件功能配置 -->  
+  <components> 
+    <!-- 具体功能配置 -->  
+    <component> 
+      <!-- 功能名称 -->  
+      <name>待办</name>  
+      <!-- 功能编号 -->  
+      <id>1</id>  
+      <!-- 功能显示模型:-2 查看/查看 -1 列表/查看 1 待办 2 新闻 3 公告 4 日程 5 会议 6 通讯录 7 办结 8 已办 9 我的请求 10 抄送 11 工作微薄 -->  
+      <model>1</model>
+      <wctcategory>1</wctcategory>
+      <wctClass>weaver.mobile.plugin.ecology.service.WorkflowWorkCenter</wctClass>
+      <!-- 功能描述 -->  
+      <description>ecology中的工作流待办功能</description>  
+      <!-- 功能详细 -->  
+      <function> 
+        <!-- 列表数据 -->  
+        <list method="post" result="json"> 
+          <url>/mobile/plugin/ComponentList.jsp</url> 
+        </list>  
+        <!-- 取得页面 -->  
+        <view> 
+          <url>/mobile/plugin/1/view.jsp</url>  
+          <client>/mobile/plugin/1/client.jsp</client> 
+        </view>  
+        <!-- 取得数字 -->  
+        <count method="post" result="json"> 
+          <url>/mobile/plugin/ComponentCount.jsp</url> 
+        </count>  
+        <!-- 设置界面 -->  
+        <setting method="post"> 
+          <url>/mobile/plugin/browser/MobileWorkflowBrowser.jsp</url> 
+        </setting> 
+      </function> 
+    </component>  
+    <!-- 具体功能配置 -->  
+    <component> 
+      <!-- 功能名称 -->  
+      <name>新闻</name>  
+      <!-- 功能编号 -->  
+      <id>2</id>  
+      <!-- 功能显示模型:-2 查看/查看 -1 列表/查看 1 待办 2 新闻 3 公告 4 日程 5 会议 6 通讯录 7 办结 8 已办 9 我的请求 10 抄送 11 工作微薄 -->  
+      <model>2</model>  
+      <!-- 功能描述 -->  
+      <description>ecology中的新闻功能</description>  
+      <!-- 功能详细 -->  
+      <function> 
+        <!-- 列表数据 -->  
+        <list method="post" result="json"> 
+          <url>/mobile/plugin/ComponentList.jsp</url> 
+        </list>  
+        <!-- 取得页面 -->  
+        <view> 
+          <url>/mobile/plugin/2/view.jsp</url> 
+        </view>  
+        <!-- 取得数据 -->  
+        <getjson result="json"> 
+          <url>/mobile/plugin/2/getjson.jsp</url> 
+        </getjson>
+        <!-- 取得数字 -->  
+        <count method="post" result="json"> 
+          <url>/mobile/plugin/ComponentCount.jsp</url> 
+        </count>  
+        <!-- 设置界面 -->  
+        <setting method="post"> 
+          <url>/mobile/plugin/browser/MobileDocColSetting.jsp</url> 
+        </setting> 
+      </function> 
+    </component>  
+    <!-- 具体功能配置 -->  
+    <component> 
+      <!-- 功能名称 -->  
+      <name>文档</name>  
+      <!-- 功能编号 -->  
+      <id>3</id>  
+      <!-- 功能显示模型:-2 查看/查看 -1 列表/查看 1 待办 2 新闻 3 公告 4 日程 5 会议 6 通讯录 7 办结 8 已办 
+				9 我的请求 10 抄送 11 工作微薄 -->  
+      <model>3</model>  
+      <!-- 功能描述 -->  
+      <description>ecology中的公告功能</description>  
+      <function> 
+        <!-- 列表数据 -->  
+        <list method="post" result="json"> 
+          <url>/mobile/plugin/ComponentList.jsp</url>
+        </list>  
+        <!-- 取得页面 -->  
+        <view> 
+          <url>/mobile/plugin/2/view.jsp</url> 
+        </view>
+        <!-- 取得数据 -->  
+        <getjson result="json"> 
+          <url>/mobile/plugin/2/getjson.jsp</url> 
+        </getjson>
+        <!-- 取得数字 -->  
+        <count method="post" result="json"> 
+          <url>/mobile/plugin/ComponentCount.jsp</url> 
+        </count>
+        <!-- 设置界面 -->  
+        <setting method="post"> 
+          <url>/mobile/plugin/browser/MobileDocColSetting.jsp</url> 
+        </setting> 
+      </function> 
+    </component>  
+    <!-- 具体功能配置 -->  
+    <component> 
+      <!-- 功能名称 -->  
+      <name>日程</name>  
+      <!-- 功能编号 -->  
+      <id>4</id>  
+      <!-- 功能显示模型:-2 查看/查看 -1 列表/查看 1 待办 2 新闻 3 公告 4 日程 5 会议 6 通讯录 7 办结 8 已办 
+				9 我的请求 10 抄送 11 工作微薄 -->  
+      <model>4</model>
+      <wctcategory>2</wctcategory>
+      <wctClass>weaver.mobile.plugin.ecology.service.ScheduleWorkCenter</wctClass>
+      <!-- 功能描述 -->  
+      <description>ecology中的日程功能</description>
+      <function> 
+        <!-- 取得页面 -->  
+        <view> 
+          <url>/mobile/plugin/4/select.jsp</url> 
+        </view>  
+        <!-- 取得数据 -->  
+        <getjson result="json"> 
+          <url>/mobile/plugin/4/getjson.jsp</url> 
+        </getjson>  
+        <!-- 发送数据 -->  
+        <postjson method="post" result="json"> 
+          <url>/mobile/plugin/4/postjson.jsp</url> 
+        </postjson>  
+        <!-- 取得数字 -->  
+        <count method="post" result="json"> 
+          <url>/mobile/plugin/ComponentCount.jsp</url> 
+        </count> 
+      </function> 
+    </component>  
+    <!-- 具体功能配置 -->  
+    <component> 
+      <!-- 功能名称 -->  
+      <name>会议</name>  
+      <!-- 功能编号 -->  
+      <id>5</id>  
+      <!-- 功能显示模型:-2 查看/查看 -1 列表/查看 1 待办 2 新闻 3 公告 4 日程 5 会议 6 通讯录 7 办结 8 已办 
+				9 我的请求 10 抄送 11 工作微薄 -->  
+      <model>5</model>
+      <wctcategory>3</wctcategory>
+      <wctClass>weaver.mobile.plugin.ecology.service.MeetingWorkCenter</wctClass>
+      <!-- 功能描述 -->  
+      <description>ecology中的会议功能</description>  
+      <function> 
+        <!-- 取得页面 -->  
+        <view> 
+          <url>/mobile/plugin/5/meeting.jsp</url> 
+        </view>  
+        <!-- 取得数字 -->  
+        <count method="post" result="json"> 
+          <url>/mobile/plugin/ComponentCount.jsp</url> 
+        </count> 
+      </function> 
+    </component>  
+    <!-- 具体功能配置 -->  
+    <component> 
+      <!-- 功能名称 -->  
+      <name>通讯录</name>  
+      <!-- 功能编号 -->  
+      <id>6</id>  
+      <!-- 功能显示模型:-2 查看/查看 -1 列表/查看 1 待办 2 新闻 3 公告 4 日程 5 会议 6 通讯录 7 办结 8 已办 
+				9 我的请求 10 抄送 11 工作微薄 -->  
+      <model>6</model>  
+      <!-- 功能描述 -->  
+      <description>ecology中的通讯录功能</description>  
+      <function> 
+        <!-- 列表数据 -->  
+        <list method="post" result="json"> 
+          <url>/mobile/plugin/ComponentList.jsp</url> 
+        </list>  
+        <!-- 取得页面 -->  
+        <view> 
+          <url>/mobile/plugin/6/view.jsp</url> 
+        </view>  
+        <!-- 取得数字 -->  
+        <count method="post" result="json"> 
+          <url>/mobile/plugin/ComponentCount.jsp</url> 
+        </count> 
+      </function> 
+    </component>  
+    <!-- 具体功能配置 -->  
+    <component> 
+      <!-- 功能名称 -->  
+      <name>办结</name>  
+      <!-- 功能编号 -->  
+      <id>7</id>  
+      <!-- 功能显示模型:-2 查看/查看 -1 列表/查看 1 待办 2 新闻 3 公告 4 日程 5 会议 6 通讯录 7 办结 8 已办 
+				9 我的请求 10 抄送 11 工作微薄 -->  
+      <model>7</model>  
+      <!-- 功能描述 -->  
+      <description>ecology中的工作流办结功能</description>  
+      <function> 
+        <!-- 列表数据 -->  
+        <list method="post" result="json"> 
+          <url>/mobile/plugin/ComponentList.jsp</url> 
+        </list>  
+        <!-- 取得页面 -->  
+        <view> 
+          <url>/mobile/plugin/1/view.jsp</url>  
+          <client>/mobile/plugin/1/client.jsp</client> 
+        </view>  
+        <!-- 取得数字 -->  
+        <count method="post" result="json"> 
+          <url>/mobile/plugin/ComponentCount.jsp</url> 
+        </count>  
+        <!-- 设置界面 -->  
+        <setting method="post"> 
+          <url>/mobile/plugin/browser/MobileWorkflowBrowser.jsp</url> 
+        </setting> 
+      </function> 
+    </component>  
+    <!-- 具体功能配置 -->  
+    <component> 
+      <!-- 功能名称 -->  
+      <name>已办</name>  
+      <!-- 功能编号 -->  
+      <id>8</id>  
+      <!-- 功能显示模型:-2 查看/查看 -1 列表/查看 1 待办 2 新闻 3 公告 4 日程 5 会议 6 通讯录 7 办结 8 已办 9 我的请求 10 抄送 11 工作微薄 -->  
+      <model>8</model>  
+      <!-- 功能描述 -->  
+      <description>ecology中的工作流已办功能</description>  
+      <function> 
+        <!-- 列表数据 -->  
+        <list method="post" result="json"> 
+          <url>/mobile/plugin/ComponentList.jsp</url> 
+        </list>  
+        <!-- 取得页面 -->  
+        <view> 
+          <url>/mobile/plugin/1/view.jsp</url>  
+          <client>/mobile/plugin/1/client.jsp</client> 
+        </view>  
+        <!-- 取得数字 -->  
+        <count method="post" result="json"> 
+          <url>/mobile/plugin/ComponentCount.jsp</url> 
+        </count>  
+        <!-- 设置界面 -->  
+        <setting method="post"> 
+          <url>/mobile/plugin/browser/MobileWorkflowBrowser.jsp</url> 
+        </setting> 
+      </function> 
+    </component>  
+    <!-- 具体功能配置 -->  
+    <component> 
+      <!-- 功能名称 -->  
+      <name>我的请求</name>  
+      <!-- 功能编号 -->  
+      <id>9</id>  
+      <!-- 功能显示模型:-2 查看/查看 -1 列表/查看 1 待办 2 新闻 3 公告 4 日程 5 会议 6 通讯录 7 办结 8 已办 9 我的请求 10 抄送 11 工作微薄 -->  
+      <model>9</model>  
+      <!-- 功能描述 -->  
+      <description>ecology中的工作流我的请求功能</description>  
+      <function> 
+        <!-- 列表数据 -->  
+        <list method="post" result="json"> 
+          <url>/mobile/plugin/ComponentList.jsp</url> 
+        </list>  
+        <!-- 取得页面 -->  
+        <view> 
+          <url>/mobile/plugin/1/view.jsp</url>  
+          <client>/mobile/plugin/1/client.jsp</client> 
+        </view>  
+        <!-- 取得数字 -->  
+        <count method="post" result="json"> 
+          <url>/mobile/plugin/ComponentCount.jsp</url> 
+        </count>  
+        <!-- 设置界面 -->  
+        <setting method="post"> 
+          <url>/mobile/plugin/browser/MobileWorkflowBrowser.jsp</url> 
+        </setting> 
+      </function> 
+    </component>  
+    <!-- 具体功能配置 -->  
+    <component> 
+      <!-- 功能名称 -->  
+      <name>抄送</name>  
+      <!-- 功能编号 -->  
+      <id>10</id>  
+      <!-- 功能显示模型:-2 查看/查看 -1 列表/查看 1 待办 2 新闻 3 公告 4 日程 5 会议 6 通讯录 7 办结 8 已办 9 我的请求 10 抄送 11 工作微薄 -->  
+      <model>10</model>
+      <wctcategory>1</wctcategory>
+      <wctClass>weaver.mobile.plugin.ecology.service.WorkflowWorkCenter</wctClass>
+      <!-- 功能描述 -->  
+      <description>ecology中的工作流抄送功能</description>  
+      <function> 
+        <!-- 列表数据 -->  
+        <list method="post" result="json"> 
+          <url>/mobile/plugin/ComponentList.jsp</url> 
+        </list>  
+        <!-- 取得页面 -->  
+        <view> 
+          <url>/mobile/plugin/1/view.jsp</url>  
+          <client>/mobile/plugin/1/client.jsp</client> 
+        </view>  
+        <!-- 取得数字 -->  
+        <count method="post" result="json"> 
+          <url>/mobile/plugin/ComponentCount.jsp</url> 
+        </count>  
+        <!-- 设置界面 -->  
+        <setting method="post"> 
+          <url>/mobile/plugin/browser/MobileWorkflowBrowser.jsp</url> 
+        </setting> 
+      </function> 
+    </component>  
+    <!-- 具体功能配置 -->  
+    <component> 
+      <!-- 功能名称 -->  
+      <name>微博</name>  
+      <!-- 功能编号 -->  
+      <id>11</id>  
+      <!-- 功能显示模型:-2 查看/查看 -1 列表/查看 1 待办 2 新闻 3 公告 4 日程 5 会议 6 通讯录 7 办结 8 已办 9 我的请求 10 抄送 11 工作微薄 -->  
+      <model>11</model>  
+      <!-- 功能描述 -->  
+      <description>ecology中的工作微博功能</description>  
+      <function> 
+        <!-- 取得页面 -->  
+        <view> 
+          <url>/mobile/plugin/11/viewBlog.jsp</url> 
+        </view>  
+        <!-- 取得数字 -->  
+        <count method="post" result="json"> 
+          <url>/mobile/plugin/ComponentCount.jsp</url> 
+        </count> 
+      </function> 
+    </component>  
+    <!-- 具体功能配置 -->  
+    <component> 
+      <!-- 功能名称 -->  
+      <name>微信</name>  
+      <!-- 功能编号 -->  
+      <id>12</id>  
+      <!-- 功能显示模型:-2 查看/查看 -1 列表/查看 1 待办 2 新闻 3 公告 4 日程 5 会议 6 通讯录 7 办结 8 已办 9 我的请求 10 抄送 11 工作微薄 12 工作微薄 -->  
+      <model>12</model>  
+      <!-- 功能描述 -->  
+      <description>ecology中的企业微信功能</description>  
+      <!-- 设备单一性检测 -->  
+      <singleDevice>1</singleDevice>  
+      <function> 
+        <!-- 列表数据 -->  
+        <list method="post" result="json"> 
+          <url>/mobile/plugin/12/list.jsp</url> 
+        </list>  
+        <!-- 取得页面 -->  
+        <view> 
+          <url>/mobile/plugin/12/view.jsp</url> 
+        </view>  
+        <!-- 取得数据 -->  
+        <getjson result="json"> 
+          <url>/mobile/plugin/12/getjson.jsp</url> 
+        </getjson>  
+        <!-- 发送数据 -->  
+        <postjson method="post" result="json"> 
+          <url>/mobile/plugin/12/postjson.jsp</url> 
+        </postjson>  
+        <!-- 取得数字 -->  
+        <count method="post" result="json"> 
+          <url>/mobile/plugin/12/count.jsp</url> 
+        </count> 
+      </function> 
+    </component>  
+    <!-- 具体功能配置 -->  
+    <component> 
+      <!-- 功能名称 -->  
+      <name>邮件</name>  
+      <!-- 功能编号 -->  
+      <id>13</id>  
+      <!-- 功能显示模型:-2 查看/查看 -1 列表/查看 1 待办 2 新闻 3 公告 4 日程 5 会议 6 通讯录 7 办结 8 已办 9 我的请求 10 抄送 11 工作微薄 12 工作微薄 -->  
+      <model>13</model>
+      <wctcategory>4</wctcategory>
+      <wctClass>weaver.mobile.plugin.ecology.service.EMailWorkCenter</wctClass>
+      <!-- 功能描述 -->  
+      <description>ecology中的手机邮件功能</description>  
+      <function> 
+        <!-- 取得页面 -->  
+        <view> 
+          <url>/mobile/plugin/email/EmailMain.jsp</url> 
+        </view>  
+        <!-- 取得数字 -->  
+        <count method="post" result="json"> 
+          <url>/mobile/plugin/email/EmailCount.jsp</url> 
+        </count> 
+      </function> 
+    </component>  
+    <!-- 具体功能配置 -->  
+    <component> 
+      <!-- 功能名称 -->  
+      <name>协作</name>  
+      <!-- 功能编号 -->  
+      <id>14</id>  
+      <!-- 功能显示模型:-2 查看/查看 -1 列表/查看 1 待办 2 新闻 3 公告 4 日程 5 会议 6 通讯录 7 办结 8 已办 9 我的请求 10 抄送 11 工作微薄 -->  
+      <model>-2</model>  
+      <!-- 功能描述 -->  
+      <description>ecology中的协作功能</description>  
+      <function> 
+        <!-- 取得页面 -->  
+        <view> 
+          <url>/mobile/plugin/cowork/list.jsp</url> 
+        </view>  
+        <!-- 取得数字 -->  
+        <count method="post" result="json"> 
+          <url>/mobile/plugin/cowork/count.jsp</url> 
+        </count> 
+      </function> 
+    </component>  
+    <!-- 具体功能配置 -->  
+    <component> 
+      <!-- 功能名称 -->  
+      <name>客户</name>  
+      <!-- 功能编号 -->  
+      <id>15</id>  
+      <!-- 功能显示模型:-2 查看/查看 -1 列表/查看 1 待办 2 新闻 3 公告 4 日程 5 会议 6 通讯录 7 办结 8 已办 9 我的请求 10 抄送 11 工作微薄 12 工作微薄 -->  
+      <model>11</model>  
+      <!-- 功能描述 -->  
+      <description>ecology中的客户功能</description>  
+      <function> 
+        <!-- 取得页面 -->  
+        <view> 
+          <url>/mobile/plugin/crm_new/index.jsp</url> 
+        </view> 
+      </function> 
+    </component>  
+    <!-- 具体功能配置 -->  
+    <component> 
+      <!-- 功能名称 -->  
+      <name>微搜</name>  
+      <!-- 功能编号 -->  
+      <id>16</id>  
+      <!-- 功能显示模型:-2 查看/查看 -1 列表/查看 1 待办 2 新闻 3 公告 4 日程 5 会议 6 通讯录 7 办结 8 已办 9 我的请求 10 抄送 11 工作微薄 12 工作微薄 -->  
+      <model>-2</model>  
+      <!-- 功能描述 -->  
+      <description>ecology中的全文检索功能</description>  
+      <function> 
+        <!-- 取得页面 -->  
+        <view> 
+          <url>/mobile/plugin/fullsearch/list.jsp</url> 
+        </view> 
+      </function> 
+    </component> 
+	<component> 
+      <!-- 功能名称 -->  
+      <name>移动签到</name>  
+      <!-- 功能编号 -->  
+      <id>17</id>  
+      <!-- 功能显示模型:-2 查看/查看 -1 列表/查看 1 待办 2 新闻 3 公告 4 日程 5 会议 6 通讯录 7 办结 8 已办 9 我的请求 10 抄送 11 工作微薄 12 工作微薄 -->  
+      <model>17</model>
+      <!-- 功能描述 -->  
+      <description>ecology中的移动签到功能</description>  
+      <function> 
+        <!-- 发送数据 -->  
+        <postjson method="post" result="json"> 
+          <url>/mobile/plugin/msign/postjson.jsp</url> 
+        </postjson>
+      </function> 
+    </component> 
+    <component> 
+      <!-- 功能名称 -->  
+      <name>任务</name>
+      <!-- 功能编号 -->  
+      <id>-128</id>  
+      <!-- 功能显示模型:-2 查看/查看 -1 列表/查看 1 待办 2 新闻 3 公告 4 日程 5 会议 6 通讯录 7 办结 8 已办 9 我的请求 10 抄送 11 工作微薄 12 工作微薄 -->  
+      <model>-2</model>
+      <!-- 功能描述 -->  
+      <description>ecology中的任务管理功能</description>
+      <function>
+        <!-- 取得页面 -->
+        <view> 
+          <url>/mobile/plugin/task/taskMain.jsp</url>
+        </view>  
+        <!-- 取得数字 -->
+        <count> 
+          <url>/mobile/plugin/task/count.jsp</url>
+        </count> 
+      </function> 
+    </component>
+	 <component>
+      <name>流程督办</name>
+      <id>-1004</id>
+      <model>-1004</model>
+      <description>流程督办</description>
+      <function>
+         <!-- 列表数据 -->  
+        <list method="post" result="json"> 
+          <url>/mobile/plugin/ComponentList.jsp</url> 
+        </list>  
+        <!-- 取得页面 -->  
+        <view> 
+          <url>/mobile/plugin/1/view.jsp</url>  
+          <client>/mobile/plugin/1/client.jsp</client> 
+        </view>  
+        <!-- 取得数字 -->  
+        <count method="post" result="json"> 
+          <url>/mobile/plugin/ComponentCount.jsp</url> 
+        </count>  
+      </function>
+    </component>
+	 <component>
+      <name>流程监控</name>
+      <id>-1005</id>
+      <model>-1005</model>
+      <description>流程监控</description>
+      <function>
+         <!-- 列表数据 -->  
+        <list method="post" result="json"> 
+          <url>/mobile/plugin/ComponentList.jsp</url> 
+        </list>  
+        <!-- 取得页面 -->  
+        <view> 
+          <url>/mobile/plugin/1/view.jsp</url>  
+          <client>/mobile/plugin/1/client.jsp</client> 
+        </view>  
+        <!-- 取得数字 -->  
+        <count method="post" result="json"> 
+          <url>/mobile/plugin/ComponentCount.jsp</url> 
+        </count>  
+      </function>
+    </component>
+	<component>
+      <name>云盘</name>
+      <id>-20001</id>
+      <model>-20001</model>
+      <description>云盘</description>
+      <function>
+         <!-- 取得页面 -->  
+        <view> 
+          <url>/mobile/plugin/networkdisk/list.jsp</url> 
+        </view>  
+      </function>
+    </component>
+  </components>
+  <quicknew> 
+    <new> 
+      <!-- 新建功能编号 -->  
+      <id>1</id>  
+      <!-- 所属模块编号 -->  
+      <componentid>1</componentid>  
+      <!-- 新建功能名称 -->  
+      <name>建流程</name>  
+      <function> 
+        <!-- 取得页面 -->  
+        <view> 
+          <url>/mobile/plugin/1/createlist.jsp</url>  
+          <client>/mobile/plugin/1/client.jsp</client> 
+        </view> 
+      </function> 
+    </new>  
+    <new> 
+      <!-- 新建功能编号 -->  
+      <id>2</id>  
+      <!-- 所属模块编号 -->  
+      <componentid>11</componentid>  
+      <!-- 新建功能名称 -->  
+      <name>写微博</name>  
+      <function> 
+        <!-- 取得页面 -->  
+        <view> 
+          <url>/mobile/plugin/11/viewBlog.jsp</url> 
+        </view> 
+      </function> 
+    </new>  
+    <new> 
+      <!-- 新建功能编号 -->  
+      <id>3</id>  
+      <!-- 所属模块编号 -->  
+      <componentid>12</componentid>  
+      <!-- 新建功能名称 -->  
+      <name>发微信</name> 
+    </new> 
+	<new> 
+      <!-- 新建功能编号 -->  
+      <id>4</id>  
+      <!-- 所属模块编号 -->  
+      <componentid>4</componentid>  
+      <!-- 新建功能名称 -->  
+      <name>建日程</name> 
+    </new> 
+	<new> 
+      <!-- 新建功能编号 -->  
+      <id>5</id>  
+      <!-- 所属模块编号 -->  
+      <componentid>13</componentid>  
+      <!-- 新建功能名称 -->  
+      <name>写邮件</name>  
+      <function> 
+        <!-- 取得页面 -->  
+        <view> 
+          <url>/mobile/plugin/email/EmailNewIn.jsp</url> 
+        </view> 
+      </function> 
+    </new> 
+  </quicknew>
+</plugin>

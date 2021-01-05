@@ -1,0 +1,14 @@
+SMAP
+_leftframe__jsp.java
+JSP
+*S JSP
+*F
++ 1 leftFrame.jsp
+wui/theme/ecologyBasic/page/leftFrame.jsp
+*L
+1#1:32
+40#1,4:33
+43#1,2:37
+44#1:39,3
+49#1:42
+*E

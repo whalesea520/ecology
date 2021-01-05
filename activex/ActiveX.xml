@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<activexs>
+	<activex groupid="">
+		<name>Office 控件</name>
+		<clsid>23739A7E-5741-4D1C-88D5-D50B18F7C347</clsid>
+		<progid>iWebOffice2003.iWebOffice</progid>
+		<clsname>iWebOffice Control</clsname>
+		<version>8.8.7.28</version>
+        <install>
+			<url>/weaverplugin/iWebOffice.exe</url>
+			<size>0.98M</size>
+		</install>
+		<explain>用于知识管理中Office文档的显示，编辑。</explain>
+		<checkpageurl>/activex/TestByOffice.jsp</checkpageurl>
+		<checkver>0</checkver>
+	</activex>
+	<activex groupid="">
+		<name>图形化流程控件</name>
+		<clsid>15261F9B-22CC-4692-9089-0C40ACBDFDD8</clsid>
+		<progid>CHINAEXCELWEB.FormvwCtrl.1</progid>
+		<clsname>ChinaExcelWeb Control</clsname>
+		<version>4.2.0.0</version>
+		<install>
+			<url>/weaverplugin/chinaexcel.exe</url>
+			<size>2.54M</size>
+		</install>
+		<explain>用于流程模板模式的展现和模板的设计。</explain>
+		<checkpageurl>/activex/TestByChinaExcel.jsp</checkpageurl>
+		<checkver>1</checkver>
+	</activex>
+	
+	<group id="1">
+		<name>E-cology控件设置工具</name>
+		<install>
+			<url>/weaverplugin/EcologyPlugin.zip</url>
+			<size>5.19M</size>
+		</install>
+		<explain>包含图形化流程控件、Office控件、报表控件安装以及E-cology相关设置工具，可以重复设置。</explain>
+        <version>1.0.0.0</version>
+        <checkver>0</checkver>
+	</group>
+</activexs>

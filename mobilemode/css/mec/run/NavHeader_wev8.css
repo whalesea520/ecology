@@ -1,0 +1,45 @@
+.navHeaderContainer{
+	padding:0 0 0 15px;
+	margin:12px 0;
+	border-left:4px solid #999;
+	position: relative;
+}
+.navHeaderContainer .title{
+	font-size:22px;
+}
+.navHeaderContainer .btnWrap{
+	font-size: 12px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	padding-right: 8px;
+}
+.navHeaderContainer .btnWrap .btn{
+	height: 28px;
+	line-height: 28px;
+	background-color: #017afd;
+	color: #fff;
+	font-family: 'Microsoft Yahei',Arial;
+	font-size: 12px;
+	display: inline-block;
+	margin-right: 5px;
+	padding: 0 8px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+.navHeaderContainer .btnWrap .imgBtn{
+	display: inline-block;
+	margin-right: 5px;
+	cursor: pointer;
+	height: 28px;
+	line-height: 28px;
+}
+.navHeaderContainer .btnWrap .imgBtn img{
+	vertical-align: top;
+	width: 28px;
+	height: 28px;
+}
+.navHeaderContainer .small-title{
+	font-size:10px;
+	color:#999;
+}

@@ -1,0 +1,804 @@
+body{
+  margin: 0px;
+  padding: 0px;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+*{
+    font-family: '微软雅黑';
+    font-size: 12px;
+}
+.editor_nav{
+
+    background: #4182bc;
+    color: #fff;
+    height: 40px;
+}
+
+.editor_nav .btns {
+    float: right;
+}
+
+.editor_nav .btns a {
+    color: #fff;
+    margin: 0 10px;
+}
+
+.editor_nav .title {
+	float: left;
+    padding-top: 10px;
+    padding-left: 20px;
+    font-size: 14px;
+}
+
+.editor_nav .btns button {
+    padding: 2px 10px;
+    margin: 0 5px;
+    
+}
+a.blue, button.blue {
+    background: #38a0e5 url(../images/button_blue_wev8.gif) repeat-x top;
+    color: #fff;
+    border: 1px solid #168baa;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    width: 48px;
+    height: 26px;
+}
+.editor_nav .nav {
+    width: 578px;
+    margin: 0 auto;
+}
+
+.editor_nav .nav span.current {
+    padding: 5px 24px;
+    background: #f9f9f9;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: #000;
+    font-size: 14px;
+    margin-top: 12px;
+}
+.editor_nav .nav span {
+    margin: 0 10px;
+    display: inline-block;
+    padding: 5px 26px;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+}
+a:hover {
+    color: #1F8DD6;
+    text-decoration: none;
+}
+.survey_container{
+    width: 100%;
+    height: 500px;
+}
+.survey_container .survey_menu{
+    width: 230px;
+    float: left;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+    border-right: 1px solid #d3dbdb;
+    background: #f8fbfb;
+}
+.survey_container .survey_wrapper{
+    width: 100%;
+    float: left;
+    margin-left: -231px;
+    height: 100%;
+}
+.survey_container .survey_body{
+    margin-left: 231px;
+    height: 100%;
+}
+
+.survery_component > h4{
+    background: #eff3f9;
+    line-height: 30px;
+    padding-left: 5px;	
+}
+.survery_component > h1{
+     margin: 0px;
+     padding: 0px;
+}  
+
+
+span.cancel{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: text-top;
+    background-repeat: no-repeat;
+    background-position: center; 
+    cursor: pointer;
+    background: url(../images/survey_cancel_wev8.png)  center no-repeat;
+}
+
+.cancel:hover{
+    background: url(../images/survey_cancel_hover_wev8.png)  center no-repeat;
+}
+
+span.confirm{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: text-top;
+    background-repeat: no-repeat;
+    background-position: center; 
+    cursor: pointer;
+    background: url(../images/survey_confirm_wev8.png)  center no-repeat;
+}
+
+.confirm:hover{
+    background: url(../images/survey_confirm_hover_wev8.png)  center no-repeat;
+}
+
+
+span.close{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    vertical-align: text-top;
+    background-repeat: no-repeat;
+    background-position: center; 
+    cursor: pointer;
+    padding-top: 20px;
+    padding-left: 20px;
+    background: url(/images/ecology8/16_close_wev8.png)  center no-repeat;
+}
+
+.close:hover{
+    background: url(/images/ecology8/16_close2_wev8.png)  center no-repeat;
+}
+
+.survey_inside {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    vertical-align: text-top;
+    background-image: url(../images/icon_16_wev8.png);
+    background-repeat: no-repeat;
+    background-position: -252px -84px;
+    float: right;
+    margin-top: 2px;
+    cursor: pointer;
+}
+.survey_outsidecontainer{
+    float: left;
+    width: 20px;
+    height: 100%;
+    background: #c8c8c8;
+    display: none;
+    position: relative;
+    z-index: 10;
+}
+.survey_outside{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    vertical-align: text-top;
+    background-image: url(../images/icon_16_wev8.png);
+    background-repeat: no-repeat;
+    background-position: -266px -84px;
+    cursor: pointer;
+}
+.survey_menu .toolbar {
+    background: #f8fbfb;
+    padding: 0px 4px;
+    text-align: center;
+    /**border-bottom: 1px solid #a5a5a5;**/
+    clear: both;
+    overflow: auto;
+  
+}
+
+.surveytree {
+    padding: 5px 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0;
+    list-style: none;
+    margin-bottom: 43px;
+}
+
+.survey_tree{
+   overflow-y: auto;
+   height: 100%;
+   padding-bottom: 10px;
+}
+
+.i_page_open, .scroll_down {
+    background-position: -182px -84px;
+}
+.i_select {
+    background-position: -56px -84px;
+}
+.i_sort {
+    background-position: -112px -84px;
+}
+.i_html {
+    background-position: -168px -84px;
+}
+.surveytree .node {
+    padding: 5px;
+    white-space: nowrap;
+}
+.surveytree .part {
+    padding-left: 20px;
+    padding-right: 5px;
+}
+.surveytree .i {
+    margin-right: 5px;
+}
+.surveytree .current {
+    background: #ebeff5;
+    color: #000;
+}
+.surveytree .node:hover {
+    background: #ebeff5;
+    cursor: pointer;
+}
+
+button.gray {
+    background: #ededed url(../images/button_gray_24_wev8.gif) repeat-x bottom;
+    color: #000;
+    border: 1px solid #a1a1a1;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    cursor: pointer;
+    margin-left: -2px; 
+	padding-left: 3px;
+    padding-right: 3px;
+    height: 25px;
+}
+
+button.gray:hover {
+    background: #38a0e5 url(../images/button_blue_wev8.gif) repeat-x top;
+    color: #fff;
+    border: 1px solid #168baa;
+}
+
+.survey_content {
+    width: 100%;
+    background: #fff;
+    overflow: auto;
+}
+
+.survey_editor {
+    margin: 0 auto;
+    width: 780px;
+    background: #fff;
+    overflow: auto;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.survey_toobar{
+    height: 33px;
+    width: 100%;
+    background: red;
+	position: relative;
+}
+
+.survey_viewset{
+    position: absolute;
+    z-index: 100;
+    top: 33px;
+    height: 28px;
+    left: 0px;
+    width: 100%;
+    background: #f8fbfb;
+    border-top: 1px solid #d3dadd;
+    border-bottom: 1px solid #d3dadd;
+    display: none;
+}
+
+.sview .survey_viewsetcurrent{
+    background: #6fb9f3;
+    color: #fff;
+    border-radius: 12px;
+}
+
+
+.sview .survey_viewsetcurrent{
+    background: #6fb9f3;
+    color: #fff;
+    border-radius: 12px;
+}
+.survey_viewset ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+.survey_viewset ul li{
+    height: 26px;
+    line-height: 26px;
+    float: left;
+    margin-right: 3px;
+}
+.survey_viewset span{
+    display: inline-block;
+    padding: 2px 2px;
+}
+
+.survey-header {
+    clear: both;
+    position: relative;
+    border: 1px solid #ffffff;
+}
+.survey-title {
+    line-height: 32px;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    color: #19a8ee;
+}
+
+
+.survery_component {
+    position: relative;
+    border: 1px solid #ffffff;
+}
+
+.hover {
+    border: 1px dashed #0096ec;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    cursor: pointer;
+}
+
+.survey_toobar {
+    background: #f8fbfb;
+    height: 33px;
+    border-bottom: 1px solid #d3dadd;
+}
+.survey_page{
+    /**border: 1px solid #E3E3E3;**/
+    background: #FFF;
+    border-radius: 5px;
+    padding: 10px 20px;
+    padding-bottom: 40px;
+}
+
+/*悬浮按钮区域*/
+
+.survey_buttons {
+    position: absolute;
+    top: -8px;
+    right: 10px;
+    width: 265px;
+}
+
+.survey_buttons a {
+    background: url(../images/button_gray_24_wev8.gif) repeat-x;
+    color: #000;
+    border: 1px solid #009DD0;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    padding: 4px 6px;
+    margin: 0 2px;
+}
+
+.survey_buttons a:hover {
+    background: #fff;
+}
+
+span.i {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    vertical-align: text-top;
+    background-image: url(../images/icon_16_wev8.png);
+    background-repeat: no-repeat;
+    
+}
+.survey_buttons .i_editor_edit {
+   background-position: -168px -56px;
+    
+}
+.survey_buttons  .i_up {
+    background-position: -84px -55px;
+}
+.survey_buttons .i_down {
+    background-position: -84px -70px;
+}
+.survey_buttons .i_copy {
+    background-position: -57px 0;
+}
+.survey_buttons .i_paste {
+    background-position: -168px -14px;
+}
+.survey_buttons .i_editor_del {
+    background-position: -85px 0;
+}
+
+.survey_buttons a:hover .i_editor_edit {
+    background-position: -279px -56px;
+}
+.survey_buttons a:hover .i_up {
+    background-position: -252px -56px;
+}
+.survey_buttons a:hover .i_down {
+    background-position: -252px -71px;
+}
+.survey_buttons a:hover .i_copy {
+    background-position: -239px -14px;
+}
+.survey_buttons a:hover .i_paste {
+    background-position: -265px -56px;
+}
+.survey_buttons a:hover .i_editor_del {
+    background-position: -280px -14px;
+}
+
+span.menu {
+	margin-top:2px;
+    display: inline-block;
+    width: 30px;
+    height: 28px;
+    line-height: 28px;
+    vertical-align: text-top;
+    background-repeat: no-repeat;
+    background-position: center; 
+    cursor: pointer;
+}
+
+span.btoobar{
+   display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: text-top;
+    background-repeat: no-repeat;
+    background-position: center; 
+    cursor: pointer;
+    margin-top:-3px;
+}
+
+
+
+.surveysave{
+    background: url(../images/survey_save_wev8.png)  center no-repeat;
+}
+
+.preview{
+    background: url(../images/survey_preview_wev8.png)  center no-repeat;
+}
+
+.addnewpage{
+    background: url(../images/survey_addnewpage_wev8.png)  center no-repeat;
+}
+
+.surveysave:hover{
+    background: url(../images/survey_save_hover_wev8.png)  center no-repeat;
+}
+
+.preview:hover{
+    background: url(../images/survey_preview_hover_wev8.png)  center no-repeat;
+}
+
+.addnewpage:hover{
+    background: url(../images/survey_addnewpage_hover_wev8.png)  center no-repeat;
+}
+
+.menu_cut {
+    background: url(../images/menu_cut_wev8.png);
+}
+.menu_up {
+    background: url(../images/menu_up_wev8.png);
+}
+.menu_down {
+   background: url(../images/menu_down_wev8.png);
+}
+.menu_copy {
+    background: url(../images/menu_copy_wev8.png);
+}
+.menu_paste {
+    background: url(../images/menu_paste_wev8.png);
+}
+.menu_editor_del {
+    background: url(../images/menu_delete_wev8.png);
+}
+.i_matrix {
+    background-position: -70px -84px;
+}
+
+
+.toolbar .menu_cut:hover {
+    background: #6fb9f3 url(../images/menu_cut_hover_wev8.png) center no-repeat;
+    border-radius: 5px;
+}
+
+.toolbar .menu_up:hover  {
+    background: #6fb9f3 url(../images/menu_up_hover_wev8.png) center no-repeat;
+    border-radius: 5px;
+}
+.toolbar .menu_down:hover  {
+  background: #6fb9f3 url(../images/menu_down_hover_wev8.png) center no-repeat;
+  border-radius: 5px;
+}
+.toolbar .menu_copy:hover  {
+    background: #6fb9f3 url(../images/menu_copy_hover_wev8.png) center no-repeat;
+    border-radius: 5px;
+}
+.toolbar .menu_paste:hover  {
+    background: #6fb9f3 url(../images/menu_paste_hover_wev8.png) center no-repeat;
+    border-radius: 5px;
+}
+.toolbar .menu_editor_del:hover  {
+    background: #6fb9f3 url(../images/menu_delete_hove_wev8.png) center no-repeat;
+    border-radius: 5px;
+}
+
+.editor_tool{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 5px;
+    margin-left: 10px;
+}
+
+.editor_tool li{
+    float: left;
+    max-width: 160px;
+    padding: 3px;
+    height: 18px;
+    line-height: 18px;
+    margin-right: 10px;
+    text-align: center;
+    cursor: pointer;
+    color: #8890a5;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	white-space:nowrap;
+}
+
+.editor_tool li.select{
+	position:relative;
+}
+
+.editor_tool li:hover{
+    /**background: #38a0e5 url(../images/button_blue_wev8.gif) repeat-x top;**/
+    background: #6fb9f3;
+    color: #fff;
+    border-radius: 12px;
+    /**border: 1px solid #168baa;**/
+}
+
+.survey_page .intro {
+    padding: 0 5px;
+}
+.survey_page .options {
+    width: 98%;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+li.page ul.parts {
+    min-height: 10px;
+}
+
+.survey_page .subject {
+    color: #616f8f;
+    font-size: 14px ;
+}
+.survey_page .title .require {
+    color: red;
+    font-size: 12px;
+    font-weight: 400;
+}
+.survey_page .title .rules {
+    font-size: 12px;
+    color: #666;
+    font-weight: 400;
+}
+.survey_page .options li {
+    padding: 5px;
+}
+
+.part_set {
+    position: relative;
+    clear: both;
+    margin: 10px auto;
+    line-height: 24px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    box-shadow: 0 3px 5px rgba(0,0,0,.3);
+    border: 1px solid #f8f8f8;
+    background: #fff;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    max-width: 860px;
+    min-width: 745px;
+}
+
+
+.part_set .content {
+    padding: 5px;
+    margin-bottom: 20px;
+}
+.part_set .setting span.button {
+    float: right;
+}
+.part_set .setting .button button.confirm {
+    padding: 2px 5px;
+    font-size: 14px;
+    margin: 0 5px;
+}
+.part_set .setting label {
+    margin-right: 5px;
+}
+.part_set .content input.subject {
+    border: 1px solid #009DD0;
+    font-size: 14px;
+    margin: 5px 0 10px;
+    padding: 8px 3px;
+    width: 98%;
+}
+.part_set .setting {
+    border-top: 1px solid #ccc;
+    background: #eff3f9;
+    padding: 5px 10px;
+    line-height: 24px;
+    min-height: 24px;
+    text-align: left;
+}
+.part_set .setting span.survey_type {
+    margin-right: 30px;
+}
+
+.part_set .setting input.limit {
+    border: 1px solid #c9c9c9;
+    width: 42px;
+    margin: 0 3px;
+}
+
+.part_set .content button.gray {
+    padding: 2px 3px;
+    border: 1px solid #a6a6a6;
+}
+.part_set .content ul {
+    padding: 5px;
+}
+.part_set .content ul li {
+    line-height: 28px;
+    padding: 0;
+}
+.i_handle {
+    background-position: -126px -14px;
+    cursor: move;
+}
+.part_set .content ul li input.input {
+    width: 380px;
+    font-size: 14px;
+    border: 1px solid #009DD0;
+}
+.part_set .content ul li input {
+    padding: 3px;
+    margin: 4px 0;
+}
+.i_create {
+    background-position: -112px -14px;
+}
+.i_del {
+    background-position: -98px -28px;
+}
+.i_illustration {
+    background-position: -266px -28px;
+}
+.i_mselect {
+    background-position: -42px -84px;
+}
+.i_page_close {
+    background-position: -196px -84px;
+}
+
+a:hover.blue, button.blue:hover {
+    background: #8bba0d url(../images/button_green_wev8.gif) repeat-x top;
+    color: #fff;
+    border: 1px solid #4aa103;
+    cursor: pointer;
+}
+
+.optionstable{
+    width: 100%;
+}
+.optionstable td{
+    padding: 4px 5px;
+}
+.optionstable th{
+  font-weight:normal;
+}
+.qs_select{
+    min-width: 80px;
+}
+.bgimg-preview-inner {
+
+    background-image: url(../images/icon_16_wev8.gif);
+    background-repeat: no-repeat;
+    background-position: -140px -14px;
+}
+.i_bold {
+    background-position: -182px -55px;
+}
+.i_italic {
+    background-position: -196px -55px;
+}
+.i_align_left {
+    background-position: -210px -55px;
+}
+.i_align_center {
+    background-position: -224px -55px;
+}
+.i_align_right {
+    background-position: -238px -55px;
+}
+.survey-logo{
+    height: 30px;
+}
+.surveycolor{
+  cursor: pointer;
+ }
+
+ 
+.imgcontainer ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    background: #ffffff;
+    height: 400px;
+    overflow: auto;
+	border: 1px solid #cccccc;
+
+}
+.imgcontainer  li{
+    float: left;
+    width: 138px;
+    height: 116px;
+    margin-left: 20px;
+    margin-right: 15px;
+    margin-top: 5px;
+    border: 1px solid #e5e5e5;
+    padding: 5px;
+}
+.imgcontainer  li:hover{
+    border: 1px solid #19a8ee;
+}
+.imgcontainer img{
+    width: 140px;
+    height: 115px;
+    cursor: pointer;
+}
+.imgcontainer .imgselected{
+    border: 1px solid #19a8ee;
+}
+.bgimg-preview-inner{
+    cursor: pointer;
+}
+.optItem {
+	width: 48px;
+	height: 25px;
+	margin-top: 3px;
+	float: left;
+}
+.optItem .title {
+    padding-left: 20px;
+}
+
+.optItem .title  a{
+    color: #929393;
+	text-decoration: initial;
+}

@@ -1,0 +1,70 @@
+.e8_box_s{
+	width: 230px; 
+	}
+.e8_box_d { 
+	width: 230px; 
+	}
+
+.e8_box_topmenu{
+    width: 100%;
+    height: 40px;
+    border:none;
+    line-height:40px;
+    text-align:left;
+     background-color:#fff;
+     border-collapse:collapse;
+}
+
+.e8_clear_btn{
+	float:right;
+	margin-right:15px;
+	cursor:pointer;
+	display:none;
+	width:20px;
+	height:20px;
+	background-image:url(/js/dragBox/img/clear_wev8.png);
+	margin-top:11px;
+}
+
+.e8_dragDiv{
+	width:50px;
+	height:100%;
+	position:absolute;
+	float:right;
+	right:0;
+	cursor:move;
+	top:0;
+}
+
+.e8_clear_btn:hover{
+	background-image:url(/js/dragBox/img/clearHover_wev8.png);
+}
+
+.e8_box_topmenu input{
+	height:auto;
+	width:auto;
+}
+
+.e8_box_middle{
+    height: 258px;
+    overflow: hidden;
+    position:relative;
+}
+
+.e8_box_topmenu thead td{
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+
+.e8_hover_tr td{
+	background-color:#f4fcfa !important;
+}
+
+.e8_checked_tr td{
+	background-color:#dff1ff !important;
+}
+
+.e8_selected_tr td,.e8_selected_tr td div.contentTitle,.e8_selected_tr td span.otherInfo{
+	background-color:#f8f8f8 !important;
+	color:#bebebe!important;
+}

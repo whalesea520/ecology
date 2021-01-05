@@ -1,0 +1,80 @@
+	
+/*For lisbox*/
+
+.listbox2 {	
+	margin-right:60px;
+}
+
+.listbox2 .t-left{	width:6px;	height:20px;background-position:center right;}
+.listbox2 .t-right{	width:8px;	height:20px;}
+.listbox2 .t-center { height: 20px;}
+
+.listbox2 .flag_1{
+}
+
+.listbox2 .title_1{
+	position:relative;
+	top:-2px; 
+	
+	color:#4f6b72;
+	font-weight:bold;
+}
+
+.listbox2 ul {
+    margin:-8 0 0 0;
+	padding:10px 20px 25px 40px;
+	list-style:none;
+}
+
+.listbox2 ul li {
+
+	background-position:0 8 ;
+	padding-left:10px;
+    height: 22px;
+    line-height: 22px;
+}
+.listbox2 ol {
+	padding:3 0 3 0;
+	list-style:none;
+	margin:0;
+}
+.listbox2 ol li {
+	background:url(listbox/item_wev8.png) no-repeat;
+	background-position:0 8 ;
+	padding-left:10px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.listbox2 .flag_2_forDocList_open{
+	background:url(listbox/open_wev8.png) no-repeat;
+	background-position:0 8 ;
+	padding-left:15px;
+}
+
+.listbox2 .flag_2_forDocList_close{
+	background:url(listbox/close_wev8.png) no-repeat;
+	background-position:0 8 ;
+	padding-left:15px;
+}
+
+.listbox2 .li_1{
+	height:16px;
+	width:16px;
+	background:url(listbox/s-1_wev8.png) no-repeat;
+}
+.listbox2 .li_2{
+	height:16px;
+	width:16px;
+	background:url(listbox/s-2_wev8.png) no-repeat;
+}
+.listbox2 .li_3{
+	height:16px;
+	width:16px;
+	background:url(listbox/s-3_wev8.png) no-repeat;
+}
+.listbox2 .li_4{
+	height:16px;
+	width:16px;
+	background:url(listbox/s-4_wev8.png) no-repeat;
+}

@@ -1,0 +1,7 @@
+.span-ellipsis-211{
+	overflow: hidden;display:inline-block; white-space: nowrap; text-overflow: ellipsis; max-width: 210px;
+}
+
+.span-ellipsis-188{
+	overflow: hidden;display:inline-block; white-space: nowrap; text-overflow: ellipsis; max-width: 188px;
+}

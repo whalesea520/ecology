@@ -1,0 +1,602 @@
+/** List **/
+.listContainer{
+	font-family: 'Microsoft Yahei', Arial, sans-serif;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+.listContainer li{
+	border-bottom: 1px solid #ddd;
+	overflow: hidden;
+	padding: 0px 10px 0px 0px;
+	background: #fff;
+	line-height: 1.3;
+	position: relative;
+}
+.listContainer li > table{
+	width: 100%;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+.listContainer li .imgPart{
+	width: 80px;
+	padding: 10px 0px 10px 10px;
+	vertical-align: top;
+}
+.listContainer li .imgPart img{
+	border: 1px solid #eee;
+}
+.listContainer li .fieldPart{
+	padding: 10px 20px 10px 10px;
+	vertical-align: top;
+	background: url("/mobilemode/images/mec/arrow_right_wev8.png") no-repeat;
+	background-position: right center;
+}
+
+.listContainer.readonly li .fieldPart{
+	background: none;
+}
+
+.listContainer li .fieldPart .titleRowWrap{
+	font-size: 15px;
+	font-weight: bold;
+	padding-top: 0px;
+	color: #333;
+}
+.listContainer li .fieldPart .rowWrap{
+	font-size: 12px;
+	margin-top: 5px;
+	line-height: 18px;
+	color: #333;
+}
+.listContainer li .fieldPart .rowWrap .colWrap{
+	display: inline;
+	margin-right: 3px;
+}
+
+.listContainer .field_upload_container{
+}
+.listContainer .field_upload_container .field_upload_entryWrap{
+	overflow: hidden;
+}
+.listContainer .field_upload_entryWrap .field_upload_entry{
+	padding: 0 5px 5px 0;
+	position: relative;
+	float: left;
+}
+.listContainer .field_upload_entry .field_upload_entryImg{
+	border-radius:3px;
+	position: relative;
+}
+.listContainer .field_upload_entry .field_upload_entryImg img{
+	border-radius:3px;
+	border: 1px solid #eee;
+}
+.moreData_btn{
+	margin: .5em 0;
+	padding: .7em 1em;
+	background: #f6f6f6;
+	cursor: pointer;
+	border: 1px solid #ddd;
+	border-radius: .3125em;
+	color: #333;
+	font-size: 16px;
+	text-align: center;
+	line-height: 1.3;
+	text-decoration: none!important;
+	display: block;
+}
+.listWarn{
+	font-family: 'Microsoft Yahei', Arial;
+	font-size: 18px;
+	background: url("/mobilemode/images/tip_wev8.png") no-repeat;
+	padding: 5px 5px 5px 45px;
+	line-height: 35px;
+	color: #bbb;
+	background-size: 30px;
+	background-position: 10px center;
+	margin: 0px auto;
+	text-align: left;
+}
+.listSearch{
+	position: relative;
+	background-color: #C8C8CD;
+	height: 40px;
+	overflow: hidden;
+}
+.listSearch .listHeader{
+	border: none;
+	padding-left: 24px;
+	position: absolute;
+	top: 6px;
+	bottom: 6px;
+	left: 8px;
+	right: 8px;	
+	overflow: hidden;
+	background-color: #fff;
+	border-radius: 5px;
+}
+.listSearch .advancedSearch{
+	height: 100%;
+	width: 60px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background-color: rgba(255,255,255,0);
+	z-index: 90;
+}
+.listSearch .advancedSearch ul{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	float: right;
+	margin-right: 6px;
+	margin-top: 8px;
+}
+.listSearch .advancedSearch li{
+	margin-bottom: 2px;
+	overflow: hidden;
+}
+.listSearch .advancedSearch li div{
+	background: #a9a9a9;
+	float: left;
+}
+.listSearch .advancedSearch .point{
+	height: 3px;
+	width: 3px;
+	border-radius: 2.25em;
+	display: none;
+	
+}
+.listSearch .advancedSearch .line{
+	height: 1px;
+	width: 11px;
+	margin-left: 2px;
+	margin-top: 1px;
+}
+.listSearch .advancedSearch .line.one{
+	width: 14px;
+}
+.listSearch .advancedSearch .line.three{
+	width: 8px;
+}
+.listSearch .searchKey{
+	border: none;
+	height: 100%;
+	width: 100%;
+	font-family: 'Microsoft Yahei', Arial;
+	font-size: 12px;
+	line-height: 22px;
+	height: 26px;
+	padding-left: 0px;
+}
+.listSearch .searchBtn{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: block;
+	background-color: white;
+	height:100%;
+	width: 24px;
+}
+.listSearch .searchBtn img{
+	position: absolute;
+	top: 6px;
+	left: 5px;
+	width: 16px;
+	height: 16px;
+}
+.listSearch .listBtn{
+	position: absolute;
+	top: 6px;
+	right: 0px;
+}
+.listSearch .listBtn .lbtn_wrap{
+	padding-right: 8px;
+	background-color: transparent;
+}
+.listSearch .listBtn .lbtn_wrap .lbtn{
+	height: 28px;
+	line-height: 28px;
+	background-color: #017afd;
+	color: #fff;
+	font-family: 'Microsoft Yahei', Arial;
+	font-size: 12px;
+	display: inline-block;
+	margin-right: 5px;
+	padding: 0px 8px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+.listSearch .listBtn .lbtn_wrap .lbtn:last-child{
+	margin-right: 0px;
+}
+.as-container{
+	display: none;
+}
+.as-container.searching{
+	display: block;	
+}
+.as-container .as-title{
+	padding:0 0 0 15px;
+	margin:12px 0;
+	border-left: 5px solid #017afd;
+}
+.as-container .as-title .as-title-big{
+	font-size: 16px;
+    color: #017afd;
+}
+.as-container .as-title .as-title-small{
+	font-size: 9px;
+	color:#999;
+}
+.as-container .as-content{
+	padding: 0px 15px;
+	margin-bottom: 15px;
+}
+.as-container .as-content .field-wrap{
+	border-bottom: 1px solid rgb(238, 238, 238);
+	position: relative;
+	display: table;
+    table-layout: fixed;
+    vertical-align: middle;
+    width: 100%;
+}
+.as-container .as-content .field-wrap .separater{
+	background-color: rgb(240,240,240);
+	width: 1px;
+	height:20px;
+	position: absolute;
+	top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+.as-container .as-content .field-wrap .field_range_separater{
+	background-color: rgb(180,180,180);
+	width: 12px;
+	height: 1px;
+}
+.as-container .as-content .field-label{
+	position: relative;
+	width: 67px;
+    color: #666;
+    font-size: 14px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: table-cell;
+    vertical-align: middle;
+    box-sizing: border-box;
+    word-break: break-all;
+}
+.as-container .as-content .field-content{
+	display: table-cell;
+    vertical-align: middle;
+    padding-left: 5px;
+}
+.as-container .as-content .date-field .field-content input,
+.as-container .as-content .time-field .field-content input
+{
+	width: 80%;
+	height: 40px;
+	border: none;	
+	line-height: 40px;
+	padding: 0px;
+	font-size: 14px;
+}
+.as-container .as-content .text-field .field-content input,
+.as-container .as-content .numb-field .field-content input,
+.as-container .as-content .thousandnumb-field .field-content input,
+.as-container .as-content .textarea-field .field-content input
+{
+	width: 100%;
+	height: 40px;
+	border: none;	
+	line-height: 40px;
+	padding: 0px;
+	font-size: 14px;
+}
+.rangeSearchTable{
+	width: 100%;
+	height:100%;
+	border-collapse: collapse;
+}
+.rangeSearchTable td{
+	padding:0px;
+}
+.rangeSearchTable td.rangeSearchcol1{
+	width:45%;
+	position: relative;
+}
+.rangeSearchTable td.rangeSearchcol1 .dataClean{
+	background: url("/mobilemode/images/mec/lego_icon_del.png") no-repeat;
+	background-position: center;
+	background-size: 13px 12px;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 10px;
+	right: 0;
+	display: none;
+}
+.rangeSearchTable td.rangeSearchcol2{
+	vertical-align: middle;
+}
+.rangeSearchTable td.rangeSearchcol3{
+	width:45%;
+	position: relative;
+}
+.rangeSearchTable td.rangeSearchcol3 .dataClean{
+	background: url("/mobilemode/images/mec/lego_icon_del.png") no-repeat;
+	background-position: center;
+	background-size: 13px 12px;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 10px;
+	right: 0;
+	display: none;
+}
+.as-container .as-content .select-field .field-content{
+   	overflow: hidden;
+   	background: url("/mobilemode/images/mec/arrow_right_wev8.png") no-repeat;
+   	background-position: right center;
+}
+.as-container .as-content .select-field .field-content select{
+	width: 100%;
+	border: none;
+	height: 40px;
+	font-size: 14px;
+	background: transparent;
+   	-webkit-appearance: none; 
+}
+
+.as-container .as-content .browser-field .field-content{
+	position: relative;
+	padding-right: 35px;
+}
+.as-container .as-content .browser-field .browser-name-wrap{
+	padding-right: 30px;
+	height: 40px;
+	position: relative;
+}
+.as-container .as-content .browser-field .browser-name{
+	font-size: 14px;
+	display: inline-block;
+	height: 100%;
+	line-height: 40px;
+	width: 100%;
+	text-overflow: ellipsis;
+	overflow:hidden; 
+	white-space:nowrap;
+}
+.as-container .as-content .browser-field .browser-name-wrap .browser-clear-btn{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 30px;
+	height: 40px;
+	background: url("/mobilemode/images/mec/lego_icon_del.png") no-repeat;
+	background-position: 5px center;
+	background-size: 13px 12px;
+	cursor: pointer;
+	display: none;
+}
+.as-container .as-content .browser-field .browser-name-wrap.hasValue .browser-clear-btn{
+	display: block;
+}
+.as-container .as-content .browser-field .browser-flag{
+	background-image: url("/mobilemode/images/field_browsebtn_wev8.png");
+	background-repeat: no-repeat;
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	top: 2px;
+	right: 0px;
+}
+.as-container .as-content .checkbox-field .field-content{
+	position: relative;
+	height:34px;
+}
+.as-container .as-content .checkbox-field .toggle {
+	cursor: pointer;
+	font-family: "Helvetica Neue",sans-serif;
+	font-size: 17px;
+	line-height: 21px;
+	box-sizing: border-box;
+	margin: 0px 0px;
+	display: block;
+	width: 62px;
+	height: 26px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 20px;
+	-webkit-transition-duration: .2s;
+	-moz-transition-duration: .2s;
+	transition-duration: .2s;
+	-webkit-transition-property: background-color, border;
+	-moz-transition-property: background-color, border;
+	transition-property: background-color, border;
+	position: relative;
+}
+.as-container .as-content .checkbox-field .toggle .toggle-handle {
+	box-sizing: border-box;
+	position: absolute;
+	top: 0px;
+	left: -1px;
+	z-index: 2;
+	width: 24px;
+	height: 24px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 100px;
+	-webkit-transition-duration: .2s;
+	-moz-transition-duration: .2s;
+	transition-duration: .2s;
+	-webkit-transition-property: -webkit-transform, border, width;
+	-moz-transition-property:    -moz-transform, border, width;
+	transition-property:         transform, border, width;
+}
+.as-container .as-content .checkbox-field .toggle:before {
+	position: absolute;
+	top: 2px;
+	right: 9px;
+	font-size: 13px;
+	color: #999;
+	text-transform: uppercase;
+	content: "Off";
+}
+.as-container .as-content .checkbox-field .toggle.active {
+	background-color: #5cb85c;
+	border: 1px solid #5cb85c;
+}
+.as-container .as-content .checkbox-field .toggle.active .toggle-handle {
+	left: -8px;
+	border-color: #5cb85c;
+	-webkit-transform: translate3d(44px, 0, 0);
+	-ms-transform: translate3d(44px, 0, 0);
+	transform: translate3d(44px, 0, 0);
+}
+.as-container .as-content .checkbox-field .toggle.active:before {
+	right: auto;
+	left: 11px;
+	color: #fff;
+	content: "On";
+}
+.as-container .as-btn-wrap{
+	padding: 0px 15px;
+	overflow: hidden;
+	padding-bottom: 20px;
+}
+.as-container .as-btn{
+	padding: 10px 15px 10px 34px;
+	font-family: 'Microsoft Yahei', Arial;
+	font-size: 15px;
+	border-radius: 5px;
+	float: left;
+	margin-right: 8px;
+}
+.as-container .as-btn.search{
+	background: url("/mobilemode/images/emobile/model/14.png") no-repeat;
+	background-size: 20px 20px;
+	background-position: 10px center;
+	background-color: #017afd;
+	color: #fff;
+}
+
+.as-container .as-btn.clear{
+	background: url("/mobilemode/images/clear_wev8.png") no-repeat;
+	background-size: 22px 22px;
+	background-position: 10px center;
+	background-color: #ddd;
+	color: #333;
+}
+.slideBtnContainer{
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+	position: absolute;
+	top:0px;
+	right:0px;
+	height:100%;
+	overflow:hidden;
+	-webkit-transform: translate3d(100%, 0, 0);
+	transform: translate3d(100%, 0, 0);
+}
+.slideBtnContainer.show{
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+.btnContainer {
+	display: table;
+	border-collapse: collapse;
+	height: 100%;
+}
+.btnContainer .btnContainerInner{
+	display: table-cell;
+	vertical-align: middle;
+}
+.btnContainer2 {
+	display: table;
+	border-collapse: collapse;
+	height: 100%;
+}
+.btnContainer .btnBox {
+	margin: 0px 5px 0 0;
+	width: 45px;
+	height: 45px;
+	border-radius: 45px !important;
+	background-color: red;
+	text-align: center;
+	display: inline-block;
+	font-size: 12px;
+	line-height: 45px;
+	color: #fff;
+	text-decoration:none;
+	overflow: hidden;
+}
+.btnContainer2 .btnBox {
+	background-color: red;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 16px;
+	color: #fff;
+	text-decoration:none;
+	padding: 0px 15px;
+}
+.listContainer > li.link_active{
+	background-color: #eee;
+}
+.btnBox img{
+	border-radius: 0 !important;
+	vertical-align: middle;
+}
+.tag{
+	text-align: center!important;
+	height:27px;
+	line-height:27px;
+	opacity:0.5;
+	font-size:12px;
+}
+.nodata_border{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-shadow: 0 1px 0 #f3f3f3;
+}
+.nodata_content{
+	text-align: center;
+	font-size: 14px;
+	color: #ccc;
+}
+.field_upload_entryWrap .attach_upload_entryborder{
+	padding-right: 15px;
+}
+.attach_upload_entryborder .attach_upload_entry{
+	padding: 10px 0px;
+	opacity: 0.7;
+}
+.attach_upload_entry td.icon{
+	width: 24px;
+}
+.attach_upload_entry td.name{
+	font-size: 10pt;
+	font-weight: bold;
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	word-break: break-all;
+	text-overflow: ellipsis;
+	color: #777;
+}
+.attach_upload_entry td.size{
+	width: 45px;
+	text-align: right;
+	color: #777;
+	font-size: 10pt;
+}
+.attach_upload_entry td.flag{
+	width: 20px;
+}
+.field_viewText a{
+	color: #333;	
+}

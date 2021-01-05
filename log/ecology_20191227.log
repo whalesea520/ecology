@@ -1,0 +1,1457 @@
+2019-12-27 09:32:54,427 ERROR weaver.general.BaseBean  - ------是否开启字符转码----0---是否开启sql参数化解析-----0----nativepool----ecology
+2019-12-27 09:32:55,481 ERROR weaver.general.BaseBean  - ExecuteSqlLogger start log write to file thread success...
+2019-12-27 09:32:55,651 INFO  weaver.common.SystemInitialized  - System Initialized OK.
+2019-12-27 09:32:56,216 INFO  weaver.general.InitServer  - System Init Message:mainControlIp= localIp:[192.168.96.104, 192.168.149.1, 192.168.25.1]
+2019-12-27 09:32:56,216 INFO  weaver.general.InitServer  - init ioc container...
+2019-12-27 09:32:57,645 ERROR com.weaver.upgrade.FunctionUpgrade  - OS.name+++++++++++++++++++++:Windows 10
+2019-12-27 09:32:57,646 ERROR com.weaver.upgrade.FunctionUpgrade  - srcfilePath+++++++++++++++++++++:D:\WEAVER\ecology\upgrade\src
+2019-12-27 09:32:57,679 ERROR com.weaver.upgrade.FunctionUpgrade  - 本地Ip++++++++++：192.168.25.1
+2019-12-27 09:32:57,680 ERROR com.weaver.upgrade.FunctionUpgrade  - 主节点MainControlIP++++++++++：
+2019-12-27 09:32:58,027 INFO  weaver.general.InitServer  - end ioc container init...
+2019-12-27 09:32:58,028 INFO  weaver.general.InitServer  - SystemUpgrade Start.....
+2019-12-27 09:32:58,068 INFO  weaver.general.InitServer  - SystemUpgrade End.....
+2019-12-27 09:32:58,069 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread Start.....
+2019-12-27 09:32:58,096 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread End.....
+2019-12-27 09:32:58,102 ERROR weaver.system.HtmlFieldToClob  - isrun:1
+2019-12-27 09:32:58,104 ERROR weaver.system.HtmlFieldToClob  - isrun1:1
+2019-12-27 09:32:58,120 ERROR weaver.conn.RecordSet  - WFVersionAdd insert Waiting...
+2019-12-27 09:32:58,154 ERROR weaver.general.BaseBean  - 启动日志压缩线程....
+2019-12-27 09:32:59,277 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息...
+2019-12-27 09:32:59,329 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息成功...
+2019-12-27 09:33:00,121 ERROR weaver.conn.RecordSet  - WFVersionAdd insert Waiting...
+2019-12-27 09:33:00,890 INFO  weaver.general.InitServer  - end.....
+2019-12-27 09:33:02,031 ERROR weaver.page.PageManager  - 清空二维码扫描缓存记录表
+2019-12-27 09:33:02,151 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun:1
+2019-12-27 09:33:02,152 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun1:1
+2019-12-27 09:33:02,173 ERROR weaver.cpt.util.CptInitManager  - weaver.cpt.util.CptInitManager is running start...
+2019-12-27 09:33:02,185 ERROR weaver.formmode.cuspage.cpt.CptGenmenu4mode  - weaver.formmode.cuspage.cpt.CptGenmenu4mode is running start...
+2019-12-27 09:33:02,277 ERROR weaver.formmode.cuspage.cpt.CptGenmenu4mode  - weaver.formmode.cuspage.cpt.CptGenmenu4mode is running end...
+2019-12-27 09:33:02,343 ERROR weaver.cpt.util.CptInitManager  - weaver.cpt.util.CptInitManager is running end...
+2019-12-27 09:33:05,628 ERROR org.directwebremoting.util.LogErrorHandler  - Line=52 Element type "filter" must be declared.
+2019-12-27 09:33:05,628 ERROR org.directwebremoting.util.LogErrorHandler  - Line=53 The content of element type "allow" must match "(create|convert)*".
+2019-12-27 09:33:06,193 ERROR weaver.conn.RecordSet  - select t1.* from  uf_zzzxx t1 where t1.formmodeid=50  and ( DATEDIFF(ss,t1.jzrq+' '+'23:55:50',getDate())>=(-1*60*60*24*30) and DATEDIFF(ss, CONVERT(varchar(10), GETDATE(), 120) +' '+'00:00:00',t1.jzrq+' '+'23:55:50')>=(-1*60*60*24*30) and t1.jzrq is not null and t1.jzrq<> '' )  and not exists(select 1 from mode_reminddata_all t2 where t2.remindjobid=1 and t2.billid=t1.id and lastdate= CONVERT(varchar(10), GETDATE(), 120)  and isnull(isRemindWorkflow,0)=1 )
+2019-12-27 09:33:06,210 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: datediff 函数导致溢出。用于分隔两个日期/时间实例的日期部分的数字太大。请尝试使用日期部分精度较低的 datediff。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:196)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet$FetchBuffer.nextRow(SQLServerResultSet.java:4700)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.fetchBufferNext(SQLServerResultSet.java:1683)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.next(SQLServerResultSet.java:956)
+	at weaver.conn.RecordSet.parseResultSet(RecordSet.java:1656)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:916)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.formmode.task.action.TaskAction.doRemind(TaskAction.java:247)
+	at weaver.formmode.task.action.WorkflowMessageTaskAction.doIt(WorkflowMessageTaskAction.java:33)
+	at weaver.formmode.task.action.TaskAction.execute(TaskAction.java:34)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:529)
+2019-12-27 09:33:08,581 ERROR weaver.system.MonitorThreadManager  - >>>>MonitorThreadManager>>单独的预警关闭控制：isThreadWarningStart(zt)=0<<<<
+2019-12-27 09:33:09,074 ERROR weaver.general.BaseBean  - 初始化微信推送扫描线程成功，扫描间隔1分钟---------
+2019-12-27 09:35:00,095 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227093500&sign=3ef56e0d498e67f30440f47e8dc4a4a5
+2019-12-27 09:35:00,793 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 09:35:00,794 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 09:35:00,794 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227093500&sign=3ef56e0d498e67f30440f47e8dc4a4a5
+2019-12-27 09:35:00,831 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 09:35:00,832 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 09:35:00,832 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227093500&sign=3ef56e0d498e67f30440f47e8dc4a4a5
+2019-12-27 09:35:00,871 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 09:35:00,871 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 09:35:00,871 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227093500&sign=3ef56e0d498e67f30440f47e8dc4a4a5
+2019-12-27 09:35:00,941 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 09:35:00,941 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 09:35:00,941 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227093500&sign=3ef56e0d498e67f30440f47e8dc4a4a5
+2019-12-27 09:35:00,970 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 09:35:00,970 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 09:35:00,970 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227093500&sign=3ef56e0d498e67f30440f47e8dc4a4a5
+2019-12-27 09:35:00,999 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 09:40:00,020 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227094000&sign=274102b047a79bf77ed01f8e64edfb3b
+2019-12-27 09:40:00,057 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 09:40:00,057 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 09:40:00,057 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227094000&sign=274102b047a79bf77ed01f8e64edfb3b
+2019-12-27 09:40:00,085 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 09:40:00,085 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 09:40:00,085 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227094000&sign=274102b047a79bf77ed01f8e64edfb3b
+2019-12-27 09:40:00,111 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 09:40:00,111 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 09:40:00,111 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227094000&sign=274102b047a79bf77ed01f8e64edfb3b
+2019-12-27 09:40:00,154 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 09:40:00,155 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 09:40:00,155 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227094000&sign=274102b047a79bf77ed01f8e64edfb3b
+2019-12-27 09:40:00,188 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 09:40:00,188 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 09:40:00,188 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227094000&sign=274102b047a79bf77ed01f8e64edfb3b
+2019-12-27 09:40:00,218 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 09:45:00,018 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227094500&sign=e1b4f0d6cd67088e681ca017032f92f7
+2019-12-27 09:45:00,060 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 09:45:00,060 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 09:45:00,060 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227094500&sign=e1b4f0d6cd67088e681ca017032f92f7
+2019-12-27 09:45:00,092 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 09:45:00,092 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 09:45:00,092 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227094500&sign=e1b4f0d6cd67088e681ca017032f92f7
+2019-12-27 09:45:00,120 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 09:45:00,120 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 09:45:00,120 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227094500&sign=e1b4f0d6cd67088e681ca017032f92f7
+2019-12-27 09:45:00,156 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 09:45:00,156 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 09:45:00,156 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227094500&sign=e1b4f0d6cd67088e681ca017032f92f7
+2019-12-27 09:45:00,177 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 09:45:00,177 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 09:45:00,178 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227094500&sign=e1b4f0d6cd67088e681ca017032f92f7
+2019-12-27 09:45:00,203 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 09:50:00,021 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227095000&sign=eddcfcf1b422befe0e9d7eb6c7059e44
+2019-12-27 09:50:00,057 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 09:50:00,058 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 09:50:00,058 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227095000&sign=eddcfcf1b422befe0e9d7eb6c7059e44
+2019-12-27 09:50:00,100 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 09:50:00,100 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 09:50:00,100 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227095000&sign=eddcfcf1b422befe0e9d7eb6c7059e44
+2019-12-27 09:50:00,132 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 09:50:00,132 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 09:50:00,132 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227095000&sign=eddcfcf1b422befe0e9d7eb6c7059e44
+2019-12-27 09:50:00,159 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 09:50:00,159 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 09:50:00,159 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227095000&sign=eddcfcf1b422befe0e9d7eb6c7059e44
+2019-12-27 09:50:00,182 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 09:50:00,182 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 09:50:00,182 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227095000&sign=eddcfcf1b422befe0e9d7eb6c7059e44
+2019-12-27 09:50:00,201 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 09:55:00,020 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227095500&sign=92232fdb0a13d2ab7824224b2ac5f9d7
+2019-12-27 09:55:00,049 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 09:55:00,049 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 09:55:00,049 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227095500&sign=92232fdb0a13d2ab7824224b2ac5f9d7
+2019-12-27 09:55:00,078 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 09:55:00,078 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 09:55:00,078 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227095500&sign=92232fdb0a13d2ab7824224b2ac5f9d7
+2019-12-27 09:55:00,120 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 09:55:00,120 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 09:55:00,120 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227095500&sign=92232fdb0a13d2ab7824224b2ac5f9d7
+2019-12-27 09:55:00,149 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 09:55:00,149 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 09:55:00,149 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227095500&sign=92232fdb0a13d2ab7824224b2ac5f9d7
+2019-12-27 09:55:00,175 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 09:55:00,175 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 09:55:00,175 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227095500&sign=92232fdb0a13d2ab7824224b2ac5f9d7
+2019-12-27 09:55:00,203 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 10:00:00,027 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227100000&sign=ab709e1c79f0d536dbb5b2d514b7dd1f
+2019-12-27 10:00:03,075 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 10:00:03,075 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 10:00:03,076 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227100000&sign=ab709e1c79f0d536dbb5b2d514b7dd1f
+2019-12-27 10:00:03,117 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 10:00:03,117 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 10:00:03,117 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227100000&sign=ab709e1c79f0d536dbb5b2d514b7dd1f
+2019-12-27 10:00:03,146 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 10:00:03,147 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 10:00:03,147 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227100000&sign=ab709e1c79f0d536dbb5b2d514b7dd1f
+2019-12-27 10:00:03,182 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 10:00:03,182 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 10:00:03,182 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227100000&sign=ab709e1c79f0d536dbb5b2d514b7dd1f
+2019-12-27 10:00:03,206 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 10:00:03,207 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 10:00:03,207 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227100000&sign=ab709e1c79f0d536dbb5b2d514b7dd1f
+2019-12-27 10:00:03,240 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 10:05:00,016 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227100500&sign=7ba092bb143c0607703dd14c638ed622
+2019-12-27 10:05:00,056 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 10:05:00,056 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 10:05:00,056 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227100500&sign=7ba092bb143c0607703dd14c638ed622
+2019-12-27 10:05:00,093 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 10:05:00,093 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 10:05:00,093 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227100500&sign=7ba092bb143c0607703dd14c638ed622
+2019-12-27 10:05:00,131 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 10:05:00,131 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 10:05:00,131 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227100500&sign=7ba092bb143c0607703dd14c638ed622
+2019-12-27 10:05:00,160 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 10:05:00,161 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 10:05:00,161 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227100500&sign=7ba092bb143c0607703dd14c638ed622
+2019-12-27 10:05:00,208 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 10:05:00,208 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 10:05:00,208 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227100500&sign=7ba092bb143c0607703dd14c638ed622
+2019-12-27 10:05:00,244 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 10:10:00,025 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227101000&sign=be5cd2cb4be28c3fe2d1afdfbddde6cb
+2019-12-27 10:10:00,079 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 10:10:00,079 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 10:10:00,079 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227101000&sign=be5cd2cb4be28c3fe2d1afdfbddde6cb
+2019-12-27 10:10:00,106 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 10:10:00,106 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 10:10:00,106 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227101000&sign=be5cd2cb4be28c3fe2d1afdfbddde6cb
+2019-12-27 10:10:00,136 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 10:10:00,136 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 10:10:00,136 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227101000&sign=be5cd2cb4be28c3fe2d1afdfbddde6cb
+2019-12-27 10:10:00,188 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 10:10:00,188 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 10:10:00,189 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227101000&sign=be5cd2cb4be28c3fe2d1afdfbddde6cb
+2019-12-27 10:10:00,211 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 10:10:00,211 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 10:10:00,211 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227101000&sign=be5cd2cb4be28c3fe2d1afdfbddde6cb
+2019-12-27 10:10:00,257 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 10:12:59,280 ERROR weaver.email.MailTimingDateReceive  - 自动接收邮件定时任务开始--单线程
+2019-12-27 10:12:59,308 ERROR weaver.email.MailTimingDateReceive  - 自动接收邮件定时任务结束--没有开启外部邮件或者自动接收功能--单线程
+2019-12-27 10:15:00,026 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227101500&sign=4f471fbe034e0b2e3db83475814eea41
+2019-12-27 10:15:00,097 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 10:15:00,097 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 10:15:00,097 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227101500&sign=4f471fbe034e0b2e3db83475814eea41
+2019-12-27 10:15:00,120 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 10:15:00,120 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 10:15:00,120 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227101500&sign=4f471fbe034e0b2e3db83475814eea41
+2019-12-27 10:15:00,145 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 10:15:00,145 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 10:15:00,145 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227101500&sign=4f471fbe034e0b2e3db83475814eea41
+2019-12-27 10:15:00,171 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 10:15:00,171 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 10:15:00,171 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227101500&sign=4f471fbe034e0b2e3db83475814eea41
+2019-12-27 10:15:00,199 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 10:15:00,199 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 10:15:00,199 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227101500&sign=4f471fbe034e0b2e3db83475814eea41
+2019-12-27 10:15:00,223 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 10:20:00,023 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227102000&sign=df599352eafdc68b8aa9807b7d69539e
+2019-12-27 10:20:00,069 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 10:20:00,069 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 10:20:00,069 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227102000&sign=df599352eafdc68b8aa9807b7d69539e
+2019-12-27 10:20:00,091 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 10:20:00,092 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 10:20:00,092 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227102000&sign=df599352eafdc68b8aa9807b7d69539e
+2019-12-27 10:20:00,121 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 10:20:00,121 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 10:20:00,121 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227102000&sign=df599352eafdc68b8aa9807b7d69539e
+2019-12-27 10:20:00,153 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 10:20:00,153 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 10:20:00,153 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227102000&sign=df599352eafdc68b8aa9807b7d69539e
+2019-12-27 10:20:00,174 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 10:20:00,175 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 10:20:00,175 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227102000&sign=df599352eafdc68b8aa9807b7d69539e
+2019-12-27 10:20:00,209 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 10:25:00,017 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227102500&sign=72869520360515e974574b4a8d1146b0
+2019-12-27 10:25:00,078 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 10:25:00,078 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 10:25:00,078 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227102500&sign=72869520360515e974574b4a8d1146b0
+2019-12-27 10:25:00,108 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 10:25:00,108 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 10:25:00,108 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227102500&sign=72869520360515e974574b4a8d1146b0
+2019-12-27 10:25:00,139 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 10:25:00,139 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 10:25:00,140 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227102500&sign=72869520360515e974574b4a8d1146b0
+2019-12-27 10:25:03,168 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 10:25:03,168 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 10:25:03,169 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227102500&sign=72869520360515e974574b4a8d1146b0
+2019-12-27 10:25:03,194 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 10:25:03,195 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 10:25:03,195 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227102500&sign=72869520360515e974574b4a8d1146b0
+2019-12-27 10:25:03,224 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 10:30:00,012 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227103000&sign=396e22f57a03eca1bc6770978985f79c
+2019-12-27 10:30:00,055 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 10:30:00,055 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 10:30:00,055 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227103000&sign=396e22f57a03eca1bc6770978985f79c
+2019-12-27 10:30:00,105 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 10:30:00,105 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 10:30:00,105 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227103000&sign=396e22f57a03eca1bc6770978985f79c
+2019-12-27 10:30:00,148 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 10:30:00,149 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 10:30:00,149 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227103000&sign=396e22f57a03eca1bc6770978985f79c
+2019-12-27 10:30:00,192 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 10:30:00,192 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 10:30:00,192 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227103000&sign=396e22f57a03eca1bc6770978985f79c
+2019-12-27 10:30:00,232 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 10:30:00,232 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 10:30:00,232 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227103000&sign=396e22f57a03eca1bc6770978985f79c
+2019-12-27 10:30:00,281 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 10:35:00,011 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227103500&sign=17d4a7ad9a2634fd7982d5d888bdfcd6
+2019-12-27 10:35:00,054 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 10:35:00,055 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 10:35:00,055 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227103500&sign=17d4a7ad9a2634fd7982d5d888bdfcd6
+2019-12-27 10:35:00,084 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 10:35:00,084 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 10:35:00,084 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227103500&sign=17d4a7ad9a2634fd7982d5d888bdfcd6
+2019-12-27 10:35:00,122 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 10:35:00,122 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 10:35:00,122 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227103500&sign=17d4a7ad9a2634fd7982d5d888bdfcd6
+2019-12-27 10:35:00,167 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 10:35:00,167 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 10:35:00,167 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227103500&sign=17d4a7ad9a2634fd7982d5d888bdfcd6
+2019-12-27 10:35:00,201 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 10:35:00,201 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 10:35:00,201 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227103500&sign=17d4a7ad9a2634fd7982d5d888bdfcd6
+2019-12-27 10:35:00,230 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 10:40:00,021 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227104000&sign=81e702b49ac0541e4c66331c8a3c79e2
+2019-12-27 10:40:00,077 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 10:40:00,077 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 10:40:00,077 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227104000&sign=81e702b49ac0541e4c66331c8a3c79e2
+2019-12-27 10:40:00,101 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 10:40:00,102 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 10:40:00,102 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227104000&sign=81e702b49ac0541e4c66331c8a3c79e2
+2019-12-27 10:40:00,126 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 10:40:00,126 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 10:40:00,126 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227104000&sign=81e702b49ac0541e4c66331c8a3c79e2
+2019-12-27 10:40:00,156 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 10:40:00,156 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 10:40:00,156 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227104000&sign=81e702b49ac0541e4c66331c8a3c79e2
+2019-12-27 10:40:00,189 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 10:40:00,189 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 10:40:00,189 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227104000&sign=81e702b49ac0541e4c66331c8a3c79e2
+2019-12-27 10:40:00,215 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 10:45:00,017 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227104500&sign=c0520e04e114751d78baa8984b2a52ac
+2019-12-27 10:45:00,060 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 10:45:00,061 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 10:45:00,061 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227104500&sign=c0520e04e114751d78baa8984b2a52ac
+2019-12-27 10:45:00,093 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 10:45:00,093 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 10:45:00,093 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227104500&sign=c0520e04e114751d78baa8984b2a52ac
+2019-12-27 10:45:00,129 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 10:45:00,129 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 10:45:00,129 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227104500&sign=c0520e04e114751d78baa8984b2a52ac
+2019-12-27 10:45:03,155 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 10:45:03,155 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 10:45:03,155 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227104500&sign=c0520e04e114751d78baa8984b2a52ac
+2019-12-27 10:45:03,196 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 10:45:03,196 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 10:45:03,196 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227104500&sign=c0520e04e114751d78baa8984b2a52ac
+2019-12-27 10:45:03,223 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 10:50:00,022 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227105000&sign=5496f5676423fd3eada59448a5a5da45
+2019-12-27 10:50:00,066 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 10:50:00,066 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 10:50:00,066 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227105000&sign=5496f5676423fd3eada59448a5a5da45
+2019-12-27 10:50:00,088 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 10:50:00,088 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 10:50:00,088 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227105000&sign=5496f5676423fd3eada59448a5a5da45
+2019-12-27 10:50:00,114 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 10:50:00,114 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 10:50:00,114 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227105000&sign=5496f5676423fd3eada59448a5a5da45
+2019-12-27 10:50:00,140 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 10:50:00,140 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 10:50:00,140 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227105000&sign=5496f5676423fd3eada59448a5a5da45
+2019-12-27 10:50:00,164 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 10:50:00,165 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 10:50:00,165 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227105000&sign=5496f5676423fd3eada59448a5a5da45
+2019-12-27 10:50:00,189 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 10:52:59,309 ERROR weaver.email.MailTimingDateReceive  - 自动接收邮件定时任务开始--单线程
+2019-12-27 10:52:59,311 ERROR weaver.email.MailTimingDateReceive  - 自动接收邮件定时任务结束--没有开启外部邮件或者自动接收功能--单线程
+2019-12-27 10:55:00,016 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227105500&sign=034d618e37cb701e264fd5c8f3987fe8
+2019-12-27 10:55:00,050 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 10:55:00,050 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 10:55:00,051 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227105500&sign=034d618e37cb701e264fd5c8f3987fe8
+2019-12-27 10:55:00,082 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 10:55:00,082 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 10:55:00,082 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227105500&sign=034d618e37cb701e264fd5c8f3987fe8
+2019-12-27 10:55:00,116 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 10:55:00,116 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 10:55:00,116 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227105500&sign=034d618e37cb701e264fd5c8f3987fe8
+2019-12-27 10:55:00,147 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 10:55:00,148 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 10:55:00,148 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227105500&sign=034d618e37cb701e264fd5c8f3987fe8
+2019-12-27 10:55:00,170 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 10:55:00,170 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 10:55:00,170 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227105500&sign=034d618e37cb701e264fd5c8f3987fe8
+2019-12-27 10:55:00,200 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 11:00:00,023 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227110000&sign=0e22d0df090fa8505c9e3dbe2dffb928
+2019-12-27 11:00:00,074 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 11:00:00,074 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 11:00:00,075 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227110000&sign=0e22d0df090fa8505c9e3dbe2dffb928
+2019-12-27 11:00:00,106 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 11:00:00,106 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 11:00:00,106 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227110000&sign=0e22d0df090fa8505c9e3dbe2dffb928
+2019-12-27 11:00:00,142 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 11:00:00,142 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 11:00:00,142 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227110000&sign=0e22d0df090fa8505c9e3dbe2dffb928
+2019-12-27 11:00:00,178 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 11:00:00,178 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 11:00:00,178 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227110000&sign=0e22d0df090fa8505c9e3dbe2dffb928
+2019-12-27 11:00:00,225 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 11:00:00,225 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 11:00:00,225 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227110000&sign=0e22d0df090fa8505c9e3dbe2dffb928
+2019-12-27 11:00:00,278 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 11:05:00,036 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227110500&sign=993b40d9e4f98ce2e5d6366ab3f70593
+2019-12-27 11:05:00,087 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 11:05:00,087 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 11:05:00,087 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227110500&sign=993b40d9e4f98ce2e5d6366ab3f70593
+2019-12-27 11:05:00,111 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 11:05:00,111 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 11:05:00,111 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227110500&sign=993b40d9e4f98ce2e5d6366ab3f70593
+2019-12-27 11:05:00,153 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 11:05:00,154 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 11:05:00,154 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227110500&sign=993b40d9e4f98ce2e5d6366ab3f70593
+2019-12-27 11:05:00,190 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 11:05:00,190 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 11:05:00,190 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227110500&sign=993b40d9e4f98ce2e5d6366ab3f70593
+2019-12-27 11:05:00,214 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 11:05:00,214 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 11:05:00,214 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227110500&sign=993b40d9e4f98ce2e5d6366ab3f70593
+2019-12-27 11:05:00,249 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 11:10:00,016 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227111000&sign=a93d264ba615d1d6e5c30b6bd8889314
+2019-12-27 11:10:00,057 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 11:10:00,057 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 11:10:00,057 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227111000&sign=a93d264ba615d1d6e5c30b6bd8889314
+2019-12-27 11:10:00,084 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 11:10:00,084 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 11:10:00,084 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227111000&sign=a93d264ba615d1d6e5c30b6bd8889314
+2019-12-27 11:10:00,114 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 11:10:00,114 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 11:10:00,114 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227111000&sign=a93d264ba615d1d6e5c30b6bd8889314
+2019-12-27 11:10:00,137 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 11:10:00,137 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 11:10:00,137 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227111000&sign=a93d264ba615d1d6e5c30b6bd8889314
+2019-12-27 11:10:00,159 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 11:10:00,159 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 11:10:00,159 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227111000&sign=a93d264ba615d1d6e5c30b6bd8889314
+2019-12-27 11:10:00,188 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 11:15:00,013 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227111500&sign=cfc5fc3d7c169fffb2fe2bf9bbdd53d4
+2019-12-27 11:15:00,060 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 11:15:00,060 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 11:15:00,060 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227111500&sign=cfc5fc3d7c169fffb2fe2bf9bbdd53d4
+2019-12-27 11:15:00,080 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 11:15:00,080 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 11:15:00,080 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227111500&sign=cfc5fc3d7c169fffb2fe2bf9bbdd53d4
+2019-12-27 11:15:00,104 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 11:15:00,104 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 11:15:00,105 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227111500&sign=cfc5fc3d7c169fffb2fe2bf9bbdd53d4
+2019-12-27 11:15:00,153 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 11:15:00,153 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 11:15:00,153 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227111500&sign=cfc5fc3d7c169fffb2fe2bf9bbdd53d4
+2019-12-27 11:15:00,180 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 11:15:00,180 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 11:15:00,180 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227111500&sign=cfc5fc3d7c169fffb2fe2bf9bbdd53d4
+2019-12-27 11:15:00,209 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 11:20:00,014 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227112000&sign=86a87d1fbb0fb059ec7eedf6463736d7
+2019-12-27 11:20:00,049 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 11:20:00,049 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 11:20:00,049 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227112000&sign=86a87d1fbb0fb059ec7eedf6463736d7
+2019-12-27 11:20:00,088 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 11:20:00,088 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 11:20:00,088 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227112000&sign=86a87d1fbb0fb059ec7eedf6463736d7
+2019-12-27 11:20:00,134 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 11:20:00,134 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 11:20:00,134 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227112000&sign=86a87d1fbb0fb059ec7eedf6463736d7
+2019-12-27 11:20:00,162 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 11:20:00,162 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 11:20:00,162 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227112000&sign=86a87d1fbb0fb059ec7eedf6463736d7
+2019-12-27 11:20:00,191 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 11:20:00,191 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 11:20:00,192 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227112000&sign=86a87d1fbb0fb059ec7eedf6463736d7
+2019-12-27 11:20:00,215 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 11:25:00,022 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227112500&sign=475fca4524e6fbb8dc50585bfb68a598
+2019-12-27 11:25:00,064 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 11:25:00,065 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 11:25:00,065 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227112500&sign=475fca4524e6fbb8dc50585bfb68a598
+2019-12-27 11:25:00,091 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 11:25:00,091 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 11:25:00,091 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227112500&sign=475fca4524e6fbb8dc50585bfb68a598
+2019-12-27 11:25:00,127 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 11:25:00,127 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 11:25:00,127 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227112500&sign=475fca4524e6fbb8dc50585bfb68a598
+2019-12-27 11:25:00,154 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 11:25:00,154 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 11:25:00,154 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227112500&sign=475fca4524e6fbb8dc50585bfb68a598
+2019-12-27 11:25:00,178 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 11:25:00,178 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 11:25:00,178 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227112500&sign=475fca4524e6fbb8dc50585bfb68a598
+2019-12-27 11:25:00,212 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 11:30:00,016 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227113000&sign=c29f07f5b9bd6efd6e17187a066cfdd3
+2019-12-27 11:30:00,058 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 11:30:00,058 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 11:30:00,058 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227113000&sign=c29f07f5b9bd6efd6e17187a066cfdd3
+2019-12-27 11:30:00,083 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 11:30:00,083 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 11:30:00,083 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227113000&sign=c29f07f5b9bd6efd6e17187a066cfdd3
+2019-12-27 11:30:00,110 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 11:30:00,110 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 11:30:00,110 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227113000&sign=c29f07f5b9bd6efd6e17187a066cfdd3
+2019-12-27 11:30:00,139 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 11:30:00,139 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 11:30:00,139 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227113000&sign=c29f07f5b9bd6efd6e17187a066cfdd3
+2019-12-27 11:30:00,167 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 11:30:00,167 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 11:30:00,167 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227113000&sign=c29f07f5b9bd6efd6e17187a066cfdd3
+2019-12-27 11:30:00,190 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 11:32:59,089 INFO  weaver.system.WfUrgerTimer  - Start to run doThreadWork method at WfUrgerTimer class. 
+2019-12-27 11:32:59,090 INFO  weaver.system.WfUrgerTimer  - The string of current time is: 1132
+2019-12-27 11:32:59,090 INFO  weaver.system.WfUrgerTimer  - The return value is : 	false
+2019-12-27 11:32:59,090 INFO  weaver.system.WfUrgerTimer  - The current time is incorrent, program will return directly.
+2019-12-27 11:32:59,311 ERROR weaver.email.MailTimingDateReceive  - 自动接收邮件定时任务开始--单线程
+2019-12-27 11:32:59,312 ERROR weaver.email.MailTimingDateReceive  - 自动接收邮件定时任务结束--没有开启外部邮件或者自动接收功能--单线程
+2019-12-27 11:35:00,019 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227113500&sign=43da147adba6a1ffd01ec8f8e081e390
+2019-12-27 11:35:00,068 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 11:35:00,068 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 11:35:00,068 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227113500&sign=43da147adba6a1ffd01ec8f8e081e390
+2019-12-27 11:35:00,098 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 11:35:00,098 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 11:35:00,098 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227113500&sign=43da147adba6a1ffd01ec8f8e081e390
+2019-12-27 11:35:00,125 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 11:35:00,125 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 11:35:00,125 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227113500&sign=43da147adba6a1ffd01ec8f8e081e390
+2019-12-27 11:35:00,148 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 11:35:00,149 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 11:35:00,149 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227113500&sign=43da147adba6a1ffd01ec8f8e081e390
+2019-12-27 11:35:00,171 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 11:35:00,171 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 11:35:00,171 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227113500&sign=43da147adba6a1ffd01ec8f8e081e390
+2019-12-27 11:35:00,201 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 11:40:00,019 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227114000&sign=3bf004d597f164a6c9cabf93d858516f
+2019-12-27 11:40:00,055 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 11:40:00,055 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 11:40:00,055 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227114000&sign=3bf004d597f164a6c9cabf93d858516f
+2019-12-27 11:40:00,080 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 11:40:00,080 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 11:40:00,080 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227114000&sign=3bf004d597f164a6c9cabf93d858516f
+2019-12-27 11:40:00,106 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 11:40:00,106 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 11:40:00,106 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227114000&sign=3bf004d597f164a6c9cabf93d858516f
+2019-12-27 11:40:00,149 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 11:40:00,149 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 11:40:00,149 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227114000&sign=3bf004d597f164a6c9cabf93d858516f
+2019-12-27 11:40:00,172 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 11:40:00,172 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 11:40:00,172 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227114000&sign=3bf004d597f164a6c9cabf93d858516f
+2019-12-27 11:40:00,202 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 11:45:00,019 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227114500&sign=37aa6683fbc9e16ff594ed6cc2ff2b21
+2019-12-27 11:45:00,057 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 11:45:00,057 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 11:45:00,057 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227114500&sign=37aa6683fbc9e16ff594ed6cc2ff2b21
+2019-12-27 11:45:00,097 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 11:45:00,097 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 11:45:00,097 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227114500&sign=37aa6683fbc9e16ff594ed6cc2ff2b21
+2019-12-27 11:45:00,124 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 11:45:00,124 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 11:45:00,124 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227114500&sign=37aa6683fbc9e16ff594ed6cc2ff2b21
+2019-12-27 11:45:00,165 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 11:45:00,165 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 11:45:00,165 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227114500&sign=37aa6683fbc9e16ff594ed6cc2ff2b21
+2019-12-27 11:45:00,200 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 11:45:00,201 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 11:45:00,201 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227114500&sign=37aa6683fbc9e16ff594ed6cc2ff2b21
+2019-12-27 11:45:00,231 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 11:50:00,017 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227115000&sign=ceb65b21bcfe31472cf89c1bda32d8b2
+2019-12-27 11:50:00,048 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 11:50:00,048 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 11:50:00,048 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227115000&sign=ceb65b21bcfe31472cf89c1bda32d8b2
+2019-12-27 11:50:00,073 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 11:50:00,073 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 11:50:00,073 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227115000&sign=ceb65b21bcfe31472cf89c1bda32d8b2
+2019-12-27 11:50:00,108 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 11:50:00,108 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 11:50:00,108 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227115000&sign=ceb65b21bcfe31472cf89c1bda32d8b2
+2019-12-27 11:50:00,429 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 11:50:00,429 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 11:50:00,429 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227115000&sign=ceb65b21bcfe31472cf89c1bda32d8b2
+2019-12-27 11:50:00,461 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 11:50:00,461 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 11:50:00,461 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227115000&sign=ceb65b21bcfe31472cf89c1bda32d8b2
+2019-12-27 11:50:00,502 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 11:55:00,018 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227115500&sign=5e1d0490fcecfaf79d949f21403fcb88
+2019-12-27 11:55:00,057 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 11:55:00,057 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 11:55:00,057 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227115500&sign=5e1d0490fcecfaf79d949f21403fcb88
+2019-12-27 11:55:00,082 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 11:55:00,083 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 11:55:00,083 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227115500&sign=5e1d0490fcecfaf79d949f21403fcb88
+2019-12-27 11:55:00,114 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 11:55:00,114 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 11:55:00,114 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227115500&sign=5e1d0490fcecfaf79d949f21403fcb88
+2019-12-27 11:55:00,146 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 11:55:00,147 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 11:55:00,147 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227115500&sign=5e1d0490fcecfaf79d949f21403fcb88
+2019-12-27 11:55:00,175 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 11:55:00,176 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 11:55:00,176 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227115500&sign=5e1d0490fcecfaf79d949f21403fcb88
+2019-12-27 11:55:00,199 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 12:00:00,018 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227120000&sign=eb992a5449fb6ce66bf15826a863e961
+2019-12-27 12:00:00,121 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 12:00:00,121 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 12:00:00,121 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227120000&sign=eb992a5449fb6ce66bf15826a863e961
+2019-12-27 12:00:00,162 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 12:00:00,162 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 12:00:00,162 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227120000&sign=eb992a5449fb6ce66bf15826a863e961
+2019-12-27 12:00:00,207 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 12:00:00,207 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 12:00:00,207 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227120000&sign=eb992a5449fb6ce66bf15826a863e961
+2019-12-27 12:00:00,250 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 12:00:00,250 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 12:00:00,250 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227120000&sign=eb992a5449fb6ce66bf15826a863e961
+2019-12-27 12:00:00,309 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 12:00:00,309 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 12:00:00,309 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227120000&sign=eb992a5449fb6ce66bf15826a863e961
+2019-12-27 12:00:00,344 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 12:05:00,021 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227120500&sign=aeb2bba8633cea0bd5fd4e3e86a2ab28
+2019-12-27 12:05:00,065 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 12:05:00,065 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 12:05:00,065 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227120500&sign=aeb2bba8633cea0bd5fd4e3e86a2ab28
+2019-12-27 12:05:00,094 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 12:05:00,094 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 12:05:00,094 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227120500&sign=aeb2bba8633cea0bd5fd4e3e86a2ab28
+2019-12-27 12:05:00,125 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 12:05:00,125 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 12:05:00,125 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227120500&sign=aeb2bba8633cea0bd5fd4e3e86a2ab28
+2019-12-27 12:05:00,157 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 12:05:00,157 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 12:05:00,158 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227120500&sign=aeb2bba8633cea0bd5fd4e3e86a2ab28
+2019-12-27 12:05:00,185 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 12:05:00,186 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 12:05:00,186 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227120500&sign=aeb2bba8633cea0bd5fd4e3e86a2ab28
+2019-12-27 12:05:00,221 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 12:10:00,018 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227121000&sign=5b6080c045300c3e064909bc9d348297
+2019-12-27 12:10:00,069 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 12:10:00,069 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 12:10:00,069 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227121000&sign=5b6080c045300c3e064909bc9d348297
+2019-12-27 12:10:00,099 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 12:10:00,099 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 12:10:00,099 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227121000&sign=5b6080c045300c3e064909bc9d348297
+2019-12-27 12:10:00,128 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 12:10:00,128 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 12:10:00,128 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227121000&sign=5b6080c045300c3e064909bc9d348297
+2019-12-27 12:10:00,156 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 12:10:00,156 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 12:10:00,156 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227121000&sign=5b6080c045300c3e064909bc9d348297
+2019-12-27 12:10:00,181 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 12:10:00,182 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 12:10:00,182 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227121000&sign=5b6080c045300c3e064909bc9d348297
+2019-12-27 12:10:00,208 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 12:12:59,312 ERROR weaver.email.MailTimingDateReceive  - 自动接收邮件定时任务开始--单线程
+2019-12-27 12:12:59,315 ERROR weaver.email.MailTimingDateReceive  - 自动接收邮件定时任务结束--没有开启外部邮件或者自动接收功能--单线程
+2019-12-27 12:15:00,015 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227121500&sign=0e2346f7601e471fcca9dfcf21594150
+2019-12-27 12:15:00,048 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 12:15:00,048 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 12:15:00,048 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227121500&sign=0e2346f7601e471fcca9dfcf21594150
+2019-12-27 12:15:00,075 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 12:15:00,075 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 12:15:00,075 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227121500&sign=0e2346f7601e471fcca9dfcf21594150
+2019-12-27 12:15:00,107 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 12:15:00,107 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 12:15:00,108 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227121500&sign=0e2346f7601e471fcca9dfcf21594150
+2019-12-27 12:15:00,133 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 12:15:00,133 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 12:15:00,134 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227121500&sign=0e2346f7601e471fcca9dfcf21594150
+2019-12-27 12:15:00,171 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 12:15:00,171 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 12:15:00,171 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227121500&sign=0e2346f7601e471fcca9dfcf21594150
+2019-12-27 12:15:00,206 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 12:20:00,014 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227122000&sign=4344de0bae853afbc288d2757def023c
+2019-12-27 12:20:00,057 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 12:20:00,057 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 12:20:00,057 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227122000&sign=4344de0bae853afbc288d2757def023c
+2019-12-27 12:20:00,084 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 12:20:00,084 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 12:20:00,084 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227122000&sign=4344de0bae853afbc288d2757def023c
+2019-12-27 12:20:00,113 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 12:20:00,113 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 12:20:00,113 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227122000&sign=4344de0bae853afbc288d2757def023c
+2019-12-27 12:20:00,143 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 12:20:00,144 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 12:20:00,144 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227122000&sign=4344de0bae853afbc288d2757def023c
+2019-12-27 12:20:00,169 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 12:20:00,169 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 12:20:00,169 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227122000&sign=4344de0bae853afbc288d2757def023c
+2019-12-27 12:20:00,202 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 12:25:00,018 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227122500&sign=c6da1642c9d7089dfadce9c867a26d4b
+2019-12-27 12:25:00,062 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 12:25:00,062 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 12:25:00,062 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227122500&sign=c6da1642c9d7089dfadce9c867a26d4b
+2019-12-27 12:25:00,089 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 12:25:00,089 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 12:25:00,089 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227122500&sign=c6da1642c9d7089dfadce9c867a26d4b
+2019-12-27 12:25:00,114 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 12:25:00,115 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 12:25:00,115 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227122500&sign=c6da1642c9d7089dfadce9c867a26d4b
+2019-12-27 12:25:00,191 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 12:25:00,192 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 12:25:00,192 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227122500&sign=c6da1642c9d7089dfadce9c867a26d4b
+2019-12-27 12:25:00,220 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 12:25:00,220 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 12:25:00,220 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227122500&sign=c6da1642c9d7089dfadce9c867a26d4b
+2019-12-27 12:25:00,248 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 13:04:11,541 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227130411&sign=1b7a141c9da4f902053b6b809ab0c44a
+2019-12-27 13:04:15,268 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - e错误： {"@type":"java.lang.NullPointerException","stackTrace":[{"className":"com.shxiv.hfwh.rest.http.HttpServiceImpl","fileName":"HttpServiceImpl.java","lineNumber":65,"methodName":"addMessage","nativeMethod":false},{"className":"com.shxiv.hfwh.rest.http.HttpServiceImpl","fileName":"HttpServiceImpl.java","lineNumber":23,"methodName":"execute","nativeMethod":false},{"className":"weaver.interfaces.schedule.WeaverJob","fileName":"WeaverJob.java","lineNumber":32,"methodName":"execute","nativeMethod":false},{"className":"org.quartz.core.JobRunShell","fileName":"JobRunShell.java","lineNumber":202,"methodName":"run","nativeMethod":false},{"className":"org.quartz.simpl.SimpleThreadPool$WorkerThread","fileName":"SimpleThreadPool.java","lineNumber":529,"methodName":"run","nativeMethod":false}],"suppressed":[]}
+2019-12-27 13:05:00,020 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227130500&sign=8506bab809fae12bbe8f0446c5569748
+2019-12-27 13:05:00,098 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 13:05:00,099 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 13:05:00,099 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227130500&sign=8506bab809fae12bbe8f0446c5569748
+2019-12-27 13:05:03,149 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 13:05:03,149 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 13:05:03,150 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227130500&sign=8506bab809fae12bbe8f0446c5569748
+2019-12-27 13:05:03,198 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 13:05:03,198 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 13:05:03,198 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227130500&sign=8506bab809fae12bbe8f0446c5569748
+2019-12-27 13:05:24,202 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - e错误： {"@type":"java.lang.NullPointerException","stackTrace":[{"className":"com.shxiv.hfwh.rest.http.HttpServiceImpl","fileName":"HttpServiceImpl.java","lineNumber":391,"methodName":"addMessage","nativeMethod":false},{"className":"com.shxiv.hfwh.rest.http.HttpServiceImpl","fileName":"HttpServiceImpl.java","lineNumber":23,"methodName":"execute","nativeMethod":false},{"className":"weaver.interfaces.schedule.WeaverJob","fileName":"WeaverJob.java","lineNumber":32,"methodName":"execute","nativeMethod":false},{"className":"org.quartz.core.JobRunShell","fileName":"JobRunShell.java","lineNumber":202,"methodName":"run","nativeMethod":false},{"className":"org.quartz.simpl.SimpleThreadPool$WorkerThread","fileName":"SimpleThreadPool.java","lineNumber":529,"methodName":"run","nativeMethod":false}],"suppressed":[]}
+2019-12-27 13:10:00,019 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227131000&sign=6cc006637846cf544abfebe8872ad291
+2019-12-27 13:10:00,100 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 13:10:00,100 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 13:10:00,101 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227131000&sign=6cc006637846cf544abfebe8872ad291
+2019-12-27 13:10:00,172 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 13:10:00,172 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 13:10:00,172 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227131000&sign=6cc006637846cf544abfebe8872ad291
+2019-12-27 13:10:00,203 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 13:10:00,203 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 13:10:00,203 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227131000&sign=6cc006637846cf544abfebe8872ad291
+2019-12-27 13:10:00,232 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 13:10:00,233 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 13:10:00,233 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227131000&sign=6cc006637846cf544abfebe8872ad291
+2019-12-27 13:10:00,271 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 13:10:00,271 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 13:10:00,271 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227131000&sign=6cc006637846cf544abfebe8872ad291
+2019-12-27 13:10:00,316 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 13:15:00,019 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227131500&sign=4a22f88c2e4dc16b07acd5e7060649c3
+2019-12-27 13:15:00,067 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 13:15:00,067 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 13:15:00,067 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227131500&sign=4a22f88c2e4dc16b07acd5e7060649c3
+2019-12-27 13:15:00,090 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 13:15:00,091 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 13:15:00,091 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227131500&sign=4a22f88c2e4dc16b07acd5e7060649c3
+2019-12-27 13:15:00,435 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 13:15:00,435 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 13:15:00,436 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227131500&sign=4a22f88c2e4dc16b07acd5e7060649c3
+2019-12-27 13:15:00,461 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 13:15:00,462 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 13:15:00,462 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227131500&sign=4a22f88c2e4dc16b07acd5e7060649c3
+2019-12-27 13:15:00,485 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 13:15:00,485 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 13:15:00,485 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227131500&sign=4a22f88c2e4dc16b07acd5e7060649c3
+2019-12-27 13:15:00,520 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 13:20:00,019 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227132000&sign=a6ad6a2f62634682c80ada627142563b
+2019-12-27 13:20:00,060 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 13:20:00,060 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 13:20:00,060 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227132000&sign=a6ad6a2f62634682c80ada627142563b
+2019-12-27 13:20:00,081 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 13:20:00,081 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 13:20:00,081 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227132000&sign=a6ad6a2f62634682c80ada627142563b
+2019-12-27 13:20:00,143 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 13:20:00,143 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 13:20:00,143 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227132000&sign=a6ad6a2f62634682c80ada627142563b
+2019-12-27 13:20:00,169 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 13:20:00,169 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 13:20:00,169 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227132000&sign=a6ad6a2f62634682c80ada627142563b
+2019-12-27 13:20:00,205 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 13:20:00,206 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 13:20:00,206 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227132000&sign=a6ad6a2f62634682c80ada627142563b
+2019-12-27 13:20:00,230 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 13:25:00,018 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227132500&sign=38690a1558b4a75d4c8d2b23c2035ed1
+2019-12-27 13:25:00,061 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 13:25:00,061 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 13:25:00,061 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227132500&sign=38690a1558b4a75d4c8d2b23c2035ed1
+2019-12-27 13:25:00,087 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 13:25:00,087 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 13:25:00,087 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227132500&sign=38690a1558b4a75d4c8d2b23c2035ed1
+2019-12-27 13:25:00,119 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 13:25:00,119 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 13:25:00,119 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227132500&sign=38690a1558b4a75d4c8d2b23c2035ed1
+2019-12-27 13:25:00,157 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 13:25:00,157 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 13:25:00,157 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227132500&sign=38690a1558b4a75d4c8d2b23c2035ed1
+2019-12-27 13:25:00,194 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 13:25:00,194 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 13:25:00,194 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227132500&sign=38690a1558b4a75d4c8d2b23c2035ed1
+2019-12-27 13:25:00,220 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 13:29:40,285 ERROR weaver.email.MailTimingDateReceive  - 自动接收邮件定时任务开始--单线程
+2019-12-27 13:29:40,286 ERROR weaver.email.MailTimingDateReceive  - 自动接收邮件定时任务结束--没有开启外部邮件或者自动接收功能--单线程
+2019-12-27 13:30:00,021 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227133000&sign=ee736ace3a23eadc897f419fee16ecc4
+2019-12-27 13:30:00,052 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 13:30:00,052 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 13:30:00,052 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227133000&sign=ee736ace3a23eadc897f419fee16ecc4
+2019-12-27 13:30:00,081 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 13:30:00,081 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 13:30:00,081 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227133000&sign=ee736ace3a23eadc897f419fee16ecc4
+2019-12-27 13:30:00,106 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 13:30:00,107 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 13:30:00,107 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227133000&sign=ee736ace3a23eadc897f419fee16ecc4
+2019-12-27 13:30:00,140 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 13:30:00,140 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 13:30:00,140 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227133000&sign=ee736ace3a23eadc897f419fee16ecc4
+2019-12-27 13:30:00,161 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 13:30:00,162 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 13:30:00,162 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227133000&sign=ee736ace3a23eadc897f419fee16ecc4
+2019-12-27 13:30:00,184 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 13:35:00,022 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227133500&sign=b3711a2ca7040f14d7b9dc29ccf29c1a
+2019-12-27 13:35:00,069 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 13:35:00,069 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 13:35:00,069 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227133500&sign=b3711a2ca7040f14d7b9dc29ccf29c1a
+2019-12-27 13:35:00,092 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 13:35:00,092 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 13:35:00,092 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227133500&sign=b3711a2ca7040f14d7b9dc29ccf29c1a
+2019-12-27 13:35:00,128 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 13:35:00,128 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 13:35:00,128 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227133500&sign=b3711a2ca7040f14d7b9dc29ccf29c1a
+2019-12-27 13:35:00,155 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 13:35:00,156 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 13:35:00,156 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227133500&sign=b3711a2ca7040f14d7b9dc29ccf29c1a
+2019-12-27 13:35:00,212 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 13:35:00,212 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 13:35:00,212 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227133500&sign=b3711a2ca7040f14d7b9dc29ccf29c1a
+2019-12-27 13:35:00,243 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 13:40:00,018 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227134000&sign=c40efe8c428a27014e296b230b4cfd97
+2019-12-27 13:40:00,061 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 13:40:00,061 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 13:40:00,061 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227134000&sign=c40efe8c428a27014e296b230b4cfd97
+2019-12-27 13:40:00,085 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 13:40:00,085 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 13:40:00,085 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227134000&sign=c40efe8c428a27014e296b230b4cfd97
+2019-12-27 13:40:00,114 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 13:40:00,114 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 13:40:00,114 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227134000&sign=c40efe8c428a27014e296b230b4cfd97
+2019-12-27 13:40:00,137 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 13:40:00,137 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 13:40:00,137 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227134000&sign=c40efe8c428a27014e296b230b4cfd97
+2019-12-27 13:40:00,165 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 13:40:00,165 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 13:40:00,165 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227134000&sign=c40efe8c428a27014e296b230b4cfd97
+2019-12-27 13:40:00,197 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 13:45:00,014 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227134500&sign=3ded135ed66cc4d16af94b66b03905bf
+2019-12-27 13:45:00,049 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 13:45:00,049 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 13:45:00,049 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227134500&sign=3ded135ed66cc4d16af94b66b03905bf
+2019-12-27 13:45:00,075 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 13:45:00,075 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 13:45:00,075 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227134500&sign=3ded135ed66cc4d16af94b66b03905bf
+2019-12-27 13:45:00,105 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 13:45:00,105 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 13:45:00,105 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227134500&sign=3ded135ed66cc4d16af94b66b03905bf
+2019-12-27 13:45:00,130 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 13:45:00,131 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 13:45:00,131 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227134500&sign=3ded135ed66cc4d16af94b66b03905bf
+2019-12-27 13:45:00,166 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 13:45:00,166 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 13:45:00,166 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227134500&sign=3ded135ed66cc4d16af94b66b03905bf
+2019-12-27 13:45:00,192 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 13:50:00,016 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227135000&sign=9c0ba7c4f44279f937cf4bab7e6f31b9
+2019-12-27 13:50:00,054 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 13:50:00,054 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 13:50:00,055 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227135000&sign=9c0ba7c4f44279f937cf4bab7e6f31b9
+2019-12-27 13:50:00,080 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 13:50:00,080 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 13:50:00,080 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227135000&sign=9c0ba7c4f44279f937cf4bab7e6f31b9
+2019-12-27 13:50:00,112 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 13:50:00,112 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 13:50:00,112 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227135000&sign=9c0ba7c4f44279f937cf4bab7e6f31b9
+2019-12-27 13:50:00,137 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 13:50:00,137 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 13:50:00,137 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227135000&sign=9c0ba7c4f44279f937cf4bab7e6f31b9
+2019-12-27 13:50:00,161 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 13:50:00,161 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 13:50:00,161 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227135000&sign=9c0ba7c4f44279f937cf4bab7e6f31b9
+2019-12-27 13:50:00,182 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 13:55:00,012 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227135500&sign=e202c643d4af9adb3d8ea2329c5a422c
+2019-12-27 13:55:00,056 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 13:55:00,056 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 13:55:00,056 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227135500&sign=e202c643d4af9adb3d8ea2329c5a422c
+2019-12-27 13:55:00,082 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 13:55:00,083 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 13:55:00,083 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227135500&sign=e202c643d4af9adb3d8ea2329c5a422c
+2019-12-27 13:55:00,115 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 13:55:00,115 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 13:55:00,115 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227135500&sign=e202c643d4af9adb3d8ea2329c5a422c
+2019-12-27 13:55:00,148 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 13:55:00,148 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 13:55:00,148 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227135500&sign=e202c643d4af9adb3d8ea2329c5a422c
+2019-12-27 13:55:00,172 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 13:55:00,173 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 13:55:00,173 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227135500&sign=e202c643d4af9adb3d8ea2329c5a422c
+2019-12-27 13:55:00,202 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 14:00:00,018 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227140000&sign=6ec9316657a261a71aac588659693230
+2019-12-27 14:00:00,057 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 14:00:00,057 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 14:00:00,057 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227140000&sign=6ec9316657a261a71aac588659693230
+2019-12-27 14:00:00,091 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 14:00:00,091 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 14:00:00,091 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227140000&sign=6ec9316657a261a71aac588659693230
+2019-12-27 14:00:00,134 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 14:00:00,134 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 14:00:00,134 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227140000&sign=6ec9316657a261a71aac588659693230
+2019-12-27 14:00:00,160 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 14:00:00,160 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 14:00:00,160 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227140000&sign=6ec9316657a261a71aac588659693230
+2019-12-27 14:00:00,186 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 14:00:00,187 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 14:00:00,187 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227140000&sign=6ec9316657a261a71aac588659693230
+2019-12-27 14:00:00,211 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 14:05:00,026 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227140500&sign=457ef5cec4883349b41d2eb13cad9c91
+2019-12-27 14:05:00,075 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 14:05:00,075 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 14:05:00,075 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227140500&sign=457ef5cec4883349b41d2eb13cad9c91
+2019-12-27 14:05:00,099 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 14:05:00,099 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 14:05:00,099 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227140500&sign=457ef5cec4883349b41d2eb13cad9c91
+2019-12-27 14:05:00,128 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 14:05:00,128 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 14:05:00,129 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227140500&sign=457ef5cec4883349b41d2eb13cad9c91
+2019-12-27 14:05:00,160 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 14:05:00,160 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 14:05:00,160 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227140500&sign=457ef5cec4883349b41d2eb13cad9c91
+2019-12-27 14:05:00,180 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 14:05:00,180 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 14:05:00,181 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227140500&sign=457ef5cec4883349b41d2eb13cad9c91
+2019-12-27 14:05:00,210 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 14:09:40,060 INFO  weaver.system.WfUrgerTimer  - Start to run doThreadWork method at WfUrgerTimer class. 
+2019-12-27 14:09:40,063 INFO  weaver.system.WfUrgerTimer  - The string of current time is: 1409
+2019-12-27 14:09:40,063 INFO  weaver.system.WfUrgerTimer  - The return value is : 	false
+2019-12-27 14:09:40,063 INFO  weaver.system.WfUrgerTimer  - The current time is incorrent, program will return directly.
+2019-12-27 14:09:40,171 ERROR weaver.docs.docs.DocTempAttachmentTimer  - Temp Attachment Clean of Doc Running....
+2019-12-27 14:09:40,207 ERROR weaver.docs.docs.DocTempAttachmentTimer  - Temp Attachment Clean of Doc End....
+2019-12-27 14:09:40,286 ERROR weaver.email.MailTimingDateReceive  - 自动接收邮件定时任务开始--单线程
+2019-12-27 14:09:40,286 ERROR weaver.email.MailTimingDateReceive  - 自动接收邮件定时任务结束--没有开启外部邮件或者自动接收功能--单线程
+2019-12-27 14:10:00,012 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227141000&sign=747eed3ddc733bcdc6dc2b1aa7bdd86f
+2019-12-27 14:10:00,050 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 14:10:00,050 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 14:10:00,050 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227141000&sign=747eed3ddc733bcdc6dc2b1aa7bdd86f
+2019-12-27 14:10:00,072 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 14:10:00,072 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 14:10:00,072 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227141000&sign=747eed3ddc733bcdc6dc2b1aa7bdd86f
+2019-12-27 14:10:00,103 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 14:10:00,103 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 14:10:00,104 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227141000&sign=747eed3ddc733bcdc6dc2b1aa7bdd86f
+2019-12-27 14:10:00,130 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 14:10:00,130 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 14:10:00,130 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227141000&sign=747eed3ddc733bcdc6dc2b1aa7bdd86f
+2019-12-27 14:10:00,162 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 14:10:00,162 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 14:10:00,162 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227141000&sign=747eed3ddc733bcdc6dc2b1aa7bdd86f
+2019-12-27 14:10:00,190 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 14:15:00,019 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227141500&sign=2a065d2f67a7148e14a2cc0aa578d186
+2019-12-27 14:15:00,055 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 14:15:00,055 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 14:15:00,055 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227141500&sign=2a065d2f67a7148e14a2cc0aa578d186
+2019-12-27 14:15:00,090 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 14:15:00,091 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 14:15:00,091 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227141500&sign=2a065d2f67a7148e14a2cc0aa578d186
+2019-12-27 14:15:00,119 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 14:15:00,119 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 14:15:00,119 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227141500&sign=2a065d2f67a7148e14a2cc0aa578d186
+2019-12-27 14:15:00,146 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 14:15:00,147 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 14:15:00,147 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227141500&sign=2a065d2f67a7148e14a2cc0aa578d186
+2019-12-27 14:15:00,173 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 14:15:00,173 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 14:15:00,173 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227141500&sign=2a065d2f67a7148e14a2cc0aa578d186
+2019-12-27 14:15:00,206 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 14:20:00,018 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227142000&sign=8eebe62fbf97bb28bfc8083eaf17ac6e
+2019-12-27 14:20:00,070 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 14:20:00,070 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 14:20:00,070 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227142000&sign=8eebe62fbf97bb28bfc8083eaf17ac6e
+2019-12-27 14:20:00,110 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 14:20:00,110 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 14:20:00,110 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227142000&sign=8eebe62fbf97bb28bfc8083eaf17ac6e
+2019-12-27 14:20:00,156 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 14:20:00,156 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 14:20:00,156 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227142000&sign=8eebe62fbf97bb28bfc8083eaf17ac6e
+2019-12-27 14:20:00,182 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 14:20:00,182 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 14:20:00,183 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227142000&sign=8eebe62fbf97bb28bfc8083eaf17ac6e
+2019-12-27 14:20:00,216 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 14:20:00,216 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 14:20:00,217 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227142000&sign=8eebe62fbf97bb28bfc8083eaf17ac6e
+2019-12-27 14:20:00,257 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 14:25:00,013 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227142500&sign=b0cbbd773ff49dd9c476b95fa7e560d3
+2019-12-27 14:25:00,112 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 14:25:00,112 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 14:25:00,112 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227142500&sign=b0cbbd773ff49dd9c476b95fa7e560d3
+2019-12-27 14:25:00,137 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 14:25:00,137 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 14:25:00,137 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227142500&sign=b0cbbd773ff49dd9c476b95fa7e560d3
+2019-12-27 14:25:00,171 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 14:25:00,171 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 14:25:00,171 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227142500&sign=b0cbbd773ff49dd9c476b95fa7e560d3
+2019-12-27 14:25:00,198 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 14:25:00,198 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 14:25:00,198 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227142500&sign=b0cbbd773ff49dd9c476b95fa7e560d3
+2019-12-27 14:25:00,229 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 14:25:00,229 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 14:25:00,229 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227142500&sign=b0cbbd773ff49dd9c476b95fa7e560d3
+2019-12-27 14:25:00,249 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 14:30:00,017 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227143000&sign=84df0db6de9ff181cd435dca368c7c75
+2019-12-27 14:30:00,095 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 14:30:00,095 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 14:30:00,095 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227143000&sign=84df0db6de9ff181cd435dca368c7c75
+2019-12-27 14:30:00,131 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 14:30:00,131 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 14:30:00,131 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227143000&sign=84df0db6de9ff181cd435dca368c7c75
+2019-12-27 14:30:00,164 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 14:30:00,164 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 14:30:00,164 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227143000&sign=84df0db6de9ff181cd435dca368c7c75
+2019-12-27 14:30:00,196 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 14:30:00,196 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 14:30:00,196 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227143000&sign=84df0db6de9ff181cd435dca368c7c75
+2019-12-27 14:30:00,230 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 14:30:00,230 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 14:30:00,230 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227143000&sign=84df0db6de9ff181cd435dca368c7c75
+2019-12-27 14:30:00,250 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 14:35:00,018 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227143500&sign=35f5bd70bfcb0f604e03ba0a20b76624
+2019-12-27 14:35:00,118 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 14:35:00,118 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 14:35:00,118 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227143500&sign=35f5bd70bfcb0f604e03ba0a20b76624
+2019-12-27 14:35:00,150 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 14:35:00,150 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 14:35:00,150 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227143500&sign=35f5bd70bfcb0f604e03ba0a20b76624
+2019-12-27 14:35:00,187 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 14:35:00,187 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 14:35:00,187 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227143500&sign=35f5bd70bfcb0f604e03ba0a20b76624
+2019-12-27 14:35:00,234 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 14:35:00,234 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 14:35:00,234 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227143500&sign=35f5bd70bfcb0f604e03ba0a20b76624
+2019-12-27 14:35:00,494 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 14:35:00,494 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 14:35:00,494 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227143500&sign=35f5bd70bfcb0f604e03ba0a20b76624
+2019-12-27 14:35:00,525 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 14:40:00,014 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227144000&sign=500d64f796759c5d36a2d294a1094596
+2019-12-27 14:40:00,110 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 14:40:00,110 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 14:40:00,110 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227144000&sign=500d64f796759c5d36a2d294a1094596
+2019-12-27 14:40:00,131 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 14:40:00,131 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 14:40:00,131 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227144000&sign=500d64f796759c5d36a2d294a1094596
+2019-12-27 14:40:00,162 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 14:40:00,163 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 14:40:00,163 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227144000&sign=500d64f796759c5d36a2d294a1094596
+2019-12-27 14:40:00,190 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 14:40:00,190 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 14:40:00,190 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227144000&sign=500d64f796759c5d36a2d294a1094596
+2019-12-27 14:40:00,218 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 14:40:00,218 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 14:40:00,218 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227144000&sign=500d64f796759c5d36a2d294a1094596
+2019-12-27 14:40:00,246 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 14:45:00,015 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227144500&sign=e400b70a33a09d717317c1f8a63f5b4b
+2019-12-27 14:45:00,082 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 14:45:00,082 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 14:45:00,082 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227144500&sign=e400b70a33a09d717317c1f8a63f5b4b
+2019-12-27 14:45:00,114 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 14:45:00,115 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 14:45:00,115 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227144500&sign=e400b70a33a09d717317c1f8a63f5b4b
+2019-12-27 14:45:00,160 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 14:45:00,161 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 14:45:00,161 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227144500&sign=e400b70a33a09d717317c1f8a63f5b4b
+2019-12-27 14:45:00,191 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 14:45:00,191 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 14:45:00,191 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227144500&sign=e400b70a33a09d717317c1f8a63f5b4b
+2019-12-27 14:45:00,215 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 14:45:00,215 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 14:45:00,215 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227144500&sign=e400b70a33a09d717317c1f8a63f5b4b
+2019-12-27 14:45:00,249 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 14:49:40,287 ERROR weaver.email.MailTimingDateReceive  - 自动接收邮件定时任务开始--单线程
+2019-12-27 14:49:40,288 ERROR weaver.email.MailTimingDateReceive  - 自动接收邮件定时任务结束--没有开启外部邮件或者自动接收功能--单线程
+2019-12-27 14:50:00,019 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227145000&sign=0693cdf656275a2cfb6abe6976a17a64
+2019-12-27 14:50:00,098 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 14:50:00,098 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 14:50:00,098 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227145000&sign=0693cdf656275a2cfb6abe6976a17a64
+2019-12-27 14:50:00,130 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 14:50:00,130 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 14:50:00,130 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227145000&sign=0693cdf656275a2cfb6abe6976a17a64
+2019-12-27 14:50:00,178 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 14:50:00,179 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 14:50:00,179 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227145000&sign=0693cdf656275a2cfb6abe6976a17a64
+2019-12-27 14:50:00,212 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 14:50:00,212 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 14:50:00,212 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227145000&sign=0693cdf656275a2cfb6abe6976a17a64
+2019-12-27 14:50:00,254 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 14:50:00,254 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 14:50:00,254 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227145000&sign=0693cdf656275a2cfb6abe6976a17a64
+2019-12-27 14:50:00,288 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 14:55:00,019 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227145500&sign=ffc75f36e573a0e3d696db45024c72aa
+2019-12-27 14:55:00,121 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 14:55:00,122 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 14:55:00,122 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227145500&sign=ffc75f36e573a0e3d696db45024c72aa
+2019-12-27 14:55:00,151 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 14:55:00,151 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 14:55:00,152 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227145500&sign=ffc75f36e573a0e3d696db45024c72aa
+2019-12-27 14:55:00,181 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 14:55:00,181 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 14:55:00,181 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227145500&sign=ffc75f36e573a0e3d696db45024c72aa
+2019-12-27 14:55:00,205 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 14:55:00,205 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 14:55:00,205 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227145500&sign=ffc75f36e573a0e3d696db45024c72aa
+2019-12-27 14:55:00,233 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 14:55:00,233 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 14:55:00,233 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227145500&sign=ffc75f36e573a0e3d696db45024c72aa
+2019-12-27 14:55:00,261 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 15:00:00,020 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227150000&sign=a3d94f7ba407e78b833b918310eba87d
+2019-12-27 15:00:00,080 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 15:00:00,080 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 15:00:00,080 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227150000&sign=a3d94f7ba407e78b833b918310eba87d
+2019-12-27 15:00:00,124 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 15:00:00,124 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 15:00:00,124 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227150000&sign=a3d94f7ba407e78b833b918310eba87d
+2019-12-27 15:00:00,164 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 15:00:00,165 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 15:00:00,165 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227150000&sign=a3d94f7ba407e78b833b918310eba87d
+2019-12-27 15:00:00,199 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 15:00:00,199 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 15:00:00,199 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227150000&sign=a3d94f7ba407e78b833b918310eba87d
+2019-12-27 15:00:00,228 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 15:00:00,228 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 15:00:00,228 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227150000&sign=a3d94f7ba407e78b833b918310eba87d
+2019-12-27 15:00:00,258 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 15:05:00,013 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227150500&sign=9b8046f8abdfb2c20e41e2c720342d85
+2019-12-27 15:05:00,077 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 15:05:00,077 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 15:05:00,077 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227150500&sign=9b8046f8abdfb2c20e41e2c720342d85
+2019-12-27 15:05:00,105 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 15:05:00,106 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 15:05:00,106 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227150500&sign=9b8046f8abdfb2c20e41e2c720342d85
+2019-12-27 15:05:00,146 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 15:05:00,146 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 15:05:00,147 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227150500&sign=9b8046f8abdfb2c20e41e2c720342d85
+2019-12-27 15:05:00,177 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 15:05:00,177 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 15:05:00,177 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227150500&sign=9b8046f8abdfb2c20e41e2c720342d85
+2019-12-27 15:05:00,208 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 15:05:00,208 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 15:05:00,208 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227150500&sign=9b8046f8abdfb2c20e41e2c720342d85
+2019-12-27 15:05:00,240 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 15:10:00,016 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227151000&sign=f5400342e87e920228a9151de47a3712
+2019-12-27 15:10:00,090 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 15:10:00,090 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 15:10:00,091 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227151000&sign=f5400342e87e920228a9151de47a3712
+2019-12-27 15:10:00,136 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 15:10:00,136 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 15:10:00,136 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227151000&sign=f5400342e87e920228a9151de47a3712
+2019-12-27 15:10:00,170 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 15:10:00,170 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 15:10:00,170 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227151000&sign=f5400342e87e920228a9151de47a3712
+2019-12-27 15:10:00,218 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 15:10:00,218 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 15:10:00,218 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227151000&sign=f5400342e87e920228a9151de47a3712
+2019-12-27 15:10:00,244 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 15:10:00,244 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 15:10:00,244 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227151000&sign=f5400342e87e920228a9151de47a3712
+2019-12-27 15:10:00,274 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 15:15:00,018 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227151500&sign=2e518acaed8c26b11df355c7ff0b20a8
+2019-12-27 15:15:00,100 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 15:15:00,100 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 15:15:00,100 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227151500&sign=2e518acaed8c26b11df355c7ff0b20a8
+2019-12-27 15:15:00,129 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 15:15:00,129 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 15:15:00,129 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227151500&sign=2e518acaed8c26b11df355c7ff0b20a8
+2019-12-27 15:15:00,171 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 15:15:00,171 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 15:15:00,171 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227151500&sign=2e518acaed8c26b11df355c7ff0b20a8
+2019-12-27 15:15:00,201 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 15:15:00,201 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 15:15:00,201 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227151500&sign=2e518acaed8c26b11df355c7ff0b20a8
+2019-12-27 15:15:00,246 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 15:15:00,246 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 15:15:00,246 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227151500&sign=2e518acaed8c26b11df355c7ff0b20a8
+2019-12-27 15:15:00,283 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 15:20:00,020 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227152000&sign=1a9bef52b9abbac760138694a76455cf
+2019-12-27 15:20:00,086 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 15:20:00,086 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 15:20:00,086 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227152000&sign=1a9bef52b9abbac760138694a76455cf
+2019-12-27 15:20:00,120 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 15:20:00,120 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 15:20:00,120 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227152000&sign=1a9bef52b9abbac760138694a76455cf
+2019-12-27 15:20:00,161 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 15:20:00,161 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 15:20:00,161 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227152000&sign=1a9bef52b9abbac760138694a76455cf
+2019-12-27 15:20:00,201 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 15:20:00,201 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 15:20:00,201 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227152000&sign=1a9bef52b9abbac760138694a76455cf
+2019-12-27 15:20:00,240 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 15:20:00,240 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 15:20:00,240 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227152000&sign=1a9bef52b9abbac760138694a76455cf
+2019-12-27 15:20:00,280 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 15:25:00,020 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227152500&sign=22bf5b160fc25e6835a8897d30f6f881
+2019-12-27 15:25:00,053 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 15:25:00,053 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 15:25:00,053 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227152500&sign=22bf5b160fc25e6835a8897d30f6f881
+2019-12-27 15:25:00,096 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 15:25:00,096 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 15:25:00,096 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227152500&sign=22bf5b160fc25e6835a8897d30f6f881
+2019-12-27 15:25:00,131 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 15:25:00,131 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 15:25:00,131 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227152500&sign=22bf5b160fc25e6835a8897d30f6f881
+2019-12-27 15:25:00,156 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 15:25:00,156 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 15:25:00,156 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227152500&sign=22bf5b160fc25e6835a8897d30f6f881
+2019-12-27 15:25:00,182 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 15:25:00,182 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 15:25:00,182 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227152500&sign=22bf5b160fc25e6835a8897d30f6f881
+2019-12-27 15:25:00,209 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 15:29:40,244 ERROR weaver.email.MailTimingDateReceive  - 自动接收邮件定时任务开始--单线程
+2019-12-27 15:29:40,245 ERROR weaver.email.MailTimingDateReceive  - 自动接收邮件定时任务结束--没有开启外部邮件或者自动接收功能--单线程
+2019-12-27 15:30:00,013 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227153000&sign=604012710d60137862320f787d5694ef
+2019-12-27 15:30:00,053 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 15:30:00,053 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 15:30:00,053 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227153000&sign=604012710d60137862320f787d5694ef
+2019-12-27 15:30:00,083 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 15:30:00,083 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 15:30:00,083 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227153000&sign=604012710d60137862320f787d5694ef
+2019-12-27 15:30:00,115 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 15:30:00,115 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 15:30:00,115 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227153000&sign=604012710d60137862320f787d5694ef
+2019-12-27 15:30:00,148 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 15:30:00,148 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 15:30:00,148 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227153000&sign=604012710d60137862320f787d5694ef
+2019-12-27 15:30:00,191 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 15:30:00,191 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 15:30:00,191 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227153000&sign=604012710d60137862320f787d5694ef
+2019-12-27 15:30:00,443 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 15:35:00,017 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227153500&sign=1daf84db156b498000ccab8c0ddf712a
+2019-12-27 15:35:00,046 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 15:35:00,047 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 15:35:00,047 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227153500&sign=1daf84db156b498000ccab8c0ddf712a
+2019-12-27 15:35:00,069 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 15:35:00,069 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 15:35:00,069 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227153500&sign=1daf84db156b498000ccab8c0ddf712a
+2019-12-27 15:35:00,095 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 15:35:00,095 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 15:35:00,095 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227153500&sign=1daf84db156b498000ccab8c0ddf712a
+2019-12-27 15:35:00,119 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 15:35:00,119 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 15:35:00,119 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227153500&sign=1daf84db156b498000ccab8c0ddf712a
+2019-12-27 15:35:00,152 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 15:35:00,152 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 15:35:00,152 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227153500&sign=1daf84db156b498000ccab8c0ddf712a
+2019-12-27 15:35:00,178 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 15:40:00,018 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227154000&sign=0402b64c2771fcd6d658d3768c5cb035
+2019-12-27 15:40:00,066 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 15:40:00,066 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 15:40:00,066 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227154000&sign=0402b64c2771fcd6d658d3768c5cb035
+2019-12-27 15:40:00,086 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 15:40:00,087 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 15:40:00,087 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227154000&sign=0402b64c2771fcd6d658d3768c5cb035
+2019-12-27 15:40:00,117 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 15:40:00,117 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 15:40:00,117 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227154000&sign=0402b64c2771fcd6d658d3768c5cb035
+2019-12-27 15:40:00,141 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 15:40:00,142 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 15:40:00,142 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227154000&sign=0402b64c2771fcd6d658d3768c5cb035
+2019-12-27 15:40:00,168 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 15:40:00,168 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 15:40:00,168 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227154000&sign=0402b64c2771fcd6d658d3768c5cb035
+2019-12-27 15:40:00,190 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 15:45:00,019 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227154500&sign=c04fa5c378cf4bb2e633737f9a9e6e17
+2019-12-27 15:45:00,057 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 15:45:00,057 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 15:45:00,057 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227154500&sign=c04fa5c378cf4bb2e633737f9a9e6e17
+2019-12-27 15:45:00,084 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 15:45:00,084 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 15:45:00,084 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227154500&sign=c04fa5c378cf4bb2e633737f9a9e6e17
+2019-12-27 15:45:00,118 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 15:45:00,118 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 15:45:00,118 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227154500&sign=c04fa5c378cf4bb2e633737f9a9e6e17
+2019-12-27 15:45:00,143 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 15:45:00,143 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 15:45:00,143 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227154500&sign=c04fa5c378cf4bb2e633737f9a9e6e17
+2019-12-27 15:45:00,179 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 15:45:00,179 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 15:45:00,179 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227154500&sign=c04fa5c378cf4bb2e633737f9a9e6e17
+2019-12-27 15:45:00,211 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 15:50:00,019 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227155000&sign=07dc96b19b6ad0e59ce80471cc07d7b4
+2019-12-27 15:50:00,103 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 15:50:00,103 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 15:50:00,103 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227155000&sign=07dc96b19b6ad0e59ce80471cc07d7b4
+2019-12-27 15:50:00,150 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 15:50:00,150 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 15:50:00,151 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227155000&sign=07dc96b19b6ad0e59ce80471cc07d7b4
+2019-12-27 15:50:00,176 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 15:50:00,176 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 15:50:00,176 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227155000&sign=07dc96b19b6ad0e59ce80471cc07d7b4
+2019-12-27 15:50:00,203 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 15:50:00,204 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 15:50:00,204 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227155000&sign=07dc96b19b6ad0e59ce80471cc07d7b4
+2019-12-27 15:50:00,226 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 15:50:00,227 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 15:50:00,227 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227155000&sign=07dc96b19b6ad0e59ce80471cc07d7b4
+2019-12-27 15:50:00,278 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 15:55:00,018 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227155500&sign=bd89b5ec65221536533c329fca3a9124
+2019-12-27 15:55:00,066 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 15:55:00,066 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 15:55:00,066 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227155500&sign=bd89b5ec65221536533c329fca3a9124
+2019-12-27 15:55:00,103 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 15:55:00,104 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 15:55:00,104 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227155500&sign=bd89b5ec65221536533c329fca3a9124
+2019-12-27 15:55:00,136 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 15:55:00,136 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 15:55:00,136 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227155500&sign=bd89b5ec65221536533c329fca3a9124
+2019-12-27 15:55:00,166 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 15:55:00,166 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 15:55:00,166 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227155500&sign=bd89b5ec65221536533c329fca3a9124
+2019-12-27 15:55:00,195 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 15:55:00,195 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 15:55:00,195 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227155500&sign=bd89b5ec65221536533c329fca3a9124
+2019-12-27 15:55:00,221 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 16:00:00,014 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227160000&sign=6235ba18d516c5c4845019d0be438a6d
+2019-12-27 16:00:00,069 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 16:00:00,070 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 16:00:00,070 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227160000&sign=6235ba18d516c5c4845019d0be438a6d
+2019-12-27 16:00:00,135 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 16:00:00,135 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 16:00:00,135 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227160000&sign=6235ba18d516c5c4845019d0be438a6d
+2019-12-27 16:00:00,183 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 16:00:00,183 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 16:00:00,183 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227160000&sign=6235ba18d516c5c4845019d0be438a6d
+2019-12-27 16:00:00,227 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 16:00:00,227 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 16:00:00,227 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227160000&sign=6235ba18d516c5c4845019d0be438a6d
+2019-12-27 16:00:00,259 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 16:00:00,259 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 16:00:00,259 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227160000&sign=6235ba18d516c5c4845019d0be438a6d
+2019-12-27 16:00:00,313 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 16:05:00,018 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227160500&sign=963e942387d3cd04a1d17786f260cdca
+2019-12-27 16:05:00,072 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 16:05:00,072 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 16:05:00,072 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227160500&sign=963e942387d3cd04a1d17786f260cdca
+2019-12-27 16:05:00,103 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 16:05:00,103 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 16:05:00,103 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227160500&sign=963e942387d3cd04a1d17786f260cdca
+2019-12-27 16:05:00,144 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 16:05:00,144 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 16:05:00,144 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227160500&sign=963e942387d3cd04a1d17786f260cdca
+2019-12-27 16:05:00,180 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 16:05:00,180 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 16:05:00,180 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227160500&sign=963e942387d3cd04a1d17786f260cdca
+2019-12-27 16:05:00,217 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 16:05:00,217 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 16:05:00,217 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227160500&sign=963e942387d3cd04a1d17786f260cdca
+2019-12-27 16:05:00,255 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 16:09:40,014 INFO  weaver.system.WfUrgerTimer  - Start to run doThreadWork method at WfUrgerTimer class. 
+2019-12-27 16:09:40,015 INFO  weaver.system.WfUrgerTimer  - The string of current time is: 1609
+2019-12-27 16:09:40,015 INFO  weaver.system.WfUrgerTimer  - The return value is : 	false
+2019-12-27 16:09:40,016 INFO  weaver.system.WfUrgerTimer  - The current time is incorrent, program will return directly.
+2019-12-27 16:09:40,246 ERROR weaver.email.MailTimingDateReceive  - 自动接收邮件定时任务开始--单线程
+2019-12-27 16:09:40,250 ERROR weaver.email.MailTimingDateReceive  - 自动接收邮件定时任务结束--没有开启外部邮件或者自动接收功能--单线程
+2019-12-27 16:10:00,020 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227161000&sign=a40a8195a720e8313a14b40ae9c6aa74
+2019-12-27 16:10:00,079 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 16:10:00,079 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 16:10:00,079 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227161000&sign=a40a8195a720e8313a14b40ae9c6aa74
+2019-12-27 16:10:00,123 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 16:10:00,123 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 16:10:00,123 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227161000&sign=a40a8195a720e8313a14b40ae9c6aa74
+2019-12-27 16:10:00,160 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 16:10:00,160 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 16:10:00,160 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227161000&sign=a40a8195a720e8313a14b40ae9c6aa74
+2019-12-27 16:10:00,209 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 16:10:00,209 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 16:10:00,209 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227161000&sign=a40a8195a720e8313a14b40ae9c6aa74
+2019-12-27 16:10:00,265 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 16:10:00,265 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 16:10:00,265 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227161000&sign=a40a8195a720e8313a14b40ae9c6aa74
+2019-12-27 16:10:00,306 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 16:15:00,019 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227161500&sign=e07ab88e8e490288ffec42912d92ad96
+2019-12-27 16:15:00,069 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 16:15:00,069 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 16:15:00,069 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227161500&sign=e07ab88e8e490288ffec42912d92ad96
+2019-12-27 16:15:00,103 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 16:15:00,103 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 16:15:00,103 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227161500&sign=e07ab88e8e490288ffec42912d92ad96
+2019-12-27 16:15:00,143 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 16:15:00,143 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 16:15:00,143 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227161500&sign=e07ab88e8e490288ffec42912d92ad96
+2019-12-27 16:15:00,178 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 16:15:00,178 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 16:15:00,178 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227161500&sign=e07ab88e8e490288ffec42912d92ad96
+2019-12-27 16:15:00,218 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 16:15:00,218 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 16:15:00,218 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227161500&sign=e07ab88e8e490288ffec42912d92ad96
+2019-12-27 16:15:00,262 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 16:20:00,014 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227162000&sign=cfc68a72203f4844b746d6155bc2af59
+2019-12-27 16:20:00,080 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 16:20:00,080 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 16:20:00,080 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227162000&sign=cfc68a72203f4844b746d6155bc2af59
+2019-12-27 16:20:00,105 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 16:20:00,105 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 16:20:00,105 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227162000&sign=cfc68a72203f4844b746d6155bc2af59
+2019-12-27 16:20:00,131 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 16:20:00,131 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 16:20:00,131 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227162000&sign=cfc68a72203f4844b746d6155bc2af59
+2019-12-27 16:20:00,155 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 16:20:00,156 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 16:20:00,156 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227162000&sign=cfc68a72203f4844b746d6155bc2af59
+2019-12-27 16:20:00,187 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 16:20:00,188 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 16:20:00,188 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227162000&sign=cfc68a72203f4844b746d6155bc2af59
+2019-12-27 16:20:00,214 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 16:25:00,019 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227162500&sign=b4c2fe83eb954debbb8436b0462d9647
+2019-12-27 16:25:00,060 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 16:25:00,060 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 16:25:00,060 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227162500&sign=b4c2fe83eb954debbb8436b0462d9647
+2019-12-27 16:25:00,085 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 16:25:00,085 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 16:25:00,085 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227162500&sign=b4c2fe83eb954debbb8436b0462d9647
+2019-12-27 16:25:00,112 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 16:25:00,112 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 16:25:00,112 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227162500&sign=b4c2fe83eb954debbb8436b0462d9647
+2019-12-27 16:25:00,134 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 16:25:00,135 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 16:25:00,135 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227162500&sign=b4c2fe83eb954debbb8436b0462d9647
+2019-12-27 16:25:00,163 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 16:25:00,163 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 16:25:00,163 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227162500&sign=b4c2fe83eb954debbb8436b0462d9647
+2019-12-27 16:25:00,188 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 16:30:00,024 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227163000&sign=63680b8e2a766b161968329dab19d19c
+2019-12-27 16:30:00,078 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 16:30:00,078 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 16:30:00,078 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227163000&sign=63680b8e2a766b161968329dab19d19c
+2019-12-27 16:30:00,114 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 16:30:00,114 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 16:30:00,114 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227163000&sign=63680b8e2a766b161968329dab19d19c
+2019-12-27 16:30:00,154 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 16:30:00,154 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 16:30:00,154 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227163000&sign=63680b8e2a766b161968329dab19d19c
+2019-12-27 16:30:00,190 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 16:30:00,190 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 16:30:00,190 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227163000&sign=63680b8e2a766b161968329dab19d19c
+2019-12-27 16:30:00,225 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 16:30:00,225 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 16:30:00,225 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227163000&sign=63680b8e2a766b161968329dab19d19c
+2019-12-27 16:30:00,280 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 16:35:00,021 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227163500&sign=6dbb5cc6c26cdb84c6ad1a83b355350a
+2019-12-27 16:35:00,104 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 16:35:00,104 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 16:35:00,104 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227163500&sign=6dbb5cc6c26cdb84c6ad1a83b355350a
+2019-12-27 16:35:00,126 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 16:35:00,126 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 16:35:00,126 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227163500&sign=6dbb5cc6c26cdb84c6ad1a83b355350a
+2019-12-27 16:35:00,152 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 16:35:00,152 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 16:35:00,152 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227163500&sign=6dbb5cc6c26cdb84c6ad1a83b355350a
+2019-12-27 16:35:00,178 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 16:35:00,178 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 16:35:00,178 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227163500&sign=6dbb5cc6c26cdb84c6ad1a83b355350a
+2019-12-27 16:35:00,205 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 16:35:00,205 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 16:35:00,205 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227163500&sign=6dbb5cc6c26cdb84c6ad1a83b355350a
+2019-12-27 16:35:00,230 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 16:40:00,020 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227164000&sign=e07aebbc3e23202fd673bcb9bea1707c
+2019-12-27 16:40:00,055 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 16:40:00,056 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 16:40:00,056 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227164000&sign=e07aebbc3e23202fd673bcb9bea1707c
+2019-12-27 16:40:00,080 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 16:40:00,080 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 16:40:00,080 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227164000&sign=e07aebbc3e23202fd673bcb9bea1707c
+2019-12-27 16:40:00,116 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 16:40:00,116 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 16:40:00,116 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227164000&sign=e07aebbc3e23202fd673bcb9bea1707c
+2019-12-27 16:40:00,144 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 16:40:00,145 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 16:40:00,145 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227164000&sign=e07aebbc3e23202fd673bcb9bea1707c
+2019-12-27 16:40:00,169 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 16:40:00,169 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 16:40:00,169 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227164000&sign=e07aebbc3e23202fd673bcb9bea1707c
+2019-12-27 16:40:00,194 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 16:45:00,011 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227164500&sign=f8a6d37617f4731dbfe1956f48d7e402
+2019-12-27 16:45:00,048 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 16:45:00,048 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 16:45:00,048 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227164500&sign=f8a6d37617f4731dbfe1956f48d7e402
+2019-12-27 16:45:00,084 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 16:45:00,084 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 16:45:00,084 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227164500&sign=f8a6d37617f4731dbfe1956f48d7e402
+2019-12-27 16:45:00,114 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 16:45:00,114 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 16:45:00,115 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227164500&sign=f8a6d37617f4731dbfe1956f48d7e402
+2019-12-27 16:45:00,143 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 16:45:00,143 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 16:45:00,143 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227164500&sign=f8a6d37617f4731dbfe1956f48d7e402
+2019-12-27 16:45:00,173 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 16:45:00,173 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 16:45:00,174 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227164500&sign=f8a6d37617f4731dbfe1956f48d7e402
+2019-12-27 16:45:00,197 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 16:49:40,251 ERROR weaver.email.MailTimingDateReceive  - 自动接收邮件定时任务开始--单线程
+2019-12-27 16:49:40,253 ERROR weaver.email.MailTimingDateReceive  - 自动接收邮件定时任务结束--没有开启外部邮件或者自动接收功能--单线程
+2019-12-27 16:50:00,020 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20191227165000&sign=039badeb11123c1c6afef452d1fa8539
+2019-12-27 16:50:03,063 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2019-12-27 16:50:03,063 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2019-12-27 16:50:03,064 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20191227165000&sign=039badeb11123c1c6afef452d1fa8539
+2019-12-27 16:50:03,096 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2019-12-27 16:50:03,096 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2019-12-27 16:50:03,096 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20191227165000&sign=039badeb11123c1c6afef452d1fa8539
+2019-12-27 16:50:03,127 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2019-12-27 16:50:03,128 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2019-12-27 16:50:03,128 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20191227165000&sign=039badeb11123c1c6afef452d1fa8539
+2019-12-27 16:50:03,165 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 16:50:03,165 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2019-12-27 16:50:03,165 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20191227165000&sign=039badeb11123c1c6afef452d1fa8539
+2019-12-27 16:50:03,193 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2019-12-27 16:50:03,193 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2019-12-27 16:50:03,193 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20191227165000&sign=039badeb11123c1c6afef452d1fa8539
+2019-12-27 16:50:03,217 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2019-12-27 16:51:44,206 ERROR weaver.general.BaseBean  - 销毁微信推送扫描定时器完成---------
+2019-12-27 16:51:44,407 ERROR weaver.general.BaseBean  - 初始化云桥httpclient连接池成功，DEFAULT_MAX_PER_ROUTE：500---MAX_TOTAL_CONNECTIONS：500---------

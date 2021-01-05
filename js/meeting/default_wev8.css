@@ -1,0 +1,293 @@
+
+.likeParent {
+	font: inherit;
+	color: inherit;
+	text-decoration: inherit;
+}
+
+a.likeParent,
+a.likeParent:link,
+a.likeParent:active,
+a.likeParent:visited,
+a.likeParent:hover 
+{
+	font: inherit;
+	color: #000000;
+	text-decoration: none;
+}
+
+
+fieldset {
+	margin: 5px;
+}
+
+legend 
+{
+	font-family: Arial;
+	font-size: 11pt;
+	font-weight: bold;
+	color: Black;
+}
+
+fieldset.flash
+{
+	width: 375px;
+	margin: 10px 0px 10px 0px;
+	border-color: #D9E4FF;
+}
+
+.progressWrapper {
+	width: 100%;
+	overflow: hidden;
+}
+
+.progressWrapper2 {
+	height: 40px !important;
+	width: 100% !important;
+	overflow: hidden !important;
+}
+.progressContainer {
+	margin: 5px;
+	padding: 4px;
+	
+	border: solid 1px #E8E8E8;
+	background-color: #F7F7F7;
+	
+	overflow: hidden;
+}
+.red /* Error */
+{
+	border: solid 1px #B50000;
+	background-color: #FFEBEB;
+}
+.green /* Current */ 
+{
+	border: solid 1px #DDF0DD;
+	background-color: #EBFFEB;
+}
+.blue /* Complete */
+{
+	border: solid 1px #CEE2F2;
+	background-color: #F0F5FF;
+}
+
+.progressName {
+	
+	font-size: 8pt;
+	font-weight: bold;
+	color: #555555;
+	
+	/*border:1px solid 
+	width: 323px;
+	height: 14px;
+	text-align: left;
+	white-space: nowrap;
+	overflow: hidden;*/
+}
+.progressBarInProgress,
+.progressBarComplete,
+.progressBarError {
+	font-size: 0px;
+	width: 0%;
+	height: 2px;
+	background-color: blue;
+	margin-top: 2px;
+}
+.progressBarComplete {
+	width: 100%;
+	background-color: green;
+	visibility: hidden;
+}
+.progressBarError {
+	width: 100%;
+	background-color: red;
+	visibility: hidden;
+}
+
+.progressBarStatus {
+	margin-top: 2px;
+	width: 337px;
+	font-size: 7pt;
+	font-family: Verdana;
+	text-align: left;
+	white-space: nowrap;
+}
+
+.progressBarStatusRed {
+	margin-top: 2px;
+	width: 337px;
+	font-size: 7pt;
+	color:red;
+	font-family: Verdana;
+	text-align: left;
+	white-space: nowrap;
+}
+a.progressCancel,
+a.progressCancel:link,
+a.progressCancel:active,
+a.progressCancel:visited,
+a.progressCancel:hover
+{
+	font-size: 0px;
+	display: block;
+	height: 14px;
+	width: 14px;
+	
+	background-image: url('/js/swfupload/cancelbutton_wev8.gif');
+	background-repeat: no-repeat;
+	background-position: -14px 0px;
+	float: right;
+}
+a.progressCancel:hover 
+{
+	background-position: 0px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.progressWrapper_dt {
+	width: 100%;
+	overflow: hidden;
+}
+.progressContainer_dt {
+	margin: 5px;
+	padding: 4px;
+	
+	border: solid 1px #E8E8E8;
+	background-color: #F7F7F7;
+	
+	overflow: hidden;
+}
+
+
+.progressName_dt {
+	
+	font-size: 8pt;
+	font-weight: bold;
+	color: #555555;
+	
+	/*border:1px solid 
+	width: 323px;
+	height: 14px;
+	text-align: left;
+	white-space: nowrap;
+	overflow: hidden;*/
+}
+.progressBarInProgress_dt,
+.progressBarComplete_dt,
+.progressBarError_dt {
+	font-size: 0px;
+	width: 0%;
+	height: 2px;
+	background-color: blue;
+	margin-top: 2px;
+}
+.progressBarComplete_dt {
+	width: 100%;
+	background-color: green;
+	visibility: hidden;
+}
+.progressBarError_dt {
+	width: 100%;
+	background-color: red;
+	visibility: hidden;
+}
+.progressBarStatus_dt {
+	display:none!important;
+}
+.progressBarStatus_dt2 {
+	margin-top: 2px;
+	width: 120px;
+	font-size: 7pt;
+	color:red;
+	font-family: Verdana;
+	text-align: left;
+	white-space: nowrap;
+}
+a.progressCancel_dt,
+a.progressCancel_dt:link,
+a.progressCancel_dt:active,
+a.progressCancel_dt:visited,
+a.progressCancel_dt:hover
+{
+	font-size: 0px;
+	display: block;
+	height: 14px;
+	width: 14px;
+	
+	background-image: url('/js/swfupload/cancelbutton_wev8.gif');
+	background-repeat: no-repeat;
+	background-position: -14px 0px;
+	float: right;
+}
+a.progressCancel_dt:hover 
+{
+	background-position: 0px 0px;
+}
+
+
+
+
+._uploadForClass .progressBarInProgress_dt {
+	height:2px;
+	background:#6b94fe;
+	margin:0!important;
+}
+._uploadForClass .progressWrapper_dt {
+	height:30px!important;
+	width:100%!important;
+	border-bottom:1px solid #dadada;
+}
+.progressWrapper_dt2 {
+	height:40px!important;
+	width:100%!important;
+	border-bottom:1px solid #dadada;
+}
+._uploadForClass .progressContainer_dt  {
+	background-color:#f5f5f5!important;
+	border:solid 0px!important;
+	padding-top:5px!important;
+	padding-left:0px!important;
+	padding-right:0px!important;
+	padding-bottom:5px!important;
+	margin:0px!important;
+}
+._uploadForClass .progressCancel_dt {
+	width:20px!important;
+	height:20px!important;
+	background-image:url('/images/ecology8/workflow/fileupload/cancle_wev8.png')!important;
+}
+._uploadForClass .progressBarStatus_dt {
+	display:none!important;
+}
+._uploadForClass .progressName_dt{
+	width:120px!important;
+	height:18px;
+	font-size:12px;
+	font-family:Î¢ÈíÑÅºÚ;
+	font-weight:normal!important;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	color:#242424;
+	word-wrap: normal;
+}

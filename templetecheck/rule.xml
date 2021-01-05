@@ -1,0 +1,1457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules id="rule" version="1.0.0">
+    <tabtype id="checkjsp">
+        <rule id="propertychange-bind">
+            <name>不支持propertychange事件bind绑定方式</name>
+            <desc>propertychange事件bind绑定方式不支持;需改成bindPropertyChange</desc>
+            <content>(?i)bind\(.*?propertychange.*?,.*?function.*?\(\)</content>
+            <replacecontent>bindPropertyChange(function()</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="propertychange">
+            <name>不支持propertychange方法</name>
+            <desc>propertychange方法绑定事件的方式不支持;需改成bindPropertyChange</desc>
+            <content>(?i)(?&amp;lt;=\.)propertychange.*?function.*?\(\)</content>
+            <replacecontent>bindPropertyChange(function()</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="button-type">
+            <name>button缺少type</name>
+            <desc>在button缺少type的情况下点击按钮会把form提交掉</desc>
+            <content>(&amp;lt;button(?![^&amp;lt;]*?type[^&amp;lt;]*?))(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>&amp;lt;button&amp;nbsp;type=&amp;quot;button&amp;quot;</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="hr-center">
+            <name>hr中不能存在text-align:center</name>
+            <desc>hr中存在text-align:center，在E8中会导致hr无法居中;请删除</desc>
+            <content>(?i)(?&amp;lt;=&amp;lt;hr[^&amp;lt;]{1,300})(text-align[\s]*:[\s]*center[\s]*[;]?)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>&amp;nbsp;</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="class-ViewForm">
+            <name>ViewForm-E8中class区别大小写</name>
+            <desc>E8中class区别大小写，ViewForm需要改成E8的class</desc>
+            <content>(?&amp;lt;=class[ ]?=[&amp;nbsp;]?&amp;quot;)(Viewform|viewform|VIEWFORM)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>ViewForm</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="class-Calendar">
+            <name>Calendar-E8中class区别大小写</name>
+            <desc>E8中class区别大小写，Calendar需要改成E8的class</desc>
+            <content>(?&amp;lt;=class[ ]?=[ ]?&amp;quot;)(calendar|CALENDAR)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>Calendar</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="class-ListShort">
+            <name>ListShort-E8中class区分大小写</name>
+            <desc>E8中class区别大小写，ListShort需要改成E8的class</desc>
+            <content>(?&amp;lt;=class[ ]?=[ ]?&amp;quot;)(listshort|LISTSHORT)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>ListShort</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="class-ViewForm2">
+            <name>ViewForm-E8中class区别大小写</name>
+            <desc>E8中class区别大小写，ViewForm需要改成E8的class</desc>
+            <content>(?&amp;lt;=class[ ]?=)(Viewform|viewform|VIEWFORM)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>ViewForm</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="class-Calendar2">
+            <name>Calendar-E8中class区别大小写</name>
+            <desc>E8中class区别大小写，Calendar需要改成E8的class</desc>
+            <content>(?&amp;lt;=class[ ]?=)(calendar|CALENDAR)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>Calendar</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="class-ListShort2">
+            <name>ListShort-在E8中class区分大小写</name>
+            <desc>E8中class区别大小写，ListShort需要改成E8的class</desc>
+            <content>(?&amp;lt;=class[ ]?=)(listshort|LISTSHORT)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>ListShort</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="vbscript-type">
+            <name>查询是否存在vbscript</name>
+            <desc>查询是否存在vbscript，vbscript在非IE下不支持；请用js重写</desc>
+            <content>(?i)(type.*?(vbscript|vbs).*?)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="vbscript-language">
+            <name>查询是否存在vbscript</name>
+            <desc>查询是否存在vbscript，非IE不支持vbscript；请用js重写</desc>
+            <content>(?i)(language.*?(vbscript|vbs).*?)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="BrowserStyle-width">
+            <name>在E8中class=BrowserStyle必须设置width</name>
+            <desc>在E8中class=BrowserStyle必须设置width,否则浏览框列表内容很小</desc>
+            <content>(?i)(?&amp;lt;=class.{0,10}?=.{0,100})([ &amp;apos;&amp;quot;]?BrowserStyle[ &amp;apos;&amp;quot;]?)(?!.*?width.*?)</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="js-prev">
+            <name>js-prev方法检测</name>
+            <desc>E8中部分元素层级结构发生改变会导致之前的二次开发功能失效，请检查js中的prev方法指向的元素是否正确</desc>
+            <content>(?i)(prev\(\))</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="js-child">
+            <name>js-child方法检测</name>
+            <desc>E8中部分元素层级结构发生改变会导致之前的二次开发功能失效，请检查js中的prev方法指向的元素是否正确</desc>
+            <content>(?i)(child\(\))</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="BUTTON-type">
+            <name>BUTTON缺少type</name>
+            <desc>BUTTON缺少type的情况下点击按钮会提交表单</desc>
+            <content>(&amp;lt;BUTTON(?![^&amp;lt;]*?type[^&amp;lt;]*?))(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>&amp;lt;BUTTON&amp;nbsp;type=&amp;quot;button&amp;quot;</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="bindPropertyChange-this">
+            <name>bindPropertyChange不能直接使用this获得对象</name>
+            <desc>bindPropertyChange的function内部不能直接通过jQuery(this)取对象，需使用function(vthis)传参数方式</desc>
+            <content>(?i)(.*?bindPropertyChange[\s\S]*?this[\s\S]*?}[\s\S]*?\))</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="tr-displayblock">
+            <name>tr不能设置display为block</name>
+            <desc>在chrome下tr作为块级元素只占了一列的宽度</desc>
+            <content>(?i)(?&amp;lt;=&amp;lt;tr[^&amp;gt;]{0,300})(display.*?block.*?[;]?)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="table-DXImageTransform">
+            <name>table元素不能设置filter为DXImageTransform</name>
+            <desc>在E8中如果table元素设置了filter为DXImageTransform，将导致多行文本字段，如果内容过多时显示不全</desc>
+            <content>(?i)(filter.*?DXImageTransform.Microsoft.Shadow[\s\S]*\(.*?\)[;]?)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>&amp;nbsp;</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="attr-checked">
+            <name>attr(&amp;quot;checked&amp;quot;,&amp;quot;&amp;quot;)失效</name>
+            <desc>在E8中attr(&amp;quot;checked&amp;quot;,&amp;quot;&amp;quot;)失效，需要改成removeAttr(&amp;quot;checked&amp;quot;)</desc>
+            <content>(?i)(attr\(.*?checked.*?&amp;quot;&amp;quot;\))</content>
+            <replacecontent>removeAttr(&amp;quot;checked&amp;quot;)</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+    </tabtype>
+    <tabtype id="checkhtml">
+        <rule id="propertychange-bind">
+            <name>propertychange事件bind绑定方式不支持</name>
+            <desc>propertychange事件bind绑定方式不支持，请改成bindPropertyChange</desc>
+            <content>(?i)bind\(.*?propertychange.*?,.*?function.*?\(\)</content>
+            <replacecontent>bindPropertyChange(function()</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="propertychange">
+            <name>propertychange方法</name>
+            <desc>propertychange方法绑定事件的方式不支持，请改成bindPropertyChange</desc>
+            <content>(?i)(?&amp;lt;=\.)propertychange.*?function.*?\(\)</content>
+            <replacecontent>bindPropertyChange(function()</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="button-type">
+            <name>button缺少type</name>
+            <desc>在button缺少type的情况下点击按钮会把form提交掉</desc>
+            <content>(&amp;lt;button(?![^&amp;lt;]*?type[^&amp;lt;]*?))(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>&amp;lt;button&amp;nbsp;type=&amp;quot;button&amp;quot;</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="hr-center">
+            <name>hr中存在text-align:center</name>
+            <desc>hr中存在text-align:center，在E8中会导致hr无法居中，请删除</desc>
+            <content>(?i)(?&amp;lt;=&amp;lt;hr[^&amp;lt;]{1,300})(text-align[ ]*:[ ]*center[ ]*[;]?)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>&amp;nbsp;&amp;nbsp;&amp;nbsp;</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="class-ViewForm">
+            <name>ViewForm-E8中class区别大小写</name>
+            <desc>E8中class区别大小写，ViewForm需要改成E8的class</desc>
+            <content>(?&amp;lt;=class[ ]?=[&amp;nbsp;]?&amp;quot;)(Viewform|viewform|VIEWFORM)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>ViewForm</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="class-Calendar">
+            <name>Calendar-E8中class区别大小写</name>
+            <desc>E8中class区别大小写，Calendar需要改成E8的class</desc>
+            <content>(?&amp;lt;=class[ ]?=[ ]?&amp;quot;)(calendar|CALENDAR)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>Calendar</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="class-ListShort">
+            <name>ListShort-E8中class区分大小写</name>
+            <desc>E8中class区别大小写，ListShort需要改成E8的class</desc>
+            <content>(?&amp;lt;=class[ ]?=[ ]?&amp;quot;)(listshort|LISTSHORT)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>ListShort</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="class-ViewForm2">
+            <name>ViewForm-E8中class区别大小写</name>
+            <desc>E8中class区别大小写，ViewForm需要改成E8的class</desc>
+            <content>(?&amp;lt;=class[ ]?=)(Viewform|viewform|VIEWFORM)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>ViewForm</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="class-Calendar2">
+            <name>Calendar-E8中class区别大小写</name>
+            <desc>E8中class区别大小写，Calendar需要改成E8的class</desc>
+            <content>(?&amp;lt;=class[ ]?=)(calendar|CALENDAR)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>Calendar</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="class-ListShort2">
+            <name>ListShort-在E8中class区分大小写</name>
+            <desc>E8中class区别大小写，ListShort需要改成E8的class</desc>
+            <content>(?&amp;lt;=class[ ]?=)(listshort|LISTSHORT)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>ListShort</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="vbscript-type">
+            <name>查询是否存在vbscript</name>
+            <desc>查询是否存在vbscript，vbscript在非IE下不支持；请用js重写</desc>
+            <content>(?i)(type.*?(vbscript|vbs).?)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="vbscript-language">
+            <name>查询是否存在vbscript</name>
+            <desc>查询是否存在vbscript，非IE不支持vbscript；请用js重写</desc>
+            <content>(?i)(language.*?(vbscript|vbs).?)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="weaver.js">
+            <name>不能引用weaver.js</name>
+            <desc>不能引用weaver.js，可直接删除</desc>
+            <content>(?i)(&amp;lt;script.*?weaver\.js.*&amp;lt;/script&amp;gt;)</content>
+            <replacecontent>&amp;nbsp;</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="init.jsp">
+            <name>不能引用init.jsp</name>
+            <desc>不能引用init.jsp</desc>
+            <content>(?i)(&amp;lt;include.*?init\.jsp.*?&amp;gt;)</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="weaver.css">
+            <name>不能引用weaver.css</name>
+            <desc>不能引用weaver.css，可直接删除</desc>
+            <content>(?i)(&amp;lt;link.*?weaver\.css.*?\/&amp;gt;)</content>
+            <replacecontent>&amp;nbsp;</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="jquery.js">
+            <name>不能引用jquery.js</name>
+            <desc>不能引用jquery.js，可直接删除</desc>
+            <content>(?i)(&amp;lt;script.*?jquery\.js.*&amp;lt;/script&amp;gt;)</content>
+            <replacecontent>&amp;nbsp;</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="commom.css">
+            <name>不能引入commom.css</name>
+            <desc>不能引入commom.css，可直接删除</desc>
+            <content>(?i)(&amp;lt;link.*?commom\.css.*?\/&amp;gt;)</content>
+            <replacecontent>&amp;nbsp;</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="table0button">
+            <name>在E8中明细表的id不是table0button</name>
+            <desc>在E8中明细表的id不是table0button，而是oTable0</desc>
+            <content>#table0button</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="trim">
+            <name>js的trim()方法在E8中不能用</name>
+            <desc>js的trim()方法在E8中不能用</desc>
+            <content>\.trim\(\)</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="import-css">
+            <name>引入了css文件</name>
+            <desc>引入了其他的css文件，可能会导致模板样式错乱的情况，请排查一下</desc>
+            <content>(?i)(&amp;lt;link.*\/&amp;gt;)</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="p-center">
+            <name>E7的老模板在chrome下的&amp;lt;p&amp;gt;标签内容不能居中</name>
+            <desc>&amp;lt;p&amp;gt;为段落标签，在标准模式下&amp;lt;p&amp;gt;里包含非段落元素会直接头尾结束掉；需改为&amp;lt;div align=&amp;quot;center&amp;quot;&amp;gt;</desc>
+            <content>(?i)(&amp;lt;p.*?align[ ]*?=([\s\S](?!&amp;lt;\/p&amp;gt;))*?table)(?=[\s\S]*?&amp;lt;/p&amp;gt;)</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="addrow-return1">
+            <name>addrow方法没有需要返回false；</name>
+            <desc>明细表添加行的方法，需要return false;否则添加明细行可能失败</desc>
+            <content>(?i)(function.*?addrow[\s\S]*?return[ ]*?;[\s\S]*?})</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="addrow-return2">
+            <name>addrow方法没有返回值</name>
+            <desc>明细表添加行的方法，需要return&amp;nbsp;false;否则添加明细行可能失败</desc>
+            <content>(?i)(function.*?addrow)(?![\s\S]*?return[\s\S]*?})</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="deleterow-return1">
+            <name>deleterow方法没有需要返回false</name>
+            <desc>明细表删除行的方法，需要return false;否则删除明细行可能失败</desc>
+            <content>(?i)(function.*?deleterow[\s\S]*?return[ ]*?;[\s\S]*?})</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="deleterow-return2">
+            <name>deleterow方法没有需要返回false</name>
+            <desc>明细表删除行的方法，需要return false;否则删除明细行可能失败</desc>
+            <content>(?i)(function.*?deleterow)(?![\s\S]*?return[\s\S]*?})</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="window.print">
+            <name>window.print方法调用的是浏览器的打印方法</name>
+            <desc>window.print方法调用的是浏览器的打印方法，非ecology的打印方法</desc>
+            <content>(?i)(window.print)</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="bindPropertyChange-this">
+            <name>bindPropertyChange不能直接使用this获得对象</name>
+            <desc>bindPropertyChange的function内部不能直接通过jQuery(this)取对象，需使用function(vthis)传参数方式</desc>
+            <content>(?i)(.*?bindPropertyChange\(([\s\S](?!function))*?this[\s\S]*?}[\s\S]*?\))</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="class-table-STYLE7">
+            <name>class包含table STYLE7使得样式重复</name>
+            <desc>在E8中，class包含table STYLE7使得样式重复,会导致浏览器解析有问题</desc>
+            <content>(?i)(?&amp;lt;=class[&amp;nbsp;]?=[&amp;nbsp;]?&amp;quot;)(table.*?STYLE7)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>STYLE7</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="class-table-STYLE7-2">
+            <name>class包含table STYLE7使得样式重复</name>
+            <desc>在E8中，class包含table STYLE7使得样式重复,会导致浏览器解析有问题</desc>
+            <content>(?i)(?&amp;lt;=class[ ]?=)(table.*?STYLE7)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>STYLE7</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="BUTTON-type">
+            <name>BUTTON缺少type</name>
+            <desc>在BUTTON缺少type的情况下点击按钮会把form提交掉</desc>
+            <content>(&amp;lt;BUTTON(?![^&amp;lt;]*?type[^&amp;lt;]*?))(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>&amp;lt;BUTTON&amp;nbsp;type=&amp;quot;button&amp;quot;</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="js-prev">
+            <name>检查prev方法</name>
+            <desc>E8中部分元素层级结构发生改变会导致之前的二次开发功能失效，请检查js中的prev方法指向的元素是否正确</desc>
+            <content>(?i)(prev\(\))</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="js-child">
+            <name>检查child方法</name>
+            <desc>E8中部分元素层级结构发生改变会导致之前的二次开发功能失效，请检查js中的prev方法指向的元素是否正确</desc>
+            <content>(?i)(child\(\))</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="tr-displayblock">
+            <name>tr不能设置display为block</name>
+            <desc>在chrome下tr作为块级元素只占了一列的宽度，请检查是否有样式问题</desc>
+            <content>(?i)(?&amp;lt;=&amp;lt;tr[^&amp;lt;]{0,300})(display.*?block.*?[;]?)</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="table-DXImageTransform">
+            <name>table元素不能设置filter为DXImageTransform</name>
+            <desc>在E8中如果table元素设置了filter为DXImageTransform，将导致多行文本字段，如果内容过多时显示不全</desc>
+            <content>(?i)(filter.*?DXImageTransform.Microsoft.Shadow[\s\S]*\(.*?\)[;]?)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>&amp;nbsp;</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="check-background">
+            <name>检查模板中是否设置了background属性</name>
+            <desc>检查模板中是否设置了background属性，升级后可能样式会有问题，请检查</desc>
+            <content>(?i)(.*?background.*)</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="input-class">
+            <name>检查模板中的input元素的class是否是标准的</name>
+            <desc>检查模板中的input元素的class是否是标准的，非标准的class升级之后可能会有样式问题，请检查</desc>
+            <content>(?i)(&amp;lt;input(?!.*?(class=&amp;quot;InputStyle|Label&amp;quot;)).*)</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="attr-checked">
+            <name>attr(&amp;quot;checked&amp;quot;,&amp;quot;&amp;quot;)失效</name>
+            <desc>在E8中attr(&amp;quot;checked&amp;quot;,&amp;quot;&amp;quot;)失效，需要改成removeAttr(&amp;quot;checked&amp;quot;)</desc>
+            <content>(?i)(attr\(.*?checked.*?&amp;quot;&amp;quot;\))</content>
+            <replacecontent>removeAttr(&amp;quot;checked&amp;quot;)</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+    </tabtype>
+    <tabtype id="checkmodehtml">
+        <rule id="propertychange-bind">
+            <name>propertychange事件bind绑定方式不支持</name>
+            <desc>propertychange事件bind绑定方式不支持；修改成bindPropertyChange方法绑定</desc>
+            <content>(?i)bind\(.*?propertychange.*?,.*?function.*?\(\)</content>
+            <replacecontent>bindPropertyChange(function()</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="propertychange">
+            <name>propertychange方法</name>
+            <desc>propertychange方法绑定事件的方式不支持；修改成bindPropertyChange方法绑定</desc>
+            <content>(?i)(?&amp;lt;=\.)propertychange.*?function.*?\(\)</content>
+            <replacecontent>bindPropertyChange(function()</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="button-type">
+            <name>button缺少type</name>
+            <desc>在button缺少type的情况下点击按钮会把form提交掉</desc>
+            <content>(&amp;lt;button(?![^&amp;lt;]*?type[^&amp;lt;]*?))(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>&amp;lt;button&amp;nbsp;type=&amp;quot;button&amp;quot;</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="hr-center">
+            <name>hr中存在text-align:center</name>
+            <desc>hr中存在text-align:center，在E8中会导致hr无法居中;请删除</desc>
+            <content>(?i)(?&amp;lt;=&amp;lt;hr[^&amp;lt;]{1,300})(text-align[ ]*:[ ]*center[ ]*[;]?)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>&amp;nbsp;&amp;nbsp;&amp;nbsp;</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="class-ViewForm">
+            <name>ViewForm-E8中class区别大小写</name>
+            <desc>E8中class区别大小写，ViewForm需要改成E8的class</desc>
+            <content>(?&amp;lt;=class[ ]?=[&amp;nbsp;]?&amp;quot;)(Viewform|viewform|VIEWFORM)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>ViewForm</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="class-Calendar">
+            <name>Calendar-E8中class区别大小写</name>
+            <desc>E8中class区别大小写，Calendar需要改成E8的class</desc>
+            <content>(?&amp;lt;=class[ ]?=[ ]?&amp;quot;)(calendar|CALENDAR)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>Calendar</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="class-ListShort">
+            <name>ListShort-E8中class区分大小写</name>
+            <desc>E8中class区别大小写，ListShort需要改成E8的class</desc>
+            <content>(?&amp;lt;=class[ ]?=[ ]?&amp;quot;)(listshort|LISTSHORT)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>ListShort</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="class-ViewForm2">
+            <name>ViewForm-E8中class区别大小写</name>
+            <desc>E8中class区别大小写，ViewForm需要改成E8的class</desc>
+            <content>(?&amp;lt;=class[ ]?=)(Viewform|viewform|VIEWFORM)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>ViewForm</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="class-Calendar2">
+            <name>Calendar-E8中class区别大小写</name>
+            <desc>E8中class区别大小写，Calendar需要改成E8的class</desc>
+            <content>(?&amp;lt;=class[ ]?=)(calendar|CALENDAR)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>Calendar</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="class-ListShort2">
+            <name>ListShort-在E8中class区分大小写</name>
+            <desc>E8中class区别大小写，ListShort需要改成E8的class</desc>
+            <content>(?&amp;lt;=class[ ]?=)(listshort|LISTSHORT)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>ListShort</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="vbscript-type">
+            <name>查询是否存在vbscript</name>
+            <desc>查询是否存在vbscript，vbscript在非IE下不支持；请用js重写</desc>
+            <content>(?i)(type.*?(vbscript|vbs).?)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="vbscript-language">
+            <name>查询是否存在vbscript</name>
+            <desc>查询是否存在vbscript，非IE不支持vbscript；请用js重写</desc>
+            <content>(?i)(language.*?(vbscript|vbs).?)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="weaver.js">
+            <name>不能引用weaver.js</name>
+            <desc>不能引用weaver.js，可直接删除</desc>
+            <content>(?i)(&amp;lt;script.*?weaver\.js.*&amp;lt;/script&amp;gt;)</content>
+            <replacecontent>&amp;nbsp;</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="init.jsp">
+            <name>不能引用init.jsp</name>
+            <desc>不能引用init.jsp</desc>
+            <content>(?i)(&amp;lt;include.*?init\.jsp.*?&amp;gt;)</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="weaver.css">
+            <name>不能引用weaver.css</name>
+            <desc>不能引用weaver.css，可直接删除</desc>
+            <content>(?i)(&amp;lt;link.*?weaver\.css.*?\/&amp;gt;)</content>
+            <replacecontent>&amp;nbsp;</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="jquery.js">
+            <name>不能引用jquery.js</name>
+            <desc>不能引用jquery.js，可直接删除</desc>
+            <content>(?i)(&amp;lt;script.*?jquery\.js.*&amp;lt;/script&amp;gt;)</content>
+            <replacecontent>&amp;nbsp;</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="commom.css">
+            <name>不能引入commom.css</name>
+            <desc>不能引入commom.css，可直接删除</desc>
+            <content>(?i)(&amp;lt;link.*?commom\.css.*?\/&amp;gt;)</content>
+            <replacecontent>&amp;nbsp;</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="table0button">
+            <name>在E8中明细表的id不是table0button</name>
+            <desc>在E8中明细表的id不是table0button，而是oTable0</desc>
+            <content>#table0button</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="trim">
+            <name>js的trim()方法在E8中不能用</name>
+            <desc>js的trim()方法在E8中不能用</desc>
+            <content>\.trim()</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="import-css">
+            <name>引入了css文件</name>
+            <desc>引入了其他的css文件，可能会导致模板样式错乱的情况，请排查一下</desc>
+            <content>(?i)(&amp;lt;link.*\/&amp;gt;)</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="p-center">
+            <name>E7的老模板在chrome下的&amp;lt;p&amp;gt;标签内容不能居中</name>
+            <desc>&amp;lt;p&amp;gt;为段落标签，在标准模式下&amp;lt;p&amp;gt;里包含非段落元素会直接头尾结束掉；需改为&amp;lt;div align=&amp;quot;center&amp;quot;&amp;gt;</desc>
+            <content>(?i)(&amp;lt;p.*?align[ ]*?=([\s\S](?!&amp;lt;\/p&amp;gt;))*?table)(?=[\s\S]*?&amp;lt;/p&amp;gt;)</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="addrow-return1">
+            <name>addrow方法没有需要返回false；</name>
+            <desc>明细表添加行的方法，需要return false;否则添加明细行可能失败</desc>
+            <content>(?i)(function.*?addrow[\s\S]*?return[ ]*?;[\s\S]*?})</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="addrow-return2">
+            <name>addrow方法没有返回值</name>
+            <desc>明细表添加行的方法，需要return&amp;nbsp;false;否则添加明细行可能失败</desc>
+            <content>(?i)(function.*?addrow)(?![\s\S]*?return[\s\S]*?})</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="deleterow-return1">
+            <name>deleterow方法没有需要返回false</name>
+            <desc>明细表删除行的方法，需要return false;否则删除明细行可能失败</desc>
+            <content>(?i)(function.*?deleterow[\s\S]*?return[ ]*?;[\s\S]*?})</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="deleterow-return2">
+            <name>deleterow方法没有需要返回false</name>
+            <desc>明细表删除行的方法，需要return false;否则删除明细行可能失败</desc>
+            <content>(?i)(function.*?deleterow)(?![\s\S]*?return[\s\S]*?})</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="window.print">
+            <name>window.print方法调用的是浏览器的打印方法</name>
+            <desc>window.print方法调用的是浏览器的打印方法，非ecology的打印方法</desc>
+            <content>(?i)(window.print)</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="bindPropertyChange-this">
+            <name>bindPropertyChange不能直接使用this获得对象</name>
+            <desc>bindPropertyChange的function内部不能直接通过jQuery(this)取对象，需使用function(vthis)传参数方式</desc>
+            <content>(?i)(.*?bindPropertyChange\(([\s\S](?!function))*?this[\s\S]*?}[\s\S]*?\))</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="class-table-STYLE7">
+            <name>class包含table STYLE7使得样式重复</name>
+            <desc>在E8中，class包含table STYLE7使得样式重复,会导致浏览器解析有问题</desc>
+            <content>(?i)(?&amp;lt;=class[&amp;nbsp;]?=[&amp;nbsp;]?&amp;quot;)(table.*?STYLE7)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>STYLE7</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="class-table-STYLE7-2">
+            <name>class包含table STYLE7使得样式重复</name>
+            <desc>在E8中，class包含table STYLE7使得样式重复,会导致浏览器解析有问题</desc>
+            <content>(?i)(?&amp;lt;=class[ ]?=)(table.*?STYLE7)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>STYLE7</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="BUTTON-type">
+            <name>BUTTON缺少type</name>
+            <desc>在BUTTON缺少type的情况下点击按钮会把form提交掉</desc>
+            <content>(&amp;lt;BUTTON(?![^&amp;lt;]*?type[^&amp;lt;]*?))(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>&amp;lt;BUTTON&amp;nbsp;type=&amp;quot;button&amp;quot;</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="js-prev">
+            <name>检查prev方法</name>
+            <desc>E8中部分元素层级结构发生改变会导致之前的二次开发功能失效，请检查js中的prev方法指向的元素是否正确</desc>
+            <content>(?i)(prev\(\))</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="js-child">
+            <name>检查child方法</name>
+            <desc>E8中部分元素层级结构发生改变会导致之前的二次开发功能失效，请检查js中的prev方法指向的元素是否正确</desc>
+            <content>(?i)(child\(\))</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="tr-displayblock">
+            <name>tr不能设置display为block</name>
+            <desc>在chrome下tr作为块级元素只占了一列的宽度；请检查是否有样式问题</desc>
+            <content>(?i)(?&amp;lt;=&amp;lt;tr[^&amp;lt;]{0,300})(display.*?block.*?[;]?)</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="table-DXImageTransform">
+            <name>table元素不能设置filter为DXImageTransform</name>
+            <desc>在E8中如果table元素设置了filter为DXImageTransform，将导致多行文本字段，如果内容过多时显示不全</desc>
+            <content>(?i)(filter.*?DXImageTransform.Microsoft.Shadow[\s\S]*\(.*?\)[;]?)(?=[^&amp;lt;]*?&amp;gt;)</content>
+            <replacecontent>&amp;nbsp;</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="input-class">
+            <name>检查模板中input元素</name>
+            <desc>检查模板中input元素的class是否是标准的class，非标准class升级后可能有问题；请检查</desc>
+            <content>(?i)(&amp;lt;input(?!.*?(class=&amp;quot;InputStyle|Label&amp;quot;)).*)</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="check-background">
+            <name>检查模板中是否设置了background属性</name>
+            <desc>检查模板中是否设置了background属性，升级后可能会有样式问题；请检查</desc>
+            <content>(?i)(.*?background.*)</content>
+            <replacecontent />
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+        <rule id="attr-checked">
+            <name>attr(&amp;quot;checked&amp;quot;,&amp;quot;&amp;quot;)失效</name>
+            <desc>在E8中attr(&amp;quot;checked&amp;quot;,&amp;quot;&amp;quot;)失效，需要改成removeAttr(&amp;quot;checked&amp;quot;)</desc>
+            <content>(?i)(attr\(.*?checked.*?&amp;quot;&amp;quot;\))</content>
+            <replacecontent>removeAttr(&amp;quot;checked&amp;quot;)</replacecontent>
+            <version />
+            <xpath />
+            <requisite />
+            <ruletype />
+        </rule>
+    </tabtype>
+    <tabtype id="checkwebxml">
+        <rule id="XssFilter">
+            <name>配置XssFilter</name>
+            <desc>需要在web.xml配置XssFilter</desc>
+            <content />
+            <replacecontent>&amp;lt;filter&amp;gt;\n&amp;lt;filter-name&amp;gt;XssFilter&amp;lt;/filter-name&amp;gt;\n&amp;lt;filter-class&amp;gt;weaver.filter.XssFilter&amp;lt;/filter-class&amp;gt;\n&amp;lt;/filter&amp;gt;\n&amp;lt;filter-mapping&amp;gt;\n&amp;lt;filter-name&amp;gt;XssFilter&amp;lt;/filter-name&amp;gt;\n&amp;lt;url-pattern&amp;gt;*.jsp&amp;lt;/url-pattern&amp;gt;\n&amp;lt;/filter-mapping&amp;gt;\n&amp;lt;filter-mapping&amp;gt;\n&amp;lt;filter-name&amp;gt;XssFilter&amp;lt;/filter-name&amp;gt;\n&amp;lt;url-pattern&amp;gt;*.do&amp;lt;/url-pattern&amp;gt;\n&amp;lt;/filter-mapping&amp;gt;\n&amp;lt;filter-mapping&amp;gt;\n&amp;lt;filter-name&amp;gt;XssFilter&amp;lt;/filter-name&amp;gt;\n&amp;lt;url-pattern&amp;gt;/weaver/*&amp;lt;/url-pattern&amp;gt;\n&amp;lt;/filter-mapping&amp;gt;\n&amp;lt;filter-mapping&amp;gt;\n&amp;lt;filter-name&amp;gt;XssFilter&amp;lt;/filter-name&amp;gt;\n&amp;lt;url-pattern&amp;gt;/log/*&amp;lt;/url-pattern&amp;gt;\n&amp;lt;/filter-mapping&amp;gt;\n&amp;lt;filter-mapping&amp;gt;\n&amp;lt;filter-name&amp;gt;XssFilter&amp;lt;/filter-name&amp;gt;\n&amp;lt;url-pattern&amp;gt;/admin&amp;lt;/url-pattern&amp;gt;\n&amp;lt;/filter-mapping&amp;gt;</replacecontent>
+            <version>8.100.0531</version>
+            <xpath>/web-app/filter[filter-name[text()=&amp;apos;XssFilter&amp;apos;]]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="crossDomainSessionSecurity">
+            <name>配置crossDomainSessionSecurity</name>
+            <desc>需要在web.xml配置crossDomainSessionSecurity</desc>
+            <content />
+            <replacecontent>&amp;lt;servlet&amp;gt;\n &amp;lt;servlet-name&amp;gt;dwr-invoker&amp;lt;/servlet-name&amp;gt;\n &amp;lt;servlet-class&amp;gt;uk.ltd.getahead.dwr.DWRServlet&amp;lt;/servlet-class&amp;gt;\n &amp;lt;init-param&amp;gt;\n &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;param-name&amp;gt;crossDomainSessionSecurity&amp;lt;/param-name&amp;gt;\n &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;param-value&amp;gt;false&amp;lt;/param-value&amp;gt;\n &amp;lt;/init-param&amp;gt;\n &amp;lt;init-param&amp;gt;\n &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;param-name&amp;gt;allowScriptTagRemoting&amp;lt;/param-name&amp;gt;\n &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;param-value&amp;gt;true&amp;lt;/param-value&amp;gt;\n &amp;lt;/init-param&amp;gt;\n &amp;lt;load-on-startup&amp;gt;1&amp;lt;/load-on-startup&amp;gt;\n&amp;lt;/servlet&amp;gt;\n&amp;lt;servlet-mapping&amp;gt;\n &amp;lt;servlet-name&amp;gt;dwr-invoker&amp;lt;/servlet-name&amp;gt;\n &amp;lt;url-pattern&amp;gt;/dwr/*&amp;lt;/url-pattern&amp;gt;\n&amp;lt;/servlet-mapping&amp;gt;</replacecontent>
+            <version>KB81001509</version>
+            <xpath>/web-app/servlet[servlet-name[text()=&amp;apos;dwr-invoker&amp;apos;]]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="CreateQRCodeServlet">
+            <name>配置CreateQRCodeServlet</name>
+            <desc>需要在web.xml配置CreateQRCodeServlet</desc>
+            <content />
+            <replacecontent>&amp;lt;servlet&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;servlet-name&amp;gt;CreateQRCodeServlet&amp;lt;/servlet-name&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;servlet-class&amp;gt;weaver.workflow.exceldesign.CreateQRCodeServlet&amp;lt;/servlet-class&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;\n&amp;lt;/servlet&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;\n&amp;lt;servlet-mapping&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;servlet-name&amp;gt;CreateQRCodeServlet&amp;lt;/servlet-name&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;url-pattern&amp;gt;/createQRCode&amp;lt;/url-pattern&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;\n&amp;lt;/servlet-mapping&amp;gt;</replacecontent>
+            <version>KB81001510</version>
+            <xpath>/web-app/servlet[servlet-name[text()=&amp;apos;CreateQRCodeServlet&amp;apos;]]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="CloudOaFilter">
+            <name>配置CloudOaFilter</name>
+            <desc>需要在web.xml配置CloudOaFilter</desc>
+            <content />
+            <replacecontent>&amp;lt;filter&amp;gt;\n&amp;lt;filter-name&amp;gt;CloudOaFilter&amp;lt;/filter-name&amp;gt;\n&amp;lt;filter-class&amp;gt;weaver.filter.CloudOaFilter&amp;lt;/filter-class&amp;gt;\n&amp;lt;init-param&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\n&amp;lt;param-name&amp;gt;excludedPages&amp;lt;/param-name&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\n&amp;lt;param-value&amp;gt;/login/login.jsp&amp;lt;/param-value&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\n&amp;lt;/init-param&amp;gt;&amp;nbsp;\n&amp;lt;/filter&amp;gt;</replacecontent>
+            <version>KB81001511</version>
+            <xpath>/web-app/filter[filter-name[text()=&amp;apos;CloudOaFilter&amp;apos;]]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="ReplyFileDownload">
+            <name>配置ReplyFileDownload</name>
+            <desc>需要在web.xml配置ReplyFileDownload</desc>
+            <content />
+            <replacecontent>&amp;lt;servlet&amp;gt;\n&amp;lt;servlet-name&amp;gt;ReplyFileDownload&amp;lt;/servlet-name&amp;gt;\n&amp;lt;servlet-class&amp;gt;weaver.docs.docs.reply.FileDownload&amp;lt;/servlet-class&amp;gt;\n&amp;lt;/servlet&amp;gt;\n&amp;lt;servlet-mapping&amp;gt;\n&amp;lt;servlet-name&amp;gt;ReplyFileDownload&amp;lt;/servlet-name&amp;gt;\n&amp;lt;url-pattern&amp;gt;/weaver/weaver.docs.docs.reply.FileDownload&amp;lt;/url-pattern&amp;gt;\n&amp;lt;/servlet-mapping&amp;gt;</replacecontent>
+            <version>KB81001512</version>
+            <xpath>/web-app/servlet[servlet-name[text()=&amp;apos;ReplyFileDownload&amp;apos;]]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="CreateWfBarCodeServlet">
+            <name>配置CreateWfBarCodeServlet</name>
+            <desc>需要在web.xml配置CreateWfBarCodeServlet</desc>
+            <content />
+            <replacecontent>&amp;lt;servlet&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;servlet-name&amp;gt;CreateWfBarCodeServlet&amp;lt;/servlet-name&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;servlet-class&amp;gt;weaver.workflow.exceldesign.CreateBarCodeServlet&amp;lt;/servlet-class&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;\n&amp;lt;/servlet&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;\n&amp;lt;servlet-mapping&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;servlet-name&amp;gt;CreateWfBarCodeServlet&amp;lt;/servlet-name&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;url-pattern&amp;gt;/createWfBarCode&amp;lt;/url-pattern&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;\n&amp;lt;/servlet-mapping&amp;gt;</replacecontent>
+            <version>KB81001603</version>
+            <xpath>/web-app/servlet[servlet-name[text()=&amp;apos;CreateWfBarCodeServlet&amp;apos;]]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="SecurityFilter">
+            <name>配置SecurityFilter</name>
+            <desc>需要在web.xml配置SecurityFilter</desc>
+            <content />
+            <replacecontent>&amp;lt;filter&amp;gt;\n&amp;lt;filter-name&amp;gt;SecurityFilter&amp;lt;/filter-name&amp;gt;\n&amp;lt;filter-class&amp;gt;weaver.filter.SecurityFilter&amp;lt;/filter-class&amp;gt;\n&amp;lt;/filter&amp;gt;\n&amp;lt;filter-mapping&amp;gt;\n&amp;lt;filter-name&amp;gt;SecurityFilter&amp;lt;/filter-name&amp;gt;\n&amp;lt;url-pattern&amp;gt;/*&amp;lt;/url-pattern&amp;gt;\n&amp;lt;/filter-mapping&amp;gt;</replacecontent>
+            <version>KB81001603</version>
+            <xpath>/web-app/filter[filter-name[text()=&amp;apos;SecurityFilter&amp;apos;]]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="encodingFilter">
+            <name>配置encodingFilter</name>
+            <desc>需要在web.xml配置encodingFilter</desc>
+            <content />
+            <replacecontent>&amp;lt;filter&amp;gt;\n&amp;lt;filter-name&amp;gt;encodingFilter&amp;lt;/filter-name&amp;gt;\n&amp;lt;filter-class&amp;gt;org.springframework.web.filter.CharacterEncodingFilter&amp;lt;/filter-class&amp;gt;\n&amp;lt;init-param&amp;gt;\n&amp;lt;param-name&amp;gt;encoding&amp;lt;/param-name&amp;gt;\n&amp;lt;param-value&amp;gt;UTF-8&amp;lt;/param-value&amp;gt;\n&amp;lt;/init-param&amp;gt;\n&amp;lt;/filter&amp;gt;</replacecontent>
+            <version>8.100.0531</version>
+            <xpath>/web-app/filter[filter-name[text()=&amp;apos;encodingFilter&amp;apos;]]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="browserTag">
+            <name>配置browserTag</name>
+            <desc>需要在web.xml中配置browserTag</desc>
+            <content />
+            <replacecontent>&amp;lt;jsp-config&amp;gt;\n&amp;lt;taglib&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;taglib-uri&amp;gt;/browserTag&amp;lt;/taglib-uri&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;taglib-location&amp;gt;/WEB-INF/tld/browser.tld&amp;lt;/taglib-location&amp;gt;\n&amp;lt;/taglib&amp;gt;\n&amp;lt;taglib&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;taglib-uri&amp;gt;/browser&amp;lt;/taglib-uri&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;taglib-location&amp;gt;/WEB-INF/tld/browser.tld&amp;lt;/taglib-location&amp;gt;\n&amp;lt;/taglib&amp;gt;\n&amp;lt;/jsp-config&amp;gt;</replacecontent>
+            <version>8.100.0531</version>
+            <xpath>/web-app/jsp-config/taglib[taglib-uri[text()=&amp;apos;/browserTag&amp;apos;]]/parent::*</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="IECompatibleFilter">
+            <name>配置IECompatibleFilter</name>
+            <desc>需要在web.xml中配置IECompatibleFilter</desc>
+            <content />
+            <replacecontent>&amp;lt;filter&amp;gt;\n&amp;lt;filter-name&amp;gt;IECompatibleFilter&amp;lt;/filter-name&amp;gt;\n&amp;lt;filter-class&amp;gt;weaver.filter.IECompatibleFilter&amp;lt;/filter-class&amp;gt;\n&amp;lt;/filter&amp;gt;\n&amp;lt;filter-mapping&amp;gt;\n&amp;lt;filter-name&amp;gt;IECompatibleFilter&amp;lt;/filter-name&amp;gt;\n&amp;lt;url-pattern&amp;gt;*.jsp&amp;lt;/url-pattern&amp;gt;\n&amp;lt;/filter-mapping&amp;gt;\n&amp;lt;filter-mapping&amp;gt;\n&amp;lt;filter-name&amp;gt;IECompatibleFilter&amp;lt;/filter-name&amp;gt;\n&amp;lt;url-pattern&amp;gt;*.js&amp;lt;/url-pattern&amp;gt;\n&amp;lt;/filter-mapping&amp;gt;\n&amp;lt;filter-mapping&amp;gt;\n&amp;lt;filter-name&amp;gt;IECompatibleFilter&amp;lt;/filter-name&amp;gt;\n&amp;lt;url-pattern&amp;gt;*.htm&amp;lt;/url-pattern&amp;gt;\n&amp;lt;/filter-mapping&amp;gt;\n&amp;lt;filter-mapping&amp;gt;\n&amp;lt;filter-name&amp;gt;IECompatibleFilter&amp;lt;/filter-name&amp;gt;\n&amp;lt;url-pattern&amp;gt;*.html&amp;lt;/url-pattern&amp;gt;\n&amp;lt;/filter-mapping&amp;gt;</replacecontent>
+            <version>8.100.0531</version>
+            <xpath>/web-app/filter[filter-name[text()=&amp;apos;IECompatibleFilter&amp;apos;]]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="AppUseInfo">
+            <name>配置AppUseInfo</name>
+            <desc>需要在web.xml中配置AppUseInfo</desc>
+            <content />
+            <replacecontent>&amp;lt;filter&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;filter-name&amp;gt;AppUseInfo&amp;lt;/filter-name&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;filter-class&amp;gt;weaver.filter.AppUseFilter&amp;lt;/filter-class&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;lt;/filter&amp;gt;\n&amp;nbsp;&amp;lt;filter-mapping&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;filter-name&amp;gt;AppUseInfo&amp;lt;/filter-name&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;url-pattern&amp;gt;*.jsp&amp;lt;/url-pattern&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;lt;/filter-mapping&amp;gt;</replacecontent>
+            <version>8.100.0531</version>
+            <xpath>/web-app/filter[filter-name[text()=&amp;apos;AppUseInfo&amp;apos;]]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="ConnFastFilter">
+            <name>配置ConnFastFilter</name>
+            <desc>需要在web.xml中配置ConnFastFilter</desc>
+            <content />
+            <replacecontent>&amp;lt;filter&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;filter-name&amp;gt;ConnFastFilter&amp;lt;/filter-name&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;filter-class&amp;gt;weaver.filter.ConnFastFilter&amp;lt;/filter-class&amp;gt;\n&amp;nbsp;&amp;lt;/filter&amp;gt;\n&amp;nbsp;&amp;lt;filter-mapping&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;filter-name&amp;gt;ConnFastFilter&amp;lt;/filter-name&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;url-pattern&amp;gt;*.jsp&amp;lt;/url-pattern&amp;gt;\n&amp;nbsp;&amp;lt;/filter-mapping&amp;gt;\n&amp;nbsp;&amp;lt;filter-mapping&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;filter-name&amp;gt;ConnFastFilter&amp;lt;/filter-name&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;url-pattern&amp;gt;/weaver/weaver.common.util.taglib.SplitPageXmlServlet&amp;lt;/url-pattern&amp;gt;\n&amp;nbsp;&amp;lt;/filter-mapping&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;lt;filter-mapping&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;filter-name&amp;gt;ConnFastFilter&amp;lt;/filter-name&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;url-pattern&amp;gt;/weaver/weaver.common.util.taglib.SplitPageXmlServletNew&amp;lt;/url-pattern&amp;nbsp;&amp;gt;\n&amp;nbsp;&amp;lt;/filter-mapping&amp;gt;</replacecontent>
+            <version>8.100.0531</version>
+            <xpath>/web-app/filter[filter-name[text()=&amp;apos;ConnFastFilter&amp;apos;]]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="DialogHandleFilter">
+            <name>配置DialogHandleFilter</name>
+            <desc>需要在web.xml中配置DialogHandleFilter</desc>
+            <content />
+            <replacecontent>&amp;lt;filter&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;lt;filter-name&amp;gt;DialogHandleFilter&amp;lt;/filter-name&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\n&amp;nbsp;&amp;nbsp;&amp;lt;filter-class&amp;gt;weaver.filter.DialogHandleFilter&amp;lt;/filter-class&amp;gt;\n&amp;lt;/filter&amp;gt;\n&amp;lt;filter-mapping&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;filter-name&amp;gt;DialogHandleFilter&amp;lt;/filter-name&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;url-pattern&amp;gt;*.jsp&amp;lt;/url-pattern&amp;gt;\n&amp;lt;/filter-mapping&amp;gt;</replacecontent>
+            <version>8.100.0531</version>
+            <xpath>/web-app/filter[filter-name[text()=&amp;apos;DialogHandleFilter&amp;apos;]]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="ShowDocsImageServlet">
+            <name>配置ShowDocsImageServlet</name>
+            <desc>需要在web.xml中配置ShowDocsImageServlet</desc>
+            <content />
+            <replacecontent>&amp;lt;servlet&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;servlet-name&amp;gt;ShowDocsImageServlet&amp;lt;/servlet-name&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;servlet-class&amp;gt;weaver.docs.docs.ShowDocsImageServlet&amp;lt;/servlet-class&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;/servlet&amp;gt;\n&amp;lt;servlet-mapping&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;servlet-name&amp;gt;ShowDocsImageServlet&amp;lt;/servlet-name&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;url-pattern&amp;gt;/weaver/weaver.docs.docs.ShowDocsImageServlet&amp;lt;/url-pattern&amp;gt;\n&amp;lt;/servlet-mapping&amp;gt;</replacecontent>
+            <version>8.100.0531</version>
+            <xpath>/web-app/servlet[servlet-name[text()=&amp;apos;ShowDocsImageServlet&amp;apos;]]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="InterfaceServlet">
+            <name>配置InterfaceServlet</name>
+            <desc>需要在web.xml中配置InterfaceServlet</desc>
+            <content />
+            <replacecontent>&amp;lt;servlet&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;servlet-name&amp;gt;InterfaceServlet&amp;lt;/servlet-name&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;servlet-class&amp;gt;weaver.admincenter.servlet.InterfaceServlet&amp;lt;/servlet-class&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;lt;/servlet&amp;gt;\n&amp;lt;servlet-mapping&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;servlet-name&amp;gt;InterfaceServlet&amp;lt;/servlet-name&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;url-pattern&amp;gt;/weaver/weaver.admincenter.servlet.InterfaceServlet&amp;lt;/url-pattern&amp;gt;\n&amp;lt;/servlet-mapping&amp;gt;</replacecontent>
+            <version>8.100.0531</version>
+            <xpath>/web-app/servlet[servlet-name[text()=&amp;apos;InterfaceServlet&amp;apos;]]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="ShowColServlet">
+            <name>配置ShowColServlet</name>
+            <desc>需要在web.xml中配置ShowColServlet</desc>
+            <content />
+            <replacecontent>&amp;lt;servlet&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;servlet-name&amp;gt;ShowColServlet&amp;lt;/servlet-name&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;servlet-class&amp;gt;weaver.common.util.taglib.ShowColServlet&amp;lt;/servlet-class&amp;gt;\n&amp;lt;/servlet&amp;gt;\n&amp;lt;servlet-mapping&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;servlet-name&amp;gt;ShowColServlet&amp;lt;/servlet-name&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;url-pattern&amp;gt;/weaver/weaver.common.util.taglib.ShowColServlet&amp;lt;/url-pattern&amp;gt;\n&amp;lt;/servlet-mapping&amp;gt;\n</replacecontent>
+            <version>8.100.0531</version>
+            <xpath>/web-app/servlet[servlet-name[text()=&amp;apos;ShowColServlet&amp;apos;]]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="VerifyLoginServlet">
+            <name>配置VerifyLoginServlet</name>
+            <desc>需要在web.xml中配置VerifyLoginServlet</desc>
+            <content />
+            <replacecontent>&amp;lt;servlet&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;servlet-name&amp;gt;VerifyLoginServlet&amp;lt;/servlet-name&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;servlet-class&amp;gt;weaver.login.VerifyLoginServlet&amp;lt;/servlet-class&amp;gt;\n&amp;lt;/servlet&amp;gt;\n&amp;lt;servlet-mapping&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;servlet-name&amp;gt;VerifyLoginServlet&amp;lt;/servlet-name&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;url-pattern&amp;gt;/weaver/weaver.login.VerifyLoginServlet&amp;lt;/url-pattern&amp;gt;\n&amp;lt;/servlet-mapping&amp;gt;\n</replacecontent>
+            <version>8.100.0531</version>
+            <xpath>/web-app/servlet[servlet-name[text()=&amp;apos;VerifyLoginServlet&amp;apos;]]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="CreateBarCodeServlet">
+            <name>配置CreateBarCodeServlet</name>
+            <desc>需要在web.xml中配置CreateBarCodeServlet</desc>
+            <content />
+            <replacecontent>&amp;lt;servlet&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;\n&amp;lt;servlet-name&amp;gt;CreateBarCodeServlet&amp;lt;/servlet-name&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;\n&amp;lt;servlet-class&amp;gt;weaver.workflow.exceldesign.CreateBarCodeServlet&amp;lt;/servlet-class&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;\n&amp;lt;/servlet&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;\n&amp;lt;servlet-mapping&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;\n&amp;lt;servlet-name&amp;gt;CreateBarCodeServlet&amp;lt;/servlet-name&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;\n&amp;lt;url-pattern&amp;gt;/createBarCode&amp;lt;/url-pattern&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;\n&amp;lt;/servlet-mapping&amp;gt;</replacecontent>
+            <version>KB81001510</version>
+            <xpath>/web-app/servlet/servlet-name[text()=&amp;apos;CreateBarCodeServlet&amp;apos;]/parent::*</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="FixIPFilter">
+            <name>配置FixIPFilter</name>
+            <desc>需要在web.xml配置FixIPFilter</desc>
+            <content />
+            <replacecontent>&amp;lt;filter&amp;gt;\n&amp;lt;filter-name&amp;gt;FixIPFilter&amp;lt;/filter-name&amp;gt;\n&amp;lt;filter-class&amp;gt;weaver.filter.FixIPFilter&amp;lt;/filter-class&amp;gt;\n&amp;lt;/filter&amp;gt;\n&amp;lt;filter-mapping&amp;gt;\n&amp;lt;filter-name&amp;gt;FixIPFilter&amp;lt;/filter-name&amp;gt;\n&amp;lt;url-pattern&amp;gt;*.jsp&amp;lt;/url-pattern&amp;gt;\n&amp;lt;/filter-mapping&amp;gt;</replacecontent>
+            <version>KB8100161000</version>
+            <xpath>/web-app/filter/filter-name[text()=&amp;apos;FixIPFilter&amp;apos;]/parent::*</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="CreateBarCode">
+            <name>配置CreateBarCode</name>
+            <desc>需要在web.xml中配置CreateBarCode</desc>
+            <content />
+            <replacecontent>&amp;lt;servlet&amp;gt;\n&amp;lt;servlet-name&amp;gt;CreateBarCode&amp;lt;/servlet-name&amp;gt;\n&amp;lt;servlet-class&amp;gt;weaver.cpt.barcode.BarCodeServlet&amp;lt;/servlet-class&amp;gt;\n&amp;lt;/servlet&amp;gt;\n&amp;lt;servlet-mapping&amp;gt;\n&amp;lt;servlet-name&amp;gt;CreateBarCode&amp;lt;/servlet-name&amp;gt;\n&amp;lt;url-pattern&amp;gt;/CreateBarCode&amp;lt;/url-pattern&amp;gt;\n&amp;lt;/servlet-mapping&amp;gt;</replacecontent>
+            <version>KB8100161100</version>
+            <xpath>/web-app/servlet/servlet-name[text()=&amp;apos;CreateBarCode&amp;apos;]/parent::*</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="WorkflowPicShowFilter">
+            <name>配置WorkflowPicShowFilter</name>
+            <desc>需要在web.xml中配置WorkflowPicShowFilter</desc>
+            <content />
+            <replacecontent>&amp;lt;filter&amp;gt;\n&amp;lt;filter-name&amp;gt;WorkflowPicShowFilter&amp;lt;/filter-name&amp;gt;\n&amp;lt;filter-class&amp;gt;weaver.filter.WorkflowPicShowFilter&amp;lt;/filter-class&amp;gt;\n&amp;lt;/filter&amp;gt;\n&amp;lt;filter-mapping&amp;gt;\n&amp;lt;filter-name&amp;gt;WorkflowPicShowFilter&amp;lt;/filter-name&amp;gt;\n&amp;lt;url-pattern&amp;gt;/workflow/request/WorkflowRequestPictureInner.jsp&amp;lt;/url-pattern&amp;gt;\n&amp;lt;/filter-mapping&amp;gt;\n&amp;lt;filter-mapping&amp;gt;\n&amp;lt;filter-name&amp;gt;WorkflowPicShowFilter&amp;lt;/filter-name&amp;gt;\n&amp;lt;url-pattern&amp;gt;/workflow/request/WorkflowDirection.jsp&amp;lt;/url-pattern&amp;gt;\n&amp;lt;/filter-mapping&amp;gt;</replacecontent>
+            <version>KB8100170200</version>
+            <xpath>/web-app/filter/filter-name[text()=&amp;apos;WorkflowPicShowFilter&amp;apos;]/parent::*</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="Compress">
+            <name>配置Compress</name>
+            <desc>需要在web.xml中配置Compress</desc>
+            <content />
+            <replacecontent>&amp;lt;filter&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;filter-name&amp;gt;Compress&amp;lt;/filter-name&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;filter-class&amp;gt;weaver.filter.WGzipFilter&amp;lt;/filter-class&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;init-param&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;param-name&amp;gt;exclude&amp;lt;/param-name&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;param-value&amp;gt;/wui/theme/ecology8/page/login.jsp;/login/login.jsp;/keygenerator/KeyGenerator.jsp;/keygenerator/getNoCheckFiles.jsp;/keygenerator/packNoCheckFiles.jsp;/workflow/request/WorkflowPDFStream.jsp;/mobile/plugin/Download.jsp&amp;lt;/param-value&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;/init-param&amp;gt;\n&amp;lt;/filter&amp;gt;\n&amp;lt;filter-mapping&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;filter-name&amp;gt;Compress&amp;lt;/filter-name&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;url-pattern&amp;gt;*.js&amp;lt;/url-pattern&amp;gt;\n&amp;lt;/filter-mapping&amp;gt;\n&amp;lt;filter-mapping&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;filter-name&amp;gt;Compress&amp;lt;/filter-name&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;url-pattern&amp;gt;*.css&amp;lt;/url-pattern&amp;gt;\n&amp;lt;/filter-mapping&amp;gt;\n&amp;lt;filter-mapping&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;filter-name&amp;gt;Compress&amp;lt;/filter-name&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;url-pattern&amp;gt;*.jsp&amp;lt;/url-pattern&amp;gt;\n&amp;lt;/filter-mapping&amp;gt;\n&amp;lt;filter-mapping&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;filter-name&amp;gt;Compress&amp;lt;/filter-name&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;url-pattern&amp;gt;/weaver/weaver.common.util.taglib.SplitPageXmlServlet&amp;lt;/url-pattern&amp;gt;\n&amp;lt;/filter-mapping&amp;gt;\n&amp;lt;filter-mapping&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;filter-name&amp;gt;Compress&amp;lt;/filter-name&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;url-pattern&amp;gt;/weaver/weaver.common.util.taglib.SplitPageXmlServletNew&amp;lt;/url-pattern&amp;gt;\n&amp;lt;/filter-mapping&amp;gt;\n&amp;lt;filter-mapping&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;filter-name&amp;gt;Compress&amp;lt;/filter-name&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;url-pattern&amp;gt;/Messager/MessagerServlet&amp;lt;/url-pattern&amp;gt;\n&amp;lt;/filter-mapping&amp;gt;</replacecontent>
+            <version>8.100.0531</version>
+            <xpath>/web-app/filter/filter-name[text()=&amp;apos;Compress&amp;apos;]/parent::*</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="RsaInfo">
+            <name>配置RsaInfo</name>
+            <desc>需要在web.xml配置RsaInfo</desc>
+            <content />
+            <replacecontent>&amp;lt;servlet&amp;gt;\n&amp;lt;servlet-name&amp;gt;RsaInfo&amp;lt;/servlet-name&amp;gt;\n&amp;lt;servlet-class&amp;gt;weaver.rsa.GetRsaInfo&amp;lt;/servlet-class&amp;gt;\n&amp;lt;/servlet&amp;gt;\n&amp;lt;servlet-mapping&amp;gt;\n&amp;lt;servlet-name&amp;gt;RsaInfo&amp;lt;/servlet-name&amp;gt;\n&amp;lt;url-pattern&amp;gt;/rsa/weaver.rsa.GetRsaInfo&amp;lt;/url-pattern&amp;gt;\n&amp;lt;/servlet-mapping&amp;gt;</replacecontent>
+            <version>KB8100171100</version>
+            <xpath>/web-app/servlet/servlet-name[text()=&amp;apos;RsaInfo&amp;apos;]/parent::*</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+    </tabtype>
+    <tabtype id="checkaction">
+        <rule id="HrmDeductionVacationAction">
+            <name>配置HrmDeductionVacationAction</name>
+            <desc>需要在action.xml配置HrmDeductionVacationAction</desc>
+            <content />
+            <replacecontent>&amp;nbsp;&amp;lt;service-point&amp;nbsp;id=&amp;quot;deduction&amp;quot;&amp;nbsp;interface=&amp;quot;weaver.interfaces.workflow.action.Action&amp;quot;&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;invoke-factory&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;construct&amp;nbsp;class=&amp;quot;weaver.hrm.attendance.action.HrmDeductionVacationAction&amp;quot;/&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;/invoke-factory&amp;gt;\n&amp;lt;/service-point&amp;gt;</replacecontent>
+            <version>KB81001507</version>
+            <xpath>/module/service-point[@id=&amp;apos;deduction&amp;apos;]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="HrmFreezeVacationAction">
+            <name>配置HrmFreezeVacationAction</name>
+            <desc>需要在action.xml配置HrmFreezeVacationAction</desc>
+            <content />
+            <replacecontent>&amp;lt;service-point&amp;nbsp;id=&amp;quot;freeze&amp;quot;&amp;nbsp;interface=&amp;quot;weaver.interfaces.workflow.action.Action&amp;quot;&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;invoke-factory&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;construct&amp;nbsp;class=&amp;quot;weaver.hrm.attendance.action.HrmFreezeVacationAction&amp;quot;&amp;nbsp;/&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;/invoke-factory&amp;gt;\n&amp;lt;/service-point&amp;gt;</replacecontent>
+            <version>KB81001507</version>
+            <xpath>/module/service-point[@id=&amp;apos;freeze&amp;apos;]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="HrmReleaseVacationAction">
+            <name>配置HrmReleaseVacationAction</name>
+            <desc>需要在action.xml配置HrmReleaseVacationAction</desc>
+            <content />
+            <replacecontent>&amp;lt;service-point&amp;nbsp;id=&amp;quot;release&amp;quot;&amp;nbsp;interface=&amp;quot;weaver.interfaces.workflow.action.Action&amp;quot;&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;invoke-factory&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;construct&amp;nbsp;class=&amp;quot;weaver.hrm.attendance.action.HrmReleaseVacationAction&amp;quot;&amp;nbsp;/&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;/invoke-factory&amp;gt;\n&amp;lt;/service-point&amp;gt;</replacecontent>
+            <version>KB81001507</version>
+            <xpath>/module/service-point[@id=&amp;apos;release&amp;apos;]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="HrmResourceTryAction">
+            <name>配置HrmResourceTry</name>
+            <desc>需要在action.xml配置HrmResourceTry</desc>
+            <content />
+            <replacecontent>&amp;lt;service-point&amp;nbsp;id=&amp;quot;HrmResourceTry&amp;quot;&amp;nbsp;interface=&amp;quot;weaver.interfaces.workflow.action.Action&amp;quot;&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;invoke-factory&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;construct&amp;nbsp;class=&amp;quot;weaver.hrm.pm.action.HrmResourceTryAction&amp;quot;&amp;nbsp;/&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;/invoke-factory&amp;gt;\n&amp;lt;/service-point&amp;gt;</replacecontent>
+            <version>KB81001508</version>
+            <xpath>/module/service-point[@id=&amp;apos;HrmResourceTry&amp;apos;]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="HrmResourceHireAction">
+            <name>配置HrmResourceHireAction</name>
+            <desc>需要在action.xml配置HrmResourceHireAction</desc>
+            <content />
+            <replacecontent>&amp;lt;service-point&amp;nbsp;id=&amp;quot;HrmResourceHire&amp;quot;&amp;nbsp;interface=&amp;quot;weaver.interfaces.workflow.action.Action&amp;quot;&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;invoke-factory&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;construct&amp;nbsp;class=&amp;quot;weaver.hrm.pm.action.HrmResourceHireAction&amp;quot;&amp;nbsp;/&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;/invoke-factory&amp;gt;\n&amp;lt;/service-point&amp;gt;</replacecontent>
+            <version>KB81001508</version>
+            <xpath>/module/service-point[@id=&amp;apos;HrmResourceHire&amp;apos;]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="HrmResourceExtendAction">
+            <name>配置HrmResourceExtendAction</name>
+            <desc>需要在action.xml配置HrmResourceExtendAction</desc>
+            <content />
+            <replacecontent>&amp;lt;service-point&amp;nbsp;id=&amp;quot;HrmResourceExtend&amp;quot;&amp;nbsp;interface=&amp;quot;weaver.interfaces.workflow.action.Action&amp;quot;&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;invoke-factory&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;construct&amp;nbsp;class=&amp;quot;weaver.hrm.pm.action.HrmResourceExtendAction&amp;quot;&amp;nbsp;/&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;/invoke-factory&amp;gt;\n&amp;lt;/service-point&amp;gt;</replacecontent>
+            <version>KB81001508</version>
+            <xpath>/module/service-point[@id=&amp;apos;HrmResourceExtend&amp;apos;]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="HrmResourceRedeployAction">
+            <name>配置HrmResourceRedeployAction</name>
+            <desc>需要在action.xml配置HrmResourceRedeployAction</desc>
+            <content />
+            <replacecontent>&amp;lt;service-point&amp;nbsp;id=&amp;quot;HrmResourceRedeploy&amp;quot;&amp;nbsp;interface=&amp;quot;weaver.interfaces.workflow.action.Action&amp;quot;&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;invoke-factory&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;construct&amp;nbsp;class=&amp;quot;weaver.hrm.pm.action.HrmResourceRedeployAction&amp;quot;&amp;nbsp;/&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;/invoke-factory&amp;gt;\n&amp;lt;/service-point&amp;gt;</replacecontent>
+            <version>KB81001508</version>
+            <xpath>/module/service-point[@id=&amp;apos;HrmResourceRedeploy&amp;apos;]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="HrmResourceDismissAction">
+            <name>配置HrmResourceDismissAction</name>
+            <desc>需要在action.xml配置HrmResourceDismissAction</desc>
+            <content />
+            <replacecontent>&amp;lt;service-point&amp;nbsp;id=&amp;quot;HrmResourceDismiss&amp;quot;&amp;nbsp;interface=&amp;quot;weaver.interfaces.workflow.action.Action&amp;quot;&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;invoke-factory&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;construct&amp;nbsp;class=&amp;quot;weaver.hrm.pm.action.HrmResourceDismissAction&amp;quot;&amp;nbsp;/&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;/invoke-factory&amp;gt;\n&amp;lt;/service-point&amp;gt;</replacecontent>
+            <version>KB81001508</version>
+            <xpath>/module/service-point[@id=&amp;apos;HrmResourceDismiss&amp;apos;]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="HrmResourceRetireAction">
+            <name>配置HrmResourceRetireAction</name>
+            <desc>需要在action.xml配置HrmResourceRetireAction</desc>
+            <content />
+            <replacecontent>&amp;lt;service-point&amp;nbsp;id=&amp;quot;HrmResourceRetire&amp;quot;&amp;nbsp;interface=&amp;quot;weaver.interfaces.workflow.action.Action&amp;quot;&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;invoke-factory&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;construct&amp;nbsp;class=&amp;quot;weaver.hrm.pm.action.HrmResourceRetireAction&amp;quot;&amp;nbsp;/&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;/invoke-factory&amp;gt;\n&amp;lt;/service-point&amp;gt;</replacecontent>
+            <version>KB81001508</version>
+            <xpath>/module/service-point[@id=&amp;apos;HrmResourceRetire&amp;apos;]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="HrmResourceFireAction">
+            <name>配置HrmResourceFireAction</name>
+            <desc>需要在action.xml配置HrmResourceFireAction</desc>
+            <content />
+            <replacecontent>&amp;lt;service-point&amp;nbsp;id=&amp;quot;HrmResourceFire&amp;quot;&amp;nbsp;interface=&amp;quot;weaver.interfaces.workflow.action.Action&amp;quot;&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;invoke-factory&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;construct&amp;nbsp;class=&amp;quot;weaver.hrm.pm.action.HrmResourceFireAction&amp;quot;&amp;nbsp;/&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;/invoke-factory&amp;gt;\n&amp;lt;/service-point&amp;gt;</replacecontent>
+            <version>KB81001508</version>
+            <xpath>/module/service-point[@id=&amp;apos;HrmResourceFire&amp;apos;]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="HrmResourceReHireAction">
+            <name>配置HrmResourceReHireAction</name>
+            <desc>需要在action.xml配置HrmResourceReHireAction</desc>
+            <content />
+            <replacecontent>&amp;lt;service-point&amp;nbsp;id=&amp;quot;HrmResourceReHire&amp;quot;&amp;nbsp;interface=&amp;quot;weaver.interfaces.workflow.action.Action&amp;quot;&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;invoke-factory&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;construct&amp;nbsp;class=&amp;quot;weaver.hrm.pm.action.HrmResourceReHireAction&amp;quot;&amp;nbsp;/&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;/invoke-factory&amp;gt;\n&amp;lt;/service-point&amp;gt;</replacecontent>
+            <version>KB81001508</version>
+            <xpath>/module/service-point[@id=&amp;apos;HrmResourceReHire&amp;apos;]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="HrmScheduleShift">
+            <name>配置HrmScheduleShift</name>
+            <desc>需要在action.xml配置HrmScheduleShift</desc>
+            <content />
+            <replacecontent>&amp;lt;service-point&amp;nbsp;id=&amp;quot;HrmScheduleShift&amp;quot;&amp;nbsp;interface=&amp;quot;weaver.interfaces.workflow.action.Action&amp;quot;&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;invoke-factory&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;construct&amp;nbsp;class=&amp;quot;weaver.hrm.schedule.action.HrmScheduleShiftAction&amp;quot;&amp;nbsp;/&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;/invoke-factory&amp;gt;\n&amp;lt;/service-point&amp;gt;</replacecontent>
+            <version>KB81001603</version>
+            <xpath>/module/service-point[@id=&amp;apos;HrmScheduleShift&amp;apos;]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="WorkflowFnaInWorkflowNew">
+            <name>配置WorkflowFnaInWorkflowNew</name>
+            <desc>需要在action.xml配置WorkflowFnaInWorkflowNew</desc>
+            <content />
+            <replacecontent>&amp;lt;service-point&amp;nbsp;id=&amp;quot;WorkflowFnaInWorkflowNew&amp;quot;&amp;nbsp;interface=&amp;quot;weaver.interfaces.workflow.action.Action&amp;quot;&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;invoke-factory&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;construct&amp;nbsp;class=&amp;quot;weaver.interfaces.workflow.action.WorkflowFnaInWorkflowNew&amp;quot;/&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;/invoke-factory&amp;gt;\n&amp;lt;/service-point&amp;gt;&amp;nbsp;\n</replacecontent>
+            <version>8.100.0531</version>
+            <xpath>/module/service-point[@id=&amp;apos;WorkflowFnaInWorkflowNew&amp;apos;]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="WorkflowFnaEffectNew">
+            <name>配置WorkflowFnaEffectNew</name>
+            <desc>需要在action.xml配置WorkflowFnaEffectNew</desc>
+            <content />
+            <replacecontent>&amp;lt;service-point&amp;nbsp;id=&amp;quot;WorkflowFnaEffectNew&amp;quot;&amp;nbsp;interface=&amp;quot;weaver.interfaces.workflow.action.Action&amp;quot;&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;invoke-factory&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;construct&amp;nbsp;class=&amp;quot;weaver.interfaces.workflow.action.WorkflowFnaEffectNew&amp;quot;/&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;/invoke-factory&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;lt;/service-point&amp;gt;</replacecontent>
+            <version>8.100.0531</version>
+            <xpath>/module/service-point[@id=&amp;apos;WorkflowFnaEffectNew&amp;apos;]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="WorkflowFnaRejectNew">
+            <name>配置WorkflowFnaRejectNew</name>
+            <desc>需要在action.xml配置WorkflowFnaRejectNew</desc>
+            <content />
+            <replacecontent>&amp;lt;service-point&amp;nbsp;id=&amp;quot;WorkflowFnaRejectNew&amp;quot;&amp;nbsp;interface=&amp;quot;weaver.interfaces.workflow.action.Action&amp;quot;&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;invoke-factory&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;construct&amp;nbsp;class=&amp;quot;weaver.interfaces.workflow.action.WorkflowFnaRejectNew&amp;quot;/&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;/invoke-factory&amp;gt;\n&amp;lt;/service-point&amp;gt;</replacecontent>
+            <version>8.100.0531</version>
+            <xpath>/module/service-point[@id=&amp;apos;WorkflowFnaRejectNew&amp;apos;]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="PrjGenerateAction">
+            <name>配置PrjGenerateAction</name>
+            <desc>需要在action.xml配置PrjGenerateAction</desc>
+            <content />
+            <replacecontent>&amp;lt;service-point&amp;nbsp;id=&amp;quot;PrjGenerateAction&amp;quot;&amp;nbsp;interface=&amp;quot;weaver.interfaces.workflow.action.Action&amp;quot;&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;invoke-factory&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;construct&amp;nbsp;class=&amp;quot;weaver.proj.wfactions.PrjGenerateAction&amp;quot;/&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;/invoke-factory&amp;gt;\n&amp;lt;/service-point&amp;gt;</replacecontent>
+            <version>8.100.0531</version>
+            <xpath>/module/service-point[@id=&amp;apos;PrjGenerateAction&amp;apos;]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="PrjApproveAction">
+            <name>配置PrjApproveAction</name>
+            <desc>需要在action.xml配置PrjApproveAction</desc>
+            <content />
+            <replacecontent>&amp;lt;service-point&amp;nbsp;id=&amp;quot;PrjApproveAction&amp;quot;&amp;nbsp;interface=&amp;quot;weaver.interfaces.workflow.action.Action&amp;quot;&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;invoke-factory&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;construct&amp;nbsp;class=&amp;quot;weaver.proj.wfactions.PrjApproveAction&amp;quot;/&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;/invoke-factory&amp;gt;\n&amp;lt;/service-point&amp;gt;</replacecontent>
+            <version>8.100.0531</version>
+            <xpath>/module/service-point[@id=&amp;apos;PrjApproveAction&amp;apos;]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="PrjTemplateApproveAction">
+            <name>配置PrjTemplateApproveAction</name>
+            <desc>需要在action.xml配置PrjTemplateApproveAction</desc>
+            <content />
+            <replacecontent>&amp;lt;service-point&amp;nbsp;id=&amp;quot;PrjTemplateApproveAction&amp;quot;&amp;nbsp;interface=&amp;quot;weaver.interfaces.workflow.action.Action&amp;quot;&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;invoke-factory&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;construct&amp;nbsp;class=&amp;quot;weaver.proj.wfactions.PrjTemplateApproveAction&amp;quot;/&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;/invoke-factory&amp;gt;\n&amp;lt;/service-point&amp;gt;</replacecontent>
+            <version>8.100.0531</version>
+            <xpath>/module/service-point[@id=&amp;apos;PrjTemplateApproveAction&amp;apos;]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="CptApplyAction">
+            <name>配置CptApplyAction</name>
+            <desc>需要在action.xml配置CptApplyAction</desc>
+            <content />
+            <replacecontent>&amp;lt;service-point&amp;nbsp;id=&amp;quot;CptApplyAction&amp;quot;&amp;nbsp;interface=&amp;quot;weaver.interfaces.workflow.action.Action&amp;quot;&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;invoke-factory&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;construct&amp;nbsp;class=&amp;quot;weaver.cpt.wfactions.CptApplyAction&amp;quot;/&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;/invoke-factory&amp;gt;\n&amp;lt;/service-point&amp;gt;</replacecontent>
+            <version>8.100.0531</version>
+            <xpath>/module/service-point[@id=&amp;apos;CptApplyAction&amp;apos;]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="CptFetchAction">
+            <name>配置CptFetchAction</name>
+            <desc>需要在action.xml配置CptFetchAction</desc>
+            <content />
+            <replacecontent>&amp;lt;service-point&amp;nbsp;id=&amp;quot;CptFetchAction&amp;quot;&amp;nbsp;interface=&amp;quot;weaver.interfaces.workflow.action.Action&amp;quot;&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;invoke-factory&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;construct&amp;nbsp;class=&amp;quot;weaver.cpt.wfactions.CptFetchAction&amp;quot;/&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;/invoke-factory&amp;gt;\n&amp;lt;/service-point&amp;gt;</replacecontent>
+            <version>8.100.0531</version>
+            <xpath>/module/service-point[@id=&amp;apos;CptFetchAction&amp;apos;]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="CptMoveAction">
+            <name>配置CptMoveAction</name>
+            <desc>需要在action.xml配置CptMoveAction</desc>
+            <content />
+            <replacecontent>&amp;lt;service-point&amp;nbsp;id=&amp;quot;CptMoveAction&amp;quot;&amp;nbsp;interface=&amp;quot;weaver.interfaces.workflow.action.Action&amp;quot;&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;invoke-factory&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;construct&amp;nbsp;class=&amp;quot;weaver.cpt.wfactions.CptMoveAction&amp;quot;/&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;/invoke-factory&amp;gt;\n&amp;lt;/service-point&amp;gt;</replacecontent>
+            <version>8.100.0531</version>
+            <xpath>/module/service-point[@id=&amp;apos;CptMoveAction&amp;apos;]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="CptLossAction">
+            <name>配置CptLossAction</name>
+            <desc>需要在action.xml配置CptLossAction</desc>
+            <content />
+            <replacecontent>&amp;lt;service-point&amp;nbsp;id=&amp;quot;CptLossAction&amp;quot;&amp;nbsp;interface=&amp;quot;weaver.interfaces.workflow.action.Action&amp;quot;&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;invoke-factory&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;construct&amp;nbsp;class=&amp;quot;weaver.cpt.wfactions.CptLossAction&amp;quot;/&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;/invoke-factory&amp;gt;\n&amp;lt;/service-point&amp;gt;</replacecontent>
+            <version>8.100.0531</version>
+            <xpath>/module/service-point[@id=&amp;apos;CptLossAction&amp;apos;]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="CptDiscardAction">
+            <name>配置CptDiscardAction</name>
+            <desc>需要在action.xml配置CptDiscardAction</desc>
+            <content />
+            <replacecontent>&amp;lt;service-point&amp;nbsp;id=&amp;quot;CptDiscardAction&amp;quot;&amp;nbsp;interface=&amp;quot;weaver.interfaces.workflow.action.Action&amp;quot;&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;invoke-factory&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;construct&amp;nbsp;class=&amp;quot;weaver.cpt.wfactions.CptDiscardAction&amp;quot;/&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;/invoke-factory&amp;gt;\n&amp;lt;/service-point&amp;gt;</replacecontent>
+            <version>8.100.0531</version>
+            <xpath>/module/service-point[@id=&amp;apos;CptDiscardAction&amp;apos;]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="CptLendAction">
+            <name>配置CptLendAction</name>
+            <desc>需要在action.xml配置CptLendAction</desc>
+            <content />
+            <replacecontent>&amp;lt;service-point&amp;nbsp;id=&amp;quot;CptLendAction&amp;quot;&amp;nbsp;interface=&amp;quot;weaver.interfaces.workflow.action.Action&amp;quot;&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;invoke-factory&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;construct&amp;nbsp;class=&amp;quot;weaver.cpt.wfactions.CptLendAction&amp;quot;/&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;/invoke-factory&amp;gt;\n&amp;lt;/service-point&amp;gt;</replacecontent>
+            <version>8.100.0531</version>
+            <xpath>/module/service-point[@id=&amp;apos;CptLendAction&amp;apos;]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="CptBackAction">
+            <name>配置CptBackAction</name>
+            <desc>需要在action.xml配置CptBackAction</desc>
+            <content />
+            <replacecontent>&amp;lt;service-point&amp;nbsp;id=&amp;quot;CptBackAction&amp;quot;&amp;nbsp;interface=&amp;quot;weaver.interfaces.workflow.action.Action&amp;quot;&amp;gt;\n&amp;lt;invoke-factory&amp;gt;\n&amp;nbsp;&amp;lt;construct&amp;nbsp;class=&amp;quot;weaver.cpt.wfactions.CptBackAction&amp;quot;/&amp;gt;\n&amp;lt;/invoke-factory&amp;gt;\n&amp;lt;/service-point&amp;gt;</replacecontent>
+            <version>8.100.0531</version>
+            <xpath>/module/service-point[@id=&amp;apos;CptBackAction&amp;apos;]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="CptMendAction">
+            <name>配置CptMendAction</name>
+            <desc>需要在action.xml配置CptMendAction</desc>
+            <content />
+            <replacecontent>&amp;lt;service-point&amp;nbsp;id=&amp;quot;CptMendAction&amp;quot;&amp;nbsp;interface=&amp;quot;weaver.interfaces.workflow.action.Action&amp;quot;&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;invoke-factory&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;construct&amp;nbsp;class=&amp;quot;weaver.cpt.wfactions.CptMendAction&amp;quot;/&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;/invoke-factory&amp;gt;\n&amp;lt;/service-point&amp;gt;</replacecontent>
+            <version>8.100.0531</version>
+            <xpath>/module/service-point[@id=&amp;apos;CptMendAction&amp;apos;]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+        <rule id="HrmPaidLeaveAction">
+            <name>配置HrmPaidLeaveAction</name>
+            <desc>需要在action.xml添加HrmPaidLeaveAction</desc>
+            <content />
+            <replacecontent>&amp;lt;service-point&amp;nbsp;id=&amp;quot;HrmPaidLeaveAction&amp;quot;&amp;nbsp;interface=&amp;quot;weaver.interfaces.workflow.action.Action&amp;quot;&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;invoke-factory&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;construct&amp;nbsp;class=&amp;quot;weaver.hrm.attendance.action.HrmPaidLeaveAction&amp;quot;&amp;nbsp;/&amp;gt;\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;/invoke-factory&amp;gt;\n&amp;lt;/service-point&amp;gt;</replacecontent>
+            <version>KB81001603</version>
+            <xpath>/module/service-point[@id=&amp;apos;HrmPaidLeaveAction&amp;apos;]</xpath>
+            <requisite>1</requisite>
+            <ruletype />
+        </rule>
+    </tabtype>
+    <tabtype id="checkservice">
+    </tabtype>
+    <tabtype id="checkmobilemodehtml" />
+</rules>
+

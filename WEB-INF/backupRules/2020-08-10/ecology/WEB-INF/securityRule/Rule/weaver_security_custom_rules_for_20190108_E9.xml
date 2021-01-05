@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<special-non>
+		<urls>
+			<url>
+				<value>/workflow/request/PrintRequestSPA.jsp</value>
+				<params>
+					<param>
+						<value>isBatchPrint</value>
+						<rules>
+							<rule>##CONST:LETTERS##</rule>
+						</rules>
+					</param>
+				</params>
+			</url>
+			<url>
+				<value>/workflow/request/PrintRequest.jsp</value>
+				<params>
+					<param>
+						<value>isBatchPrint</value>
+						<rules>
+							<rule>##CONST:LETTERS##</rule>
+						</rules>
+					</param>
+					<param>
+						<is-dynamic-param>0</is-dynamic-param>
+						<value>ismode</value>
+						<rules>
+						  <rule>##CONST:MULTINUMBER##</rule>
+						</rules>
+					  </param>
+				</params>
+			</url>
+		</urls>
+	</special-non>
+</root>

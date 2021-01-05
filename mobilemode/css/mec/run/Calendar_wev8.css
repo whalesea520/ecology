@@ -1,0 +1,8 @@
+.calendarContainer{
+	background-color: #fff;
+}
+.listContainerWrap, .timelinrContainerWrap{
+	overflow-x:  hidden;
+	overflow-y:  auto;
+	-webkit-overflow-scrolling:touch;
+}

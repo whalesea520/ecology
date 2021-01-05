@@ -1,0 +1,199 @@
+
+	.divOver{
+		background: url(/images/ecology8/images/product/trOver_wev8.png);
+		cursor: pointer;
+	}
+	.toMenuTargetImg{
+		cursor: pointer;
+	}
+	.selectDownSelected{
+		background: url("/images/ecology8/images/select/selected_wev8.png");
+	}
+
+	.toptabitem{
+		vertical-align:middle;
+		height:50px;
+		font-size:16px;
+		color:#DFDEDE;
+		text-align:center;
+		bottom:0px;
+		padding-top:0px
+	}
+	
+	.subMenu{
+		cursor:hand;
+		background-color:#A6A6A6;
+		font-size:12px;
+		padding:4px;
+		padding-left:16px;
+		padding-right:16px;
+		line-height:10px;
+	}
+	
+	.subMenuSelected{
+		background-color:#92D050;
+	}
+	
+	
+A:hover {
+ COLOR: black; TEXT-DECORATION: none
+}
+
+
+.cornerMenu{
+	left:0;height:170;width:189;z-index:100; text-align:center;background: url(/images/ecology8/images/select/bg_click_wev8.png);background-position: center;
+}
+
+body{
+	background-color:#6E7171;
+	overflow:hidden;
+}
+
+.selectItem{
+	height: 50;
+}
+
+.selectTopItem{
+	/*background-color:rgb(0,72,60);*/
+	color:#fff;
+}
+
+.middleLogo{
+	/*background:url('/images/ecology8/images/logo2_wev8.png') 5px center no-repeat;*/
+	background-color:#393A37;
+}
+
+.rightTD{
+	width:110px;
+	text-align:right;
+}
+
+.rightBorder{
+	border-right:1px solid #828282;
+	text-align:center;
+}
+
+/*签退或者退出按钮样式*/
+.quit{
+	width:46px!important;
+	height:50px!important;
+	line-height:50px;
+	text-align:center;
+}
+
+.more{
+	width:50px;
+	height:50px;
+	background:url(/wui/theme/ecology8/page/images/more_wev8.png) no-repeat scroll center;
+	position:relative;
+	cursor:pointer;
+}
+
+.moreSelect{
+	background-color:#868686;
+}
+
+.moreOption{
+	background-color:#868686;
+	position:absolute;
+	display:none;
+	top:0;
+	left:0;
+	border:none;
+	float:left;
+	z-index:1;
+}
+
+.optionSelect{
+	background-color:#919191;
+}
+
+.option{
+	height:45px;
+	line-height:45px;
+	cursor:pointer;
+	padding-left:10px;
+	color:rgb(217,217,217);
+}
+
+.optionSpan{
+	padding-right:10px;
+}
+
+.colorfff{color:#fff!important;}
+
+.topitemmiddle{
+	margin-top:13px;
+	display:inline-block;
+}
+
+.qzhNavSpanImg{
+	background-image:url(/wui/theme/ecology8/page/images/downmiddle_wev8.png);
+	background-position:90% 50%;
+	background-repeat:no-repeat;
+}
+
+.qzhNavSpanImgup{
+	background-image:url(/wui/theme/ecology8/page/images/upmiddle_wev8.png)!important;
+}
+
+.e8NavDH{
+	background-image:url(/wui/theme/ecology8/page/images/navDH_wev8.png);
+	background-repeat:no-repeat;
+	width:193px;
+	height:129px;
+	display:none;
+	position:absolute;
+	top:50px;
+	right:87px;
+}
+
+.optionSelect{
+	background-color:#989898;
+}
+
+.optionNormal{
+	height:40px;
+	line-height:40px;
+	cursor:pointer;
+	padding-left:10px;
+	color:#969696;
+}
+
+.optionSpan{
+	padding-right:10px;
+}
+
+.moreBtn{
+	background-color:#fff;
+	border-left:1px solid #b7b7b7;
+	border-right:1px solid #b7b7b7;
+	border-bottom:1px solid #b7b7b7;
+	display:none;
+	position:absolute;
+	top:10px;
+	right:11px;
+	z-index: 999;
+}
+
+.moreBtnSel{
+	background-color:#d7d7d7!important;
+	background-image:url(/wui/theme/ecology8/page/images/moremiddle_sel_wev8.png)!important;
+}
+
+
+.moreBtn_optionSelect{
+	background-color:#e5e5e5;
+}
+
+.moreBtn_option{
+	height:30px;
+	line-height:30px;
+	cursor:pointer;
+	padding-left:10px;
+	color:#646464;
+}
+
+.moreBtn_optionSpan{
+	padding-right:10px;
+}

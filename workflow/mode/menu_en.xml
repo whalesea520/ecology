@@ -1,0 +1,1185 @@
+<?xml version="1.0" encoding="gbk"?>
+<main_menu>
+<menuitem>
+<parent>0</parent>
+<caption>File</caption>
+<name>FILE</name>
+<popup>1</popup>
+<tooltip>file menu</tooltip>
+<separator>0</separator>
+<checked>0</checked>
+<grayed>0</grayed>
+<node>1</node>
+</menuitem>
+<menuitem>
+<parent>1</parent>
+<caption>New</caption>
+<name>OnFileNew</name>
+<popup>0</popup>
+<tooltip>New create a report</tooltip>
+<separator>0</separator>
+<checked>0</checked>
+<grayed>0</grayed>
+<node>30</node>
+</menuitem>
+<menuitem>
+<parent>1</parent>
+<caption>Open File</caption>
+<name>OnFileOpen</name>
+<tooltip>open a report</tooltip>
+<node>31</node>
+</menuitem>
+<menuitem>
+<parent>1</parent>
+<caption>Format Check</caption>
+<name>StyleCheck</name>
+<tooltip>Format Check</tooltip>
+<node>1046</node>
+</menuitem>
+<menuitem>
+<parent>1</parent>
+<caption>Save As</caption>
+<name>OnFileSaveAs</name>
+<tooltip>Save As</tooltip>
+<node>33</node>
+</menuitem>
+<menuitem>
+<parent>1</parent>
+<caption>Save</caption>
+<name>testsave</name>
+<tooltip>Save</tooltip>
+<node>34</node>
+</menuitem>
+<menuitem>
+<parent>1</parent>
+<caption>-</caption>
+<separator>1</separator>
+<node>35</node>
+</menuitem>
+<menuitem>
+<parent>1</parent>
+<caption>Print</caption>
+<name>OnFilePrint</name>
+<tooltip>Print File</tooltip>
+<node>36</node>
+</menuitem>
+<menuitem>
+<parent>1</parent>
+<caption>Print View</caption>
+<name>OnFilePrintPreview</name>
+<tooltip>Print View</tooltip>
+<node>37</node>
+</menuitem>
+<menuitem>
+<parent>1</parent>
+<caption>-</caption>
+<separator>1</separator>
+<node>38</node>
+</menuitem>
+<menuitem>
+<parent>1</parent>
+<caption>Property</caption>
+<name>OnProperty</name>
+<tooltip>Property</tooltip>
+<node>39</node>
+</menuitem>
+
+<menuitem>
+<parent>0</parent>
+<caption>Edit</caption>
+<name>EDIT</name>
+<popup>1</popup>
+<tooltip>EDIT menu</tooltip>
+<node>2</node>
+</menuitem>
+<menuitem>
+<parent>2</parent>
+<caption>Copy</caption>
+<name>OnCopy</name>
+<tooltip>Copy</tooltip>
+<node>50</node>
+</menuitem>
+<menuitem>
+<parent>2</parent>
+<caption>Cut</caption>
+<name>OnCut</name>
+<tooltip>Cut</tooltip>
+<node>51</node>
+</menuitem>
+<menuitem>
+<parent>2</parent>
+<caption>Paste</caption>
+<name>OnPaste</name>
+<tooltip>Paste</tooltip>
+<node>52</node>
+</menuitem>
+<menuitem>
+<parent>2</parent>
+<caption>-</caption>
+<separator>1</separator>
+<node>53</node>
+</menuitem>
+<menuitem>
+<parent>2</parent>
+<caption>Go To</caption>
+<name>OnGoToCell</name>
+<tooltip>Go To</tooltip>
+<node>54</node>
+</menuitem>
+<menuitem>
+<parent>2</parent>
+<caption>-</caption>
+<separator>1</separator>
+<node>55</node>
+</menuitem>
+<menuitem>
+<parent>2</parent>
+<caption>Insert</caption>
+<name>InsertRow</name>
+<popup>1</popup>
+<tooltip>Insert</tooltip>
+<node>56</node>
+</menuitem>
+<menuitem>
+<parent>56</parent>
+<caption>Insert Before Row</caption>
+<name>OnInsertBeforeRow</name>
+<tooltip>Insert Before Row</tooltip>
+<node>955</node>
+</menuitem>
+<menuitem>
+<parent>56</parent>
+<caption>Insert Next Row</caption>
+<name>OnInsertNextRow</name>
+<tooltip>Insert Next Row</tooltip>
+<node>956</node>
+</menuitem>
+<menuitem>
+<parent>56</parent>
+<caption>-</caption>
+<separator>1</separator>
+<node>957</node>
+</menuitem>
+<menuitem>
+<parent>56</parent>
+<caption>Insert Format Row</caption>
+<name>OnInsertFormatRows</name>
+<tooltip>Insert Format Row</tooltip>
+<node>958</node>
+</menuitem>
+<menuitem>
+<parent>56</parent>
+<caption>Copy Format Row</caption>
+<name>OnCopyFormatRow</name>
+<tooltip>Copy Format Row</tooltip>
+<node>959</node>
+</menuitem>
+<menuitem>
+<parent>2</parent>
+<caption>Insert Col</caption>
+<name>InsertCol</name>
+<popup>1</popup>
+<tooltip>Insert Col</tooltip>
+<node>57</node>
+</menuitem>
+<menuitem>
+<parent>57</parent>
+<caption>Insert Before Col</caption>
+<name>OnInsertBeforeCol</name>
+<tooltip>Insert Before Col</tooltip>
+<node>960</node>
+</menuitem>
+<menuitem>
+<parent>57</parent>
+<caption>Insert Next Col</caption>
+<name>OnInsertNextCol</name>
+<tooltip>Insert Next Col</tooltip>
+<node>961</node>
+</menuitem>
+<menuitem>
+<parent>57</parent>
+<caption>-</caption>
+<separator>1</separator>
+<node>962</node>
+</menuitem>
+<menuitem>
+<parent>57</parent>
+<caption>Insert Format Col</caption>
+<name>OnInsertFormatCols</name>
+<node>963</node>
+</menuitem>
+<menuitem>
+<parent>57</parent>
+<caption>Copy Format Col</caption>
+<name>OnCopyFormatCol</name>
+<node>964</node>
+</menuitem>
+<menuitem>
+<parent>2</parent>
+<caption>Insert Cell</caption>
+<name>InsertCell</name>
+<popup>1</popup>
+<node>58</node>
+</menuitem>
+<menuitem>
+<parent>58</parent>
+<caption>Insert Cell</caption>
+<name>OnInsertCell</name>
+<node>965</node>
+</menuitem>
+<menuitem>
+<parent>58</parent>
+<caption>Insert Cell Down</caption>
+<name>OnInsertCellDown</name>
+<node>966</node>
+</menuitem>
+<menuitem>
+<parent>58</parent>
+<caption>Insert Cell Right</caption>
+<name>OnInsertCellRight</name>
+<node>967</node>
+</menuitem>
+<menuitem>
+<parent>2</parent>
+<caption>Clear Cell</caption>
+<name>ClearCell</name>
+<popup>1</popup>
+<node>59</node>
+</menuitem>
+<menuitem>
+<parent>59</parent>
+<caption>Clear Cell All</caption>
+<name>OnClearCellAll</name>
+<node>968</node>
+</menuitem>
+<menuitem>
+<parent>59</parent>
+<caption>Clear Cell Text</caption>
+<name>OnClearCellText</name>
+<node>969</node>
+</menuitem>
+<menuitem>
+<parent>2</parent>
+<caption>Delete Row</caption>
+<name>OnDeleteRow</name>
+<node>60</node>
+</menuitem>
+<menuitem>
+<parent>2</parent>
+<caption>Delete Col</caption>
+<name>OnDeleteCol</name>
+<node>61</node>
+</menuitem>
+<menuitem>
+<parent>2</parent>
+<caption>Delete Cell</caption>
+<name>DeleteCell</name>
+<popup>1</popup>
+<node>62</node>
+</menuitem>
+<menuitem>
+<parent>62</parent>
+<caption>Delete Cell</caption>
+<name>OnDeleteCell</name>
+<node>970</node>
+</menuitem>
+<menuitem>
+<parent>62</parent>
+<caption>Delete Cell Left</caption>
+<name>OnDeleteCellLeft</name>
+<node>971</node>
+</menuitem>
+<menuitem>
+<parent>62</parent>
+<caption>Delete Cell Up</caption>
+<name>OnDeleteCellUp</name>
+<node>972</node>
+</menuitem>
+<menuitem>
+<parent>2</parent>
+<caption>-</caption>
+<separator>1</separator>
+<node>63</node>
+</menuitem>
+<menuitem>
+<parent>2</parent>
+<caption>Sort Row</caption>
+<name>SortRow</name>
+<popup>1</popup>
+<node>64</node>
+</menuitem>
+<menuitem>
+<parent>64</parent>
+<caption>Sort Row Asc</caption>
+<name>OnSortRowAsc</name>
+<node>973</node>
+</menuitem>
+<menuitem>
+<parent>64</parent>
+<caption>Sort Row Dec</caption>
+<name>OnSortRowDec</name>
+<node>974</node>
+</menuitem>
+<menuitem>
+<parent>64</parent>
+<caption>-</caption>
+<separator>1</separator>
+<node>974</node>
+</menuitem>
+<menuitem>
+<parent>64</parent>
+<caption>Sort Row Asc All</caption>
+<name>OnSortRowAscAll</name>
+<node>975</node>
+</menuitem>
+<menuitem>
+<parent>64</parent>
+<caption>Sort Col Dec All</caption>
+<name>OnSortColDecAll</name>
+<node>976</node>
+</menuitem>
+<menuitem>
+<parent>2</parent>
+<caption>Sort Col</caption>
+<name>SortCol</name>
+<popup>1</popup>
+<node>65</node>
+</menuitem>
+<menuitem>
+<parent>65</parent>
+<caption>Sort Col Asc</caption>
+<name>OnSortColAsc</name>
+<node>977</node>
+</menuitem>
+<menuitem>
+<parent>65</parent>
+<caption>Sort Col Dec</caption>
+<name>OnSortColDec</name>
+<node>978</node>
+</menuitem>
+<menuitem>
+<parent>65</parent>
+<caption>-</caption>
+<separator>1</separator>
+<node>979</node>
+</menuitem>
+<menuitem>
+<parent>65</parent>
+<caption>Sort Col Asc All</caption>
+<name>OnSortColAscAll</name>
+<node>980</node>
+</menuitem>
+<menuitem>
+<parent>65</parent>
+<caption>Sort Col Dec All</caption>
+<name>OnSortColDecAll</name>
+<node>981</node>
+</menuitem>
+
+<menuitem>
+<parent>0</parent>
+<caption>SET</caption>
+<name>SET</name>
+<popup>1</popup>
+<node>3</node>
+</menuitem>
+<menuitem>
+<parent>3</parent>
+<caption>Set Max Row&Col</caption>
+<name>OnSetMaxRowCol</name>
+<node>70</node>
+</menuitem>
+<menuitem>
+<parent>3</parent>
+<caption>Paper Background Color</caption>
+<name>OnSetPaperColor</name>
+<node>71</node>
+</menuitem>
+<menuitem>
+<parent>3</parent>
+<caption>Set Grid Line</caption>
+<name>OnSetSysGridLine</name>
+<node>72</node>
+</menuitem>
+<menuitem>
+<parent>3</parent>
+<caption>-</caption>
+<separator>1</separator>
+<node>73</node>
+</menuitem>
+
+<menuitem>
+<parent>3</parent>
+<caption>Cell Hide or Protect</caption>
+<name>OnSetCellHideProtect</name>
+<node>77</node>
+</menuitem>
+<menuitem>
+<parent>3</parent>
+<caption>-</caption>
+<separator>1</separator>
+<node>78</node>
+</menuitem>
+<menuitem>
+<parent>3</parent>
+<caption>Row Auto Size</caption>
+<name>SetRowAutoSize</name>
+<checked>1</checked>
+<node>79</node>
+</menuitem>
+<menuitem>
+<parent>3</parent>
+<caption>Jump</caption>
+<name>Jump</name>
+<popup>1</popup>
+<node>80</node>
+</menuitem>
+<menuitem>
+<parent>80</parent>
+<caption>Jump Next Col</caption>
+<name>JumpNextCol</name>
+<checked>1</checked>
+<node>982</node>
+</menuitem>
+<menuitem>
+<parent>80</parent>
+<caption>Jump Next Row</caption>
+<name>JumpNextRow</name>
+<node>983</node>
+</menuitem>
+<menuitem>
+<parent>3</parent>
+<caption>Auto Jump Next Row or Col</caption>
+<name>SetAutoJumpNextRowCol</name>
+<checked>1</checked>
+<node>81</node>
+</menuitem>
+<menuitem>
+<parent>3</parent>
+<caption>When Key Down Not Focus</caption>
+<name>SetCellKeyNotFocus</name>
+<checked>0</checked>
+<node>82</node>
+</menuitem>
+<menuitem>
+<parent>3</parent>
+<caption>Show Error MsgBox</caption>
+<name>ShowErrorMsgBox</name>
+<checked>1</checked>
+<node>83</node>
+</menuitem>
+<menuitem>
+<parent>3</parent>
+<caption>Design Mode</caption>
+<name>DesignMode</name>
+<checked>1</checked>
+<node>84</node>
+</menuitem>
+<menuitem>
+<parent>3</parent>
+<caption>Show Header</caption>
+<name>ShowHeader</name>
+<checked>1</checked>
+<node>85</node>
+</menuitem>
+<menuitem>
+<parent>3</parent>
+<caption>Show Grid</caption>
+<name>ShowGrid</name>
+<checked>1</checked>
+<node>86</node>
+</menuitem>
+<menuitem>
+<parent>3</parent>
+<caption>Form Protect</caption>
+<name>FormProtect</name>
+<checked>0</checked>
+<node>87</node>
+</menuitem>
+<menuitem>
+<parent>3</parent>
+<caption>Form Protected Show Cursor</caption>
+<name>SetProtectFormShowCursor</name>
+<checked>1</checked>
+<node>88</node>
+</menuitem>
+<menuitem>
+<parent>3</parent>
+<caption>Show Popup Menu</caption>
+<name>SetShowPopupMenu</name>
+<checked>1</checked>
+<node>89</node>
+</menuitem>
+<menuitem>
+<parent>3</parent>
+<caption>Allow Row Resizing</caption>
+<name>SetAllowRowResizing</name>
+<checked>1</checked>
+<node>90</node>
+</menuitem>
+<menuitem>
+<parent>3</parent>
+<caption>Allow Col Resizing</caption>
+<name>SetAllowColResizing</name>
+<checked>1</checked>
+<node>91</node>
+</menuitem>
+<menuitem>
+<parent>3</parent>
+<caption>DClick Label Auto Sort</caption>
+<name>SetDClickLabelCanSort</name>
+<checked>1</checked>
+<node>92</node>
+</menuitem>
+
+<menuitem>
+<parent>0</parent>
+<caption>FORMAT</caption>
+<name>FORMAT</name>
+<popup>1</popup>
+<node>4</node>
+</menuitem>
+<menuitem>
+<parent>4</parent>
+<caption>Cell Text Span</caption>
+<name>OnSetCellTextSpan</name>
+<node>101</node>
+</menuitem>
+<menuitem>
+<parent>4</parent>
+<caption>Cell Control</caption>
+<name>CellControl</name>
+<popup>1</popup>
+<node>102</node>
+</menuitem>
+<menuitem>
+<parent>102</parent>
+<caption>CheckBox Type</caption>
+<name>SetCellCheckBoxType</name>
+<node>985</node>
+</menuitem>
+<menuitem>
+<parent>102</parent>
+<caption>Combo Type</caption>
+<name>OnSetCellComboType</name>
+<node>986</node>
+</menuitem>
+<menuitem>
+<parent>102</parent>
+<caption>Large Text Type</caption>
+<name>SetCellLargeTextType</name>
+<node>987</node>
+</menuitem>
+<menuitem>
+<parent>102</parent>
+<caption>Date Type</caption>
+<name>OnSetCellDateTimeType</name>
+<node>988</node>
+</menuitem>
+<menuitem>
+<parent>102</parent>
+<caption>URL Type</caption>
+<name>SetCellURLType</name>
+<node>989</node>
+</menuitem>
+<menuitem>
+<parent>102</parent>
+<caption>Numeric Type</caption>
+<name>SetCellNumericType</name>
+<node>990</node>
+</menuitem>
+<menuitem>
+<parent>102</parent>
+<caption>Complex Type</caption>
+<name>SetCellComplexType</name>
+<node>991</node>
+</menuitem>
+<menuitem>
+<parent>102</parent>
+<caption>-</caption>
+<separator>1</separator>
+<node>992</node>
+</menuitem>
+<menuitem>
+<parent>102</parent>
+<caption>Normal Type</caption>
+<name>SetCellNormalType</name>
+<node>993</node>
+</menuitem>
+<menuitem>
+<parent>4</parent>
+<caption>Finance Control</caption>
+<name>FinanceControl</name>
+<popup>1</popup>
+<node>103</node>
+</menuitem>
+<menuitem>
+<parent>103</parent>
+<caption>Finance Head Type</caption>
+<name>SetCellFinanceHeadType</name>
+<node>994</node>
+</menuitem>
+<menuitem>
+<parent>103</parent>
+<caption>Finance View Type</caption>
+<name>SetCellFinanceType</name>
+<node>995</node>
+</menuitem>
+<menuitem>
+<parent>103</parent>
+<caption>Capitalization</caption>
+<name>SetCellFinanceDaXie</name>
+<node>996</node>
+</menuitem>
+<menuitem>
+<parent>103</parent>
+<caption>-</caption>
+<separator>1</separator>
+<node>997</node>
+</menuitem>
+<menuitem>
+<parent>103</parent>
+<caption>Normal Type</caption>
+<name>SetCellNormalType</name>
+<node>998</node>
+</menuitem>
+<menuitem>
+<parent>4</parent>
+<caption>Shape 3D</caption>
+<name>SetCellShape3D</name>
+<node>104</node>
+</menuitem>
+<menuitem>
+<parent>4</parent>
+<caption>Line Style</caption>
+<name>OnSetLineStyle</name>
+<node>106</node>
+</menuitem>
+
+<menuitem>
+<parent>4</parent>
+<caption>Bind Cell Color</caption>
+<name>OnDataBindCellColor</name>
+<node>110</node>
+</menuitem>
+<menuitem>
+<parent>4</parent>
+<caption>Show Style</caption>
+<name>OnSetCellShowStyle</name>
+<node>111</node>
+</menuitem>
+
+<menuitem>
+<parent>4</parent>
+<caption>Excel Format</caption>
+<name>OnSetCellExcelFormat</name>
+<node>1047</node>
+</menuitem>
+
+<menuitem>
+<parent>4</parent>
+<caption>Set Row</caption>
+<name>RowHeight</name>
+<node>112</node>
+<popup>1</popup>
+</menuitem>
+<menuitem>
+<parent>112</parent>
+<caption>Row Size</caption>
+<name>OnSetRowSize</name>
+<node>1001</node>
+</menuitem>
+<menuitem>
+<parent>112</parent>
+<caption>Hide</caption>
+<name>SetRowHide</name>
+<node>1002</node>
+</menuitem>
+<menuitem>
+<parent>112</parent>
+<caption>UnHide</caption>
+<name>SetRowUnHide</name>
+<node>1003</node>
+</menuitem>
+<menuitem>
+<parent>112</parent>
+<caption>-</caption>
+<separator>1</separator>
+<node>1004</node>
+</menuitem>
+<menuitem>
+<parent>112</parent>
+<caption>Auto Size</caption>
+<name>AutoSizeRow</name>
+<node>1005</node>
+</menuitem>
+<menuitem>
+<parent>112</parent>
+<caption>Auto Size Narrow Row</caption>
+<name>AutoSizeRow1</name>
+<node>1006</node>
+</menuitem>
+<menuitem>
+<parent>4</parent>
+<caption>Set Col</caption>
+<name>RowHeight</name>
+<node>113</node>
+<popup>1</popup>
+</menuitem>
+<menuitem>
+<parent>113</parent>
+<caption>Col Size</caption>
+<name>OnSetColSize</name>
+<node>1007</node>
+</menuitem>
+<menuitem>
+<parent>113</parent>
+<caption>Hide</caption>
+<name>SetColHide</name>
+<node>1008</node>
+</menuitem>
+<menuitem>
+<parent>113</parent>
+<caption>UnHide</caption>
+<name>SetColUnHide</name>
+<node>1009</node>
+</menuitem>
+<menuitem>
+<parent>113</parent>
+<caption>-</caption>
+<separator>1</separator>
+<node>1010</node>
+</menuitem>
+<menuitem>
+<parent>113</parent>
+<caption>Auto Size</caption>
+<name>AutoSizeCol</name>
+<node>1011</node>
+</menuitem>
+<menuitem>
+<parent>113</parent>
+<caption>Auto Size Narrow Col</caption>
+<name>AutoSizeCol1</name>
+<node>1012</node>
+</menuitem>
+<menuitem>
+<parent>4</parent>
+<caption>CombiNation</caption>
+<name>OnCellCombiNation</name>
+<node>114</node>
+</menuitem>
+<menuitem>
+<parent>4</parent>
+<caption>UnCombiNation</caption>
+<name>OnCellUnCombiNation</name>
+<node>115</node>
+</menuitem>
+<menuitem>
+<parent>4</parent>
+<caption>Slash</caption>
+<name>OnSlashSet</name>
+<node>117</node>
+</menuitem>
+<menuitem>
+<parent>4</parent>
+<caption>-</caption>
+<separator>1</separator>
+<node>118</node>
+</menuitem>
+<menuitem>
+<parent>4</parent>
+<caption>Default</caption>
+<name>OnDefaultSet</name>
+<node>119</node>
+</menuitem>
+
+<menuitem>
+<parent>0</parent>
+<caption>FORMULA</caption>
+<name>FORMULA</name>
+<popup>1</popup>
+<node>5</node>
+</menuitem>
+<menuitem>
+<parent>5</parent>
+<caption>Function</caption>
+<name>OnFunctionList</name>
+<node>130</node>
+</menuitem>
+
+<menuitem>
+<parent>5</parent>
+<caption>SUM</caption>
+<name>SUM</name>
+<popup>1</popup>
+<node>134</node>
+</menuitem>
+<menuitem>
+<parent>134</parent>
+<caption>Vert Sum</caption>
+<name>AutoSumVert</name>
+<node>1020</node>
+</menuitem>
+<menuitem>
+<parent>134</parent>
+<caption>Horz Sum</caption>
+<name>AutoSumHorz</name>
+<node>1021</node>
+</menuitem>
+<menuitem>
+<parent>134</parent>
+<caption>Sum All</caption>
+<name>AutoSumAll</name>
+<node>1022</node>
+</menuitem>
+<menuitem>
+<parent>5</parent>
+<caption>-</caption>
+<separator>1</separator>
+<node>135</node>
+</menuitem>
+<menuitem>
+<parent>5</parent>
+<caption>Calculate All</caption>
+<name>ReCalculate</name>
+<node>139</node>
+</menuitem>
+
+<menuitem>
+<parent>0</parent>
+<caption>CHART</caption>
+<name>CHART</name>
+<popup>1</popup>
+<node>6</node>
+</menuitem>
+<menuitem>
+<parent>6</parent>
+<caption>Chart Wizard</caption>
+<name>OnChartWizard</name>
+<node>150</node>
+</menuitem>
+<menuitem>
+<parent>6</parent>
+<caption>-</caption>
+<separator>1</separator>
+<node>151</node>
+</menuitem>
+<menuitem>
+<parent>6</parent>
+<caption>Draw Line</caption>
+<name>OnDrawLine</name>
+<node>152</node>
+</menuitem>
+<menuitem>
+<parent>6</parent>
+<caption>Draw Rect</caption>
+<name>OnDrawRect</name>
+<node>153</node>
+</menuitem>
+<menuitem>
+<parent>6</parent>
+<caption>Draw Round Rect</caption>
+<name>OnDrawRoundRect</name>
+<node>154</node>
+</menuitem>
+<menuitem>
+<parent>6</parent>
+<caption>Draw Ellipse</caption>
+<name>OnDrawEllipse</name>
+<node>155</node>
+</menuitem>
+<menuitem>
+<parent>6</parent>
+<caption>-</caption>
+<separator>1</separator>
+<node>156</node>
+</menuitem>
+<menuitem>
+<parent>6</parent>
+<caption>Rim Color</caption>
+<name>OnObjectLineColor</name>
+<node>157</node>
+</menuitem>
+<menuitem>
+<parent>6</parent>
+<caption>Fill Color</caption>
+<name>OnObjectFillColor</name>
+<node>158</node>
+</menuitem>
+<menuitem>
+<parent>6</parent>
+<caption>-</caption>
+<separator>1</separator>
+<node>159</node>
+</menuitem>
+<menuitem>
+<parent>6</parent>
+<caption>Move To Front</caption>
+<name>OnObjectMoveToFront</name>
+<node>160</node>
+</menuitem>
+<menuitem>
+<parent>6</parent>
+<caption>Move To Back</caption>
+<name>OnObjectMoveToBack</name>
+<node>161</node>
+</menuitem>
+<menuitem>
+<parent>6</parent>
+<caption>Move Forward</caption>
+<name>OnObjectMoveForward</name>
+<node>162</node>
+</menuitem>
+<menuitem>
+<parent>6</parent>
+<caption>Move Back</caption>
+<name>OnObjectMoveBack</name>
+<node>163</node>
+</menuitem>
+<menuitem>
+<parent>6</parent>
+<caption>-</caption>
+<separator>1</separator>
+<node>164</node>
+</menuitem>
+<menuitem>
+<parent>6</parent>
+<caption>Refresh All</caption>
+<name>RefreshAllObjectData</name>
+<node>165</node>
+</menuitem>
+
+<menuitem>
+<parent>0</parent>
+<caption>PICTURE</caption>
+<name>PICTURE</name>
+<popup>1</popup>
+<node>7</node>
+</menuitem>
+<menuitem>
+<parent>7</parent>
+<caption>Insert Image File</caption>
+<name>InsertImageFile</name>
+<node>170</node>
+</menuitem>
+<menuitem>
+<parent>7</parent>
+<caption>Insert Cell Image</caption>
+<name>InsertCellImage</name>
+<node>171</node>
+</menuitem>
+<menuitem>
+<parent>7</parent>
+<caption>Cell Image Size</caption>
+<name>SetCellImageSize</name>
+<popup>1</popup>
+<node>172</node>
+</menuitem>
+<menuitem>
+<parent>172</parent>
+<caption>Original Size</caption>
+<name>SetCellImageOriginalSize</name>
+<node>1030</node>
+</menuitem>
+<menuitem>
+<parent>172</parent>
+<caption>Cell Size</caption>
+<name>SetCellImageCellSize</name>
+<node>1031</node>
+</menuitem>
+<menuitem>
+<parent>7</parent>
+<caption>Delete Cell Image</caption>
+<name>DeleteCellImage</name>
+<node>173</node>
+</menuitem>
+<menuitem>
+<parent>7</parent>
+<caption>-</caption>
+<separator>1</separator>
+<node>174</node>
+</menuitem>
+<menuitem>
+<parent>7</parent>
+<caption>Insert Background Image</caption>
+<name>InsertBkImage</name>
+<popup>1</popup>
+<node>175</node>
+</menuitem>
+<menuitem>
+<parent>175</parent>
+<caption>Image Original Size</caption>
+<name>OnInsertBackgroundImageOriginalSize</name>
+<node>1032</node>
+</menuitem>
+<menuitem>
+<parent>175</parent>
+<caption>Image Form Size</caption>
+<name>OnInsertBackgroundImageFormSize</name>
+<node>1033</node>
+</menuitem>
+<menuitem>
+<parent>7</parent>
+<caption>Background Image Size</caption>
+<name>SetCellBkImageSize</name>
+<popup>1</popup>
+<node>176</node>
+</menuitem>
+<menuitem>
+<parent>176</parent>
+<caption>Original Size</caption>
+<name>SetBackgroundImageOriginalSize</name>
+<node>1034</node>
+</menuitem>
+<menuitem>
+<parent>176</parent>
+<caption>Image Form Size</caption>
+<name>SetBackgroundImageFormSize</name>
+<node>1035</node>
+</menuitem>
+<menuitem>
+<parent>7</parent>
+<caption>Delete Background Image</caption>
+<name>DeleteBackgroundImage</name>
+<node>177</node>
+</menuitem>
+
+
+<menuitem>
+<parent>0</parent>
+<caption>Print Set</caption>
+<name>PrintSet</name>
+<popup>1</popup>
+<node>9</node>
+</menuitem>
+<menuitem>
+<parent>9</parent>
+<caption>Set Row Label</caption>
+<name>SetRowLabel</name>
+<node>190</node>
+</menuitem>
+<menuitem>
+<parent>9</parent>
+<caption>Set Col Label</caption>
+<name>SetColLabel</name>
+<node>191</node>
+</menuitem>
+<menuitem>
+<parent>9</parent>
+<caption>-</caption>
+<separator>1</separator>
+<node>192</node>
+</menuitem>
+<menuitem>
+<parent>9</parent>
+<caption>Page PreFooter Rows</caption>
+<name>SetPagePreFooterRows</name>
+<node>194</node>
+</menuitem>
+<menuitem>
+<parent>9</parent>
+<caption>Page Footer Rows</caption>
+<name>SetPageFooterRows</name>
+<node>195</node>
+</menuitem>
+<menuitem>
+<parent>9</parent>
+<caption>One Print Rows</caption>
+<name>SetOnePrintPageDetailZoneRows</name>
+<node>196</node>
+</menuitem>
+<menuitem>
+<parent>9</parent>
+<caption>-</caption>
+<separator>1</separator>
+<node>197</node>
+</menuitem>
+<menuitem>
+<parent>9</parent>
+<caption>Paper Set</caption>
+<name>OnPrintPaperSet</name>
+<node>198</node>
+</menuitem>
+<menuitem>
+<parent>9</parent>
+<caption>Print Set</caption>
+<name>OnPrintSetup</name>
+<node>199</node>
+</menuitem>
+<menuitem>
+<parent>9</parent>
+<caption>-</caption>
+<separator>1</separator>
+<node>200</node>
+</menuitem>
+<menuitem>
+<parent>9</parent>
+<caption>Print Cell</caption>
+<name>SetCellCanPrint</name>
+<node>201</node>
+</menuitem>
+<menuitem>
+<parent>9</parent>
+<caption>Only Print Text</caption>
+<name>SetCellOnlyPrintText</name>
+<node>202</node>
+</menuitem>
+<menuitem>
+<parent>9</parent>
+<caption>Print Background</caption>
+<name>SetPrintBackground</name>
+<popup>1</popup>
+<node>203</node>
+</menuitem>
+<menuitem>
+<parent>203</parent>
+<caption>Print</caption>
+<name>SetPrintFormBackground</name>
+<node>1040</node>
+</menuitem>
+<menuitem>
+<parent>203</parent>
+<caption>Not Print</caption>
+<name>SetNotPrintFormBackground</name>
+<node>1041</node>
+</menuitem>
+
+<menuitem>
+<parent>0</parent>
+<caption>Help</caption>
+<name>Help</name>
+<popup>1</popup>
+<node>10</node>
+</menuitem>
+<menuitem>
+<parent>10</parent>
+<caption>Current Version</caption>
+<name>GetCurrentVer</name>
+<popup>0</popup>
+<node>1042</node>
+</menuitem>
+<menuitem>
+<parent>10</parent>
+<caption>System Version</caption>
+<name>GetSystemVer</name>
+<node>1043</node>
+</menuitem>
+<menuitem>
+<parent>10</parent>
+<caption>-</caption>
+<separator>1</separator>
+<node>1044</node>
+</menuitem>
+<menuitem>
+<parent>10</parent>
+<caption>Help</caption>
+<name>ShowHelp</name>
+<node>1045</node>
+</menuitem>
+<menuitem>
+<parent>3</parent>
+<caption>Set the maximum number of characters for unit</caption>
+<name>CellEditMaxInputNumber</name>
+<node>1128</node>
+</menuitem>
+</main_menu>

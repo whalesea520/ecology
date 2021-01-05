@@ -1,0 +1,379 @@
+*{
+	font-family: 'Microsoft Yahei', Arial;
+}
+#page{
+	position: absolute;
+	top:0px;
+	left:0px;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+#page-title{
+	position: absolute;
+	z-index: 2;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 50px;
+	background: rgb(255, 255, 255);
+	padding: 0;
+	overflow: hidden;
+}
+#nav-header{
+	width: 100%;
+	height: 100%;
+	background-color: rgb(0, 122, 251);
+	overflow: hidden;
+}
+#nav-header .header-left{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	color: #fff;
+	padding-left: 24px;
+	line-height: 50px;
+	background-position: 6px center;
+	background-size: 26px;
+	font-size: 16px;
+}
+#nav-header .header-center{
+	height: 100%;
+	line-height: 50px;
+	text-align: center;
+	color:#fff;
+	font-size: 18px;
+	font-weight: bold;
+}
+#nav-header .header-right{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 100%;
+	width: 56px;
+	background: url('/mobile/plugin/browsernew/images/ok.png') no-repeat;
+	background-size: 36px;
+	background-position: center;
+}
+#page-center{
+	position: absolute;
+	z-index: 2;
+	top: 50px;
+	left: 0px;
+	bottom: 0px;
+	width: 100%;
+	overflow: hidden;
+}
+#center-content, #result-center{
+	position: absolute;
+	z-index: 2;
+	top: 0px;
+	left: 0px;
+	bottom: 50px;
+	width: 100%;
+	overflow-x: hidden; 
+}
+#center-footer, #result-footer{
+	position: absolute;
+	z-index: 3;
+	left: 0px;
+	bottom: 0px;
+	height: 50px;
+	width: 100%;
+	background: #fff;
+	border-top: 1px solid #ccc;
+}
+#center-content-inner, #result-center-inner{
+	position: relative;
+	height: 100%;
+	background: #fff;
+	transition:All 0.2s;
+	-webkit-transition:All 0.2s;
+}
+.data-container{
+	height: 100%;
+	width: 100%;
+	position: relative;
+	transition:All 0.2s;
+	-webkit-transition:All 0.2s;
+}
+.valueHolder{
+	display: none;
+}
+#list-loading{
+	height: 30px;
+	background-position: center center;
+	display: none;
+}
+#selectedNum{
+	display: inline-block;
+	margin: 0px 3px;
+}
+#selected-result-page{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 103;
+	transition:All 0.0s;
+	-webkit-transition:All 0.0s;
+	-webkit-transform: translate3d(0, 100%, 0);
+	transform: translate3d(0, 100%, 0);
+	visibility: hidden;
+}
+
+.selected-result-open #selected-result-page{
+	transition:All 0.3s;
+	-webkit-transition:All 0.3s;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	visibility: visible;
+}
+
+#tree-org-container{
+	overflow-y: auto;
+	overflow-x:hidden;
+	-webkit-overflow-scrolling:touch;
+}
+#tree-org-container ul{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+#tree-org-container ul li{
+	position: relative;
+	cursor:pointer;
+}
+#tree-org-container ul.tree-page .checked{
+	position:absolute;
+	left:11px;
+	top:0px;
+	width:40px;
+	height:40px;
+	background-size: 20px 20px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url("/mobile/plugin/browsernew/images/Check.png");
+}
+#tree-org-container ul.tree-page .unchecked{
+	position:absolute;
+	left:11px;
+	top:0px;
+	width:40px;
+	height:40px;
+	background-size: 20px 20px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url("/mobile/plugin/browsernew/images/UnCheck.png");
+}
+.hasChildChkDiv{
+	padding-left:48px !important;
+}
+#tree-org-container li ul.tree-page{
+	margin-left: 25px;
+}
+#tree-org-container ul.tree-page li .one-tree-data{
+	border-bottom: 1px solid #ececec;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	color: #181818;
+	text-overflow: ellipsis;
+	overflow:hidden; 
+	white-space:nowrap;
+}
+#tree-org-container ul.tree-page li .closed{
+	background: url("/mobile/plugin/browsernew/images/jia.png") no-repeat;
+	background-position: -2px center;
+	padding-left: 18px;
+}
+#tree-org-container ul.tree-page li .opened{
+	background: url("/mobile/plugin/browsernew/images/jian.png") no-repeat;
+	background-position: -2px center;
+	padding-left: 18px;
+}
+#tree-org-container ul.tree-page li .company-data{
+	background: url("/mobile/plugin/browsernew/images/house.png") no-repeat;
+    background-size: 18px 18px;
+    background-position: 6px 10px;
+    padding-left: 28px;
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+}
+#center-footer, #result-footer{
+	position: absolute;
+	z-index: 3;
+	left: 0px;
+	bottom: 0px;
+	height: 50px;
+	width: 100%;
+	background: #fff;
+	border-top: 1px solid #ccc;
+}
+#choosedResult{
+	border:solid 2px #D8D8D8;
+    border-radius:8px;
+    z-index: 3;
+    padding: 4px 15px 4px 42px;
+    position:absolute;
+    top: 10px;
+    left: 10px;
+    color: #017FFF;
+    overflow: hidden;
+    font-size: 16px;
+    background: url("/mobile/plugin/browsernew/images/p5-m.png") no-repeat;
+    background-size: 22px 22px;
+    background-position: 15px center;
+    cursor: pointer;
+}
+
+#okResult{
+	border:solid 2px #D8D8D8;
+    border-radius:8px;
+    z-index: 3;
+    padding: 4px 15px 4px 42px;
+    position:absolute;
+    top: 10px;
+    right: 10px;
+    color: #017FFF;
+    overflow: hidden;
+    font-size: 16px;
+    background: url("/mobile/plugin/browsernew/images/edit_wev8.png") no-repeat;
+    background-size: 22px 22px;
+    background-position: 15px center;
+    cursor: pointer;
+}
+#clearResult{
+	border:solid 2px #D8D8D8;
+    border-radius:8px;
+    z-index: 3;
+    padding: 4px 15px 4px 42px;
+    position:absolute;
+    top: 10px;
+    right: 10px;
+    color: #017FFF;
+    overflow: hidden;
+    font-size: 16px;
+    background: url("/mobile/plugin/browsernew/images/p5-m2.png") no-repeat;
+    background-size: 18px 18px;
+    background-position: 15px center;
+    cursor: pointer;
+}
+#backResult{
+	border:solid 2px #D8D8D8;
+    border-radius:8px;
+    z-index: 3;
+    padding: 4px 15px 4px 42px;
+    position:absolute;
+    top: 10px;
+    left: 10px;
+    color: #017FFF;
+    overflow: hidden;
+    font-size: 16px;
+    background: url("/mobile/plugin/browsernew/images/back_wev8.png") no-repeat;
+    background-size: 26px 26px;
+    background-position: 12px 4px;
+    cursor: pointer;
+}
+#tree-org-container ul.tree-page li .tree-loading{
+	height: 30px;
+	background: url("/mobile/plugin/browsernew/images/mobile_loading_wev8.gif") no-repeat;
+	background-position: 20px center;
+}
+
+#result-hrm-content{
+	position: absolute;
+	z-index: 2;
+	top: 0px;
+	left: 0px;
+	bottom:0px;
+	width: 100%;
+	overflow-y: auto;
+	overflow-x:hidden;
+	-webkit-overflow-scrolling:touch;
+}
+#result-hrm-content ul{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	background: #fff;
+}
+#result-hrm-content ul li{
+	padding-left: 0px;
+	position: relative;
+	height: 55px;
+	overflow: hidden;
+}
+#result-hrm-content ul{
+	background: transparent;
+}
+#result-hrm-content ul li.sortable-ghost {
+	opacity: 0.4;
+}
+#result-hrm-content ul li.deleted{
+	transition:All 0.5s;
+	-webkit-transition:All 0.5s;
+	-webkit-transform: translate3d(-100%, 0, 0) !important;
+	transform: translate3d(-100%, 0, 0) !important;
+}
+#result-hrm-content ul li .delete-data{
+	height: 100%;
+	width: 65px;
+	background: #ff3b30;
+	line-height: 55px;
+	text-align: center;
+	color: #fff;
+	float: right;
+}
+#result-hrm-content ul li .data-inner{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	padding-left: 160px;
+	padding-right: 55px;
+	border-bottom: 1px dashed #dcdcdc;
+	z-index: 2;
+	background: #fff;
+	transition:All 0.5s;
+	-webkit-transition:All 0.5s;
+}
+#result-hrm-content ul li.beDelete .data-inner{
+	-webkit-transform: translate3d(-65px, 0, 0);
+	transform: translate3d(-65px, 0, 0);
+}
+#result-hrm-content ul li .data-inner div{
+	text-overflow: ellipsis;
+	overflow:hidden; 
+	white-space:nowrap;
+}
+#result-hrm-content ul li .data-inner .data-delete{
+	width: 55px;
+	height: 55px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background: url("/mobile/plugin/browsernew/images/delete2.png") no-repeat;
+	background-position: center center;
+	background-size: 28px 28px;
+}
+#result-hrm-content ul li .data-inner .data-move{
+	width: 55px;
+	height: 55px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background: url("/mobile/plugin/browsernew/images/move.png?2") no-repeat;
+	background-position: center center;
+	background-size: 32px 15px;
+}
+#result-hrm-content .data-lastname{
+	height:55px;
+	line-height:55px;
+	color: #000;
+	font-size: 16px;
+}

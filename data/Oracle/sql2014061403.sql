@@ -1,0 +1,2 @@
+create index  WORKFLOW_FORMDETAIL_INDEX on WORKFLOW_FORMDETAIL(requestid)
+/

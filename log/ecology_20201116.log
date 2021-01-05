@@ -1,0 +1,506 @@
+2020-11-16 09:12:05,754 ERROR weaver.general.BaseBean  - ------是否开启字符转码----0---是否开启sql参数化解析-----0----nativepool----ecology
+2020-11-16 09:12:06,189 ERROR weaver.general.BaseBean  - ExecuteSqlLogger start log write to file thread success...
+2020-11-16 09:12:06,295 INFO  weaver.common.SystemInitialized  - System Initialized OK.
+2020-11-16 09:12:06,563 INFO  weaver.general.InitServer  - System Init Message:mainControlIp= localIp:[192.168.56.1, 192.168.97.232]
+2020-11-16 09:12:06,563 INFO  weaver.general.InitServer  - init ioc container...
+2020-11-16 09:12:09,412 ERROR com.weaver.upgrade.FunctionUpgrade  - OS.name+++++++++++++++++++++:Windows 10
+2020-11-16 09:12:09,412 ERROR com.weaver.upgrade.FunctionUpgrade  - srcfilePath+++++++++++++++++++++:D:\WEAVER\ecology\upgrade\src
+2020-11-16 09:12:09,415 ERROR com.weaver.upgrade.FunctionUpgrade  - 本地Ip++++++++++：192.168.56.1
+2020-11-16 09:12:09,416 ERROR com.weaver.upgrade.FunctionUpgrade  - 主节点MainControlIP++++++++++：
+2020-11-16 09:12:09,604 INFO  weaver.general.InitServer  - end ioc container init...
+2020-11-16 09:12:09,605 INFO  weaver.general.InitServer  - SystemUpgrade Start.....
+2020-11-16 09:12:09,631 INFO  weaver.general.InitServer  - SystemUpgrade End.....
+2020-11-16 09:12:09,631 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread Start.....
+2020-11-16 09:12:09,680 ERROR weaver.general.BaseBean  - 启动日志压缩线程....
+2020-11-16 09:12:09,717 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread End.....
+2020-11-16 09:12:09,734 ERROR weaver.system.HtmlFieldToClob  - isrun:1
+2020-11-16 09:12:09,735 ERROR weaver.system.HtmlFieldToClob  - isrun1:1
+2020-11-16 09:12:09,769 ERROR weaver.conn.RecordSet  - WFVersionAdd insert Waiting...
+2020-11-16 09:12:10,149 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息...
+2020-11-16 09:12:10,348 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息成功...
+2020-11-16 09:12:12,009 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun:1
+2020-11-16 09:12:12,010 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun1:1
+2020-11-16 09:12:12,715 INFO  weaver.general.InitServer  - end.....
+2020-11-16 09:12:14,048 ERROR weaver.page.PageManager  - 清空二维码扫描缓存记录表
+2020-11-16 09:12:14,246 ERROR weaver.cpt.util.CptInitManager  - weaver.cpt.util.CptInitManager is running start...
+2020-11-16 09:12:14,260 ERROR weaver.formmode.cuspage.cpt.CptGenmenu4mode  - weaver.formmode.cuspage.cpt.CptGenmenu4mode is running start...
+2020-11-16 09:12:14,308 ERROR weaver.formmode.cuspage.cpt.CptGenmenu4mode  - weaver.formmode.cuspage.cpt.CptGenmenu4mode is running end...
+2020-11-16 09:12:14,436 ERROR weaver.cpt.util.CptInitManager  - weaver.cpt.util.CptInitManager is running end...
+2020-11-16 09:12:16,595 ERROR org.directwebremoting.util.LogErrorHandler  - Line=52 Element type "filter" must be declared.
+2020-11-16 09:12:16,596 ERROR org.directwebremoting.util.LogErrorHandler  - Line=53 The content of element type "allow" must match "(create|convert)*".
+2020-11-16 09:12:18,071 ERROR weaver.conn.RecordSet  - select t1.* from  uf_zzzxx t1 where t1.formmodeid=50  and ( DATEDIFF(ss,t1.jzrq+' '+'23:55:50',getDate())>=(-1*60*60*24*30) and DATEDIFF(ss, CONVERT(varchar(10), GETDATE(), 120) +' '+'00:00:00',t1.jzrq+' '+'23:55:50')>=(-1*60*60*24*30) and t1.jzrq is not null and t1.jzrq<> '' )  and not exists(select 1 from mode_reminddata_all t2 where t2.remindjobid=1 and t2.billid=t1.id and lastdate= CONVERT(varchar(10), GETDATE(), 120)  and isnull(isRemindWorkflow,0)=1 )
+2020-11-16 09:12:18,083 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: datediff 函数导致溢出。用于分隔两个日期/时间实例的日期部分的数字太大。请尝试使用日期部分精度较低的 datediff。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:196)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet$FetchBuffer.nextRow(SQLServerResultSet.java:4700)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.fetchBufferNext(SQLServerResultSet.java:1683)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.next(SQLServerResultSet.java:956)
+	at weaver.conn.RecordSet.parseResultSet(RecordSet.java:1656)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:916)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.formmode.task.action.TaskAction.doRemind(TaskAction.java:247)
+	at weaver.formmode.task.action.WorkflowMessageTaskAction.doIt(WorkflowMessageTaskAction.java:33)
+	at weaver.formmode.task.action.TaskAction.execute(TaskAction.java:34)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:529)
+2020-11-16 09:12:19,090 ERROR weaver.system.MonitorThreadManager  - >>>>MonitorThreadManager>>单独的预警关闭控制：isThreadWarningStart(zt)=0<<<<
+2020-11-16 09:12:19,421 ERROR weaver.general.BaseBean  - 初始化微信推送扫描线程成功，扫描间隔1分钟---------
+2020-11-16 09:12:25,606 INFO  weaver.filter.SecurityFilter  - Initializing filter 'SecurityFilter'
+2020-11-16 09:12:32,346 INFO  weaver.filter.SecurityFilter  - Filter 'SecurityFilter' configured successfully
+2020-11-16 09:12:32,380 ERROR weaver.general.BaseBean  - log4j reset thread start success...
+2020-11-16 09:12:32,690 INFO  weaver.filter.XssFilter  - Initializing filter 'XssFilter'
+2020-11-16 09:12:32,729 INFO  weaver.filter.XssFilter  - Filter 'XssFilter' configured successfully
+2020-11-16 09:12:33,056 ERROR weaver.general.BaseBean  - ------是否开启字符转码----0---是否开启sql参数化解析-----0----nativepool----ecology
+2020-11-16 09:12:33,091 ERROR weaver.general.BaseBean  - ExecuteSqlLogger start log write to file thread success...
+2020-11-16 09:13:35,497 ERROR weaver.systeminfo.menuconfig.MenuUtil  - 菜单查询sql:select * from (select isnull(c.isopen,m.infoid+(324855)+1) as isopen,m.* from ( ( SELECT t1.id as infoId, t1.labelId , t1.isCustom, t1.refersubid,t1.iconUrl,t1.TopIconUrl,t1.linkAddress ,t1.baseTarget,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,case when t1.isCustom=2 then t1.topmenuname else t2.topmenuname end topmenuname,case when t1.isCustom=2 then t1.topname_e else t2.topname_e end topname_e,case when t1.isCustom=2 then t1.topname_t else t2.topname_t end topname_t ,allt.c as  allParent,curt.c as curParent  FROM leftmenuinfo t1  left join (select count(0) c,parentId from leftmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from leftmenuinfo it1 inner join leftmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1 group by it1.parentId)curt on t1.id=curt.parentId , leftmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=1 and t2.resourceid =1) or (t2.resourcetype=3 and t2.resourceid=1)) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id in (SELECT infoid FROM menushareinfo WHERE (  CASE WHEN (sharetype = 1 AND sharevalue in (0,-2)  and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 3 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 5 AND sharevalue = 1) THEN  1 ELSE 0 END   = 1   OR  CASE WHEN (sharetype = 6 AND sharevalue in (0,-4) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR CASE WHEN (sharetype = 7 AND sharevalue = 0  and   ( case when jobtitlelevel=1  Then 1 else 0 end = 1     or       case when (jobtitlelevel=2 and ( '%,'+jobtitlesharevalue+',%' like '%,0,%'  or  '%,'+jobtitlesharevalue+',%' like '%,-2,%' ) ) Then 1 else 0 end = 1        or       case when (jobtitlelevel=3 and ( '%,'+jobtitlesharevalue+',%' like '%,0,%'  or  '%,'+jobtitlesharevalue+',%' like '%,-4,%' ) ) Then 1 else 0 end = 1    )) THEN  1 ELSE 0 END   = 1   OR    CASE WHEN (sharetype = 2 AND sharevalue IN ( select roleid  from hrmrolemembers role WHERE rolelevel <=role.rolelevel AND role.resourceid =1 ) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1  )  and resourcetype=1 and resourceid =1 and menutype='left' ) and (t1.parentid=0 or  t1.parentid is null or t1.parentid='')  ) union ( SELECT t1.id as infoId, t1.labelId , t1.isCustom, t1.refersubid,t1.iconUrl,t1.TopIconUrl,t1.linkAddress ,t1.baseTarget,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,case when t1.isCustom=2 then t1.topmenuname else t2.topmenuname end topmenuname,case when t1.isCustom=2 then t1.topname_e else t2.topname_e end topname_e,case when t1.isCustom=2 then t1.topname_t else t2.topname_t end topname_t ,allt.c as  allParent,curt.c as curParent  FROM leftmenuinfo t1  left join (select count(0) c,parentId from leftmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from leftmenuinfo it1 inner join leftmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1 group by it1.parentId)curt on t1.id=curt.parentId , leftmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=1 and t2.resourceid =1) or (t2.resourcetype=3 and t2.resourceid=1)) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id not in (SELECT infoid FROM menushareinfo where menutype='left'  and resourcetype=1 and resourceid =1 ) and (t1.parentid=0 or  t1.parentid is null or t1.parentid='')  ) ) m left join menucontrollist c on m.infoid+324789=c.menuid and c.type='left') a where a.isopen=a.infoid+(324855)+1 ORDER BY ISNULL(a.parentId,0),a.viewIndex,a.infoId
+2020-11-16 09:13:36,911 INFO  weaver.filter.SecurityFilter  - Initializing filter 'SecurityFilter'
+2020-11-16 09:13:38,376 ERROR weaver.systeminfo.menuconfig.MenuUtil  - 菜单查询sql:select * from (select isnull(c.isopen,m.infoid+(324855)+1) as isopen,m.* from ( ( SELECT t1.id as infoId, t1.labelId , t1.isCustom, t1.refersubid,t1.iconUrl,t1.TopIconUrl,t1.linkAddress ,t1.baseTarget,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,case when t1.isCustom=2 then t1.topmenuname else t2.topmenuname end topmenuname,case when t1.isCustom=2 then t1.topname_e else t2.topname_e end topname_e,case when t1.isCustom=2 then t1.topname_t else t2.topname_t end topname_t ,allt.c as  allParent,curt.c as curParent  FROM leftmenuinfo t1  left join (select count(0) c,parentId from leftmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from leftmenuinfo it1 inner join leftmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1 group by it1.parentId)curt on t1.id=curt.parentId , leftmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=1 and t2.resourceid =1) or (t2.resourcetype=3 and t2.resourceid=1)) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id in (SELECT infoid FROM menushareinfo WHERE (  CASE WHEN (sharetype = 1 AND sharevalue in (0,-2)  and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 3 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 5 AND sharevalue = 1) THEN  1 ELSE 0 END   = 1   OR  CASE WHEN (sharetype = 6 AND sharevalue in (0,-4) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR CASE WHEN (sharetype = 7 AND sharevalue = 0  and   ( case when jobtitlelevel=1  Then 1 else 0 end = 1     or       case when (jobtitlelevel=2 and ( '%,'+jobtitlesharevalue+',%' like '%,0,%'  or  '%,'+jobtitlesharevalue+',%' like '%,-2,%' ) ) Then 1 else 0 end = 1        or       case when (jobtitlelevel=3 and ( '%,'+jobtitlesharevalue+',%' like '%,0,%'  or  '%,'+jobtitlesharevalue+',%' like '%,-4,%' ) ) Then 1 else 0 end = 1    )) THEN  1 ELSE 0 END   = 1   OR    CASE WHEN (sharetype = 2 AND sharevalue IN ( select roleid  from hrmrolemembers role WHERE rolelevel <=role.rolelevel AND role.resourceid =1 ) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1  )  and resourcetype=1 and resourceid =1 and menutype='left' )  ) union ( SELECT t1.id as infoId, t1.labelId , t1.isCustom, t1.refersubid,t1.iconUrl,t1.TopIconUrl,t1.linkAddress ,t1.baseTarget,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,case when t1.isCustom=2 then t1.topmenuname else t2.topmenuname end topmenuname,case when t1.isCustom=2 then t1.topname_e else t2.topname_e end topname_e,case when t1.isCustom=2 then t1.topname_t else t2.topname_t end topname_t ,allt.c as  allParent,curt.c as curParent  FROM leftmenuinfo t1  left join (select count(0) c,parentId from leftmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from leftmenuinfo it1 inner join leftmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1 group by it1.parentId)curt on t1.id=curt.parentId , leftmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=1 and t2.resourceid =1) or (t2.resourcetype=3 and t2.resourceid=1)) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id not in (SELECT infoid FROM menushareinfo where menutype='left'  and resourcetype=1 and resourceid =1 )  ) ) m left join menucontrollist c on m.infoid+324789=c.menuid and c.type='left') a where a.isopen=a.infoid+(324855)+1 ORDER BY ISNULL(a.parentId,0),a.viewIndex,a.infoId
+2020-11-16 09:13:42,588 INFO  weaver.filter.SecurityFilter  - Filter 'SecurityFilter' configured successfully
+2020-11-16 09:13:42,594 ERROR weaver.general.BaseBean  - log4j reset thread start success...
+2020-11-16 09:13:42,954 INFO  weaver.filter.XssFilter  - Initializing filter 'XssFilter'
+2020-11-16 09:13:43,002 INFO  weaver.filter.XssFilter  - Filter 'XssFilter' configured successfully
+2020-11-16 09:13:43,233 ERROR weaver.general.BaseBean  - ------是否开启字符转码----0---是否开启sql参数化解析-----0----nativepool----ecology
+2020-11-16 09:13:43,380 ERROR weaver.general.BaseBean  - ExecuteSqlLogger start log write to file thread success...
+2020-11-16 09:14:10,070 ERROR weaver.conn.RecordSet  - WorkflowSignInput.jsp requestId=57258,workflowId=317,nodeId=2580
+2020-11-16 09:14:10,071 INFO  weaver.odoc.workflow.workflow.utils.FormSignatureConfigUtil  - getFormSignatureConfig() workflowId=317,nodeId=2580,userId=1,language=7
+2020-11-16 09:14:10,867 ERROR com.cloudstore.api.dao.Dao_OrgImpl  - in new selecthave
+2020-11-16 09:14:19,551 ERROR com.cloudstore.app.no0000012.dao.Dao_WfDetailImplSqlserver  - getlist sql is :select * from (select d.canu,d.cbr,d.bqqid,d.bsqgs,d.jxs,d.lxfs,d.pt,d.dplx,d.dpmc,d.pl,d.qqlj,d.xsbz,d.jyssb,d.yjpc,d.yjgxd,d.bz,d.id,isnull((select top 1 x.dbKey from no0000012_wfdetailkey x where x.dbId=d.id and x.dn=1 and x.requestid=m.requestid),0) as dbKey,isnull((select top 1 x.fDbKey from no0000012_wfdetailkey x where x.dbId=d.id and x.dn=1 and x.requestid=m.requestid),0) as fDbKey,ROW_NUMBER() OVER(order by d.id asc) as rn from formtable_main_296 m,formtable_main_296_dt1 d where m.id = d.mainid and m.requestid=57258) as tmp where 1=1 order by tmp.id asc 
+2020-11-16 09:17:05,471 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun:1
+2020-11-16 09:17:05,472 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun1:1
+2020-11-16 09:18:07,882 INFO  weaver.filter.SecurityFilter  - Filter 'SecurityFilter' configured successfully
+2020-11-16 09:18:07,889 ERROR weaver.general.BaseBean  - log4j reset thread start success...
+2020-11-16 10:32:45,526 ERROR weaver.general.BaseBean  - ------是否开启字符转码----0---是否开启sql参数化解析-----0----nativepool----ecology
+2020-11-16 10:32:45,984 ERROR weaver.general.BaseBean  - ExecuteSqlLogger start log write to file thread success...
+2020-11-16 10:32:46,076 INFO  weaver.common.SystemInitialized  - System Initialized OK.
+2020-11-16 10:32:46,406 INFO  weaver.general.InitServer  - System Init Message:mainControlIp= localIp:[192.168.56.1, 192.168.97.232]
+2020-11-16 10:32:46,407 INFO  weaver.general.InitServer  - init ioc container...
+2020-11-16 10:32:48,865 ERROR com.weaver.upgrade.FunctionUpgrade  - OS.name+++++++++++++++++++++:Windows 10
+2020-11-16 10:32:48,865 ERROR com.weaver.upgrade.FunctionUpgrade  - srcfilePath+++++++++++++++++++++:D:\WEAVER\ecology\upgrade\src
+2020-11-16 10:32:48,867 ERROR com.weaver.upgrade.FunctionUpgrade  - 本地Ip++++++++++：192.168.56.1
+2020-11-16 10:32:48,867 ERROR com.weaver.upgrade.FunctionUpgrade  - 主节点MainControlIP++++++++++：
+2020-11-16 10:32:48,996 INFO  weaver.general.InitServer  - end ioc container init...
+2020-11-16 10:32:48,996 INFO  weaver.general.InitServer  - SystemUpgrade Start.....
+2020-11-16 10:32:49,031 INFO  weaver.general.InitServer  - SystemUpgrade End.....
+2020-11-16 10:32:49,031 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread Start.....
+2020-11-16 10:32:49,040 ERROR weaver.general.BaseBean  - 启动日志压缩线程....
+2020-11-16 10:32:49,061 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread End.....
+2020-11-16 10:32:49,075 ERROR weaver.system.HtmlFieldToClob  - isrun:1
+2020-11-16 10:32:49,076 ERROR weaver.system.HtmlFieldToClob  - isrun1:1
+2020-11-16 10:32:49,078 ERROR weaver.conn.RecordSet  - WFVersionAdd insert Waiting...
+2020-11-16 10:32:49,550 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息...
+2020-11-16 10:32:49,913 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息成功...
+2020-11-16 10:32:51,088 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun:1
+2020-11-16 10:32:51,088 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun1:1
+2020-11-16 10:32:51,597 INFO  weaver.general.InitServer  - end.....
+2020-11-16 10:32:52,618 ERROR weaver.page.PageManager  - 清空二维码扫描缓存记录表
+2020-11-16 10:32:52,715 ERROR weaver.cpt.util.CptInitManager  - weaver.cpt.util.CptInitManager is running start...
+2020-11-16 10:32:52,739 ERROR weaver.formmode.cuspage.cpt.CptGenmenu4mode  - weaver.formmode.cuspage.cpt.CptGenmenu4mode is running start...
+2020-11-16 10:32:52,784 ERROR weaver.formmode.cuspage.cpt.CptGenmenu4mode  - weaver.formmode.cuspage.cpt.CptGenmenu4mode is running end...
+2020-11-16 10:32:53,005 ERROR weaver.cpt.util.CptInitManager  - weaver.cpt.util.CptInitManager is running end...
+2020-11-16 10:32:54,865 ERROR org.directwebremoting.util.LogErrorHandler  - Line=52 Element type "filter" must be declared.
+2020-11-16 10:32:54,865 ERROR org.directwebremoting.util.LogErrorHandler  - Line=53 The content of element type "allow" must match "(create|convert)*".
+2020-11-16 10:32:56,461 ERROR weaver.conn.RecordSet  - select t1.* from  uf_zzzxx t1 where t1.formmodeid=50  and ( DATEDIFF(ss,t1.jzrq+' '+'23:55:50',getDate())>=(-1*60*60*24*30) and DATEDIFF(ss, CONVERT(varchar(10), GETDATE(), 120) +' '+'00:00:00',t1.jzrq+' '+'23:55:50')>=(-1*60*60*24*30) and t1.jzrq is not null and t1.jzrq<> '' )  and not exists(select 1 from mode_reminddata_all t2 where t2.remindjobid=1 and t2.billid=t1.id and lastdate= CONVERT(varchar(10), GETDATE(), 120)  and isnull(isRemindWorkflow,0)=1 )
+2020-11-16 10:32:56,462 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: datediff 函数导致溢出。用于分隔两个日期/时间实例的日期部分的数字太大。请尝试使用日期部分精度较低的 datediff。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:196)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet$FetchBuffer.nextRow(SQLServerResultSet.java:4700)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.fetchBufferNext(SQLServerResultSet.java:1683)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.next(SQLServerResultSet.java:956)
+	at weaver.conn.RecordSet.parseResultSet(RecordSet.java:1656)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:916)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.formmode.task.action.TaskAction.doRemind(TaskAction.java:247)
+	at weaver.formmode.task.action.WorkflowMessageTaskAction.doIt(WorkflowMessageTaskAction.java:33)
+	at weaver.formmode.task.action.TaskAction.execute(TaskAction.java:34)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:529)
+2020-11-16 10:32:57,231 ERROR weaver.system.MonitorThreadManager  - >>>>MonitorThreadManager>>单独的预警关闭控制：isThreadWarningStart(zt)=0<<<<
+2020-11-16 10:32:57,613 ERROR weaver.general.BaseBean  - 初始化微信推送扫描线程成功，扫描间隔1分钟---------
+2020-11-16 10:33:00,649 INFO  weaver.filter.SecurityFilter  - Initializing filter 'SecurityFilter'
+2020-11-16 10:33:04,522 INFO  weaver.filter.SecurityFilter  - Filter 'SecurityFilter' configured successfully
+2020-11-16 10:33:04,549 ERROR weaver.general.BaseBean  - log4j reset thread start success...
+2020-11-16 10:35:00,050 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20201116103500&sign=86391e6926597524fb0716a6e9d226e5
+2020-11-16 10:35:00,847 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2020-11-16 10:35:00,847 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2020-11-16 10:35:00,847 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20201116103500&sign=86391e6926597524fb0716a6e9d226e5
+2020-11-16 10:35:00,891 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2020-11-16 10:35:00,891 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2020-11-16 10:35:00,891 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20201116103500&sign=86391e6926597524fb0716a6e9d226e5
+2020-11-16 10:35:00,930 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2020-11-16 10:35:00,931 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2020-11-16 10:35:00,931 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20201116103500&sign=86391e6926597524fb0716a6e9d226e5
+2020-11-16 10:35:00,956 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-11-16 10:35:00,957 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2020-11-16 10:35:00,957 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20201116103500&sign=86391e6926597524fb0716a6e9d226e5
+2020-11-16 10:35:01,000 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2020-11-16 10:35:01,001 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2020-11-16 10:35:01,001 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20201116103500&sign=86391e6926597524fb0716a6e9d226e5
+2020-11-16 10:35:01,064 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-11-16 10:35:12,692 INFO  weaver.filter.SecurityFilter  - Initializing filter 'SecurityFilter'
+2020-11-16 10:35:15,508 INFO  weaver.filter.SecurityFilter  - Filter 'SecurityFilter' configured successfully
+2020-11-16 10:35:15,516 ERROR weaver.general.BaseBean  - log4j reset thread start success...
+2020-11-16 10:35:15,721 INFO  weaver.filter.XssFilter  - Initializing filter 'XssFilter'
+2020-11-16 10:35:15,740 INFO  weaver.filter.XssFilter  - Filter 'XssFilter' configured successfully
+2020-11-16 10:35:15,939 ERROR weaver.general.BaseBean  - ------是否开启字符转码----0---是否开启sql参数化解析-----0----nativepool----ecology
+2020-11-16 10:35:15,950 ERROR weaver.general.BaseBean  - ExecuteSqlLogger start log write to file thread success...
+2020-11-16 10:40:00,020 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20201116104000&sign=7ebcb946b9e1f04d8c9fe03bd4d24afe
+2020-11-16 10:40:00,061 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2020-11-16 10:40:00,061 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2020-11-16 10:40:00,061 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20201116104000&sign=7ebcb946b9e1f04d8c9fe03bd4d24afe
+2020-11-16 10:40:00,086 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2020-11-16 10:40:00,086 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2020-11-16 10:40:00,086 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20201116104000&sign=7ebcb946b9e1f04d8c9fe03bd4d24afe
+2020-11-16 10:40:00,133 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2020-11-16 10:40:00,133 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2020-11-16 10:40:00,133 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20201116104000&sign=7ebcb946b9e1f04d8c9fe03bd4d24afe
+2020-11-16 10:40:00,174 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-11-16 10:40:00,174 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2020-11-16 10:40:00,174 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20201116104000&sign=7ebcb946b9e1f04d8c9fe03bd4d24afe
+2020-11-16 10:40:00,430 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2020-11-16 10:40:00,430 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2020-11-16 10:40:00,430 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20201116104000&sign=7ebcb946b9e1f04d8c9fe03bd4d24afe
+2020-11-16 10:40:00,497 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-11-16 10:41:46,437 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun:1
+2020-11-16 10:41:46,438 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun1:1
+2020-11-16 10:42:45,700 INFO  weaver.filter.SecurityFilter  - Initializing filter 'SecurityFilter'
+2020-11-16 10:42:48,122 INFO  weaver.filter.SecurityFilter  - Filter 'SecurityFilter' configured successfully
+2020-11-16 10:42:48,128 ERROR weaver.general.BaseBean  - log4j reset thread start success...
+2020-11-16 10:47:51,020 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun:1
+2020-11-16 10:47:51,029 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun1:1
+2020-11-16 12:16:44,782 INFO  weaver.filter.SecurityFilter  - Initializing filter 'SecurityFilter'
+2020-11-16 15:59:37,684 ERROR weaver.conn.DBConnectionPool  - weaver.conn.DBConnectionPool
+java.sql.SQLException: org.logicalcobwebs.proxool.ProxoolException: Unexpected prototyping problem
+	at org.logicalcobwebs.proxool.ConnectionPool.getConnection(ConnectionPool.java:230)
+	at org.logicalcobwebs.proxool.ProxoolDataSource.getConnection(ProxoolDataSource.java:97)
+	at weaver.conn.DBConnectionPool.getConnection(DBConnectionPool.java:156)
+	at weaver.conn.ConnectionPool.getConnection(ConnectionPool.java:207)
+	at weaver.conn.ConnectionPool.getConnection(ConnectionPool.java:180)
+	at weaver.conn.ConnectionPool.getConnection(ConnectionPool.java:164)
+	at weaver.conn.RecordSet.getConnection(RecordSet.java:1711)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:882)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.meeting.Maint.MeetingInterval.batchCloneMeeting(MeetingInterval.java:364)
+	at weaver.meeting.Maint.MeetingRepeatCreateThrd.doThreadWork(MeetingRepeatCreateThrd.java:52)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+2020-11-16 15:59:37,679 ERROR weaver.conn.RecordSet  - SystemSet_Select 
+2020-11-16 15:59:37,862 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: 该连接已关闭。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:170)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.checkClosed(SQLServerConnection.java:304)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.checkClosed(SQLServerStatement.java:904)
+	at com.microsoft.sqlserver.jdbc.SQLServerCallableStatement.registerOutParameter(SQLServerCallableStatement.java:70)
+	at sun.reflect.GeneratedMethodAccessor94.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.logicalcobwebs.proxool.ProxyStatement.invoke(ProxyStatement.java:100)
+	at org.logicalcobwebs.proxool.ProxyStatement.intercept(ProxyStatement.java:57)
+	at $java.sql.Statement$$EnhancerByCGLIB$$da8623f3.registerOutParameter(<generated>)
+	at weaver.conn.RecordSet.executeProc(RecordSet.java:228)
+	at weaver.conn.RecordSet.executeProc(RecordSet.java:122)
+	at weaver.system.ChkLicenseTimer.doThreadWork(ChkLicenseTimer.java:38)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+2020-11-16 15:46:19,500 ERROR org.logicalcobwebs.proxool.ecology  - Problem getting connection
+java.lang.OutOfMemoryError: Java heap space
+2020-11-16 14:51:27,228 ERROR weaver.docs.docs.DocTempAttachmentTimer  - Temp Attachment Clean of Doc Running....
+2020-11-16 15:59:37,863 ERROR weaver.conn.DBConnectionPool  - weaver.conn.DBConnectionPool
+java.sql.SQLException: java.lang.OutOfMemoryError: Java heap space
+	at org.logicalcobwebs.proxool.ConnectionPool.getConnection(ConnectionPool.java:241)
+	at org.logicalcobwebs.proxool.ProxoolDataSource.getConnection(ProxoolDataSource.java:97)
+	at weaver.conn.DBConnectionPool.getConnection(DBConnectionPool.java:156)
+	at weaver.conn.ConnectionPool.getConnection(ConnectionPool.java:207)
+	at weaver.conn.ConnectionPool.getConnection(ConnectionPool.java:180)
+	at weaver.conn.ConnectionPool.getConnection(ConnectionPool.java:164)
+	at weaver.conn.RecordSet.getConnection(RecordSet.java:1711)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:882)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at ln.LN.reloadLicenseInfo(LN.java:395)
+	at ln.LnTimer.doThreadWork(LnTimer.java:14)
+	at ln.ThreadWorkTimer.run(ThreadWorkTimer.java:35)
+2020-11-16 14:42:30,170 ERROR weaver.conn.DBConnectionPool  - weaver.conn.DBConnectionPool
+java.sql.SQLException: Couldn't perform the operation setTransactionIsolation: You can't perform any operations on this connection. It has been automatically closed by Proxool for some reason (see logs).
+	at org.logicalcobwebs.proxool.WrappedConnection.invoke(WrappedConnection.java:207)
+	at org.logicalcobwebs.proxool.WrappedConnection.intercept(WrappedConnection.java:87)
+	at $java.sql.Connection$$EnhancerByCGLIB$$9e7b8ca4.setTransactionIsolation(<generated>)
+	at weaver.conn.DBConnectionPool.getConnection(DBConnectionPool.java:165)
+	at weaver.conn.ConnectionPool.getConnection(ConnectionPool.java:207)
+	at weaver.conn.ConnectionPool.getConnection(ConnectionPool.java:180)
+	at weaver.conn.ConnectionPool.getConnection(ConnectionPool.java:164)
+	at weaver.conn.RecordSet.getConnection(RecordSet.java:1711)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:882)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at ln.LN.reloadLicenseInfo(LN.java:395)
+	at ln.LnTimer.doThreadWork(LnTimer.java:14)
+	at ln.ThreadWorkTimer.run(ThreadWorkTimer.java:35)
+2020-11-16 14:40:46,988 ERROR weaver.conn.RecordSet  - select * from MailSendMain t1,MailSendRecord t2 where t1.id=t2.id and  isfinished<>'1' and (senddate<='2020-11-16' or (senddate='2020-11-16' and sendtime<='14:29:57'))
+2020-11-16 15:59:37,864 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: 该连接已关闭。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:170)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.checkClosed(SQLServerConnection.java:304)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.checkClosed(SQLServerStatement.java:904)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.execute(SQLServerStatement.java:657)
+	at sun.reflect.GeneratedMethodAccessor43.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.logicalcobwebs.proxool.ProxyStatement.invoke(ProxyStatement.java:100)
+	at org.logicalcobwebs.proxool.ProxyStatement.intercept(ProxyStatement.java:57)
+	at $java.sql.Statement$$EnhancerByCGLIB$$7c4da604.execute(<generated>)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:909)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.sendmail.SendMailTimer.doThreadWork(SendMailTimer.java:57)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+2020-11-16 14:40:10,687 ERROR weaver.conn.RecordSet  - SELECT  COUNT(*) FROM    HrmResource WHERE   status IN ( 0, 1, 2, 3 ) AND loginid IS NOT NULL AND loginid <> ''  AND ( Accounttype IS NULL  OR Accounttype != 1) AND NOT EXISTS ( SELECT 1    FROM   HrmResourceVirtual a, customresourceout b WHERE  HrmResource.id = a.resourceid AND a.virtualtype = -10000  AND NOT EXISTS ( SELECT 1 FROM   customresourceout WHERE  a.departmentid = crmmanagerdeptid ) )
+2020-11-16 14:36:05,719 ERROR weaver.conn.RecordSet  - select [name] as table_name from [sysobjects] where [type] = 'u' and [name] like 'temptable%'
+2020-11-16 15:59:37,867 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: 该连接已关闭。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:170)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.checkClosed(SQLServerConnection.java:304)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.createStatement(SQLServerConnection.java:1853)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.createStatement(SQLServerConnection.java:1558)
+	at sun.reflect.GeneratedMethodAccessor42.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.logicalcobwebs.proxool.WrappedConnection.invoke(WrappedConnection.java:162)
+	at org.logicalcobwebs.proxool.WrappedConnection.intercept(WrappedConnection.java:87)
+	at $java.sql.Connection$$EnhancerByCGLIB$$9e7b8ca4.createStatement(<generated>)
+	at weaver.conn.WeaverConnection.createStatement(WeaverConnection.java:237)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:906)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.system.ClearTempTableTimer.doThreadWork(ClearTempTableTimer.java:27)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+2020-11-16 14:35:35,988 ERROR weaver.conn.DBConnectionPool  - weaver.conn.DBConnectionPool
+java.sql.SQLException: Couldn't perform the operation setTransactionIsolation: You can't perform any operations on this connection. It has been automatically closed by Proxool for some reason (see logs).
+	at org.logicalcobwebs.proxool.WrappedConnection.invoke(WrappedConnection.java:207)
+	at org.logicalcobwebs.proxool.WrappedConnection.intercept(WrappedConnection.java:87)
+	at $java.sql.Connection$$EnhancerByCGLIB$$9e7b8ca4.setTransactionIsolation(<generated>)
+	at weaver.conn.DBConnectionPool.getConnection(DBConnectionPool.java:165)
+	at weaver.conn.ConnectionPool.getConnection(ConnectionPool.java:207)
+	at weaver.conn.ConnectionPool.getConnection(ConnectionPool.java:180)
+	at weaver.conn.ConnectionPool.getConnection(ConnectionPool.java:164)
+	at weaver.conn.RecordSet.getConnection(RecordSet.java:1711)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:882)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at weaver.email.timer.MailWaitDealTimer.scannMail(MailWaitDealTimer.java:72)
+	at weaver.email.timer.MailWaitDealTimer.doThreadWork(MailWaitDealTimer.java:37)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+2020-11-16 14:33:32,639 ERROR weaver.conn.DBConnectionPool  - weaver.conn.DBConnectionPool
+java.sql.SQLException: Couldn't perform the operation setTransactionIsolation: You can't perform any operations on this connection. It has been automatically closed by Proxool for some reason (see logs).
+	at org.logicalcobwebs.proxool.WrappedConnection.invoke(WrappedConnection.java:207)
+	at org.logicalcobwebs.proxool.WrappedConnection.intercept(WrappedConnection.java:87)
+	at $java.sql.Connection$$EnhancerByCGLIB$$9e7b8ca4.setTransactionIsolation(<generated>)
+	at weaver.conn.DBConnectionPool.getConnection(DBConnectionPool.java:165)
+	at weaver.conn.ConnectionPool.getConnection(ConnectionPool.java:207)
+	at weaver.conn.ConnectionPool.getConnection(ConnectionPool.java:180)
+	at weaver.conn.ConnectionPool.getConnection(ConnectionPool.java:164)
+	at weaver.conn.RecordSet.getConnection(RecordSet.java:1711)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:882)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.voting.FinishVotingTimer.doThreadWork(FinishVotingTimer.java:44)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+2020-11-16 14:32:28,000 ERROR weaver.conn.RecordSet  - select t2.* from workflow_agent t1,workflow_agentConditionSet t2 where  t1.agentid = t2.agentid  and t1.workflowid= t2.workflowid and t1.beagenterid=t2.bagentuid and t1.agenttype='1' and (t1.endDate is not null and t1.endDate!='') and (t1.endDate+' '+t1.endtime<'2020-11-16 12:48:24')  order by t1.agentid asc 
+2020-11-16 15:59:37,873 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: 该连接已关闭。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:170)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.checkClosed(SQLServerConnection.java:304)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.checkClosed(SQLServerStatement.java:904)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.execute(SQLServerStatement.java:657)
+	at sun.reflect.GeneratedMethodAccessor43.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.logicalcobwebs.proxool.ProxyStatement.invoke(ProxyStatement.java:100)
+	at org.logicalcobwebs.proxool.ProxyStatement.intercept(ProxyStatement.java:57)
+	at $java.sql.Statement$$EnhancerByCGLIB$$7c4da604.execute(<generated>)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:909)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at weaver.workflow.request.WorkflowAgentOp.doThreadWork(WorkflowAgentOp.java:59)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+2020-11-16 14:26:20,196 ERROR weaver.conn.RecordSet  - update MailSendMain set isfinished='1' where  isfinished<>'1' and (senddate<='2020-11-16' or (senddate='2020-11-16' and sendtime<='12:42:11'))
+2020-11-16 14:05:16,472 ERROR weaver.conn.RecordSet  - select * from (select * from workflow_nodelink where workflowid=235 and nodeid=1767 and (workflow_nodelink.wfrequestid is null or workflow_nodelink.wfrequestid ='') and (isreject is null or isreject !='1' ) and EXISTS (select 1 from workflow_nodebase b where workflow_nodelink.destnodeid=b.id and ((b.requestid=36848 and b.IsFreeNode='1') or (b.IsFreeNode is null or b.IsFreeNode!='1')))) t order by linkorder, id
+2020-11-16 15:59:37,874 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: 该连接已关闭。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:170)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.checkClosed(SQLServerConnection.java:304)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.checkClosed(SQLServerStatement.java:904)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.checkClosed(SQLServerResultSet.java:349)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.getObject(SQLServerResultSet.java:2255)
+	at weaver.conn.RecordSet.parseResultSet(RecordSet.java:1660)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:916)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.workflow.request.WFPathUtil.getNodeLinkrs(WFPathUtil.java:71)
+	at weaver.workflow.request.RequestNodeFlow.getNextNode(RequestNodeFlow.java:1309)
+	at weaver.system.WrokflowOverTimeTimer.getNextNode(WrokflowOverTimeTimer.java:2007)
+	at weaver.system.WrokflowOverTimeTimer.doThreadWork(WrokflowOverTimeTimer.java:223)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+2020-11-16 14:01:40,280 ERROR weaver.conn.RecordSet  - select t2.* from workflow_agent t1,workflow_agentConditionSet t2 where  t1.agentid = t2.agentid  and t1.workflowid= t2.workflowid and t1.beagenterid=t2.bagentuid and t1.agenttype='1' and (t1.endDate is not null and t1.endDate!='') and (t1.endDate+' '+t1.endtime<'2020-11-16 12:43:43')  order by t1.agentid asc 
+2020-11-16 15:59:37,875 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: 该连接已关闭。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:170)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.checkClosed(SQLServerConnection.java:304)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.checkClosed(SQLServerStatement.java:904)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.execute(SQLServerStatement.java:657)
+	at sun.reflect.GeneratedMethodAccessor43.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.logicalcobwebs.proxool.ProxyStatement.invoke(ProxyStatement.java:100)
+	at org.logicalcobwebs.proxool.ProxyStatement.intercept(ProxyStatement.java:57)
+	at $java.sql.Statement$$EnhancerByCGLIB$$7c4da604.execute(<generated>)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:909)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at weaver.workflow.request.WorkflowAgentOp.doThreadWork(WorkflowAgentOp.java:59)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+2020-11-16 13:57:15,193 ERROR weaver.conn.RecordSet  - select id,enddate,endtime from voting where enddate <= '2020-11-16' and enddate <> '' and status = 1
+2020-11-16 15:59:37,878 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: 该连接已关闭。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:170)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.checkClosed(SQLServerConnection.java:304)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.checkClosed(SQLServerStatement.java:904)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.execute(SQLServerStatement.java:657)
+	at sun.reflect.GeneratedMethodAccessor43.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.logicalcobwebs.proxool.ProxyStatement.invoke(ProxyStatement.java:100)
+	at org.logicalcobwebs.proxool.ProxyStatement.intercept(ProxyStatement.java:57)
+	at $java.sql.Statement$$EnhancerByCGLIB$$7c4da604.execute(<generated>)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:909)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.voting.FinishVotingTimer.doThreadWork(FinishVotingTimer.java:44)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+2020-11-16 13:53:51,938 ERROR weaver.conn.RecordSet  - select * from CheckDate
+2020-11-16 13:53:59,003 ERROR weaver.conn.RecordSet  - select id,enddate,endtime from voting where enddate <= '2020-11-16' and enddate <> '' and status = 1
+2020-11-16 15:59:37,886 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: 该连接已关闭。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:170)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.checkClosed(SQLServerConnection.java:304)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.checkClosed(SQLServerStatement.java:904)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.execute(SQLServerStatement.java:657)
+	at sun.reflect.GeneratedMethodAccessor43.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.logicalcobwebs.proxool.ProxyStatement.invoke(ProxyStatement.java:100)
+	at org.logicalcobwebs.proxool.ProxyStatement.intercept(ProxyStatement.java:57)
+	at $java.sql.Statement$$EnhancerByCGLIB$$7c4da604.execute(<generated>)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:909)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.voting.FinishVotingTimer.doThreadWork(FinishVotingTimer.java:44)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+2020-11-16 13:53:51,938 ERROR weaver.conn.RecordSet  - select * from CheckDate
+2020-11-16 15:59:37,886 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: 该连接已关闭。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:170)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.checkClosed(SQLServerConnection.java:304)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.checkClosed(SQLServerStatement.java:904)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.execute(SQLServerStatement.java:657)
+	at sun.reflect.GeneratedMethodAccessor43.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.logicalcobwebs.proxool.ProxyStatement.invoke(ProxyStatement.java:100)
+	at org.logicalcobwebs.proxool.ProxyStatement.intercept(ProxyStatement.java:57)
+	at $java.sql.Statement$$EnhancerByCGLIB$$7c4da604.execute(<generated>)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:909)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.system.SystemDateCheck.doThreadWork(SystemDateCheck.java:31)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+2020-11-16 13:53:51,937 ERROR org.logicalcobwebs.proxool.ecology  - #0084 encountered errors during closure: 
+java.lang.OutOfMemoryError: Java heap space
+2020-11-16 13:45:14,210 ERROR org.logicalcobwebs.proxool.ecology  - Prototype
+org.logicalcobwebs.proxool.ProxoolException: Unexpected prototyping problem
+	at org.logicalcobwebs.proxool.Prototyper.buildConnection(Prototyper.java:229)
+	at org.logicalcobwebs.proxool.Prototyper.sweep(Prototyper.java:102)
+	at org.logicalcobwebs.proxool.PrototyperThread.run(PrototyperThread.java:44)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+Caused by:
+java.lang.OutOfMemoryError: Java heap space
+2020-11-16 13:44:57,042 ERROR org.logicalcobwebs.proxool.ecology  - #0066 encountered errors during closure: 
+java.lang.OutOfMemoryError: Java heap space
+2020-11-16 13:31:13,496 ERROR org.logicalcobwebs.proxool.ecology  - #0043 encountered errors during closure: 
+java.lang.OutOfMemoryError: Java heap space
+2020-11-16 13:21:53,596 ERROR org.logicalcobwebs.proxool.ecology  - #0014 encountered errors during closure: 
+java.lang.OutOfMemoryError: Java heap space
+2020-11-16 13:20:22,166 ERROR weaver.email.MailTimingDateReceive  - 自动接收邮件定时任务开始--单线程
+2020-11-16 15:59:37,890 ERROR weaver.email.MailTimingDateReceive  - 自动接收邮件定时任务结束--没有开启外部邮件或者自动接收功能--单线程
+2020-11-16 13:20:12,851 ERROR weaver.conn.RecordSet  - SELECT * FROM WorkPlan WHERE remindType <> '1' AND remindBeforeStart = '1'  AND (hasremindedBeforeStart <> '1' or hasremindedBeforeStart is null ) AND remindDateBeforeStart = '2020-11-16' AND (remindTimeBeforeStart <= '12:36' or remindTimeBeforeStart <= '12:36:00')  AND ((begindate>'2020-11-16') or (begindate='2020-11-16' and (beginTime >= '12:36' or beginTime >= '12:36:00'))) 
+2020-11-16 15:59:37,890 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+java.sql.SQLException: Couldn't perform the operation createStatement: You can't perform any operations on this connection. It has been automatically closed by Proxool for some reason (see logs).
+	at org.logicalcobwebs.proxool.WrappedConnection.invoke(WrappedConnection.java:207)
+	at org.logicalcobwebs.proxool.WrappedConnection.intercept(WrappedConnection.java:87)
+	at $java.sql.Connection$$EnhancerByCGLIB$$9e7b8ca4.createStatement(<generated>)
+	at weaver.conn.WeaverConnection.createStatement(WeaverConnection.java:237)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:906)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.system.WorkPlanThreadManager.doThreadWork(WorkPlanThreadManager.java:164)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+2020-11-16 12:37:15,859 INFO  weaver.system.WfUrgerTimer  - Start to run doThreadWork method at WfUrgerTimer class. 
+2020-11-16 15:59:37,891 INFO  weaver.system.WfUrgerTimer  - The string of current time is: 1559
+2020-11-16 15:59:37,898 INFO  weaver.system.WfUrgerTimer  - The return value is : 	false
+2020-11-16 15:59:37,899 INFO  weaver.system.WfUrgerTimer  - The current time is incorrent, program will return directly.
+2020-11-16 15:59:37,883 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: 该连接已关闭。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:170)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.checkClosed(SQLServerConnection.java:304)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.checkClosed(SQLServerStatement.java:904)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.execute(SQLServerStatement.java:657)
+	at sun.reflect.GeneratedMethodAccessor43.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.logicalcobwebs.proxool.ProxyStatement.invoke(ProxyStatement.java:100)
+	at org.logicalcobwebs.proxool.ProxyStatement.intercept(ProxyStatement.java:57)
+	at $java.sql.Statement$$EnhancerByCGLIB$$7c4da604.execute(<generated>)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:909)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.system.SystemDateCheck.doThreadWork(SystemDateCheck.java:31)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+2020-11-16 15:59:37,874 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: Socket closed
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.terminate(SQLServerConnection.java:1368)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.terminate(SQLServerConnection.java:1355)
+	at com.microsoft.sqlserver.jdbc.TDSChannel.write(IOBuffer.java:1548)
+	at com.microsoft.sqlserver.jdbc.TDSWriter.flush(IOBuffer.java:2368)
+	at com.microsoft.sqlserver.jdbc.TDSWriter.writePacket(IOBuffer.java:2270)
+	at com.microsoft.sqlserver.jdbc.TDSWriter.endMessage(IOBuffer.java:1877)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.startResponse(IOBuffer.java:4403)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.doExecuteStatement(SQLServerStatement.java:784)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement$StmtExecCmd.doExecute(SQLServerStatement.java:685)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:4026)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:1416)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(SQLServerStatement.java:185)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeStatement(SQLServerStatement.java:160)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.execute(SQLServerStatement.java:658)
+	at sun.reflect.GeneratedMethodAccessor43.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.logicalcobwebs.proxool.ProxyStatement.invoke(ProxyStatement.java:100)
+	at org.logicalcobwebs.proxool.ProxyStatement.intercept(ProxyStatement.java:57)
+	at $java.sql.Statement$$EnhancerByCGLIB$$7c4da604.execute(<generated>)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:909)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.sendmail.SendMailTimer.doThreadWork(SendMailTimer.java:58)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+2020-11-16 15:59:37,865 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: 该连接已关闭。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:170)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.checkClosed(SQLServerConnection.java:304)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.checkClosed(SQLServerStatement.java:904)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.execute(SQLServerStatement.java:657)
+	at sun.reflect.GeneratedMethodAccessor43.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.logicalcobwebs.proxool.ProxyStatement.invoke(ProxyStatement.java:100)
+	at org.logicalcobwebs.proxool.ProxyStatement.intercept(ProxyStatement.java:57)
+	at $java.sql.Statement$$EnhancerByCGLIB$$7c4da604.execute(<generated>)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:909)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at ln.LN.reloadLicenseInfo(LN.java:395)
+	at ln.LnTimer.doThreadWork(LnTimer.java:14)
+	at ln.ThreadWorkTimer.run(ThreadWorkTimer.java:35)
+2020-11-16 15:59:38,105 ERROR weaver.docs.docs.DocTempAttachmentTimer  - Temp Attachment Clean of Doc End....
+2020-11-16 15:59:58,528 INFO  weaver.filter.SecurityFilter  - Filter 'SecurityFilter' configured successfully
+2020-11-16 15:59:58,546 ERROR weaver.general.BaseBean  - log4j reset thread start success...
+2020-11-16 16:00:02,827 INFO  weaver.filter.XssFilter  - Initializing filter 'XssFilter'
+2020-11-16 16:00:02,840 INFO  weaver.filter.XssFilter  - Filter 'XssFilter' configured successfully
+2020-11-16 16:00:03,403 ERROR weaver.general.BaseBean  - ------是否开启字符转码----0---是否开启sql参数化解析-----0----nativepool----ecology
+2020-11-16 16:00:03,447 ERROR weaver.general.BaseBean  - ExecuteSqlLogger start log write to file thread success...

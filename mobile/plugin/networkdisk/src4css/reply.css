@@ -1,0 +1,97 @@
+*{
+	font-size: 28px;
+}
+*,body{
+	font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
+}
+.replyContent{
+	padding:20px;
+	line-height: 30px;
+}
+
+.replyUnit .diskIcon img{
+	border-radius: 50%;
+}
+.replyUnit .diskIcon > div{
+	width:90px !important;
+	height: 90px !important;
+	background-size:90px !important;
+	border-radius: 50% !important;
+	line-height: 90px !important;
+}
+.diskContent{
+	padding-left: 20px;
+}
+.replyPraise{
+	margin-top:15px;
+	margin-right: 15px;
+}
+.operate .reply{
+	padding-right: 20px;
+}
+.praise{
+	width:auto;
+	height: 50px; 
+}
+.replyChildren{
+	padding:10px;
+}
+.childrenInfo{
+	border:1px solid #42A8E3;
+	padding: 10px;
+	border-bottom-width: 0px;
+}
+.replyInfo{
+	display: flex;
+}
+.childrenInfo:last-child{
+	border-bottom-width:1px; 
+}
+.childrenInfo .userInfo{
+	width:100%;
+	line-height: 50px;
+}
+.childrenInfo .childOpeate .replyPraise{
+	margin-top: 10px;
+	margin-right: 10px;
+}
+.childrenInfo .userInfo span{
+	margin-right: 10px; 
+	color: #6c6c6c;
+}
+.childrenInfo .userInfo  .replyUser{
+	color:#42A8E3;
+}
+.replyTime{
+	margin-left:20px; 
+}
+
+.loadMoreChildren{
+	line-height: 30px;
+	text-align: center;
+	font-size: 30px;
+	color: #6c6c6c;
+	padding-bottom: 10px;
+}
+.diskOpeate {
+	right:20px;
+	top:20px;
+}
+.praisePointer i{
+	font-size: 46px;
+	color:#888888;
+}
+
+.praised.praisePointer > i{
+	color: #FF6224;
+}
+.folderEmpty{
+	margin-top: 50px;
+}
+.folderEmpty i{
+	font-size: 80px;
+	color: #888888;
+}
+li.folderEmpty .emptyInfo{
+	margin-top:30px;
+}

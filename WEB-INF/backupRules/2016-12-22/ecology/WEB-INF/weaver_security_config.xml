@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!--enable or disable firewall, 1 enable, 0 disable-->
+    <status>1</status>
+	<!--enable or disable debug mode-->
+	<sys-debug>true</sys-debug>
+	<!--cache params remove time，default 480 min-->
+	<intervalTime>480</intervalTime>
+	<!--Thread scan time，default30 min-->
+    <scanTime>30</scanTime>
+	<!--Sikp all referer xss -->
+	<skip-ref>true</skip-ref>
+	<!--Sikp all host check, check host header attack-->
+	<skip-host>true</skip-host>
+	<!--is must be execute xss filter-->
+	<must-xss>true</must-xss>
+	<!--xss type  0: black list, according xss-keyword-list filter-->
+	<xss-type>0</xss-type>
+	<!--print value info when xss filter-->
+	<xss-debug>false</xss-debug>
+	<!--is enable rule check-->
+	<skip-rule>false</skip-rule>
+	<!--enable or disable webservice security check, true|false, default is false-->
+	<enable-webservice-check>false</enable-webservice-check>
+</root>

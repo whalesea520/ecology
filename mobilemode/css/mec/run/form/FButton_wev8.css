@@ -1,0 +1,26 @@
+.fButtons{
+	height:35px;
+	background-color: #6BA3ED;
+}
+.fButton{
+	float:left;
+	width:60px;
+	height:25px;
+	line-height:25px;
+	margin-top:5px;
+	margin-left:5px;
+	text-align:center;
+	background-color:#EDEDED;
+	font-size:12px;
+	cursor:pointer;
+	max-width: 60px;
+	overflow: hidden; 
+	white-space: nowrap; 
+	text-overflow: ellipsis;
+}
+.noFButton{
+	color: #bbb;
+	font-size: 14px;
+	font-family: 'Microsoft Yahei',Arial, Helvetica, sans-serif;
+	padding: 9px 5px 9px 22px;	
+}

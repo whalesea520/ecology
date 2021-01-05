@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+.fieldlist{
+	width:190px; height:238px; 
+	background:#ffffff; border:1px solid #b0b0b0;
+	overflow-x:hidden; overflow-y:auto;
+}
+.fieldlist div{
+	padding:5px 0px 5px 4px; color:#242424;
+}
+.fieldlist div:hover{
+	background:#3f90fe;
+}
+.oper_btn{
+	width:100px; margin-top:10px;
+	height:24px; line-height:24px;
+	color:#fffffc; background:#3e8eff;
+	border-radius:4px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+}
+.oper_btn_disabled{
+	background:#eeefea !important;
+	color:#5b627d !important;	
+}

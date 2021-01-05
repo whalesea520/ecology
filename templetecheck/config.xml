@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tabs id="tab" version="1.0.0">
+    <tab id="checkhtml">
+        <name>检测流程模板</name>
+        <ishtml>0</ishtml>
+    </tab>
+    <tab id="checkmobilemodehtml">
+        <name>检测移动建模html模板</name>
+        <ishtml>4</ishtml>
+    </tab>
+    <tab id="checkmodehtml">
+        <name>检测表单建模html模板</name>
+        <ishtml>5</ishtml>
+    </tab>
+    <tab id="searchcustompage">
+        <name>查询流程自定义页面</name>
+        <ishtml>6</ishtml>
+    </tab>
+    <tab id="checkjsp">
+        <name>检测指定文件</name>
+        <ishtml>3</ishtml>
+    </tab>
+</tabs>
+

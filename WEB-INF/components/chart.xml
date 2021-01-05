@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components>
+	<component desc="图表" type="1" ptype="8" client="pc" name="chart">
+	   <params>
+	      <p name="" />	   
+	   </params>
+		<template>
+			<edit><content><![CDATA[<INPUT type="hidden" style="WIDTH: 90%" id=field${id} class="Inputstyle styled input" onchange="checkinput2('field${id}','field${id}span',this.getAttribute('viewtype'));changeKeyword();" maxLength=200 size=60 name=field${id} temptitle="${label}" viewtype="1" jQuery1384174822707="3"> 
+			<SPAN id=field${id}span><IMG align=absMiddle src="${piesrc}"></SPAN> 
+			               ]]></content></edit>
+			<view><content><![CDATA[<SPAN id=field${id}span>${value}</SPAN>]]></content></view>
+			<setting><content><![CDATA[<INPUT class="InputStyle" id="${fieldid}" name="field${id}" value="${label}">]]></content></setting>
+		</template>
+	</component>
+	<component name="chart" type="1" ptype="8" client="mobile">
+		<params>
+		    <p name=""/>
+		</params>
+		<template>
+			<edit><content><![CDATA[<INPUT type="hidden" style="WIDTH: 90%" id=field${id} ismust="${must}" class="Inputstyle styled input" onchange="checkinput2('field${id}','field${id}span',this.getAttribute('viewtype'));changeKeyword();" maxLength=200 size=60 name=field${id} temptitle="${label}" viewtype="1" jQuery1384174822707="3" fieldname="${fieldname}"> 
+			<SPAN id=field${id}span><IMG align=absMiddle src="${piesrc}"></SPAN> 
+			               ]]></content></edit>
+			<view><content><![CDATA[<SPAN id=field${id}span>${value}</SPAN><input type="hidden" id="field${id}" name="field${id}" value="${value}"/>]]></content></view>
+			<setting><content><![CDATA[<INPUT class="InputStyle" id="${fieldid}" name="field${id}" value="${label}">]]></content></setting>
+			<hidden><content><![CDATA[<input type="hidden" id="field${id}" name="field${id}" value="${value}"/>]]></content></hidden>
+		</template>
+	</component>
+</components>

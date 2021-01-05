@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> ZTREE DEMO - Standard Data </TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../../css/demo.css" type="text/css">
+	<link rel="stylesheet" href="../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="../../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ztree.core-3.0.js"></script>
+	<!--  <script type="text/javascript" src="../../js/jquery.ztree.excheck-3.0.js"></script>
+	  <script type="text/javascript" src="../../js/jquery.ztree.exedit-3.0.js"></script>-->
+	<SCRIPT LANGUAGE="JavaScript">
+		<!--
+		var setting = {	};
+
+		var zNodes =[
+			{ name:"鐖惰妭鐐? - 灞曞紑", open:true,
+				childs: [
+					{ name:"鐖惰妭鐐?1 - 鎶樺彔",
+						childs: [
+							{ name:"鍙跺瓙鑺傜偣111"},
+							{ name:"鍙跺瓙鑺傜偣112"},
+							{ name:"鍙跺瓙鑺傜偣113"},
+							{ name:"鍙跺瓙鑺傜偣114"}
+						]},
+					{ name:"鐖惰妭鐐?2 - 鎶樺彔",
+						childs: [
+							{ name:"鍙跺瓙鑺傜偣121"},
+							{ name:"鍙跺瓙鑺傜偣122"},
+							{ name:"鍙跺瓙鑺傜偣123"},
+							{ name:"鍙跺瓙鑺傜偣124"}
+						]},
+					{ name:"鐖惰妭鐐?3 - 娌℃湁瀛愯妭鐐?, isParent:true}
+				]},
+			{ name:"鐖惰妭鐐? - 鎶樺彔",
+				childs: [
+					{ name:"鐖惰妭鐐?1 - 灞曞紑", open:true,
+						childs: [
+							{ name:"鍙跺瓙鑺傜偣211"},
+							{ name:"鍙跺瓙鑺傜偣212"},
+							{ name:"鍙跺瓙鑺傜偣213"},
+							{ name:"鍙跺瓙鑺傜偣214"}
+						]},
+					{ name:"鐖惰妭鐐?2 - 鎶樺彔",
+						childs: [
+							{ name:"鍙跺瓙鑺傜偣221"},
+							{ name:"鍙跺瓙鑺傜偣222"},
+							{ name:"鍙跺瓙鑺傜偣223"},
+							{ name:"鍙跺瓙鑺傜偣224"}
+						]},
+					{ name:"鐖惰妭鐐?3 - 鎶樺彔",
+						childs: [
+							{ name:"鍙跺瓙鑺傜偣231"},
+							{ name:"鍙跺瓙鑺傜偣232"},
+							{ name:"鍙跺瓙鑺傜偣233"},
+							{ name:"鍙跺瓙鑺傜偣234"}
+						]}
+				]},
+			{ name:"鐖惰妭鐐? - 娌℃湁瀛愯妭鐐?, isParent:true}
+
+		];
+
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+		});
+		//-->
+	</SCRIPT>
+</HEAD>
+
+<BODY>
+<h1>鏈€绠€鍗曠殑鏍?鈥斺€?鏍囧噯 JSON 鏁版嵁</h1>
+<h6>[ 鏂囦欢璺緞锛歞emo/core/standardData.html ]</h6>
+<div class="content_wrap">
+	<div class="zTreeDemoBackground left">
+		<ul id="treeDemo" class="ztree"></ul>
+	</div>
+	<div class="right">
+		<ul class="info">
+			<li class="title"><h2>1銆乻etting 閰嶇疆淇℃伅璇存槑</h2>
+				<ul class="list">
+				<li class="highlight_red">鏅€氫娇鐢紝鏃犲繀椤昏缃殑鍙傛暟</li>
+				<li>涓庢樉绀虹浉鍏崇殑鍐呭璇峰弬鑰?API 鏂囨。涓?setting.view 鍐呯殑閰嶇疆淇℃伅</li>
+				<li>name銆乧hilds銆乼itle 绛夊睘鎬у畾涔夋洿鏀硅鍙傝€?API 鏂囨。涓?setting.data.key 鍐呯殑閰嶇疆淇℃伅</li>
+				</ul>
+			</li>
+			<li class="title"><h2>2銆乼reeNode 鑺傜偣鏁版嵁璇存槑</h2>
+				<ul class="list">
+				<li class="highlight_red">鏍囧噯鐨?JSON 鏁版嵁闇€瑕佸祵濂楄〃绀鸿妭鐐圭殑鐖跺瓙鍖呭惈鍏崇郴
+					<div><pre xmlns=""><code>渚嬪锛?var nodes = [
+	{name: "鐖惰妭鐐?", childs: [
+		{name: "瀛愯妭鐐?"},
+		{name: "瀛愯妭鐐?"}
+	]}
+];</code></pre></div>
+				</li>
+				<li>榛樿灞曞紑鐨勮妭鐐癸紝璇疯缃?treeNode.open 灞炴€?/li>
+				<li>鏃犲瓙鑺傜偣鐨勭埗鑺傜偣锛岃璁剧疆 treeNode.isParent 灞炴€?/li>
+				<li>鍏朵粬灞炴€ц鏄庤鍙傝€?API 鏂囨。涓?"treeNode 鑺傜偣鏁版嵁璇﹁В"</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+</BODY>
+</HTML>

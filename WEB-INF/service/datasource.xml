@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="GBK"?>
+<module id="datasource" version="1.0.0">
+    <service-point id="local" interface="weaver.interfaces.datasource.DataSource">
+        <invoke-factory>
+            <construct class="weaver.interfaces.datasource.BaseDataSource">
+                <set property="type" value="sqlserver2008" />
+                <set property="datasourcename" value="local" />
+                <set property="iscluster" value="1" />
+                <set property="typename" value="" />
+                <set property="url" value="" />
+                <set property="host" value="10.26.235.231" />
+                <set property="port" value="1433" />
+                <set property="dbname" value="ecology" />
+                <set property="user" value="/c4Q2hAVXFc=0lwwGrX5guM=" />
+                <set property="password" value="/c4Q2hAVXFc=1dBfUDT4aK0J/8K4v+QLIUgNOVzhL/WP" />
+                <set property="minconn" value="5" />
+                <set property="maxconn" value="10" />
+                <set property="iscode" value="1" />
+            </construct>
+        </invoke-factory>
+    </service-point>
+</module>
+

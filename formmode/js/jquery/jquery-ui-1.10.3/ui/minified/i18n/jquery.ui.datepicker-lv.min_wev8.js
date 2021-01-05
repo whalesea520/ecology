@@ -1,0 +1,4 @@
+﻿/*! jQuery UI - v1.10.3 - 2013-05-03
+* http://jqueryui.com
+* Copyright 2013 jQuery Foundation and other contributors; Licensed MIT */
+jQuery(function(e){e.datepicker.regional.lv={closeText:"Aizv膿rt",prevText:"Iepr",nextText:"N膩ka",currentText:"艩odien",monthNames:["Janv膩ris","Febru膩ris","Marts","Apr墨lis","Maijs","J奴nijs","J奴lijs","Augusts","Septembris","Oktobris","Novembris","Decembris"],monthNamesShort:["Jan","Feb","Mar","Apr","Mai","J奴n","J奴l","Aug","Sep","Okt","Nov","Dec"],dayNames:["sv膿tdiena","pirmdiena","otrdiena","tre拧diena","ceturtdiena","piektdiena","sestdiena"],dayNamesShort:["svt","prm","otr","tre","ctr","pkt","sst"],dayNamesMin:["Sv","Pr","Ot","Tr","Ct","Pk","Ss"],weekHeader:"Nav",dateFormat:"dd-mm-yy",firstDay:1,isRTL:!1,showMonthAfterYear:!1,yearSuffix:""},e.datepicker.setDefaults(e.datepicker.regional.lv)});

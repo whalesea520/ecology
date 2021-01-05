@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 所有没有内容的标签请增加一个空格 -->
+<start>
+	<!-- 定义表达式所使用的变量 --> 
+	<variables>
+		<variable>
+			<name>itemAreaDisplay</name>
+			<value>inline-block</value>
+			//可取值boolean,integer,string,long,float,double
+			<dataType>string</dataType>
+		</variable>
+		<variable>
+			<name>cw1</name>
+			<value>20%</value>
+			//可取值boolean,integer,string,long,float,double
+			<dataType>string</dataType>
+		</variable>
+		<variable>
+			<name>cw2</name>
+			<value>65%</value>
+			//可取值boolean,integer,string,long,float,double
+			<dataType>string</dataType>
+		</variable>
+		<variable>
+			<name>cw3</name>
+			<value>15%</value>
+			//可取值boolean,integer,string,long,float,double
+			<dataType>string</dataType>
+		</variable>
+	</variables>
+	<table class="LayoutTable" id="#{layoutTableId}" style="display:#{layoutTableDisplay}">
+		<colgroup>
+			<col width="expression(cw1!=''?cw1:'20%')"></col>
+			<col width="expression(cw2!=''?cw2:'65%')"></col>
+			<col width="expression(cw3!=''?cw3:'15%')"></col>
+		</colgroup>
+		<tbody>
+			<!-- 分组循环 -->
+			<groups>
+				<!-- 分组title信息 -->
+				<group>
+					<tr class="intervalTR"  _samePair="#{samePair}" style="display:#{groupDisplay}">
+						<td colspan="3">
+							<table class="LayoutTable"  style="width:100%;">
+								<colgroup>
+									<col width="50%"></col>
+									<col width="50%"></col>
+								</colgroup>
+								<tr class="groupHeadHide">
+									<td class="interval">
+										<span class="groupbg"> </span>
+										<span class="e8_grouptitle">#{context}</span>
+									</td>
+									<td class="interval" colspan="2" style="text-align:right;">
+										<groupRightContext>
+											<everyItem>
+												<span class="toolbar">
+													#{context}
+												</span>
+											</everyItem>
+										</groupRightContext>
+										<span _status="#{_status}" class="hideBlockDiv" style="display:#{groupSHBtnDisplay}">
+											<!--#{showOrHide}--><img src="/wui/theme/ecology8/templates/default/images/expression(itemAreaDisplay=='none'?'1':'2')_wev8.png"> </img>
+										</span>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr class="Spacing" style="height:1px;display:#{groupDisplay}">
+						<td class="Line" colspan="3"></td>
+					</tr>
+				</group>
+				<!-- 分组元素区域 -->
+				<itemArea>
+					<tr class="items intervalTR" style="display:#{itemAreaDisplay}">
+						<td colspan="3">
+							<table class="LayoutTable" id="#{formTableId}" style="display:#{formTableDisplay}">
+								<colgroup>
+									<col width="expression(cw1!=''?cw1:'20%')"></col>
+									<col width="expression(cw2!=''?cw2:'65%')"></col>
+									<col width="expression(cw3!=''?cw3:'15%')"></col>
+								</colgroup>
+								<!-- 分组元素循环区 -->
+								<items>
+									<tr customer1="#{customer1}" id="#{trId}" class="expression(isTableList?'intervalTR':'') #{classTR}" _trrandom="#{__mathRandom}">
+										<!-- 行元素定义区 -->
+										<item>
+											<everyItem>
+												<td customAttr="customAttrs" codevalue="#{codevalue}" style="display:#{display}" id="#{id}" name="#{id}" _samePair="#{samePair}"  class="expression(isTableList?'tableField':'fieldName')" colspan="#{colspan}">
+													#{context}
+												</td>
+											</everyItem>
+											<everyItem>
+												<td customAttr="customAttrs" style="display:#{display}" id="#{id}" name="#{id}" _samePair="#{samePair}" class="expression(isTableList?'tableField':'field')" colspan="#{colspan}">#{context}</td>
+											</everyItem>
+											<everyItem>
+												<td customAttr="customAttrs" style="display:#{display}" id="#{id}" name="#{id}" _samePair="#{samePair}" class="expression(isTableList?'tableField':'field')" colspan="#{colspan}">#{context}</td>
+											</everyItem>
+										</item>
+									</tr>
+									<tr style="height:1px!important;display:expression(isTableList?'none':'');" class="Spacing">
+										<td class="expression(isLastRow?'paddingLeft0':'paddingLeft18')" colspan="3">
+											<div class="intervalDivClass"></div>
+										</td>
+									</tr>
+								</items>
+							</table>
+						</td>
+					</tr>
+				</itemArea>
+			</groups>
+            <toolbar>
+				<tr class="intervalTR">
+					<td class="interval" colspan="3" style="text-align:center;">#{context}</td>
+				</tr>
+            </toolbar>
+		</tbody>
+    </table>
+  <importJsCss>
+	  <link rel="stylesheet" href="/wui/theme/ecology8/templates/default/css/default_wev8.css" type="text/css"> </link>
+	  <script type="text/javascript" src="/wui/theme/ecology8/templates/default/js/default_wev8.js"> </script>
+  </importJsCss>
+</start>

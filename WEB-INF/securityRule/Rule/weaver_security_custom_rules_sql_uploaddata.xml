@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<special-non>
+		<urls>
+			  
+			    <url>   
+                   <value>/mobile/plugin/email/EmailFileUpload.jsp</value>
+                   <params>
+                     <param>
+                         <value>uploaddata</value>
+						 <max-length>-1</max-length>
+                         <rules>
+                           <rule>##CONST:CODE##</rule>
+                         </rules>
+                      </param>
+                   </params>
+               </url>
+			  
+		</urls>
+	</special-non>
+
+</root>

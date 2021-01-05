@@ -1,0 +1,43 @@
+	.zd_btn{
+		border:0px;cursor:pointer;
+		background-color:#E2E0E1;
+		padding-left:10px;
+		padding-right:10px;
+		height:24px;
+		line-height:24px;
+	}
+
+	.zd_btnHover{
+		background-color:#c9cacb !important;
+	}
+	
+	.zd_btn_submit{
+		border:0px;
+		cursor:pointer;
+		padding-left:10px;
+		padding-right:10px;
+		height:24px;
+		line-height:24px;
+		background:#558ED5;
+		color:white;
+	}
+	.zd_btn_cancle{
+		border:1px solid #ccc;
+		cursor:pointer;
+		padding-left:10px;
+		padding-right:10px;
+		height:24px;
+		line-height:24px;
+	}
+	.zd_btn_submit_hover{
+		background-color:#0170C1 !important;
+		color:white;
+	}
+	
+	.dialogPadding{
+		padding:10px;
+	}
+	.btn_submit{
+		background: none !important;
+	}
+	

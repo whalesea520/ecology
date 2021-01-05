@@ -1,0 +1,151 @@
+
+/*Ⱥ����*/
+.imDiscussSetting {
+	
+}
+
+ .imDiscussSetting .dsTitle{
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	color: #fff;
+	position: relative;
+	background:#8d9598;
+	font-size: 14px;
+}
+
+ .imDiscussSetting .dsTitle .dsCloseBtn {
+	position: absolute;
+  	top: 0px;
+  	right: 10px;
+ 	color: #fff;
+  	font-size: 18px;
+  	font-weight: bold;
+  	cursor: pointer;
+}
+
+.imDiscussSetting .dsTitle .dsCloseBtn:hover {
+	color:#fe4643;
+}
+
+.imDiscussSetting .dsBody {
+	position: absolute;
+	z-index: 9995;
+	width: 100%;
+  	top: 35px;
+  	bottom: 0;
+  	background-color: #f7f7f7;
+}
+
+.imDiscussSetting .dsBody .dsMemberCard {
+	width: 309px;
+  	/*height: 143px;*/
+  	background: #fff;
+  	padding: 1px;
+  	color: #8f8f8f;
+  	border-bottom: 1px solid #ececec; 
+}
+
+.imDiscussSetting .dsBody .dsMemberCard .title {width: 300px;height: 20px;padding: 5px;border-bottom: 1px solid #f4f4f4;}
+.imDiscussSetting .dsBody .dsMemberCard .title .right:hover {color: #5bb4d7;}
+.imDiscussSetting .dsBody .dsMemberCard .itemGroove {width: 310px;height: 55px; padding: 13px 0px 8px 0px;border-bottom: 1px solid #f4f4f4;}
+.imDiscussSetting .dsBody .dsMemberCard .itemGroove .mitem {width: 52px;text-align: center;float: left;margin-right: 5px;margin-left: 5px;}
+.imDiscussSetting .dsBody .dsMemberCard .bottom {width:308px; height:35px;}
+.imDiscussSetting .dsBody .dsMemberCard .bottom .memberadd { height: 35px;width: 180px;margin: 0 auto;line-height: 35px; text-align: center; /*border: 1px dashed #8f8f8f*/;cursor:pointer;}
+.imDiscussSetting .dsBody .dsMemberCard .bottom .memberadd:hover { /*border-color: #8dcc86;*/ color: #5bb4d8; /*background: #f8faf5*/}
+
+.imDiscussSetting .dsBody .dsCommonOpList {
+	width: 307px;
+  	height: 150px;
+  	padding: 2px;
+  	margin-top: 6px;
+  	color: #8f8f8f;
+  	background-color: #fff;
+  	border-top: 1px solid #ececec;
+}
+
+.imDiscussSetting .dsBody .minipane {
+  	height: 48px;
+  	margin-top: 6px;
+}
+
+.imDiscussSetting .dsBody .dsCommonOpList .opItem {
+	height: 50px;
+	width: 307px;
+  	border-bottom: 1px solid #ececec;
+  	background: #fff;
+  	position: relative;
+}
+
+.imDiscussSetting .dsBody .dsCommonOpList .opItem .leftpane{width: 78px; height:50px;line-height: 50px;}
+.imDiscussSetting .dsBody .dsCommonOpList .opItem .centerpane{width: 155px; height:50px;line-height: 50px;}
+.imDiscussSetting .dsBody .dsCommonOpList .opItem .rightpane{width: 68px; height: 50px;line-height: 50px;}
+
+.opItem .title {
+	width: 100%;
+  	text-align: left;
+  	margin-left: 9px;
+}
+.opItem .dsNameInput {
+	width: 100%;
+  	height: 26px;
+  	margin: 10px auto;
+  	border: none;
+  	color: #8f8f8f;
+  	outline:none;
+}
+
+.opItem input.borderStyle {
+	border: 1px solid #efefef;
+}
+/*
+.opItem .dsNameInput:hover {
+	border: 1px solid #efefef;
+}
+*/
+.opItem .savebtn {
+	width: 43px;
+  	height: 25px;
+  	margin: 13px auto;
+  	line-height: 25px;
+  	text-align: center;
+  	background: #5bb4d8;
+  	color: #FFF;
+  	cursor: pointer;
+  	display: none;
+}
+
+.opItem .savebtn:hover {
+	background: #4d9ebf;
+}
+
+.opItem .switch {
+	width: 39px;
+  	height: 15px;
+  	margin: 17.5px auto;
+}
+
+.opItem .inLine {display: inline-block;}
+
+ .imDiscussSetting .dsBody .dsBottom {
+	position: absolute;
+	bottom: 0px;
+  	width: 311px;
+  	height: 50px;
+}
+
+ .imDiscussSetting .dsBody .dsBottom .dsDelToQuit {
+	width: 168px;
+	height: 35px;
+	line-height: 35px;
+	background: #e26160;
+	color: #fff;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+ .imDiscussSetting .dsBody .dsBottom .dsDelToQuit:hover {
+	background: #ee7777;
+}

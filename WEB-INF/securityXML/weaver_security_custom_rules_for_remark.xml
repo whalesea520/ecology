@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<special-non>
+		<urls>
+			<url>
+				<value>/workflow/request/RequestOperation.jsp</value>
+				<params>
+					<param>
+						<value>remarkText10404</value>
+						<rules>
+							<rule>##CONST:FREEHTML##</rule>
+						</rules>
+					</param>
+				</params>
+			</url>
+			<url>
+				<value>/workflow/request/RequestRemarkOperation.jsp</value>
+				<params>
+					<param>
+						<value>remarkText10404</value>
+						<rules>
+							<rule>##CONST:FREEHTML##</rule>
+						</rules>
+					</param>
+				</params>
+			</url>
+			<url>
+				<value>/workflow/request/RemarkOperation.jsp</value>
+				<params>
+					<param>
+						<value>remarkText10404</value>
+						<rules>
+							<rule>##CONST:FREEHTML##</rule>
+						</rules>
+					</param>
+				</params>
+			</url>
+		</urls>
+	</special-non>
+</root>

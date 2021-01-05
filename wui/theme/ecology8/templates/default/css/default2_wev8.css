@@ -1,0 +1,189 @@
+@CHARSET "UTF-8";
+
+body{
+	/*background-color: #Fafafa!important;*/
+}
+
+.interval{
+	color: #5b5b5b;
+	padding-left: 9px!important;
+	background-color: #FFF!important;
+	font-size:12px;
+}
+
+.zDialog_div_bottom .interval{
+	background-color: transparent!important;
+}
+
+.fieldName{
+	padding-left:30px !important;
+	background-color:#fff !important;
+	height:30px!important;
+	font-size:12px;
+	word-wrap:break-word;
+}
+
+.e8Table .fieldName{
+	padding-left:12px!important;
+}
+
+.e8Table .Selected td{
+	background-color:#f5fafb!important;
+	color:#000;
+} 
+
+.field{
+	background-color:rgb(248,248,248) !important;
+	height:30px!important;
+	font-size:12px;
+	padding-left:5px;
+	padding-right:5px;
+	word-wrap:break-word;
+}
+
+.tableField{
+	padding-left:0px!important;
+	vertical-align:top;
+	font-size:12px;
+	background-color:#fff!important;
+	width:100%;
+}
+
+.LayoutTable input[type="checkbox"],
+.LayoutTable input[type="radio"]{
+	width:auto!important;
+}	
+
+.LayoutTable input.InputStyle,
+.LayoutTable input.Inputstyle,
+.LayoutTable input.inputStyle,
+.LayoutTable input.inputstyle,
+.LayoutTable input[type="text"],
+.LayoutTable input[type="password"],.e8_innerShowContent,textarea,.sbHolder{
+	border: 1px solid #E9E9E2;
+	width: 60%;
+}
+
+
+TABLE.ViewForm TR.Spacing TD.Line {
+	backgrond-color: #eeeeee;
+	backgrond-repeat: repeat-x;
+	height: 1px;
+}
+
+select{
+	height:26px;
+	/*width:60%;*/
+}
+
+
+table.ViewForm .Selected td.fieldName,table.ViewForm .Selected td.field{
+	/*background-color:#fff!important;*/
+}
+
+table.ListStyle .Selected td.fieldName,table.ListStyle .Selected td.field{
+	/*background-color:#fff!important;*/
+	color:#000;
+}
+
+
+.Selected ._pageSizeInput{
+	border:none!important;
+}
+
+.Selected td.e8Selected input.inputStyle,
+.Selected td.e8Selected input.inputstyle,
+.Selected td.e8Selected input[type="text"],
+.Selected td.e8Selected input[type="password"],
+.Selected td.e8Selected input.Inputstyle,
+.Selected td.e8Selected input.InputStyle,
+.Selected td.e8Selected input.inputStyle,
+.Selected td.e8Selected .e8_innerShowContent,
+.Selected td.e8Selected textarea,
+.Selected td.e8Selected .sbHolder{
+	border:1px solid rgb(186, 186, 186);
+}
+
+.Selected td.e8Selected .e8_outScroll{
+	border-left: 1px solid rgb(186, 186, 186);
+}
+
+.Selected td.e8Selected input.e8_browserInput
+{
+	border:none!important;
+}
+
+.Selected td.e8Selected input[type="submit"],
+.Selected td.e8Selected input[type="reset"],
+.Selected td.e8Selected input[type="file"],
+.Selected td.e8Selected input[type="image"],
+.Selected td.e8Selected input[type="button"]{
+	border:none !important;
+}
+/*
+.Selected td.fieldName input.inputStyle,
+.Selected td.field input.inputstyle,
+.Selected td.fieldName input.inputstyle,
+.Selected td.fieldName input.InputStyle,
+.Selected td.field input.inputStyle,
+.Selected td.fieldName input.Inputstyle,
+.Selected td.field input.Inputstyle,
+.Selected td.field input.InputStyle,
+.Selected td.fieldName input[type="text"],
+.Selected td.field input[type="text"],
+.Selected td.fieldName input[type="password"],
+.Selected td.field input[type="password"],
+.Selected td .e8_os,
+.Selected td textarea,
+.Selected td .sbHolder{
+	border:1px solid rgb(186, 186, 186)!important;
+}
+
+.Selected td input.e8_browserInput,
+.Selected td input[type="submit"],
+.Selected td input[type="reset"],
+.Selected td input[type="file"],
+.Selected td input[type="image"],
+.Selected td input[type="button"]{
+	border:none !important;
+}
+*/
+
+.hideBlockDiv,.toolbar{
+	color: rgb(204, 204, 204);
+	cursor: pointer;
+	display:inline-block;
+	text-align:center;
+	line-height:30px;
+	height:30px;
+}
+
+.groupbg{
+	background-image:url(../images/groupHead_wev8.png);
+	background-repeat:no-repeat;
+	background-position:0 50%;
+	display:inline-block;
+	width:16px;
+	height:17px;
+	float:left;
+}
+
+.e8_grouptitle{
+	font-weight:bold;
+	float:left;
+	display:inline-block;
+	padding-left:5px;
+}
+
+table.ListStyleXml td a:link{
+	max-width:100%!important;
+}
+
+.hideBlockDiv{
+	width:30px;
+	float:right;
+}
+
+.hideBlockDiv img{
+	vertical-align:middle;
+}

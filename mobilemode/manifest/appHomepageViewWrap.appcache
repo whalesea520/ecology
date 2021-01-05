@@ -1,0 +1,20 @@
+CACHE MANIFEST
+# 2016-02-02 16:21
+ /mobilemode/js/zepto/zepto.min_wev8.js
+ /mobilemode/js/fastclick/fastclick.min_wev8.js
+ /mobilemode/js/SidebarTransitions/js/modernizr.custom_wev8.js
+ /mobilemode/js/SidebarTransitions/css/component_wev8.css?v=2015121801
+ /mobilemode/css/mobile_homepagewrap_wev8.css?v=2015111702
+ /mobilemode/js/mobile_homepagewrap_wev8.js?v=2016030703
+ /mobilemode/js/mobile_emobile50head_wev8.js
+ /mobilemode/css/mobile_webhead_wev8.css?v=2015101401
+ /mobilemode/js/mobile_webhead_wev8.js?v=2015101401
+ /mobilemode/Action.jsp?invoker=com.weaver.formmodel.mobile.wx.WXAction&action=getScript
+ /mobilemode/images/webhead/menu_arrow_up_wev8.png
+ /mobilemode/images/webhead/menu_arrow_down_wev8.png
+ /mobilemode/images/loading2.gif
+ /mobilemode/images/right_blue.png
+ /mobilemode/images/emobile/fanhui.png
+ 
+ NETWORK:
+ *

@@ -1,0 +1,171 @@
+body{
+	background-color: #e8edee;
+	overflow-x: hidden; 
+}
+ul,li{
+	list-style-type: none;
+}
+
+.tabs{
+	height: 230px;
+	width: 1020px;
+	margin-top: 20px;
+}
+.tabs>div{
+	width: 320px;
+	height: 230px;
+	float: left;
+	margin: 0px 10px;
+	background-color: #fff;
+	cursor: pointer;
+}
+.tabs .title{
+	height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+	color: #fff;
+	font-size: 14px;
+}
+.tabs .line{
+	height: 1px;
+	margin: 0px 10px;
+}
+.tabs .text{
+	color: #606b77;
+	font-size: 12px;
+	line-height: 25px;
+	background-color: #fff;
+	padding: 10px 10px 0px 10px;
+	height: 100px;
+}
+.tabs .img{
+	padding-right: 15px;
+	text-align: right;
+	height: 75px;
+}
+
+.selected.tab1{
+	background-color: #debe57;
+}
+.selected.tab1 .text{
+	background-color: #debe57;
+	color: #fff;
+}
+.selected.tab1 .img{
+	display: none;
+}
+.tab1 .title{
+	background-color: #debe57;
+}
+
+.selected.tab2{
+	background-color: #417fcf;
+}
+.selected.tab2 .text{
+	background-color: #417fcf;
+	color: #fff;
+}
+.selected.tab2 .img{
+	display: none;
+}
+.tab2 .title{
+	background-color: #417fcf;
+}
+
+.selected.tab3{
+	background-color: #42d0a3;
+}
+.selected.tab3 .text{
+	background-color: #42d0a3;
+	color: #fff;
+}
+.selected.tab3 .img{
+	display: none;
+}
+.tab3 .title{
+	background-color: #42d0a3;
+}
+
+.selected .line{
+	background-color: #fff;
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50);  
+    filter:alpha(opacity=50);  
+    opacity: .5;
+}
+
+.arrow{
+	margin: 20px 10px 0px 10px;
+	height: 12px;
+	display: none;
+	width: 1020px;
+}
+.arrow>div{
+	width: 320px;
+	margin: 0px 10px;
+	float: left;
+	height: 12px;
+}
+
+.arrow .selected>div{
+	background-image: url("../images/arrow.png");
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 12px;
+	margin: auto;
+}
+
+.tabcontent{
+	background-color: #fff;
+	height: 310px;
+	width: 960px;
+	margin: 0px 10px;
+	padding: 0px 20px;
+	display: none;
+}
+.content{
+	display: none;
+}
+.content1,.content2,.content3{
+	display: block;
+}
+.content>div{
+	width: 280px;
+	margin: 0px 20px;
+	height: 310px;
+	float: left;
+}
+.content .title{
+	border-bottom: solid 1px #e8edee;
+	padding-top: 40px;
+	padding-bottom: 4px;
+	height: 75px;
+}
+.content .title>div{
+	display: inline-block;
+}
+.content .title .t2{
+	position: relative;
+	top: -15px;
+}
+.content .title .t2{
+	line-height: 40px;
+	font-size: 14px;
+}
+.content .text{
+	color: #606b77;
+	font-size: 12px;
+	line-height: 25px;
+	padding-top: 5px;
+}
+
+.content.content1 .title .t2{
+	color: #debe57;
+}
+
+.content.content2 .title .t2{
+	color: #417fcf;
+}
+
+.content.content3 .title .t2{
+	color: #42d0a3;
+}

@@ -1,0 +1,2 @@
+UPDATE license set cversion = '7.000.0612'
+GO

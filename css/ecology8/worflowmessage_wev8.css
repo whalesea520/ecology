@@ -1,0 +1,75 @@
+.message-box{
+	margin:10px;
+	padding:20px 30px 18px;
+	border:1px solid #e1e1e1;
+	background-color:#fff4f4;
+	font-size:12px;
+	white-space: normal; 
+}
+
+.message-title-icon{
+	background-image:url("/images/ecology8/workflow/wferroricon_wev8.png");
+	background-repeat:no-repeat;
+	background-position: 50% 50%;
+	width:44px;
+	height:44px;
+	float:left;
+}
+.message-title{
+	font-size:14px;
+	font-weight:bold;
+	color:#666;
+	line-height:14px;
+	overflow:hidden;
+}
+.message-box .message-detail{
+	margin-top:14px;
+	color:#6e6e6e;
+}
+
+.message-detail span a{
+	color:#2b8ae2;
+	cursor:pointer;
+	padding-right:5px;
+}
+.message-bottom{
+	margin-top:10px;
+	color:#5f5f5f;
+}
+.message-bottom span a{
+	color:#2b8ae2;
+}
+.message-detail-condition{
+	display:none;
+    position:absolute;
+    border:1px solid #dedede;
+    padding:14px 12px 10px;
+    background-color:#FFFFFF;
+    -moz-border-radius: 10px;      /* Gecko browsers */
+    -webkit-border-radius: 10px;   /* Webkit browsers */
+    border-radius:10px;  
+    color:#5f5f5f;
+    z-index:9999;
+}
+.importantInfo{
+	font-weight:bold;
+	padding-right:8px;
+}
+.importantDetailInfo{
+	font-weight:bold;
+	padding-right:4px;
+	padding-left:4px;
+}
+
+.message-content{
+	margin-left:10px;
+}
+.message-bottom .sendMsgBtn{
+	color:#2b8ae2;
+	cursor:pointer;
+}
+.condition{
+	color:#2b8ae2;
+	cursor:pointer;
+	padding-right:5px;
+}

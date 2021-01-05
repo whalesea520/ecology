@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow workflowId="">
+	<!-- name. 传递的参数,name不能修改.   column 表单(数据库) 对应的字段名  defaultV 默认值 -->
+	<field name="userId" column=""></field>
+	<field name="departmentId" column=""></field>
+	<field name="begindate" column=""></field>
+	<field name="begintime" column=""></field>
+	<field name="enddate" column=""></field>
+	<field name="endtime" column=""></field>
+	<field name="content" column=""></field>
+	<field name="manager" column=""></field>
+</workflow>

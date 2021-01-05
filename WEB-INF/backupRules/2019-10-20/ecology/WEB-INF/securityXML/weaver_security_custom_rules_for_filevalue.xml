@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<special-non>
+		<urls>
+			<url>
+				<value>/weaver/weaver.file.filedownload</value>
+				<params>
+					<param>
+						<value>fieldvalue</value>
+						<rules>
+							<rule>^[\-\d,]*$</rule>
+						</rules>
+					</param>
+				</params>
+			</url>
+		</urls>
+	</special-non>
+</root>

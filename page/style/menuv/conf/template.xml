@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conf>
+	<id>template</id>
+<!--id与文件名需保持一至-->
+	<title>菜单样式模板</title>
+	<desc>菜单样式模板</desc>
+	<!--书写时请保证每行以下分号结尾-->
+	<css>&#13;
+#menuv .mainBg{&#13;
+	background-color:#ffffff;&#13;
+	background-image:url("/js/jquery/plugins/menu/menuv/title.gif");&#13;
+}&#13;
+#menuv .mainBg_top{&#13;
+	background-color:#ffffff;&#13;
+	background-image:url("/js/jquery/plugins/menu/menuv/toptitle.gif");&#13;
+}&#13;
+#menuv .mainFont{&#13;
+	color:#d81818;&#13;
+	font-size:12px;&#13;
+	font-family:Courier New;&#13;
+	padding-top:5px;&#13;
+	padding-bottom:5px;&#13;
+	padding-left:25px;&#13;
+	padding-right:5px;&#13;
+	background-image:url("/js/jquery/plugins/menu/menuv/expanded.gif");&#13;
+	background-position:10px 50%;
+	background-repeat:no-repeat;&#13;
+	font-style:italic;&#13;
+	font-weight:bold;&#13;
+	display:block;&#13;
+}&#13;
+#menuv .mainBg:hover{&#13;
+	background-color:#ffffff;&#13;
+	background-image:url(/js/jquery/plugins/menu/menuv/title.gif);&#13;
+}&#13;
+#menuv .mainBg_top:hover{&#13;
+	background-color:#f291e6;&#13;
+	background-image:url(/js/jquery/plugins/menu/menuv/toptitle.gif);&#13;
+}&#13;
+#menuv .mainFont:hover{&#13;
+	color:#ffffff;&#13;
+	font-size:12px;&#13;
+	font-family:Courier New;&#13;
+}&#13;
+#menuv .sub{&#13;
+	padding-top:5px;&#13;
+	padding-bottom:5px;&#13;
+	padding-left:10px;&#13;
+	padding-right:10px;&#13;
+	font-family:Courier New;&#13;
+	background-color:#eeeeee;&#13;
+	background-image:none;&#13;
+	display:block;&#13;
+	color:#123885;&#13;
+	font-size:12px;&#13;
+	font-style:italic;&#13;
+	font-weight:bold;&#13;
+}&#13;
+#menuv .sub:hover{&#13;
+	background-color:#ab1717;&#13;
+	background-image:none;&#13;
+	color:#ffffff;&#13;
+	font-size:12px;&#13;
+	font-family:Courier New;&#13;
+}&#13;
+#menuv .collapsed{&#13;
+	background-image:url("/js/jquery/plugins/menu/menuv/collapsed.gif");&#13;
+	background-position-x:10px;
+	background-position-y:50%;
+	
+}</css>	
+</conf>

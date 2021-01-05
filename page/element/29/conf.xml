@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<id>29</id>  <!--只能是唯一的英文字母-->
+	<title>自定义页面</title>
+	<titleEN>Custom Pages</titleEN>
+	<desc>外部页面元素</desc>
+	<icon>resource/image/29_wev8.gif</icon>
+	<linkMode>-1</linkMode>
+	<loginView>1</loginView>
+	<type>2</type>
+	<perpage>-1</perpage>
+	<private>
+		<jsList> 
+		</jsList>
+	</private>
+	<public>
+		<jsIdList>  
+		</jsIdList>
+		<cssIdList>
+		</cssIdList>
+	</public>
+	<view>
+		<url>/page/element/29/Iframe.jsp</url>
+		<method/>
+	</view>
+	<setting>
+		<url>/page/element/compatible/setting.jsp</url>
+		<method>getIframeSettingStr</method>
+	</setting>
+	<more>
+		<url>/page/element/compatible/more.jsp</url>
+		<method>getIframeMore</method>
+	</more>
+	<operation>/page/element/compatible/operation.jsp</operation>
+</root>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<id>FormModeCustomSearch</id>  <!--只能是唯一的英文字母-->
+	<title>建模自定义查询</title>	
+	<desc>建模自定义查询</desc>
+	<icon>resource/image/reportform_wev8.gif</icon>
+	<linkMode>2</linkMode>
+	<loginView>-1</loginView>
+	<type>2</type>
+	<perpage>5</perpage>
+	<private>
+    <jsList>
+    </jsList>
+    </private>
+	<public>
+		<jsIdList>  
+			<jsId>jquery</jsId>
+		</jsIdList>
+		<cssIdList>
+		</cssIdList>
+	</public>
+	<view>
+		<url>View.jsp</url>
+		<method></method>
+	</view> 
+	<setting>
+		<url>Setting.jsp</url>
+		<method></method>
+	</setting>
+	<more>
+		<url>more.jsp</url>
+		<method></method>
+	</more>
+	<operation>Operation.jsp</operation>
+</root> 

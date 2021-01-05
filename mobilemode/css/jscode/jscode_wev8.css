@@ -1,0 +1,26 @@
+#JSCode_Container{
+	overflow: hidden;
+}
+.jscode_entry{
+	background: url("/mobilemode/images/js_wev8.png") no-repeat;
+	background-position: left center;
+	padding: 3px 13px 3px 18px;
+	margin: 10px 0px 10px 15px;
+	color: #a4a9ae;
+	font-weight: bold;
+	position: relative;
+	float: left;
+}
+.jscode_entry .jscode_del{
+	background: url("/images/messageimages/delete_wev8.gif") no-repeat center;
+	position: absolute;
+	right: 1px;
+	top: 2px;
+	width: 9px;
+	height: 9px;
+	display: none;
+	cursor: pointer;
+}
+.jscode_entry:HOVER .jscode_del{
+	display: block;	
+}

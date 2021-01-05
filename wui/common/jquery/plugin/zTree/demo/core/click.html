@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> ZTREE DEMO - beforeClick / onClick</TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../../css/demo.css" type="text/css">
+	<link rel="stylesheet" href="../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="../../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ztree.core-3.0.js"></script>
+	<!--  <script type="text/javascript" src="../../js/jquery.ztree.excheck-3.0.js"></script>
+	  <script type="text/javascript" src="../../js/jquery.ztree.exedit-3.0.js"></script>-->
+	<SCRIPT LANGUAGE="JavaScript">
+		<!--
+		var setting = {
+			data: {
+				key: {
+					title:"t"
+				},
+				simpleData: {
+					enable: true
+				}
+			},
+			callback: {
+				beforeClick: beforeClick,
+				onClick: onClick
+			}
+		};
+
+		var zNodes =[
+			{ id:1, pId:0, name:"鏅€氱殑鐖惰妭鐐?, t:"鎴戝緢鏅€氾紝闅忎究鐐规垜鍚?, open:true},
+			{ id:11, pId:1, name:"鍙跺瓙鑺傜偣 - 1", t:"鎴戝緢鏅€氾紝闅忎究鐐规垜鍚?},
+			{ id:12, pId:1, name:"鍙跺瓙鑺傜偣 - 2", t:"鎴戝緢鏅€氾紝闅忎究鐐规垜鍚?},
+			{ id:13, pId:1, name:"鍙跺瓙鑺傜偣 - 3", t:"鎴戝緢鏅€氾紝闅忎究鐐规垜鍚?},
+			{ id:2, pId:0, name:"NB鐨勭埗鑺傜偣", t:"鐐规垜鍙互锛屼絾鏄笉鑳界偣鎴戠殑瀛愯妭鐐癸紝鏈夋湰浜嬬偣涓€涓綘璇曡瘯鐪嬶紵", open:true},
+			{ id:21, pId:2, name:"鍙跺瓙鑺傜偣2 - 1", t:"浣犲摢涓崟浣嶇殑锛熸暍闅忎究鐐规垜锛熷皬蹇冪偣鍎?.", click:false},
+			{ id:22, pId:2, name:"鍙跺瓙鑺傜偣2 - 2", t:"鎴戞湁鑰佺埜缃╃潃鍛紝鐐瑰嚮鎴戠殑灏忓績鐐瑰効..", click:false},
+			{ id:23, pId:2, name:"鍙跺瓙鑺傜偣2 - 3", t:"濂芥鎴戜篃鏄釜棰嗗锛屽埆鏅€氱兢浼楀氨鏉ョ偣鍑绘垜..", click:false},
+			{ id:3, pId:0, name:"閮侀椃鐨勭埗鑺傜偣", t:"鍒偣鎴戯紝鎴戝ソ瀹虫€?..鎴戠殑瀛愯妭鐐归殢渚跨偣鍚?..", open:true, click:false },
+			{ id:31, pId:3, name:"鍙跺瓙鑺傜偣3 - 1", t:"鍞夛紝闅忎究鐐规垜鍚?},
+			{ id:32, pId:3, name:"鍙跺瓙鑺傜偣3 - 2", t:"鍞夛紝闅忎究鐐规垜鍚?},
+			{ id:33, pId:3, name:"鍙跺瓙鑺傜偣3 - 3", t:"鍞夛紝闅忎究鐐规垜鍚?}
+		];
+
+		var log, className = "dark";
+		function beforeClick(treeId, treeNode, clickFlag) {
+			className = (className === "dark" ? "":"dark");
+			showLog("[ "+getTime()+" beforeClick ]&nbsp;&nbsp;&nbsp;&nbsp;" + treeNode.name );
+			return (treeNode.click != false);
+		}
+		function onClick(event, treeId, treeNode, clickFlag) {
+			showLog("[ "+getTime()+" onClick ]&nbsp;&nbsp;&nbsp;&nbsp;clickFlag = " + clickFlag + " (" + (clickFlag===1 ? "鏅€氶€変腑": (clickFlag===0 ? "<b>鍙栨秷閫変腑</b>" : "<b>杩藉姞閫変腑</b>")) + ")");
+		}		
+		function showLog(str) {
+			if (!log) log = $("#log");
+			log.append("<li class='"+className+"'>"+str+"</li>");
+			if(log.children("li").length > 8) {
+				log.get(0).removeChild(log.children("li")[0]);
+			}
+		}
+		function getTime() {
+			var now= new Date(),
+			h=now.getHours(),
+			m=now.getMinutes(),
+			s=now.getSeconds(),
+			ms=now.getMilliseconds();
+			return (h+":"+m+":"+s+ " " +ms);
+		}
+
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+		});
+		//-->
+	</SCRIPT>
+</HEAD>
+
+<BODY>
+<h1>鍗曞嚮鑺傜偣鎺у埗</h1>
+<h6>[ 鏂囦欢璺緞锛歞emo/core/click.html ]</h6>
+<div class="content_wrap">
+	<div class="zTreeDemoBackground left">
+		<ul id="treeDemo" class="ztree"></ul>
+	</div>
+	<div class="right">
+		<ul class="info">
+			<li class="title"><h2>1銆乥eforeClick / onClick 浜嬩欢鍥炶皟鍑芥暟鎺у埗</h2>
+				<ul class="list">
+				<li>鍒╃敤 click 浜嬩欢鍥炶皟鍑芥暟 鍙互杩涜鍚勭鍏朵粬鐨勯檮鍔犳搷浣滐紝杩欓噷绠€鍗曟紨绀哄浣曠洃鎺ф浜嬩欢</li>
+				<li><p><span class="highlight_red">璇峰皾璇曟寜涓?<b>Ctrl</b> 閿繘琛?澶氳妭鐐归€夋嫨 鍜?鍙栨秷閫夋嫨</span><br/>
+					click log:<br/>
+					<ul id="log" class="log"></ul></p>
+				</li>
+				</ul>
+			</li>
+			<li class="title"><h2>2銆乻etting 閰嶇疆淇℃伅璇存槑</h2>
+				<ul class="list">
+				<li class="highlight_red">闇€瑕佽缃?setting.callback.beforeClick 鍜? setting.callback.onClick 灞炴€? 璇︾粏璇峰弬瑙?API 鏂囨。涓殑鐩稿叧鍐呭</li>
+				</ul>
+			</li>
+			<li class="title"><h2>3銆乼reeNode 鑺傜偣鏁版嵁璇存槑</h2>
+				<ul class="list">
+				<li>瀵?鑺傜偣鏁版嵁 娌℃湁鐗规畩瑕佹眰锛岀敤鎴峰彲浠ユ牴鎹嚜宸辩殑闇€姹傛坊鍔犺嚜瀹氫箟灞炴€?/li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+</BODY>
+</HTML>

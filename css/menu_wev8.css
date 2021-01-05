@@ -1,0 +1,154 @@
+BODY
+{
+    BORDER-RIGHT: 0px;
+    BORDER-TOP: 0px;
+    MARGIN: 0px;
+    BORDER-LEFT: 0px;
+    BORDER-BOTTOM: 0px
+}
+#menu
+{
+    BORDER-RIGHT: buttonface 1px solid;
+    BORDER-TOP: buttonface 1px solid;
+    BACKGROUND: buttonface;
+    LEFT: 0px;
+    BORDER-LEFT: buttonface 1px solid;
+    CURSOR: default;
+    BORDER-BOTTOM: buttonface 1px solid;
+    POSITION: absolute;
+    TOP: 0px
+}
+#menu .menu
+{
+    BORDER-RIGHT: buttonhighlight 2px outset;
+    BORDER-TOP: buttonhighlight 2px outset;
+    BACKGROUND: buttonface;
+    BORDER-LEFT: buttonhighlight 2px outset;
+    BORDER-BOTTOM: buttonhighlight 2px outset;
+    POSITION: absolute
+}
+#menu TD
+{
+    FONT: menu;
+    HEIGHT: 20px
+}
+#menu .root
+{
+    BORDER-RIGHT: buttonface 1px solid;
+    PADDING-RIGHT: 7px;
+    BORDER-TOP: buttonface 1px solid;
+    PADDING-LEFT: 7px;
+    PADDING-BOTTOM: 1px;
+    MARGIN: 6px;
+    BORDER-LEFT: buttonface 1px solid;
+    PADDING-TOP: 1px;
+    BORDER-BOTTOM: buttonface 1px solid
+}
+#menu .icon
+{
+    TEXT-ALIGN: center
+}
+#menu .disabled
+{
+    COLOR: buttonshadow
+}
+#menu .more
+{
+    WIDTH: 20px;
+    FONT-FAMILY: webdings;
+    TEXT-ALIGN: right
+}
+#menu #handle
+{
+    BORDER-RIGHT: buttonshadow 1px solid;
+    PADDING-RIGHT: 0px;
+    BORDER-TOP: buttonhighlight 1px solid;
+    PADDING-LEFT: 0px;
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    BORDER-LEFT: buttonhighlight 1px solid;
+    PADDING-TOP: 0px;
+    BORDER-BOTTOM: buttonshadow 1px solid
+}
+#outerDiv
+{
+    Z-INDEX: -1;
+    WIDTH: 100%;
+    POSITION: absolute;
+    HEIGHT: 100%
+}
+#menusub
+{
+    BORDER-RIGHT: buttonface 1px solid;
+    BORDER-TOP: buttonface 1px solid;
+    BACKGROUND: buttonface;
+    BORDER-LEFT: buttonface 1px solid;
+    CURSOR: default;
+    BORDER-BOTTOM: buttonface 1px solid;
+}
+#menusub .menu
+{
+    BORDER-RIGHT: buttonhighlight 2px outset;
+    BORDER-TOP: buttonhighlight 2px outset;
+    BACKGROUND: buttonface;
+    BORDER-LEFT: buttonhighlight 2px outset;
+    BORDER-BOTTOM: buttonhighlight 2px outset;
+    POSITION: absolute
+}
+#menusub TD
+{
+    FONT: menu;
+    HEIGHT: 20px
+}
+#menusub .root
+{
+    BORDER-RIGHT: buttonface 1px solid;
+    PADDING-RIGHT: 7px;
+    BORDER-TOP: buttonface 1px solid;
+    PADDING-LEFT: 7px;
+    PADDING-BOTTOM: 1px;
+    MARGIN: 6px;
+    BORDER-LEFT: buttonface 1px solid;
+    PADDING-TOP: 1px;
+    BORDER-BOTTOM: buttonface 1px solid
+}
+#menusub .icon
+{
+    TEXT-ALIGN: center
+}
+#menusub .disabled
+{
+    COLOR: buttonshadow
+}
+#menusub .more
+{
+    WIDTH: 20px;
+    FONT-FAMILY: webdings;
+    TEXT-ALIGN: right
+}
+#menusub #handle
+{
+    BORDER-RIGHT: buttonshadow 1px solid;
+    PADDING-RIGHT: 0px;
+    BORDER-TOP: buttonhighlight 1px solid;
+    PADDING-LEFT: 0px;
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    BORDER-LEFT: buttonhighlight 1px solid;
+    PADDING-TOP: 0px;
+    BORDER-BOTTOM: buttonshadow 1px solid
+}
+
+A.title {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.title:hover {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+
+A.title:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.title:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}

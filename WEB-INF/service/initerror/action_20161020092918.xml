@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="GBK"?>
+<module id="action" version="1.0.0">
+    <service-point id="PrjGenerateAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.proj.wfactions.PrjGenerateAction" />
+        </invoke-factory>
+    </service-point>
+    <service-point id="PrjApproveAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.proj.wfactions.PrjApproveAction" />
+        </invoke-factory>
+    </service-point>
+    <service-point id="PrjTemplateApproveAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.proj.wfactions.PrjTemplateApproveAction" />
+        </invoke-factory>
+    </service-point>
+    <service-point id="CptApplyAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.cpt.wfactions.CptApplyAction" />
+        </invoke-factory>
+    </service-point>
+    <service-point id="CptFetchAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.cpt.wfactions.CptFetchAction" />
+        </invoke-factory>
+    </service-point>
+    <service-point id="CptMoveAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.cpt.wfactions.CptMoveAction" />
+        </invoke-factory>
+    </service-point>
+    <service-point id="CptLossAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.cpt.wfactions.CptLossAction" />
+        </invoke-factory>
+    </service-point>
+    <service-point id="CptDiscardAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.cpt.wfactions.CptDiscardAction" />
+        </invoke-factory>
+    </service-point>
+    <service-point id="CptLendAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.cpt.wfactions.CptLendAction" />
+        </invoke-factory>
+    </service-point>
+    <service-point id="CptBackAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.cpt.wfactions.CptBackAction" />
+        </invoke-factory>
+    </service-point>
+    <service-point id="CptMendAction" interface="weaver.interfaces.workflow.action.Action">
+        <invoke-factory>
+            <construct class="weaver.cpt.wfactions.CptMendAction" />
+        </invoke-factory>
+    </service-point>
+</module>
+

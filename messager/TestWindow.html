@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>TestWindow</title>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <!-- For Jquery -->
+    <script type="text/javascript" src="jquery_wev8.js"></script>
+	<script type="text/javascript" src="jquery/jquery.keycodes_wev8.js"></script>
+	<script type="text/javascript" src="jquery/jquery.draggable_wev8.js"></script>
+
+	<script type="text/javascript" src="Config_wev8.js"></script>	
+	
+	 <!-- For window -->	
+	<script type="text/javascript" src="XmppReceive_wev8.js"></script>
+
+	<script type="text/javascript" src="window/ManagerWindow_wev8.js"></script>
+	<script type="text/javascript" src="window/BaseWindow_wev8.js"></script>
+	<script type="text/javascript" src="window/MessageWindow_wev8.js"></script>
+	
+	
+  
+	
+	<LINK href="window_wev8.css" type="text/css" rel="STYLESHEET">
+    </HEAD>
+	<style>
+		body,td {
+			FONT-SIZE: 12px; MARGIN: 0px; FONT-FAMILY: Verdana; 
+		}	
+	</style>
+
+ <body>
+	
+	<!--Window Template-->
+ 	 <div class="window" id="windowTemplate">		
+		<div>
+			<div class="corner-1"></div>
+			<div class="border-top"></div>
+			<div class="corner-2"></div>					
+		</div>	
+		<div style="clear:both"></div>
+		<div>
+			<div class="border-left"></div>
+			<div class="border-content">
+					<!--标题区-->
+					<div class="title">
+						<div class="logo"></div>
+						<div class="name">Message Window</div>
+						<div class="operate"></div>
+					</div>
+					<!--主体区-->
+					<div class="body"></div>
+					<!--操作区-->
+					<div class="buttons"></div>
+			</div>
+			<div class="border-right"></div>		
+		</div>
+		<div style="clear:both"></div>
+		<div>
+			<div class="corner-3"></div>
+			<div class="border-bottom"></div>
+			<div class="corner-4"></div>		
+		</div>
+		<div style="clear:both"></div>
+	 </div>
+	</body>
+</html>
+
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+	var paraBase={
+		id:'window1',  //窗口ID  *必填 用于标识及后来找到窗口
+		templateId:'windowTemplate', //窗口模板  *必填 用于标识及后来找到窗口
+		height:'200px', 
+		width:'300px',
+		top:'20',
+		left:'20',
+		logoImg:'images/icon-offline_wev8.gif',
+		name:'Base Window 1',
+		canDrag:"true"
+	}	
+
+	var paraMessage={
+		id:'window2',  //窗口ID  *必填 用于标识及后来找到窗口
+		templateId:'windowTemplate', //窗口模板  *必填 用于标识及后来找到窗口
+		height:'335px', 
+		width:'500px',
+		top:'20',
+		left:'20',
+		logoImg:'images/icon-offline_wev8.gif',
+		name:'Message Window 1',
+		canDrag:"true",
+		sendTo:'zh'
+	}	
+
+	var paraMessage2={
+		id:'window3',  //窗口ID  *必填 用于标识及后来找到窗口
+		templateId:'windowTemplate', //窗口模板  *必填 用于标识及后来找到窗口
+		height:'335px', 
+		width:'500px',
+		top:'20',
+		left:'600',
+		logoImg:'images/icon-offline_wev8.gif',
+		name:'Message Window 2',
+		canDrag:"true",
+		sendTo:'zh'
+	}	
+
+
+	
+	/*For Winodw loaded*/
+	$(document).ready( function() {		    
+		
+		new MessageWindow(paraMessage).appendTo(document.body);
+		new MessageWindow(paraMessage2).appendTo(document.body);
+		//new BaseWindow(paraBase).appendTo(document.body);
+		
+	});	
+	
+
+//-->
+</SCRIPT>

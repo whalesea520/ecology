@@ -1,0 +1,23 @@
+CACHE MANIFEST
+# 2016-11-15 17:20
+ /mobilemode/js/zepto/zepto.min_wev8.js
+ /mobilemode/browser/js/fastclick.min_wev8.js
+ /mobilemode/browser/js/jquery.sortable.min.js
+ /mobilemode/browser/css/commonBrowser_wev8.css?v=2016030703
+ /mobilemode/js/iscroll/iscroll5_wev8.js
+ /mobilemode/browser/images/fanhui.png
+ /mobilemode/browser/images/ok.png
+ /mobilemode/browser/images/search.png?2
+ /mobilemode/browser/images/UnCheck.png?2
+ /mobilemode/browser/images/Check.png?2
+ /mobilemode/browser/images/delete2.png
+ /mobilemode/images/mobile_loading_wev8.gif
+ /mobilemode/browser/images/move.png?2
+ /mobilemode/browser/images/p5-m.png
+ /mobilemode/browser/images/p5-m2.png
+ /mobilemode/browser/images/edit_wev8.png
+ /mobilemode/browser/images/back_wev8.png
+ /mobilemode/browser/js/commonBrowser_wev8.js?v=2016111501
+ 
+ NETWORK:
+ *

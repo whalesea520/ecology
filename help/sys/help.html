@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<SCRIPT language="javascript" src="/js/jquery/jquery_wev8.js"></script>
+
+
+<title>泛微-操作帮助说明</title>
+<LINK href="base_wev8.css" type=text/css rel=STYLESHEET>
+<style>
+ body{
+ 	background: #fafafa;
+ }
+</style>
+</head>
+
+<body>
+
+ <div style="background-image: url(image/bg_head_wev8.png);height: 300px;width: 100% ">
+ 	<img id='downloadBtn' class='hand' src='image/btn_help_wev8.png' style="margin-top:220px;margin-left: 210px"></img>
+ </div>
+ <div class='w-900 p-t-20 p-l-50' style="margin:0 auto;">
+ 	<div class='left w-300'>
+ 		<img src="image/img1_wev8.png" clas='left'></img>
+ 		<div class='w-160 last'>
+ 		   <div class="bold">IE浏览器设置</div>
+ 		   <div class='m-t-10 p-r-20'>在IE6、IE7中，在顶部菜单工具中可以看到“弹出窗口阻止程序”，点击“弹出窗口阻止程序设置”,加入访问地址</div>
+ 		</div>
+ 	</div>
+ 	<div class='left w-300'>
+ 		<img src="image/img2_wev8.png" clas='left'></img>
+ 		<div class='w-160 last'>
+ 		   <div class="bold">Google浏览器设置</div>
+ 		   <div class='m-t-10 p-r-20'>点击后选择“设置”,在设置页面我们点击“高级设置”按钮,继续点击“内容设置”,点击“管理例外情况”,加入访问地址</div>
+ 		</div>
+ 	</div>
+ 	<div class='left w-300'>
+ 		<img src="image/img3_wev8.png" clas='left'></img>
+ 		<div class='w-160 last'>
+ 		   <div class="bold">Firefox浏览器设置</div>
+ 		   <div class='m-t-10 p-r-20'> 设置页面在“内容”标签中可以看到阻止弹出窗口的选项是选中，点击的例外，访问地址加入后就不会再有弹出窗口提示</div>
+ 		</div>
+ 	</div>
+ </div>
+ 
+</body>
+<script>
+	$("#downloadBtn").hover(
+			function(){
+				$(this).attr("src","image/btn_help_hover_wev8.png");
+			},
+			function(){
+				$(this).attr("src","image/btn_help_wev8.png");
+			}
+  );
+
+	$("#downloadBtn").bind("click",function(){
+		$(this).attr("src","image/btn_help_click_wev8.png");
+		window.open("/help/doc/E-cology登录弹出窗口设置.doc");
+			
+	})
+</script>
+</html>

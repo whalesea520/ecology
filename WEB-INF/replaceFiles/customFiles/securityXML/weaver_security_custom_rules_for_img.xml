@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<no-login-urls>
+		<url>weaver.file.SignatureDownLoad</url>
+		<url>weaver.file.ImgFileDownload</url>
+	</no-login-urls>
+	
+</root>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TitleWindow xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" title="{resourceManager.getString('resources', 'LM072')}" width="400" height="300" showCloseButton="true" close="closeWin();" creationComplete="initApp()">
+<mx:Script>
+	<![CDATA[ 
+		import common.StaticObj;
+		import mx.core.Application;
+		import mx.rpc.events.FaultEvent;
+		import mx.rpc.events.ResultEvent;
+		import mx.rpc.http.HTTPService;
+		import mx.controls.Alert;
+		import mx.managers.PopUpManager;
+		import mx.collections.ArrayCollection;
+		import util.XmlUtil;
+		import mx.utils.StringUtil;
+		
+		[bindable]
+		private var versionList:ArrayCollection;
+		private function initApp():void{
+			var keyword:String = StringUtil.trim(Application.application.keyValue.text);
+			if(keyword==""){
+				Alert.okLabel=""+resourceManager.getString('resources', 'LM044');
+				Alert.show(resourceManager.getString('resources', 'LM073')+"！");
+				return;
+			}
+			var key:String = Application.application.region.selectedItem.data;
+			var jt_key:String=Application.application.groupList.selectedItem.data;
+			var yw_key:String=Application.application.businesstypeList.selectedItem.data;
+			var gs_key:String=Application.application.companyvestinList.selectedItem.data;
+			
+			var http:HTTPService = new HTTPService;
+			
+			http.addEventListener(ResultEvent.RESULT,bindData);
+			http.addEventListener(FaultEvent.FAULT,myFaultErrorEvent);
+			
+			http.url="/companygroup/manage/companyoperation.jsp?method=getGroupidBySearch";
+			http.method = "post";
+			http.resultFormat = "e4x";
+			
+			var val:URLVariables = new URLVariables;
+			val.key = key;
+			val.value=keyword;
+			val.jt_key=jt_key;
+			val.yw_key=yw_key;
+			val.gs_key=gs_key;
+			//val.groupid = staticObj.groupid;
+			val.random = Math.random();
+			
+			http.send(val);
+		
+		}  
+		
+		private function closeWin():void{
+			PopUpManager.removePopUp(this);
+		}
+		
+		private function bindData(xmlContent:ResultEvent):void{
+			
+		//Alert.show(resultContent.result as String)
+			try{
+				var content:XML = xmlContent.result as XML;
+				//Alert.show(content.toString());
+				//var node:XMLNode = content;
+				var xmlDoc:XMLDocument = new XMLDocument(content.toString());
+				versionList = XmlUtil.parseXmlToArray(xmlDoc);
+				groupListGrid.dataProvider = versionList;
+			}catch(e:Error){
+				
+			}
+		
+		}
+		public function myFaultErrorEvent(myFaultEvent:FaultEvent):void{    //异常处理函数   
+		//Alert.show("333");
+			trace(myFaultEvent.message);   
+		}
+		
+		//数据项的双击事件
+		public function showGroupView(){
+			//Alert.show(groupListGrid.selectedItem.key+"%%%"+groupListGrid.selectedItem.keyvalue)
+			
+			Application.application.staticObj.groupid=groupListGrid.selectedItem.groupid;
+			//Application.application.groupList.selectedItem.data = groupListGrid.selectedItem.groupid;
+			Application.application.showCompanys(groupListGrid.selectedItem.key,groupListGrid.selectedItem.keyvalue);
+			var statusArray:ArrayCollection = Application.application.groupList.dataProvider as ArrayCollection;
+			for(var i:int = 0; i<statusArray.length;i++){   
+	           if(statusArray.getItemAt(i).data==groupListGrid.selectedItem.groupid){   
+				   Application.application.groupList.selectedIndex = i;    
+		          break;    
+			    }   
+	        }
+			//Application.application.groupList.selectedItem = {label:"RY002--夏天平",data:groupListGrid.selectedItem.groupid};
+			PopUpManager.removePopUp(this); 
+		}
+		
+		
+	]]>  
+</mx:Script>
+	<mx:DataGrid x="0" y="0" height="100%" width="100%" id="groupListGrid" doubleClickEnabled="true"  doubleClick="showGroupView()">
+		<mx:columns>
+			<mx:DataGridColumn id="key" headerText="ID" dataField="key" visible="false"/>
+			<mx:DataGridColumn headerText="keyvalue" dataField="keyvalue" visible="false"/>
+			<mx:DataGridColumn id="groupid" headerText="groupid" dataField="groupid" visible="false"/>
+			<mx:DataGridColumn headerText="{resourceManager.getString('resources', 'LM031')}" dataField="archiveno"/>
+			<mx:DataGridColumn headerText="{resourceManager.getString('resources', 'LM032')}" dataField="companyname"/>
+		</mx:columns>
+	</mx:DataGrid>
+</mx:TitleWindow>

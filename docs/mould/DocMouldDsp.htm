@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0258)http://server-weaver/test/docs/BDDocument.asp?Action=View&ID={EFA881D5-0373-435E-83F6-DF2C7A938599}&ReturnTo=BDMaintTemplate.asp?Action%3DVIEW%26GroupID%3D2%26Category%3DRelationship%26SubCategory%3DWeaver%2BNews%26FilterLanguageKey%3D%26FilterDivisionKey%3D -->
+<HTML><HEAD><TITLE></TITLE>
+<META http-equiv=Content-Type content="text/html; charset=UTF-8">
+<STYLE type=text/css>SPAN.DocLayout {
+	COLOR: red
+}
+</STYLE>
+<LINK href="../css/BacoSystem_wev8.css" type=text/css rel=STYLESHEET>
+<SCRIPT language=jscript>
+function DoURLEncode(sURL)
+{
+	return escape(sURL)
+}
+</SCRIPT>
+
+<SCRIPT language=vbscript>
+Function DownloadAttachmentDoc(ByVal sDocID)
+	window.location.href = "BDBinDoc.asp?ID=" & sDocID & "&DownLoad=1"
+End Function
+</SCRIPT>
+
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY>
+<DIV class=HdrTitle>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD align=left width=55><IMG height=24 
+      src="../images/hdMaintenance_wev8.gif"></TD>
+      <TD align=left><SPAN id=BacoTitle 
+      style="FONT-WEIGHT: bold; FONT-SIZE: medium"><%=SystemEnv.getHtmlLabelName(58,user.getLanguage())%> - <%=SystemEnv.getHtmlLabelName(64,user.getLanguage())%> - <%=SystemEnv.getHtmlLabelName(316,user.getLanguage())%></SPAN></TD>
+      <TD align=right>&nbsp;</TD>
+    <TD width=5></TD>
+    <TD align=middle width=24><BUTTON language=VBS class=btnFavorite 
+      id=BacoAddFavorite title="Add to favorites"></BUTTON>
+      <SCRIPT language=VBS>
+	Sub BacoAddFavorite_OnClick
+		window.external.AddFavorite BacoGetGoPageURL, BacoTitle.InnerText
+	End Sub
+
+	Function BacoGetGoPageURL
+		Dim i, i2
+		Dim s, gopage
+		Dim sp: sp = "BDDocument%2Easp%3FAction%3DView%26ID%3D%7BEFA881D5%2D0373%2D435E%2D83F6%2DDF2C7A938599%7D%26ReturnTo%3DBDMaintTemplate%2Easp%3FAction%253DVIEW%2526GroupID%253D2%2526Category%253DRelationship%2526SubCategory%253DWeaver%252BNews%2526FilterLanguageKey%253D%2526FilterDivisionKey%253D"
+		If IsEmpty(window.parent) Then 
+			s = location.href & ""
+		Else	
+			s = window.parent.location.href
+			If InStr(1,s,"bp.asp",1) > 0 Then
+				s = window.parent.location.href
+				gopage = "?gopage="
+				If InStr(1,s,"?gopage=",1) > 0 Then
+					gopage = "&gopage="
+				Else
+					If InStr(1,s,"?",1) > 0 Then gopage = "&gopage="
+				End If
+				i = Instr(1, s, "gopage=",1)
+				If i > 0 Then
+					i2 = Instr(i, s, "&",1) 
+					If i2 > 0 Then
+						s = Left(s,i-2) & Mid(s, i2, Len(s) - i2) & gopage & sp 
+					Else
+						s = Left(s,i-2) & gopage & sp 
+					End If
+				Else
+					s = s & gopage & sp 
+				End If
+			Else
+				s = location.href & ""
+			End If
+		End If
+		s = Replace(s,"bp.asp&","bp.asp?",1,1,1)
+		BacoGetGoPageURL = s
+	End Function
+</SCRIPT>
+       </TD>
+    <TD align=middle width=24><BUTTON language=VBS class=btnHelp 
+      onclick='window.open "BacoHelp.asp?Title=Document+Layout+%3A+Management+of+Weaver%2C+Relationship%2C+Weaver+News+%2D+English&amp;Topic=BDDocument.asp&amp;TopicFilter=BACO", null, "width=800,height=500,resizable=yes,scrollbars=yes,status=yes,toolbar=yes,menubar=no,location=no"'></BUTTON></TD></TR></TBODY></TABLE>
+</DIV>
+<SCRIPT language=vbscript>
+Sub btnEdit_onclick()
+	location = "BDDocument.asp?Action=Edit&ID={EFA881D5-0373-435E-83F6-DF2C7A938599}&ReturnTo=BDMaintTemplate%2Easp%3FAction%3DVIEW%26GroupID%3D2%26Category%3DRelationship%26SubCategory%3DWeaver%2BNews%26FilterLanguageKey%3D%26FilterDivisionKey%3D"
+End Sub
+Sub btnDelete_onclick()
+	location = "BDDocument.asp?Action=Delete&ID={EFA881D5-0373-435E-83F6-DF2C7A938599}&ReturnTo=BDMaintTemplate%2Easp%3FAction%3DVIEW%26GroupID%3D2%26Category%3DRelationship%26SubCategory%3DWeaver%2BNews%26FilterLanguageKey%3D%26FilterDivisionKey%3D"
+End Sub
+Sub btnLog_onclick()
+	Location = "SystemReadLog.asp?Logtype=1&ID={EFA881D5-0373-435E-83F6-DF2C7A938599}"
+End Sub
+Sub btnSaveAs_onclick()
+	window.open("BDDocument.asp?Action=Content&NoHeader=2&ID={EFA881D5-0373-435E-83F6-DF2C7A938599}")
+End Sub
+Sub btnApprove_onclick()
+	location = "BDDocument.asp?Action=Approve&ID={EFA881D5-0373-435E-83F6-DF2C7A938599}&ReturnTo=BDMaintTemplate%2Easp%3FAction%3DVIEW%26GroupID%3D2%26Category%3DRelationship%26SubCategory%3DWeaver%2BNews%26FilterLanguageKey%3D%26FilterDivisionKey%3D"
+End Sub
+Sub btnReject_onclick()
+	location = "BDDocument.asp?Action=Reject&ID={EFA881D5-0373-435E-83F6-DF2C7A938599}&ReturnTo=BDMaintTemplate%2Easp%3FAction%3DVIEW%26GroupID%3D2%26Category%3DRelationship%26SubCategory%3DWeaver%2BNews%26FilterLanguageKey%3D%26FilterDivisionKey%3D"
+End Sub
+Sub btnShowInfo_onclick()
+  url = "BDDocEditInfo.asp?View=1&ID={EFA881D5-0373-435E-83F6-DF2C7A938599}"
+  url = url & "&Creator=administrator"
+  url = url & "&Owner=15"
+  url = url & "&OwnerType=0"
+  url = url & "&OwnerTypeValue="
+	id = window.showModalDialog(url,window,"dialogWidth:450px;dialogHeight:220px;resizable:yes")
+	If Len(id)> 0 Then 
+		window.location.href="BDDocument.asp?Action=View&ID=" & id 
+	End If 
+End Sub
+</SCRIPT>
+<BUTTON class=btnEdit id=btnEdit accessKey=E 
+name=btnEdit><U>E</U>-<%=SystemEnv.getHtmlLabelName(93,user.getLanguage())%></BUTTON><BUTTON 
+class=btnNew id=AddNew accessKey=N><U>N</U>-<%=SystemEnv.getHtmlLabelName(365,user.getLanguage())%></BUTTON><BUTTON class=btnDelete id=btnDelete 
+accessKey=D name=btnDelete><U>D</U>-<%=SystemEnv.getHtmlLabelName(91,user.getLanguage())%></BUTTON><BUTTON class=btnLog id=btnLog 
+accessKey=L name=btnLog><U>L</U>-<%=SystemEnv.getHtmlLabelName(83,user.getLanguage())%></BUTTON><BUTTON class=btnPrint id=btnSaveAs 
+accessKey=P name=btnSaveAs><U>P</U>-<%=SystemEnv.getHtmlLabelName(257,user.getLanguage())%></BUTTON><br>
+<br>
+<table class=Form>
+  <tbody> 
+  <tr class=Section> 
+    <th colspan=4><%=SystemEnv.getHtmlLabelName(1361,user.getLanguage())%></th>
+  </tr>
+  <tr class=separator> 
+    <td class=Sep1 colspan=2></td>
+  </tr>
+  <tr> 
+    <td>ID</td>
+    <td class=Field>1</td>
+  </tr>
+  <tr> 
+    <td><%=SystemEnv.getHtmlLabelName(85,user.getLanguage())%></td>
+    <td class=Field> <%=SystemEnv.getHtmlLabelName(316,user.getLanguage())%></td>
+  </tr>
+  </tbody> 
+</table>
+<P align=center><STRONG>Main News</STRONG></P><STRONG>
+<HR>
+
+</STRONG>
+<P align=left><STRONG></strong>$DOC_Content<BR>
+</P><!-- Default layout End --><BR><BR>
+</BODY></HTML>

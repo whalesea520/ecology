@@ -1,0 +1,28 @@
+需要修改一下以下文件：
+1、/em80/WebRoot/WEB-INF/classes/setting.xml中的下面两项：
+
+<resinHome>I:/weaver/Resin</resinHome>
+
+修改为
+
+ecology对应的Resin目录
+
+
+<attachmentFileRootPath>I:/weaver/manageplat/upload/</attachmentFileRootPath>
+
+修改为
+
+自己任意设定一个存在的目录即可。
+
+
+2、需要修改resin.conf文件，文件地址：
+/Resin2/conf/resin.conf
+
+ <web-app id="" root-directory="I:\weaver\em80\WebRoot">
+        <servlet-mapping url-pattern='/weaver/*' servlet-name='invoker'/>
+ </web-app>
+
+将I:\weaver\em80\WebRoot修改为自己对应的目录。
+
+
+3、修改ecology/WEB-INF/prop/emserver.properties文件，将server改成运维中心的访问地址，如:http://127.0.0.1:81

@@ -1,0 +1,2589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<function-config>
+	<!-- 
+	id: 标示
+	text: 方法中文简称
+	text_en: 方法英文简称
+	text_hk: 方法繁体简称
+	desc: 方法中文描述
+	desc_en: 方法英文描述
+	desc_hk: 方法繁体描述
+	sign: 方法签名
+	params: 方法参数
+	params.param: 一个参数为一个param
+	params.param.name: 参数名称
+	params.param.type: 参数类型
+	params.param.explain: 参数说明中文
+	params.param.explain_en: 参数说明英文
+	params.param.explain_hk: 参数说明繁体
+	params.param.required: 是否必填, true为是， false或者无此配置为否
+	return: 方法返回值说明中文
+	return_en: 方法返回值说明英文
+	return_hk: 方法返回值说明繁体
+	example: 示例
+	 -->
+	<function>
+		<id>sql</id>
+		<text>SQL函数</text>
+		<text_en>SQL Function</text_en>
+		<text_hk>SQL函數</text_hk>
+		<desc>此方法可以用来向服务端发送请求执行指定的SQL语句。</desc>
+		<desc_en>This method can be used to send requests to the server to execute the specified SQL statement.</desc_en>
+		<desc_hk>此方法可以用來向服務端發送請求執行指定的SQL語句。</desc_hk>
+		<sign>Mobile_NS.SQL(sqlstr[[, datasource], callbackFn]);</sign>
+		<params>
+			<param>
+				<name>sqlstr</name>
+				<type>String</type>
+				<explain>sql语句</explain>
+				<explain_en>SQL statement</explain_en>
+				<explain_hk>sql語句</explain_hk>
+				<required>true</required>
+			</param>
+			<param>
+				<name>datasource</name>
+				<type>String</type>
+				<explain>数据源</explain>
+				<explain_en>Data source</explain_en>
+				<explain_hk>數據源</explain_hk>
+				<required>false</required>
+			</param>
+			<param>
+				<name>callbackFn</name>
+				<type>function</type>
+				<explain>回调函数，仅在需要异步执行select语句查询数据时使用</explain>
+				<explain_en>Callback function, use only when the select statement needs to be executed asynchronously.</explain_en>
+				<explain_hk>回調函數，僅在需要異步執行select語句查詢數據時使用</explain_hk>
+				<required>false</required>
+			</param>
+		</params>
+		<return>
+			<![CDATA[
+				执行Insert, Update, Delete语句，服务端会返回SQL语句执行状态，执行成功返回true，反之返回false。执行select语句，服务端会返回SQL语句的查询结果集(JSON数组)。
+			]]>
+		</return>
+		<return_en>
+			<![CDATA[
+				Execute the Insert, Update, Delete statement, the server will return the SQL statement execution status, the return is true if the execution succeeds, otherwise it returns false.Execute the select statement, the server will return the query result set (JSON array) of the SQL statement.
+			]]>
+		</return_en>
+		<return_hk>
+			<![CDATA[
+				執行Insert, Update, Delete語句，服務端會返回SQL語句執行狀態，執行成功返回true，反之返回false。執行select語句，服務端會返回SQL語句的查詢結果集(JSON數組)。
+			]]>
+		</return_hk>
+		<example>
+			<![CDATA[
+				var result = Mobile_NS.SQL("insert into person(id,name,sex) values('123','张三','男')");
+				alert(result);  // true | false (执行成功 true, 执行失败 false)
+				
+				var result = Mobile_NS.SQL("select id, name from person where id='123'");
+				alert(result[0].name);  // "张三"
+				
+				Mobile_NS.SQL("select id, name from person where id='123'", function(result){
+					alert(result[0].name);  // "张三"
+				});
+				
+				Mobile_NS.SQL("select id, name from person where id='123'", "datasource", function(result){
+					alert(result[0].name);  // "张三"
+				});
+				
+				条件中带页面参数
+				Mobile_NS.SQL("select id, name from person where id='{personid}'", function(result){
+				    alert(result[0].name);  // "张三"
+				});
+				
+				条件中带变量
+				var personid = $("input[name='fieldname_personid']").val();
+				Mobile_NS.SQL("select id, name from person where id='{personid}';personid="+personid, function(result){
+				    alert(result[0].name);  // "张三"
+				});
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				var result = Mobile_NS.SQL("insert into person(id,name,sex) values('123','Jason','male')");
+				alert(result);  // true | false (success: true, fail: false)
+				
+				var result = Mobile_NS.SQL("select id, name from person where id='123'");
+				alert(result[0].name);  // "Jason"
+				
+				Mobile_NS.SQL("select id, name from person where id='123'", function(result){
+					alert(result[0].name);  // "Jason"
+				});
+				
+				Mobile_NS.SQL("select id, name from person where id='123'", "datasource", function(result){
+					alert(result[0].name);  // "Jason"
+				});
+				
+				Conditions with page parameters:
+				Mobile_NS.SQL("select id, name from person where id='{personid}'", function(result){
+				    alert(result[0].name);  // "Jason"
+				});
+				
+				Conditions with variable:
+				var personid = $("input[name='fieldname_personid']").val();
+				Mobile_NS.SQL("select id, name from person where id='{personid}';personid="+personid, function(result){
+				    alert(result[0].name);  // "Jason"
+				});
+			]]>
+		</example_en>
+		<example_hk>
+			<![CDATA[
+				var result = Mobile_NS.SQL("insert into person(id,name,sex) values('123','張三','男')");
+				alert(result);  // true | false (執行成功 true, 執行失敗 false)
+				
+				var result = Mobile_NS.SQL("select id, name from person where id='123'");
+				alert(result[0].name);  // "張三"
+				
+				Mobile_NS.SQL("select id, name from person where id='123'", function(result){
+					alert(result[0].name);  // "張三"
+				});
+				
+				Mobile_NS.SQL("select id, name from person where id='123'", "datasource", function(result){
+					alert(result[0].name);  // "張三"
+				});
+				
+				條件中帶頁面慘數
+				Mobile_NS.SQL("select id, name from person where id='{personid}'", function(result){
+				    alert(result[0].name);  // "張三"
+				});
+				
+				條件中帶變量
+				var personid = $("input[name='fieldname_personid']").val();
+				Mobile_NS.SQL("select id, name from person where id='{personid}';personid="+personid, function(result){
+				    alert(result[0].name);  // "張三"
+				});
+			]]>
+		</example_hk>
+	</function>
+	
+	<function>
+		<id>progressBar</id>
+		<text>进度条</text>
+		<text_hk>進度條</text_hk>
+		<text_en>Progress Bar</text_en>
+		<desc>调用此方法可以转换成进度条显示。</desc>
+		<desc_en>Call this method to convert to a progress bar display.</desc_en>
+		<desc_hk>調用此方法可以轉換成進度條顯示。</desc_hk>
+		<sign>Mobile_NS.progressBar(id, config);</sign>
+		<params>
+			<param>
+				<name>id</name>
+				<type>String</type>
+				<explain>页面DOM元素id</explain>
+				<explain_en>The id of the page DOM element</explain_en>
+				<explain_hk>頁面DOM元素id</explain_hk>
+				<required>true</required>
+			</param>
+			<param>
+				<name>config</name>
+				<type>json</type>
+				<explain><![CDATA[配置参数，函数内部默认的配置参数为：<br/>{"0-40":"#da532c", "41-70":"#e3a21a", "71-100":"#99b433"}]]></explain>
+				<explain_en><![CDATA[Configuration parameters, the default configuration parameters inside the function are:<br/>{"0-40":"#da532c", "41-70":"#e3a21a", "71-100":"#99b433"}]]></explain_en>
+				<explain_hk><![CDATA[配置慘數，函數內部默認的配置慘數為：<br/>{"0-40":"#da532c", "41-70":"#e3a21a", "71-100":"#99b433"}]]></explain_hk>
+				<required>false</required>
+			</param>
+		</params>
+		<example>
+			<![CDATA[
+				<div id="pb123">50</div>
+				<script>Mobile_NS.progressBar("pb123");</script>
+				
+				<div id="pb123">50</div>
+				<script>Mobile_NS.progressBar("pb123", {"0-60":"red", "60-100":"blue"});</script>
+				
+				该脚本常配合自定义页面的列表插件一起使用，可在列表插件的字段选择中输入自定义内容，如下：	
+				<div id="pb{id}">{progress}</div>
+				<script>Mobile_NS.progressBar("pb{id}");</script>
+				{xxx}解释：xxx为列表字段的字段名称，引用方式为 {字段名称}，列表显示时会将其解析成真实值。
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				<div id="pb123">50</div>
+				<script>Mobile_NS.progressBar("pb123");</script>
+				
+				<div id="pb123">50</div>
+				<script>Mobile_NS.progressBar("pb123", {"0-60":"red", "60-100":"blue"});</script>
+				
+				This script is often used with a List plug-in for custom pages. You can enter custom content in the field selection of the List plug-in as follows:
+				<div id="pb{id}">{progress}</div>
+				<script>Mobile_NS.progressBar("pb{id}");</script>
+				{xxx} Explain: xxx is the field name of the list field, and the reference method is {field name}. It will be resolved to the real value when the list is displayed.
+			]]>
+		</example_en>
+		<example_hk>
+			<![CDATA[
+				<div id="pb123">50</div>
+				<script>Mobile_NS.progressBar("pb123");</script>
+				
+				<div id="pb123">50</div>
+				<script>Mobile_NS.progressBar("pb123", {"0-60":"red", "60-100":"blue"});</script>
+				
+				該腳本常配合自定義頁面的列表插件壹起使用，可在列表插件的字段選擇中輸入自定義內容，如下：	
+				<div id="pb{id}">{progress}</div>
+				<script>Mobile_NS.progressBar("pb{id}");</script>
+				{xxx}解釋：xxx為列表字段的字段名稱，引用方式為 {字段名稱}，列表顯示時會將其解析成真實值。
+			]]>
+		</example_hk>
+	</function>
+	
+	<function>
+		<id>$p</id>
+		<text>获取页面参数</text>
+		<text_en>Get page parameter</text_en>
+		<text_hk>獲取頁面慘數</text_hk>
+		<desc>调用此方法可以获取页面参数。</desc>
+		<desc_en>Call this method to get page parameters.</desc_en>
+		<desc_hk>調用此方法可以獲取頁面慘數。</desc_hk>
+		<sign>$p(name);</sign>
+		<params>
+			<param>
+				<name>name</name>
+				<type>String</type>
+				<explain>参数名称</explain>
+				<explain_en>Parameter name</explain_en>
+				<explain_hk>慘數名稱</explain_hk>
+				<required>true</required>
+			</param>
+		</params>
+		<return>
+			<![CDATA[
+				参数值，如果根据参数名称未获取到参数值则会返回空字符串。
+			]]>
+		</return>
+		<return_en>
+			<![CDATA[
+				The parameter value, if no parameter value is obtained based on the parameter name, an empty string is returned.
+			]]>		
+		</return_en>
+		<return_hk>
+			<![CDATA[
+				慘數值，如果根據慘數名稱未獲取到慘數值則會返回空字符串。
+			]]>
+		</return_hk>
+		<example>
+			<![CDATA[
+				例如当前页面的url为：
+				/mobilemode/appHomepageView.jsp?appHomepageId=486&projectId=1287
+				<script>
+				    alert($p("projectId"));  //1287
+				</script>
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				For example the current page url is:
+				/mobilemode/appHomepageView.jsp?appHomepageId=486&projectId=1287
+				<script>
+				    alert($p("projectId"));  //1287
+				</script>
+			]]>		
+		</example_en>
+		<example_hk>
+			<![CDATA[
+				例如當前頁面的url為：
+				/mobilemode/appHomepageView.jsp?appHomepageId=486&projectId=1287
+				<script>
+				    alert($p("projectId"));  //1287
+				</script>
+			]]>
+		</example_hk>
+	</function>
+	
+	<function>
+		<id>backToHomepage</id>
+		<text>回到首页</text>
+		<text_en>Back to homepage</text_en>
+		<text_hk>回到首頁</text_hk>
+		<desc>调用此脚本可以回到首页。</desc>
+		<desc_en>Call this script to go back to the homepage.</desc_en>
+		<desc_hk>調用此腳本可以回到首頁。</desc_hk>
+		<sign>Mobile_NS.backToHomepage();</sign>
+		<example>
+			<![CDATA[
+				<a href="javascript: Mobile_NS.backToHomepage();">回到首页</a>
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				<a href="javascript: Mobile_NS.backToHomepage();">Back to homepage</a>
+			]]>		
+		</example_en>
+		<example_hk>
+			<![CDATA[
+				<a href="javascript: Mobile_NS.backToHomepage();">回到首頁</a>
+			]]>
+		</example_hk>
+	</function>
+	
+	<function>
+		<id>refresh</id>
+		<text>刷新页面</text>
+		<text_en>Refresh page</text_en>
+		<text_hk>刷新頁面</text_hk>
+		<desc>调用此方法可以刷新页面。如果指定了页面id，刷新指定id的页面。如果未指定页面id，刷新当前页面。</desc>
+		<desc_en>Call this method to refresh the page. If the page id is specified, the page with the specified id will be refreshed. If no page id is specified, the current page will be refreshed.</desc_en>
+		<desc_hk>調用此方法可以刷新頁面。如果指定了頁面id，刷新指定id的頁面。如果未指定頁面id，刷新當前頁面。</desc_hk>
+		<sign>Mobile_NS.refresh(pageId);</sign>
+		<params>
+			<param>
+				<name>pageId</name>
+				<type>int</type>
+				<explain>页面id</explain>
+				<explain_en>Page id</explain_en>
+				<explain_hk>頁面id</explain_hk>
+				<required>false</required>
+			</param>
+		</params>
+		<example>
+			<![CDATA[
+				<a href="javascript: Mobile_NS.refresh();">点我刷新当前页面</a>
+				<a href="javascript: Mobile_NS.refresh(1);">点我刷新id为1的页面</a>
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				<a href="javascript: Mobile_NS.refresh();">Click me to refresh the current page</a>
+				<a href="javascript: Mobile_NS.refresh(1);">Click me to refresh the page with id 1</a>
+			]]>		
+		</example_en>
+		<example_hk>
+			<![CDATA[
+				<a href="javascript: Mobile_NS.refresh();">點我刷新當前頁面</a>
+				<a href="javascript: Mobile_NS.refresh(1);">點我刷新id為1的頁面</a>
+			]]>
+		</example_hk>
+	</function>
+	
+	<function>
+		<id>createTopfloorPage</id>
+		<text>创建顶层页面</text>
+		<text_en>Create top-floor page</text_en>
+		<text_hk>創建頂層頁面</text_hk>
+		<desc>调用此方法可以创建顶层页面。</desc>
+		<desc_en>Call this method to create a top-floor page.</desc_en>
+		<desc_hk>調用此方法可以創建頂層頁面。</desc_hk>
+		<sign>Mobile_NS.createTopfloorPage(pageIdOrUrl, param);</sign>
+		<params>
+			<param>
+				<name>pageIdOrUrl</name>
+				<type>String</type>
+				<explain>自定义页面的id或 一个url</explain>
+				<explain_en>Custom page id or a url</explain_en>
+				<explain_hk>自定義頁面的id或 壹個url</explain_hk>
+				<required>true</required>
+			</param>
+			<param>
+				<name>param</name>
+				<type>json</type>
+				<explain><![CDATA[配置参数，函数内部默认的配置参数为：<br/>
+				{<br/>
+				bgcolor : "#fff",	//背景色<br/>
+				 width : "70%", //宽度<br/>
+				 effect : "1", //滑出效果 1：上层滑出，2：左推出，3：右推出<br/>
+				 maskBgColor : "rgba(0,0,0,0.2)", //遮罩层背景色<br/>
+				 speed : "0.5s"	//滑出速度，0.5秒<br/>
+				}]]></explain>
+				<explain_en><![CDATA[Configuration parameters, the default configuration parameters inside the function are:<br/>
+				{<br/>
+				bgcolor : "#fff",	//Background color<br/>
+				 width : "70%", //Width<br/>
+				 effect : "1", //Slide out effect 1: upper slide out, 2: left push, 3: right push<br/>
+				 maskBgColor : "rgba(0,0,0,0.2)", //Mask layer background color<br/>
+				 speed : "0.5s"	//Slide out speed, 0.5 seconds<br/>
+				}]]></explain_en>
+				<explain_hk><![CDATA[配置慘數，函數內部默認的配置慘數為：<br/>
+				{<br/>
+				bgcolor : "#fff",	//背景色<br/>
+				 width : "70%", //寬度<br/>
+				 effect : "1", //滑出效果 1：上層滑出，2：左推出，3：右推出<br/>
+				 maskBgColor : "rgba(0,0,0,0.2)", //遮罩層背景色<br/>
+				 speed : "0.5s"	//滑出速度，0.5秒<br/>
+				}]]></explain_hk>
+				<required>false</required>
+			</param>
+		</params>
+		<example>
+			<![CDATA[
+				<a href="javascript: Mobile_NS.createTopfloorPage(1);">
+				        点击在最外层显示id为1的自定义页面
+				</a>
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				<a href="javascript: Mobile_NS.createTopfloorPage(1);">
+				        Click to display custom page with id 1 at the outermost layer
+				</a>
+			]]>
+		</example_en>
+		<example_hk>
+			<![CDATA[
+				<a href="javascript: Mobile_NS.createTopfloorPage(1);">
+				        點擊在最外層顯示id為1的自定義頁面
+				</a>
+			]]>
+		</example_hk>
+	</function>
+	
+	<function>
+		<id>closeTopfloorPage</id>
+		<text>关闭顶层页面</text>
+		<text_en>Close top-floor page</text_en>
+		<text_hk>關閉頂層頁面</text_hk>
+		<desc>调用此方法可以关闭顶层页面。</desc>
+		<desc_en>Call this method to close a top-floor page.</desc_en>
+		<desc_hk>調用此方法可以關閉頂層頁面。</desc_hk>
+		<sign>Mobile_NS.closeTopfloorPage(callbackFn);</sign>
+		<params>
+			<param>
+				<name>callbackFn</name>
+				<type>function</type>
+				<explain>回调函数, 页面关闭后会回调此函数</explain>
+				<explain_en>Callback function, callback after page is closed</explain_en>
+				<explain_hk>回調函數, 頁面關閉後會回調此函數</explain_hk>
+				<required>false</required>
+			</param>
+		</params>
+		<example>
+			<![CDATA[
+				<a href="javascript:Mobile_NS.closeTopfloorPage();">
+				        点击关闭顶层页面
+				</a>
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				<a href="javascript:Mobile_NS.closeTopfloorPage();">
+				        Click to close the top-floor page
+				</a>
+			]]>
+		</example_en>
+		<example_hk>
+			<![CDATA[
+				<a href="javascript:Mobile_NS.closeTopfloorPage();">
+				        點擊關閉頂層頁面
+				</a>
+			]]>
+		</example_hk>		
+	</function>
+	
+	<function>
+		<id>openMap</id>
+		<text>打开地图</text>
+		<text_en>Open map</text_en>
+		<text_hk>打開地圖</text_hk>
+		<desc>调用此方法可以根据中文地址或者经纬度打开地图页面。</desc>
+		<desc_en>Call this method to open a map page based on the Chinese address or latitude and longitude.</desc_en>
+		<desc_hk>調用此方法可以根據中文地址或者經緯度打開地圖頁面。</desc_hk>
+		<sign>Mobile_NS.openMap(destination, coordinateType);</sign>
+		<params>
+			<param>
+				<name>destination</name>
+				<type>String</type>
+				<explain>中文地址 或者 经纬度(格式为：经度,纬度)</explain>
+				<explain_en>Chinese address or latitude and longitude (format: longitude, latitude)</explain_en>
+				<explain_hk>中文地址 或者 經緯度(格式為：經度,緯度)</explain_hk>
+				<required>true</required>
+			</param>
+			<param>
+				<name>coordinateType</name>
+				<type>int</type>
+				<explain><![CDATA[坐标类型，当第一个参数为经纬度时此参数有意义。取值1|2|3，含义为：<br/>1：google,高德,腾讯地图类的坐标系。<br/>2：百度地图类的坐标系。<br/>3：gps类的坐标系。]]></explain>
+				<explain_en><![CDATA[Coordinate type, this parameter has meaning when the first parameter is latitude and longitude. The value 1|2|3 means:<br/>1：Google, Auto Navi, Tencent map coordinate system.<br/>2：Baidu map coordinate system.<br/>3：GPS coordinate system.]]></explain_en>
+				<explain_hk><![CDATA[坐標類型，當第壹個慘數為經緯度時此慘數有意義。取值1|2|3，含義為：<br/>1：google,高德,騰訊地圖類的坐標系。<br/>2：百度地圖類的坐標系。<br/>3：gps類的坐標系。]]></explain_hk>
+				<required>false</required>
+			</param>
+		</params>
+		<example>
+			<![CDATA[
+				<a href="javascript:Mobile_NS.openMap('上海市浦东新区泛微软件大厦');" class="chinese-address">上海市浦东新区泛微软件大厦</a>
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				<a href="javascript:Mobile_NS.openMap('上海市浦东新区泛微软件大厦');" class="chinese-address">上海市浦东新区泛微软件大厦</a>
+			]]>
+		</example_en>
+		<example_hk>
+			<![CDATA[
+				<a href="javascript:Mobile_NS.openMap('上海市浦東新區泛微軟件大廈');" class="chinese-address">上海市浦東新區泛微軟件大廈</a>
+			]]>
+		</example_hk>
+	</function>
+	
+	<function>
+		<id>$f</id>
+		<text>获取表单字段</text>
+		<text_en>Get form fields</text_en>
+		<text_hk>獲取表單字段</text_hk>
+		<desc>使用此方法可以通过字段名称获取表单字段。</desc>
+		<desc_en>Use this method to get form fields by field name.</desc_en>
+		<desc_hk>使用此方法可以通過字段名稱獲取表單字段。</desc_hk>
+		<sign>$f(name);</sign>
+		<params>
+			<param>
+				<name>name</name>
+				<type>String</type>
+				<explain><![CDATA[字段名称(数据库列名称)]]>
+				</explain>
+				<explain_en><![CDATA[Field name (database column name)]]>
+				</explain_en>
+				<explain_hk><![CDATA[字段名稱(數據庫列名稱)]]>
+				</explain_hk>
+				<required>true</required>
+			</param>
+		</params>
+		<return>
+			<![CDATA[
+				系统内置的表单字段对象
+			]]>
+		</return>
+		<return_en>
+			<![CDATA[
+				System built-in form field objects
+			]]>
+		</return_en>
+		<return_hk>
+			<![CDATA[
+				系統內置的表單字段對象
+			]]>
+		</return_hk>
+		<example>
+			<![CDATA[
+				<script>
+				    var v = $f("title").val();				    //获取字段title的值
+				    
+				    $f("title").val("123");				    //设置字段title的值
+				    
+				    $f("title").text();				    //获取字段title的显示值
+				    
+				    $f("title").$Obj;				    //获取字段title对应的zepto对象(高级进阶，需要使用字段对应的zepto对象时使用)
+				</script>
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				<script>
+				    var v = $f("title").val();				    //Get the value of the field named title
+				    
+				    $f("title").val("123");				    //Set the value of the field named title
+				    
+				    $f("title").text();				    //Get the display value of the field named title
+				    
+				    $f("title").$Obj;				    //Get the zepto object corresponding to the field named title(Advanced level, used when using the field's corresponding zepto object)
+				</script>
+			]]>
+		</example_en>
+		<example_hk>
+			<![CDATA[
+				<script>
+				    var v = $f("title").val();				    //獲取字段title的值
+				    
+				    $f("title").val("123");				    //設置字段title的值
+				    
+				    $f("title").text_hk();				    //獲取字段title的顯示值
+				    
+				    $f("title").$Obj;				    //獲取字段title對應的zepto對象(高級進階，需要使用字段對應的zepto對象時使用)
+				</script>
+			]]>
+		</example_hk>		
+	</function>
+	
+	<function>
+		<id>formSubmit</id>
+		<text>提交表单</text>
+		<text_en>Form submit</text_en>
+		<text_hk>提交表單</text_hk>
+		<desc>使用此方法可以提交表单。</desc>
+		<desc_en>Use this method to submit the form.</desc_en>
+		<desc_hk>使用此方法可以提交表單。</desc_hk>
+		<sign>Mobile_NS.formSubmit(formid, callbackFn, successMsg);</sign>
+		<params>
+			<param>
+				<name>formid</name>
+				<type>String</type>
+				<explain><![CDATA[表单插件id]]>
+				</explain>
+				<explain_en><![CDATA[Form plug-in id]]>
+				</explain_en>
+				<explain_hk><![CDATA[表單插件id]]>
+				</explain_hk>
+				<required>true</required>
+			</param>
+			<param>
+				<name>callbackFn</name>
+				<type>function</type>
+				<explain><![CDATA[表单提交成功后的回调函数]]>
+				</explain>
+				<explain_en><![CDATA[Callback function after form submission is successful]]>
+				</explain_en>
+				<explain_hk><![CDATA[表單提交成功後的回調函數]]>
+				</explain_hk>
+				<required>false</required>
+			</param>
+			<param>
+				<name>successMsg</name>
+				<type>String</type>
+				<explain><![CDATA[表单提交成功后的提示信息，可缺省，如缺省系统会提示"保存成功"]]>
+				</explain>
+				<explain_en><![CDATA[The prompt information after the form is submitted successfully, as default the system will prompt "saved successfully."]]>
+				</explain_en>
+				<explain_hk><![CDATA[表單提交成功後的提示信息，可缺省，如缺省系統會提示"保存成功"]]>
+				</explain_hk>
+				<required>false</required>
+			</param>
+		</params>
+		<example>
+			<![CDATA[
+				<script>
+				    Mobile_NS.formSubmit("10f7cc35ccb04f98b9648e70bca867d2", function(billid){
+				        /*表单提交成功后执行此处的代码*/
+				    });
+				</script>
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				<script>
+				    Mobile_NS.formSubmit("10f7cc35ccb04f98b9648e70bca867d2", function(billid){
+				        /*The code here is executed after the form is submitted successfully*/
+				    });
+				</script>
+			]]>
+		</example_en>
+		<example_hk>
+			<![CDATA[
+				<script>
+				    Mobile_NS.formSubmit("10f7cc35ccb04f98b9648e70bca867d2", function(billid){
+				        /*表單提交成功後執行此處的代碼*/
+				    });
+				</script>
+			]]>
+		</example_hk>
+	</function>
+	
+	<function>
+		<id>$u</id>
+		<text>打开页面</text>
+		<text_en>Open page</text_en>
+		<text_hk>打開頁面</text_hk>
+		<desc>在移动建模中打开一个页面。</desc>
+		<desc_en>Open a page in Mobile modeling.</desc_en>
+		<desc_hk>在移動建模中打開壹個頁面。</desc_hk>
+		<sign>$u(url, ele);</sign>
+		<params>
+			<param>
+				<name>url</name>
+				<type>String</type>
+				<explain>页面地址</explain>
+				<explain_en>Page url</explain_en>
+				<explain_hk>頁面地址</explain_hk>
+				<required>true</required>
+			</param>
+			<param>
+				<name>ele</name>
+				<type>Dom Element</type>
+				<explain><![CDATA[页面DOM元素，如传递此参数，打开页面时<br/>会给DOM元素增加一个名称为link_active的样式]]></explain>
+				<explain_en><![CDATA[The page DOM element, passing this parameter will add a style named link_active to the DOM element when the page is opened]]></explain_en>
+				<explain_hk><![CDATA[頁面DOM元素，如傳遞此慘數，打開頁面時<br/>會給DOM元素增加壹個名稱為link_active的洋式]]></explain_hk>
+				<required>false</required>
+			</param>
+		</params>
+		<example>
+			<![CDATA[
+				<a href="javascript:$u('/mobilemode/appHomepageView.jsp?appHomepageId=1');">
+				        点击打开id为1的自定义页面
+				</a>
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				<a href="javascript:$u('/mobilemode/appHomepageView.jsp?appHomepageId=1');">
+				        Click to open a custom page with id 1
+				</a>
+			]]>
+		</example_en>
+		<example_hk>
+			<![CDATA[
+				<a href="javascript:$u('/mobilemode/appHomepageView.jsp?appHomepageId=1');">
+				        點擊打開id為1的自定義頁面
+				</a>
+			]]>
+		</example_hk>
+	</function>
+	
+	<function>
+		<id>$u_l_replace</id>
+		<text>打开页面(从左侧)</text>
+		<text_en>Open page (from left)</text_en>
+		<text_hk>打開頁面(從左側)</text_hk>
+		<desc>在移动建模中从左侧打开一个页面并覆盖当前页面。</desc>
+		<desc_en>Open a page from the left and overwrite the current page in Mobile modeling.</desc_en>
+		<desc_hk>在移動建模中從左側打開壹個頁面並覆蓋當前頁面。</desc_hk>
+		<sign>$u_l_replace(url, ele);</sign>
+		<params>
+			<param>
+				<name>url</name>
+				<type>String</type>
+				<explain>页面地址</explain>
+				<explain_en>Page url</explain_en>
+				<explain_hk>頁面地址</explain_hk>
+				<required>true</required>
+			</param>
+			<param>
+				<name>ele</name>
+				<type>Dom Element</type>
+				<explain><![CDATA[页面DOM元素，如传递此参数，打开页面时<br/>会给DOM元素增加一个名称为link_active的样式]]></explain>
+				<explain_en><![CDATA[The page DOM element, passing this parameter will add a style named link_active to the DOM element when the page is opened]]></explain_en>
+				<explain_hk><![CDATA[頁面DOM元素，如傳遞此慘數，打開頁面時<br/>會給DOM元素增加壹個名稱為link_active的洋式]]></explain_hk>
+				<required>false</required>
+			</param>
+		</params>
+		<example>
+			<![CDATA[
+				<a href="$u_l_replace('/mobilemode/appHomepageView.jsp?appHomepageId=1');">
+				        点击从左侧打开id为1的自定义页面并覆盖当前页面
+				</a>
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				<a href="$u_l_replace('/mobilemode/appHomepageView.jsp?appHomepageId=1');">
+				        Click to open a custom page with id 1 from the left and overwrite the current page
+				</a>
+			]]>
+		</example_en>
+		<example_hk>
+			<![CDATA[
+				<a href="$u_l_replace('/mobilemode/appHomepageView.jsp?appHomepageId=1');">
+				        點擊從左側打開id為1的自定義頁面並覆蓋當前頁面
+				</a>
+			]]>
+		</example_hk>
+	</function>
+	
+	<function>
+		<id>$u_r_replace</id>
+		<text>打开页面(从右侧)</text>
+		<text_en>Open page (from right)</text_en>
+		<text_hk>打開頁面(從右側)</text_hk>
+		<desc>在移动建模中从右侧打开一个页面并覆盖当前页面。</desc>
+		<desc_en>Open a page from the right and overwrite the current page in Mobile modeling.</desc_en>
+		<desc_hk>在移動建模中從右側打開壹個頁面並覆蓋當前頁面。</desc_hk>
+		<sign>$u_r_replace(url, ele);</sign>
+		<params>
+			<param>
+				<name>url</name>
+				<type>String</type>
+				<explain>页面地址</explain>
+				<explain_en>Page url</explain_en>
+				<explain_hk>頁面地址</explain_hk>
+				<required>true</required>
+			</param>
+			<param>
+				<name>ele</name>
+				<type>Dom Element</type>
+				<explain><![CDATA[页面DOM元素，如传递此参数，打开页面时<br/>会给DOM元素增加一个名称为link_active的样式]]></explain>
+				<explain_en><![CDATA[The page DOM element, passing this parameter will add a style named link_active to the DOM element when the page is opened]]></explain_en>
+				<explain_hk><![CDATA[頁面DOM元素，如傳遞此慘數，打開頁面時<br/>會給DOM元素增加壹個名稱為link_active的洋式]]></explain_hk>
+				<required>false</required>
+			</param>
+		</params>
+		<example>
+			<![CDATA[
+				<a href="$u_r_replace('/mobilemode/appHomepageView.jsp?appHomepageId=1');">
+				        点击从右侧打开id为1的自定义页面并覆盖当前页面
+				</a>
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				<a href="$u_r_replace('/mobilemode/appHomepageView.jsp?appHomepageId=1');">
+				        Click to open a custom page with id 1 from the right and overwrite the current page
+				</a>
+			]]>
+		</example_en>
+		<example_hk>
+			<![CDATA[
+				<a href="$u_r_replace('/mobilemode/appHomepageView.jsp?appHomepageId=1');">
+				        點擊從右側打開id為1的自定義頁面並覆蓋當前頁面
+				</a>
+			]]>
+		</example_hk>
+	</function>
+	
+	<function>
+		<id>backPage</id>
+		<text>返回</text>
+		<text_en>Back</text_en>
+		<desc>返回上一个页面。</desc>
+		<desc_en>Return to the previous page.</desc_en>
+		<desc_hk>返回上壹個頁面。</desc_hk>
+		<sign>Mobile_NS.backPage();</sign>
+		<example>
+			<![CDATA[
+				<a href="javascript:Mobile_NS.backPage();">返回</a>
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				<a href="javascript:Mobile_NS.backPage();">Back</a>
+			]]>
+		</example_en>
+	</function>
+	
+	<function>
+		<id>showLoader</id>
+		<text>显示Loading</text>
+		<text_en>Show loading</text_en>
+		<text_hk>顯示Loading</text_hk>
+		<desc>调用此方法可以显示页面Loading。</desc>
+		<desc_en>Call this method to display page loading.</desc_en>
+		<desc_hk>調用此方法可以顯示頁面Loading。</desc_hk>
+		<sign>Mobile_NS.showLoader();</sign>
+		<example>
+			<![CDATA[
+				<script>
+				    function loadData(){
+				        alert("开始加载数据");
+				        Mobile_NS.showLoader();
+				        setTimeout(function(){
+				            alert("数据加载完成");
+				            Mobile_NS.hideLoader();
+				        }, 2000);
+				    }
+				</script>
+				<a href="javascript:loadData();">点击模拟加载数据</a>
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				<script>
+				    function loadData(){
+				        alert("Start loading data");
+				        Mobile_NS.showLoader();
+				        setTimeout(function(){
+				            alert("Data loading completed");
+				            Mobile_NS.hideLoader();
+				        }, 2000);
+				    }
+				</script>
+				<a href="javascript:loadData();">Click to simulate loading data</a>
+			]]>
+		</example_en>
+		<example_hk>
+			<![CDATA[
+				<script>
+				    function loadData(){
+				        alert("開始加載數據");
+				        Mobile_NS.showLoader();
+				        setTimeout(function(){
+				            alert("數據加載完成");
+				            Mobile_NS.hideLoader();
+				        }, 2000);
+				    }
+				</script>
+				<a href="javascript:loadData();">點擊模擬加載數據</a>
+			]]>
+		</example_hk>
+	</function>
+	
+	<function>
+		<id>hideLoader</id>
+		<text>隐藏Loading</text>
+		<text_en>Hide loading</text_en>
+		<text_hk>隱藏Loading</text_hk>
+		<desc>调用此方法可以隐藏页面Loading。</desc>
+		<desc_en>Call this method to hide page loading.</desc_en>
+		<desc_hk>調用此方法可以隱藏頁面Loading。</desc_hk>
+		<sign>Mobile_NS.hideLoader();</sign>
+		<example>
+			<![CDATA[
+				<script>
+				    function loadData(){
+				        alert("开始加载数据");
+				        Mobile_NS.showLoader();
+				        setTimeout(function(){
+				            alert("数据加载完成");
+				            Mobile_NS.hideLoader();
+				        }, 2000);
+				    }
+				</script>
+				<a href="javascript:loadData();">点击模拟加载数据</a>
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				<script>
+				    function loadData(){
+				        alert("Start loading data");
+				        Mobile_NS.showLoader();
+				        setTimeout(function(){
+				            alert("Data loading completed");
+				            Mobile_NS.hideLoader();
+				        }, 2000);
+				    }
+				</script>
+				<a href="javascript:loadData();">Click to simulate loading data</a>
+			]]>
+		</example_en>
+		<example_hk>
+			<![CDATA[
+				<script>
+				    function loadData(){
+				        alert("開始加載數據");
+				        Mobile_NS.showLoader();
+				        setTimeout(function(){
+				            alert("數據加載完成");
+				            Mobile_NS.hideLoader();
+				        }, 2000);
+				    }
+				</script>
+				<a href="javascript:loadData();">點擊模擬加載數據</a>
+			]]>
+		</example_hk>
+	</function>
+	
+	<function>
+		<id>ajax</id>
+		<text>ajax请求</text>
+		<text_en>Ajax request</text_en>
+		<text_hk>ajax請求</text_hk>
+		<desc>调用此方法可以发送ajax请求。</desc>
+		<desc_en>Call this method to send an Ajax request.</desc_en>
+		<desc_hk>調用此方法可以發送ajax請求。</desc_hk>
+		<sign>Mobile_NS.ajax(url, paramData, callbackFn, type);</sign>
+		<params>
+			<param>
+				<name>url</name>
+				<type>String</type>
+				<explain>页面地址</explain>
+				<explain_en>Page url</explain_en>
+				<explain_hk>頁面地址</explain_hk>
+				<required>true</required>
+			</param>
+			<param>
+				<name>paramData</name>
+				<type>json</type>
+				<explain><![CDATA[待发送 Key/value 参数]]></explain>
+				<explain_en><![CDATA[To be sent Key/value parameter]]></explain_en>
+				<explain_hk><![CDATA[待發送 Key/value 慘數]]></explain_hk>
+				<required>false</required>
+			</param>
+			<param>
+				<name>callbackFn</name>
+				<type>function</type>
+				<explain>调用成功后的回调函数</explain>
+				<explain_en>Callback function after successful call</explain_en>
+				<explain_hk>調用成功後的回調函數</explain_hk>
+				<required>false</required>
+			</param>
+			<param>
+				<name>type</name>
+				<type>String</type>
+				<explain>返回内容格式，xml, html, script, json, text, _default</explain>
+				<explain_en>Return content format, xml, html, script, json, text, _default</explain_en>
+				<explain_hk>返回內容格式，xml, html, script, json, text_hk, _default</explain_hk>
+				<required>false</required>
+			</param>
+		</params>
+		<example>
+			<![CDATA[
+				<script>
+				    Mobile_NS.ajax("/a.jsp", {name : "aaa"}, function(responseText){
+				    });
+				</script>
+			]]>
+		</example>
+	</function>
+	
+	<function>
+		<id>triggerRefresh</id>
+		<text>插件刷新</text>
+		<text_en>Plug-in refresh</text_en>
+		<desc>调用此方法可以刷新插件。</desc>
+		<desc_en>Call this method to refresh the plug-in.</desc_en>
+		<desc_hk>調用此方法可以刷新插件。</desc_hk>
+		<sign>Mobile_NS.triggerRefresh(mec_id, params, callbackFn);</sign>
+		<params>
+			<param>
+				<name>mec_id</name>
+				<type>String</type>
+				<explain>插件id</explain>
+				<explain_en>Plug-in id</explain_en>
+				<required>true</required>
+			</param>
+			<param>
+				<name>params</name>
+				<type>json</type>
+				<explain>参数(刷新时会传递到后台可以使用)</explain>
+				<explain_en>Parameters (passed to use in the background when refreshed)</explain_en>
+				<explain_hk>慘數(刷新時會傳遞到後臺可以使用)</explain_hk>
+				<required>false</required>
+			</param>
+			<param>
+				<name>callbackFn</name>
+				<type>function</type>
+				<explain>刷新完成后的回调函数</explain>
+				<explain_en>Callback function after refresh completed</explain_en>
+				<explain_hk>刷新完成後的回調函數</explain_hk>
+				<required>false</required>
+			</param>
+		</params>
+		<example>
+			<![CDATA[
+				<a href="javascript:Mobile_NS.triggerRefresh('C6797274739000019675C8BAFEE01F3F');">
+				    刷新插件
+				</a>
+
+				<a href="javascript:Mobile_NS.triggerRefresh('C6797274739000019675C8BAFEE01F3F', {'startDate':'2015-01-01', 'endDate':'2015-01-31'});">
+				    刷新插件
+				</a>
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				<a href="javascript:Mobile_NS.triggerRefresh('C6797274739000019675C8BAFEE01F3F');">
+				    Refresh the plugin
+				</a>
+
+				<a href="javascript:Mobile_NS.triggerRefresh('C6797274739000019675C8BAFEE01F3F', {'startDate':'2015-01-01', 'endDate':'2015-01-31'});">
+				    Refresh the plugin
+				</a>
+			]]>
+		</example_en>
+	</function>
+	
+	<function>
+		<id>triggerLazyLoad</id>
+		<text>触发延迟加载</text>
+		<text_en>Trigger lazy loading</text_en>
+		<text_hk>觸發延遲加載</text_hk>
+		<desc>调用此方法可以触发被设置为延迟加载的插件加载。</desc>
+		<desc_en>Calling this method can trigger plug-in loading that is set to lazy loading.</desc_en>
+		<desc_hk>調用此方法可以觸發被設置為延遲加載的插件加載。</desc_hk>
+		<sign>Mobile_NS.triggerLazyLoad(mec_id, params, callbackFn);</sign>
+		<params>
+			<param>
+				<name>mec_id</name>
+				<type>String</type>
+				<explain>插件id</explain>
+				<explain_en>Plug-in id</explain_en>
+				<required>true</required>
+			</param>
+			<param>
+				<name>params</name>
+				<type>json</type>
+				<explain>参数(触发加载时会传递到后台可以使用)</explain>
+				<explain_en>Parameters (passed to use in the background when triggered to load)</explain_en>
+				<explain_hk>慘數(觸發加載時會傳遞到後臺可以使用)</explain_hk>
+				<required>false</required>
+			</param>
+			<param>
+				<name>callbackFn</name>
+				<type>function</type>
+				<explain>加载完成后的回调函数</explain>
+				<explain_en>Callback function after loading</explain_en>
+				<explain_hk>加載完成後的回調函數</explain_hk>
+				<required>false</required>
+			</param>
+		</params>
+		<example>
+			<![CDATA[
+			<script>
+				1.Mobile_NS.triggerLazyLoad("C7A71B0E3F500001BD73A05E27D070C0", {"sqlwhere":"status=1"});
+				
+				2.条件中带页面参数
+				Mobile_NS.triggerLazyLoad("C7A71B0E3F500001BD73A05E27D070C0", {"sqlwhere":"status={status}"});
+				
+				3.列表刷新，条件中带有本地变量，如：
+				var prjid = $("input[name='fieldname_prjid']").val();
+				Mobile_NS.triggerLazyLoad("C7A71B0E3F500001BD73A05E27D070C0", {"sqlwhere":"projectid={prjidaaa}", "prjidaaa":prjid});
+			</script>
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+			<script>
+				1.Mobile_NS.triggerLazyLoad("C7A71B0E3F500001BD73A05E27D070C0", {"sqlwhere":"status=1"});
+				
+				2.Conditions with page parameters
+				Mobile_NS.triggerLazyLoad("C7A71B0E3F500001BD73A05E27D070C0", {"sqlwhere":"status={status}"});
+				
+				3.List refreshed, conditions with local variables, such as:
+				var prjid = $("input[name='fieldname_prjid']").val();
+				Mobile_NS.triggerLazyLoad("C7A71B0E3F500001BD73A05E27D070C0", {"sqlwhere":"projectid={prjidaaa}", "prjidaaa":prjid});
+			</script>
+			]]>
+		</example_en>
+		<example_hk>
+			<![CDATA[
+			<script>
+				1.Mobile_NS.triggerLazyLoad("C7A71B0E3F500001BD73A05E27D070C0", {"sqlwhere":"status=1"});
+				
+				2.條件中帶頁面慘數
+				Mobile_NS.triggerLazyLoad("C7A71B0E3F500001BD73A05E27D070C0", {"sqlwhere":"status={status}"});
+				
+				3.列表刷新，條件中帶有本地變量，如：
+				var prjid = $("input[name='fieldname_prjid']").val();
+				Mobile_NS.triggerLazyLoad("C7A71B0E3F500001BD73A05E27D070C0", {"sqlwhere":"projectid={prjidaaa}", "prjidaaa":prjid});
+			</script>
+			]]>
+		</example_hk>
+	</function>
+	
+	<function>
+		<id>getCurrUser</id>
+		<text>获取当前用户</text>
+		<text_en>Get current user</text_en>
+		<text_hk>獲取當前用護</text_hk>
+		<desc>调用此方法可以获取当前用户。</desc>
+		<desc_en>Call this method to get the current user.</desc_en>
+		<desc_hk>調用此方法可以獲取當前用護。</desc_hk>
+		<sign>Mobile_NS.getCurrUser();</sign>
+		<return>
+			<![CDATA[
+				返回当前用户的id。
+			]]>
+		</return>
+		<return_en>
+			<![CDATA[
+				Returns the current user id.
+			]]>
+		</return_en>
+		<return_hk>
+			<![CDATA[
+				返回當前用護的id。
+			]]>
+		</return_hk>
+		<example>
+			<![CDATA[
+				alert(Mobile_NS.getCurrUser());    // maybe 127
+			]]>
+		</example>
+	</function>
+	
+	<function>
+		<id>scanQRCode</id>
+		<text>二维码扫描</text>
+		<text_en>QR code scanning</text_en>
+		<text_hk>二維碼掃描</text_hk>
+		<desc>调用此方法可以扫描二维码。</desc>
+		<desc_en>Call this method to scan the QR code.</desc_en>
+		<desc_hk>調用此方法可以掃描二維碼。</desc_hk>
+		<sign>Mobile_NS.scanQRCode(fn);</sign>
+		<params>
+			<param>
+				<name>fn</name>
+				<type>function</type>
+				<explain>扫描完成后的回调函数</explain>
+				<explain_en>Callback function after scan completed</explain_en>
+				<explain_hk>掃描完成後的回調函數</explain_hk>
+				<required>true</required>
+			</param>
+		</params>
+		<example>
+			<![CDATA[
+				<a id="testA" href="javascript:void(0);">二维码扫描</a>
+				<script>
+				    $("#testA").click(function(){
+				        Mobile_NS.scanQRCode(function(result){
+				            alert("扫描结果：" + result);
+				        });
+				    });
+				</script>
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				<a id="testA" href="javascript:void(0);">QR code scanning</a>
+				<script>
+				    $("#testA").click(function(){
+				        Mobile_NS.scanQRCode(function(result){
+				            alert("Scan result：" + result);
+				        });
+				    });
+				</script>
+			]]>
+		</example_en>
+		<example_hk>
+			<![CDATA[
+				<a id="testA" href="javascript:void(0);">二維碼掃描</a>
+				<script>
+				    $("#testA").click(function(){
+				        Mobile_NS.scanQRCode(function(result){
+				            alert("掃描結果：" + result);
+				        });
+				    });
+				</script>
+			]]>
+		</example_hk>
+	</function>
+	
+	<function>
+		<id>callWebService</id>
+		<text>调用WebService</text>
+		<text_en>Call WebService</text_en>
+		<text_hk>調用WebService</text_hk>
+		<desc>使用此方法可以调用WebService。</desc>
+		<desc_en>Use this method to call the WebService.</desc_en>
+		<desc_hk>使用此方法可以調用WebService。</desc_hk>
+		<sign>Mobile_NS.callWebService(wsParam);</sign>
+		<params>
+			<param>
+				<name>wsParam</name>
+				<type>json</type>
+				<explain><![CDATA[配置参数，如：<br/>
+				{<br/>
+				 endpoint : "",	<br/>
+				 namespace : "", //命名空间<br/>
+				 operationName : "", //方法名称<br/>
+				 parameters : [], //输入参数<br/>
+				 callbackFn : function(result){}	//调用完成后的回调函数<br/>
+				}]]>
+				</explain>
+				<explain_en><![CDATA[Configuration parameters, such as：<br/>
+				{<br/>
+				 endpoint : "",	<br/>
+				 namespace : "", //Namespaces<br/>
+				 operationName : "", //Operation name<br/>
+				 parameters : [], //Parameters<br/>
+				 callbackFn : function(result){}	//Callback function after call completed<br/>
+				}]]>
+				</explain_en>
+				<explain_hk><![CDATA[配置慘數，如：<br/>
+				{<br/>
+				 endpoint : "",	<br/>
+				 namespace : "", //命名空間<br/>
+				 operationName : "", //方法名稱<br/>
+				 parameters : [], //輸入慘數<br/>
+				 callbackFn : function(result){}	//調用完成後的回調函數<br/>
+				}]]>
+				</explain_hk>
+				<required>true</required>
+			</param>
+		</params>
+		<example>
+			<![CDATA[
+				<script>
+				    Mobile_NS.callWebService({
+				        endpoint : "http://192.168.3.170:81/ws/RequestBaseService",
+				        operationName : "testWS",
+				        parameters : [{
+				            name : "objname",
+				            type : "String",
+				            value : "Jason"
+				        }],
+				        callbackFn : function(result){
+				            alert("webservice result：" + result);
+				        }
+				    });
+				</script>
+			]]>
+		</example>
+	</function>
+	
+	<function>
+		<id>getCurrentPosition</id>
+		<text>获取当前位置</text>
+		<text_en>Get current location</text_en>
+		<text_hk>獲取當前位置</text_hk>
+		<desc>使用此方法可以获取当前位置。</desc>
+		<desc_en>Use this method to get the current position.</desc_en>
+		<desc_hk>使用此方法可以獲取當前位置。</desc_hk>
+		<sign>Mobile_NS.getCurrentPosition(fn);</sign>
+		<params>
+			<param>
+				<name>fn</name>
+				<type>function</type>
+				<explain>定位完成后的回调函数</explain>
+				<explain_en>Callback function after positioning completed</explain_en>
+				<explain_hk>定位完成後的回調函數</explain_hk>
+				<required>true</required>
+			</param>
+		</params>
+		<example>
+			<![CDATA[
+				<a id="testA" href="javascript:void(0);">当前位置</a>
+				<script>
+				    $("#testA").click(function(){
+				        Mobile_NS.getCurrentPosition(function(result){
+				            var status = result["status"];
+				            if(status == "1"){
+				                var lng = result["lng"];      /* 经度  -- 31.173211 */
+				                var lat = result["lat"];        /* 纬度  -- 121.475134 */
+				                var addr = result["addr"];  /* 中文地址  -- 湖北省武汉市江汉区 长青路288号 */
+				                var province = result["province"];  /* 省份 -- 湖北省 */
+				                var city = result["city"];  /* 城市  -- 武汉市 */
+				                var district = result["district"];  /* 区  -- 江汉区 */
+				                var street = result["street"];  /* 街道  -- 长青路 */
+				                var streetNumber = result["streetNumber"];  /* 街道号码  -- 288号 */
+				            }else{
+				                var errMsg = result["errMsg"];
+				                alert("errr:" + errMsg);
+				            }
+				        });
+				    });
+				</script>
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				<a id="testA" href="javascript:void(0);">Current position</a>
+				<script>
+				    $("#testA").click(function(){
+				        Mobile_NS.getCurrentPosition(function(result){
+				            var status = result["status"];
+				            if(status == "1"){
+				                var lng = result["lng"];      /* Longitude  -- 31.173211 */
+				                var lat = result["lat"];        /* Latitude  -- 121.475134 */
+				                var addr = result["addr"];  /* Chinese address  -- 湖北省武汉市江汉区 长青路288号 */
+				                var province = result["province"];  /* Province -- 湖北省 */
+				                var city = result["city"];  /* City  -- 武汉市 */
+				                var district = result["district"];  /* District  -- 江汉区 */
+				                var street = result["street"];  /* Street  -- 长青路 */
+				                var streetNumber = result["streetNumber"];  /* Street number  -- 288号 */
+				            }else{
+				                var errMsg = result["errMsg"];
+				                alert("errr:" + errMsg);
+				            }
+				        });
+				    });
+				</script>
+			]]>
+		</example_en>
+		<example_hk>
+			<![CDATA[
+				<a id="testA" href="javascript:void(0);">當前位置</a>
+				<script>
+				    $("#testA").click(function(){
+				        Mobile_NS.getCurrentPosition(function(result){
+				            var status = result["status"];
+				            if(status == "1"){
+				                var lng = result["lng"];      /* 經度  -- 31.173211 */
+				                var lat = result["lat"];        /* 緯度  -- 121.475134 */
+				                var addr = result["addr"];  /* 中文地址  -- 湖北省武漢市江漢區 長青路288號 */
+				                var province = result["province"];  /* 省份 -- 湖北省 */
+				                var city = result["city"];  /* 城市  -- 武漢市 */
+				                var district = result["district"];  /* 區  -- 江漢區 */
+				                var street = result["street"];  /* 街道  -- 長青路 */
+				                var streetNumber = result["streetNumber"];  /* 街道號碼  -- 288號 */
+				            }else{
+				                var errMsg = result["errMsg"];
+				                alert("errr:" + errMsg);
+				            }
+				        });
+				    });
+				</script>
+			]]>
+		</example_hk>
+	</function>
+	
+	<function>
+		<id>openLBSWin</id>
+		<text>打开定位页面</text>
+		<text_en>Open the positioning page</text_en>
+		<text_hk>打開定位頁面</text_hk>
+		<desc>使用此方法可以打开定位页面。</desc>
+		<desc_en>Use this method to open the positioning page.</desc_en>
+		<desc_hk>使用此方法可以打開定位頁面。</desc_hk>
+		<sign>Mobile_NS.openLBSWin(paramObj);</sign>
+		<params>
+			<param>
+				<name>paramObj</name>
+				<type>json</type>
+				<explain><![CDATA[配置参数，如：<br/>
+				{<br/>
+				 posType : "1",	//定位类型, 默认"1"。    <br/>
+				  1.只显示当前位置       <br/>
+				  2.显示当前位置和周围热点     <br/>
+				  3.显示当前位置和周围热点，并允许改变当前位置<br/>
+				 btnText : "确定", //按钮文字, 默认"确定"<br/>
+				 poiRadius : 500, //poi半径，单位米，默认500<br/>
+				 numPois : 12, //列举poi的数量，默认12<br/>
+				 success : function(gpsstr, address){}	//回调函数<br/>
+				}]]>
+				</explain>
+				<explain_en><![CDATA[Configuration parameters, such as:<br/>
+				{<br/>
+				 posType : "1",	//Positioning type, default "1".<br/>
+				  1. Only show current location<br/>
+				  2. Show current location and surrounding hotspot<br/>
+				  3. Show current location and surrounding hotspots, and allows to change the current location<br/>
+				 btnText : "done", //Button text, default "done"<br/>
+				 poiRadius : 500, //Poi radius, in meters, default 500<br/>
+				 numPois : 12, //List the number of poi, default 12<br/>
+				 success : function(gpsstr, address){}	//Callback<br/>
+				}]]>
+				</explain_en>
+				<explain_hk><![CDATA[配置慘數，如：<br/>
+				{<br/>
+				 posType : "1",	//定位類型, 默認"1"。    <br/>
+				  1.只顯示當前位置       <br/>
+				  2.顯示當前位置和周圍熱點     <br/>
+				  3.顯示當前位置和周圍熱點，並允許改變當前位置<br/>
+				 btntext_hk : "確定", //按鈕文字, 默認"確定"<br/>
+				 poiRadius : 500, //poi半徑，單位米，默認500<br/>
+				 numPois : 12, //列舉poi的數量，默認12<br/>
+				 success : function(gpsstr, address){}	//回調函數<br/>
+				}]]>
+				</explain_hk>
+				<required>true</required>
+			</param>
+		</params>
+		<example>
+			<![CDATA[
+				<a href="javascript:testFN();">定位</a>
+				<script>
+				    function testFN(){
+				        Mobile_NS.openLBSWin(function(gpsstr, address){
+				            //gpsstr: "31.173211,121.475134"	//address: "上海市浦东新区耀华支路39弄9号"
+				        });
+				    }
+				</script>
+				<a href="javascript:testFN2();">定位2</a>
+				<script>
+				    function testFN2(){
+				        Mobile_NS.openLBSWin({
+				            posType : "3",
+				            success: function(gpsstr, address){
+				                //gpsstr: "31.173211,121.475134"	//address: "上海市浦东新区耀华支路39弄9号"
+				            }
+				        });
+				    }
+				</script>
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				<a href="javascript:testFN();">Positioning</a>
+				<script>
+				    function testFN(){
+				        Mobile_NS.openLBSWin(function(gpsstr, address){
+				            //gpsstr: "31.173211,121.475134"	//address: "上海市浦东新区耀华支路39弄9号"
+				        });
+				    }
+				</script>
+				<a href="javascript:testFN2();">Positioning2</a>
+				<script>
+				    function testFN2(){
+				        Mobile_NS.openLBSWin({
+				            posType : "3",
+				            success: function(gpsstr, address){
+				                //gpsstr: "31.173211,121.475134"	//address: "上海市浦东新区耀华支路39弄9号"
+				            }
+				        });
+				    }
+				</script>
+			]]>
+		</example_en>
+	</function>
+	
+	<function>
+		<id>listenPageChange</id>
+		<text>监听页面改变</text>
+		<text_en>Listen to page changes</text_en>
+		<text_hk>監聽頁面改變</text_hk>
+		<desc>使用此方法可以注册事件来监听页面改变。</desc>
+		<desc_en>Use this method to register events to listen for page changes.</desc_en>
+		<desc_hk>使用此方法可以註冊事件來監聽頁面改變。</desc_hk>
+		<sign>Mobile_NS.listenPageChange(fn);</sign>
+		<params>
+			<param>
+				<name>fn</name>
+				<type>function</type>
+				<explain><![CDATA[回调函数，当页面内容发生改变时回调(回调函数可注册多个)。]]>
+				</explain>
+				<explain_en><![CDATA[Callback function that calls back when the content of the page changes (the callback function can register multiple).]]>
+				</explain_en>
+				<explain_hk><![CDATA[回調函數，當頁面內容發生改變時回調(回調函數可註冊多個)。]]>
+				</explain_hk>
+				<required>true</required>
+			</param>
+		</params>
+		<example>
+			<![CDATA[
+				<script>
+				    Mobile_NS.listenPageChange(function(source){
+				        alert(source.id);    //maybe C6B8008D47C00001A14E1AF53CD01E9E
+				        alert(source.type);    //maybe pageList
+				        //do something here...
+				    });
+				</script>
+				
+				source.id: 引起页面内容发生变化的源的id，如果是插件内容发生变化，此处则是插件的id
+				source.type: 变化源的类型，目前已有：pageList(列表翻页), refreshList(列表刷新[查询])
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				<script>
+				    Mobile_NS.listenPageChange(function(source){
+				        alert(source.id);    //maybe C6B8008D47C00001A14E1AF53CD01E9E
+				        alert(source.type);    //maybe pageList
+				        //do something here...
+				    });
+				</script>
+				
+				source.id: The id of the source that caused the content of the page to change. If the content of the plugin changes, this is the id of the plugin.
+				source.type: The type of change source, currently: pageList (list page flip), refreshList (list refresh [query])
+			]]>
+		</example_en>
+		<example_hk>
+			<![CDATA[
+				<script>
+				    Mobile_NS.listenPageChange(function(source){
+				        alert(source.id);    //maybe C6B8008D47C00001A14E1AF53CD01E9E
+				        alert(source.type);    //maybe pageList
+				        //do something here...
+				    });
+				</script>
+				
+				source.id: 引起頁面內容發生變化的源的id，如果是插件內容發生變化，此處則是插件的id
+				source.type: 變化源的類型，目前已有：pageList(列表翻頁), refreshList(列表刷新[查詢])
+			]]>
+		</example_hk>
+	</function>
+	
+	<function>
+		<id>refreshList</id>
+		<text>刷新列表</text>
+		<text_en>Refresh List</text_en>
+		<desc>使用此方法可以刷新当前页面的列表类插件(如 刷新列表，刷新时间轴，刷新表格等)。</desc>
+		<desc_en>Use this method to refresh the list plug-ins for the current page (such as refresh the list, refresh the timeline, refresh the table, etc.).</desc_en>
+		<desc_hk>使用此方法可以刷新當前頁面的列表類插件(如 刷新列表，刷新時間軸，刷新表格等)。</desc_hk>
+		<sign>Mobile_NS.refreshList(mec_id, listparams, callbackFn);</sign>
+		<params>
+			<param>
+				<name>mec_id</name>
+				<type>String</type>
+				<explain><![CDATA[插件id。如果页面上只有一个列表类插件并且不需要附带过滤条件，此参数可以省略。]]>
+				</explain>
+				<explain_en><![CDATA[Plug-in id. This parameter can be omitted if there is only one List plug-in on the page and no filter condition is required.]]>
+				</explain_en>
+				<explain_hk><![CDATA[插件id。如果頁面上只有壹個列表類插件並且不需要附帶過濾條件，此慘數可以省略。]]>
+				</explain_hk>
+				<required>false</required>
+			</param>
+			<param>
+				<name>listparams</name>
+				<type>String</type>
+				<explain><![CDATA[刷新时附带的过滤条件，如type=1，多个参数使用英文;分隔。]]>
+				</explain>
+				<explain_en><![CDATA[The filter conditions attached to the refresh, such as type=1, multiple parameters are separated by ';'.]]>
+				</explain_en>
+				<explain_hk><![CDATA[刷新時附帶的過濾條件，如type=1，多個慘數使用英文;分隔。]]>
+				</explain_hk>
+				<required>false</required>
+			</param>
+			<param>
+				<name>callbackFn</name>
+				<type>function</type>
+				<explain><![CDATA[刷新完成后的回调函数]]>
+				</explain>
+				<explain_en><![CDATA[Callback function after refresh completed]]>
+				</explain_en>
+				<explain_hk><![CDATA[刷新完成後的回調函數]]>
+				</explain_hk>
+				<required>false</required>
+			</param>
+		</params>
+		<example>
+			<![CDATA[
+				<script>
+					1.列表刷新，条件中不带页面参数或者本地变量
+					Mobile_NS.refreshList("C6AABBD51A5000015DE3122FB0601EF0", "sqlwhere=type=1");
+				    
+					2.列表刷新，条件中带页面参数
+					Mobile_NS.refreshList("C7A71B0E3F500001BD73A05E27D070C0", "sqlwhere=status={status}");
+					
+					3.列表刷新，条件中带有本地变量
+					var prjid = $("input[name='fieldname_prjid']").val();
+					Mobile_NS.refreshList("C7A71B0E3F500001BD73A05E27D070C0", "sqlwhere=projectid={prjidaaa};prjidaaa="+prjid);				    
+				</script>
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				<script>
+					1. List refresh, conditions without page parameters or local variables
+					Mobile_NS.refreshList("C6AABBD51A5000015DE3122FB0601EF0", "sqlwhere=type=1");
+				    
+					2. List refresh, conditions with page parameters
+					Mobile_NS.refreshList("C7A71B0E3F500001BD73A05E27D070C0", "sqlwhere=status={status}");
+					
+					3. List refresh, conditions with local variables 
+					var prjid = $("input[name='fieldname_prjid']").val();
+					Mobile_NS.refreshList("C7A71B0E3F500001BD73A05E27D070C0", "sqlwhere=projectid={prjidaaa};prjidaaa="+prjid);				    
+				</script>
+			]]>
+		</example_en>
+		<example_hk>
+			<![CDATA[
+				<script>
+					1.列表刷新，條件中不帶頁面慘數或者本地變量
+					Mobile_NS.refreshList("C6AABBD51A5000015DE3122FB0601EF0", "sqlwhere=type=1");
+				    
+					2.列表刷新，條件中帶頁面慘數
+					Mobile_NS.refreshList("C7A71B0E3F500001BD73A05E27D070C0", "sqlwhere=status={status}");
+					
+					3.列表刷新，條件中帶有本地變量
+					var prjid = $("input[name='fieldname_prjid']").val();
+					Mobile_NS.refreshList("C7A71B0E3F500001BD73A05E27D070C0", "sqlwhere=projectid={prjidaaa};prjidaaa="+prjid);				    
+				</script>
+			]]>
+		</example_hk>
+	</function>
+	
+	<function>
+		<id>refreshPrevPageList</id>
+		<text>刷新前一个页面的列表</text>
+		<text_en>Refresh the list of the previous page</text_en>
+		<text_hk>刷新前壹個頁面的列表</text_hk>
+		<desc>使用此方法可以刷新前一个页面的列表。</desc>
+		<desc_en>Use this method to refresh the list of the previous page.</desc_en>
+		<desc_hk>使用此方法可以刷新前壹個頁面的列表。</desc_hk>
+		<sign>Mobile_NS.refreshPrevPageList(listId);</sign>
+		<params>
+			<param>
+				<name>listId</name>
+				<type>String</type>
+				<explain><![CDATA[列表插件id。如果页面上只有一个列表插件，此参数可以省略。]]>
+				</explain>
+				<explain_en><![CDATA[List plug-in id. If there is only one list plug-in on the page, this parameter can be omitted.]]>
+				</explain_en>
+				<explain_hk><![CDATA[列表插件id。如果頁面上只有壹個列表插件，此慘數可以省略。]]>
+				</explain_hk>
+				<required>false</required>
+			</param>
+		</params>
+		<example>
+			<![CDATA[
+				<a id="testA" href="javascript:void(0);">返回并刷新前一个页面的列表</a>
+				<script>
+				    $("#testA").click(function(){
+				        Mobile_NS.refreshPrevPageList();
+				        Mobile_NS.backPage();
+				    });
+				</script>
+				
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				<a id="testA" href="javascript:void(0);">Return and refresh the list of the previous page</a>
+				<script>
+				    $("#testA").click(function(){
+				        Mobile_NS.refreshPrevPageList();
+				        Mobile_NS.backPage();
+				    });
+				</script>
+				
+			]]>
+		</example_en>
+		<example_hk>
+			<![CDATA[
+				<a id="testA" href="javascript:void(0);">返回並刷新前壹個頁面的列表</a>
+				<script>
+				    $("#testA").click(function(){
+				        Mobile_NS.refreshPrevPageList();
+				        Mobile_NS.backPage();
+				    });
+				</script>
+				
+			]]>
+		</example_hk>
+	</function>
+	
+	<function>
+		<id>refreshSpecifiedList</id>
+		<text>刷新指定页面的列表</text>
+		<text_en>Refresh the list of specified pages</text_en>
+		<text_hk>刷新指定頁面的列表</text_hk>
+		<desc>使用此方法可以刷新指定页面的列表。</desc>
+		<desc_en>Use this method to refresh the list of specified pages.</desc_en>
+		<desc_hk>使用此方法可以刷新指定頁面的列表。</desc_hk>
+		<sign>Mobile_NS.refreshSpecifiedList(appHomepageId, listId, listparams);</sign>
+		<params>
+			<param>
+				<name>appHomepageId</name>
+				<type>String</type>
+				<explain><![CDATA[自定义页面id。]]>
+				</explain>
+				<explain_en><![CDATA[Custom page id.]]>
+				</explain_en>
+				<explain_hk><![CDATA[自定義頁面id。]]>
+				</explain_hk>
+				<required>true</required>
+			</param>
+			<param>
+				<name>listId</name>
+				<type>String</type>
+				<explain><![CDATA[列表插件id。如果页面上只有一个列表插件，此参数可以省略。]]>
+				</explain>
+				<explain_en><![CDATA[List plug-in id. If there is only one list plug-in on the page, this parameter can be omitted.]]>
+				</explain_en>
+				<explain_hk><![CDATA[列表插件id。如果頁面上只有壹個列表插件，此慘數可以省略。]]>
+				</explain_hk>
+				<required>false</required>
+			</param>
+			<param>
+				<name>listparams</name>
+				<type>String</type>
+				<explain><![CDATA[刷新时附带的过滤条件，如a=1，多个参数之间采用英文;分隔。]]>
+				</explain>
+				<explain_en><![CDATA[The filter conditions attached to the refresh, such as a=1, multiple parameters are separated by ';'.]]>
+				</explain_en>
+				<explain_hk><![CDATA[刷新時附帶的過濾條件，如a=1，多個慘數之間采用英文;分隔。]]>
+				</explain_hk>
+				<required>false</required>
+			</param>
+		</params>
+		<example>
+			<![CDATA[
+				<a id="testA" href="javascript:void(0);">返回并刷新id为28的自定义页面的列表</a>
+				<script>
+				    $("#testA").click(function(){
+				        Mobile_NS.refreshSpecifiedList('28');
+				        Mobile_NS.backPage();
+				    });
+				</script>
+
+				<a id="testA" href="javascript:void(0);">
+					返回并刷新id为28的自定义页面的列表，查询a=1或者b=2的数据
+				</a>
+				<script>
+				    $("#testA").click(function(){
+				        Mobile_NS.refreshSpecifiedList('28','','a=1;b=2');
+				        Mobile_NS.backPage();
+				    });
+				</script>
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				<a id="testA" href="javascript:void(0);">Return and refresh the list of custom pages with id 28</a>
+				<script>
+				    $("#testA").click(function(){
+				        Mobile_NS.refreshSpecifiedList('28');
+				        Mobile_NS.backPage();
+				    });
+				</script>
+
+				<a id="testA" href="javascript:void(0);">
+					Return and refresh the list of custom pages with id 28, query a=1 or b=2
+				</a>
+				<script>
+				    $("#testA").click(function(){
+				        Mobile_NS.refreshSpecifiedList('28','','a=1;b=2');
+				        Mobile_NS.backPage();
+				    });
+				</script>
+			]]>
+		</example_en>
+		<example_hk>
+			<![CDATA[
+				<a id="testA" href="javascript:void(0);">返回並刷新id為28的自定義頁面的列表</a>
+				<script>
+				    $("#testA").click(function(){
+				        Mobile_NS.refreshSpecifiedList('28');
+				        Mobile_NS.backPage();
+				    });
+				</script>
+
+				<a id="testA" href="javascript:void(0);">
+					返回並刷新id為28的自定義頁面的列表，查詢a=1或者b=2的數據
+				</a>
+				<script>
+				    $("#testA").click(function(){
+				        Mobile_NS.refreshSpecifiedList('28','','a=1;b=2');
+				        Mobile_NS.backPage();
+				    });
+				</script>
+			]]>
+		</example_hk>
+	</function>
+	
+	<function>
+		<id>refreshRemind</id>
+		<text>刷新数字提醒</text>
+		<text_en>Refresh digital reminder</text_en>
+		<text_hk>刷新數字提醒</text_hk>
+		<desc>使用此方法可以刷新当前(或指定)页面上的控件的数字提醒。</desc>
+		<desc_en>Use this method to refresh the digital reminder of the plug-in on the current (or specified) page.</desc_en>
+		<desc_hk>使用此方法可以刷新當前(或指定)頁面上的控件的數字提醒。</desc_hk>
+		<sign>Mobile_NS.refreshRemind(id, mecid);</sign>
+		<params>
+			<param>
+				<name>id</name>
+				<type>String</type>
+				<explain><![CDATA[自定义页面id。缺省则为当前页面]]>
+				</explain>
+				<explain_en><![CDATA[Custom page id. The default is the current page]]>
+				</explain_en>
+				<explain_hk><![CDATA[自定義頁面id。缺省則為當前頁面]]>
+				</explain_hk>
+				<required>false</required>
+			</param>
+			<param>
+				<name>mecid</name>
+				<type>String</type>
+				<explain><![CDATA[插件id。如果此参数省略,则刷新页面所有插件的数字提醒。]]>
+				</explain>
+				<explain_en><![CDATA[Plug-in id. If this parameter is omitted, refresh all page plug-in digital reminders.]]>
+				</explain_en>
+				<explain_hk><![CDATA[插件id。如果此慘數省略,則刷新頁面所有插件的數字提醒。]]>
+				</explain_hk>
+				<required>false</required>
+			</param>
+		</params>
+		<example>
+			<![CDATA[
+				<a onclick="Mobile_NS.refreshRemind();">刷新 当前页面 所有插件的数字提醒</a>
+				<a onclick="Mobile_NS.refreshRemind('23');">刷新 id为23的页面 所有插件的数字提醒</a>
+				<a onclick="Mobile_NS.refreshRemind('C788430F80F00001E3581C12F61A15B7');">刷新 当前页面 插件id为C788430F80F00001E3581C12F61A15B7 的数字提醒</a>
+				<a onclick="Mobile_NS.refreshRemind('23', 'C788430F80F00001E3581C12F61A15B7');">刷新 id为23的页面 中 插件id为C788430F80F00001E3581C12F61A15B7 的数字提醒</a>
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				<a onclick="Mobile_NS.refreshRemind();">Refresh digital reminders for all plug-ins on the current page</a>
+				<a onclick="Mobile_NS.refreshRemind('23');">Refresh digital reminders for all plug-ins on the page 23</a>
+				<a onclick="Mobile_NS.refreshRemind('C788430F80F00001E3581C12F61A15B7');">Refresh digital reminders for the plug-in C788430F80F00001E3581C12F61A15B7 on the current page</a>
+				<a onclick="Mobile_NS.refreshRemind('23', 'C788430F80F00001E3581C12F61A15B7');">Refresh digital reminders for the plug-in C788430F80F00001E3581C12F61A15B7 on the page 23</a>
+			]]>
+		</example_en>
+		<example_hk>
+			<![CDATA[
+				<a onclick="Mobile_NS.refreshRemind();">刷新 當前頁面 所有插件的數字提醒</a>
+				<a onclick="Mobile_NS.refreshRemind('23');">刷新 id為23的頁面 所有插件的數字提醒</a>
+				<a onclick="Mobile_NS.refreshRemind('C788430F80F00001E3581C12F61A15B7');">刷新 當前頁面 插件id為C788430F80F00001E3581C12F61A15B7 的數字提醒</a>
+				<a onclick="Mobile_NS.refreshRemind('23', 'C788430F80F00001E3581C12F61A15B7');">刷新 id為23的頁面 中 插件id為C788430F80F00001E3581C12F61A15B7 的數字提醒</a>
+			]]>
+		</example_hk>
+	</function>
+	
+	<function>
+		<id>encrypt</id>
+		<text>编码指定的字符串</text>
+		<text_en>Encoding the specified string</text_en>
+		<text_hk>編碼指定的字符串</text_hk>
+		<desc>使用此方法可以编码指定的字符串，防止被系统安全性设置拦截。</desc>
+		<desc_en>Use this method to encode the specified string to prevent it from being intercepted by system security settings.</desc_en>
+		<desc_hk>使用此方法可以編碼指定的字符串，防止被系統安全性設置攔截。</desc_hk>
+		<sign>Mobile_NS.encrypt(content);</sign>
+		<params>
+			<param>
+				<name>content</name>
+				<type>String</type>
+				<explain><![CDATA[需要编码的字符串。]]>
+				</explain>
+				<explain_en><![CDATA[The string to be encoded.]]>
+				</explain_en>
+				<explain_hk><![CDATA[需要編碼的字符串。]]>
+				</explain_hk>
+				<required>true</required>
+			</param>
+		</params>
+		<return>
+			<![CDATA[
+				返回符合系统安全性编码规则的以__random__开头的参数，页面传参后会自动解码，不必再进行解码操作。
+			]]>
+		</return>
+		<return_en>
+			<![CDATA[
+				Returns the parameter that begins with __random__ that complies with the system security encoding rules. After the page passes the parameters, it will be automatically decoded and no decoding operation is required.
+			]]>
+		</return_en>
+		<return_hk>
+			<![CDATA[
+				返回符合系統安全性編碼規則的以__random__開頭的慘數，頁面傳慘後會自動解碼，不必再進行解碼操作。
+			]]>
+		</return_hk>
+		<example>
+			<![CDATA[
+				<script>
+				    var sqlwhere = "1=1 and b='2015-10-21' ";
+				    sqlwhere = Mobile_NS.encrypt(sqlwhere);
+				    $u("/mobilemode/appHomepageView.jsp?appHomepageId=1&sqlwhere="+sqlwhere);
+				</script>
+			]]>
+		</example>
+	</function>
+	
+	<function>
+		<id>addFormmodeDataShare</id>
+		<text>添加表单建模数据权限</text>
+		<text_en>Add form modeling data permission</text_en>
+		<text_hk>添加表單建模數據權限</text_hk>
+		<desc>使用此方法可以添加表单建模数据权限。</desc>
+		<desc_en>Use this method to add form modeling data permissions.</desc_en>
+		<desc_hk>使用此方法可以添加表單建模數據權限。</desc_hk>
+		<sign>Mobile_NS.addFormmodeDataShare(modelid, billid, callbackFn);</sign>
+		<params>
+			<param>
+				<name>modelid</name>
+				<type>int</type>
+				<explain><![CDATA[表单建模模块id。]]>
+				</explain>
+				<explain_en><![CDATA[Form modeling module id.]]>
+				</explain_en>
+				<explain_hk><![CDATA[表單建模模塊id。]]>
+				</explain_hk>
+				<required>true</required>
+			</param>
+			<param>
+				<name>billid</name>
+				<type>int</type>
+				<explain><![CDATA[数据id。]]>
+				</explain>
+				<explain_en><![CDATA[Data id.]]>
+				</explain_en>
+				<explain_hk><![CDATA[數據id。]]>
+				</explain_hk>
+				<required>true</required>
+			</param>
+			<param>
+				<name>callbackFn</name>
+				<type>function</type>
+				<explain><![CDATA[执行完成后的回调函数。]]>
+				</explain>
+				<explain_en><![CDATA[Callback function after the execution completed.]]>
+				</explain_en>
+				<explain_hk><![CDATA[執行完成後的回調函數。]]>
+				</explain_hk>
+				<required>false</required>
+			</param>
+		</params>
+		<example>
+			<![CDATA[
+				<script>
+				    Mobile_NS.addFormmodeDataShare(50, 18);
+				</script>
+			]]>
+		</example>
+	</function>
+	
+	<function>
+		<id>initWeather</id>
+		<text>天气预报</text>
+		<text_en>Weather forecast</text_en>
+		<text_hk>天氣預報</text_hk>
+		<desc>使用此方法可以显示对应城市的天气预报信息</desc>
+		<desc_en>Use this method to display weather forecast information for the corresponding city</desc_en>
+		<desc_hk>使用此方法可以顯示對應城市的天氣預報信息</desc_hk>
+		<sign>Mobile_NS.initWeather(theId,city);</sign>
+		<params>
+			<param>
+				<name>theId</name>
+				<type>String</type>
+				<explain><![CDATA[天气插件的id。]]>
+				</explain>
+				<explain_en><![CDATA[Weather plugin id.]]>
+				</explain_en>
+				<explain_hk><![CDATA[天氣插件的id。]]>
+				</explain_hk>
+				<required>true</required>
+			</param>
+			<param>
+				<name>city</name>
+				<type>String</type>
+				<explain><![CDATA[城市名称(可以为中文，也可以为中文对应的拼音，如：北京、Shanghai)。]]>
+				</explain>
+				<explain_en><![CDATA[City name (can be Chinese or Pinyin for Chinese, eg: 北京, Shanghai).]]>
+				</explain_en>
+				<explain_hk><![CDATA[城市名稱(可以為中文，也可以為中文對應的拼音，如：北京、Shanghai)。]]>
+				</explain_hk>
+				<required>true</required>
+			</param>
+		</params>
+		<example>
+			<![CDATA[
+				<input type="button" value="查看广州天气" onclick="Mobile_NS.initWeather('C6DC902A2FB000012AC71E3FCA90CC50','广州');" />
+
+				<input type="button" value="查看北京天气" onclick="Mobile_NS.initWeather('C6DC902A2FB000012AC71E3FCA90CC50','beijing');" />
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				<input type="button" value="View Guangzhou Weather" onclick="Mobile_NS.initWeather('C6DC902A2FB000012AC71E3FCA90CC50','广州');" />
+
+				<input type="button" value="View Beijing Weather" onclick="Mobile_NS.initWeather('C6DC902A2FB000012AC71E3FCA90CC50','beijing');" />
+			]]>
+		</example_en>
+	</function>
+	<function>
+		<id>alert</id>
+		<text>移动端alert提示框</text>
+		<text_en>Mobile alert prompt box</text_en>
+		<text_hk>移動端alert提示框</text_hk>
+		<desc>使用此方法可以打开一个系统提示框</desc>
+		<desc_en>Use this method to open a system prompt box</desc_en>
+		<desc_hk>使用此方法可以打開壹個系統提示框</desc_hk>
+		<sign>Mobile_NS.Alert(msg, autoHide, callbackFn);</sign>
+		<params>
+			<param>
+				<name>msg</name>
+				<type>string</type>
+				<explain><![CDATA[提示消息]]>
+				</explain>
+				<explain_en><![CDATA[Prompt message]]>
+				</explain_en>
+				<required>true</required>
+			</param>
+			<param>
+				<name>autoHide</name>
+				<type>boolean</type>
+				<explain><![CDATA[是否自动消失,默认为true]]>
+				</explain>
+				<explain_en><![CDATA[Whether or not to disappear automatically, the default is true]]>
+				</explain_en>
+				<explain_hk><![CDATA[是否自動消失,默認為true]]>
+				</explain_hk>
+				<required>false</required>
+			</param>
+			<param>
+				<name>callbackFn</name>
+				<type>function|Array</type>
+				<explain><![CDATA[alert框消失后执行的回调函数。]]>
+				</explain>
+				<explain_en><![CDATA[The callback function executed after the alert box disappears.]]>
+				</explain_en>
+				<explain_hk><![CDATA[alert框消失後執行的回調函數。]]>
+				</explain_hk>
+				<required>false</required>
+			</param>
+		</params>
+		<example>
+			<![CDATA[
+				<script>
+				    Mobile_NS.Alert("恭喜，成功!");
+				</script>
+				<script>
+				    Mobile_NS.Alert("恭喜，成功!", false, function(){
+				    	//执行一些操作
+				    });
+				</script>
+				<script>
+				    Mobile_NS.Alert("恭喜，成功!", false, ['好的',function(){
+				    	//执行一些操作
+				    }]);
+				</script>
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				<script>
+				    Mobile_NS.Alert("Congratulations, success!");
+				</script>
+				<script>
+				    Mobile_NS.Alert("Congratulations, success!", false, function(){
+				    	//do something
+				    });
+				</script>
+				<script>
+				    Mobile_NS.Alert("Congratulations, success!", false, ['OK',function(){
+				    	//do something
+				    }]);
+				</script>
+			]]>
+		</example_en>
+		<example_hk>
+			<![CDATA[
+				<script>
+				    Mobile_NS.Alert("恭喜，成功!");
+				</script>
+				<script>
+				    Mobile_NS.Alert("恭喜，成功!", false, function(){
+				    	//執行壹些操作
+				    });
+				</script>
+				<script>
+				    Mobile_NS.Alert("恭喜，成功!", false, ['好的',function(){
+				    	//執行壹些操作
+				    }]);
+				</script>
+			]]>
+		</example_hk>
+	</function>
+	<function>
+		<id>confirm</id>
+		<text>移动端confirm提示框</text>
+		<text_en>Mobile confirm prompt box</text_en>
+		<text_hk>移動端confirm提示框</text_hk>
+		<desc>使用此方法可以打开一个系统确认框</desc>
+		<desc_en>Use this method to open a system confirmation box</desc_en>
+		<desc_hk>使用此方法可以打開壹個系統確認框</desc_hk>
+		<sign>Mobile_NS.Confirm(msg, title, btn1, btn2);</sign>
+		<params>
+			<param>
+				<name>msg</name>
+				<type>string</type>
+				<explain><![CDATA[提示消息]]>
+				</explain>
+				<explain_en><![CDATA[Prompt message]]>
+				</explain_en>
+				<required>true</required>
+			</param>
+			<param>
+				<name>title</name>
+				<type>string</type>
+				<explain><![CDATA[提示标题]]>
+				</explain>
+				<explain_en><![CDATA[Prompt title]]>
+				</explain_en>
+				<explain_hk><![CDATA[提示標題]]>
+				</explain_hk>
+				<required>false</required>
+			</param>
+			<param>
+				<name>btn1</name>
+				<type>Array|function</type>
+				<explain><![CDATA[左边第一个按钮名和执行函数的数组或者左边第一个按钮的执行函数]]>
+				</explain>
+				<explain_en><![CDATA[The first button on the left and the array of execution functions or the execution function of the first button on the left]]>
+				</explain_en>
+				<explain_hk><![CDATA[左邊第壹個按鈕名和執行函數的數組或者左邊第壹個按鈕的執行函數]]>
+				</explain_hk>
+				<required>false</required>
+			</param>
+			<param>
+				<name>btn2</name>
+				<type>Array|function</type>
+				<explain><![CDATA[左边第二个按钮名和执行函数的数组或者左边第二个按钮的执行函数]]>
+				</explain>
+				<explain_en><![CDATA[The second button on the left and the array of execution functions or the execution function of the second button on the left]]>
+				</explain_en>
+				<explain_hk><![CDATA[左邊第二個按鈕名和執行函數的數組或者左邊第二個按鈕的執行函數]]>
+				</explain_hk>
+				<required>false</required>
+			</param>
+		</params>
+		<example>
+			<![CDATA[
+				<script>
+				    Mobile_NS.Confirm("确定要这样做吗!", "确认操作", ["点错了",function(){
+				    	//执行一些操作
+				    }],["继续", function(){
+				    	//执行一些操作
+				    }]);
+				</script>
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				<script>
+				    Mobile_NS.Confirm("Are you sure to do this?", "Confirm operation", ["no",function(){
+				    	//do something
+				    }],["continue", function(){
+				    	//do something
+				    }]);
+				</script>
+			]]>
+		</example_en>
+		<example_hk>
+			<![CDATA[
+				<script>
+				    Mobile_NS.Confirm("確定要這洋做嗎!", "確認操作", ["點錯了",function(){
+				    	//執行壹些操作
+				    }],["繼續", function(){
+				    	//執行壹些操作
+				    }]);
+				</script>
+			]]>
+		</example_hk>
+	</function>
+	<function>
+		<id>isOnline</id>
+		<text>检测是否在线</text>
+		<text_en>Check online state</text_en>
+		<text_hk>檢測是否在線</text_hk>
+		<desc>使用此方法可以检测当前处于 在线/离线 状态</desc>
+		<desc_en>Use this method to check the current online/offline state</desc_en>
+		<desc_hk>使用此方法可以檢測當前處於 在線/離線 狀態</desc_hk>
+		<sign>Mobile_NS.isOnline(callbackFn);</sign>
+		<params>
+			<param>
+				<name>callbackFn</name>
+				<type>function</type>
+				<explain><![CDATA[回调函数,系统会使用在线或离线状态作为参数回调此方法]]>
+				</explain>
+				<explain_en><![CDATA[Callback function, the system will use the online or offline state as a parameter callback this method]]>
+				</explain_en>
+				<explain_hk><![CDATA[回調函數,系統會使用在線或離線狀態作為慘數回調此方法]]>
+				</explain_hk>
+				<required>true</required>
+			</param>
+		</params>
+		<example>
+			<![CDATA[
+				<script>
+				    Mobile_NS.isOnline(function(isOnline){
+				        if(isOnline){
+				            alert("在线");
+				        }else{
+				            alert("离线");
+				        }
+				    });
+				</script>
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				<script>
+				    Mobile_NS.isOnline(function(isOnline){
+				        if(isOnline){
+				            alert("Online");
+				        }else{
+				            alert("Offline");
+				        }
+				    });
+				</script>
+			]]>
+		</example_en>
+		<example_hk>
+			<![CDATA[
+				<script>
+				    Mobile_NS.isOnline(function(isOnline){
+				        if(isOnline){
+				            alert("在線");
+				        }else{
+				            alert("離線");
+				        }
+				    });
+				</script>
+			]]>
+		</example_hk>
+	</function>
+	<function>
+		<id>getLayoutUrl</id>
+		<text>获取按权限区分布局url</text>
+		<text_en>Get layout url by permission</text_en>
+		<text_hk>獲取按權限區分布局url</text_hk>
+		<desc>使用此方法可以获取根据不同权限显示不同布局的url</desc>
+		<desc_en>Use this method to get urls showing different layouts based on different permissions</desc_en>
+		<desc_hk>使用此方法可以獲取根據不同權限顯示不同布局的url</desc_hk>
+		<sign>Mobile_NS.getLayoutUrl(modelid, uitype, billid);</sign>
+		<params>
+			<param>
+				<name>modelid</name>
+				<type>int</type>
+				<explain><![CDATA[表单建模模块id]]>
+				</explain>
+				<explain_en><![CDATA[Form Modeling Module id]]>
+				</explain_en>
+				<explain_hk><![CDATA[表單建模模塊id]]>
+				</explain_hk>
+				<required>true</required>
+			</param>
+			<param>
+				<name>uitype</name>
+				<type>int</type>
+				<explain><![CDATA[默认为新建，布局类型说明 0新建，1编辑，2显示]]>
+				</explain>
+				<explain_en><![CDATA[Default is new, layout type description: 0 new, 1 edit, 2 display]]>
+				</explain_en>
+				<explain_hk><![CDATA[默認為新建，布局類型說明 0新建，1編輯，2顯示]]>
+				</explain_hk>
+				<required>false</required>
+			</param>
+			<param>
+				<name>billid</name>
+				<type>int</type>
+				<explain><![CDATA[数据id，当uitype为1或2时，需要传此参数]]>
+				</explain>
+				<explain_en><![CDATA[Data id, need to pass this parameter when uitype is 1 or 2]]>
+				</explain_en>
+				<explain_hk><![CDATA[數據id，當uitype為1或2時，需要傳此慘數]]>
+				</explain_hk>
+				<required>false</required>
+			</param>
+		</params>
+		<return>
+			<![CDATA[
+				返回布局url。
+			]]>
+		</return>
+		<return_en>
+			<![CDATA[
+				Returns the layout url.
+			]]>
+		</return_en>
+		<example>
+			<![CDATA[
+				<a href="javascript:$u(Mobile_NS.getLayoutUrl(1));">
+				        点击打开当前应用下模块为1的新建布局
+				</a>
+				
+				<a href="javascript:$u(Mobile_NS.getLayoutUrl(1, 1, 1));">
+				        点击打开当前应用下模块为1，数据id为1的编辑布局
+				</a>
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				<a href="javascript:$u(Mobile_NS.getLayoutUrl(1));">
+				        Click to open the new layout of module 1 in the current application
+				</a>
+				
+				<a href="javascript:$u(Mobile_NS.getLayoutUrl(1, 1, 1));">
+				        Click to open the edit layout with module 1 and data id 1 in the current application
+				</a>
+			]]>
+		</example_en>
+		<example_hk>
+			<![CDATA[
+				<a href="javascript:$u(Mobile_NS.getLayoutUrl(1));">
+				        點擊打開當前應用下模塊為1的新建布局
+				</a>
+				
+				<a href="javascript:$u(Mobile_NS.getLayoutUrl(1, 1, 1));">
+				        點擊打開當前應用下模塊為1，數據id為1的編輯布局
+				</a>
+			]]>
+		</example_hk>
+	</function>
+	
+	<function>
+		<id>callMobile</id>
+		<text>拨打电话(含发送短信)</text>
+		<text_en>Make call (including sending text message)</text_en>
+		<text_hk>撥打電話(含發送短信)</text_hk>
+		<desc>调用此方法可以拨打电话(含发送短信)。</desc>
+		<desc_en>Call this method to make call (including sending text message).</desc_en>
+		<desc_hk>調用此方法可以撥打電話(含發送短信)。</desc_hk>
+		<sign>Mobile_NS.callMobile(tel);</sign>
+		<type>basic</type>
+		<params>
+			<param>
+				<name>tel</name>
+				<type>String</type>
+				<explain>电话号码</explain>
+				<explain_en>Telephone number</explain_en>
+				<explain_hk>電話號碼</explain_hk>
+				<required>true</required>
+			</param>
+		</params>
+		<example>
+			<![CDATA[
+				<a href="javascript:Mobile_NS.callMobile('13888888888');">点击打电话给13888888888</a>
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				<a href="javascript:Mobile_NS.callMobile('13888888888');">Click to call 13888888888</a>
+			]]>
+		</example_en>
+		<example_hk>
+			<![CDATA[
+				<a href="javascript:Mobile_NS.callMobile('13888888888');">點擊打電話給13888888888</a>
+			]]>
+		</example_hk>
+	</function>
+	<function>
+		<id>Mobile_NS.sendEmobileMsg</id>
+		<text>发送emobile提醒</text>
+		<text_en>Send emobile message</text_en>
+		<text_hk>發送emobile提醒</text_hk>
+		<desc>调用此方法可以发送emobile消息提醒。</desc>
+		<desc_en>Call this method to send an emobile message.</desc_en>
+		<desc_hk>調用此方法可以發送emobile消息提醒。</desc_hk>
+		<sign>Mobile_NS.sendEmobileMsg(receivers, content, msgurl, msgtype, callbackFn);</sign>
+		<type>appNative</type>
+		<params>
+			<param>
+				<name>receivers</name>
+				<type>String</type>
+				<explain>消息提醒接收人id，多个id以逗号分隔</explain>
+				<explain_en>Message recipient id, multiple ids separated by ','</explain_en>
+				<explain_hk>消息提醒接收人id，多個id以逗號分隔</explain_hk>
+				<required>true</required>
+			</param>
+			<param>
+				<name>content</name>
+				<type>String</type>
+				<explain>消息内容</explain>
+				<explain_en>Message content</explain_en>
+				<explain_hk>消息內容</explain_hk>
+				<required>true</required>
+			</param>
+			<param>
+				<name>msgurl</name>
+				<type>String</type>
+				<explain>消息链接</explain>
+				<explain_en>Message url</explain_en>
+				<explain_hk>消息鏈接</explain_hk>
+				<required>true</required>
+			</param>
+			<param>
+				<name>msgtype</name>
+				<type>String</type>
+				<explain>消息类型，emobile服务端6.5版本之前，可以不用填写，消息推送会推送到emobile默认的自定义消息类型中
+emobile服务端6.5版本之后，支持自定义消息分类显示，在Emobile消息类型标识中输入对应的消息类型标识，即可把消息推送到不同的分类中，不输入仍然会推送到emobile默认的自定义消息类型中</explain>
+				<explain_en>Message type, before emobile server version 6.5, no need to fill in, message will be pushed to emobile default custom message type.
+After the emobile server version 6.5, support for custom message classification display, using the corresponding message type identifier in the Emobile message type identifier, you can push the message to different categories. The default custom message will still be pushed to the emobile Type</explain_en>
+				<explain_hk>消息類型，emobile服務端6.5版本之前，可以不用填寫，消息推送會推送到emobile默認的自定義消息類型中
+emobile服務端6.5版本之後，支持自定義消息分類顯示，在Emobile消息類型標識中輸入對應的消息類型標識，即可把消息推送到不同的分類中，不輸入仍然會推送到emobile默認的自定義消息類型中</explain_hk>
+				<required>false</required>
+			</param>
+			<param>
+				<name>callbackFn</name>
+				<type>function</type>
+				<explain>消息发送成功执行回调函数</explain>
+				<explain_en>Callback function after message be sent successfully</explain_en>
+				<explain_hk>消息發送成功執行回調函數</explain_hk>
+				<required>false</required>
+			</param>
+		</params>
+		<example>
+			<![CDATA[
+				<a id="testA" href="javascript:void(0);">发送EMobile提醒</a>
+				<script>
+				    $("#testA").click(function(){
+				        Mobile_NS.sendEmobileMsg("3,5,6,7","测试提醒","/mobilemode/appHomepageViewWrap.jsp?appid=73", function(){
+				        	Mobile_NS.Alert("执行自定义操作");
+				        });
+				    });
+				</script>
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				<a id="testA" href="javascript:void(0);">Send EMobile message</a>
+				<script>
+				    $("#testA").click(function(){
+				        Mobile_NS.sendEmobileMsg("3,5,6,7","Send message","/mobilemode/appHomepageViewWrap.jsp?appid=73", function(){
+				        	Mobile_NS.Alert("do something");
+				        });
+				    });
+				</script>
+			]]>
+		</example_en>
+		<example_hk>
+			<![CDATA[
+				<a id="testA" href="javascript:void(0);">發送EMobile提醒</a>
+				<script>
+				    $("#testA").click(function(){
+				        Mobile_NS.sendEmobileMsg("3,5,6,7","測試提醒","/mobilemode/appHomepageViewWrap.jsp?appid=73", function(){
+				        	Mobile_NS.Alert("執行自定義操作");
+				        });
+				    });
+				</script>
+			]]>
+		</example_hk>
+	</function>
+	
+	<function>
+		<id>Mobile_NS.sendWechatMsg</id>
+		<text>发送微信(钉钉)提醒</text>
+		<text_en>Send WeChat (DingTalk) message</text_en>
+		<text_hk>發送微信(釘釘)提醒</text_hk>
+		<desc>调用此方法可以发送微信(钉钉)消息提醒。</desc>
+		<desc_en>Call this method to send a WeChat (DingTalk) message.</desc_en>
+		<desc_hk>調用此方法可以發送微信(釘釘)消息提醒。</desc_hk>
+		<sign>Mobile_NS.sendWechatMsg(receivers, content, msgurl, pushkey, callbackFn);</sign>
+		<type>appNative</type>
+		<params>
+			<param>
+				<name>receivers</name>
+				<type>String</type>
+				<explain>消息提醒接收人id，多个id以逗号分隔</explain>
+				<explain_en>Message recipient id, multiple ids separated by ','</explain_en>
+				<explain_hk>消息提醒接收人id，多個id以逗號分隔</explain_hk>
+				<required>true</required>
+			</param>
+			<param>
+				<name>content</name>
+				<type>String</type>
+				<explain>消息内容</explain>
+				<explain_en>Message content</explain_en>
+				<explain_hk>消息內容</explain_hk>
+				<required>true</required>
+			</param>
+			<param>
+				<name>msgurl</name>
+				<type>String</type>
+				<explain>消息链接</explain>
+				<explain_en>Message url</explain_en>
+				<explain_hk>消息鏈接</explain_hk>
+				<required>true</required>
+			</param>
+			<param>
+				<name>pushkey</name>
+				<type>String</type>
+				<explain>消息模板id，需在云桥中配置好对应的消息模板</explain>
+				<explain_en>Message template id, corresponding message template needs to be configured in the cloud bridge</explain_en>
+				<explain_hk>消息模板id，需在雲橋中配置好對應的消息模板</explain_hk>
+				<required>true</required>
+			</param>
+			<param>
+				<name>callbackFn</name>
+				<type>function</type>
+				<explain>消息发送成功执行回调函数</explain>
+				<explain_en>Callback function after message be sent successfully</explain_en>
+				<explain_hk>消息發送成功執行回調函數</explain_hk>
+				<required>false</required>
+			</param>
+		</params>
+		<example>
+			<![CDATA[
+				<a id="testA" href="javascript:void(0);">发送微信(钉钉)提醒</a>
+				<script>
+				    $("#testA").click(function(){
+				        Mobile_NS.sendWechatMsg("3,5,6,7","测试提醒","/mobilemode/appHomepageViewWrap.jsp?appid=73", "42792928e9cb42b08f5030be8dae4a85");
+				    });
+				</script>
+				
+				<a id="testB" href="javascript:void(0);">发送微信(钉钉)提醒</a>
+				<script>
+				    $("#testB").click(function(){
+				        Mobile_NS.sendWechatMsg("3,5,6,7","测试提醒","/mobilemode/appHomepageViewWrap.jsp?appid=73", "42792928e9cb42b08f5030be8dae4a85", function(){
+				        	Mobile_NS.Alert("执行自定义操作");
+				        });
+				    });
+				</script>
+			]]>
+		</example>
+		<example_en>
+			<![CDATA[
+				<a id="testA" href="javascript:void(0);">Send WeChat (DingTalk) message</a>
+				<script>
+				    $("#testA").click(function(){
+				        Mobile_NS.sendWechatMsg("3,5,6,7","Send message","/mobilemode/appHomepageViewWrap.jsp?appid=73", "42792928e9cb42b08f5030be8dae4a85");
+				    });
+				</script>
+				
+				<a id="testB" href="javascript:void(0);">Send WeChat (DingTalk) message</a>
+				<script>
+				    $("#testB").click(function(){
+				        Mobile_NS.sendWechatMsg("3,5,6,7","Send message","/mobilemode/appHomepageViewWrap.jsp?appid=73", "42792928e9cb42b08f5030be8dae4a85", function(){
+				        	Mobile_NS.Alert("do something");
+				        });
+				    });
+				</script>
+			]]>
+		</example_en>
+		<example_hk>
+			<![CDATA[
+				<a id="testA" href="javascript:void(0);">發送微信(釘釘)提醒</a>
+				<script>
+				    $("#testA").click(function(){
+				        Mobile_NS.sendWechatMsg("3,5,6,7","測試提醒","/mobilemode/appHomepageViewWrap.jsp?appid=73", "42792928e9cb42b08f5030be8dae4a85");
+				    });
+				</script>
+				
+				<a id="testB" href="javascript:void(0);">發送微信(釘釘)提醒</a>
+				<script>
+				    $("#testB").click(function(){
+				        Mobile_NS.sendWechatMsg("3,5,6,7","測試提醒","/mobilemode/appHomepageViewWrap.jsp?appid=73", "42792928e9cb42b08f5030be8dae4a85", function(){
+				        	Mobile_NS.Alert("執行自定義操作");
+				        });
+				    });
+				</script>
+			]]>
+		</example_hk>
+	</function>
+</function-config>

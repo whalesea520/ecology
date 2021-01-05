@@ -1,0 +1,50 @@
+html{overflow-y:hidden;font-size:9pt;}
+body{margin: 0px;padding: 0px;}
+.formatTab .leftClassify{float:left;width:115px;padding:8px;}
+.formatTab .fmlist  ul{border: 1px solid #d9d9d9;margin-top: 8px;list-style-type:none;}
+.formatTab .fmlist  ul li.current{background:#e1e1e1;}
+.formatTab .fmlist  ul li{padding:5px;cursor:pointer;padding-left: 10px;}
+.formatTab .fmlist  ul li:hover{background:#f1f1f1;}
+.formatTab .fmlist  ul li label{font-weight:normal;cursor:pointer;}
+.formatTab .rightSetting{float:right;width:365px;}
+.formatTab .fontTab .fontPreview{margin: 3px;width: 300px;height: 55px;text-align: center;line-height: 60px;border: 1px solid #d9d9d9;}
+.formatTab .numberTab .rightSetting .general,.numerical,.date,.time,.percent,.science,.textversion,.special{ margin-top: 32px !important;margin-left: 15px !important;}
+.formatTab .borderTab .rightSetting .opBtn{float: left;margin-left: 10px;cursor: pointer;padding-left: 10px;padding-right: 10px;padding-top: 8px;padding-bottom: 3px;text-align: center;}
+.formatTab .borderTab .rightSetting .opBtn_inn_disabled{float: left;margin-left: 10px;cursor: pointer;padding-left: 10px;padding-right: 10px;padding-top: 8px;padding-bottom: 3px;text-align: center;color:#c1c1c1}
+.formatTab .borderTab .rightSetting .opBtn:hover{background:#83e39f;}
+.formatTab .borderTab .rightSetting .opBtn_s{padding: 4px;padding-bottom: 3px;position:relative;}
+.formatTab .borderTab .rightSetting .opBtn_down{background:#83e39f;}
+.formatTab .borderTab .rightSetting .opDrawShow{width: 200px;height: 100px;position: relative;top: 5px;left: 40px;border: 1px solid #d9d9d9;}
+.formatTab .borderTab .rightSetting .opDrawShow table{width: 180px;height: 80px;position: relative;top: -16px;left: 10px;text-align: center;border-collapse:collapse}
+.formatTab .rightSetting span{
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+.formatTab .rightSetting a{
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+.eightBtm{margin-bottom:8px;}
+
+/** 替换覆盖一些 jquery ui 的css **/
+.ui-spinner-input {
+border: none;
+background: none;
+color: inherit;
+padding: 0;
+vertical-align: middle;
+margin-left: .4em;
+margin-right: 22px;
+margin-top: 2px;
+height:20px;
+}
+.ui-widget-content {
+border: 1px solid #d9d9d9/*{borderColorContent}*/;
+background: #ffffff/*{bgColorContent}*/ url(images/ui-bg_flat_75_ffffff_40x100_wev8.png)/*{bgImgUrlContent}*/ 50%/*{bgContentXPos}*/ 50%/*{bgContentYPos}*/ repeat-x/*{bgContentRepeat}*/;
+color: #222222/*{fcContent}*/;
+}
+

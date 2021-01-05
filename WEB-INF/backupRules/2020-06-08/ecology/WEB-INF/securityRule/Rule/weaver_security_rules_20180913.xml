@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<special-non>
+		<urls>
+			<url>
+				<value>/Refresh.jsp</value>
+				<params>
+					<param>
+						<value>loginfile</value>
+						<rules>
+							<rule>##CONST:URL##</rule>
+						</rules>
+					</param>
+				</params>
+			</url>
+		</urls>
+	</special-non>	
+</root>

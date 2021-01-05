@@ -1,0 +1,947 @@
+2020-04-30 09:18:12,544 ERROR weaver.general.BaseBean  - ------是否开启字符转码----0---是否开启sql参数化解析-----0----nativepool----ecology
+2020-04-30 09:18:13,295 ERROR weaver.general.BaseBean  - ExecuteSqlLogger start log write to file thread success...
+2020-04-30 09:18:13,459 INFO  weaver.common.SystemInitialized  - System Initialized OK.
+2020-04-30 09:18:13,786 INFO  weaver.general.InitServer  - System Init Message:mainControlIp= localIp:[192.168.97.232, 192.168.25.1, 192.168.149.1]
+2020-04-30 09:18:13,787 INFO  weaver.general.InitServer  - init ioc container...
+2020-04-30 09:18:16,216 ERROR com.weaver.upgrade.FunctionUpgrade  - OS.name+++++++++++++++++++++:Windows 10
+2020-04-30 09:18:16,216 ERROR com.weaver.upgrade.FunctionUpgrade  - srcfilePath+++++++++++++++++++++:D:\WEAVER\ecology\upgrade\src
+2020-04-30 09:18:16,220 ERROR com.weaver.upgrade.FunctionUpgrade  - 本地Ip++++++++++：192.168.25.1
+2020-04-30 09:18:16,220 ERROR com.weaver.upgrade.FunctionUpgrade  - 主节点MainControlIP++++++++++：
+2020-04-30 09:18:16,614 INFO  weaver.general.InitServer  - end ioc container init...
+2020-04-30 09:18:16,615 INFO  weaver.general.InitServer  - SystemUpgrade Start.....
+2020-04-30 09:18:16,652 INFO  weaver.general.InitServer  - SystemUpgrade End.....
+2020-04-30 09:18:16,653 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread Start.....
+2020-04-30 09:18:16,702 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread End.....
+2020-04-30 09:18:16,720 ERROR weaver.system.HtmlFieldToClob  - isrun:1
+2020-04-30 09:18:16,722 ERROR weaver.system.HtmlFieldToClob  - isrun1:1
+2020-04-30 09:18:16,734 ERROR weaver.conn.RecordSet  - WFVersionAdd insert Waiting...
+2020-04-30 09:18:16,946 ERROR weaver.general.BaseBean  - 启动日志压缩线程....
+2020-04-30 09:18:18,327 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息...
+2020-04-30 09:18:18,725 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息成功...
+2020-04-30 09:18:18,736 ERROR weaver.conn.RecordSet  - WFVersionAdd insert Waiting...
+2020-04-30 09:18:20,736 ERROR weaver.conn.RecordSet  - WFVersionAdd insert Waiting...
+2020-04-30 09:18:22,737 ERROR weaver.conn.RecordSet  - WFVersionAdd insert Waiting...
+2020-04-30 09:18:23,240 INFO  weaver.general.InitServer  - end.....
+2020-04-30 09:18:24,949 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun:1
+2020-04-30 09:18:24,950 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun1:1
+2020-04-30 09:18:26,721 ERROR weaver.page.PageManager  - 清空二维码扫描缓存记录表
+2020-04-30 09:18:27,009 ERROR weaver.cpt.util.CptInitManager  - weaver.cpt.util.CptInitManager is running start...
+2020-04-30 09:18:27,032 ERROR weaver.formmode.cuspage.cpt.CptGenmenu4mode  - weaver.formmode.cuspage.cpt.CptGenmenu4mode is running start...
+2020-04-30 09:18:27,052 ERROR weaver.formmode.cuspage.cpt.CptGenmenu4mode  - weaver.formmode.cuspage.cpt.CptGenmenu4mode is running end...
+2020-04-30 09:18:27,281 ERROR weaver.cpt.util.CptInitManager  - weaver.cpt.util.CptInitManager is running end...
+2020-04-30 09:18:29,820 ERROR org.directwebremoting.util.LogErrorHandler  - Line=52 Element type "filter" must be declared.
+2020-04-30 09:18:29,820 ERROR org.directwebremoting.util.LogErrorHandler  - Line=53 The content of element type "allow" must match "(create|convert)*".
+2020-04-30 09:18:30,829 ERROR weaver.conn.RecordSet  - select t1.* from  uf_zzzxx t1 where t1.formmodeid=50  and ( DATEDIFF(ss,t1.jzrq+' '+'23:55:50',getDate())>=(-1*60*60*24*30) and DATEDIFF(ss, CONVERT(varchar(10), GETDATE(), 120) +' '+'00:00:00',t1.jzrq+' '+'23:55:50')>=(-1*60*60*24*30) and t1.jzrq is not null and t1.jzrq<> '' )  and not exists(select 1 from mode_reminddata_all t2 where t2.remindjobid=1 and t2.billid=t1.id and lastdate= CONVERT(varchar(10), GETDATE(), 120)  and isnull(isRemindWorkflow,0)=1 )
+2020-04-30 09:18:30,840 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: datediff 函数导致溢出。用于分隔两个日期/时间实例的日期部分的数字太大。请尝试使用日期部分精度较低的 datediff。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:196)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet$FetchBuffer.nextRow(SQLServerResultSet.java:4700)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.fetchBufferNext(SQLServerResultSet.java:1683)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.next(SQLServerResultSet.java:956)
+	at weaver.conn.RecordSet.parseResultSet(RecordSet.java:1656)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:916)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.formmode.task.action.TaskAction.doRemind(TaskAction.java:247)
+	at weaver.formmode.task.action.WorkflowMessageTaskAction.doIt(WorkflowMessageTaskAction.java:33)
+	at weaver.formmode.task.action.TaskAction.execute(TaskAction.java:34)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:529)
+2020-04-30 09:18:32,002 ERROR weaver.system.MonitorThreadManager  - >>>>MonitorThreadManager>>单独的预警关闭控制：isThreadWarningStart(zt)=0<<<<
+2020-04-30 09:18:32,540 ERROR weaver.general.BaseBean  - 初始化微信推送扫描线程成功，扫描间隔1分钟---------
+2020-04-30 09:18:33,727 INFO  weaver.filter.SecurityFilter  - Initializing filter 'SecurityFilter'
+2020-04-30 09:18:36,664 INFO  weaver.filter.SecurityFilter  - Filter 'SecurityFilter' configured successfully
+2020-04-30 09:18:36,670 ERROR weaver.general.BaseBean  - log4j reset thread start success...
+2020-04-30 09:19:39,494 INFO  weaver.filter.SecurityFilter  - Initializing filter 'SecurityFilter'
+2020-04-30 09:19:41,402 INFO  weaver.filter.SecurityFilter  - Filter 'SecurityFilter' configured successfully
+2020-04-30 09:19:41,412 ERROR weaver.general.BaseBean  - log4j reset thread start success...
+2020-04-30 09:19:42,585 INFO  weaver.filter.XssFilter  - Initializing filter 'XssFilter'
+2020-04-30 09:19:42,645 INFO  weaver.filter.XssFilter  - Filter 'XssFilter' configured successfully
+2020-04-30 09:19:42,841 ERROR weaver.general.BaseBean  - ------是否开启字符转码----0---是否开启sql参数化解析-----0----nativepool----ecology
+2020-04-30 09:19:42,867 ERROR weaver.general.BaseBean  - ExecuteSqlLogger start log write to file thread success...
+2020-04-30 09:25:12,234 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun:1
+2020-04-30 09:25:12,236 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun1:1
+2020-04-30 09:26:13,053 INFO  weaver.filter.SecurityFilter  - Filter 'SecurityFilter' configured successfully
+2020-04-30 09:26:13,064 ERROR weaver.general.BaseBean  - log4j reset thread start success...
+2020-04-30 09:40:12,553 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun:1
+2020-04-30 09:40:12,555 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun1:1
+2020-04-30 09:54:12,571 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息...
+2020-04-30 09:54:12,592 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息成功...
+2020-04-30 09:55:12,913 INFO  weaver.filter.SecurityFilter  - Initializing filter 'SecurityFilter'
+2020-04-30 10:07:12,651 INFO  weaver.filter.SecurityFilter  - Filter 'SecurityFilter' configured successfully
+2020-04-30 10:07:12,722 ERROR weaver.general.BaseBean  - log4j reset thread start success...
+2020-04-30 10:09:12,798 ERROR weaver.systeminfo.menuconfig.MenuUtil  - 后端菜单查询sql:select * from (select isnull(c.isopen,m.infoid+(324855)+1) as isopen,m.* from ( ( SELECT t1.id as infoId, t1.labelId , t1.refersubid,t1.isCustom, t1.iconUrl ,t1.linkAddress,t1.baseTarget ,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,allt.c as  allParent,curt.c as curParent  FROM mainmenuinfo t1  left join (select count(0) c,parentId from mainmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from mainmenuinfo it1 inner join mainmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1 group by it1.parentId)curt on t1.id=curt.parentId , mainmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=1 and t2.resourceid =1) or (t2.resourcetype=3 and t2.resourceid=1)) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id in (SELECT infoid FROM menushareinfo WHERE (  CASE WHEN (sharetype = 1 AND sharevalue in (0,-2)  and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 3 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 5 AND sharevalue = 1) THEN  1 ELSE 0 END   = 1   OR  CASE WHEN (sharetype = 6 AND sharevalue in (0,-4) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR CASE WHEN (sharetype = 7 AND sharevalue = 0  and   ( case when jobtitlelevel=1  Then 1 else 0 end = 1     or       case when (jobtitlelevel=2 and ( '%,'+jobtitlesharevalue+',%' like '%,0,%'  or  '%,'+jobtitlesharevalue+',%' like '%,-2,%' ) ) Then 1 else 0 end = 1        or       case when (jobtitlelevel=3 and ( '%,'+jobtitlesharevalue+',%' like '%,0,%'  or  '%,'+jobtitlesharevalue+',%' like '%,-4,%' ) ) Then 1 else 0 end = 1    )) THEN  1 ELSE 0 END   = 1   OR    CASE WHEN (sharetype = 2 AND sharevalue IN ( select roleid  from hrmrolemembers role WHERE rolelevel <=role.rolelevel AND role.resourceid =1 ) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1  )  and resourcetype=1 and resourceid =1 and menutype='top' ) and t1.parentid =10000  ) union ( SELECT t1.id as infoId, t1.labelId , t1.refersubid,t1.isCustom, t1.iconUrl ,t1.linkAddress,t1.baseTarget ,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,allt.c as  allParent,curt.c as curParent  FROM mainmenuinfo t1  left join (select count(0) c,parentId from mainmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from mainmenuinfo it1 inner join mainmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1 group by it1.parentId)curt on t1.id=curt.parentId , mainmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=1 and t2.resourceid =1) or (t2.resourcetype=3 and t2.resourceid=1)) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id not in (SELECT infoid FROM menushareinfo where menutype='top'  and resourcetype=1 and resourceid =1 ) and t1.parentid =10000  ) ) m left join menucontrollist c on m.infoid+324789=c.menuid and c.type='top') a where a.isopen=a.infoid+(324855)+1 ORDER BY ISNULL(a.parentId,0),a.viewIndex,a.infoId
+2020-04-30 10:21:12,687 ERROR weaver.conn.RecordSet  - WorkflowSignInput.jsp requestId=-1,workflowId=281,nodeId=2202
+2020-04-30 10:21:12,687 INFO  weaver.odoc.workflow.workflow.utils.FormSignatureConfigUtil  - getFormSignatureConfig() workflowId=281,nodeId=2202,userId=1,language=7
+2020-04-30 10:45:12,645 INFO  weaver.filter.SecurityFilter  - Filter 'SecurityFilter' configured successfully
+2020-04-30 10:45:12,658 ERROR weaver.general.BaseBean  - log4j reset thread start success...
+2020-04-30 10:55:12,643 INFO  weaver.filter.SecurityFilter  - Filter 'SecurityFilter' configured successfully
+2020-04-30 10:55:12,651 ERROR weaver.general.BaseBean  - log4j reset thread start success...
+2020-04-30 12:10:31,522 ERROR weaver.general.BaseBean  - ------是否开启字符转码----0---是否开启sql参数化解析-----0----nativepool----ecology
+2020-04-30 12:10:32,121 ERROR weaver.general.BaseBean  - ExecuteSqlLogger start log write to file thread success...
+2020-04-30 12:10:32,236 INFO  weaver.common.SystemInitialized  - System Initialized OK.
+2020-04-30 12:10:32,863 INFO  weaver.general.InitServer  - System Init Message:mainControlIp= localIp:[192.168.97.232, 192.168.25.1, 192.168.149.1]
+2020-04-30 12:10:32,863 INFO  weaver.general.InitServer  - init ioc container...
+2020-04-30 12:10:33,703 ERROR com.weaver.upgrade.FunctionUpgrade  - OS.name+++++++++++++++++++++:Windows 10
+2020-04-30 12:10:33,703 ERROR com.weaver.upgrade.FunctionUpgrade  - srcfilePath+++++++++++++++++++++:D:\WEAVER\ecology\upgrade\src
+2020-04-30 12:10:33,705 ERROR com.weaver.upgrade.FunctionUpgrade  - 本地Ip++++++++++：192.168.25.1
+2020-04-30 12:10:33,706 ERROR com.weaver.upgrade.FunctionUpgrade  - 主节点MainControlIP++++++++++：
+2020-04-30 12:10:33,817 INFO  weaver.general.InitServer  - end ioc container init...
+2020-04-30 12:10:33,818 INFO  weaver.general.InitServer  - SystemUpgrade Start.....
+2020-04-30 12:10:33,832 INFO  weaver.general.InitServer  - SystemUpgrade End.....
+2020-04-30 12:10:33,832 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread Start.....
+2020-04-30 12:10:33,841 ERROR weaver.general.BaseBean  - 启动日志压缩线程....
+2020-04-30 12:10:33,860 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread End.....
+2020-04-30 12:10:33,876 ERROR weaver.system.HtmlFieldToClob  - isrun:1
+2020-04-30 12:10:33,877 ERROR weaver.system.HtmlFieldToClob  - isrun1:1
+2020-04-30 12:10:33,904 ERROR weaver.conn.RecordSet  - WFVersionAdd insert Waiting...
+2020-04-30 12:10:34,648 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息...
+2020-04-30 12:10:34,688 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息成功...
+2020-04-30 12:10:35,408 INFO  weaver.general.InitServer  - end.....
+2020-04-30 12:10:35,990 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun:1
+2020-04-30 12:10:35,991 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun1:1
+2020-04-30 12:10:36,158 ERROR weaver.page.PageManager  - 清空二维码扫描缓存记录表
+2020-04-30 12:10:36,406 ERROR weaver.cpt.util.CptInitManager  - weaver.cpt.util.CptInitManager is running start...
+2020-04-30 12:10:36,434 ERROR weaver.formmode.cuspage.cpt.CptGenmenu4mode  - weaver.formmode.cuspage.cpt.CptGenmenu4mode is running start...
+2020-04-30 12:10:36,449 ERROR weaver.formmode.cuspage.cpt.CptGenmenu4mode  - weaver.formmode.cuspage.cpt.CptGenmenu4mode is running end...
+2020-04-30 12:10:36,862 ERROR weaver.cpt.util.CptInitManager  - weaver.cpt.util.CptInitManager is running end...
+2020-04-30 12:10:39,578 ERROR org.directwebremoting.util.LogErrorHandler  - Line=52 Element type "filter" must be declared.
+2020-04-30 12:10:39,578 ERROR org.directwebremoting.util.LogErrorHandler  - Line=53 The content of element type "allow" must match "(create|convert)*".
+2020-04-30 12:10:39,981 ERROR weaver.conn.RecordSet  - select t1.* from  uf_zzzxx t1 where t1.formmodeid=50  and ( DATEDIFF(ss,t1.jzrq+' '+'23:55:50',getDate())>=(-1*60*60*24*30) and DATEDIFF(ss, CONVERT(varchar(10), GETDATE(), 120) +' '+'00:00:00',t1.jzrq+' '+'23:55:50')>=(-1*60*60*24*30) and t1.jzrq is not null and t1.jzrq<> '' )  and not exists(select 1 from mode_reminddata_all t2 where t2.remindjobid=1 and t2.billid=t1.id and lastdate= CONVERT(varchar(10), GETDATE(), 120)  and isnull(isRemindWorkflow,0)=1 )
+2020-04-30 12:10:39,983 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: datediff 函数导致溢出。用于分隔两个日期/时间实例的日期部分的数字太大。请尝试使用日期部分精度较低的 datediff。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:196)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet$FetchBuffer.nextRow(SQLServerResultSet.java:4700)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.fetchBufferNext(SQLServerResultSet.java:1683)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.next(SQLServerResultSet.java:956)
+	at weaver.conn.RecordSet.parseResultSet(RecordSet.java:1656)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:916)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.formmode.task.action.TaskAction.doRemind(TaskAction.java:247)
+	at weaver.formmode.task.action.WorkflowMessageTaskAction.doIt(WorkflowMessageTaskAction.java:33)
+	at weaver.formmode.task.action.TaskAction.execute(TaskAction.java:34)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:529)
+2020-04-30 12:10:41,336 ERROR weaver.system.MonitorThreadManager  - >>>>MonitorThreadManager>>单独的预警关闭控制：isThreadWarningStart(zt)=0<<<<
+2020-04-30 12:10:41,968 ERROR weaver.general.BaseBean  - 初始化微信推送扫描线程成功，扫描间隔1分钟---------
+2020-04-30 12:10:43,548 INFO  weaver.filter.SecurityFilter  - Initializing filter 'SecurityFilter'
+2020-04-30 12:10:45,623 INFO  weaver.filter.SecurityFilter  - Filter 'SecurityFilter' configured successfully
+2020-04-30 12:10:45,629 ERROR weaver.general.BaseBean  - log4j reset thread start success...
+2020-04-30 12:10:45,819 INFO  weaver.filter.XssFilter  - Initializing filter 'XssFilter'
+2020-04-30 12:12:51,149 ERROR weaver.general.BaseBean  - ------是否开启字符转码----0---是否开启sql参数化解析-----0----nativepool----ecology
+2020-04-30 12:12:51,871 ERROR weaver.general.BaseBean  - ExecuteSqlLogger start log write to file thread success...
+2020-04-30 12:12:51,976 INFO  weaver.common.SystemInitialized  - System Initialized OK.
+2020-04-30 12:12:52,487 INFO  weaver.general.InitServer  - System Init Message:mainControlIp= localIp:[192.168.97.232, 192.168.25.1, 192.168.149.1]
+2020-04-30 12:12:52,487 INFO  weaver.general.InitServer  - init ioc container...
+2020-04-30 12:12:53,406 ERROR com.weaver.upgrade.FunctionUpgrade  - OS.name+++++++++++++++++++++:Windows 10
+2020-04-30 12:12:53,406 ERROR com.weaver.upgrade.FunctionUpgrade  - srcfilePath+++++++++++++++++++++:D:\WEAVER\ecology\upgrade\src
+2020-04-30 12:12:53,408 ERROR com.weaver.upgrade.FunctionUpgrade  - 本地Ip++++++++++：192.168.25.1
+2020-04-30 12:12:53,408 ERROR com.weaver.upgrade.FunctionUpgrade  - 主节点MainControlIP++++++++++：
+2020-04-30 12:12:53,504 INFO  weaver.general.InitServer  - end ioc container init...
+2020-04-30 12:12:53,505 INFO  weaver.general.InitServer  - SystemUpgrade Start.....
+2020-04-30 12:12:53,515 INFO  weaver.general.InitServer  - SystemUpgrade End.....
+2020-04-30 12:12:53,516 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread Start.....
+2020-04-30 12:12:53,523 ERROR weaver.general.BaseBean  - 启动日志压缩线程....
+2020-04-30 12:12:53,525 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread End.....
+2020-04-30 12:12:53,530 ERROR weaver.system.HtmlFieldToClob  - isrun:1
+2020-04-30 12:12:53,531 ERROR weaver.system.HtmlFieldToClob  - isrun1:1
+2020-04-30 12:12:53,532 ERROR weaver.conn.RecordSet  - WFVersionAdd insert Waiting...
+2020-04-30 12:12:54,146 INFO  weaver.general.InitServer  - end.....
+2020-04-30 12:12:54,463 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息...
+2020-04-30 12:12:54,551 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息成功...
+2020-04-30 12:12:54,591 ERROR weaver.page.PageManager  - 清空二维码扫描缓存记录表
+2020-04-30 12:12:54,690 ERROR weaver.formmode.cuspage.cpt.CptGenmenu4mode  - weaver.formmode.cuspage.cpt.CptGenmenu4mode is running start...
+2020-04-30 12:12:54,691 ERROR weaver.cpt.util.CptInitManager  - weaver.cpt.util.CptInitManager is running start...
+2020-04-30 12:12:54,703 ERROR weaver.formmode.cuspage.cpt.CptGenmenu4mode  - weaver.formmode.cuspage.cpt.CptGenmenu4mode is running end...
+2020-04-30 12:12:54,728 ERROR weaver.cpt.util.CptInitManager  - weaver.cpt.util.CptInitManager is running end...
+2020-04-30 12:12:55,540 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun:1
+2020-04-30 12:12:55,541 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun1:1
+2020-04-30 12:12:55,986 ERROR org.directwebremoting.util.LogErrorHandler  - Line=52 Element type "filter" must be declared.
+2020-04-30 12:12:55,987 ERROR org.directwebremoting.util.LogErrorHandler  - Line=53 The content of element type "allow" must match "(create|convert)*".
+2020-04-30 12:12:57,481 ERROR weaver.conn.RecordSet  - select t1.* from  uf_zzzxx t1 where t1.formmodeid=50  and ( DATEDIFF(ss,t1.jzrq+' '+'23:55:50',getDate())>=(-1*60*60*24*30) and DATEDIFF(ss, CONVERT(varchar(10), GETDATE(), 120) +' '+'00:00:00',t1.jzrq+' '+'23:55:50')>=(-1*60*60*24*30) and t1.jzrq is not null and t1.jzrq<> '' )  and not exists(select 1 from mode_reminddata_all t2 where t2.remindjobid=1 and t2.billid=t1.id and lastdate= CONVERT(varchar(10), GETDATE(), 120)  and isnull(isRemindWorkflow,0)=1 )
+2020-04-30 12:12:57,482 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: datediff 函数导致溢出。用于分隔两个日期/时间实例的日期部分的数字太大。请尝试使用日期部分精度较低的 datediff。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:196)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet$FetchBuffer.nextRow(SQLServerResultSet.java:4700)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.fetchBufferNext(SQLServerResultSet.java:1683)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.next(SQLServerResultSet.java:956)
+	at weaver.conn.RecordSet.parseResultSet(RecordSet.java:1656)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:916)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.formmode.task.action.TaskAction.doRemind(TaskAction.java:247)
+	at weaver.formmode.task.action.WorkflowMessageTaskAction.doIt(WorkflowMessageTaskAction.java:33)
+	at weaver.formmode.task.action.TaskAction.execute(TaskAction.java:34)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:529)
+2020-04-30 12:12:58,077 ERROR weaver.system.MonitorThreadManager  - >>>>MonitorThreadManager>>单独的预警关闭控制：isThreadWarningStart(zt)=0<<<<
+2020-04-30 12:12:58,204 ERROR weaver.general.BaseBean  - 初始化微信推送扫描线程成功，扫描间隔1分钟---------
+2020-04-30 12:12:59,617 INFO  weaver.filter.SecurityFilter  - Initializing filter 'SecurityFilter'
+2020-04-30 12:13:01,682 INFO  weaver.filter.SecurityFilter  - Filter 'SecurityFilter' configured successfully
+2020-04-30 12:13:01,690 ERROR weaver.general.BaseBean  - log4j reset thread start success...
+2020-04-30 12:13:01,918 INFO  weaver.filter.XssFilter  - Initializing filter 'XssFilter'
+2020-04-30 12:13:01,934 INFO  weaver.filter.XssFilter  - Filter 'XssFilter' configured successfully
+2020-04-30 12:13:02,098 ERROR weaver.general.BaseBean  - ------是否开启字符转码----0---是否开启sql参数化解析-----0----nativepool----ecology
+2020-04-30 12:13:02,113 ERROR weaver.general.BaseBean  - ExecuteSqlLogger start log write to file thread success...
+2020-04-30 12:14:04,764 INFO  weaver.filter.SecurityFilter  - Initializing filter 'SecurityFilter'
+2020-04-30 12:14:07,427 INFO  weaver.filter.SecurityFilter  - Filter 'SecurityFilter' configured successfully
+2020-04-30 12:14:07,436 ERROR weaver.general.BaseBean  - log4j reset thread start success...
+2020-04-30 12:14:07,683 INFO  weaver.filter.XssFilter  - Initializing filter 'XssFilter'
+2020-04-30 12:14:07,710 INFO  weaver.filter.XssFilter  - Filter 'XssFilter' configured successfully
+2020-04-30 12:14:07,909 ERROR weaver.general.BaseBean  - ------是否开启字符转码----0---是否开启sql参数化解析-----0----nativepool----ecology
+2020-04-30 12:14:07,941 ERROR weaver.general.BaseBean  - ExecuteSqlLogger start log write to file thread success...
+2020-04-30 12:14:52,946 ERROR weaver.conn.RecordSet  - select count(t1.id)  from uf_HTK t1   where t1.formmodeid=30  and kh='''' and htzt=0 and (  ','+CONVERT(varchar(max),t1.bsqgs)+','  like '%,141,%' ) and (t1.htzt =0 )
+2020-04-30 12:14:52,948 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: 在将 varchar 值 ''' 转换成数据类型 int 时失败。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:196)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet$FetchBuffer.nextRow(SQLServerResultSet.java:4700)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.fetchBufferNext(SQLServerResultSet.java:1683)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.next(SQLServerResultSet.java:956)
+	at weaver.conn.RecordSet.parseResultSet(RecordSet.java:1656)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:916)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.general.SplitPageUtil.getRs(SplitPageUtil.java:1048)
+	at weaver.general.SplitPageUtil.getRecordCount(SplitPageUtil.java:50)
+	at weaver.common.util.taglib.SplitPageXmlServlet.doPost(SplitPageXmlServlet.java:404)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:153)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:91)
+	at com.caucho.server.dispatch.ServletFilterChain.doFilter(ServletFilterChain.java:103)
+	at weaver.filter.PFixFilter.doFilter(PFixFilter.java:129)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.MonitorXFixIPFilter.doFilter(MonitorXFixIPFilter.java:30)
+	at weaver.filter.MonitorForbiddenUrlFilter.doFilter(MonitorForbiddenUrlFilter.java:133)
+	at weaver.filter.MonitorCheckdbFilter.doFilter(MonitorCheckdbFilter.java:49)
+	at weaver.filter.MonitorXUrlTimeFilter.doFilter(MonitorXUrlTimeFilter.java:66)
+	at weaver.filter.DynamicMonitorXFilter.doFilter(DynamicMonitorXFilter.java:86)
+	at weaver.filter.MonitorXFilter.doFilter(MonitorXFilter.java:83)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.XssFilter.doFilterInternal(XssFilter.java:40)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.ConnFastFilter.doFilter(ConnFastFilter.java:38)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.WGzipFilter.doFilter(WGzipFilter.java:115)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.security.webcontainer.XssRequestForResin3.doFilter(XssRequestForResin3.java:31)
+	at sun.reflect.GeneratedMethodAccessor340.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at weaver.security.filter.SecurityMain.process(SecurityMain.java:760)
+	at sun.reflect.GeneratedMethodAccessor244.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at weaver.filter.SecurityFilter.doFilterInternal(SecurityFilter.java:51)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at com.caucho.server.webapp.WebAppFilterChain.doFilter(WebAppFilterChain.java:187)
+	at com.caucho.server.dispatch.ServletInvocation.service(ServletInvocation.java:265)
+	at com.caucho.server.http.HttpRequest.handleRequest(HttpRequest.java:273)
+	at com.caucho.server.port.TcpConnection.run(TcpConnection.java:682)
+	at com.caucho.util.ThreadPool$Item.runTasks(ThreadPool.java:730)
+	at com.caucho.util.ThreadPool$Item.run(ThreadPool.java:649)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-30 12:14:52,949 ERROR weaver.general.SplitPageUtil  - 分页部分执行如下SQL语句: 
+select count(t1.id)  from uf_HTK t1   where t1.formmodeid=30  and kh='''' and htzt=0 and (  ','+CONVERT(varchar(max),t1.bsqgs)+','  like '%,141,%' ) and (t1.htzt =0 ) 
+失败,请检查上面的SQL语句.
+2020-04-30 12:14:52,952 ERROR weaver.conn.RecordSet  - select count(t1.id)  from uf_HTK t1   where t1.formmodeid=30  and kh='''' and htzt=0 and (  ','+CONVERT(varchar(max),t1.bsqgs)+','  like '%,141,%' ) and (t1.htzt =0 )
+2020-04-30 12:14:52,952 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: 在将 varchar 值 ''' 转换成数据类型 int 时失败。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:196)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet$FetchBuffer.nextRow(SQLServerResultSet.java:4700)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.fetchBufferNext(SQLServerResultSet.java:1683)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.next(SQLServerResultSet.java:956)
+	at weaver.conn.RecordSet.parseResultSet(RecordSet.java:1656)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:916)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.general.SplitPageUtil.getRs(SplitPageUtil.java:1048)
+	at weaver.general.SplitPageUtil.getRecordCount(SplitPageUtil.java:50)
+	at weaver.general.SplitPageUtil.getCurrentPageRsNew(SplitPageUtil.java:118)
+	at weaver.common.util.taglib.SplitPageXmlServlet.doPost(SplitPageXmlServlet.java:406)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:153)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:91)
+	at com.caucho.server.dispatch.ServletFilterChain.doFilter(ServletFilterChain.java:103)
+	at weaver.filter.PFixFilter.doFilter(PFixFilter.java:129)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.MonitorXFixIPFilter.doFilter(MonitorXFixIPFilter.java:30)
+	at weaver.filter.MonitorForbiddenUrlFilter.doFilter(MonitorForbiddenUrlFilter.java:133)
+	at weaver.filter.MonitorCheckdbFilter.doFilter(MonitorCheckdbFilter.java:49)
+	at weaver.filter.MonitorXUrlTimeFilter.doFilter(MonitorXUrlTimeFilter.java:66)
+	at weaver.filter.DynamicMonitorXFilter.doFilter(DynamicMonitorXFilter.java:86)
+	at weaver.filter.MonitorXFilter.doFilter(MonitorXFilter.java:83)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.XssFilter.doFilterInternal(XssFilter.java:40)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.ConnFastFilter.doFilter(ConnFastFilter.java:38)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.WGzipFilter.doFilter(WGzipFilter.java:115)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.security.webcontainer.XssRequestForResin3.doFilter(XssRequestForResin3.java:31)
+	at sun.reflect.GeneratedMethodAccessor340.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at weaver.security.filter.SecurityMain.process(SecurityMain.java:760)
+	at sun.reflect.GeneratedMethodAccessor244.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at weaver.filter.SecurityFilter.doFilterInternal(SecurityFilter.java:51)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at com.caucho.server.webapp.WebAppFilterChain.doFilter(WebAppFilterChain.java:187)
+	at com.caucho.server.dispatch.ServletInvocation.service(ServletInvocation.java:265)
+	at com.caucho.server.http.HttpRequest.handleRequest(HttpRequest.java:273)
+	at com.caucho.server.port.TcpConnection.run(TcpConnection.java:682)
+	at com.caucho.util.ThreadPool$Item.runTasks(ThreadPool.java:730)
+	at com.caucho.util.ThreadPool$Item.run(ThreadPool.java:649)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-30 12:14:52,953 ERROR weaver.general.SplitPageUtil  - 分页部分执行如下SQL语句: 
+select count(t1.id)  from uf_HTK t1   where t1.formmodeid=30  and kh='''' and htzt=0 and (  ','+CONVERT(varchar(max),t1.bsqgs)+','  like '%,141,%' ) and (t1.htzt =0 ) 
+失败,请检查上面的SQL语句.
+2020-04-30 12:14:52,958 ERROR weaver.conn.RecordSet  - select outtemp1409477546046.* from (select row_number()over(order by tempcolumn1409477546046) temprownumber1409477546046,* from ( select  top  10 tempcolumn1409477546046=0, t1.id,t1.formmodeid,t1.modedatacreater,t1.modedatacreatertype,t1.modedatacreatedate,t1.modedatacreatetime ,t1.htbh,t1.bsqgs,t1.htzt  from uf_HTK t1   where t1.formmodeid=30  and kh='''' and htzt=0 and (  ','+CONVERT(varchar(max),t1.bsqgs)+','  like '%,141,%' ) and (t1.htzt =0 ) order by t1.id desc) innertemp1409477546046 ) outtemp1409477546046  where temprownumber1409477546046>0 order by temprownumber1409477546046
+2020-04-30 12:14:52,958 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: 在将 varchar 值 ''' 转换成数据类型 int 时失败。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:196)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet$FetchBuffer.nextRow(SQLServerResultSet.java:4700)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.fetchBufferNext(SQLServerResultSet.java:1683)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.next(SQLServerResultSet.java:956)
+	at weaver.conn.RecordSet.parseResultSet(RecordSet.java:1656)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:916)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.general.SplitPageUtil.getRs(SplitPageUtil.java:1048)
+	at weaver.general.SplitPageUtil.getCurrentPageRsNew(SplitPageUtil.java:130)
+	at weaver.common.util.taglib.SplitPageXmlServlet.doPost(SplitPageXmlServlet.java:406)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:153)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:91)
+	at com.caucho.server.dispatch.ServletFilterChain.doFilter(ServletFilterChain.java:103)
+	at weaver.filter.PFixFilter.doFilter(PFixFilter.java:129)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.MonitorXFixIPFilter.doFilter(MonitorXFixIPFilter.java:30)
+	at weaver.filter.MonitorForbiddenUrlFilter.doFilter(MonitorForbiddenUrlFilter.java:133)
+	at weaver.filter.MonitorCheckdbFilter.doFilter(MonitorCheckdbFilter.java:49)
+	at weaver.filter.MonitorXUrlTimeFilter.doFilter(MonitorXUrlTimeFilter.java:66)
+	at weaver.filter.DynamicMonitorXFilter.doFilter(DynamicMonitorXFilter.java:86)
+	at weaver.filter.MonitorXFilter.doFilter(MonitorXFilter.java:83)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.XssFilter.doFilterInternal(XssFilter.java:40)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.ConnFastFilter.doFilter(ConnFastFilter.java:38)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.WGzipFilter.doFilter(WGzipFilter.java:115)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.security.webcontainer.XssRequestForResin3.doFilter(XssRequestForResin3.java:31)
+	at sun.reflect.GeneratedMethodAccessor340.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at weaver.security.filter.SecurityMain.process(SecurityMain.java:760)
+	at sun.reflect.GeneratedMethodAccessor244.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at weaver.filter.SecurityFilter.doFilterInternal(SecurityFilter.java:51)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at com.caucho.server.webapp.WebAppFilterChain.doFilter(WebAppFilterChain.java:187)
+	at com.caucho.server.dispatch.ServletInvocation.service(ServletInvocation.java:265)
+	at com.caucho.server.http.HttpRequest.handleRequest(HttpRequest.java:273)
+	at com.caucho.server.port.TcpConnection.run(TcpConnection.java:682)
+	at com.caucho.util.ThreadPool$Item.runTasks(ThreadPool.java:730)
+	at com.caucho.util.ThreadPool$Item.run(ThreadPool.java:649)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-30 12:14:52,959 ERROR weaver.general.SplitPageUtil  - 分页部分执行如下SQL语句: 
+select outtemp1409477546046.* from (select row_number()over(order by tempcolumn1409477546046) temprownumber1409477546046,* from ( select  top  10 tempcolumn1409477546046=0, t1.id,t1.formmodeid,t1.modedatacreater,t1.modedatacreatertype,t1.modedatacreatedate,t1.modedatacreatetime ,t1.htbh,t1.bsqgs,t1.htzt  from uf_HTK t1   where t1.formmodeid=30  and kh='''' and htzt=0 and (  ','+CONVERT(varchar(max),t1.bsqgs)+','  like '%,141,%' ) and (t1.htzt =0 ) order by t1.id desc) innertemp1409477546046 ) outtemp1409477546046  where temprownumber1409477546046>0 order by temprownumber1409477546046 
+失败,请检查上面的SQL语句.
+2020-04-30 12:14:56,056 ERROR weaver.conn.RecordSet  - select count(t1.id)  from uf_HTK t1   where t1.formmodeid=30  and kh='''' and htzt=0 and (  ','+CONVERT(varchar(max),t1.bsqgs)+','  like '%,141,%' )
+2020-04-30 12:14:56,056 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: 在将 varchar 值 ''' 转换成数据类型 int 时失败。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:196)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet$FetchBuffer.nextRow(SQLServerResultSet.java:4700)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.fetchBufferNext(SQLServerResultSet.java:1683)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.next(SQLServerResultSet.java:956)
+	at weaver.conn.RecordSet.parseResultSet(RecordSet.java:1656)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:916)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.general.SplitPageUtil.getRs(SplitPageUtil.java:1048)
+	at weaver.general.SplitPageUtil.getRecordCount(SplitPageUtil.java:50)
+	at weaver.common.util.taglib.SplitPageXmlServlet.doPost(SplitPageXmlServlet.java:404)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:153)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:91)
+	at com.caucho.server.dispatch.ServletFilterChain.doFilter(ServletFilterChain.java:103)
+	at weaver.filter.PFixFilter.doFilter(PFixFilter.java:129)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.MonitorXFixIPFilter.doFilter(MonitorXFixIPFilter.java:30)
+	at weaver.filter.MonitorForbiddenUrlFilter.doFilter(MonitorForbiddenUrlFilter.java:133)
+	at weaver.filter.MonitorCheckdbFilter.doFilter(MonitorCheckdbFilter.java:49)
+	at weaver.filter.MonitorXUrlTimeFilter.doFilter(MonitorXUrlTimeFilter.java:66)
+	at weaver.filter.DynamicMonitorXFilter.doFilter(DynamicMonitorXFilter.java:86)
+	at weaver.filter.MonitorXFilter.doFilter(MonitorXFilter.java:83)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.XssFilter.doFilterInternal(XssFilter.java:40)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.ConnFastFilter.doFilter(ConnFastFilter.java:38)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.WGzipFilter.doFilter(WGzipFilter.java:115)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.security.webcontainer.XssRequestForResin3.doFilter(XssRequestForResin3.java:31)
+	at sun.reflect.GeneratedMethodAccessor340.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at weaver.security.filter.SecurityMain.process(SecurityMain.java:760)
+	at sun.reflect.GeneratedMethodAccessor244.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at weaver.filter.SecurityFilter.doFilterInternal(SecurityFilter.java:51)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at com.caucho.server.webapp.WebAppFilterChain.doFilter(WebAppFilterChain.java:187)
+	at com.caucho.server.dispatch.ServletInvocation.service(ServletInvocation.java:265)
+	at com.caucho.server.http.HttpRequest.handleRequest(HttpRequest.java:273)
+	at com.caucho.server.port.TcpConnection.run(TcpConnection.java:682)
+	at com.caucho.util.ThreadPool$Item.runTasks(ThreadPool.java:730)
+	at com.caucho.util.ThreadPool$Item.run(ThreadPool.java:649)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-30 12:14:56,057 ERROR weaver.general.SplitPageUtil  - 分页部分执行如下SQL语句: 
+select count(t1.id)  from uf_HTK t1   where t1.formmodeid=30  and kh='''' and htzt=0 and (  ','+CONVERT(varchar(max),t1.bsqgs)+','  like '%,141,%' ) 
+失败,请检查上面的SQL语句.
+2020-04-30 12:14:56,059 ERROR weaver.conn.RecordSet  - select count(t1.id)  from uf_HTK t1   where t1.formmodeid=30  and kh='''' and htzt=0 and (  ','+CONVERT(varchar(max),t1.bsqgs)+','  like '%,141,%' )
+2020-04-30 12:14:56,059 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: 在将 varchar 值 ''' 转换成数据类型 int 时失败。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:196)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet$FetchBuffer.nextRow(SQLServerResultSet.java:4700)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.fetchBufferNext(SQLServerResultSet.java:1683)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.next(SQLServerResultSet.java:956)
+	at weaver.conn.RecordSet.parseResultSet(RecordSet.java:1656)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:916)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.general.SplitPageUtil.getRs(SplitPageUtil.java:1048)
+	at weaver.general.SplitPageUtil.getRecordCount(SplitPageUtil.java:50)
+	at weaver.general.SplitPageUtil.getCurrentPageRsNew(SplitPageUtil.java:118)
+	at weaver.common.util.taglib.SplitPageXmlServlet.doPost(SplitPageXmlServlet.java:406)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:153)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:91)
+	at com.caucho.server.dispatch.ServletFilterChain.doFilter(ServletFilterChain.java:103)
+	at weaver.filter.PFixFilter.doFilter(PFixFilter.java:129)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.MonitorXFixIPFilter.doFilter(MonitorXFixIPFilter.java:30)
+	at weaver.filter.MonitorForbiddenUrlFilter.doFilter(MonitorForbiddenUrlFilter.java:133)
+	at weaver.filter.MonitorCheckdbFilter.doFilter(MonitorCheckdbFilter.java:49)
+	at weaver.filter.MonitorXUrlTimeFilter.doFilter(MonitorXUrlTimeFilter.java:66)
+	at weaver.filter.DynamicMonitorXFilter.doFilter(DynamicMonitorXFilter.java:86)
+	at weaver.filter.MonitorXFilter.doFilter(MonitorXFilter.java:83)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.XssFilter.doFilterInternal(XssFilter.java:40)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.ConnFastFilter.doFilter(ConnFastFilter.java:38)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.WGzipFilter.doFilter(WGzipFilter.java:115)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.security.webcontainer.XssRequestForResin3.doFilter(XssRequestForResin3.java:31)
+	at sun.reflect.GeneratedMethodAccessor340.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at weaver.security.filter.SecurityMain.process(SecurityMain.java:760)
+	at sun.reflect.GeneratedMethodAccessor244.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at weaver.filter.SecurityFilter.doFilterInternal(SecurityFilter.java:51)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at com.caucho.server.webapp.WebAppFilterChain.doFilter(WebAppFilterChain.java:187)
+	at com.caucho.server.dispatch.ServletInvocation.service(ServletInvocation.java:265)
+	at com.caucho.server.http.HttpRequest.handleRequest(HttpRequest.java:273)
+	at com.caucho.server.port.TcpConnection.run(TcpConnection.java:682)
+	at com.caucho.util.ThreadPool$Item.runTasks(ThreadPool.java:730)
+	at com.caucho.util.ThreadPool$Item.run(ThreadPool.java:649)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-30 12:14:56,060 ERROR weaver.general.SplitPageUtil  - 分页部分执行如下SQL语句: 
+select count(t1.id)  from uf_HTK t1   where t1.formmodeid=30  and kh='''' and htzt=0 and (  ','+CONVERT(varchar(max),t1.bsqgs)+','  like '%,141,%' ) 
+失败,请检查上面的SQL语句.
+2020-04-30 12:14:56,067 ERROR weaver.conn.RecordSet  - select outtemp1409477546046.* from (select row_number()over(order by tempcolumn1409477546046) temprownumber1409477546046,* from ( select  top  10 tempcolumn1409477546046=0, t1.id,t1.formmodeid,t1.modedatacreater,t1.modedatacreatertype,t1.modedatacreatedate,t1.modedatacreatetime ,t1.htbh,t1.bsqgs,t1.htzt  from uf_HTK t1   where t1.formmodeid=30  and kh='''' and htzt=0 and (  ','+CONVERT(varchar(max),t1.bsqgs)+','  like '%,141,%' ) order by t1.id desc) innertemp1409477546046 ) outtemp1409477546046  where temprownumber1409477546046>0 order by temprownumber1409477546046
+2020-04-30 12:14:56,067 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: 在将 varchar 值 ''' 转换成数据类型 int 时失败。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:196)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet$FetchBuffer.nextRow(SQLServerResultSet.java:4700)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.fetchBufferNext(SQLServerResultSet.java:1683)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.next(SQLServerResultSet.java:956)
+	at weaver.conn.RecordSet.parseResultSet(RecordSet.java:1656)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:916)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.general.SplitPageUtil.getRs(SplitPageUtil.java:1048)
+	at weaver.general.SplitPageUtil.getCurrentPageRsNew(SplitPageUtil.java:130)
+	at weaver.common.util.taglib.SplitPageXmlServlet.doPost(SplitPageXmlServlet.java:406)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:153)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:91)
+	at com.caucho.server.dispatch.ServletFilterChain.doFilter(ServletFilterChain.java:103)
+	at weaver.filter.PFixFilter.doFilter(PFixFilter.java:129)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.MonitorXFixIPFilter.doFilter(MonitorXFixIPFilter.java:30)
+	at weaver.filter.MonitorForbiddenUrlFilter.doFilter(MonitorForbiddenUrlFilter.java:133)
+	at weaver.filter.MonitorCheckdbFilter.doFilter(MonitorCheckdbFilter.java:49)
+	at weaver.filter.MonitorXUrlTimeFilter.doFilter(MonitorXUrlTimeFilter.java:66)
+	at weaver.filter.DynamicMonitorXFilter.doFilter(DynamicMonitorXFilter.java:86)
+	at weaver.filter.MonitorXFilter.doFilter(MonitorXFilter.java:83)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.XssFilter.doFilterInternal(XssFilter.java:40)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.ConnFastFilter.doFilter(ConnFastFilter.java:38)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.WGzipFilter.doFilter(WGzipFilter.java:115)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.security.webcontainer.XssRequestForResin3.doFilter(XssRequestForResin3.java:31)
+	at sun.reflect.GeneratedMethodAccessor340.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at weaver.security.filter.SecurityMain.process(SecurityMain.java:760)
+	at sun.reflect.GeneratedMethodAccessor244.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at weaver.filter.SecurityFilter.doFilterInternal(SecurityFilter.java:51)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at com.caucho.server.webapp.WebAppFilterChain.doFilter(WebAppFilterChain.java:187)
+	at com.caucho.server.dispatch.ServletInvocation.service(ServletInvocation.java:265)
+	at com.caucho.server.http.HttpRequest.handleRequest(HttpRequest.java:273)
+	at com.caucho.server.port.TcpConnection.run(TcpConnection.java:682)
+	at com.caucho.util.ThreadPool$Item.runTasks(ThreadPool.java:730)
+	at com.caucho.util.ThreadPool$Item.run(ThreadPool.java:649)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-30 12:14:56,068 ERROR weaver.general.SplitPageUtil  - 分页部分执行如下SQL语句: 
+select outtemp1409477546046.* from (select row_number()over(order by tempcolumn1409477546046) temprownumber1409477546046,* from ( select  top  10 tempcolumn1409477546046=0, t1.id,t1.formmodeid,t1.modedatacreater,t1.modedatacreatertype,t1.modedatacreatedate,t1.modedatacreatetime ,t1.htbh,t1.bsqgs,t1.htzt  from uf_HTK t1   where t1.formmodeid=30  and kh='''' and htzt=0 and (  ','+CONVERT(varchar(max),t1.bsqgs)+','  like '%,141,%' ) order by t1.id desc) innertemp1409477546046 ) outtemp1409477546046  where temprownumber1409477546046>0 order by temprownumber1409477546046 
+失败,请检查上面的SQL语句.
+2020-04-30 12:15:00,071 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20200430121500&sign=ef90004b1ed3f3dbfecbf3bc58171f53
+2020-04-30 12:15:00,665 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2020-04-30 12:15:00,665 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2020-04-30 12:15:00,665 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20200430121500&sign=ef90004b1ed3f3dbfecbf3bc58171f53
+2020-04-30 12:15:00,695 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2020-04-30 12:15:00,696 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2020-04-30 12:15:00,696 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20200430121500&sign=ef90004b1ed3f3dbfecbf3bc58171f53
+2020-04-30 12:15:00,725 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2020-04-30 12:15:00,725 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2020-04-30 12:15:00,725 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20200430121500&sign=ef90004b1ed3f3dbfecbf3bc58171f53
+2020-04-30 12:15:00,750 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-04-30 12:15:00,750 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2020-04-30 12:15:00,750 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20200430121500&sign=ef90004b1ed3f3dbfecbf3bc58171f53
+2020-04-30 12:15:00,780 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2020-04-30 12:15:00,780 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2020-04-30 12:15:00,780 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20200430121500&sign=ef90004b1ed3f3dbfecbf3bc58171f53
+2020-04-30 12:15:00,818 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-04-30 12:18:59,063 ERROR weaver.conn.RecordSet  - select count(t1.id)  from uf_HTK t1   where t1.formmodeid=30  and kh='''' and htzt=0 and (  ','+CONVERT(varchar(max),t1.bsqgs)+','  like '%,114,%' )
+2020-04-30 12:18:59,065 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: 在将 varchar 值 ''' 转换成数据类型 int 时失败。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:196)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet$FetchBuffer.nextRow(SQLServerResultSet.java:4700)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.fetchBufferNext(SQLServerResultSet.java:1683)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.next(SQLServerResultSet.java:956)
+	at weaver.conn.RecordSet.parseResultSet(RecordSet.java:1656)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:916)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.general.SplitPageUtil.getRs(SplitPageUtil.java:1048)
+	at weaver.general.SplitPageUtil.getRecordCount(SplitPageUtil.java:50)
+	at weaver.common.util.taglib.SplitPageXmlServlet.doPost(SplitPageXmlServlet.java:404)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:153)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:91)
+	at com.caucho.server.dispatch.ServletFilterChain.doFilter(ServletFilterChain.java:103)
+	at weaver.filter.PFixFilter.doFilter(PFixFilter.java:129)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.MonitorXFixIPFilter.doFilter(MonitorXFixIPFilter.java:30)
+	at weaver.filter.MonitorForbiddenUrlFilter.doFilter(MonitorForbiddenUrlFilter.java:133)
+	at weaver.filter.MonitorCheckdbFilter.doFilter(MonitorCheckdbFilter.java:49)
+	at weaver.filter.MonitorXUrlTimeFilter.doFilter(MonitorXUrlTimeFilter.java:66)
+	at weaver.filter.DynamicMonitorXFilter.doFilter(DynamicMonitorXFilter.java:86)
+	at weaver.filter.MonitorXFilter.doFilter(MonitorXFilter.java:83)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.XssFilter.doFilterInternal(XssFilter.java:40)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.ConnFastFilter.doFilter(ConnFastFilter.java:38)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.WGzipFilter.doFilter(WGzipFilter.java:115)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.security.webcontainer.XssRequestForResin3.doFilter(XssRequestForResin3.java:31)
+	at sun.reflect.GeneratedMethodAccessor340.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at weaver.security.filter.SecurityMain.process(SecurityMain.java:760)
+	at sun.reflect.GeneratedMethodAccessor244.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at weaver.filter.SecurityFilter.doFilterInternal(SecurityFilter.java:51)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at com.caucho.server.webapp.WebAppFilterChain.doFilter(WebAppFilterChain.java:187)
+	at com.caucho.server.dispatch.ServletInvocation.service(ServletInvocation.java:265)
+	at com.caucho.server.http.HttpRequest.handleRequest(HttpRequest.java:273)
+	at com.caucho.server.port.TcpConnection.run(TcpConnection.java:682)
+	at com.caucho.util.ThreadPool$Item.runTasks(ThreadPool.java:730)
+	at com.caucho.util.ThreadPool$Item.run(ThreadPool.java:649)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-30 12:18:59,066 ERROR weaver.general.SplitPageUtil  - 分页部分执行如下SQL语句: 
+select count(t1.id)  from uf_HTK t1   where t1.formmodeid=30  and kh='''' and htzt=0 and (  ','+CONVERT(varchar(max),t1.bsqgs)+','  like '%,114,%' ) 
+失败,请检查上面的SQL语句.
+2020-04-30 12:18:59,067 ERROR weaver.conn.RecordSet  - select count(t1.id)  from uf_HTK t1   where t1.formmodeid=30  and kh='''' and htzt=0 and (  ','+CONVERT(varchar(max),t1.bsqgs)+','  like '%,114,%' )
+2020-04-30 12:18:59,067 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: 在将 varchar 值 ''' 转换成数据类型 int 时失败。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:196)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet$FetchBuffer.nextRow(SQLServerResultSet.java:4700)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.fetchBufferNext(SQLServerResultSet.java:1683)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.next(SQLServerResultSet.java:956)
+	at weaver.conn.RecordSet.parseResultSet(RecordSet.java:1656)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:916)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.general.SplitPageUtil.getRs(SplitPageUtil.java:1048)
+	at weaver.general.SplitPageUtil.getRecordCount(SplitPageUtil.java:50)
+	at weaver.general.SplitPageUtil.getCurrentPageRsNew(SplitPageUtil.java:118)
+	at weaver.common.util.taglib.SplitPageXmlServlet.doPost(SplitPageXmlServlet.java:406)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:153)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:91)
+	at com.caucho.server.dispatch.ServletFilterChain.doFilter(ServletFilterChain.java:103)
+	at weaver.filter.PFixFilter.doFilter(PFixFilter.java:129)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.MonitorXFixIPFilter.doFilter(MonitorXFixIPFilter.java:30)
+	at weaver.filter.MonitorForbiddenUrlFilter.doFilter(MonitorForbiddenUrlFilter.java:133)
+	at weaver.filter.MonitorCheckdbFilter.doFilter(MonitorCheckdbFilter.java:49)
+	at weaver.filter.MonitorXUrlTimeFilter.doFilter(MonitorXUrlTimeFilter.java:66)
+	at weaver.filter.DynamicMonitorXFilter.doFilter(DynamicMonitorXFilter.java:86)
+	at weaver.filter.MonitorXFilter.doFilter(MonitorXFilter.java:83)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.XssFilter.doFilterInternal(XssFilter.java:40)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.ConnFastFilter.doFilter(ConnFastFilter.java:38)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.WGzipFilter.doFilter(WGzipFilter.java:115)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.security.webcontainer.XssRequestForResin3.doFilter(XssRequestForResin3.java:31)
+	at sun.reflect.GeneratedMethodAccessor340.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at weaver.security.filter.SecurityMain.process(SecurityMain.java:760)
+	at sun.reflect.GeneratedMethodAccessor244.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at weaver.filter.SecurityFilter.doFilterInternal(SecurityFilter.java:51)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at com.caucho.server.webapp.WebAppFilterChain.doFilter(WebAppFilterChain.java:187)
+	at com.caucho.server.dispatch.ServletInvocation.service(ServletInvocation.java:265)
+	at com.caucho.server.http.HttpRequest.handleRequest(HttpRequest.java:273)
+	at com.caucho.server.port.TcpConnection.run(TcpConnection.java:682)
+	at com.caucho.util.ThreadPool$Item.runTasks(ThreadPool.java:730)
+	at com.caucho.util.ThreadPool$Item.run(ThreadPool.java:649)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-30 12:18:59,068 ERROR weaver.general.SplitPageUtil  - 分页部分执行如下SQL语句: 
+select count(t1.id)  from uf_HTK t1   where t1.formmodeid=30  and kh='''' and htzt=0 and (  ','+CONVERT(varchar(max),t1.bsqgs)+','  like '%,114,%' ) 
+失败,请检查上面的SQL语句.
+2020-04-30 12:18:59,084 ERROR weaver.conn.RecordSet  - select outtemp1409477546046.* from (select row_number()over(order by tempcolumn1409477546046) temprownumber1409477546046,* from ( select  top  10 tempcolumn1409477546046=0, t1.id,t1.formmodeid,t1.modedatacreater,t1.modedatacreatertype,t1.modedatacreatedate,t1.modedatacreatetime ,t1.htbh,t1.bsqgs,t1.htzt  from uf_HTK t1   where t1.formmodeid=30  and kh='''' and htzt=0 and (  ','+CONVERT(varchar(max),t1.bsqgs)+','  like '%,114,%' ) order by t1.id desc) innertemp1409477546046 ) outtemp1409477546046  where temprownumber1409477546046>0 order by temprownumber1409477546046
+2020-04-30 12:18:59,085 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: 在将 varchar 值 ''' 转换成数据类型 int 时失败。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:196)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet$FetchBuffer.nextRow(SQLServerResultSet.java:4700)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.fetchBufferNext(SQLServerResultSet.java:1683)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.next(SQLServerResultSet.java:956)
+	at weaver.conn.RecordSet.parseResultSet(RecordSet.java:1656)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:916)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.general.SplitPageUtil.getRs(SplitPageUtil.java:1048)
+	at weaver.general.SplitPageUtil.getCurrentPageRsNew(SplitPageUtil.java:130)
+	at weaver.common.util.taglib.SplitPageXmlServlet.doPost(SplitPageXmlServlet.java:406)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:153)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:91)
+	at com.caucho.server.dispatch.ServletFilterChain.doFilter(ServletFilterChain.java:103)
+	at weaver.filter.PFixFilter.doFilter(PFixFilter.java:129)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.MonitorXFixIPFilter.doFilter(MonitorXFixIPFilter.java:30)
+	at weaver.filter.MonitorForbiddenUrlFilter.doFilter(MonitorForbiddenUrlFilter.java:133)
+	at weaver.filter.MonitorCheckdbFilter.doFilter(MonitorCheckdbFilter.java:49)
+	at weaver.filter.MonitorXUrlTimeFilter.doFilter(MonitorXUrlTimeFilter.java:66)
+	at weaver.filter.DynamicMonitorXFilter.doFilter(DynamicMonitorXFilter.java:86)
+	at weaver.filter.MonitorXFilter.doFilter(MonitorXFilter.java:83)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.XssFilter.doFilterInternal(XssFilter.java:40)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.ConnFastFilter.doFilter(ConnFastFilter.java:38)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.filter.WGzipFilter.doFilter(WGzipFilter.java:115)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at weaver.security.webcontainer.XssRequestForResin3.doFilter(XssRequestForResin3.java:31)
+	at sun.reflect.GeneratedMethodAccessor340.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at weaver.security.filter.SecurityMain.process(SecurityMain.java:760)
+	at sun.reflect.GeneratedMethodAccessor244.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at weaver.filter.SecurityFilter.doFilterInternal(SecurityFilter.java:51)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at com.caucho.server.dispatch.FilterFilterChain.doFilter(FilterFilterChain.java:87)
+	at com.caucho.server.webapp.WebAppFilterChain.doFilter(WebAppFilterChain.java:187)
+	at com.caucho.server.dispatch.ServletInvocation.service(ServletInvocation.java:265)
+	at com.caucho.server.http.HttpRequest.handleRequest(HttpRequest.java:273)
+	at com.caucho.server.port.TcpConnection.run(TcpConnection.java:682)
+	at com.caucho.util.ThreadPool$Item.runTasks(ThreadPool.java:730)
+	at com.caucho.util.ThreadPool$Item.run(ThreadPool.java:649)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-30 12:18:59,085 ERROR weaver.general.SplitPageUtil  - 分页部分执行如下SQL语句: 
+select outtemp1409477546046.* from (select row_number()over(order by tempcolumn1409477546046) temprownumber1409477546046,* from ( select  top  10 tempcolumn1409477546046=0, t1.id,t1.formmodeid,t1.modedatacreater,t1.modedatacreatertype,t1.modedatacreatedate,t1.modedatacreatetime ,t1.htbh,t1.bsqgs,t1.htzt  from uf_HTK t1   where t1.formmodeid=30  and kh='''' and htzt=0 and (  ','+CONVERT(varchar(max),t1.bsqgs)+','  like '%,114,%' ) order by t1.id desc) innertemp1409477546046 ) outtemp1409477546046  where temprownumber1409477546046>0 order by temprownumber1409477546046 
+失败,请检查上面的SQL语句.
+2020-04-30 12:20:00,020 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20200430122000&sign=51de57225081df7df706f331c46614f3
+2020-04-30 12:20:00,099 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2020-04-30 12:20:00,099 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2020-04-30 12:20:00,099 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20200430122000&sign=51de57225081df7df706f331c46614f3
+2020-04-30 12:20:00,277 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2020-04-30 12:20:00,277 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2020-04-30 12:20:00,277 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20200430122000&sign=51de57225081df7df706f331c46614f3
+2020-04-30 12:20:00,319 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2020-04-30 12:20:00,319 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2020-04-30 12:20:00,319 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20200430122000&sign=51de57225081df7df706f331c46614f3
+2020-04-30 12:20:00,359 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-04-30 12:20:00,359 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2020-04-30 12:20:00,359 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20200430122000&sign=51de57225081df7df706f331c46614f3
+2020-04-30 12:20:00,400 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2020-04-30 12:20:00,400 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2020-04-30 12:20:00,400 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20200430122000&sign=51de57225081df7df706f331c46614f3
+2020-04-30 12:20:00,457 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-04-30 12:24:51,692 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息...
+2020-04-30 12:24:51,706 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息成功...
+2020-04-30 12:24:53,053 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun:1
+2020-04-30 12:24:53,061 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun1:1
+2020-04-30 12:25:00,012 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20200430122500&sign=52a42614f8791a82d8787b391e11c2b9
+2020-04-30 12:25:00,065 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2020-04-30 12:25:00,065 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2020-04-30 12:25:00,065 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20200430122500&sign=52a42614f8791a82d8787b391e11c2b9
+2020-04-30 12:25:00,097 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2020-04-30 12:25:00,097 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2020-04-30 12:25:00,097 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20200430122500&sign=52a42614f8791a82d8787b391e11c2b9
+2020-04-30 12:25:00,136 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2020-04-30 12:25:00,136 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2020-04-30 12:25:00,136 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20200430122500&sign=52a42614f8791a82d8787b391e11c2b9
+2020-04-30 12:25:00,170 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-04-30 12:25:00,170 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2020-04-30 12:25:00,170 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20200430122500&sign=52a42614f8791a82d8787b391e11c2b9
+2020-04-30 12:25:00,216 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2020-04-30 12:25:00,216 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2020-04-30 12:25:00,216 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20200430122500&sign=52a42614f8791a82d8787b391e11c2b9
+2020-04-30 12:25:00,249 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-04-30 12:25:52,158 INFO  weaver.filter.SecurityFilter  - Initializing filter 'SecurityFilter'
+2020-04-30 12:25:53,935 INFO  weaver.filter.SecurityFilter  - Filter 'SecurityFilter' configured successfully
+2020-04-30 12:25:53,941 ERROR weaver.general.BaseBean  - log4j reset thread start success...
+2020-04-30 12:40:51,681 ERROR com.weaver.upgrade.FunctionUpgrade  - OS.name+++++++++++++++++++++:Windows 10
+2020-04-30 12:40:51,683 ERROR com.weaver.upgrade.FunctionUpgrade  - srcfilePath+++++++++++++++++++++:D:\WEAVER\ecology\out\artifacts\ecology_war_exploded\upgrade\src
+2020-04-30 12:40:51,685 ERROR com.weaver.upgrade.FunctionUpgrade  - 本地Ip++++++++++：192.168.25.1
+2020-04-30 12:40:51,685 ERROR com.weaver.upgrade.FunctionUpgrade  - 主节点MainControlIP++++++++++：
+2020-04-30 12:40:51,772 INFO  weaver.general.InitServer  - end ioc container init...
+2020-04-30 12:40:51,772 INFO  weaver.general.InitServer  - SystemUpgrade Start.....
+2020-04-30 12:40:51,789 INFO  weaver.general.InitServer  - SystemUpgrade End.....
+2020-04-30 12:40:51,790 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread Start.....
+2020-04-30 12:40:51,799 ERROR weaver.general.BaseBean  - 启动日志压缩线程....
+2020-04-30 12:40:51,815 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread End.....
+2020-04-30 12:40:51,828 ERROR weaver.system.HtmlFieldToClob  - isrun:1
+2020-04-30 12:40:51,829 ERROR weaver.system.HtmlFieldToClob  - isrun1:1
+2020-04-30 12:40:51,831 ERROR weaver.conn.RecordSet  - WFVersionAdd insert Waiting...
+2020-04-30 12:40:52,471 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息...
+2020-04-30 12:40:52,482 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息成功...
+2020-04-30 12:40:53,842 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun:1
+2020-04-30 12:40:53,842 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun1:1
+2020-04-30 12:41:52,901 INFO  weaver.filter.SecurityFilter  - Initializing filter 'SecurityFilter'
+2020-04-30 12:55:20,343 ERROR weaver.email.MailTimingDateReceive  - 自动接收邮件定时任务开始--单线程
+2020-04-30 12:55:20,344 ERROR weaver.email.MailTimingDateReceive  - 自动接收邮件定时任务结束--没有开启外部邮件或者自动接收功能--单线程
+2020-04-30 12:59:18,610 INFO  weaver.filter.SecurityFilter  - Filter 'SecurityFilter' configured successfully
+2020-04-30 12:59:18,625 ERROR weaver.general.BaseBean  - log4j reset thread start success...
+2020-04-30 13:13:17,719 INFO  weaver.general.InitServer  - System Init Message:mainControlIp= localIp:[192.168.97.232, 192.168.25.1, 192.168.149.1]
+2020-04-30 13:13:17,720 INFO  weaver.general.InitServer  - init ioc container...
+2020-04-30 13:13:18,306 ERROR com.weaver.upgrade.FunctionUpgrade  - OS.name+++++++++++++++++++++:Windows 10
+2020-04-30 13:13:18,306 ERROR com.weaver.upgrade.FunctionUpgrade  - srcfilePath+++++++++++++++++++++:D:\WEAVER\ecology\out\artifacts\ecology_war_exploded\upgrade\src
+2020-04-30 13:13:18,307 ERROR com.weaver.upgrade.FunctionUpgrade  - 本地Ip++++++++++：192.168.25.1
+2020-04-30 13:13:18,307 ERROR com.weaver.upgrade.FunctionUpgrade  - 主节点MainControlIP++++++++++：
+2020-04-30 13:13:18,329 INFO  weaver.general.InitServer  - end ioc container init...
+2020-04-30 13:13:18,329 INFO  weaver.general.InitServer  - SystemUpgrade Start.....
+2020-04-30 13:13:18,340 INFO  weaver.general.InitServer  - SystemUpgrade End.....
+2020-04-30 13:13:18,340 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread Start.....
+2020-04-30 13:13:18,348 ERROR weaver.general.BaseBean  - 启动日志压缩线程....
+2020-04-30 13:13:18,383 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread End.....
+2020-04-30 13:13:18,391 ERROR weaver.system.HtmlFieldToClob  - isrun:1
+2020-04-30 13:13:18,394 ERROR weaver.system.HtmlFieldToClob  - isrun1:1
+2020-04-30 13:13:18,395 ERROR weaver.conn.RecordSet  - WFVersionAdd insert Waiting...
+2020-04-30 13:24:18,583 INFO  weaver.filter.SecurityFilter  - Filter 'SecurityFilter' configured successfully
+2020-04-30 13:24:18,592 ERROR weaver.general.BaseBean  - log4j reset thread start success...
+2020-04-30 13:47:18,019 ERROR weaver.systeminfo.menuconfig.MenuUtil  - 菜单查询sql:select * from (select isnull(c.isopen,m.infoid+(324855)+1) as isopen,m.* from ( ( SELECT t1.id as infoId, t1.labelId , t1.isCustom, t1.refersubid,t1.iconUrl,t1.TopIconUrl,t1.linkAddress ,t1.baseTarget,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,case when t1.isCustom=2 then t1.topmenuname else t2.topmenuname end topmenuname,case when t1.isCustom=2 then t1.topname_e else t2.topname_e end topname_e,case when t1.isCustom=2 then t1.topname_t else t2.topname_t end topname_t ,allt.c as  allParent,curt.c as curParent  FROM leftmenuinfo t1  left join (select count(0) c,parentId from leftmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from leftmenuinfo it1 inner join leftmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1004 group by it1.parentId)curt on t1.id=curt.parentId , leftmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=2 and t2.resourceid in(80)) or (t2.resourcetype=3 and t2.resourceid in(1004))) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id in (SELECT infoid FROM menushareinfo WHERE (  CASE WHEN (sharetype = 1 AND sharevalue in (323)  and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=10 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=10 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 3 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=10 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=10 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 5 AND sharevalue = 1004) THEN  1 ELSE 0 END   = 1   OR  CASE WHEN (sharetype = 6 AND sharevalue in (80) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=10 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=10 ) THEN  1 ELSE 0 END   = 1 OR CASE WHEN (sharetype = 7 AND sharevalue = 426  and   ( case when jobtitlelevel=1  Then 1 else 0 end = 1     or       case when (jobtitlelevel=2 and ( '%,'+jobtitlesharevalue+',%' like '%,323,%' ) ) Then 1 else 0 end = 1        or       case when (jobtitlelevel=3 and ( '%,'+jobtitlesharevalue+',%' like '%,80,%' ) ) Then 1 else 0 end = 1    )) THEN  1 ELSE 0 END   = 1   OR    CASE WHEN (sharetype = 2 AND sharevalue IN ( select roleid  from hrmrolemembers role WHERE rolelevel <=role.rolelevel AND role.resourceid =1004 ) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=10 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=10 ) THEN  1 ELSE 0 END   = 1  )  and resourcetype=2 and resourceid in(80) and menutype='left' ) and (t1.parentid=0 or  t1.parentid is null or t1.parentid='')  ) union ( SELECT t1.id as infoId, t1.labelId , t1.isCustom, t1.refersubid,t1.iconUrl,t1.TopIconUrl,t1.linkAddress ,t1.baseTarget,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,case when t1.isCustom=2 then t1.topmenuname else t2.topmenuname end topmenuname,case when t1.isCustom=2 then t1.topname_e else t2.topname_e end topname_e,case when t1.isCustom=2 then t1.topname_t else t2.topname_t end topname_t ,allt.c as  allParent,curt.c as curParent  FROM leftmenuinfo t1  left join (select count(0) c,parentId from leftmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from leftmenuinfo it1 inner join leftmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1004 group by it1.parentId)curt on t1.id=curt.parentId , leftmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=2 and t2.resourceid in(80)) or (t2.resourcetype=3 and t2.resourceid in(1004))) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id not in (SELECT infoid FROM menushareinfo where menutype='left'  and resourcetype=2 and resourceid in(80) ) and (t1.parentid=0 or  t1.parentid is null or t1.parentid='')  ) ) m left join menucontrollist c on m.infoid+324789=c.menuid and c.type='left') a where a.isopen=a.infoid+(324855)+1 ORDER BY ISNULL(a.parentId,0),a.viewIndex,a.infoId
+2020-04-30 13:48:18,541 ERROR com.weaver.upgrade.FunctionUpgrade  - OS.name+++++++++++++++++++++:Windows 10
+2020-04-30 13:48:18,541 ERROR com.weaver.upgrade.FunctionUpgrade  - srcfilePath+++++++++++++++++++++:D:\WEAVER\ecology\out\artifacts\ecology_war_exploded\upgrade\src
+2020-04-30 13:48:18,543 ERROR com.weaver.upgrade.FunctionUpgrade  - 本地Ip++++++++++：192.168.25.1
+2020-04-30 13:48:18,543 ERROR com.weaver.upgrade.FunctionUpgrade  - 主节点MainControlIP++++++++++：
+2020-04-30 13:48:18,584 INFO  weaver.general.InitServer  - end ioc container init...
+2020-04-30 13:48:18,585 INFO  weaver.general.InitServer  - SystemUpgrade Start.....
+2020-04-30 13:48:18,598 INFO  weaver.general.InitServer  - SystemUpgrade End.....
+2020-04-30 13:48:18,598 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread Start.....
+2020-04-30 13:48:18,611 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread End.....
+2020-04-30 13:48:18,620 ERROR weaver.system.HtmlFieldToClob  - isrun:1
+2020-04-30 13:48:18,628 ERROR weaver.general.BaseBean  - 启动日志压缩线程....
+2020-04-30 13:48:18,636 ERROR weaver.system.HtmlFieldToClob  - isrun1:1
+2020-04-30 13:48:18,637 ERROR weaver.conn.RecordSet  - WFVersionAdd insert Waiting...
+2020-04-30 13:49:18,389 ERROR weaver.general.BaseBean  - CustomerShareUtil: paras from workflow is #[userid] == 1[crmids] == 83[usertypes] == 0,0,0,0,0,0,0,0[resourceids] == 1,11,14,16,729,1004,1093,1108[sharelevel] == 1
+2020-04-30 13:50:17,987 ERROR com.cloudstore.api.dao.Dao_OrgImpl  - in new selecthave
+2020-04-30 13:50:18,287 ERROR com.cloudstore.api.dao.Dao_OrgImpl  - getCurrentNode sql :select isremark,isreminded,preisremark,id,groupdetailid,nodeid,takisremark,(CASE WHEN isremark=9 THEN '7.5' WHEN (isremark=1 and takisremark=2) THEN '0.9' WHEN (preisremark=1 and takisremark=2) THEN '0.9' ELSE isremark END) orderisremark,workflowid from workflow_currentoperator where requestid=57149 and userid=1004 and usertype=0 order by orderisremark,islasttimes desc 
+2020-04-30 13:50:18,287 ERROR com.cloudstore.api.dao.Dao_OrgImpl  - getCurrentNode nodeid :2318 |workflowid :263
+2020-04-30 13:50:18,369 ERROR com.cloudstore.api.dao.Dao_OrgImpl  - get search sql is :select * from no0000012_wfdetailset where 1=1 and wfid  = '263' and ( nodeids like '%,2318,%' or  nodeids like '2318,%' or  nodeids like '%,2318' or  nodeids like '2318' or nodeid = '2318' ) | result :false
+2020-04-30 13:59:17,983 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息...
+2020-04-30 13:59:18,124 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息成功...
+2020-04-30 13:59:18,821 ERROR weaver.conn.RecordSet  - WFVersionAdd insert Waiting...
+2020-04-30 14:11:15,762 ERROR weaver.general.BaseBean  - ------是否开启字符转码----0---是否开启sql参数化解析-----0----nativepool----ecology
+2020-04-30 14:11:16,330 ERROR weaver.general.BaseBean  - ExecuteSqlLogger start log write to file thread success...
+2020-04-30 14:11:16,443 INFO  weaver.common.SystemInitialized  - System Initialized OK.
+2020-04-30 14:11:16,843 INFO  weaver.general.InitServer  - System Init Message:mainControlIp= localIp:[192.168.97.232, 192.168.25.1, 192.168.149.1]
+2020-04-30 14:11:16,843 INFO  weaver.general.InitServer  - init ioc container...
+2020-04-30 14:11:17,966 ERROR com.weaver.upgrade.FunctionUpgrade  - OS.name+++++++++++++++++++++:Windows 10
+2020-04-30 14:11:17,967 ERROR com.weaver.upgrade.FunctionUpgrade  - srcfilePath+++++++++++++++++++++:D:\WEAVER\ecology\upgrade\src
+2020-04-30 14:11:17,975 ERROR com.weaver.upgrade.FunctionUpgrade  - 本地Ip++++++++++：192.168.25.1
+2020-04-30 14:11:17,976 ERROR com.weaver.upgrade.FunctionUpgrade  - 主节点MainControlIP++++++++++：
+2020-04-30 14:11:18,399 INFO  weaver.general.InitServer  - end ioc container init...
+2020-04-30 14:11:18,400 INFO  weaver.general.InitServer  - SystemUpgrade Start.....
+2020-04-30 14:11:18,444 INFO  weaver.general.InitServer  - SystemUpgrade End.....
+2020-04-30 14:11:18,444 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread Start.....
+2020-04-30 14:11:18,525 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread End.....
+2020-04-30 14:11:18,555 ERROR weaver.system.HtmlFieldToClob  - isrun:1
+2020-04-30 14:11:18,559 ERROR weaver.system.HtmlFieldToClob  - isrun1:1
+2020-04-30 14:11:18,567 ERROR weaver.conn.RecordSet  - WFVersionAdd insert Waiting...
+2020-04-30 14:11:18,594 ERROR weaver.general.BaseBean  - 启动日志压缩线程....
+2020-04-30 14:11:20,073 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息...
+2020-04-30 14:11:20,227 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息成功...
+2020-04-30 14:11:20,568 ERROR weaver.conn.RecordSet  - WFVersionAdd insert Waiting...
+2020-04-30 14:11:22,569 ERROR weaver.conn.RecordSet  - WFVersionAdd insert Waiting...
+2020-04-30 14:11:22,720 INFO  weaver.general.InitServer  - end.....
+2020-04-30 14:11:24,669 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun:1
+2020-04-30 14:11:24,669 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun1:1
+2020-04-30 14:11:25,779 ERROR weaver.page.PageManager  - 清空二维码扫描缓存记录表
+2020-04-30 14:11:25,951 ERROR weaver.cpt.util.CptInitManager  - weaver.cpt.util.CptInitManager is running start...
+2020-04-30 14:11:25,983 ERROR weaver.formmode.cuspage.cpt.CptGenmenu4mode  - weaver.formmode.cuspage.cpt.CptGenmenu4mode is running start...
+2020-04-30 14:11:26,001 ERROR weaver.formmode.cuspage.cpt.CptGenmenu4mode  - weaver.formmode.cuspage.cpt.CptGenmenu4mode is running end...
+2020-04-30 14:11:26,413 ERROR weaver.cpt.util.CptInitManager  - weaver.cpt.util.CptInitManager is running end...
+2020-04-30 14:11:28,942 ERROR org.directwebremoting.util.LogErrorHandler  - Line=52 Element type "filter" must be declared.
+2020-04-30 14:11:28,943 ERROR org.directwebremoting.util.LogErrorHandler  - Line=53 The content of element type "allow" must match "(create|convert)*".
+2020-04-30 14:11:30,284 ERROR weaver.conn.RecordSet  - select t1.* from  uf_zzzxx t1 where t1.formmodeid=50  and ( DATEDIFF(ss,t1.jzrq+' '+'23:55:50',getDate())>=(-1*60*60*24*30) and DATEDIFF(ss, CONVERT(varchar(10), GETDATE(), 120) +' '+'00:00:00',t1.jzrq+' '+'23:55:50')>=(-1*60*60*24*30) and t1.jzrq is not null and t1.jzrq<> '' )  and not exists(select 1 from mode_reminddata_all t2 where t2.remindjobid=1 and t2.billid=t1.id and lastdate= CONVERT(varchar(10), GETDATE(), 120)  and isnull(isRemindWorkflow,0)=1 )
+2020-04-30 14:11:30,286 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: datediff 函数导致溢出。用于分隔两个日期/时间实例的日期部分的数字太大。请尝试使用日期部分精度较低的 datediff。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:196)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet$FetchBuffer.nextRow(SQLServerResultSet.java:4700)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.fetchBufferNext(SQLServerResultSet.java:1683)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.next(SQLServerResultSet.java:956)
+	at weaver.conn.RecordSet.parseResultSet(RecordSet.java:1656)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:916)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.formmode.task.action.TaskAction.doRemind(TaskAction.java:247)
+	at weaver.formmode.task.action.WorkflowMessageTaskAction.doIt(WorkflowMessageTaskAction.java:33)
+	at weaver.formmode.task.action.TaskAction.execute(TaskAction.java:34)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:529)
+2020-04-30 14:11:31,084 ERROR weaver.system.MonitorThreadManager  - >>>>MonitorThreadManager>>单独的预警关闭控制：isThreadWarningStart(zt)=0<<<<
+2020-04-30 14:11:31,735 ERROR weaver.general.BaseBean  - 初始化微信推送扫描线程成功，扫描间隔1分钟---------
+2020-04-30 14:11:33,622 INFO  weaver.filter.SecurityFilter  - Initializing filter 'SecurityFilter'
+2020-04-30 14:11:35,702 INFO  weaver.filter.SecurityFilter  - Filter 'SecurityFilter' configured successfully
+2020-04-30 14:11:35,711 ERROR weaver.general.BaseBean  - log4j reset thread start success...
+2020-04-30 14:12:38,332 INFO  weaver.filter.SecurityFilter  - Initializing filter 'SecurityFilter'
+2020-04-30 14:12:40,925 INFO  weaver.filter.SecurityFilter  - Filter 'SecurityFilter' configured successfully
+2020-04-30 14:12:40,933 ERROR weaver.general.BaseBean  - log4j reset thread start success...
+2020-04-30 14:12:41,249 INFO  weaver.filter.XssFilter  - Initializing filter 'XssFilter'
+2020-04-30 14:12:41,262 INFO  weaver.filter.XssFilter  - Filter 'XssFilter' configured successfully
+2020-04-30 14:12:42,311 ERROR org.directwebremoting.util.LogErrorHandler  - Line=52 Element type "filter" must be declared.
+2020-04-30 14:12:42,322 ERROR org.directwebremoting.util.LogErrorHandler  - Line=53 The content of element type "allow" must match "(create|convert)*".
+2020-04-30 14:12:43,908 ERROR weaver.monitor.cache.Util.PropUtil  - properties file not found
+2020-04-30 14:12:43,909 ERROR weaver.monitor.cache.Util.PropUtil  - properties file not found
+2020-04-30 14:12:43,910 ERROR weaver.monitor.cache.Util.ConfigMap  - key:tablecount的值不是数字
+2020-04-30 14:12:43,910 ERROR weaver.monitor.cache.Util.ConfigMap  - java.lang.NumberFormatException
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:592)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at weaver.monitor.cache.Util.ConfigMap.getInt(ConfigMap.java:45)
+	at weaver.monitor.cache.CacheFactory.<clinit>(CacheFactory.java:35)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at weaver.cluster.CacheManager.<init>(CacheManager.java:57)
+	at weaver.cluster.CacheManager.<clinit>(CacheManager.java:93)
+	at weaver.general.StaticObj.<init>(StaticObj.java:43)
+	at weaver.general.StaticObj.<clinit>(StaticObj.java:62)
+	at weaver.wxinterface.WxInterfaceInit.initClass(WxInterfaceInit.java:149)
+	at weaver.wxinterface.WxInterfaceInit.<clinit>(WxInterfaceInit.java:57)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.caucho.webbeans.component.ClassComponent.createNew(ClassComponent.java:384)
+	at com.caucho.webbeans.component.ComponentImpl.createNoInit(ComponentImpl.java:460)
+	at com.caucho.server.dispatch.ServletConfigImpl.createServletImpl(ServletConfigImpl.java:814)
+	at com.caucho.server.dispatch.ServletConfigImpl.createServlet(ServletConfigImpl.java:732)
+	at com.caucho.server.dispatch.ServletManager.init(ServletManager.java:159)
+	at com.caucho.server.webapp.WebApp.start(WebApp.java:1874)
+	at com.caucho.server.deploy.DeployController.startImpl(DeployController.java:667)
+	at com.caucho.server.deploy.DeployController.restartImpl(DeployController.java:630)
+	at com.caucho.server.deploy.StartAutoRedeployAutoStrategy.alarm(StartAutoRedeployAutoStrategy.java:177)
+	at com.caucho.server.deploy.DeployController.handleAlarm(DeployController.java:789)
+	at com.caucho.util.Alarm.handleAlarm(Alarm.java:375)
+	at com.caucho.util.Alarm.run(Alarm.java:345)
+	at com.caucho.util.ThreadPool$Item.runTasks(ThreadPool.java:730)
+	at com.caucho.util.ThreadPool$Item.run(ThreadPool.java:649)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-30 14:13:43,960 ERROR weaver.conn.ConnectionPool  - ecology创建连接池失败，pool = null
+2020-04-30 14:13:44,794 INFO  weaver.filter.SecurityFilter  - Initializing filter 'SecurityFilter'
+2020-04-30 14:13:46,562 INFO  weaver.filter.SecurityFilter  - Filter 'SecurityFilter' configured successfully
+2020-04-30 14:13:46,568 ERROR weaver.general.BaseBean  - log4j reset thread start success...
+2020-04-30 14:13:46,791 INFO  weaver.filter.XssFilter  - Initializing filter 'XssFilter'
+2020-04-30 14:13:46,805 INFO  weaver.filter.XssFilter  - Filter 'XssFilter' configured successfully
+2020-04-30 14:13:46,963 ERROR weaver.general.BaseBean  - ------是否开启字符转码----0---是否开启sql参数化解析-----0----nativepool----ecology
+2020-04-30 14:13:47,059 ERROR weaver.general.BaseBean  - ExecuteSqlLogger start log write to file thread success...
+2020-04-30 14:16:27,438 ERROR weaver.systeminfo.menuconfig.MenuUtil  - 菜单查询sql:select * from (select isnull(c.isopen,m.infoid+(324855)+1) as isopen,m.* from ( ( SELECT t1.id as infoId, t1.labelId , t1.isCustom, t1.refersubid,t1.iconUrl,t1.TopIconUrl,t1.linkAddress ,t1.baseTarget,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,case when t1.isCustom=2 then t1.topmenuname else t2.topmenuname end topmenuname,case when t1.isCustom=2 then t1.topname_e else t2.topname_e end topname_e,case when t1.isCustom=2 then t1.topname_t else t2.topname_t end topname_t ,allt.c as  allParent,curt.c as curParent  FROM leftmenuinfo t1  left join (select count(0) c,parentId from leftmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from leftmenuinfo it1 inner join leftmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1 group by it1.parentId)curt on t1.id=curt.parentId , leftmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=1 and t2.resourceid =1) or (t2.resourcetype=3 and t2.resourceid=1)) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id in (SELECT infoid FROM menushareinfo WHERE (  CASE WHEN (sharetype = 1 AND sharevalue in (0,-2)  and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 3 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 5 AND sharevalue = 1) THEN  1 ELSE 0 END   = 1   OR  CASE WHEN (sharetype = 6 AND sharevalue in (0,-4) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR CASE WHEN (sharetype = 7 AND sharevalue = 0  and   ( case when jobtitlelevel=1  Then 1 else 0 end = 1     or       case when (jobtitlelevel=2 and ( '%,'+jobtitlesharevalue+',%' like '%,0,%'  or  '%,'+jobtitlesharevalue+',%' like '%,-2,%' ) ) Then 1 else 0 end = 1        or       case when (jobtitlelevel=3 and ( '%,'+jobtitlesharevalue+',%' like '%,0,%'  or  '%,'+jobtitlesharevalue+',%' like '%,-4,%' ) ) Then 1 else 0 end = 1    )) THEN  1 ELSE 0 END   = 1   OR    CASE WHEN (sharetype = 2 AND sharevalue IN ( select roleid  from hrmrolemembers role WHERE rolelevel <=role.rolelevel AND role.resourceid =1 ) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1  )  and resourcetype=1 and resourceid =1 and menutype='left' )  ) union ( SELECT t1.id as infoId, t1.labelId , t1.isCustom, t1.refersubid,t1.iconUrl,t1.TopIconUrl,t1.linkAddress ,t1.baseTarget,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,case when t1.isCustom=2 then t1.topmenuname else t2.topmenuname end topmenuname,case when t1.isCustom=2 then t1.topname_e else t2.topname_e end topname_e,case when t1.isCustom=2 then t1.topname_t else t2.topname_t end topname_t ,allt.c as  allParent,curt.c as curParent  FROM leftmenuinfo t1  left join (select count(0) c,parentId from leftmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from leftmenuinfo it1 inner join leftmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1 group by it1.parentId)curt on t1.id=curt.parentId , leftmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=1 and t2.resourceid =1) or (t2.resourcetype=3 and t2.resourceid=1)) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id not in (SELECT infoid FROM menushareinfo where menutype='left'  and resourcetype=1 and resourceid =1 )  ) ) m left join menucontrollist c on m.infoid+324789=c.menuid and c.type='left') a where a.isopen=a.infoid+(324855)+1 ORDER BY ISNULL(a.parentId,0),a.viewIndex,a.infoId
+2020-04-30 14:16:29,241 ERROR weaver.systeminfo.menuconfig.MenuUtil  - 菜单查询sql:select * from (select isnull(c.isopen,m.infoid+(324855)+1) as isopen,m.* from ( ( SELECT t1.id as infoId, t1.labelId , t1.isCustom, t1.refersubid,t1.iconUrl,t1.TopIconUrl,t1.linkAddress ,t1.baseTarget,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,case when t1.isCustom=2 then t1.topmenuname else t2.topmenuname end topmenuname,case when t1.isCustom=2 then t1.topname_e else t2.topname_e end topname_e,case when t1.isCustom=2 then t1.topname_t else t2.topname_t end topname_t ,allt.c as  allParent,curt.c as curParent  FROM mainmenuinfo t1  left join (select count(0) c,parentId from mainmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from mainmenuinfo it1 inner join mainmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1 group by it1.parentId)curt on t1.id=curt.parentId , mainmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=1 and t2.resourceid =1) or (t2.resourcetype=3 and t2.resourceid=1)) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id in (SELECT infoid FROM menushareinfo WHERE (  CASE WHEN (sharetype = 1 AND sharevalue in (0,-2)  and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 3 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 5 AND sharevalue = 1) THEN  1 ELSE 0 END   = 1   OR  CASE WHEN (sharetype = 6 AND sharevalue in (0,-4) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR CASE WHEN (sharetype = 7 AND sharevalue = 0  and   ( case when jobtitlelevel=1  Then 1 else 0 end = 1     or       case when (jobtitlelevel=2 and ( '%,'+jobtitlesharevalue+',%' like '%,0,%'  or  '%,'+jobtitlesharevalue+',%' like '%,-2,%' ) ) Then 1 else 0 end = 1        or       case when (jobtitlelevel=3 and ( '%,'+jobtitlesharevalue+',%' like '%,0,%'  or  '%,'+jobtitlesharevalue+',%' like '%,-4,%' ) ) Then 1 else 0 end = 1    )) THEN  1 ELSE 0 END   = 1   OR    CASE WHEN (sharetype = 2 AND sharevalue IN ( select roleid  from hrmrolemembers role WHERE rolelevel <=role.rolelevel AND role.resourceid =1 ) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1  )  and resourcetype=1 and resourceid =1 and menutype='top' ) and (t1.parentid=0 or  t1.parentid is null or t1.parentid='')  ) union ( SELECT t1.id as infoId, t1.labelId , t1.isCustom, t1.refersubid,t1.iconUrl,t1.TopIconUrl,t1.linkAddress ,t1.baseTarget,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,case when t1.isCustom=2 then t1.topmenuname else t2.topmenuname end topmenuname,case when t1.isCustom=2 then t1.topname_e else t2.topname_e end topname_e,case when t1.isCustom=2 then t1.topname_t else t2.topname_t end topname_t ,allt.c as  allParent,curt.c as curParent  FROM mainmenuinfo t1  left join (select count(0) c,parentId from mainmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from mainmenuinfo it1 inner join mainmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1 group by it1.parentId)curt on t1.id=curt.parentId , mainmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=1 and t2.resourceid =1) or (t2.resourcetype=3 and t2.resourceid=1)) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id not in (SELECT infoid FROM menushareinfo where menutype='top'  and resourcetype=1 and resourceid =1 ) and (t1.parentid=0 or  t1.parentid is null or t1.parentid='')  ) ) m left join menucontrollist c on m.infoid+324789=c.menuid and c.type='top') a where a.isopen=a.infoid+(324855)+1 ORDER BY ISNULL(a.parentId,0),a.viewIndex,a.infoId
+2020-04-30 14:16:32,130 ERROR weaver.systeminfo.menuconfig.MenuUtil  - 后端菜单查询sql:select * from (select isnull(c.isopen,m.infoid+(324855)+1) as isopen,m.* from ( ( SELECT t1.id as infoId, t1.labelId , t1.refersubid,t1.isCustom, t1.iconUrl ,t1.linkAddress,t1.baseTarget ,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,allt.c as  allParent,curt.c as curParent  FROM mainmenuinfo t1  left join (select count(0) c,parentId from mainmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from mainmenuinfo it1 inner join mainmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1 group by it1.parentId)curt on t1.id=curt.parentId , mainmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=1 and t2.resourceid =1) or (t2.resourcetype=3 and t2.resourceid=1)) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id in (SELECT infoid FROM menushareinfo WHERE (  CASE WHEN (sharetype = 1 AND sharevalue in (0,-2)  and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 3 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 5 AND sharevalue = 1) THEN  1 ELSE 0 END   = 1   OR  CASE WHEN (sharetype = 6 AND sharevalue in (0,-4) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR CASE WHEN (sharetype = 7 AND sharevalue = 0  and   ( case when jobtitlelevel=1  Then 1 else 0 end = 1     or       case when (jobtitlelevel=2 and ( '%,'+jobtitlesharevalue+',%' like '%,0,%'  or  '%,'+jobtitlesharevalue+',%' like '%,-2,%' ) ) Then 1 else 0 end = 1        or       case when (jobtitlelevel=3 and ( '%,'+jobtitlesharevalue+',%' like '%,0,%'  or  '%,'+jobtitlesharevalue+',%' like '%,-4,%' ) ) Then 1 else 0 end = 1    )) THEN  1 ELSE 0 END   = 1   OR    CASE WHEN (sharetype = 2 AND sharevalue IN ( select roleid  from hrmrolemembers role WHERE rolelevel <=role.rolelevel AND role.resourceid =1 ) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1  )  and resourcetype=1 and resourceid =1 and menutype='top' ) and t1.parentid =10000  ) union ( SELECT t1.id as infoId, t1.labelId , t1.refersubid,t1.isCustom, t1.iconUrl ,t1.linkAddress,t1.baseTarget ,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,allt.c as  allParent,curt.c as curParent  FROM mainmenuinfo t1  left join (select count(0) c,parentId from mainmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from mainmenuinfo it1 inner join mainmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1 group by it1.parentId)curt on t1.id=curt.parentId , mainmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=1 and t2.resourceid =1) or (t2.resourcetype=3 and t2.resourceid=1)) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id not in (SELECT infoid FROM menushareinfo where menutype='top'  and resourcetype=1 and resourceid =1 ) and t1.parentid =10000  ) ) m left join menucontrollist c on m.infoid+324789=c.menuid and c.type='top') a where a.isopen=a.infoid+(324855)+1 ORDER BY ISNULL(a.parentId,0),a.viewIndex,a.infoId
+2020-04-30 14:16:32,900 ERROR weaver.systeminfo.menuconfig.MenuUtil  - 后端菜单查询sql:select * from (select isnull(c.isopen,m.infoid+(324855)+1) as isopen,m.* from ( ( SELECT t1.id as infoId, t1.labelId , t1.refersubid,t1.isCustom, t1.iconUrl ,t1.linkAddress,t1.baseTarget ,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,allt.c as  allParent,curt.c as curParent  FROM mainmenuinfo t1  left join (select count(0) c,parentId from mainmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from mainmenuinfo it1 inner join mainmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1 group by it1.parentId)curt on t1.id=curt.parentId , mainmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=1 and t2.resourceid =1) or (t2.resourcetype=3 and t2.resourceid=1)) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id in (SELECT infoid FROM menushareinfo WHERE (  CASE WHEN (sharetype = 1 AND sharevalue in (0,-2)  and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 3 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 5 AND sharevalue = 1) THEN  1 ELSE 0 END   = 1   OR  CASE WHEN (sharetype = 6 AND sharevalue in (0,-4) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR CASE WHEN (sharetype = 7 AND sharevalue = 0  and   ( case when jobtitlelevel=1  Then 1 else 0 end = 1     or       case when (jobtitlelevel=2 and ( '%,'+jobtitlesharevalue+',%' like '%,0,%'  or  '%,'+jobtitlesharevalue+',%' like '%,-2,%' ) ) Then 1 else 0 end = 1        or       case when (jobtitlelevel=3 and ( '%,'+jobtitlesharevalue+',%' like '%,0,%'  or  '%,'+jobtitlesharevalue+',%' like '%,-4,%' ) ) Then 1 else 0 end = 1    )) THEN  1 ELSE 0 END   = 1   OR    CASE WHEN (sharetype = 2 AND sharevalue IN ( select roleid  from hrmrolemembers role WHERE rolelevel <=role.rolelevel AND role.resourceid =1 ) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1  )  and resourcetype=1 and resourceid =1 and menutype='top' ) and t1.parentid =45  ) union ( SELECT t1.id as infoId, t1.labelId , t1.refersubid,t1.isCustom, t1.iconUrl ,t1.linkAddress,t1.baseTarget ,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,allt.c as  allParent,curt.c as curParent  FROM mainmenuinfo t1  left join (select count(0) c,parentId from mainmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from mainmenuinfo it1 inner join mainmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1 group by it1.parentId)curt on t1.id=curt.parentId , mainmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=1 and t2.resourceid =1) or (t2.resourcetype=3 and t2.resourceid=1)) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id not in (SELECT infoid FROM menushareinfo where menutype='top'  and resourcetype=1 and resourceid =1 ) and t1.parentid =45  ) ) m left join menucontrollist c on m.infoid+324789=c.menuid and c.type='top') a where a.isopen=a.infoid+(324855)+1 ORDER BY ISNULL(a.parentId,0),a.viewIndex,a.infoId
+2020-04-30 14:16:34,398 ERROR weaver.systeminfo.menuconfig.MenuUtil  - 后端菜单查询sql:select * from (select isnull(c.isopen,m.infoid+(324855)+1) as isopen,m.* from ( ( SELECT t1.id as infoId, t1.labelId , t1.refersubid,t1.isCustom, t1.iconUrl ,t1.linkAddress,t1.baseTarget ,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,allt.c as  allParent,curt.c as curParent  FROM mainmenuinfo t1  left join (select count(0) c,parentId from mainmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from mainmenuinfo it1 inner join mainmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1 group by it1.parentId)curt on t1.id=curt.parentId , mainmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=1 and t2.resourceid =1) or (t2.resourcetype=3 and t2.resourceid=1)) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id in (SELECT infoid FROM menushareinfo WHERE (  CASE WHEN (sharetype = 1 AND sharevalue in (0,-2)  and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 3 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 5 AND sharevalue = 1) THEN  1 ELSE 0 END   = 1   OR  CASE WHEN (sharetype = 6 AND sharevalue in (0,-4) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR CASE WHEN (sharetype = 7 AND sharevalue = 0  and   ( case when jobtitlelevel=1  Then 1 else 0 end = 1     or       case when (jobtitlelevel=2 and ( '%,'+jobtitlesharevalue+',%' like '%,0,%'  or  '%,'+jobtitlesharevalue+',%' like '%,-2,%' ) ) Then 1 else 0 end = 1        or       case when (jobtitlelevel=3 and ( '%,'+jobtitlesharevalue+',%' like '%,0,%'  or  '%,'+jobtitlesharevalue+',%' like '%,-4,%' ) ) Then 1 else 0 end = 1    )) THEN  1 ELSE 0 END   = 1   OR    CASE WHEN (sharetype = 2 AND sharevalue IN ( select roleid  from hrmrolemembers role WHERE rolelevel <=role.rolelevel AND role.resourceid =1 ) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1  )  and resourcetype=1 and resourceid =1 and menutype='top' ) and t1.parentid =10001  ) union ( SELECT t1.id as infoId, t1.labelId , t1.refersubid,t1.isCustom, t1.iconUrl ,t1.linkAddress,t1.baseTarget ,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,allt.c as  allParent,curt.c as curParent  FROM mainmenuinfo t1  left join (select count(0) c,parentId from mainmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from mainmenuinfo it1 inner join mainmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1 group by it1.parentId)curt on t1.id=curt.parentId , mainmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=1 and t2.resourceid =1) or (t2.resourcetype=3 and t2.resourceid=1)) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id not in (SELECT infoid FROM menushareinfo where menutype='top'  and resourcetype=1 and resourceid =1 ) and t1.parentid =10001  ) ) m left join menucontrollist c on m.infoid+324789=c.menuid and c.type='top') a where a.isopen=a.infoid+(324855)+1 ORDER BY ISNULL(a.parentId,0),a.viewIndex,a.infoId
+2020-04-30 14:16:34,522 ERROR weaver.systeminfo.menuconfig.MenuUtil  - 后端菜单查询sql:select * from (select isnull(c.isopen,m.infoid+(324855)+1) as isopen,m.* from ( ( SELECT t1.id as infoId, t1.labelId , t1.refersubid,t1.isCustom, t1.iconUrl ,t1.linkAddress,t1.baseTarget ,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,allt.c as  allParent,curt.c as curParent  FROM mainmenuinfo t1  left join (select count(0) c,parentId from mainmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from mainmenuinfo it1 inner join mainmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1 group by it1.parentId)curt on t1.id=curt.parentId , mainmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=1 and t2.resourceid =1) or (t2.resourcetype=3 and t2.resourceid=1)) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id in (SELECT infoid FROM menushareinfo WHERE (  CASE WHEN (sharetype = 1 AND sharevalue in (0,-2)  and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 3 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 5 AND sharevalue = 1) THEN  1 ELSE 0 END   = 1   OR  CASE WHEN (sharetype = 6 AND sharevalue in (0,-4) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR CASE WHEN (sharetype = 7 AND sharevalue = 0  and   ( case when jobtitlelevel=1  Then 1 else 0 end = 1     or       case when (jobtitlelevel=2 and ( '%,'+jobtitlesharevalue+',%' like '%,0,%'  or  '%,'+jobtitlesharevalue+',%' like '%,-2,%' ) ) Then 1 else 0 end = 1        or       case when (jobtitlelevel=3 and ( '%,'+jobtitlesharevalue+',%' like '%,0,%'  or  '%,'+jobtitlesharevalue+',%' like '%,-4,%' ) ) Then 1 else 0 end = 1    )) THEN  1 ELSE 0 END   = 1   OR    CASE WHEN (sharetype = 2 AND sharevalue IN ( select roleid  from hrmrolemembers role WHERE rolelevel <=role.rolelevel AND role.resourceid =1 ) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1  )  and resourcetype=1 and resourceid =1 and menutype='top' ) and t1.parentid =10019  ) union ( SELECT t1.id as infoId, t1.labelId , t1.refersubid,t1.isCustom, t1.iconUrl ,t1.linkAddress,t1.baseTarget ,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,allt.c as  allParent,curt.c as curParent  FROM mainmenuinfo t1  left join (select count(0) c,parentId from mainmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from mainmenuinfo it1 inner join mainmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1 group by it1.parentId)curt on t1.id=curt.parentId , mainmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=1 and t2.resourceid =1) or (t2.resourcetype=3 and t2.resourceid=1)) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id not in (SELECT infoid FROM menushareinfo where menutype='top'  and resourcetype=1 and resourceid =1 ) and t1.parentid =10019  ) ) m left join menucontrollist c on m.infoid+324789=c.menuid and c.type='top') a where a.isopen=a.infoid+(324855)+1 ORDER BY ISNULL(a.parentId,0),a.viewIndex,a.infoId
+2020-04-30 14:16:35,550 ERROR weaver.systeminfo.menuconfig.MenuUtil  - 后端菜单查询sql:select * from (select isnull(c.isopen,m.infoid+(324855)+1) as isopen,m.* from ( ( SELECT t1.id as infoId, t1.labelId , t1.refersubid,t1.isCustom, t1.iconUrl ,t1.linkAddress,t1.baseTarget ,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,allt.c as  allParent,curt.c as curParent  FROM mainmenuinfo t1  left join (select count(0) c,parentId from mainmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from mainmenuinfo it1 inner join mainmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1 group by it1.parentId)curt on t1.id=curt.parentId , mainmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=1 and t2.resourceid =1) or (t2.resourcetype=3 and t2.resourceid=1)) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id in (SELECT infoid FROM menushareinfo WHERE (  CASE WHEN (sharetype = 1 AND sharevalue in (0,-2)  and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 3 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR   CASE WHEN (sharetype = 5 AND sharevalue = 1) THEN  1 ELSE 0 END   = 1   OR  CASE WHEN (sharetype = 6 AND sharevalue in (0,-4) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1 OR CASE WHEN (sharetype = 7 AND sharevalue = 0  and   ( case when jobtitlelevel=1  Then 1 else 0 end = 1     or       case when (jobtitlelevel=2 and ( '%,'+jobtitlesharevalue+',%' like '%,0,%'  or  '%,'+jobtitlesharevalue+',%' like '%,-2,%' ) ) Then 1 else 0 end = 1        or       case when (jobtitlelevel=3 and ( '%,'+jobtitlesharevalue+',%' like '%,0,%'  or  '%,'+jobtitlesharevalue+',%' like '%,-4,%' ) ) Then 1 else 0 end = 1    )) THEN  1 ELSE 0 END   = 1   OR    CASE WHEN (sharetype = 2 AND sharevalue IN ( select roleid  from hrmrolemembers role WHERE rolelevel <=role.rolelevel AND role.resourceid =1 ) and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',1)<=30 and dbo.Get_StrArrayStrOfIndex(isnull(seclevel,'0.1-0.1'),'-',2)>=30 ) THEN  1 ELSE 0 END   = 1  )  and resourcetype=1 and resourceid =1 and menutype='top' ) and t1.parentid =10019  ) union ( SELECT t1.id as infoId, t1.labelId , t1.refersubid,t1.isCustom, t1.iconUrl ,t1.linkAddress,t1.baseTarget ,t1.parentId,t1.useCustomName as infoUseCustomName,t1.customName as infoCustomName,t1.customName_e as infoCustomName_e,t1.customName_t as infoCustomName_t,t1.module, t2.id,t2.visible,t2.viewIndex,t2.locked,t2.lockedById,t2.useCustomName,t2.customName,t2.customName_e,t2.customName_t,t2.resourcetype,t2.resourceid ,allt.c as  allParent,curt.c as curParent  FROM mainmenuinfo t1  left join (select count(0) c,parentId from mainmenuinfo group by  parentId )allt on t1.id=allt.parentId  left join (select count(0) c,parentId from mainmenuinfo it1 inner join mainmenuconfig it2 on it2.infoId = it1.id where it2.resourcetype = 3  and it2.resourceid = 1 group by it1.parentId)curt on t1.id=curt.parentId , mainmenuconfig t2 , SystemModule t3  WHERE t2.infoId = t1.id  AND t1.relatedModuleId = t3.id   and ((t2.resourcetype=1 and t2.resourceid =1) or (t2.resourcetype=3 and t2.resourceid=1)) AND t2.visible=1  AND t3.moduleReleased = 1 and t1.id not in (SELECT infoid FROM menushareinfo where menutype='top'  and resourcetype=1 and resourceid =1 ) and t1.parentid =10019  ) ) m left join menucontrollist c on m.infoid+324789=c.menuid and c.type='top') a where a.isopen=a.infoid+(324855)+1 ORDER BY ISNULL(a.parentId,0),a.viewIndex,a.infoId
+2020-04-30 14:20:15,640 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息...
+2020-04-30 14:20:15,658 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息成功...
+2020-04-30 14:20:17,012 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun:1
+2020-04-30 14:20:17,014 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun1:1
+2020-04-30 14:21:16,183 INFO  weaver.filter.SecurityFilter  - Initializing filter 'SecurityFilter'
+2020-04-30 14:21:18,096 INFO  weaver.filter.SecurityFilter  - Filter 'SecurityFilter' configured successfully
+2020-04-30 14:21:18,119 ERROR weaver.general.BaseBean  - log4j reset thread start success...
+2020-04-30 14:35:16,081 ERROR com.weaver.upgrade.FunctionUpgrade  - OS.name+++++++++++++++++++++:Windows 10
+2020-04-30 14:35:16,082 ERROR com.weaver.upgrade.FunctionUpgrade  - srcfilePath+++++++++++++++++++++:D:\WEAVER\ecology\out\artifacts\ecology_war_exploded\upgrade\src
+2020-04-30 14:35:16,083 ERROR com.weaver.upgrade.FunctionUpgrade  - 本地Ip++++++++++：192.168.25.1
+2020-04-30 14:35:16,084 ERROR com.weaver.upgrade.FunctionUpgrade  - 主节点MainControlIP++++++++++：
+2020-04-30 14:35:16,103 INFO  weaver.general.InitServer  - end ioc container init...
+2020-04-30 14:35:16,103 INFO  weaver.general.InitServer  - SystemUpgrade Start.....
+2020-04-30 14:35:16,115 INFO  weaver.general.InitServer  - SystemUpgrade End.....
+2020-04-30 14:35:16,115 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread Start.....
+2020-04-30 14:35:16,122 ERROR weaver.general.BaseBean  - 启动日志压缩线程....
+2020-04-30 14:35:16,131 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread End.....
+2020-04-30 14:35:16,140 ERROR weaver.system.HtmlFieldToClob  - isrun:1
+2020-04-30 14:35:16,141 ERROR weaver.system.HtmlFieldToClob  - isrun1:1
+2020-04-30 14:35:16,141 ERROR weaver.conn.RecordSet  - WFVersionAdd insert Waiting...
+2020-04-30 14:35:16,769 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息...
+2020-04-30 14:35:16,783 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息成功...
+2020-04-30 14:35:18,152 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun:1
+2020-04-30 14:35:18,152 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun1:1
+2020-04-30 14:36:17,579 INFO  weaver.filter.SecurityFilter  - Initializing filter 'SecurityFilter'
+2020-04-30 14:43:18,157 ERROR weaver.general.BaseBean  - in SystemMenuMaint getAllMenuRs
+2020-04-30 14:49:16,052 INFO  weaver.filter.SecurityFilter  - Filter 'SecurityFilter' configured successfully
+2020-04-30 14:49:16,058 ERROR weaver.general.BaseBean  - log4j reset thread start success...
+2020-04-30 15:02:15,710 ERROR com.weaver.upgrade.FunctionUpgrade  - OS.name+++++++++++++++++++++:Windows 10
+2020-04-30 15:02:15,710 ERROR com.weaver.upgrade.FunctionUpgrade  - srcfilePath+++++++++++++++++++++:D:\WEAVER\ecology\out\artifacts\ecology_war_exploded\upgrade\src
+2020-04-30 15:02:15,712 ERROR com.weaver.upgrade.FunctionUpgrade  - 本地Ip++++++++++：192.168.25.1
+2020-04-30 15:02:15,712 ERROR com.weaver.upgrade.FunctionUpgrade  - 主节点MainControlIP++++++++++：
+2020-04-30 15:02:15,728 INFO  weaver.general.InitServer  - end ioc container init...
+2020-04-30 15:02:15,728 INFO  weaver.general.InitServer  - SystemUpgrade Start.....
+2020-04-30 15:02:15,737 INFO  weaver.general.InitServer  - SystemUpgrade End.....
+2020-04-30 15:02:15,737 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread Start.....
+2020-04-30 15:02:15,744 ERROR weaver.general.BaseBean  - 启动日志压缩线程....
+2020-04-30 15:02:15,761 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread End.....
+2020-04-30 15:02:15,769 ERROR weaver.system.HtmlFieldToClob  - isrun:1
+2020-04-30 15:02:15,770 ERROR weaver.system.HtmlFieldToClob  - isrun1:1
+2020-04-30 15:02:15,772 ERROR weaver.conn.RecordSet  - WFVersionAdd insert Waiting...
+2020-04-30 15:13:15,648 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息...
+2020-04-30 15:13:15,744 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息成功...
+2020-04-30 15:14:16,191 INFO  weaver.filter.SecurityFilter  - Initializing filter 'SecurityFilter'
+2020-04-30 16:33:20,063 INFO  weaver.filter.XssFilter  - Filter 'XssFilter' configured successfully
+2020-04-30 16:36:19,982 INFO  weaver.filter.SecurityFilter  - Filter 'SecurityFilter' configured successfully
+2020-04-30 16:36:19,996 ERROR weaver.general.BaseBean  - log4j reset thread start success...

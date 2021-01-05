@@ -1,0 +1,559 @@
+.clear{clear:both;height:0;line-height:0;font-size:0;visibility:hidden;overflow:hidden}
+.signclearfix:after{visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;zoom:1;}
+.signbtn3{
+  position:fixed;
+  z-index:994;
+  bottom:0px;
+  border-top:1px solid #D9D9D9;
+  background:#F2F2F2;
+  width:100%;
+  padding:0px;
+  margin:0px;
+  box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+ }
+.signmenu{
+    position:relative;
+    float:left;
+    width:100%;
+    height:50px;
+    line-height:50px;
+    background:#F2F2F2;
+    border-right:1px solid #D8D8D8;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+.signmenu:last-child{border-right:none;}
+.signcontent{
+  height: 32.5px;
+  width: 65%;
+  border: 1px solid #dedede;
+  text-align: center;
+  border-radius: 5px;
+  background:#FFFFFF;
+  margin:8.75px 0px 0px 8.75px;
+  float:left;
+  position:fixed;
+}
+.signimg{
+   width:32px;
+   height:32px;
+   float:left;
+}
+.signimg img{width:80%;height:80%;margin-top:10%;}
+.signbtn{
+   float:left;
+   height: 32px;
+   width: 31%;
+   margin:8.75px 0px 0px 0px;
+   position:fixed;
+   right:8.75px;
+}
+.signflag{
+   color:#cbcbcb;
+   width:100%;
+   height:32px;
+   text-align:left;
+   line-height:32px;
+   font-size:14px;
+}
+.forwardbtn{
+   width:32px;
+   height:32px;
+   float:left;
+   margin-left:5px;
+}
+.forwardbtn img{width:100%;height:100%;}
+
+
+.signbox{
+   position:fixed;
+   width:100%;
+   /*height:45%;*/
+   z-index:996;
+   background-color:#f9f9f9;
+   border:1px #ddd solid;
+   padding:1px;
+   bottom:0px;
+   overflow: hidden;
+}
+
+#signbg{
+   background-color:#777777;
+   position:fixed;
+   z-index:995;
+   left:0;
+   top:0;
+   display:none;
+   width:100%;
+   height:75%;
+   opacity:0.5;
+   filter: alpha(opacity=50);
+   -moz-opacity: 0.5;
+   overflow:hidden;
+}
+.signtitle{
+  height:46px;
+}
+.signlistbtn{
+  height:38px;
+  bottom:0px;
+  line-height:38px;
+}
+.signlist{
+  height:200px;
+}
+.signlist textarea{
+   height:97%;
+   width:98%;
+   font-size:14px;
+   
+   
+}
+.listbtnimg{
+    width:22px;
+	height:22px;
+    float:left;
+	margin-top:8px;
+	/*position:relative;
+	
+	bottom:8px;
+	*/
+	display:inline-block;
+}
+.listbtntext{
+   /*height:38px;*/
+   color:#6f6f6f;
+   font-size:12px;
+   white-space: nowrap; 
+   overflow: hidden;
+   display:inline-block;
+}
+
+.listbtntextmore{
+   /*height:38px;*/
+   float:right;
+   color:#6f6f6f;
+   font-size:12px;
+   white-space: nowrap; 
+   overflow: hidden;
+   margin-left:5px;
+   max-width:59px;
+   display:inline-block;
+}
+
+.listfordwardbtnimg img{
+  width:100%;
+  height:100%
+}
+.listfordwardbtnimg{
+	width:22px;
+	height:22px;
+   float:left;
+	margin-top:8px;
+	display:inline-block;
+	margin-left:10px;
+}
+.listfordwardbtntext{
+   
+   height:38px;
+   float:left;
+   color:#6f6f6f;
+   font-size:12px;
+   white-space: nowrap; 
+   overflow: hidden;
+   margin-left:5px;
+}
+.listbtnimg img{
+  width:100%;
+  height:100%
+}
+.signnexttitle{
+   color:#757575;
+   font-size:16px
+}
+.signnotation{
+    float:left;
+	width:92%;
+   position:fixed;
+   right:3%;
+   margin-top:14px;
+}
+.signaddmore{
+	/*
+   float:right;
+   position:fixed;
+   right:3%;
+   margin-top:8px;
+   */
+ }
+.signaddmore img{
+  width:30px;
+  height:30px;
+}
+.signnotationimg{
+  float:left;
+}
+.signnotationimg img{
+   width:20px;
+   height:20px;
+   margin-top:5px;
+   margin-left:5px;
+ }
+.signnotationtitle{
+  /*float:left;*/
+  color:#000000;
+}
+.signnotationtitle select{
+   border:0px;
+   background:#f9f9f9;
+   color:#505050;
+   font-size:14px;
+   font-weight:bold;
+   text-align:right;
+   width:105px;
+}
+
+
+.signforwardimg{
+	/*
+  float:left;
+  width:35%;
+  margin-top:2px;
+  */
+  padding-left:10px;
+}
+@-webkit-keyframes marquee {
+    0% { left: 0; }
+    100% { left: -100%; }
+}
+@-moz-keyframes marquee {
+    0% { left: 0; }
+    100% { left: -100%; }
+}
+@-ms-keyframes marquee {
+    0% { left: 0; }
+    100% { left: -100%; }
+}
+@-o-keyframes marquee {
+    0% { left: 0; }
+    100% { left: -100%; }
+}
+@keyframes marquee {
+  0%{left:0}
+  100%{left: -100%}
+}
+.marquee div{
+  display: block;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+
+  -webkit-animation: marquee 4s linear infinite;
+  -moz-animation: marquee 4s linear infinite;
+  -ms-animation: marquee 4s linear infinite;
+  -o-animation: marquee 4s linear infinite;
+  animation: marquee 4s linear infinite;
+}
+
+.moredivtip{
+    position:fixed;
+    width:100%;
+	height:20%;
+	top:0;
+}
+.moredivtip img{width:80%;height:80%;margin-top:5%;margin-left:12%;}
+.moredivcontent{
+    position:fixed;
+    width:100%;
+	height:58%;
+	top:20%;
+	margin:0 auto;
+}
+.moredivcontent01{
+    float:left;
+	display:block;
+	height:40%;
+	width:40%;
+	margin-top:6%;
+	margin-left:6%;
+
+}
+.moredivcontent01 img{width:100%;height:100%;}
+.moredivcontentspan{
+   display:block;
+   text-align:center;
+   margin-top:10px;
+   color:#757575;
+   font-size:16px;
+   font-weight:bold;
+}
+.moredivclose{
+    position:fixed;
+    width:100%;
+	height:20%;
+	top:80%;
+}
+.moredivclose img{
+	width:28px;
+	height:28px;
+	margin-top:5%;
+	margin-left:45%;
+}
+.haschosespan{
+    color:#409BFF;
+}
+#userSignRemark{
+   border:1px solid #dddddd;
+   outline:none;
+   resize:none;
+}
+#userSignRemark::-webkit-input-placeholder{color:#c4c4c4;font-size:14px;}
+.signlistbtnimg{
+    width:22px;
+	height:22px;
+    float:right;
+	color:#6f6f6f;
+   font-size:12px;
+   white-space: nowrap; 
+   overflow: hidden;
+   margin-top:8px;
+}
+/*
+.signlistbtnimg img{
+  width:100%;
+  height:100%
+}
+*/
+.morebutton{
+    position: fixed;
+    bottom: 44px;
+    z-index: 10002;
+    border: 1px solid #c5c5c5;
+    /*height: 75px;*/
+    right: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+	word-wrap: break-word;
+	word-break:break-all;
+	width:99px;
+}
+.morebutton ul {
+   list-style-type: none;
+   -webkit-margin-before: 5px;
+    -webkit-margin-after: 5px;
+    -webkit-margin-start: 5px;
+    -webkit-margin-end: 5px;
+    -webkit-padding-start: 5px;
+}
+.morebutton ul li{
+   list-style-type:none;
+   line-height:32px;
+   /*text-align:center;*/
+   border-bottom:1px solid #e6e6e6;
+   color:#8d8d8d;
+   font-size:12px;
+}
+
+.listbtnhandler{
+   float:left;
+   display:inline-block;
+
+}
+
+.fixedBottomDiv{
+   position: fixed;
+   bottom:50px;
+   z-index: 995;
+}
+
+
+#signaddmorebg{
+    position: fixed;
+    z-index: 10002;
+    border: 1px solid #c5c5c5;
+    /*height: 75px;*/
+    right: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+	word-wrap: break-word;
+	word-break:break-all;
+	text-align:center;
+	width:99px;
+	margin-top:10px;
+}
+#signaddmorebg ul {
+   list-style-type: none;
+   -webkit-margin-before: 5px;
+    -webkit-margin-after: 5px;
+    -webkit-margin-start: 5px;
+    -webkit-margin-end: 5px;
+    -webkit-padding-start: 5px;
+}
+#signaddmorebg ul li{
+   list-style-type:none;
+   line-height:32px;
+   /*text-align:center;*/
+   border-bottom:1px solid #e6e6e6;
+   color:#8d8d8d;
+   font-size:12px;
+}
+
+
+#userSignRemark_ismandspan{
+   position:absolute;
+   width:10px;
+   right:3px;
+   top:120px;
+}
+
+.firstButton {
+	height: 86%;
+    width: 58%;
+    float: left;
+    background-color: #007AFF;
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left:8%;
+    text-align: center;
+    margin-top: 2px;
+    border: 2px solid #007AFF;
+	border-radius:3px;
+	-moz-border-radius:3px;
+
+}
+
+#signbuttonbg{
+   background-color:#777777;
+   position:fixed;
+   z-index:999;
+   left:0;
+   top:0;
+   display:none;
+   width:100%;
+   height:100%;
+   opacity:0.5;
+   filter: alpha(opacity=50);
+   -moz-opacity: 0.5;
+   overflow:hidden;
+}
+
+.signbuttonbox{
+   position:fixed;
+   width:100%;
+   z-index:1000;
+   padding:1px;
+   bottom:0px;
+   overflow: hidden;
+}
+
+.signbuttonbox ul li{
+    list-style-type:none;
+}
+
+.firstImg{
+   height:98%;
+   float:right;
+   width:25%;
+}
+.firstImg img{
+   width:32px;
+   height:32px;
+}
+
+.ulbutton{
+   margin:0; 
+   padding:0;
+   width:94%;
+   margin-left:3%;
+   border:1px solid #E6E8EA;
+   color:#007AFF;
+   font-size:14px;
+   text-align:center;
+   -moz-border-radius:10px;
+    border-radius:10px;
+	vertical-align: middle;
+}
+
+.ullibutton{
+  height:50px;
+  line-height:50px;
+  background-color:#F7F9F9;
+  border:1px solid #E6E8EA;
+}
+
+.ulbutton li:first-child{ border-top-left-radius:10px;border-top-right-radius:10px}
+.ulbutton li:last-child{ border-bottom-left-radius:10px;border-bottom-right-radius:10px}
+
+.ulbottombtn{
+	width:40%;
+	height:100%;
+	float:left;
+	text-align:center;
+	background-color:#FAFAFA;
+	font-size:14px;
+	color:#575757;
+	border-top:1px solid #DDE0E0;
+	border-right:1px solid #DDE0E0;
+}
+
+.ulbottomonebtn{
+    width:100%;
+	height:100%;
+	text-align:center;
+	background-color:#FAFAFA;
+	font-size:14px;
+	color:#575757;
+	border-top:1px solid #DDE0E0;
+}
+
+.ulbottomtwoleftbtn{
+    width:49%;
+	height:100%;
+	text-align:center;
+	background-color:#FAFAFA;
+	font-size:14px;
+	float:left;
+	color:#575757;
+	border-top:1px solid #DDE0E0;
+	border-right:1px solid #DDE0E0;
+}
+.ulbottomtworightbtn{
+    width:49%;
+	height:100%;
+	text-align:center;
+	background-color:#FAFAFA;
+	font-size:14px;
+	float:left;
+	color:#575757;
+	border-top:1px solid #DDE0E0;
+}
+
+.urlbottombtnimg{
+	  width:15%;
+	  height:38px;
+	  display:table-cell;
+	  vertical-align:middle;
+	  text-align:center;
+	  border-top:1px solid #DDE0E0;
+}
+
+.urlbottombtnimg img{
+   width:25px;
+}
+
+.signbtnopration{
+   width:100%;
+   height:100%;
+}
+.signbtnforwardopration{
+  width:100%;
+   height:100%;
+}
+
+.signbutcur{
+  background-color:#BBBBBB;
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<id>newNotice</id>  <!--只能是唯一的英文字母-->
+	<title>公告元素</title>
+	<titleEN>Notice Element</titleEN>
+	<desc>公告元素描述</desc>
+	<icon>resource/image/notice_wev8.png</icon>
+	<linkMode>-1</linkMode>
+	<loginView>0</loginView>
+	<type>2</type>
+	<perpage>3</perpage>
+	<!--
+	<private>
+		<jsList> 
+			<js>resource/js/swfobject_wev8.js</js>
+		</jsList>
+	</private>
+	-->
+	<public>
+		<jsIdList>  
+			<jsId>jquery</jsId>
+		</jsIdList>
+		<cssIdList>
+		</cssIdList>
+	</public>
+	<view>
+		<url>View.jsp</url>
+		<method></method>
+	</view>
+	<setting>
+		<url>Setting.jsp</url>
+		<method></method>
+	</setting>
+	<more>
+		<url>listTab.jsp</url>
+		<method></method>
+	</more>
+	<operation>Operation.jsp</operation>
+</root> 

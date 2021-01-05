@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<id>blogStatus</id>  <!--只能是唯一的英文字母-->
+	<title>微博动态</title>
+	<titleEN>Work Microblogging</titleEN>
+	<desc>工作微博的提醒</desc>
+	<icon>resource/image/blogStatus_wev8.gif</icon>
+	<linkMode>-1</linkMode>
+	<loginView>0</loginView>
+	<type>1</type>
+	<perpage>-1</perpage>
+	<private>
+		<jsList> 			
+			<js></js>
+		</jsList>
+	</private>
+	<public>
+		<jsIdList>  
+			<jsId>jquery</jsId>
+		</jsIdList>
+		<cssIdList>
+		</cssIdList>
+	</public>
+	<view>
+		<url>View.jsp</url>
+		<method></method>
+	</view>
+	<setting>
+		<url>Setting.jsp</url>
+		<method></method>
+	</setting>
+	<more>
+		<url>/blog/blogView.jsp</url>
+		<method></method>
+	</more>
+	<operation>Operation.jsp</operation>
+</root> 

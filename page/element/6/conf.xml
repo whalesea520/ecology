@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<id>6</id>  <!--只能是唯一的英文字母-->
+	<title>未读文档</title>
+	<titleEN>Unread Docs</titleEN>
+	<desc>系统中所有的未读文档!</desc>
+	<icon>resource/image/6_wev8.gif</icon>
+	<linkMode>2</linkMode>
+	<loginView>0</loginView>
+	<type>1</type>
+	<perpage>5</perpage>
+	<private>
+		<jsList> 
+		</jsList>
+	</private>
+	<public>
+		<jsIdList>  
+		</jsIdList>
+		<cssIdList>
+		</cssIdList>
+	</public>
+	<view>
+		<url>/page/element/compatible/view.jsp</url>
+		<method>getNoReadDocSpb</method>
+	</view>
+	<setting>
+		<url>Setting.jsp</url>
+		<method></method>
+	</setting>
+	<more>
+		<url>/page/element/compatible/more.jsp</url>
+		<method>getNoReadDoc</method>
+	</more>
+	<operation>/page/element/compatible/operation.jsp</operation>
+</root>

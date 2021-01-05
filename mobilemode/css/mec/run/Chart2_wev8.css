@@ -1,0 +1,107 @@
+.chart2Container{
+	width:100%;
+	 overflow-x:auto;
+	overflow-y:hidden;
+}
+.chart2Container #grid {
+  -moz-transform: translate(1px, 0px);
+  -ms-transform: translate(1px, 0px);
+  -webkit-transform: translate(1px, 0px);
+  transform: translate(1px, 0px);
+}
+
+.chart2Container .lineGraph {
+  fill: transparent;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  -moz-animation: lineani 1.3s linear forwards;
+  -webkit-animation: lineani 1.3s linear forwards;
+  animation: lineani 1.3s linear forwards;
+}
+
+.chart2Container .circleGraph {
+  fill: transparent;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@-moz-keyframes lineani {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes lineani {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes lineani {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.chart2Container .underlay {
+  fill: transparent;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.chart2Container .chart-circle {
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.chart2Container .charts-container {
+  padding: 10px;
+  width: 100%;
+  max-width: 1024px;
+  display: inline-block;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  text-align: center;
+}
+
+.chart2Container .chart-circle {
+  display: inline-block;
+  position: relative;
+}
+
+.chart2Container .circle-percentage {
+  margin: 0px;
+  position: absolute;
+  color: black;
+  font-size: 30px;
+  left: 50%;
+  top: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.chart2Container .chart-line {
+  width: 100%;
+}
+.chart2Container .percentage-value {
+  -moz-transition: 700ms ease-in-out;
+  -o-transition: 700ms ease-in-out;
+  -webkit-transition: 700ms ease-in-out;
+  transition: 700ms ease-in-out;
+  color: #48c15e;
+  margin-top: 2px;
+  opacity: 0;
+}
+.chart2Container .percentage-value.negative {
+  color: #ef6670;
+}
+.chart2Container .percentage-value.visible {
+  opacity: 1;
+}
+.chart2Container .horizontal, .chart2Container .vertical {
+  stroke-width: 0.1;
+  stroke: #4a667a;
+}

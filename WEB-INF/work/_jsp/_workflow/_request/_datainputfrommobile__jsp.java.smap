@@ -1,0 +1,16 @@
+SMAP
+_datainputfrommobile__jsp.java
+JSP
+*S JSP
+*F
++ 1 DataInputFromMobile.jsp
+workflow/request/DataInputFromMobile.jsp
+*L
+258#1,21:25
+278#1:46,19
+1#1:64
+14#1,2:65,7
+15#1,243:78
+257#1:321
+278#1:322
+*E

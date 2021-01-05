@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<special-non>
+		<urls>
+			<url>
+				<value>/weaver/com.weaver.formmodel.mobile.security.EDAction</value>
+				<params>
+					<param>
+						<value>content</value>
+						<rules>
+							<rule>##sqlkeyword1##</rule>
+						</rules>
+					</param>
+				</params>
+			</url>
+		</urls>
+	</special-non>
+</root>

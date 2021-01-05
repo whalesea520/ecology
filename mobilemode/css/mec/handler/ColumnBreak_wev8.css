@@ -1,0 +1,114 @@
+.MADCB_BaseInfomation {
+	border-bottom: 1px solid rgb(223, 223, 223);
+	color: rgb(164, 169, 174);
+	padding: 0px 10px 5px 10px;	
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+.MADCB_BaseInfo {
+	padding-left: 10px;
+	margin-bottom: 15px;
+	color: rgb(166, 167, 171);
+}
+.MADCB_BaseInfo div {
+	margin-bottom: 5px;
+}
+.MADCB_CommonContent,.MADCB_BGColorContent {
+	margin-bottom: 10px !important;
+	margin-right: 10px;
+	color: rgb(164, 169, 174);
+}
+.MADCB_CommonContent .MADCB_ImgContainer {
+	float: left;
+	width: 250px;
+	padding-left: 3px;
+}
+.MADCB_CommonContent .MADCB_ImgContainer .MADCB_DisplayStyle {
+	width: 100%;
+	height: 24px;
+	border: 1px solid #eee;
+}
+.MADCB_CommonContent .MADCB_ImgContainer .img_sel {
+	border: 1px solid #007aff;
+}
+.MADCB_BaseInfo_Label {
+	width: 72px;
+	display: inline-block;
+	text-align: right;
+}
+.MADCB_BaseInfo_Label_style8 {
+	width: 83px;
+	text-align: left;
+}
+.MADCB_Text {
+	width: 65px;
+	border: 1px solid #ccc;
+	height: 20px;
+	padding-left: 3px;
+}
+.MADCB_Tip {
+	margin-left: 10px;
+}
+.MADCB_BGColorContent button {
+	border: 1px solid #ccc;
+	width: 20px;
+	height: 20px;
+	margin-left: 10px;
+	position: absolute;
+	background-color: rgb(248, 248, 248);
+}
+.MADCB_DataSource {
+	position: relative;
+	padding-left: 72px;
+}
+.MADCB_DataSource_Label {
+	width: 72px;
+	display: inline-block;
+	text-align: right;
+	margin-right: 0;
+	position: absolute;
+	top: 3px;
+	left: 0px;
+}
+.MADCB_Select {
+	border: 1px solid #ccc;
+	height: 25px;
+}
+.MADCB_Textarea {
+	border: 1px solid #dfdfdf;
+	width: 331px;
+	height: 106px;
+	font-family: 'Microsoft Yahei',Arial,Helvetica,sans-serif;
+	font-size: 12px;
+	overflow: auto;
+	padding: 5px;
+}
+.MADCB_Bottom{
+	padding: 0px 9px 0px 9px;
+	margin-bottom: 5px;		
+}
+.MADCB_SaveBtn{
+	background-color: rgb(107, 163, 237);
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	box-sizing: border-box;
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+	display: block;
+	font-family: 'Microsoft Yahei', Arial, sans-serif;
+	font-size: 14px;
+	height: 28px;
+	line-height: 28px;
+	margin: 0px;
+	text-align: center;
+	width: 100%
+	zoom: 1;	
+}
+.Design_ColumnBreak_Tip{
+	color: #bbb;
+	font-size: 14px;
+	font-family: 'Microsoft Yahei',Arial, Helvetica, sans-serif;
+	padding: 9px 5px 9px 22px;	
+}

@@ -1,0 +1,107 @@
+* {
+	font-family:'微软雅黑';
+	font-size: 12px;
+}
+
+.attrClass {
+	width:100%;
+	height:27px;	
+}
+
+#attrBody {
+	border-bottom:1px solid #CFCFCF;
+}
+
+.attrKeyHead {
+	margin-right:120px;
+	background-color:rgb(202, 232, 234);
+	line-height:26px;
+	border-right:1px solid #CFCFCF;
+	border-bottom:1px solid #ffffff;
+	padding-left:1px;
+}
+
+.attrValueHead {
+	width:120px;
+	float:right;
+	background-color:rgb(202, 232, 234);
+	line-height:26px;
+	border-left:1px solid #ffffff;
+	border-bottom:1px solid #ffffff;
+	padding-left:1px;
+}
+
+
+.attrKeyBody {
+	margin-right:120px;
+	height:26px;
+	background-color:rgb(243, 243, 243);
+	line-height:26px;
+	border-right:1px solid #CFCFCF;
+	border-bottom:1px solid #ffffff;
+	padding-left:1px;
+}
+
+.attrValueBody {
+	width:120px;
+	height:26px;
+	float:right;
+	background-color:rgb(243, 243, 243);
+	line-height:26px;
+	border-left:1px solid #ffffff;
+	border-bottom:1px solid #ffffff;
+	padding-left:1px;
+}
+
+.attrTextKeyBody {
+	margin-right:120px;
+	height:44px;
+	line-height:22px;
+	background-color:rgb(243, 243, 243);
+	border-right:1px solid #CFCFCF;
+	border-bottom:1px solid #ffffff;
+	padding-left:1px;
+}
+
+.attrTextValueBody {
+	width:120px;
+	height:44px;
+	float:right;
+	background-color:rgb(243, 243, 243);
+	border-left:1px solid #ffffff;
+	border-bottom:1px solid #ffffff;
+	padding-left:1px;
+}
+
+.attrTextSpan {
+	width:120px;
+	line-height:22px;
+	overflow:hidden;
+	text-Overflow:ellipsis;
+	word-break:keep-all;
+	word-wrap:break-word;
+	overflow:hidden;
+}
+
+.attrValueBody input {
+	width:115px!important;
+}
+
+.propertyWin{
+	PADDING-LEFT: 5px;
+	background-image:url('/images/ecology8/workflow/setting_wev8.png') !important;
+	background-repeat:no-repeat;	
+	background-position: 5px 5px;
+}
+.propertyWin_ggy{
+	PADDING-LEFT: 5px;
+	background-image:url('/images/ecology8/workflow/setting_ggy_wev8.png') !important;
+	background-repeat:no-repeat;	
+	background-position: 5px 5px;
+}
+.propertyForm{
+	PADDING-LEFT: 5px;
+	background-image:url('/images/ecology8/form_wev8.png') !important;
+	background-repeat:no-repeat;	
+	background-position: 5px 5px;
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<check-jsp-except-urls>
+		<url>/join/monitorXOperation.jsp</url>
+		<url>/wui/checkFile.jsp</url>
+	</check-jsp-except-urls>
+</root>

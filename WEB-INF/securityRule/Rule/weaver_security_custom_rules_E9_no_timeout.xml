@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	
+	<no-timeout-urls>
+		<url>/api/hrm/common/heartbeat</url>
+		<url>/api/system/language/base/getActiveLanguage</url>
+	</no-timeout-urls>
+	
+</root>

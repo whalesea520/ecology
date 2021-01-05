@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 用于新建会议,用于指定默认会议类型,请指定defaultV -->
+<workflow workflowId="">
+	<field name="meetingtype" column="" defaultV="" defaultN=""></field>
+</workflow>

@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module id="sapbrowser" version="1.0.0">
+	<!-- ZRFC_GET_CUSTDATA 销售范围 -->
+    <browser id="xiaoshoufanwei">
+    	<!-- function 函数名 -->
+    	<function>ZRFC_GET_CUSTDATA</function>
+    	<!-- 配置调用function的输入参数 -->
+    	<input_parameter>
+	    	<import>
+	    		<field>
+		    		<!-- I_KUNNR 参数名 -->
+		    		<name>I_KUNNR</name>
+		    		<!-- KHBM 代表主字段  KHBM OA中的字段名  -->
+		    		<from_oa_field>KHBM</from_oa_field>
+	    		</field>
+	    	</import>
+	    	<table name="">
+	    		<field>
+	    		</field>
+	    	</table>
+    	</input_parameter>
+    	
+		<!-- 配置 function 的输出参数 -->
+    	<output_parameter>
+	    	<export>
+	    		<field>
+		    		<!-- O_TEL 参数名 -->
+		    		<name>O_TEL</name>
+		    		<!-- 页面上显示的显示名  -->
+		    		<desc>客户电话</desc>
+		    		<!-- 是否显示在页面上  -->
+		    		<display>N</display>
+	    		</field>
+	    		<field>
+			    	<name>O_FAX</name>
+	    			<desc>客户传真</desc>
+	    			<display>N</display>	
+	    		</field>	    		
+	    	</export>
+	    	<table name="O_KNVV">
+	    		<field>
+		    		<name>VKORG</name>
+		    		<desc>销售组织</desc>
+		    		<display>Y</display>
+		    		<search>Y</search>
+	    		</field>
+	    		<field>
+		    		<name>VTEXT</name>
+		    		<desc>销售组织描述</desc>
+		    		<display>Y</display>
+		    		<search>Y</search>
+	    		</field>
+	    		<field>
+		    		<name>VTWEG</name>
+		    		<desc>分销渠道</desc>
+		    		<display>Y</display>
+	    		</field>
+	    		<field>
+		    		<name>VTWDE</name>
+		    		<desc>分销渠道描述</desc>
+		    		<display>Y</display>
+	    		</field>
+	    		<field>
+		    		<name>SPART</name>
+		    		<desc>产品组</desc>
+		    		<display>Y</display>
+	    		</field>
+	    		<field>
+		    		<name>SPADE</name>
+		    		<desc>产品组描述</desc>
+		    		<display>Y</display>
+	    		</field>
+	    	</table>
+    	</output_parameter>
+    	
+    	<!-- 赋值配置 -->
+    	<assignment_parameter>
+    		<field>
+    			<!-- 需要赋值的字段名  销售范围-->
+    			<name>XSFW</name>
+    			<from>$O_KNVV_VKORG$,|,$O_KNVV_VTEXT$,|,$O_KNVV_VTWEG$,|,$O_KNVV_VTWDE$,|,$O_KNVV_SPART$,|,$O_KNVV_SPADE$</from>
+    		</field>    	
+    		<field>
+    			<!-- 客户电话-->
+    			<name>KHDH</name>
+    			<from>export_O_TEL</from>
+    		</field>
+    		<field>
+    			<!-- 客户传真-->
+    			<name>KHCZ</name>
+    			<from>export_O_FAX</from>
+    		</field>
+    		
+    		<field>
+    			<!-- 销售组织-->
+    			<name>XSZZ</name>
+    			<from>O_KNVV_VKORG</from>
+    		</field>
+    		<field>
+    			<!-- 销售组织描述-->
+    			<name>XSZZMS</name>
+    			<from>O_KNVV_VTEXT</from>
+    		</field>
+
+    		<field>
+    			<!-- 分销渠道-->
+    			<name>FXQD</name>
+    			<from>O_KNVV_VTWEG</from>
+    		</field>
+    		<field>
+    			<!-- 分销渠道描述-->
+    			<name>FXQDMS</name>
+    			<from>O_KNVV_VTWDE</from>
+    		</field>
+    		
+    		<field>
+    			<!-- 产品组-->
+    			<name>CPZ</name>
+    			<from>O_KNVV_SPART</from>
+    		</field>
+    		<field>
+    			<!-- 产品组描述-->
+    			<name>CPZMS</name>
+    			<from>O_KNVV_SPADE</from>
+    		</field>
+    		
+    	</assignment_parameter>
+    </browser>
+
+    <browser id="xiaoshoudizhi">
+    	<function>ZRFC_GET_ADRE</function>
+    	<input_parameter>
+	    	<import>
+	    		<field>
+		    		<!-- I_KUNNR 参数名 -->
+		    		<name>I_KUNNR</name>
+		    		<!-- KHBM 代表主字段  KHBM OA中的字段名  -->
+		    		<from_oa_field>KHBM</from_oa_field>
+	    		</field>
+	    		<field>
+		    		<name>I_VKORG</name>
+		    		<from_oa_field>XSZZ</from_oa_field>
+	    		</field>
+	    		<field>
+		    		<name>I_VTWEG</name>
+		    		<from_oa_field>FXQD</from_oa_field>
+	    		</field>
+	    		<field>
+		    		<name>I_SPART</name>
+		    		<from_oa_field>CPZ</from_oa_field>
+	    		</field>
+	    	</import>
+    	</input_parameter>
+
+		<!-- 配置 function 的输出参数 -->
+    	<output_parameter>
+    		<export>
+    			<field>
+			    	<name>O_REGI</name>
+	    			<desc>销售区域</desc>
+	    			<display>N</display>
+    			</field>
+    		</export>
+	    	<table name="O_KNVP">
+	    		<field>
+		    		<name>KUNN2</name>
+		    		<desc>发货地址</desc>
+		    		<display>Y</display>
+		    		<search>Y</search>
+	    		</field>
+	    		<field>
+		    		<name>KNREF</name>
+		    		<desc>发货地址描述</desc>
+		    		<display>Y</display>
+		    		<search>Y</search>
+	    		</field>
+	    	</table>
+    	</output_parameter>
+    	
+    	<!-- 赋值配置 -->
+    	<assignment_parameter>
+    		<field>
+    			<!-- 需要赋值的字段名 销售地址-->
+    			<name>XSDZ</name>
+    			<from>O_KNVP_KUNN2</from>
+    		</field>
+    		<field>
+    			<!-- 需要赋值的字段名  销售地址描述-->
+    			<name>XSDZMS</name>
+    			<from>O_KNVP_KNREF</from>
+    		</field>
+    		<field>
+    			<!-- 需要赋值的字段名  销售区域-->
+    			<name>XSQY</name>
+    			<from>EXPORT_O_REGI</from>
+    		</field>
+    	</assignment_parameter>
+    </browser>
+    
+    <browser id="wuliaobianhao">
+    	<function>ZRFC_PUT_ITEM</function>
+    	<input_parameter>
+	    	<import>
+	    		<field>
+		    		<name>I_KUNNR</name>
+		    		<from_oa_field>KHBM</from_oa_field>
+	    		</field>
+	    		<field>
+		    		<name>I_VKORG</name>
+		    		<from_oa_field>XSZZ</from_oa_field>
+	    		</field>
+	    		<field>
+		    		<name>I_VTWEG</name>
+		    		<from_oa_field>FXQD</from_oa_field>
+	    		</field>
+	    		<field>
+		    		<name>I_SPART</name>
+		    		<from_oa_field>CPZ</from_oa_field>
+	    		</field>
+	    	</import>
+    	</input_parameter>
+    	
+    	<output_parameter>
+	    	<table name="O_MATNR">
+	    		<field>
+		    		<name>MATNR</name>
+		    		<desc>物料编号</desc>
+		    		<display>Y</display>
+		    		<search>Y</search>
+	    		</field>
+	    		<field>
+		    		<name>ARKTX</name>
+		    		<desc>物料描述</desc>
+		    		<display>Y</display>
+		    		<search>Y</search>
+	    		</field>
+	    	</table>
+    	</output_parameter>
+    	
+    	<!-- 赋值配置 -->
+    	<assignment_parameter>
+    		<field>
+    			<name>FORMTABLE_MAIN_4_DT1_WLBH</name>
+    			<from>O_MATNR_MATNR</from>
+    		</field>
+    		<field>
+    			<name>FORMTABLE_MAIN_4_DT1_WLMS</name>
+    			<from>O_MATNR_ARKTX</from>
+    		</field>
+    	</assignment_parameter>
+    </browser>
+    
+    <browser id="dingdandanwei">
+    	<function>ZRFC_GET_ITEMDATA</function>
+    	
+    	<input_parameter>
+	    	<import>
+	    		<field>
+		    		<name>I_KUNNR</name>
+		    		<from_oa_field>KHBM</from_oa_field>
+	    		</field>
+	    		<field>
+		    		<name>I_MATNR</name>
+		    		<from_oa_field>FORMTABLE_MAIN_4_DT1_WLBH</from_oa_field>
+	    		</field>
+	    		<field>
+		    		<name>I_VKORG</name>
+		    		<from_oa_field>XSZZ</from_oa_field>
+	    		</field>
+	    		<field>
+		    		<name>I_VTWEG</name>
+		    		<from_oa_field>FXQD</from_oa_field>
+	    		</field>
+	    	</import>
+    	</input_parameter>
+    	
+    	<output_parameter>
+	    	<export>
+	    		<field>
+		    		<name>O_ARKTX</name>
+		    		<desc>物料描述</desc>
+		    		<display>Y</display>
+	    		</field>
+	    		<field>
+			    	<name>O_MEINS</name>
+	    			<desc>标准单位</desc>
+	    			<display>Y</display>	
+	    		</field>
+	    		<field>
+			    	<name>O_KBETR</name>
+	    			<desc>单价</desc>
+	    			<display>Y</display>	
+	    		</field>	    		
+	    	</export>
+	    	<table name="O_UMCON">
+	    		<field>
+		    		<name>MEINS</name>
+		    		<desc>订单单位</desc>
+		    		<display>Y</display>
+		    		<search>Y</search>
+	    		</field>
+	    		<field>
+		    		<name>CONV</name>
+		    		<desc>换算率</desc>
+		    		<display>Y</display>
+		    		<search>N</search>
+	    		</field>
+	    	</table>
+    	</output_parameter>
+    	
+    	<!-- 赋值配置 -->
+    	<assignment_parameter>
+    		<field>
+    			<name>FORMTABLE_MAIN_4_DT1_BZDW</name>
+    			<from>export_O_MEINS</from>
+    		</field>
+    		<field>
+    			<name>FORMTABLE_MAIN_4_DT1_DJ</name>
+    			<from>export_O_KBETR</from>
+    		</field>
+    		
+    		<field>
+    			<name>FORMTABLE_MAIN_4_DT1_DDDW</name>
+    			<from>O_UMCON_MEINS</from>
+    		</field>
+    		<field>
+    			<name>FORMTABLE_MAIN_4_DT1_ZHL</name>
+    			<from>O_UMCON_CONV</from>
+    		</field>
+    		
+    	</assignment_parameter>
+    	
+    </browser>
+    
+    <browser id="chengbenzhongxin">
+    	<function>ZSL_FIRF011</function>
+    	<output_parameter>
+	    	<table name="O_KOSTL">
+	    		<field>
+		    		<name>KOSTL</name>
+		    		<desc>成本中心</desc>
+		    		<display>Y</display>
+		    		<search>Y</search>
+	    		</field>
+	    		<field>
+		    		<name>KTEXT</name>
+		    		<desc>成本中心描述</desc>
+		    		<display>Y</display>
+		    		<search>Y</search>
+	    		</field>
+	    	</table>
+    	</output_parameter>
+    	<assignment_parameter>
+    		<field>
+    			<name>CBZX</name>
+    			<from>O_KOSTL_KOSTL</from>
+    		</field>
+    		<field>
+    			<name>CBZXMS</name>
+    			<from>O_KOSTL_KTEXT</from>
+    		</field>
+    	</assignment_parameter>
+    </browser>
+    
+    <browser id="xiaoshouzuzhi">
+    	<function>ZSL_FIRF005</function>
+    	<output_parameter>
+	    	<table name="O_VKORG">
+	    		<field>
+		    		<name>VKORG</name>
+		    		<desc>销售组织</desc>
+		    		<display>Y</display>
+		    		<search>Y</search>
+	    		</field>
+	    		<field>
+		    		<name>VTEXT</name>
+		    		<desc>销售组织描述</desc>
+		    		<display>Y</display>
+		    		<search>Y</search>
+	    		</field>
+	    	</table>
+    	</output_parameter>
+    	<assignment_parameter>
+    		<field>
+    			<name>XSZZ</name>
+    			<from>O_VKORG_VKORG</from>
+    		</field>
+    		<field>
+    			<name>XSZZMS</name>
+    			<from>O_VKORG_VTEXT</from>
+    		</field>
+    	</assignment_parameter>
+    </browser>
+    
+    <browser id="fenxiaoqudao">
+    	<function>ZSL_FIRF006</function>
+    	<input_parameter>
+	    	<import>
+	    		<field>
+		    		<name>I_VKORG</name>
+		    		<from_oa_field>XSZZ</from_oa_field>
+	    		</field>
+	    	</import>
+    	</input_parameter>
+    	<output_parameter>
+	    	<table name="O_DEPT">
+	    		<field>
+		    		<name>VTWEG</name>
+		    		<desc>分销渠道</desc>
+		    		<display>Y</display>
+		    		<search>Y</search>
+	    		</field>
+	    		<field>
+		    		<name>VTEXT</name>
+		    		<desc>分销渠道描述</desc>
+		    		<display>Y</display>
+		    		<search>Y</search>
+	    		</field>
+	    	</table>
+    	</output_parameter>
+    	<assignment_parameter>
+    		<field>
+    			<name>FXQD</name>
+    			<from>O_DEPT_VTWEG</from>
+    		</field>
+    		<field>
+    			<name>FXQDMS</name>
+    			<from>O_DEPT_VTEXT</from>
+    		</field>
+    	</assignment_parameter>
+    </browser>
+    
+    <browser id="chanpingzu">
+    	<function>ZSL_FIRF007</function>
+    	<input_parameter>
+	    	<import>
+	    		<field>
+		    		<name>I_VKORG</name>
+		    		<from_oa_field>XSZZ</from_oa_field>
+	    		</field>
+	    	</import>
+    	</input_parameter>
+    	<output_parameter>
+	    	<table name="O_SPART">
+	    		<field>
+		    		<name>SPART</name>
+		    		<desc>产品组</desc>
+		    		<display>Y</display>
+		    		<search>Y</search>
+	    		</field>
+	    		<field>
+		    		<name>VTEXT</name>
+		    		<desc>产品组描述</desc>
+		    		<display>Y</display>
+		    		<search>Y</search>
+	    		</field>
+	    	</table>
+    	</output_parameter>
+    	<assignment_parameter>
+    		<field>
+    			<name>CPZ</name>
+    			<from>O_SPART_SPART</from>
+    		</field>
+    		<field>
+    			<name>CPZMS</name>
+    			<from>O_SPART_VTEXT</from>
+    		</field>
+    	</assignment_parameter>
+    </browser>
+    
+    <browser id="gongchang">
+    	<function>ZSL_FIRF010</function>
+    	<input_parameter>
+	    	<import>
+	    		<field>
+		    		<name>I_VKORG</name>
+		    		<from_oa_field>XSZZ</from_oa_field>
+	    		</field>
+	    		<field>
+		    		<name>I_VTWEG</name>
+		    		<from_oa_field>FXQD</from_oa_field>
+	    		</field>
+	    	</import>
+    	</input_parameter>
+    	<output_parameter>
+	    	<table name="O_WERKS">
+	    		<field>
+		    		<name>WERKS</name>
+		    		<desc>工厂</desc>
+		    		<display>Y</display>
+		    		<search>Y</search>
+	    		</field>
+	    		<field>
+		    		<name>NAME1</name>
+		    		<desc>工厂描述</desc>
+		    		<display>Y</display>
+		    		<search>Y</search>
+	    		</field>
+	    	</table>
+    	</output_parameter>
+    	<assignment_parameter>
+    		<field>
+    			<name>GC</name>
+    			<from>O_WERKS_WERKS</from>
+    		</field>
+    		<field>
+    			<name>GCMS</name>
+    			<from>O_WERKS_NAME1</from>
+    		</field>
+    	</assignment_parameter>
+    </browser>
+    
+    <browser id="xiaoshoubumen">
+    	<function>ZSL_FIRF008</function>
+    	<input_parameter>
+	    	<import>
+	    		<field>
+		    		<name>I_VKORG</name>
+		    		<from_oa_field>XSZZ</from_oa_field>
+	    		</field>
+	    		<field>
+		    		<name>I_VTWEG</name>
+		    		<from_oa_field>FXQD</from_oa_field>
+	    		</field>
+	    		<field>
+		    		<name>I_SPART</name>
+		    		<from_oa_field>CPZ</from_oa_field>
+	    		</field>
+	    	</import>
+    	</input_parameter>
+    	<output_parameter>
+	    	<table name="O_VKBUR">
+	    		<field>
+		    		<name>VKBUR</name>
+		    		<desc>销售部门</desc>
+		    		<display>Y</display>
+		    		<search>Y</search>
+	    		</field>
+	    		<field>
+		    		<name>BEZEI</name>
+		    		<desc>销售部门描述</desc>
+		    		<display>Y</display>
+		    		<search>Y</search>
+	    		</field>
+	    	</table>
+    	</output_parameter>
+    	<assignment_parameter>
+    		<field>
+    			<name>XSBM</name>
+    			<from>O_VKBUR_VKBUR</from>
+    		</field>
+    		<field>
+    			<name>XSBMMS</name>
+    			<from>O_VKBUR_BEZEI</from>
+    		</field>
+    	</assignment_parameter>
+    </browser>
+
+    <browser id="xiaoshouzu">
+    	<function>ZSL_FIRF009</function>
+    	<input_parameter>
+	    	<import>
+	    		<field>
+		    		<name>I_VKBUR</name>
+		    		<from_oa_field>XSBM</from_oa_field>
+	    		</field>
+	    	</import>
+    	</input_parameter>
+    	<output_parameter>
+	    	<table name="O_VKGRP">
+	    		<field>
+		    		<name>VKGRP</name>
+		    		<desc>销售组</desc>
+		    		<display>Y</display>
+		    		<search>Y</search>
+	    		</field>
+	    		<field>
+		    		<name>BEZEI</name>
+		    		<desc>销售组描述</desc>
+		    		<display>Y</display>
+		    		<search>Y</search>
+	    		</field>
+	    	</table>
+    	</output_parameter>
+    	<assignment_parameter>
+    		<field>
+    			<name>XSZ</name>
+    			<from>O_VKGRP_VKGRP</from>
+    		</field>
+    		<field>
+    			<name>XSZMS</name>
+    			<from>O_VKGRP_BEZEI</from>
+    		</field>
+    	</assignment_parameter>
+    </browser>
+    
+    <browser id="xianjinliuliang">
+    	<function>ZSL_FIRF003</function>
+    	<output_parameter>
+	    	<table name="I_RSTGR">
+	    		<field>
+		    		<name>RSTGR</name>
+		    		<desc>现金流量</desc>
+		    		<display>Y</display>
+		    		<search>Y</search>
+	    		</field>
+	    		<field>
+		    		<name>TXT40</name>
+		    		<desc>现金流量描述</desc>
+		    		<display>Y</display>
+		    		<search>Y</search>
+	    		</field>
+	    	</table>
+    	</output_parameter>
+    	<assignment_parameter>
+    		<field>
+    			<name>FORMTABLE_MAIN_3_DT1_XJLL</name>
+    			<from>I_RSTGR_RSTGR</from>
+    		</field>
+    		<field>
+    			<name>FORMTABLE_MAIN_3_DT1_XJLLMS</name>
+    			<from>I_RSTGR_TXT40</from>
+    		</field>
+    	</assignment_parameter>
+    </browser>
+
+    <browser id="daifangkemu">
+    	<function>ZSL_FIRF004</function>
+    	<output_parameter>
+	    	<table name="I_SAKNR">
+	    		<field>
+		    		<name>SAKNR</name>
+		    		<desc>总帐科目编号</desc>
+		    		<display>Y</display>
+		    		<search>Y</search>
+	    		</field>
+	    		<field>
+		    		<name>TXT20</name>
+		    		<desc>总帐科目描述</desc>
+		    		<display>Y</display>
+		    		<search>Y</search>
+	    		</field>
+	    	</table>
+    	</output_parameter>
+    	<assignment_parameter>
+    		<field>
+    			<name>FORMTABLE_MAIN_3_DT1_DFKM</name>
+    			<from>I_SAKNR_SAKNR</from>
+    		</field>
+    		<field>
+    			<name>FORMTABLE_MAIN_3_DT1_DFKMMS</name>
+    			<from>I_SAKNR_TXT20</from>
+    		</field>
+    	</assignment_parameter>
+    </browser>
+    
+</module>
+

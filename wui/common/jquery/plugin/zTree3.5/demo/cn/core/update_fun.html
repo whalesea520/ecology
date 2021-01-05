@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> ZTREE DEMO - updateNode</TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../../../css/demo.css" type="text/css">
+	<link rel="stylesheet" href="../../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="../../../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../../js/jquery.ztree.core-3.5.js"></script>
+	<!--  <script type="text/javascript" src="../../../js/jquery.ztree.excheck-3.5.js"></script>
+	  <script type="text/javascript" src="../../../js/jquery.ztree.exedit-3.5.js"></script>-->
+	<SCRIPT type="text/javascript">
+		<!--
+		var setting = {
+			view: {
+				selectedMulti: false
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			}
+		};
+
+		var zNodes =[
+			{ id:1, pId:0, name:"鐖惰妭鐐?", open:true},
+			{ id:11, pId:1, name:"鍙跺瓙鑺傜偣1"},
+			{ id:12, pId:1, name:"鍙跺瓙鑺傜偣2"},
+			{ id:13, pId:1, name:"鍙跺瓙鑺傜偣3"},
+			{ id:2, pId:0, name:"鐖惰妭鐐?", open:true},
+			{ id:21, pId:2, name:"鍙跺瓙鑺傜偣1"},
+			{ id:22, pId:2, name:"鍙跺瓙鑺傜偣2"},
+			{ id:23, pId:2, name:"鍙跺瓙鑺傜偣3"},
+			{ id:3, pId:0, name:"鐖惰妭鐐?", open:true },
+			{ id:31, pId:3, name:"鍙跺瓙鑺傜偣1"},
+			{ id:32, pId:3, name:"鍙跺瓙鑺傜偣2"},
+			{ id:33, pId:3, name:"鍙跺瓙鑺傜偣3"}
+		];
+
+		var nameCount = 0, iconCount = 1, color = [0, 0, 0];
+		function updateNode(e) {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			type = e.data.type,
+			nodes = zTree.getSelectedNodes();
+			if (nodes.length == 0) {
+				alert("璇峰厛閫夋嫨涓€涓妭鐐?);
+			}
+			for (var i=0, l=nodes.length; i<l; i++) {
+				zTree.setting.view.fontCss = {};
+				if (type == "rename") {
+					nodes[i].name = nodes[i].name.replace(/_[\d]*$/g, "") + "_" + (nameCount++);
+				} else if (type == "icon") {
+					if (iconCount > 8) {
+						nodes[i].iconSkin = null;
+						iconCount = 1;
+					} else if (nodes[i].isParent) {
+						nodes[i].iconSkin = nodes[i].iconSkin ? null : "pIcon01";
+					} else {
+						nodes[i].iconSkin = "icon0" + (iconCount++);
+					}
+				} else if (type == "color") {
+					color = [0, 0, 0];
+					var r1 = Math.round(Math.random()*3 - 0.5);
+					color[r1] = 15;
+					var r2 = Math.round(Math.random()*3 - 0.5);
+					while (r2 === r1) {
+						r2 = Math.round(Math.random()*3 - 0.5);
+					}
+					color[r2] = Math.round(Math.random()*16-0.5);
+					zTree.setting.view.fontCss["color"] = "#"+color[0].toString(16)+color[1].toString(16)+color[2].toString(16);
+				} else if (type == "font") {
+					var style = $("#" + nodes[i].tId + "_a").css("font-style") ;
+					style = (style=="italic" ? "normal" : "italic");
+					zTree.setting.view.fontCss["font-style"] = style;
+				}
+				zTree.updateNode(nodes[i]);
+			}
+		}
+
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			$("#rename").bind("click", {type:"rename"}, updateNode);
+			$("#changeIcon").bind("click", {type:"icon"}, updateNode);
+			$("#changeColor").bind("click", {type:"color"}, updateNode);
+			$("#changeFont").bind("click", {type:"font"}, updateNode);
+		});
+		//-->
+	</SCRIPT>
+	<style type="text/css">
+.ztree li span.button.pIcon01_ico_open{margin-right:2px; background: url(../../../css/zTreeStyle/img/diy/1_open.png) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+.ztree li span.button.pIcon01_ico_close{margin-right:2px; background: url(../../../css/zTreeStyle/img/diy/1_close.png) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+.ztree li span.button.icon01_ico_docu{margin-right:2px; background: url(../../../css/zTreeStyle/img/diy/2.png) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+.ztree li span.button.icon02_ico_docu{margin-right:2px; background: url(../../../css/zTreeStyle/img/diy/3.png) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+.ztree li span.button.icon03_ico_docu{margin-right:2px; background: url(../../../css/zTreeStyle/img/diy/4.png) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+.ztree li span.button.icon04_ico_docu{margin-right:2px; background: url(../../../css/zTreeStyle/img/diy/5.png) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+.ztree li span.button.icon05_ico_docu{margin-right:2px; background: url(../../../css/zTreeStyle/img/diy/6.png) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+.ztree li span.button.icon06_ico_docu{margin-right:2px; background: url(../../../css/zTreeStyle/img/diy/7.png) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+.ztree li span.button.icon07_ico_docu{margin-right:2px; background: url(../../../css/zTreeStyle/img/diy/8.png) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+.ztree li span.button.icon08_ico_docu{margin-right:2px; background: url(../../../css/zTreeStyle/img/diy/9.png) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+	</style>
+</HEAD>
+
+<BODY>
+<h1>鐢?zTree 鏂规硶 鏇存柊 鑺傜偣鏁版嵁</h1>
+<h6>[ 鏂囦欢璺緞: core/update_fun.html ]</h6>
+<div class="content_wrap">
+	<div class="zTreeDemoBackground left">
+		<ul id="treeDemo" class="ztree"></ul>
+	</div>
+	<div class="right">
+		<ul class="info">
+			<li class="title"><h2>1銆乽pdateNode 鏂规硶鎿嶄綔璇存槑</h2>
+				<ul class="list">
+				<li class="highlight_red">浣跨敤 zTreeObj.updateNode 鏂规硶锛岃缁嗚鍙傝 API 鏂囨。涓殑鐩稿叧鍐呭</li>
+				<li><p>姝?Demo 鍙兘鍚屾椂閫変腑涓€涓妭鐐?br/>
+					璇曡瘯鐪嬶細[ <a id="rename" href="#" onclick="return false;">鎹㈠悕瀛?/a> ]
+					&nbsp;&nbsp;&nbsp;&nbsp;[ <a id="changeIcon" href="#" onclick="return false;">鎹㈠浘鏍?/a> ]
+					&nbsp;&nbsp;&nbsp;&nbsp;[ <a id="changeColor" href="#" onclick="return false;">鎹㈤鑹?/a> ]
+					&nbsp;&nbsp;&nbsp;&nbsp;[ <a id="changeFont" href="#" onclick="return false;">鏂滀綋</a> ]</p>
+				</li>
+				</ul>
+			</li>
+			<li class="title"><h2>2銆乻etting 閰嶇疆淇℃伅璇存槑</h2>
+				<ul class="list">
+				<li>涓嶉渶瑕佸 setting 杩涜鐗规畩璁剧疆</li>
+				<li class="highlight_red">閰嶅悎 setting.view.fontCss 鍙互淇敼鑺傜偣鏂囧瓧鏍峰紡</li>
+				</ul>
+			</li>
+			<li class="title"><h2>3銆乼reeNode 鑺傜偣鏁版嵁璇存槑</h2>
+				<ul class="list">
+				<li class="highlight_red">zTreeObj.updateNode 鏂规硶鐨?API 鏂囨。涓湁璇︾粏璇存槑</li>
+				</ul>
+			</li>
+			<li class="title"><h2>4銆佸叾浠栬鏄?/h2>
+				<ul class="list">
+				<li>姝?Demo 鏄拡瀵?鏍稿績 js 鍖?core 鍒朵綔鐨勶紝鍥犳涓嶅寘鎷?checkbox 鐨勬洿鏂版搷浣?/li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+</BODY>
+</HTML>

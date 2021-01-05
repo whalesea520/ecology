@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> ZTREE DEMO - big data common</TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../../../css/demo.css" type="text/css">
+	<link rel="stylesheet" href="../../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="../../../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../../js/jquery.ztree.core-3.5.js"></script>
+	<script type="text/javascript" src="../../../js/jquery.ztree.excheck-3.5.js"></script>
+	<script type="text/javascript" src="../../../js/jquery.ztree.exedit-3.5.js"></script>
+	<SCRIPT type="text/javascript">
+		<!--
+		var setting = {
+			check: {
+				enable: true
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			callback: {
+				onNodeCreated: onNodeCreated
+			}
+		};
+
+		var dataMaker = function(count) {
+			var nodes = [], pId = -1,
+			min = 10, max = 90, level = 0, curLevel = [], prevLevel = [], levelCount,
+			i = 0,j,k,l,m;
+
+			while (i<count) {
+				if (level == 0) {
+					pId = -1;
+					levelCount = Math.round(Math.random() * max) + min;
+					for (j=0; j<levelCount && i<count; j++, i++) {
+						var n = {id:i, pId:pId, name:"Big-" +i};
+						nodes.push(n);
+						curLevel.push(n);
+					}
+				} else {
+					for (l=0, m=prevLevel.length; l<m && i<count; l++) {
+						pId = prevLevel[l].id;
+						levelCount = Math.round(Math.random() * max) + min;
+						for (j=0; j<levelCount && i<count; j++, i++) {
+							var n = {id:i, pId:pId, name:"Big-" +i};
+							nodes.push(n);
+							curLevel.push(n);
+						}
+					}
+				}
+				prevLevel = curLevel;
+				curLevel = [];
+				level++;
+			}
+			return nodes;
+		}
+
+		var ruler = {
+			doc: null,
+			ruler: null,
+			cursor: null,
+			minCount: 5000,
+			count: 5000,
+			stepCount:500,
+			minWidth: 30,
+			maxWidth: 215,
+			init: function() {
+				ruler.doc = $(document);
+				ruler.ruler = $("#ruler");
+				ruler.cursor = $("#cursor");
+				if (ruler.ruler) {
+					ruler.ruler.bind("mousedown", ruler.onMouseDown);
+					
+				}
+			},
+			onMouseDown: function(e) {
+				ruler.drawRuler(e, true);
+				ruler.doc.bind("mousemove", ruler.onMouseMove);
+				ruler.doc.bind("mouseup", ruler.onMouseUp);
+				ruler.doc.bind("selectstart", ruler.onSelect);
+				$("body").css("cursor", "pointer");
+			},
+			onMouseMove: function(e) {
+				ruler.drawRuler(e);
+				return false;
+			},
+			onMouseUp: function(e) {
+				$("body").css("cursor", "auto");
+				ruler.doc.unbind("mousemove", ruler.onMouseMove);
+				ruler.doc.unbind("mouseup", ruler.onMouseUp);
+				ruler.doc.unbind("selectstart", ruler.onSelect);
+				ruler.drawRuler(e);
+			},
+			onSelect: function (e) {
+				return false;
+			},
+			getCount: function(end) {
+				var start = ruler.ruler.offset().left+1;
+				var c = Math.max((end - start), ruler.minWidth);
+				c = Math.min(c, ruler.maxWidth);
+				return {width:c, count:(c - ruler.minWidth)*ruler.stepCount + ruler.minCount};
+			},
+			drawRuler: function(e, animate) {
+				var c = ruler.getCount(e.clientX);
+				ruler.cursor.stop();
+				if ($.browser.msie || !animate) {
+					ruler.cursor.css({width:c.width});
+				} else {
+					ruler.cursor.animate({width:c.width}, {duration: "fast",easing: "swing", complete:null});
+				}
+				ruler.count = c.count;
+				ruler.cursor.text(c.count);
+			}
+		}
+		var showNodeCount = 0;
+		function onNodeCreated(event, treeId, treeNode) {
+			showNodeCount++;
+		}
+
+		function createTree () {
+			var zNodes = dataMaker(ruler.count);
+			showNodeCount = 0;
+			$("#treeDemo").empty();
+			setting.check.enable = $("#showChk").attr("checked");
+			var time1 = new Date();
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			var time2 = new Date();
+
+			alert("鑺傜偣鍏?" + zNodes.length + " 涓? 鍒濆鍖栫敓鎴?DOM 鐨勮妭鐐瑰叡 " + showNodeCount + " 涓?
+				+ "\n\n 鍒濆鍖?zTree 鍏辫€楁椂: " + (time2.getTime() - time1.getTime()) + " ms");
+		}
+
+
+		$(document).ready(function(){
+			ruler.init("ruler");
+			$("#createTree").bind("click", createTree);
+
+		});
+		//-->
+	</SCRIPT>
+ </HEAD>
+
+<BODY>
+<h1>涓€娆℃€у姞杞藉ぇ鏁版嵁閲?/h1>
+<h6>[ 鏂囦欢璺緞: bigdata/common.html ]</h6>
+<div class="content_wrap">
+	<div class="zTreeDemoBackground left">
+		<ul>
+		<li><span>璋冩暣鎬昏妭鐐规暟锛屾祴璇曞姞杞介€熷害锛?/span>
+			<div id="ruler" class="ruler" title="鎷栨嫿鍙皟鏁磋妭鐐规暟">
+				<div id="cursor" class="cursor">5000</div>
+			</div>
+			<div style="width:220px; text-align: center;">
+				<span>checkbox</span><input type="checkbox" id="showChk" title="鏄惁鏄剧ず checkbox" class="checkbox first" />&nbsp;&nbsp;&nbsp;&nbsp;
+				[ <a id="createTree" href="#" title="鍒濆鍖?zTree" onclick="return false;">鍒濆鍖?zTree</a> ]
+			</div>
+		</li>
+		</ul>
+		<ul id="treeDemo" class="ztree"></ul>
+	</div>
+	<div class="right">
+		<ul class="info">
+			<li class="title"><h2>1銆佸ぇ鏁版嵁閲忓姞杞借鏄?/h2>
+				<ul class="list">
+				<li>1)銆亃Tree v3.x 閽堝澶ф暟鎹噺涓€娆℃€у姞杞借繘琛屼簡鏇存繁鍏ョ殑浼樺寲锛屽疄鐜颁簡寤惰繜鍔犺浇鍔熻兘锛屽嵆涓嶅睍寮€鐨勮妭鐐逛笉鍒涘缓瀛愯妭鐐圭殑 DOM銆?/li>
+				<li class="highlight_red">2)銆佸浜庢瘡绾ц妭鐐规渶澶氫竴鐧惧乏鍙筹紝浣嗘€昏妭鐐规暟鍑犲崈鐢氳嚦鍑犱竾锛屼笖涓嶆槸鍏ㄩ儴灞曞紑鐨勬暟鎹紝涓€娆℃€у姞杞界殑鏁堟灉鏈€鏄庢樉锛岄€熷害闈炲父蹇€?/li>
+				<li class="highlight_red">3)銆佸浜庢煇涓€绾ц妭鐐规暟灏卞杈惧嚑鍗冪殑鎯呭喌 寤惰繜鍔犺浇鏃犳晥锛岃繖绉嶆儏鍐靛缓璁€冭檻鍒嗛〉寮傛鍔犺浇銆?/li>
+				<li class="highlight_red">4)銆佸浜庡叏閮ㄨ妭鐐归兘灞曞紑鏄剧ず鐨勬儏鍐碉紝寤惰繜鍔犺浇鏃犳晥锛岃繖绉嶆儏鍐靛缓璁笉瑕佸叏閮ㄥ睍寮€銆?/li>
+				<li>5)銆佹樉绀?checkbox / radio 浼氶€犳垚涓€瀹氱▼搴︾殑鎬ц兘涓嬮檷銆?/li>
+				<li>6)銆佸埄鐢?addDiyDom 鍔熻兘澧炲姞鑷畾涔夋帶浠朵細褰卞搷閫熷害锛屽奖鍝嶇▼搴﹀彈鑺傜偣鏁伴噺鑰屽畾銆?/li>
+				<li>7)銆佸埄鐢?onNodeCreated 浜嬩欢鍥炶皟鍑芥暟瀵硅妭鐐?DOM 杩涜鎿嶄綔浼氬奖鍝嶉€熷害锛屽奖鍝嶇▼搴﹀彈鑺傜偣鏁伴噺鑰屽畾銆?/li>
+				</ul>
+			</li>
+			<li class="title"><h2>2銆乻etting 閰嶇疆淇℃伅璇存槑</h2>
+				<ul class="list">
+				<li>涓嶉渶瑕佽繘琛岀壒娈婄殑閰嶇疆</li>
+				</ul>
+			</li>
+			<li class="title"><h2>3銆乼reeNode 鑺傜偣鏁版嵁璇存槑</h2>
+				<ul class="list">
+				<li>瀵?鑺傜偣鏁版嵁 娌℃湁鐗规畩瑕佹眰锛岀敤鎴峰彲浠ユ牴鎹嚜宸辩殑闇€姹傛坊鍔犺嚜瀹氫箟灞炴€?/li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+</BODY>
+</HTML>

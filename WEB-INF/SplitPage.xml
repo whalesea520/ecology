@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	所有 分页所需要的参数全需要在这里进行设置  
+	dongpin9685@163.com
+	2004-04-12
+ -->
+<splitpage-config>
+	<!--全局变量-->
+	<global>
+		<pagesize>100</pagesize>
+		<sqlisprintsql>false</sqlisprintsql>
+	</global>
+	<!--文档模块-->
+	<doc>
+
+
+	</doc>
+	<!--人力资源模块-->
+	<hrm>
+		<!--测试表2-->
+     </hrm>
+		
+ <table instanceid="testtable1" tabletype="checkbox" pagesize="10" >
+			<sql backfields="id,lastname,sex,email,fax" sqlform="hrmresource" sqlorderby="lastname"  sqlprimarykey="id" sqlsortway="Desc" />
+            <browser returncolumn="sex"  transmethod="weaver.skWeb.LgcAssortMentInfo.test" />
+			<head>
+				<col width="50px" align="center" text="姓名" column="lastname" orderkey="lastname" linkkey="namelast" linkvaluecolumn="sex" href="hrmView.jsp" target="_self"/>
+				<col width="50px" align="center" text="性别" column="sex" orderkey="sex" href="/hrm/hrmView1.jsp" target="_self" transmethod="weaver.skWeb.LgcAssortMentInfo.test"/>
+				<col width="200px" align="center" text="Email" column="email" orderkey="email"/>
+				<col align="center" text="传真" column="fax" orderkey="fax"/>			
+			</head>
+			<operates width="">
+				<operate href="/docs/DocDsp.jsp?view=1" text="查看" target="_blank" linkkey="linkkey" valuecolumn="lastname"/>
+				<operate href="/docs/DocModify.jsp" text="修改"/>
+				<operate href="/docs/DocDel.jsp" text="删除"/>
+			</operates>
+</table>
+</splitpage-config>

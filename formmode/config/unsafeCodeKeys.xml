@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Unsafe-Code-Keys>
+	<Code-Key isIgnoreCase="true">insert </Code-Key>
+	<Code-Key isIgnoreCase="true">update </Code-Key>
+	<Code-Key isIgnoreCase="true">delete </Code-Key>
+	<Code-Key isIgnoreCase="true">truncate </Code-Key>
+	<Code-Key isIgnoreCase="true">create </Code-Key>
+	<Code-Key isIgnoreCase="true">alter </Code-Key>
+	<Code-Key isIgnoreCase="true">drop </Code-Key>
+</Unsafe-Code-Keys>

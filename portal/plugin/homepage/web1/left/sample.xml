@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="GBK"?>
+<tree id="0">
+    <tree id="-74" parentId="0" text="关于锦江" openIcon="/images/menu/others/200707/M/1343659667" icon="/images/menu/others/200707/M/1343659667" linkAddress="/homepage/Homepage.jsp?hpid=6&amp;subCompanyId=9" isCustom="2" visible="1" viewIndex="1" ownerid="s9">
+        <tree id="-75" parentId="-74" text="锦江理念" openIcon="/images_face/ecologyFace_2/LeftMenuIcon/level3_wev8.gif" icon="/images_face/ecologyFace_2/LeftMenuIcon/level3_wev8.gif" linkAddress="/homepage/Homepage.jsp?hpid=6&amp;subCompanyId=9" isCustom="2" visible="1" viewIndex="1" ownerid="s9" />
+    </tree>
+	<tree id="-135" parentId="0" text="营运管理" openIcon="/images_face/ecologyFace_2/LeftMenuIcon/level3_wev8.gif" icon="/images_face/ecologyFace_2/LeftMenuIcon/level3_wev8.gif" linkAddress="http://www.weaver.com.cn" isCustom="2" visible="1" viewIndex="2" ownerid="s9">
+        <tree id="-136" parentId="-135" text="概要" openIcon="/images_face/ecologyFace_2/LeftMenuIcon/level3_wev8.gif" icon="/images_face/ecologyFace_2/LeftMenuIcon/level3_wev8.gif" linkAddress="http://www.weaver.com.cn" isCustom="2" visible="1" viewIndex="0" ownerid="s9">
+            <tree id="-141" parentId="-136" text="指导准则" openIcon="/images_face/ecologyFace_2/LeftMenuIcon/level3_wev8.gif" icon="/images_face/ecologyFace_2/LeftMenuIcon/level3_wev8.gif" linkAddress="http://www.weaver.com.cn" isCustom="2" visible="1" viewIndex="2" ownerid="s9" />
+            <tree id="-138" parentId="-136" text="核心价值" openIcon="/images_face/ecologyFace_2/LeftMenuIcon/level3_wev8.gif" icon="/images_face/ecologyFace_2/LeftMenuIcon/level3_wev8.gif" linkAddress="http://www.weaver.com.cn" isCustom="2" visible="1" viewIndex="1" ownerid="s9">
+                <tree id="-140" parentId="-138" text="培训PPT材料" openIcon="/images_face/ecologyFace_2/LeftMenuIcon/level3_wev8.gif" icon="/images_face/ecologyFace_2/LeftMenuIcon/level3_wev8.gif" linkAddress="http://www.weaver.com.cn" isCustom="2" visible="1" viewIndex="1" ownerid="s9" />
+                <tree id="-139" parentId="-138" text="手册打印" openIcon="/images_face/ecologyFace_2/LeftMenuIcon/level3_wev8.gif" icon="/images_face/ecologyFace_2/LeftMenuIcon/level3_wev8.gif" linkAddress="http://www.weaver.com.cn" isCustom="2" visible="1" viewIndex="0" ownerid="s9" />
+            </tree>
+			<tree id="-137" parentId="-136" text="核心政策程序手册" openIcon="/images_face/ecologyFace_2/LeftMenuIcon/level3_wev8.gif" icon="/images_face/ecologyFace_2/LeftMenuIcon/level3_wev8.gif" linkAddress="http://www.weaver.com.cn" isCustom="2" visible="1" viewIndex="0" ownerid="s9" />
+        </tree>
+    </tree>
+</tree>

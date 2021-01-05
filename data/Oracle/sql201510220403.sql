@@ -1,0 +1,2 @@
+CREATE OR REPLACE function getchilds(i_id int) return t_table pipelined as v hrmline_table; begin for myrow in( select id,lastname,managerid from hrmresource where id=i_id union select  a.id,a.lastname,a.managerid from HrmResource a where a.id<>i_id  start with a.id = i_id connect by NOCYCLE prior a.id=a.managerid  ) loop v:=hrmline_table(myrow.id,myrow.lastname,myrow.managerid); pipe row(v); end loop; return; end;
+/

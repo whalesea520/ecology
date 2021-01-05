@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<no-timeout-urls>
+		<url>/mobile/plugin/login/QCLoginStatus.jsp</url>
+		<url>/api/hrm/login/qrcode/getQCLoginStatus</url>
+	</no-timeout-urls>
+</root>

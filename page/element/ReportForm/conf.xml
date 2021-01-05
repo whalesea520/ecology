@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <id>reportForm</id>
+  <title>图表元素</title>
+  <titleEN>Report Form</titleEN>
+  <desc>图表元素</desc>
+  <icon>resource/image/reportform_wev8.gif</icon>
+  <linkMode>-1</linkMode>
+  <loginView>1</loginView>
+  <type>2</type>
+  <private>
+    <jsList>
+    </jsList>
+  </private>
+  <public>
+    <jsIdList>
+      <jsId>jquery</jsId>
+    </jsIdList>
+    <cssIdList>
+      <cssId>weaver</cssId>
+    </cssIdList>
+  </public>
+  <view>
+    <url>reportformtabs.jsp</url>
+    <method/>
+  </view>
+  <setting>
+    <url>/page/element/compatible/setting.jsp</url>
+    <method>getReportFormSettingStr</method>
+  </setting>
+  <more>
+	<url></url>
+	<method></method>
+  </more>
+  <operation>/page/element/compatible/operation.jsp</operation>
+  <init>init</init>
+  <columns>
+    <name>title</name>
+  </columns>
+  <perpage>-1</perpage>
+</root>

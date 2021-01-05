@@ -1,0 +1,253 @@
+@charset "UTF-8";
+
+* {
+	font-family: '微软雅黑';
+	font-size:12px;
+	color:#8a8a8a;
+}
+
+html,body {
+	margin: 0px;
+	padding: 0px;
+}
+
+/* 主内容区域 */
+.content {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+.clickedColor {
+	background-color: #c8e0fd;
+}
+
+.unclickedColor {
+	background-color: #ffffff;
+}
+
+.editBlockClass {
+	display:inline-block!important;
+	max-height:78px;
+	min-height:30px;
+	border:1px solid #c6c6c6;
+}
+
+.displayspan {
+	border:2px solid #fff; 
+	cursor:pointer;
+}
+
+.spanselected {
+	border:2px dashed #17d68c;
+}
+
+.relationblock {
+	padding-left:45px;
+    position:relative;
+}
+.relationItem {
+	padding-left:10px;
+	margin-top:4px;
+	margin-bottom:4px;
+}
+
+.relationStyle {
+	position: absolute;
+	height:100%;
+	left:35px;
+}
+
+.relationStyleTop {
+	/*height:6px;*/
+	height:10px;
+	width:10px;
+	border-bottom:2px solid #7E7E7E;
+}
+
+.relationStyleBottom {
+	position: absolute;
+	bottom:0px;
+	height:10px;
+	/*height:6px;*/
+    width:10px;
+	border-top:2px solid #7E7E7E;
+}
+.relationStyleCenter {
+	position: absolute;
+	/*
+	top:6px;
+	bottom:6px;
+	*/
+	top:10px;
+	bottom:10px;
+	border-left:2px solid #7E7E7E;
+	
+}
+div.relationItem {
+	margin-top:14px;
+	margin-bottom:14px;
+}
+
+.outermoststyle .relationStyleTop {
+	border-top:2px solid #7E7E7E;
+	border-bottom:0px solid #7E7E7E;
+}
+
+.outermoststyle .relationStyleBottom {
+	border-top:0px solid #7E7E7E;
+	border-bottom:2px solid #7E7E7E;
+}
+
+.outermoststyle .relationStyleCenter {
+	top:0px;
+	bottom:0px;
+}
+.verticalblock {
+	position:absolute;
+	top:50%;
+	margin-top:-7px; 
+	height:15px;
+	left:-3px;
+	line-height:15px;
+}
+.varticalblockborder
+{
+	border:#a0a0a0 1px solid;
+}
+
+
+
+
+
+.operbtn {
+			width:29px;
+			height:29px;
+			border:none;
+			cursor: pointer;
+		}
+		
+		.operbtn_add {
+			background:url('/formmode/js/ruleDesign/images/add_wev8.png') 0 0 no-repeat;
+		}
+		.operbtn_add:hover {
+			background:url('/formmode/js/ruleDesign/images/add_hover_wev8.png') 0 0 no-repeat;
+		}
+		
+		.operbtn_del {
+			background:url('/formmode/js/ruleDesign/images/delete_wev8.png') 0 0 no-repeat;
+		}
+		.operbtn_del:hover {
+			background:url('/formmode/js/ruleDesign/images/delete_hover_wev8.png') 0 0 no-repeat;
+		}
+		
+		.operbtn_joinor {
+			background:url('/formmode/js/ruleDesign/images/joinor_wev8.png') 0 0 no-repeat;
+		}
+		.operbtn_joinor:hover {
+			background:url('/formmode/js/ruleDesign/images/joinor_hover_wev8.png') 0 0 no-repeat;
+		}
+		
+		.operbtn_joinand {
+			background:url('/formmode/js/ruleDesign/images/joinand_wev8.png') 0 0 no-repeat;
+		}
+		.operbtn_joinand:hover {
+			background:url('/formmode/js/ruleDesign/images/joinand_hover_wev8.png') 0 0 no-repeat;
+		}
+		
+		.operbtn_spit {
+			background:url('/formmode/js/ruleDesign/images/split_wev8.png') 0 0 no-repeat;
+		}
+		.operbtn_spit:hover {
+			background:url('/formmode/js/ruleDesign/images/split_hover_wev8.png') 0 0 no-repeat;
+		}
+		
+		
+		
+		.operbtn_up {
+			background:url('/formmode/js/ruleDesign/images/up_wev8.png') 0 0 no-repeat;
+		}
+		
+		.operbtn_down {
+			background:url('/formmode/js/ruleDesign/images/down_wev8.png') 0 0 no-repeat;
+		}
+		
+		
+		.operbtn2 {
+			width:29px;
+			height:29px;
+			border:none;
+			cursor: pointer;
+			
+		}
+		
+		.operbtn_ok {
+			background:url('/formmode/js/ruleDesign/images/ok_wev8.png')  center center no-repeat;
+		}
+		.operbtn_ok:hover {
+			background:url('/formmode/js/ruleDesign/images/ok_hover_wev8.png') center center  no-repeat;
+		}
+		
+		.operbtn_cancel {
+			background:url('/formmode/js/ruleDesign/images/cancel_wev8.png') center center  no-repeat;
+		}
+		.operbtn_cancel:hover {
+			background:url('/formmode/js/ruleDesign/images/cancel_hover_wev8.png')  center center  no-repeat;
+		}
+		.editspan
+		{
+			padding-left:10px;
+			letter-spacing:-5px;
+		}
+		
+		
+		*{
+		 margin:0;
+		 padding:0;
+		}
+		html,body{
+		 padding:0 !important;
+		 width:100%;
+		 height:100%;
+		 overflow:hidden;
+		}
+		#header{
+		 position:absolute;
+		 top:0;
+		 width:100%;
+		 z-index:9;
+		}
+		#middle{ 
+		 position: absolute!important;
+		 top:74px;
+		 height:389px;
+		 position: relative;
+		 width:100%;
+		 overflow: auto;
+		}
+		#footer{
+		 position:absolute;
+		 bottom:0;
+		 width:100%;
+		 height:45px;
+		 line-height:45px;
+		}
+		
+		
+		#ruledesc{
+		 position:absolute;
+		 bottom:45px;
+		 background:#F6F6F6;
+		 padding:5px;
+		 width:auto;	
+		 display:none;	 
+		 border-top:1px solid #c6c6c6;
+		 max-height:200px;
+		 overflow:auto;
+		}
+		#ruledescBtn {
+		position:absolute;
+		 bottom:50px;
+		 left:20px;
+		}

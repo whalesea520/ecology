@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+ <HEAD>
+  <TITLE> ZTREE DEMO </TITLE>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="../../css/zTreeStyle/zTreeStyle_wev8.css" type="text/css">
+  <style>
+	body {
+	background-color: white;
+	margin:0; padding:0;
+	text-align: center;
+	}
+	div, p, table, th, td {
+		list-style:none;
+		margin:0; padding:0;
+		color:#333; font-size:12px;
+		font-family:dotum, Verdana, Arial, Helvetica, AppleGothic, sans-serif;
+	}
+	#testIframe {margin-left: 10px;}
+  </style>
+<script type="text/javascript" src="../../js/jquery-1.4.4.min_wev8.js"></script>
+<script type="text/javascript" src="../../js/jquery.ztree.core-3.5_wev8.js"></script>
+  <SCRIPT type="text/javascript" >
+  <!--
+	var zTree;
+	var demoIframe;
+
+	var setting = {
+		view: {
+			dblClickExpand: false,
+			showLine: true,
+			selectedMulti: false
+		},
+		data: {
+			simpleData: {
+				enable:true,
+				idKey: "id",
+				pIdKey: "pId",
+				rootPId: ""
+			}
+		},
+		callback: {
+			beforeClick: function(treeId, treeNode) {
+				var zTree = $.fn.zTree.getZTreeObj("tree");
+				if (treeNode.isParent) {
+					zTree.expandNode(treeNode);
+					return false;
+				} else {
+					demoIframe.attr("src",treeNode.file + ".html");
+					return true;
+				}
+			}
+		}
+	};
+
+	var zNodes =[
+		{id:1, pId:0, name:"[core] 鍩烘湰鍔熻兘 婕旂ず", open:true},
+		{id:101, pId:1, name:"鏈€绠€鍗曠殑鏍?--  鏍囧噯 JSON 鏁版嵁", file:"core/standardData"},
+		{id:102, pId:1, name:"鏈€绠€鍗曠殑鏍?--  绠€鍗?JSON 鏁版嵁", file:"core/simpleData"},
+		{id:103, pId:1, name:"涓嶆樉绀?杩炴帴绾?, file:"core/noline"},
+		{id:104, pId:1, name:"涓嶆樉绀?鑺傜偣 鍥炬爣", file:"core/noicon"},
+		{id:105, pId:1, name:"鑷畾涔夊浘鏍?--  icon 灞炴€?, file:"core/custom_icon"},
+		{id:106, pId:1, name:"鑷畾涔夊浘鏍?--  iconSkin 灞炴€?, file:"core/custom_iconSkin"},
+		{id:107, pId:1, name:"鑷畾涔夊瓧浣?, file:"core/custom_font"},
+		{id:115, pId:1, name:"瓒呴摼鎺ユ紨绀?, file:"core/url"},
+		{id:108, pId:1, name:"寮傛鍔犺浇 鑺傜偣鏁版嵁", file:"core/async"},
+		{id:109, pId:1, name:"鐢?zTree 鏂规硶 寮傛鍔犺浇 鑺傜偣鏁版嵁", file:"core/async_fun"},
+		{id:110, pId:1, name:"鐢?zTree 鏂规硶 鏇存柊 鑺傜偣鏁版嵁", file:"core/update_fun"},
+		{id:111, pId:1, name:"鍗曞嚮 鑺傜偣 鎺у埗", file:"core/click"},
+		{id:112, pId:1, name:"灞曞紑 / 鎶樺彔 鐖惰妭鐐?鎺у埗", file:"core/expand"},
+		{id:113, pId:1, name:"鏍规嵁 鍙傛暟 鏌ユ壘 鑺傜偣", file:"core/searchNodes"},
+		{id:114, pId:1, name:"鍏朵粬 榧犳爣 浜嬩欢鐩戝惉", file:"core/otherMouse"},
+
+		{id:2, pId:0, name:"[excheck] 澶?鍗曢€夋鍔熻兘 婕旂ず", open:false},
+		{id:201, pId:2, name:"Checkbox 鍕鹃€夋搷浣?, file:"excheck/checkbox"},
+		{id:206, pId:2, name:"Checkbox nocheck 婕旂ず", file:"excheck/checkbox_nocheck"},
+		{id:207, pId:2, name:"Checkbox chkDisabled 婕旂ず", file:"excheck/checkbox_chkDisabled"},
+		{id:208, pId:2, name:"Checkbox halfCheck 婕旂ず", file:"excheck/checkbox_halfCheck"},
+		{id:202, pId:2, name:"Checkbox 鍕鹃€夌粺璁?, file:"excheck/checkbox_count"},
+		{id:203, pId:2, name:"鐢?zTree 鏂规硶 鍕鹃€?Checkbox", file:"excheck/checkbox_fun"},
+		{id:204, pId:2, name:"Radio 鍕鹃€夋搷浣?, file:"excheck/radio"},
+		{id:209, pId:2, name:"Radio nocheck 婕旂ず", file:"excheck/radio_nocheck"},
+		{id:210, pId:2, name:"Radio chkDisabled 婕旂ず", file:"excheck/radio_chkDisabled"},
+		{id:211, pId:2, name:"Radio halfCheck 婕旂ず", file:"excheck/radio_halfCheck"},
+		{id:205, pId:2, name:"鐢?zTree 鏂规硶 鍕鹃€?Radio", file:"excheck/radio_fun"},
+
+		{id:3, pId:0, name:"[exedit] 缂栬緫鍔熻兘 婕旂ず", open:false},
+		{id:301, pId:3, name:"鎷栨嫿 鑺傜偣 鍩烘湰鎺у埗", file:"exedit/drag"},
+		{id:302, pId:3, name:"鎷栨嫿 鑺傜偣 楂樼骇鎺у埗", file:"exedit/drag_super"},
+		{id:303, pId:3, name:"鐢?zTree 鏂规硶 绉诲姩 / 澶嶅埗 鑺傜偣", file:"exedit/drag_fun"},
+		{id:304, pId:3, name:"鍩烘湰 澧?/ 鍒?/ 鏀?鑺傜偣", file:"exedit/edit"},
+		{id:305, pId:3, name:"楂樼骇 澧?/ 鍒?/ 鏀?鑺傜偣", file:"exedit/edit_super"},
+		{id:306, pId:3, name:"鐢?zTree 鏂规硶 澧?/ 鍒?/ 鏀?鑺傜偣", file:"exedit/edit_fun"},
+		{id:307, pId:3, name:"寮傛鍔犺浇 & 缂栬緫鍔熻兘 鍏卞瓨", file:"exedit/async_edit"},
+		{id:308, pId:3, name:"澶氭５鏍戜箣闂?鐨?鏁版嵁浜や簰", file:"exedit/multiTree"},
+
+		{id:4, pId:0, name:"澶ф暟鎹噺 婕旂ず", open:false},
+		{id:401, pId:4, name:"涓€娆℃€у姞杞藉ぇ鏁版嵁閲?, file:"bigdata/common"},
+		{id:402, pId:4, name:"鍒嗘壒寮傛鍔犺浇澶ф暟鎹噺", file:"bigdata/diy_async"},
+		{id:403, pId:4, name:"鍒嗘壒寮傛鍔犺浇澶ф暟鎹噺", file:"bigdata/page"},
+
+		{id:5, pId:0, name:"缁勫悎鍔熻兘 婕旂ず", open:false},
+		{id:501, pId:5, name:"鍐荤粨鏍硅妭鐐?, file:"super/oneroot"},
+		{id:502, pId:5, name:"鍗曞嚮灞曞紑/鎶樺彔鑺傜偣", file:"super/oneclick"},
+		{id:503, pId:5, name:"淇濇寔灞曞紑鍗曚竴璺緞", file:"super/singlepath"},
+		{id:504, pId:5, name:"娣诲姞 鑷畾涔夋帶浠?, file:"super/diydom"},
+		{id:505, pId:5, name:"checkbox / radio 鍏卞瓨", file:"super/checkbox_radio"},
+		{id:506, pId:5, name:"宸︿晶鑿滃崟", file:"super/left_menu"},
+		{id:513, pId:5, name:"OutLook 鏍峰紡鐨勫乏渚ц彍鍗?, file:"super/left_menuForOutLook"},
+		{id:507, pId:5, name:"涓嬫媺鑿滃崟", file:"super/select_menu"},
+		{id:509, pId:5, name:"甯?checkbox 鐨勫閫変笅鎷夎彍鍗?, file:"super/select_menu_checkbox"},
+		{id:510, pId:5, name:"甯?radio 鐨勫崟閫変笅鎷夎彍鍗?, file:"super/select_menu_radio"},
+		{id:508, pId:5, name:"鍙抽敭鑿滃崟 鐨?瀹炵幇", file:"super/rightClickMenu"},
+		{id:511, pId:5, name:"涓庡叾浠?DOM 鎷栨嫿浜掑姩", file:"super/dragWithOther"},
+		{id:512, pId:5, name:"寮傛鍔犺浇妯″紡涓嬪叏閮ㄥ睍寮€", file:"super/asyncForAll"},
+
+		{id:6, pId:0, name:"鍏朵粬鎵╁睍鍔熻兘 婕旂ず", open:false},
+		{id:601, pId:6, name:"闅愯棌鏅€氳妭鐐?, file:"exhide/common"},
+		{id:602, pId:6, name:"閰嶅悎 checkbox 鐨勯殣钘?, file:"exhide/checkbox"},
+		{id:603, pId:6, name:"閰嶅悎 radio 鐨勯殣钘?, file:"exhide/radio"}
+	];
+
+	$(document).ready(function(){
+		var t = $("#tree");
+		t = $.fn.zTree.init(t, setting, zNodes);
+		demoIframe = $("#testIframe");
+		demoIframe.bind("load", loadReady);
+		var zTree = $.fn.zTree.getZTreeObj("tree");
+		zTree.selectNode(zTree.getNodeByParam("id", 101));
+
+	});
+
+	function loadReady() {
+		var bodyH = demoIframe.contents().find("body").get(0).scrollHeight,
+		htmlH = demoIframe.contents().find("html").get(0).scrollHeight,
+		maxH = Math.max(bodyH, htmlH), minH = Math.min(bodyH, htmlH),
+		h = demoIframe.height() >= maxH ? minH:maxH ;
+		if (h < 530) h = 530;
+		demoIframe.height(h);
+	}
+
+  //-->
+  </SCRIPT>
+ </HEAD>
+
+<BODY>
+<TABLE border=0 height=600px align=left>
+	<TR>
+		<TD width=260px align=left valign=top style="BORDER-RIGHT: #999999 1px dashed">
+			<ul id="tree" class="ztree" style="width:260px; overflow:auto;"></ul>
+		</TD>
+		<TD width=770px align=left valign=top><IFRAME ID="testIframe" Name="testIframe" FRAMEBORDER=0 SCROLLING=AUTO width=100%  height=600px SRC="core/standardData.html"></IFRAME></TD>
+	</TR>
+</TABLE>
+
+</BODY>
+</HTML>

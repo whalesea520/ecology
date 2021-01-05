@@ -1,0 +1,267 @@
+/*窗口分离样式引用*/
+/*显示最大化最小化按钮*/
+.chatdiv .imtitle .imtitleBlock {
+    right :112px !important;
+}
+
+/*显示窗口在前箭头位置*/
+.pcontop .topnarrow{
+    left: 68px !important;
+}
+
+/*显示窗口在前*/
+.pc-imChatOnTopBtn{
+    width: 28px;
+    height: 28px;
+    float: right;
+    background: url("/social/images/newChatWin/OnTop.png") center center no-repeat;
+    cursor:pointer;
+}
+.pChatcontop {
+    position: absolute;
+    right: 22px;
+    top: 35px;
+    z-index: 1000;
+    border: 1px solid #e3e6f0;
+    background: #fff;
+    width: 117px;
+    z-index : 20000;
+}
+.pChatcontop .checkpane {
+    width: 25px;
+    height: 31px;
+    background-color: #f2f2f2 !important;
+    margin-left: 0;
+    position: absolute;
+    z-index: -1;
+    
+}
+.pChatcontop .pcontopItme {
+    height: 25px;
+    line-height: 26px;
+    padding-left: 5px;
+    padding-right: 8px;
+    cursor: pointer;
+    color: #000000
+}
+.pChatcontop .pcontopItme:hover {
+    background-color: #0084ff;
+    color: #ffffff;
+    opacity: .6;
+    filter: alpha(opacity=60)
+}
+.pChatcontop .topnarrow{
+    height:10px;
+    width:15px;
+    left: 36px;
+    z-index:101;
+    top: -9px;
+    position:absolute;
+    background: url("/social/images/topnarrow.png") no-repeat
+}
+.pChatcontop .active{
+      background: url("/social/images/sendtype_ok_wev8.png") no-repeat;
+      background-position: center center;
+}
+.pChatcontop span{
+    margin-left:25px
+}
+
+.chatdiv .chatIMtop {
+    top:28px !important;
+}
+
+.chatList {
+    top:66px !important;
+}
+
+/*掉线重连样式*/
+.pc-recon{
+    display: none;
+    height: 610px;
+    width: 1099px;
+    position: absolute;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    font-size: 12px;
+}
+.pc-recon-message{
+    width: 232px;
+    height: 200px;
+    position: absolute;
+    background-color: #fff;
+    top: 32%;
+    left: 8%;
+    border-radius: 6px;
+}
+
+.pc-recon-message > .header {
+    height: 0px;
+    background-color: #439ae4;
+    text-indent: 10px;
+    line-height: 30px;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.pc-recon-message > .center {
+}
+.pc-recon-message > .center > .center-img {
+    height: 36px;
+    text-align: center;
+    margin: 15px 0;
+}
+.pc-recon-message > .center > .center-msg {
+    height: 50px;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.pc-recon-message > .center > .center-msg-hand {
+    line-height: 50px;
+}
+.pc-recon-message > .center > .center-msg > span{
+    color: #E95126;
+}
+
+.pc-recon-message > .footer {
+    text-align: center;
+    margin: 10px 0;
+}
+.pc-recon-message > .footer > .task-relink {
+    border: 0;
+    width: 60px;
+    height: 30px;
+    color: #fff;
+    background-color: #3e9dee;
+    cursor: pointer;
+    border: 1px solid #E2E2E2;
+    border-radius: 4px;
+}
+.pc-recon-message > .footer > .task-relink:hover {
+    background-color: #288bdf;
+    border: 1px solid #E2E2E2;
+    border-radius: 4px;
+}
+.pc-recon-message > .footer > .task-relink:active {
+    background-color: #297ac0;
+}
+.pc-recon-message > .footer > .task-close {
+    border: 1px solid #ccd1d5;
+    width: 60px;
+    height: 30px;
+    color: #000;
+    background-color: #fff;
+    margin-left: 34px;
+    cursor: pointer;
+    border: 1px solid #E2E2E2;
+    border-radius: 4px;
+}
+.pc-recon-message > .footer > .task-close:hover {
+    color: #fff;
+    background-color: #D35466;
+}
+.pc-recon-message > .footer > .task-close:active {
+    color: #fff;
+    background-color: #BE4455;
+}
+.pc-recon-message > .footer > input.pc-disabled {
+    cursor: not-allowed;
+    background-color: #00A9FF;
+    border-radius: 4px;
+}
+.pc-recon-message > .footer > input.pc-disabled:hover {
+    cursor: not-allowed;
+    background-color: #cdd1d4;
+}
+
+.show-new-client{
+    display: none;
+    height: 610px;
+    width: 1099px;
+    position: absolute;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    font-size: 12px;
+}
+.show-new-client-message{
+    width: 246px;
+    height: 171px;
+    position: absolute;
+    background-color: #fff;
+    top: 36%;
+    left: 6%;
+    border-radius: 5px;
+}
+
+.show-new-client-message > .header {
+    height: 30px;
+    background-color: #439ae4;
+    text-indent: 10px;
+    line-height: 30px;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#th-message{
+    font-size : 14px;
+    font-weight:normal;
+    padding-top:10px;
+}
+
+#th-pic{
+    width:15%;
+}
+
+.show-new-client-message > .center {
+	text-align: center;
+}
+
+.show-new-client-message > .center > table{
+    width:246px;
+    height:80px;
+    align: center;
+}
+
+.show-new-client-message > .footer {
+    text-align: center;
+    margin: 10px 0;
+    
+}
+.show-new-client-message > .footer > .task-comfirm {
+    border: 1px solid #ccd1d5;
+    width: 80px;
+    height: 32px;
+    color: #000;
+    background-color: #fff;
+    cursor: pointer;
+}
+.show-new-client-message > .footer > .task-comfirm:hover {
+    background-color: #288bdf;
+}
+.show-new-client-message > .footer > .task-comfirm:active {
+    background-color: #297ac0;
+}
+.show-new-client-message > .footer > .task-cancel {
+    border: 1px solid #ccd1d5;
+    width: 80px;
+    height: 32px;
+    color: #000;
+    background-color: #fff;
+    margin-left: 34px;
+    cursor: pointer;
+}
+.show-new-client-message > .footer > .task-cancel:hover {
+    background-color: #288bdf;
+}
+.show-new-client-message > .footer > .task-cancel:active {
+    background-color: #297ac0;
+}
+

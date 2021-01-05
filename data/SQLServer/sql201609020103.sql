@@ -1,0 +1,1 @@
+update outter_sys   set requesttype = 'POST' where (actiontype is null or actiontype = '')   and (requesttype is null or requesttype = '')

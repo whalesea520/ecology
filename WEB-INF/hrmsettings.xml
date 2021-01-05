@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="GB2312"?>
+<HrmSettings>
+  <birthremindmode>0</birthremindmode>
+  <birthremindperiod>0</birthremindperiod>
+  <birthvalid />
+  <congratulation>添一份快乐,发张贺卡吧! &#xD;&lt;br&gt;任何人都需要真诚的祝福,&#xD;&lt;br&gt;你的亲人、你的友人,你的爱人……&#xD;&lt;br&gt;送出你的心意吧!&#xD;&lt;br&gt;</congratulation>
+  <dynapasslen>6</dynapasslen>
+  <firmcode>10</firmcode>
+  <minPasslen>6</minPasslen>
+  <needdynapass>0</needdynapass>
+  <needusb>0</needusb>
+  <usbType>0</usbType>
+  <needvalidate>0</needvalidate>
+  <relogin>1</relogin>
+  <remindperiod>30</remindperiod>
+  <usercode>13</usercode>
+  <valid />
+  <validatenum>4</validatenum>
+  <validatetype>0</validatetype>
+  <congratulation1>祝$生日快乐</congratulation1>
+  <birthdialogstyle>0</birthdialogstyle>
+  <birthshowfield>2,3</birthshowfield>
+  <brithalarmscope>3</brithalarmscope>
+  <birthvalidadmin />
+  <brithalarmadminscope />
+  <contractvalid>1</contractvalid>
+  <contractremindperiod>3</contractremindperiod>
+  <entervalid>1</entervalid>
+  <dypadcon>2</dypadcon>
+  <needdynapassdefault>-1</needdynapassdefault>
+  <daysToRemind>3</daysToRemind>
+  <passwordChangeReminder>0</passwordChangeReminder>
+  <changePasswordDays>7</changePasswordDays>
+  <openPasswordLock>0</openPasswordLock>
+  <sumPasswordLock>3</sumPasswordLock>
+  <passwordComplexity>0</passwordComplexity>
+  <needDactylogram />
+  <canModifyDactylogram />
+  <needusbnetwork />
+  <needusbdefault />
+  <mobileShowSet>1</mobileShowSet>
+  <mobileShowType>1,2,3</mobileShowType>
+  <mobileShowTypeDefault>2</mobileShowTypeDefault>
+  <loginMustUpPswd>1</loginMustUpPswd>
+  <forbidLogin />
+  <needusbHt />
+  <needusbdefaultHt />
+  <needusbDt />
+  <needusbdefaultDt />
+  <validitySec />
+  <checkkey>99adbd0f-c843-4f57-9ee2-6b77b1aa600a</checkkey>
+  <numvalidatewrong>0</numvalidatewrong>
+</HrmSettings>
+

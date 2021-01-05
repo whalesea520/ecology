@@ -1,0 +1,113 @@
+.e8_forGridHidden{
+	height: 10px;
+}
+.x-border-layout-ct{
+	background-color: #fff;
+}
+.x-panel-body-noheader{
+	border: none;
+}
+.x-panel-tl{
+	border-bottom-width: 0px;
+}
+.x-panel-ml{
+	padding-left: 0px;
+	background-image: none;
+}
+.x-panel-mc{
+	padding-top: 0px;
+	background-color: #fff;
+}
+.x-panel-mr{
+	padding-right: 0px;
+	background-image: none;
+}
+.x-panel-nofooter .x-panel-bc{
+	height: 0px;
+	overflow:hidden;
+}
+
+.x-grid-panel .x-panel-mc .x-panel-body{
+	border: none; 
+}
+.x-grid3-hd{
+	background-color: rgb(248,248,248);
+}
+.x-grid3-hd-inner{
+	background-image: none;
+	height: 30px !important;
+	line-height: 30px;
+	padding: 0px 0px 0px 0px;
+	color: #000;
+	background-color: rgb(248,248,248);
+	font-weight: bold;
+	text-align: center;
+	font-size: 12px;
+	border-bottom: 2px solid #B7E0FE;
+	border-collapse: collapse;
+}
+.x-grid3-hd-row td{
+	background-color: #E5E5E5;
+	border-left: none;
+	border-right-color: #d0d0d0;
+}
+.x-grid3-hd-row td .x-grid3-hd-inner{
+	color: #333;
+}
+.x-grid3-row-table td{
+}
+.x-grid3-header-inner{
+	background-color: #E5E5E5;
+}
+td.x-grid3-hd-over .x-grid3-hd-inner{
+	background-image: none;
+	background-color: #E5E5E5;
+}
+.x-grid3-hd-over .x-grid3-hd-btn{
+	display: none;
+}
+.x-grid3-scroller{
+
+}
+.x-grid3-locked .x-grid3-scroller{
+	border-right-color: #d0d0d0;
+}
+.x-grid3-body .x-grid3-td-checker{
+	padding-left: 3px;
+	background: none;
+}
+.x-grid3-cell-inner{
+	padding: 1px 3px 1px 5px;
+	text-align: right;
+	vertical-align: middle;
+	height: 30px !important;
+	line-height: 30px;
+}
+
+.x-grid3-row, .x-grid3-row-selected{
+	/*background-color: #fff !important;*/
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #ededed;
+	border-left: 0px;
+	border-right: 0px;
+}
+
+.x-grid3-body .x-grid3-row-selected .x-grid3-td-checker{
+	background-image: none;
+}
+.x-panel-bc, .x-panel-bl, .x-panel-br{
+	background-image:none;
+}
+
+.x-grid3-col .x-grid3-col-6{
+	width: 200px;
+}
+.x-grid3-hd-inner{
+	padding-left: 0;
+}
+
+.checkboxcommon{
+	height:12px;
+	line-height:12px;
+	padding-left:5px;
+}

@@ -1,0 +1,180 @@
+2020-12-07 14:08:54,156 ERROR weaver.general.BaseBean  - ------是否开启字符转码----0---是否开启sql参数化解析-----0----nativepool----ecology
+2020-12-07 14:08:54,629 ERROR weaver.general.BaseBean  - ExecuteSqlLogger start log write to file thread success...
+2020-12-07 14:08:54,732 INFO  weaver.common.SystemInitialized  - System Initialized OK.
+2020-12-07 14:08:55,004 INFO  weaver.general.InitServer  - System Init Message:mainControlIp= localIp:[192.168.56.1, 192.168.97.232]
+2020-12-07 14:08:55,004 INFO  weaver.general.InitServer  - init ioc container...
+2020-12-07 14:08:57,577 ERROR com.weaver.upgrade.FunctionUpgrade  - OS.name+++++++++++++++++++++:Windows 10
+2020-12-07 14:08:57,577 ERROR com.weaver.upgrade.FunctionUpgrade  - srcfilePath+++++++++++++++++++++:D:\WEAVER\ecology\upgrade\src
+2020-12-07 14:08:57,580 ERROR com.weaver.upgrade.FunctionUpgrade  - 本地Ip++++++++++：192.168.56.1
+2020-12-07 14:08:57,580 ERROR com.weaver.upgrade.FunctionUpgrade  - 主节点MainControlIP++++++++++：
+2020-12-07 14:08:57,714 INFO  weaver.general.InitServer  - end ioc container init...
+2020-12-07 14:08:57,715 INFO  weaver.general.InitServer  - SystemUpgrade Start.....
+2020-12-07 14:08:57,750 INFO  weaver.general.InitServer  - SystemUpgrade End.....
+2020-12-07 14:08:57,751 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread Start.....
+2020-12-07 14:08:57,757 ERROR weaver.general.BaseBean  - 启动日志压缩线程....
+2020-12-07 14:08:57,776 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread End.....
+2020-12-07 14:08:57,788 ERROR weaver.system.HtmlFieldToClob  - isrun:1
+2020-12-07 14:08:57,789 ERROR weaver.system.HtmlFieldToClob  - isrun1:1
+2020-12-07 14:08:57,798 ERROR weaver.conn.RecordSet  - WFVersionAdd insert Waiting...
+2020-12-07 14:08:58,187 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息...
+2020-12-07 14:08:58,361 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息成功...
+2020-12-07 14:08:59,600 INFO  weaver.general.InitServer  - end.....
+2020-12-07 14:08:59,835 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun:1
+2020-12-07 14:08:59,835 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun1:1
+2020-12-07 14:09:02,922 ERROR weaver.page.PageManager  - 清空二维码扫描缓存记录表
+2020-12-07 14:09:04,969 ERROR weaver.cpt.util.CptInitManager  - weaver.cpt.util.CptInitManager is running start...
+2020-12-07 14:09:05,005 ERROR weaver.formmode.cuspage.cpt.CptGenmenu4mode  - weaver.formmode.cuspage.cpt.CptGenmenu4mode is running start...
+2020-12-07 14:09:05,045 ERROR weaver.formmode.cuspage.cpt.CptGenmenu4mode  - weaver.formmode.cuspage.cpt.CptGenmenu4mode is running end...
+2020-12-07 14:09:05,063 ERROR weaver.cpt.util.CptInitManager  - weaver.cpt.util.CptInitManager is running end...
+2020-12-07 14:09:10,153 ERROR org.directwebremoting.util.LogErrorHandler  - Line=52 Element type "filter" must be declared.
+2020-12-07 14:09:10,154 ERROR org.directwebremoting.util.LogErrorHandler  - Line=53 The content of element type "allow" must match "(create|convert)*".
+2020-12-07 14:09:10,736 ERROR weaver.conn.RecordSet  - select t1.* from  uf_zzzxx t1 where t1.formmodeid=50  and ( DATEDIFF(ss,t1.jzrq+' '+'23:55:50',getDate())>=(-1*60*60*24*30) and DATEDIFF(ss, CONVERT(varchar(10), GETDATE(), 120) +' '+'00:00:00',t1.jzrq+' '+'23:55:50')>=(-1*60*60*24*30) and t1.jzrq is not null and t1.jzrq<> '' )  and not exists(select 1 from mode_reminddata_all t2 where t2.remindjobid=1 and t2.billid=t1.id and lastdate= CONVERT(varchar(10), GETDATE(), 120)  and isnull(isRemindWorkflow,0)=1 )
+2020-12-07 14:09:10,751 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: datediff 函数导致溢出。用于分隔两个日期/时间实例的日期部分的数字太大。请尝试使用日期部分精度较低的 datediff。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:196)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet$FetchBuffer.nextRow(SQLServerResultSet.java:4700)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.fetchBufferNext(SQLServerResultSet.java:1683)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.next(SQLServerResultSet.java:956)
+	at weaver.conn.RecordSet.parseResultSet(RecordSet.java:1656)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:916)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.formmode.task.action.TaskAction.doRemind(TaskAction.java:247)
+	at weaver.formmode.task.action.WorkflowMessageTaskAction.doIt(WorkflowMessageTaskAction.java:33)
+	at weaver.formmode.task.action.TaskAction.execute(TaskAction.java:34)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:529)
+2020-12-07 14:09:12,435 ERROR weaver.system.MonitorThreadManager  - >>>>MonitorThreadManager>>单独的预警关闭控制：isThreadWarningStart(zt)=0<<<<
+2020-12-07 14:09:12,681 ERROR weaver.general.BaseBean  - 初始化微信推送扫描线程成功，扫描间隔1分钟---------
+2020-12-07 14:09:18,852 INFO  weaver.filter.SecurityFilter  - Initializing filter 'SecurityFilter'
+2020-12-07 14:09:25,208 INFO  weaver.filter.SecurityFilter  - Filter 'SecurityFilter' configured successfully
+2020-12-07 14:09:25,226 ERROR weaver.general.BaseBean  - log4j reset thread start success...
+2020-12-07 14:09:25,715 INFO  weaver.filter.XssFilter  - Initializing filter 'XssFilter'
+2020-12-07 14:09:25,726 INFO  weaver.filter.XssFilter  - Filter 'XssFilter' configured successfully
+2020-12-07 14:09:26,212 ERROR weaver.general.BaseBean  - ------是否开启字符转码----0---是否开启sql参数化解析-----0----nativepool----ecology
+2020-12-07 14:09:26,250 ERROR weaver.general.BaseBean  - ExecuteSqlLogger start log write to file thread success...
+2020-12-07 14:10:00,109 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20201207141000&sign=845abf3aeae7700469838839df20e548
+2020-12-07 14:10:01,137 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料备货数据job成功了！ 
+2020-12-07 14:10:01,137 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 辅料申请开始！ 
+2020-12-07 14:10:01,137 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_out?key=oa@mail.com&timestamp=20201207141000&sign=845abf3aeae7700469838839df20e548
+2020-12-07 14:10:01,160 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-辅料申请数据job成功了！ 
+2020-12-07 14:10:01,161 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请1开始！ 
+2020-12-07 14:10:01,161 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_out?key=oa@mail.com&timestamp=20201207141000&sign=845abf3aeae7700469838839df20e548
+2020-12-07 14:10:01,258 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请数据job成功了！ 
+2020-12-07 14:10:01,258 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标申请2开始！ 
+2020-12-07 14:10:01,258 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_out?key=oa@mail.com&timestamp=20201207141000&sign=845abf3aeae7700469838839df20e548
+2020-12-07 14:10:01,288 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-12-07 14:10:01,288 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货开始！ 
+2020-12-07 14:10:01,289 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fake_in?key=oa@mail.com&timestamp=20201207141000&sign=845abf3aeae7700469838839df20e548
+2020-12-07 14:10:01,315 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪标备货数据job成功了！ 
+2020-12-07 14:10:01,316 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 防伪标备货2开始！ 
+2020-12-07 14:10:01,316 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/fakenum_in?key=oa@mail.com&timestamp=20201207141000&sign=845abf3aeae7700469838839df20e548
+2020-12-07 14:10:01,344 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 获取ERP-防伪申请2数据job成功了！ 
+2020-12-07 14:33:12,477 ERROR weaver.general.BaseBean  - ------是否开启字符转码----0---是否开启sql参数化解析-----0----nativepool----ecology
+2020-12-07 14:33:12,898 ERROR weaver.general.BaseBean  - ExecuteSqlLogger start log write to file thread success...
+2020-12-07 14:33:12,943 INFO  weaver.common.SystemInitialized  - System Initialized OK.
+2020-12-07 14:33:13,536 INFO  weaver.general.InitServer  - System Init Message:mainControlIp= localIp:[192.168.56.1, 192.168.97.232]
+2020-12-07 14:33:13,536 INFO  weaver.general.InitServer  - init ioc container...
+2020-12-07 14:33:16,536 ERROR com.weaver.upgrade.FunctionUpgrade  - OS.name+++++++++++++++++++++:Windows 10
+2020-12-07 14:33:16,537 ERROR com.weaver.upgrade.FunctionUpgrade  - srcfilePath+++++++++++++++++++++:D:\WEAVER\ecology\upgrade\src
+2020-12-07 14:33:16,538 ERROR com.weaver.upgrade.FunctionUpgrade  - 本地Ip++++++++++：192.168.56.1
+2020-12-07 14:33:16,539 ERROR com.weaver.upgrade.FunctionUpgrade  - 主节点MainControlIP++++++++++：
+2020-12-07 14:33:16,740 INFO  weaver.general.InitServer  - end ioc container init...
+2020-12-07 14:33:16,741 INFO  weaver.general.InitServer  - SystemUpgrade Start.....
+2020-12-07 14:33:16,754 INFO  weaver.general.InitServer  - SystemUpgrade End.....
+2020-12-07 14:33:16,754 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread Start.....
+2020-12-07 14:33:16,761 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread End.....
+2020-12-07 14:33:17,091 ERROR weaver.conn.RecordSet  - WFVersionAdd insert Waiting...
+2020-12-07 14:33:17,091 ERROR weaver.system.HtmlFieldToClob  - isrun:1
+2020-12-07 14:33:17,094 ERROR weaver.system.HtmlFieldToClob  - isrun1:1
+2020-12-07 14:33:17,267 ERROR weaver.general.BaseBean  - 启动日志压缩线程....
+2020-12-07 14:33:17,488 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息...
+2020-12-07 14:33:17,570 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息成功...
+2020-12-07 14:33:17,835 INFO  weaver.general.InitServer  - end.....
+2020-12-07 14:33:18,688 ERROR weaver.page.PageManager  - 清空二维码扫描缓存记录表
+2020-12-07 14:33:18,890 ERROR weaver.formmode.cuspage.cpt.CptGenmenu4mode  - weaver.formmode.cuspage.cpt.CptGenmenu4mode is running start...
+2020-12-07 14:33:18,892 ERROR weaver.cpt.util.CptInitManager  - weaver.cpt.util.CptInitManager is running start...
+2020-12-07 14:33:18,920 ERROR weaver.formmode.cuspage.cpt.CptGenmenu4mode  - weaver.formmode.cuspage.cpt.CptGenmenu4mode is running end...
+2020-12-07 14:33:19,048 ERROR weaver.cpt.util.CptInitManager  - weaver.cpt.util.CptInitManager is running end...
+2020-12-07 14:33:19,098 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun:1
+2020-12-07 14:33:19,099 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun1:1
+2020-12-07 14:33:20,552 ERROR org.directwebremoting.util.LogErrorHandler  - Line=52 Element type "filter" must be declared.
+2020-12-07 14:33:20,553 ERROR org.directwebremoting.util.LogErrorHandler  - Line=53 The content of element type "allow" must match "(create|convert)*".
+2020-12-07 14:33:22,614 ERROR weaver.conn.RecordSet  - select t1.* from  uf_zzzxx t1 where t1.formmodeid=50  and ( DATEDIFF(ss,t1.jzrq+' '+'23:55:50',getDate())>=(-1*60*60*24*30) and DATEDIFF(ss, CONVERT(varchar(10), GETDATE(), 120) +' '+'00:00:00',t1.jzrq+' '+'23:55:50')>=(-1*60*60*24*30) and t1.jzrq is not null and t1.jzrq<> '' )  and not exists(select 1 from mode_reminddata_all t2 where t2.remindjobid=1 and t2.billid=t1.id and lastdate= CONVERT(varchar(10), GETDATE(), 120)  and isnull(isRemindWorkflow,0)=1 )
+2020-12-07 14:33:22,615 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: datediff 函数导致溢出。用于分隔两个日期/时间实例的日期部分的数字太大。请尝试使用日期部分精度较低的 datediff。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:196)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet$FetchBuffer.nextRow(SQLServerResultSet.java:4700)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.fetchBufferNext(SQLServerResultSet.java:1683)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.next(SQLServerResultSet.java:956)
+	at weaver.conn.RecordSet.parseResultSet(RecordSet.java:1656)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:916)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.formmode.task.action.TaskAction.doRemind(TaskAction.java:247)
+	at weaver.formmode.task.action.WorkflowMessageTaskAction.doIt(WorkflowMessageTaskAction.java:33)
+	at weaver.formmode.task.action.TaskAction.execute(TaskAction.java:34)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:529)
+2020-12-07 14:33:22,919 ERROR weaver.system.MonitorThreadManager  - >>>>MonitorThreadManager>>单独的预警关闭控制：isThreadWarningStart(zt)=0<<<<
+2020-12-07 14:33:23,093 ERROR weaver.general.BaseBean  - 初始化微信推送扫描线程成功，扫描间隔1分钟---------
+2020-12-07 14:33:24,992 INFO  weaver.filter.SecurityFilter  - Initializing filter 'SecurityFilter'
+2020-12-07 14:33:30,915 INFO  weaver.filter.SecurityFilter  - Filter 'SecurityFilter' configured successfully
+2020-12-07 14:33:30,920 ERROR weaver.general.BaseBean  - log4j reset thread start success...
+2020-12-07 14:33:31,210 INFO  weaver.filter.XssFilter  - Initializing filter 'XssFilter'
+2020-12-07 14:33:31,230 INFO  weaver.filter.XssFilter  - Filter 'XssFilter' configured successfully
+2020-12-07 14:33:31,416 ERROR weaver.general.BaseBean  - ------是否开启字符转码----0---是否开启sql参数化解析-----0----nativepool----ecology
+2020-12-07 14:33:31,436 ERROR weaver.general.BaseBean  - ExecuteSqlLogger start log write to file thread success...
+2020-12-07 14:34:43,590 ERROR weaver.general.BaseBean  - ------是否开启字符转码----0---是否开启sql参数化解析-----0----nativepool----ecology
+2020-12-07 14:34:44,092 ERROR weaver.general.BaseBean  - ExecuteSqlLogger start log write to file thread success...
+2020-12-07 14:34:44,143 INFO  weaver.common.SystemInitialized  - System Initialized OK.
+2020-12-07 14:34:44,795 INFO  weaver.general.InitServer  - System Init Message:mainControlIp= localIp:[192.168.56.1, 192.168.97.232]
+2020-12-07 14:34:44,796 INFO  weaver.general.InitServer  - init ioc container...
+2020-12-07 14:34:47,450 ERROR com.weaver.upgrade.FunctionUpgrade  - OS.name+++++++++++++++++++++:Windows 10
+2020-12-07 14:34:47,451 ERROR com.weaver.upgrade.FunctionUpgrade  - srcfilePath+++++++++++++++++++++:D:\WEAVER\ecology\upgrade\src
+2020-12-07 14:34:47,453 ERROR com.weaver.upgrade.FunctionUpgrade  - 本地Ip++++++++++：192.168.56.1
+2020-12-07 14:34:47,453 ERROR com.weaver.upgrade.FunctionUpgrade  - 主节点MainControlIP++++++++++：
+2020-12-07 14:34:47,698 INFO  weaver.general.InitServer  - end ioc container init...
+2020-12-07 14:34:47,699 INFO  weaver.general.InitServer  - SystemUpgrade Start.....
+2020-12-07 14:34:47,713 INFO  weaver.general.InitServer  - SystemUpgrade End.....
+2020-12-07 14:34:47,713 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread Start.....
+2020-12-07 14:34:47,721 INFO  weaver.general.InitServer  - InitServerXMLtoDBThread End.....
+2020-12-07 14:34:48,111 ERROR weaver.conn.RecordSet  - WFVersionAdd insert Waiting...
+2020-12-07 14:34:48,112 ERROR weaver.system.HtmlFieldToClob  - isrun:1
+2020-12-07 14:34:48,138 ERROR weaver.system.HtmlFieldToClob  - isrun1:1
+2020-12-07 14:34:48,322 ERROR weaver.general.BaseBean  - 启动日志压缩线程....
+2020-12-07 14:34:48,549 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息...
+2020-12-07 14:34:48,610 ERROR weaver.conn.RecordSet  - 生成前端JS使用的label信息成功...
+2020-12-07 14:34:48,811 INFO  weaver.general.InitServer  - end.....
+2020-12-07 14:34:49,553 ERROR weaver.page.PageManager  - 清空二维码扫描缓存记录表
+2020-12-07 14:34:49,586 ERROR weaver.cpt.util.CptInitManager  - weaver.cpt.util.CptInitManager is running start...
+2020-12-07 14:34:49,589 ERROR weaver.formmode.cuspage.cpt.CptGenmenu4mode  - weaver.formmode.cuspage.cpt.CptGenmenu4mode is running start...
+2020-12-07 14:34:49,599 ERROR weaver.formmode.cuspage.cpt.CptGenmenu4mode  - weaver.formmode.cuspage.cpt.CptGenmenu4mode is running end...
+2020-12-07 14:34:49,655 ERROR weaver.cpt.util.CptInitManager  - weaver.cpt.util.CptInitManager is running end...
+2020-12-07 14:34:50,153 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun:1
+2020-12-07 14:34:50,153 ERROR weaver.system.WorkflowVersionAdd  - workflowversion isrun1:1
+2020-12-07 14:34:51,332 ERROR org.directwebremoting.util.LogErrorHandler  - Line=52 Element type "filter" must be declared.
+2020-12-07 14:34:51,332 ERROR org.directwebremoting.util.LogErrorHandler  - Line=53 The content of element type "allow" must match "(create|convert)*".
+2020-12-07 14:34:53,157 ERROR weaver.conn.RecordSet  - select t1.* from  uf_zzzxx t1 where t1.formmodeid=50  and ( DATEDIFF(ss,t1.jzrq+' '+'23:55:50',getDate())>=(-1*60*60*24*30) and DATEDIFF(ss, CONVERT(varchar(10), GETDATE(), 120) +' '+'00:00:00',t1.jzrq+' '+'23:55:50')>=(-1*60*60*24*30) and t1.jzrq is not null and t1.jzrq<> '' )  and not exists(select 1 from mode_reminddata_all t2 where t2.remindjobid=1 and t2.billid=t1.id and lastdate= CONVERT(varchar(10), GETDATE(), 120)  and isnull(isRemindWorkflow,0)=1 )
+2020-12-07 14:34:53,159 ERROR weaver.conn.RecordSet  - weaver.conn.RecordSet
+com.microsoft.sqlserver.jdbc.SQLServerException: datediff 函数导致溢出。用于分隔两个日期/时间实例的日期部分的数字太大。请尝试使用日期部分精度较低的 datediff。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:196)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet$FetchBuffer.nextRow(SQLServerResultSet.java:4700)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.fetchBufferNext(SQLServerResultSet.java:1683)
+	at com.microsoft.sqlserver.jdbc.SQLServerResultSet.next(SQLServerResultSet.java:956)
+	at weaver.conn.RecordSet.parseResultSet(RecordSet.java:1656)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:916)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.formmode.task.action.TaskAction.doRemind(TaskAction.java:247)
+	at weaver.formmode.task.action.WorkflowMessageTaskAction.doIt(WorkflowMessageTaskAction.java:33)
+	at weaver.formmode.task.action.TaskAction.execute(TaskAction.java:34)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:529)
+2020-12-07 14:34:53,894 ERROR weaver.system.MonitorThreadManager  - >>>>MonitorThreadManager>>单独的预警关闭控制：isThreadWarningStart(zt)=0<<<<
+2020-12-07 14:34:54,028 ERROR weaver.general.BaseBean  - 初始化微信推送扫描线程成功，扫描间隔1分钟---------
+2020-12-07 14:34:55,988 INFO  weaver.filter.SecurityFilter  - Initializing filter 'SecurityFilter'
+2020-12-07 14:34:59,640 INFO  weaver.filter.SecurityFilter  - Filter 'SecurityFilter' configured successfully
+2020-12-07 14:34:59,647 ERROR weaver.general.BaseBean  - log4j reset thread start success...
+2020-12-07 14:34:59,895 INFO  weaver.filter.XssFilter  - Initializing filter 'XssFilter'
+2020-12-07 14:34:59,909 INFO  weaver.filter.XssFilter  - Filter 'XssFilter' configured successfully
+2020-12-07 14:35:00,039 ERROR com.shxiv.hfwh.rest.http.HttpServiceImpl  - 传入路径： http://rfid.chinabrandsgroup.com.cn:5618/api/acc_in?key=oa@mail.com&timestamp=20201207143500&sign=fbf89bd1f849530b420fab732572e70e
+2020-12-07 14:35:00,097 ERROR weaver.general.BaseBean  - ------是否开启字符转码----0---是否开启sql参数化解析-----0----nativepool----ecology
+2020-12-07 14:35:00,258 ERROR weaver.general.BaseBean  - ExecuteSqlLogger start log write to file thread success...

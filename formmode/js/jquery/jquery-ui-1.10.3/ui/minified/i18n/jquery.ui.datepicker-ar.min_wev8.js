@@ -1,0 +1,4 @@
+﻿/*! jQuery UI - v1.10.3 - 2013-05-03
+* http://jqueryui.com
+* Copyright 2013 jQuery Foundation and other contributors; Licensed MIT */
+jQuery(function(t){t.datepicker.regional.ar={closeText:"廿睾賱丕賯",prevText:"&#x3C;丕賱爻丕亘賯",nextText:"丕賱鬲丕賱賷&#x3E;",currentText:"丕賱賷賵賲",monthNames:["賰丕賳賵賳 丕賱孬丕賳賷","卮亘丕胤","丌匕丕乇","賳賷爻丕賳","賲丕賷賵","丨夭賷乇丕賳","鬲賲賵夭","丌亘","兀賷賱賵賱","鬲卮乇賷賳 丕賱兀賵賱","鬲卮乇賷賳 丕賱孬丕賳賷","賰丕賳賵賳 丕賱兀賵賱"],monthNamesShort:["1","2","3","4","5","6","7","8","9","10","11","12"],dayNames:["丕賱兀丨丿","丕賱丕孬賳賷賳","丕賱孬賱丕孬丕亍","丕賱兀乇亘毓丕亍","丕賱禺賲賷爻","丕賱噩賲毓丞","丕賱爻亘鬲"],dayNamesShort:["丕賱兀丨丿","丕賱丕孬賳賷賳","丕賱孬賱丕孬丕亍","丕賱兀乇亘毓丕亍","丕賱禺賲賷爻","丕賱噩賲毓丞","丕賱爻亘鬲"],dayNamesMin:["丨","賳","孬","乇","禺","噩","爻"],weekHeader:"兀爻亘賵毓",dateFormat:"dd/mm/yy",firstDay:6,isRTL:!0,showMonthAfterYear:!1,yearSuffix:""},t.datepicker.setDefaults(t.datepicker.regional.ar)});

@@ -1,0 +1,393 @@
+<link rel="stylesheet" href=winedit_wev8.css>
+<TITLE>Properties API</TITLE>
+<BR>
+<P CLASS=DE>
+	<B>Hint</B>
+	<BR><BR>
+    WinLIKE-Windows also can be defined without the visual editor. Code can also be written manually. The following tips should help you.
+</P>
+<P CLASS=DE>
+	<B>Declaration</B>
+	<BR><BR>
+  All windows that should be used on a WinLIKE-Site have to be defined in the WinLIKE.definewindows function, e.g. <i>mydefs()</i>. 
+  Before you edit that function in an own HTML-page, please do not forget to include the necessary WinLIKE resources and body events!
+</P>
+<P CLASS=DE>
+	<B>Properties</B>
+	<BR><BR>
+	A window will be created by including the following lines within the mydefs-function:
+	<BR><BR>
+	var j=new WinLIKE.window('<I>Title</I>',<I>PosLeft</I>,<I>PosTop</I>,<I>Width</I>,<I>Height</I>,<I>z-Index</I>);
+	<BR>
+	j.<I>Attribute</I>=<I>Value</I>;
+	<BR>
+	...
+	<BR>
+	WinLIKE.addwindow(j);
+	<BR>
+	<BR><BR>
+	The positioning and size details are measured in pixel. The size of a window refers to the window size 
+	without the skin, i.e.  just the space that can be filled with content. 
+	<BR><BR>
+  The specific properties can be inserted between the first and the last line. If these are omitted, default 
+  values taken from the following table will be used. You will find detailed explanations of the different 
+  properties in the properties window of the editor with a click on the grey arrows. 
+	<BR><BR>
+  An attribute declared with an underline instead of the dot (eg. _Ski or _onEvent) will be used for all windows (see the source of <A HREF="../../12_sample_skins.html" NAME=WLoff_ TARGET=sample>12_sample_skins.html</A>).
+</P>
+<P CLASS=DE>
+	<TABLE>
+	  	<TR>
+    			<TD CLASS=DE width=10%><B>Attribute</B></TD>
+    			<TD CLASS=DE><B>Meaning</B></TD>
+    			<TD CLASS=DE width=10%><B>Type</B></TD>
+    			<TD CLASS=DE width=10%><B>Default</B></TD>
+    			<TD CLASS=DE width=10%><B>_Default</B></TD>
+    			<TD CLASS=DE width=10%><B>GUI</B></TD>
+    			<TD CLASS=DE width=10%><B>Designtime</B></TD>
+    			<TD CLASS=DE><B>Runtime</B></TD>
+  		</TR>
+	  	<TR>
+    			<TD CLASS=DE>Ttl</TD>
+    			<TD CLASS=DE>title of the window</TD>
+    			<TD CLASS=DE>string</TD>
+    			<TD CLASS=DE>null</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>param</TD>
+    			<TD CLASS=DE>r/w</TD>
+  		</TR>
+	  	<TR>
+    			<TD CLASS=DE>Left</TD>
+    			<TD CLASS=DE>position of the window</TD>
+    			<TD CLASS=DE>number</TD>
+    			<TD CLASS=DE>90</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>implicit</TD>
+    			<TD CLASS=DE>param</TD>
+    			<TD CLASS=DE>r/w</TD>
+  		</TR>
+	  	<TR>
+    			<TD CLASS=DE>Top</TD>
+    			<TD CLASS=DE>position of the window</TD>
+    			<TD CLASS=DE>number</TD>
+    			<TD CLASS=DE>90</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>implicit</TD>
+    			<TD CLASS=DE>param</TD>
+    			<TD CLASS=DE>r/w</TD>
+  		</TR>
+	  	<TR>
+    			<TD CLASS=DE>Width</TD>
+    			<TD CLASS=DE>size of the window</TD>
+    			<TD CLASS=DE>number</TD>
+    			<TD CLASS=DE>240</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>implicit</TD>
+    			<TD CLASS=DE>param</TD>
+    			<TD CLASS=DE>r/w</TD>
+  		</TR>
+	  	<TR>
+    			<TD CLASS=DE>Height</TD>
+    			<TD CLASS=DE>size of the window</TD>
+    			<TD CLASS=DE>number</TD>
+    			<TD CLASS=DE>240</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>implicit</TD>
+    			<TD CLASS=DE>param</TD>
+    			<TD CLASS=DE>r/w</TD>
+  		</TR>
+	  	<TR>
+    			<TD CLASS=DE>RLeft</TD>
+    			<TD CLASS=DE>relative position to browser</TD>
+    			<TD CLASS=DE>string</TD>
+    			<TD CLASS=DE>null</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>no</TD>
+    			<TD CLASS=DE>param</TD>
+    			<TD CLASS=DE>r/w</TD>
+  		</TR>
+	  	<TR>
+    			<TD CLASS=DE>RTop</TD>
+    			<TD CLASS=DE>relative position to browser</TD>
+    			<TD CLASS=DE>string</TD>
+    			<TD CLASS=DE>null</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>no</TD>
+    			<TD CLASS=DE>param</TD>
+    			<TD CLASS=DE>r/w</TD>
+  		</TR>
+	  	<TR>
+    			<TD CLASS=DE>RWidth</TD>
+    			<TD CLASS=DE>relative size to browser</TD>
+    			<TD CLASS=DE>string</TD>
+    			<TD CLASS=DE>null</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>no</TD>
+    			<TD CLASS=DE>param</TD>
+    			<TD CLASS=DE>r/w</TD>
+  		</TR>  		
+	  	<TR>
+    			<TD CLASS=DE>RHeight</TD>
+    			<TD CLASS=DE>relative size to browser</TD>
+    			<TD CLASS=DE>string</TD>
+    			<TD CLASS=DE>null</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>no</TD>
+    			<TD CLASS=DE>param</TD>
+    			<TD CLASS=DE>r/w</TD>
+  		</TR>
+  		
+  		
+	  	<TR>
+    			<TD CLASS=DE>Ski</TD>
+    			<TD CLASS=DE>window design (skin)</TD>
+    			<TD CLASS=DE>string</TD>
+    			<TD CLASS=DE>'default'</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>r/w</TD>
+  		</TR>
+	  	<TR>
+    			<TD CLASS=DE>Adr</TD>
+    			<TD CLASS=DE>content address</TD>
+    			<TD CLASS=DE>string</TD>
+    			<TD CLASS=DE>null</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>read only</TD>
+  		</TR>
+	  	<TR>
+    			<TD CLASS=DE>Nam</TD>
+    			<TD CLASS=DE>target name</TD>
+    			<TD CLASS=DE>string</TD>
+    			<TD CLASS=DE>null</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>read only</TD>
+  		</TR>
+	  	<TR>
+    			<TD CLASS=DE>Fro</TD>
+    			<TD CLASS=DE>always in front</TD>
+    			<TD CLASS=DE>boolean</TD>
+    			<TD CLASS=DE>false</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>r/w</TD>
+  		</TR>
+	  	<TR>
+    			<TD CLASS=DE>Vis</TD>
+    			<TD CLASS=DE>visibility</TD>
+    			<TD CLASS=DE>boolean</TD>
+    			<TD CLASS=DE>true</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>r/w</TD>
+  		</TR>
+	  	<TR>
+    			<TD CLASS=DE>Tit</TD>
+    			<TD CLASS=DE>titlebar visibility</TD>
+    			<TD CLASS=DE>boolean</TD>
+    			<TD CLASS=DE>true</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>r/w</TD>
+  		</TR>
+	  	<TR>
+    			<TD CLASS=DE>Min</TD>
+    			<TD CLASS=DE>min./max. icon visibility</TD>
+    			<TD CLASS=DE>boolean</TD>
+    			<TD CLASS=DE>true</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>r/w</TD>
+  		</TR>
+	  	<TR>
+    			<TD CLASS=DE>Cls</TD>
+    			<TD CLASS=DE>close icon visibility</TD>
+    			<TD CLASS=DE>boolean</TD>
+    			<TD CLASS=DE>true</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>r/w</TD>
+  		</TR>
+	  	<TR>
+    			<TD CLASS=DE>Mov</TD>
+    			<TD CLASS=DE>moveable</TD>
+    			<TD CLASS=DE>boolean</TD>
+    			<TD CLASS=DE>true</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>r/w</TD>
+  		</TR>
+	  	<TR>
+    			<TD CLASS=DE>Siz</TD>
+    			<TD CLASS=DE>resizeable</TD>
+    			<TD CLASS=DE>boolean</TD>
+    			<TD CLASS=DE>true</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>r/w</TD>
+  		</TR>
+	 	<TR>
+    			<TD CLASS=DE>Mn</TD>
+    			<TD CLASS=DE>minimized</TD>
+    			<TD CLASS=DE>boolean</TD>
+    			<TD CLASS=DE>false</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>no</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>r/w</TD>
+  		</TR>
+	 	<TR>
+    			<TD CLASS=DE>Mx</TD>
+    			<TD CLASS=DE>maximized</TD>
+    			<TD CLASS=DE>boolean</TD>
+    			<TD CLASS=DE>false</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>no</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>r/w</TD>
+	  	<TR>
+    			<TD CLASS=DE>Ed</TD>
+    			<TD CLASS=DE>editable in the editor</TD>
+    			<TD CLASS=DE>boolean</TD>
+    			<TD CLASS=DE>true</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>no</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>r/w</TD>
+  		</TR>
+	  	<TR>
+    			<TD CLASS=DE>SD</TD>
+    			<TD CLASS=DE>reload symbol visible</TD>
+    			<TD CLASS=DE>boolean</TD>
+    			<TD CLASS=DE>true</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>no</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>r/w</TD>
+  		</TR>
+	  	<TR>
+    			<TD CLASS=DE>LD</TD>
+    			<TD CLASS=DE>Deeplink visible</TD>
+    			<TD CLASS=DE>boolean</TD>
+    			<TD CLASS=DE>true</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>no</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>r/w</TD>
+  		</TR>
+	  	<TR>
+    			<TD CLASS=DE>HD</TD>
+    			<TD CLASS=DE>History buttons visible</TD>
+    			<TD CLASS=DE>boolean</TD>
+    			<TD CLASS=DE>true</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>no</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>r/w</TD>
+  		</TR>  		
+	  	<TR>
+    			<TD CLASS=DE>Bac</TD>
+    			<TD CLASS=DE>never changes its z-Index</TD>
+    			<TD CLASS=DE>boolean</TD>
+    			<TD CLASS=DE>false</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>no</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>r/w</TD>
+  		</TR>
+	  	<TR>
+    			<TD CLASS=DE>Rel</TD>
+    			<TD CLASS=DE>relative/absolute behavior</TD>
+    			<TD CLASS=DE>boolean</TD>
+    			<TD CLASS=DE><I>different</I></TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>no</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>r/w</TD>
+  		</TR>
+	  	<TR>
+    			<TD CLASS=DE>Del</TD>
+    			<TD CLASS=DE>deleted (not created)</TD>
+    			<TD CLASS=DE>boolean</TD>
+    			<TD CLASS=DE><I>different</I></TD>
+    			<TD CLASS=DE>no</TD>
+    			<TD CLASS=DE>no</TD>
+    			<TD CLASS=DE>no</TD>
+    			<TD CLASS=DE>read only</TD>
+  		</TR>
+	  	<TR>
+    			<TD CLASS=DE>Bg</TD>
+    			<TD CLASS=DE>background window</TD>
+    			<TD CLASS=DE>boolean</TD>
+    			<TD CLASS=DE>false</TD>
+    			<TD CLASS=DE>no</TD>
+    			<TD CLASS=DE>no</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>r/w</TD>
+  		</TR>
+  		
+  		
+	  	<TR>
+    			<TD CLASS=DE>onUnload</TD>
+    			<TD CLASS=DE>content function definition</TD>
+    			<TD CLASS=DE>string</TD>
+    			<TD CLASS=DE>null</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>no</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>r/w</TD>
+  		</TR>
+	  	<TR>
+    			<TD CLASS=DE>onClose</TD>
+    			<TD CLASS=DE>content function definition</TD>
+    			<TD CLASS=DE>string</TD>
+    			<TD CLASS=DE>null</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>no</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>r/w</TD>
+  		</TR>
+	  	<TR>
+    			<TD CLASS=DE>onEvent</TD>
+    			<TD CLASS=DE>root function definition</TD>
+    			<TD CLASS=DE>string</TD>
+    			<TD CLASS=DE>null</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>no</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>r/w</TD>
+  		</TR>
+	  	<TR>
+    			<TD CLASS=DE>myP</TD>
+    			<TD CLASS=DE>customizable property</TD>
+    			<TD CLASS=DE>undefined</TD>
+    			<TD CLASS=DE>undefined</TD>
+    			<TD CLASS=DE>undefined</TD>
+    			<TD CLASS=DE>no</TD>
+    			<TD CLASS=DE>yes</TD>
+    			<TD CLASS=DE>r/w</TD>
+  		</TR>
+	</TABLE>
+</P>
+
+
+<P CLASS=DE>
+	<B>
+		Please don't use other internal properties, functions or variables, because they change from one WinLIKE version to another.
+	</B>
+</P>
+<BR>
+</BODY>

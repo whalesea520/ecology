@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formui>
+	<template enable="true" name="" url="/mobilemode/images/mec/14053913509871794741123" crname="系统管理员" crdate="2014-09-03">
+		<content><![CDATA[
+				<ul class=" list-paddingleft-2" data-role="listview" data-inset="true" data-filter-placeholder="查询..." data-filter="true">
+				    <li>
+				        <table width="100%" data-sort="sortDisabled">
+							<tr class="firstRow">
+			                    <td width="80" valign="top" style="vertical-align: middle; -ms-word-break: break-all;">
+			                        <input id="$field0$" style="HEIGHT: 21px;width:80px;" class="label" value="[可编辑]这里是图片字段" name="field0" fieldid="0" />
+			                    </td>
+			                    <td valign="top" style="vertical-align: middle; -ms-word-break: break-all;">
+			                        <strong><input id="$field0$" style="HEIGHT: 21px;width:140px;" class="label" value="[可编辑]这里是主标题字段" name="field0" fieldid="0" /></strong>
+									<input id="$field0$" style="HEIGHT: 21px;width:140px;" class="label" value="[可编辑]这里是其他信息字段" name="field0" fieldid="0" />
+								</td>
+			                </tr>
+				        </table>
+				    </li>
+				</ul>
+		]]></content>
+	</template>
+</formui>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEC>
+	<id>Weather</id>	<!-- id 插件唯一标识 -->
+	<text>128138</text>  <!-- 天气 -->
+	<type>1</type>	<!-- 类型，方便对插件进行区分，目前已有：1.普通功能插件，2.表单插件 -->
+	<isEnabled>1</isEnabled>	<!-- 是否启用，1或者不填写为启用，0或者其他非1值为禁用 -->
+	<order>43</order>	<!-- 插件显示顺序，值越小则显示越靠前，不填写或者无此标签将为整数的最大值 -->
+	
+	<!-- 插件设计信息配置 -->
+	<design>
+		<unique>0</unique> <!-- 是否唯一，如果值为1则在自定义页面设计时一个页面最多只能添加一个这种控件，不为1或者不填写此属性则没有此限制 -->
+		<resources>	<!-- 依赖资源 -->
+			<resource type="js">/mobilemode/js/mec/handler/Weather_wev8.js</resource>
+			<resource type="js">/mobilemode/js/mec/run/Weather_wev8.js</resource>
+			<resource type="js">/mobilemode/js/mec/run/WeatherCityCode_wev8.js</resource>
+			<resource type="css">/mobilemode/css/mec/handler/Weather_wev8.css</resource>
+			<resource type="css">/mobilemode/css/mec/run/Weather_wev8.css</resource>
+		</resources>
+	</design>
+	
+	<!-- 插件运行信息配置 -->
+	<run java="com.weaver.formmodel.mobile.mec.handler.Weather">
+		<resources>	<!-- 依赖资源 -->
+			<resource type="js">/mobilemode/js/mec/run/Weather_wev8.js</resource>
+			<resource type="js">/mobilemode/js/mec/run/WeatherCityCode_wev8.js</resource>
+			<resource type="css">/mobilemode/css/mec/run/Weather_wev8.css</resource>
+		</resources>
+	</run>
+	
+	<!-- 内容模板 -->
+	<contentTemplate>
+		<![CDATA[
+			<div class="weatherContainer" id="weatherContainer_${theId}" >
+				<div class="top"> <img id="big_${theId}" src="/mobilemode/images/weathericon/Sun.png" alt=""> 
+					<p id="deg_${theId}" class="text deg"></p>
+					<input class="text" type="text" id="weathercity_${theId}" name="weathercity_${theId}" value="${city}">
+				</div>
+			    <div class="bot">
+				    <ul>
+					    <li><h1 id="forecast0_${theId}"></h1><img id="forecastimg0_${theId}" src=""></img><p id="forecastdeg0_${theId}"></p></li>
+					    <li><h1 id="forecast1_${theId}"></h1><img id="forecastimg1_${theId}" src=""></img><p id="forecastdeg1_${theId}"></p></li>
+					    <li><h1 id="forecast2_${theId}"></h1><img id="forecastimg2_${theId}" src=""></img><p id="forecastdeg2_${theId}"></p></li>
+					    <li><h1 id="forecast3_${theId}"></h1><img id="forecastimg3_${theId}" src=""></img><p id="forecastdeg3_${theId}"></p></li>
+				   </ul> 
+			   </div> 
+			</div>
+		]]>
+	</contentTemplate>
+</MEC>

@@ -1,0 +1,62 @@
+delete from HtmlLabelIndex where id=82524 
+/
+delete from HtmlLabelInfo where indexid=82524 
+/
+INSERT INTO HtmlLabelIndex values(82524,'获取异常') 
+/
+INSERT INTO HtmlLabelInfo VALUES(82524,'获取异常',7) 
+/
+INSERT INTO HtmlLabelInfo VALUES(82524,'Catch Error',8) 
+/
+INSERT INTO HtmlLabelInfo VALUES(82524,'获取异常',9) 
+/
+INSERT INTO HtmlLabelInfo VALUES(82524,'获取异常',10) 
+/
+delete from HtmlLabelIndex where id=32072 
+/
+delete from HtmlLabelInfo where indexid=32072 
+/
+INSERT INTO HtmlLabelIndex values(32072,'MAC地址') 
+/
+INSERT INTO HtmlLabelInfo VALUES(32072,'MAC地址',7) 
+/
+INSERT INTO HtmlLabelInfo VALUES(32072,'MAC address',8) 
+/
+INSERT INTO HtmlLabelInfo VALUES(32072,'MAC地址',9) 
+/
+delete from HtmlLabelIndex where id=32513 
+/
+delete from HtmlLabelInfo where indexid=32513 
+/
+INSERT INTO HtmlLabelIndex values(32513,'登录失败！') 
+/
+INSERT INTO HtmlLabelInfo VALUES(32513,'登录失败！',7) 
+/
+INSERT INTO HtmlLabelInfo VALUES(32513,'Login failed!',8) 
+/
+INSERT INTO HtmlLabelInfo VALUES(32513,'登錄失敗！',9) 
+/
+delete from HtmlLabelIndex where id=32430 
+/
+delete from HtmlLabelInfo where indexid=32430 
+/
+INSERT INTO HtmlLabelIndex values(32430,'是否绑定MAC地址') 
+/
+INSERT INTO HtmlLabelInfo VALUES(32430,'是否绑定MAC地址',7) 
+/
+INSERT INTO HtmlLabelInfo VALUES(32430,'Whether binding MAC address',8) 
+/
+INSERT INTO HtmlLabelInfo VALUES(32430,'是否綁定MAC地址',9) 
+/
+delete from HtmlLabelIndex where id=34276 
+/
+delete from HtmlLabelInfo where indexid=34276 
+/
+INSERT INTO HtmlLabelIndex values(34276,'该电脑未授权') 
+/
+INSERT INTO HtmlLabelInfo VALUES(34276,'该电脑未授权',7) 
+/
+INSERT INTO HtmlLabelInfo VALUES(34276,'This Computer is not unauthorized',8) 
+/
+INSERT INTO HtmlLabelInfo VALUES(34276,'該電腦未授權',9) 
+/

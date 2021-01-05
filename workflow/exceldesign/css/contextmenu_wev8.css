@@ -1,0 +1,120 @@
+.b-m-mpanel {
+    background: #F0F0F0 url(images/contextmenu/menu_bg_wev8.gif) left repeat-y;
+    border: 1px solid #718BB7;
+    padding: 2px 0;
+    position: absolute;
+    z-index: 99997;
+    left:0px;
+    top:0px;
+}
+.b-m-split {
+    height: 6px;
+    background: url(images/contextmenu/m_splitLine_wev8.gif) center repeat-x;
+    font-size: 0px;
+    margin: 0 2px;
+}
+.b-m-item, .b-m-idisable
+{
+    padding: 4px 2px;
+    margin: 0 2px 0 3px;
+    cursor: normal;
+    line-height:100%;
+}
+.b-m-idisable
+{
+    color:#808080;
+}
+.b-m-ibody, .b-m-arrow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+.b-m-arrow {
+    background: url(images/contextmenu/m_arrow_wev8.gif) right  no-repeat;
+}
+.b-m-idisable .b-m-arrow
+{
+    background:none;
+}
+.b-m-item img, .b-m-ifocus img, .b-m-idisable img {
+    margin-right: 8px;
+}
+.b-m-ifocus {
+    background: url(images/contextmenu/m_item_wev8.gif) repeat-x bottom;
+    border: 1px solid #AACCF6;
+    padding: 3px 1px ;
+    margin: 0 2px 0 3px;
+    cursor: normal;
+    line-height:100%;
+}
+.b-m-idisable img {
+    visibility:hidden;
+}
+.contextMenu {
+	position: absolute; z-index: 999; border: 1px solid #d9d9d9;
+	padding: 0px; margin: 0px; display: none;
+	background:#fafafa;width:130px;
+}
+.contextMenu li {
+	list-style: none; padding: 0px; position: relative; white-space: nowrap;
+	line-height: 24px; height: 24px; cursor: pointer;
+	color: #464646;
+}
+.contextSplit
+{
+	border-top: solid 1px #d9d9d9;
+	top: 5px;
+	position: relative;
+}
+.contextMenu li .icon { margin: 4px; }
+.icon-triangle-1-e {
+	background-position: -32px -16px;
+}
+.icon {
+	overflow: hidden;
+	float: left;
+	width: 16px;
+	height: 16px;
+	background-image: url(/js/jquery/ui/images/ui-icons_888888_256x240_wev8.png);
+}
+.rmenucut{background-image: url(/workflow/exceldesign/image/rightBtn/cut_wev8.png);}
+.rmenucopy{background-image: url(/workflow/exceldesign/image/rightBtn/copy_wev8.png);}
+.rmenupaste{background-image: url(/workflow/exceldesign/image/rightBtn/paste_wev8.png);}
+.rmenupro{background-image: url(/workflow/exceldesign/image/rightBtn/pro_wev8.png);}
+.rmenuinsert{background-image: url(/workflow/exceldesign/image/rightBtn/insert_wev8.png);}
+.rmenudel{background-image: url(/workflow/exceldesign/image/rightBtn/delete_wev8.png);}
+.rmenuinsertrow{background-image: url(/workflow/exceldesign/image/shortBtn/format/rowInsert_wev8.png);}
+.rmenuinsertcol{background-image: url(/workflow/exceldesign/image/shortBtn/format/colInsert_wev8.png);}
+.rmenudelrow{background-image: url(/workflow/exceldesign/image/shortBtn/format/rowDelete_wev8.png);}
+.rmenudelcol{background-image: url(/workflow/exceldesign/image/shortBtn/format/colDelete_wev8.png);}
+.rmenucleanc{background-image: url(/workflow/exceldesign/image/rightBtn/cleanc_wev8.png);}
+.rmenudetail{background-image: url(/workflow/exceldesign/image/rightBtn/detail_wev8.png);}
+.rmenuindetail{background-image: url(/workflow/exceldesign/image/rightBtn/indetail_wev8.png);}
+.rmenucleans{background-image: url(/workflow/exceldesign/image/rightBtn/cleans_wev8.png);}
+.rmenurh{background-image: url(/workflow/exceldesign/image/rightBtn/rowheight_wev8.png);}
+.rmenucw{background-image: url(/workflow/exceldesign/image/rightBtn/colwidth_wev8.png);}
+.rmenuread{background-image: url(/workflow/exceldesign/image/rightBtn/readonly_wev8.png);}
+.rmenuedit{background-image: url(/workflow/exceldesign/image/rightBtn/edit_wev8.png);}
+.rmenurequired{background-image: url(/workflow/exceldesign/image/rightBtn/required_wev8.png);}
+.rmenuedit2{background-image: url(/workflow/exceldesign/image/rightBtn/edit2_wev8.png);}
+.rmenutab{background-image: url(/workflow/exceldesign/image/rightBtn/tabsmall_wev8.png);}
+.rmenumoveup{background-image: url(/workflow/exceldesign/image/rightBtn/moveup_wev8.png);}
+.rmenumovedown{background-image: url(/workflow/exceldesign/image/rightBtn/movedown_wev8.png);}
+.rmenuattr{background-image: url(/workflow/exceldesign/image/rightBtn/cusattr_wev8.png);}
+.rmodifyname{background-image: url(/workflow/exceldesign/image/rightBtn/modifyname_wev8.png);}
+.rdeletetab{background-image: url(/workflow/exceldesign/image/rightBtn/deletetab_wev8.png);}
+.rsetdefault{background-image: url(/workflow/exceldesign/image/rightBtn/setdefault_wev8.png);}
+.rmovefront{background-image: url(/workflow/exceldesign/image/rightBtn/movefront_wev8.png);}
+.rmovebehind{background-image: url(/workflow/exceldesign/image/rightBtn/movebehind_wev8.png);}
+.rmostfront{background-image: url(/workflow/exceldesign/image/rightBtn/mostfront_wev8.png);}
+.rmostbehind{background-image: url(/workflow/exceldesign/image/rightBtn/mostbehind_wev8.png);}
+.rmenuportal{background-image: url(/workflow/exceldesign/image/rightBtn/portal_wev8.png);}
+
+.contextMenu span.title { margin-left: 12px; }
+.contextMenu li ul {
+	position: absolute; display: none; padding: 0px; margin: 0px;
+	border: 1px solid #d9d9d9; z-index: 999;
+	background:#fafafa
+}
+.contextMenu li.hover { color: #464646; background-color: #e8e8e8; }
+.contextMenu li.disabled { color: #AAA; cursor: default; background-color: transparent; }

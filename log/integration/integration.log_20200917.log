@@ -1,0 +1,83 @@
+2020-09-17 09:12:03,081 INFO  [Thread:Thread-23] weaver.general.InitServerXMLtoDBThread.checkEndUpgrade() - 升级进行中,sleep...
+2020-09-17 09:12:04,112 INFO  [Thread:Thread-23] weaver.general.InitServerXMLtoDBThread.run() - 升级完成，执行 InitServiceXMLtoDB ...
+2020-09-17 09:12:04,191 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initDB() - 创建表：INITSERVICEXMLSTATE ……
+2020-09-17 09:12:04,731 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(INITSERVICEXMLSTATE) exist
+2020-09-17 09:12:04,872 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(INITSERVICEXMLSTATE) exist
+2020-09-17 09:12:04,981 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (INITSERVICEXMLSTATE.E8CLEAR) exist
+2020-09-17 09:12:04,981 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(INITSERVICEXMLSTATE) exist
+2020-09-17 09:12:05,013 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (INITSERVICEXMLSTATE.SMS) exist
+2020-09-17 09:12:05,013 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(INITSERVICEXMLSTATE) exist
+2020-09-17 09:12:05,013 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (INITSERVICEXMLSTATE.CHECKERRORDATA) exist
+2020-09-17 09:12:05,013 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(INITSERVICEXMLSTATE) exist
+2020-09-17 09:12:05,028 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (INITSERVICEXMLSTATE.XMLINITTODB) exist
+2020-09-17 09:12:05,028 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initDB() - 创建表：DATASOURCESETTING ……
+2020-09-17 09:12:05,044 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(DATASOURCESETTING) exist
+2020-09-17 09:12:05,044 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initDB() - 创建表：SCHEDULESETTING ……
+2020-09-17 09:12:05,059 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(SCHEDULESETTING) exist
+2020-09-17 09:12:05,059 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initDB() - 创建表：SMSPROPERTIS ……
+2020-09-17 09:12:05,059 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(SMSPROPERTIS) exist
+2020-09-17 09:12:05,059 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(actionsettingdetail) exist
+2020-09-17 09:12:05,091 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (actionsettingdetail.isdatasource) exist
+2020-09-17 09:12:05,091 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(datashowset) exist
+2020-09-17 09:12:05,153 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (datashowset.searchByName) exist
+2020-09-17 09:12:05,169 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (datashowset.customid) exist
+2020-09-17 09:12:05,169 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(SCHEDULESETTING) exist
+2020-09-17 09:12:05,200 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (SCHEDULESETTING.createdate) exist
+2020-09-17 09:12:05,200 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(SCHEDULESETTING) exist
+2020-09-17 09:12:05,231 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (SCHEDULESETTING.createtime) exist
+2020-09-17 09:12:05,231 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(SCHEDULESETTING) exist
+2020-09-17 09:12:05,247 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (SCHEDULESETTING.modifydate) exist
+2020-09-17 09:12:05,247 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistTable() - table(SCHEDULESETTING) exist
+2020-09-17 09:12:05,247 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.notExistField() - filed (SCHEDULESETTING.modifytime) exist
+2020-09-17 09:12:05,247 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initCache() - 开始初始化缓存......
+2020-09-17 09:12:05,382 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initCache() - System Init Message:mainControlIp= localIp:[192.168.56.1, 192.168.97.232]
+2020-09-17 09:12:05,382 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initCache() -   初始化计划任务缓存Start ......
+2020-09-17 09:12:05,977 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initCache() -   初始化数据源缓存 ......
+2020-09-17 09:12:06,014 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initCache() -   初始化Action缓存 ......
+2020-09-17 09:12:07,147 ERROR [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initCache() - Action加入缓存异常(com.shxiv.hfwh.workflow.action.HfKhAction)：java.lang.NoClassDefFoundError: com/shxiv/jqkj/workflow/action/ClAction
+2020-09-17 09:12:09,485 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initCache() -   初始化浏览框缓存 ......
+2020-09-17 09:12:09,875 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initCache() -   初始化HR缓存 ......
+2020-09-17 09:12:10,007 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initCache() -   初始化短信缓存 ......
+2020-09-17 09:12:11,770 INFO  [Thread:Thread-23] weaver.servicefiles.BrowserXML.<init>() - BrowserXML init start ....
+2020-09-17 09:12:11,953 INFO  [Thread:Thread-23] weaver.servicefiles.BrowserXML.<init>() - BrowserXML init end ....
+2020-09-17 09:12:11,953 INFO  [Thread:Thread-23] weaver.general.InitServiceXMLtoDB.initCache() - 初始化缓存结束......
+2020-09-17 09:12:12,203 ERROR [Thread:Thread-23] weaver.interfaces.schedule.ScheduleManage.start() - Schedule Cron Job 缓存（schedule.deleteEML）
+2020-09-17 09:12:12,235 ERROR [Thread:Thread-23] weaver.interfaces.schedule.ScheduleManage.start() - Schedule Cron Job 缓存（schedule.Mode4CptCalculateDeprecationJob）
+2020-09-17 09:12:12,235 ERROR [Thread:Thread-23] weaver.interfaces.schedule.ScheduleManage.start() - Schedule Cron Job 缓存（schedule.CptLowInventoryRemindJob）
+2020-09-17 09:12:12,235 ERROR [Thread:Thread-23] weaver.interfaces.schedule.ScheduleManage.start() - Schedule Cron Job 缓存（schedule.Mode4CptDulldaysInventoryRemindJob）
+2020-09-17 09:12:12,235 ERROR [Thread:Thread-23] weaver.interfaces.schedule.ScheduleManage.start() - Schedule Cron Job 缓存（schedule.Mode4CptHighInventoryRemindJob）
+2020-09-17 09:12:12,235 ERROR [Thread:Thread-23] weaver.interfaces.schedule.ScheduleManage.start() - Schedule Cron Job 缓存（schedule.Mode4CptLowInventoryRemindJob）
+2020-09-17 09:12:12,235 ERROR [Thread:Thread-23] weaver.interfaces.schedule.ScheduleManage.start() - Schedule Cron Job 缓存（schedule.HttpServiceImpl）
+2020-09-17 09:12:12,235 ERROR [Thread:Thread-23] weaver.interfaces.schedule.ScheduleManage.start() - Schedule Cron Job 缓存（schedule.HttpKaoQin）
+2020-09-17 16:46:52,691 INFO  [Thread:http--8080-14$94157525] weaver.workflow.dmlaction.packdmls.ext.DMLSqlUpdate.getSqlBody() - DMLSqlUpdate sqlcount : 4
+2020-09-17 16:46:52,746 INFO  [Thread:http--8080-14$94157525] weaver.workflow.dmlaction.packdmls.ext.DMLSqlUpdate.getSqlBody() - DMLSqlUpdate dmlsql end : update crm_customerinfo set portalloginid=?,portalpassword=?,portalstatus=?,rating=?
+2020-09-17 16:46:52,747 INFO  [Thread:http--8080-14$94157525] weaver.workflow.dmlaction.packdmls.ext.DMLSqlUpdate.getSqlBody() - DMLSqlUpdate dmlfieldtype : varchar(8000)|varchar(8000)|tinyint(1)|int(4)
+2020-09-17 16:46:52,747 INFO  [Thread:http--8080-14$94157525] weaver.workflow.dmlaction.packdmls.ext.DMLSqlUpdate.getSqlBody() - DMLSqlUpdate dmlfieldname : portalloginid=zh|portalpassword=mm|portalstatus=mhzt|rating=ra
+2020-09-17 16:48:26,040 INFO  [Thread:http--8080-13$809434979] weaver.workflow.dmlaction.packdmls.ext.DMLSqlUpdate.getSqlBody() - DMLSqlUpdate sqlcount : 4
+2020-09-17 16:48:26,040 INFO  [Thread:http--8080-13$809434979] weaver.workflow.dmlaction.packdmls.ext.DMLSqlUpdate.getSqlBody() - DMLSqlUpdate dmlsql end : update CRM_CustomerInfo set portalloginid=?,portalpassword=?,portalstatus=?,rating=?
+2020-09-17 16:48:26,041 INFO  [Thread:http--8080-13$809434979] weaver.workflow.dmlaction.packdmls.ext.DMLSqlUpdate.getSqlBody() - DMLSqlUpdate dmlfieldtype : varchar(8000)|varchar(8000)|tinyint(1)|int(4)
+2020-09-17 16:48:26,041 INFO  [Thread:http--8080-13$809434979] weaver.workflow.dmlaction.packdmls.ext.DMLSqlUpdate.getSqlBody() - DMLSqlUpdate dmlfieldname : portalloginid=zh|portalpassword=mm|portalstatus=mhzt|rating=ra
+2020-09-17 16:48:26,046 INFO  [Thread:http--8080-13$809434979] weaver.workflow.dmlaction.packdmls.ext.DMLSqlUpdate.getSqlWhere() - DMLSqlUpdate sqlcount : 1
+2020-09-17 16:48:26,046 INFO  [Thread:http--8080-13$809434979] weaver.workflow.dmlaction.packdmls.ext.DMLSqlUpdate.getSqlWhere() - DMLSqlUpdate dmlsql end : update CRM_CustomerInfo set portalloginid=?,portalpassword=?,portalstatus=?,rating=? where id =?
+2020-09-17 16:48:26,046 INFO  [Thread:http--8080-13$809434979] weaver.workflow.dmlaction.packdmls.ext.DMLSqlUpdate.getSqlWhere() - DMLSqlUpdate dmlfieldtype : varchar(8000)|varchar(8000)|tinyint(1)|int(4)|int(4)
+2020-09-17 16:48:26,046 INFO  [Thread:http--8080-13$809434979] weaver.workflow.dmlaction.packdmls.ext.DMLSqlUpdate.getSqlWhere() - DMLSqlUpdate dmlfieldname : portalloginid=zh|portalpassword=mm|portalstatus=mhzt|rating=ra|id=relatedit
+2020-09-17 17:45:45,772 INFO  [Thread:http--8080-13$809434979] weaver.workflow.dmlaction.packdmls.ext.DMLSqlUpdate.getSqlBody() - DMLSqlUpdate sqlcount : 4
+2020-09-17 17:45:45,772 INFO  [Thread:http--8080-13$809434979] weaver.workflow.dmlaction.packdmls.ext.DMLSqlUpdate.getSqlBody() - DMLSqlUpdate dmlsql end : update crm_customerinfo set portalloginid=?,portalpassword=?,portalstatus=?,rating=?
+2020-09-17 17:45:45,772 INFO  [Thread:http--8080-13$809434979] weaver.workflow.dmlaction.packdmls.ext.DMLSqlUpdate.getSqlBody() - DMLSqlUpdate dmlfieldtype : varchar(8000)|varchar(8000)|tinyint(1)|int(4)
+2020-09-17 17:45:45,772 INFO  [Thread:http--8080-13$809434979] weaver.workflow.dmlaction.packdmls.ext.DMLSqlUpdate.getSqlBody() - DMLSqlUpdate dmlfieldname : portalloginid=zh|portalpassword=mm|portalstatus=nmhzt|rating=ra
+2020-09-17 17:52:17,315 INFO  [Thread:http--8080-13$809434979] weaver.workflow.dmlaction.packdmls.ext.DMLSqlUpdate.getSqlBody() - DMLSqlUpdate sqlcount : 4
+2020-09-17 17:52:17,317 INFO  [Thread:http--8080-13$809434979] weaver.workflow.dmlaction.packdmls.ext.DMLSqlUpdate.getSqlBody() - DMLSqlUpdate dmlsql end : update crm_customerinfo set portalloginid=?,portalpassword=?,portalstatus=?,rating=?
+2020-09-17 17:52:17,317 INFO  [Thread:http--8080-13$809434979] weaver.workflow.dmlaction.packdmls.ext.DMLSqlUpdate.getSqlBody() - DMLSqlUpdate dmlfieldtype : varchar(8000)|varchar(8000)|tinyint(1)|int(4)
+2020-09-17 17:52:17,317 INFO  [Thread:http--8080-13$809434979] weaver.workflow.dmlaction.packdmls.ext.DMLSqlUpdate.getSqlBody() - DMLSqlUpdate dmlfieldname : portalloginid=zh|portalpassword=mm|portalstatus=mhzt|rating=ra
+2020-09-17 17:52:17,332 INFO  [Thread:http--8080-13$809434979] weaver.workflow.dmlaction.packdmls.ext.DMLSqlUpdate.getSqlWhere() - DMLSqlUpdate sqlcount : 1
+2020-09-17 17:52:17,332 INFO  [Thread:http--8080-13$809434979] weaver.workflow.dmlaction.packdmls.ext.DMLSqlUpdate.getSqlWhere() - DMLSqlUpdate dmlsql end : update crm_customerinfo set portalloginid=?,portalpassword=?,portalstatus=?,rating=? where id =?
+2020-09-17 17:52:17,332 INFO  [Thread:http--8080-13$809434979] weaver.workflow.dmlaction.packdmls.ext.DMLSqlUpdate.getSqlWhere() - DMLSqlUpdate dmlfieldtype : varchar(8000)|varchar(8000)|tinyint(1)|int(4)|int(4)
+2020-09-17 17:52:17,333 INFO  [Thread:http--8080-13$809434979] weaver.workflow.dmlaction.packdmls.ext.DMLSqlUpdate.getSqlWhere() - DMLSqlUpdate dmlfieldname : portalloginid=zh|portalpassword=mm|portalstatus=mhzt|rating=ra|id=relatedit
+2020-09-17 17:52:42,136 INFO  [Thread:http--8080-13$809434979] weaver.workflow.dmlaction.packdmls.ext.DMLSqlUpdate.getSqlBody() - DMLSqlUpdate sqlcount : 4
+2020-09-17 17:52:42,137 INFO  [Thread:http--8080-13$809434979] weaver.workflow.dmlaction.packdmls.ext.DMLSqlUpdate.getSqlBody() - DMLSqlUpdate dmlsql end : update crm_customerinfo set portalloginid=?,portalpassword=?,portalstatus=?,rating=?
+2020-09-17 17:52:42,137 INFO  [Thread:http--8080-13$809434979] weaver.workflow.dmlaction.packdmls.ext.DMLSqlUpdate.getSqlBody() - DMLSqlUpdate dmlfieldtype : varchar(8000)|varchar(8000)|tinyint(1)|int(4)
+2020-09-17 17:52:42,137 INFO  [Thread:http--8080-13$809434979] weaver.workflow.dmlaction.packdmls.ext.DMLSqlUpdate.getSqlBody() - DMLSqlUpdate dmlfieldname : portalloginid=zh|portalpassword=mm|portalstatus=nmhzt|rating=ra
+2020-09-17 17:52:42,138 INFO  [Thread:http--8080-13$809434979] weaver.workflow.dmlaction.packdmls.ext.DMLSqlUpdate.getSqlWhere() - DMLSqlUpdate sqlcount : 1
+2020-09-17 17:52:42,138 INFO  [Thread:http--8080-13$809434979] weaver.workflow.dmlaction.packdmls.ext.DMLSqlUpdate.getSqlWhere() - DMLSqlUpdate dmlsql end : update crm_customerinfo set portalloginid=?,portalpassword=?,portalstatus=?,rating=? where id =?
+2020-09-17 17:52:42,139 INFO  [Thread:http--8080-13$809434979] weaver.workflow.dmlaction.packdmls.ext.DMLSqlUpdate.getSqlWhere() - DMLSqlUpdate dmlfieldtype : varchar(8000)|varchar(8000)|tinyint(1)|int(4)|int(4)
+2020-09-17 17:52:42,139 INFO  [Thread:http--8080-13$809434979] weaver.workflow.dmlaction.packdmls.ext.DMLSqlUpdate.getSqlWhere() - DMLSqlUpdate dmlfieldname : portalloginid=zh|portalpassword=mm|portalstatus=nmhzt|rating=ra|id=relatedit

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!-- always forbidden ip list -->
+	<forbidden-ip-list>
+		<ip>0.0.0.0</ip>
+	</forbidden-ip-list>
+	<!-- always white ip list -->
+	<white-ip-list>
+		<ip>127.0.0.1</ip>
+		<ip>localhost</ip>
+	</white-ip-list>
+	<skip-any-check-list>
+		<url>/weaver/weaver.org.layout.DownloadDeptLayoutServlet</url>
+		<url>/classbean/weaver/workflow/layout/WorkflowEditor.class</url>
+		<url>/login/LoginSSO.jsp</url>
+		<url>/login/LoginSSO2.jsp</url>
+		<url>synccache.jsp</url>
+	</skip-any-check-list>
+	
+</root>

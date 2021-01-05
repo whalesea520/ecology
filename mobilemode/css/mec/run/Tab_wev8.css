@@ -1,0 +1,51 @@
+.tabContainer{
+}
+.tabTitle{
+	box-sizing:border-box;
+	width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling:touch;
+    background-color: #fff;
+}
+.tabTitle ul{
+	list-style: none;
+	margin:0;padding:0px;
+	overflow: hidden;
+	display: table;
+}
+.tabTitle ul li{
+	line-height:34px;
+	font-size:16px;
+	color:#444;
+	cursor: pointer;
+	padding: 0 8px;
+	display: table-cell;
+    position: relative;
+    color: #a8a8a8;
+    text-align: center;
+    font-family: 'Microsoft Yahei', Arial, sans-serif;
+    border: none;
+    white-space:nowrap;
+    -webkit-tap-highlight-color: transparent;
+}
+.tabTitle ul li.selected{
+	border-bottom:2px solid rgb(13, 147, 246);color:#017afd;font-weight:normal;
+}
+.tabTitle img{
+	position: absolute;
+	right: 30px;
+	top: 5px;
+}
+.tabContainer .tabContent{
+	
+}
+.tabContainer .tabContent .beTabPage{
+	opacity: 0;
+}
+.tabContainer .tabContent .tabPage{
+	display: none;
+	opacity: 1;
+}
+.tabContainer .tabContent .tabPage.selected{
+	display: block;
+}

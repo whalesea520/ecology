@@ -1,0 +1,4 @@
+create or replace PROCEDURE HrmTrainDay_Insert (trainid_1 number, day_2 char, starttime char,endtime char ,content_3 varchar2, aim_4 varchar2, flag out number  ,msg out varchar2, thecursor IN OUT cursor_define.weavercursor ) as begin insert into HrmTrainDay (trainid, traindate,starttime,Endtime, daytraincontent, daytrainaim) values (trainid_1, day_2,starttime,endtime, content_3, aim_4); open thecursor for select max(id) from HrmTrainDay; end;
+/
+create or replace PROCEDURE HrmTrainActor_Insert (traindayid_1 number, resourceid_2 number, flag out number  , msg out varchar2, thecursor IN OUT cursor_define.weavercursor ) as begin insert into HrmTrainActor (traindayid, resourceid) values (traindayid_1, resourceid_2); end;
+/

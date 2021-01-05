@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<param-key>^(?!.*(&lt;|&gt;|&amp;|'|"|\(|\)|\r|\n|%0D%0A)).*$</param-key>
+	<special-non>
+		<urls>
+				 <url>
+					<value>/social/im/SocialHrmBrowser.jsp</value>
+					<params>
+					   <param>
+						<is-dynamic-param>0</is-dynamic-param>
+						<value>coth</value>
+						<rules>
+						  <rule>##CONST:NAMETITLE##</rule>
+						</rules>
+					  </param>
+					   <param>
+						<is-dynamic-param>0</is-dynamic-param>
+						<value>boxTitle</value>
+						<rules>
+						  <rule>##CONST:NAMETITLE##</rule>
+						</rules>
+					  </param>
+					</params>
+				 </url>
+				  <url>
+					<value>/favourite/EditSysFavourite.jsp</value>
+					<params>
+					   <param>
+						<is-dynamic-param>0</is-dynamic-param>
+						<value>id</value>
+						<rules>
+						  <rule>##CONST:MULTINUMBER##</rule>
+						</rules>
+					  </param>
+					</params>
+				 </url>
+				
+		</urls>
+		</special-non>
+</root>

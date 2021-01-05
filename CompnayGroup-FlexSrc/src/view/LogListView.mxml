@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TitleWindow xmlns:mx="http://www.adobe.com/2006/mxml" title="{resourceManager.getString('resources', 'LM051')}" layout="vertical" width="100%" height="100%" creationComplete="init()" showCloseButton="true" fontSize="12"  color="#000000">
+	<mx:HBox>
+	<mx:Label text="{resourceManager.getString('resources', 'LM052')}">
+		
+	</mx:Label>
+	<mx:ComboBox id="operate"  height="20">
+		
+	</mx:ComboBox>
+	<mx:Label text="{resourceManager.getString('resources', 'LM018')}:">
+		
+	</mx:Label>
+	<mx:TextInput id="keyValue" width="200">
+		
+	</mx:TextInput>
+	<mx:Button  label="{resourceManager.getString('resources', 'LM053')}" click="search()">
+		
+	</mx:Button>
+	</mx:HBox>
+	<mx:HBox>
+		
+	
+	<mx:DataGrid x="10" y="10" height="270" width="700" id="logListGrid" doubleClickEnabled="true">
+		<mx:columns>
+			<mx:DataGridColumn id="index" headerText="ID" dataField="index" visible="false"/>
+			<mx:DataGridColumn headerText="ID" dataField="index" visible="false"/>
+			<mx:DataGridColumn headerText="ID" dataField="id" visible="false"/>
+			<mx:DataGridColumn headerText="{resourceManager.getString('resources', 'LM031')}" dataField="archiveno"/>
+			<mx:DataGridColumn width="300" headerText="{resourceManager.getString('resources', 'LM054')}" dataField="companyname"/>
+			<mx:DataGridColumn headerText="{resourceManager.getString('resources', 'LM055')}" dataField="operate"/>
+			<mx:DataGridColumn width="90" headerText="{resourceManager.getString('resources', 'LM056')}" dataField="operatedate"/>
+			<mx:DataGridColumn headerText="{resourceManager.getString('resources', 'LM057')}" dataField="operatetime"/>
+			<mx:DataGridColumn headerText="{resourceManager.getString('resources', 'LM058')}" dataField="username"/>
+		</mx:columns>
+	</mx:DataGrid>	
+	</mx:HBox>
+	<mx:HBox horizontalAlign="center" paddingLeft="200">
+		
+	<mx:Label text=">>{resourceManager.getString('resources', 'LM059')}"  id="count_data">
+		
+	</mx:Label>
+	<mx:Label text=" {resourceManager.getString('resources', 'LM060')}">
+		
+	</mx:Label>
+	<mx:Button  label="{resourceManager.getString('resources', 'LM061')}" click="prev()" >
+		
+	</mx:Button>
+	<mx:Button  label="{resourceManager.getString('resources', 'LM062')}" click="next()" >
+		
+	</mx:Button>
+		
+	<mx:Label text="{resourceManager.getString('resources', 'LM063')}">
+		
+	</mx:Label>
+	<mx:TextInput  width="40" text="1" id="_page">
+		
+	</mx:TextInput>
+	<mx:Label text="{resourceManager.getString('resources', 'LM064')}">
+		
+	</mx:Label>
+	<mx:Button  label="{resourceManager.getString('resources', 'LM065')}"  click="gopage()">
+		
+	</mx:Button>
+		
+	<mx:TextInput  width="40"  id="hidden_page" visible="false" includeInLayout="false">
+		
+	</mx:TextInput>	
+		
+	<mx:TextInput  width="40" text="0" id="hidden_operate" visible="false" includeInLayout="false">
+		
+	</mx:TextInput>	
+	
+		
+</mx:HBox>
+	<mx:Script>
+		<![CDATA[
+			import common.StaticObj;
+			
+			import mx.collections.ArrayCollection;
+			import mx.controls.Alert;
+			import mx.core.Application;
+			import mx.managers.PopUpManager;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+			import mx.rpc.http.HTTPService;
+			
+			import util.XmlUtil;
+			[bindable]
+			var staticObj :StaticObj=Application.application.staticObj;
+			//import model.CompanyInfo;
+			//var company:CompanyInfo = 
+			[bindable]
+			private var versionList:ArrayCollection;
+			
+			[bindable]
+			private var opreateList:ArrayCollection;
+			
+			
+			private var _countData;int
+			private function init(){
+				
+				//添加回车监听
+				this.addEventListener(KeyboardEvent.KEY_DOWN,KeyboardListener);
+
+				
+				
+				var list:Array = new Array;
+				list.push({label:"--",data:"0"});
+				list.push({label:""+resourceManager.getString('resources', 'LM066'),data:"1"});
+				list.push({label:""+resourceManager.getString('resources', 'LM067'),data:"2"});
+				list.push({label:""+resourceManager.getString('resources', 'LM068'),data:"4"});
+				//list.push({label:"删除",data:"3"});
+				
+				opreateList = new ArrayCollection(list);
+				operate.dataProvider = opreateList;
+				
+				var operatetype:String = operate.selectedItem.data;
+				var archiveno:String  = keyValue.text;
+				var http:HTTPService = new HTTPService();
+				
+				http.addEventListener(ResultEvent.RESULT,parseObj);
+				http.addEventListener(FaultEvent.FAULT,myFaultErrorEvent);
+				
+				http.url="/companygroup/manage/companyoperation.jsp?method=getLogList"
+				http.method = "post";
+				http.resultFormat = "e4x";
+				
+				var val:URLVariables = new URLVariables;
+				//val.groupid = "166";
+				val.groupid = staticObj.groupid;
+				val.index = 1;
+				val.perpage = 10;
+				val.operate=operatetype;
+				val.archiveno=archiveno;
+				val.random = Math.random();
+				
+				http.send(val);
+				
+			}
+			
+			//监听enter事件
+			private function KeyboardListener(event:KeyboardEvent):void{
+				if(event.keyCode==Keyboard.ENTER){
+					search();
+				}
+			}
+
+			
+			public function parseObj(xmlContent:ResultEvent):void{
+				
+					try
+					{
+						var content:XML = xmlContent.result as XML;
+						//Alert.show(content.toString());
+						//var node:XMLNode = content;
+						var xmlDoc:XMLDocument = new XMLDocument(content.toString());
+						versionList = XmlUtil.parseXmlToArray(xmlDoc);
+						logListGrid.dataProvider = versionList;
+						//Alert.show("日志翻页错误3");
+						var array:Array =versionList.source;
+						//Alert.show("日志翻页错误4");
+						//Alert.show("我的姑凉呀"+array[0].totalCount);
+						count_data.text=">>"+resourceManager.getString('resources', 'LM075')+array[0].totalCount+""+resourceManager.getString('resources', 'LM074');
+						_countData=array[0].totalCount;
+						
+					}catch(e:Error){
+						//Alert.show("日志翻页错误");
+						logListGrid.dataProvider=null;
+						count_data.text=">>"+resourceManager.getString('resources', 'LM059');
+						
+					}
+				
+			}
+			//跳转到指定页
+			public function gopage(){
+			
+				var temp_page=_countData%10;
+				
+				if(temp_page==0){
+					temp_page=Math.floor(_countData/10);
+				}else{
+					temp_page=Math.floor(_countData/10)+1;
+				}
+				//[0-"+Math.floor(temp_page)+"]
+				//为什么会有小数呀
+				var _paget=parseInt(_page.text);
+				if(_paget>temp_page||_paget<=0){
+					Alert.okLabel=""+resourceManager.getString('resources', 'LM044');
+					Alert.show(resourceManager.getString('resources', 'LM069')+"[1-"+temp_page+"]！");
+				}else{
+					var operatetype:String = operate.selectedItem.data;
+					var archiveno:String  = keyValue.text;
+					//logListGrid.columns[0].count
+					//count.
+					var index :String = logListGrid.dataProvider.getItemAt(0)["index"];
+					var http:HTTPService = new HTTPService();
+					//var i:int = Number(_paget);
+					http.addEventListener(ResultEvent.RESULT,parseObj);
+					http.addEventListener(FaultEvent.FAULT,myFaultErrorEvent);
+					//Alert.show("日志翻页错误1");
+					http.url="/companygroup/manage/companyoperation.jsp?method=getLogList"
+					http.method = "post";
+					http.resultFormat = "e4x";
+					
+					var val:URLVariables = new URLVariables;
+					//val.groupid = "166";
+					val.groupid = staticObj.groupid;
+					//Alert.show(i+1+"");
+					val.index = _paget;
+					val.perpage = 10;
+					val.operate=operatetype;
+					val.archiveno=archiveno;
+					val.random = Math.random();
+					//Alert.show("日志翻页错误2");
+					http.send(val);
+				
+				
+				}
+				
+			
+			}
+			public function myFaultErrorEvent(myFaultEvent:FaultEvent):void{    //异常处理函数   
+				//Alert.show("333");
+				trace(myFaultEvent.message);   
+			} 
+			
+			public function next():void{
+				
+				var temp_page=parseInt(_countData)%10;
+				if(temp_page==0){
+					temp_page=parseInt(_countData)/10;
+				}else{
+					temp_page=parseInt(_countData)/10+1;
+				}
+				if(temp_page<=0){
+					_page.text="0";
+				}	
+				if((parseInt(_page.text)+1)>temp_page){
+					return;
+				}else{
+					_page.text=(parseInt(_page.text)+1)+"";
+					
+					//var operatetype:String = operate.selectedItem.data;
+					//var archiveno:String  = keyValue.text;
+					
+					var operatetype:String=hidden_operate.text;
+					var archiveno:String=hidden_page.text;
+					
+					//logListGrid.columns[0].count
+					//count.
+					var index :String = logListGrid.dataProvider.getItemAt(0)["index"];
+					var http:HTTPService = new HTTPService();
+					//var i:int = Number(index);
+					http.addEventListener(ResultEvent.RESULT,parseObj);
+					http.addEventListener(FaultEvent.FAULT,myFaultErrorEvent);
+					//Alert.show("日志翻页错误1");
+					http.url="/companygroup/manage/companyoperation.jsp?method=getLogList"
+					http.method = "post";
+					http.resultFormat = "e4x";
+					
+					var val:URLVariables = new URLVariables;
+					//val.groupid = "166";
+					val.groupid = staticObj.groupid;
+					//Alert.show(i+1+"");
+					val.index = _page.text;
+					val.perpage = 10;
+					val.operate=operatetype;
+					val.archiveno=archiveno;
+					val.random = Math.random();
+					//Alert.show("日志翻页错误2");
+					http.send(val);
+				}
+				
+			}
+			
+			public function prev():void{
+				
+				if((parseInt(_page.text)-1)<=0){
+					return;
+				}else{
+						_page.text=(parseInt(_page.text)-1)+"";
+						
+						
+						//var operatetype:String = operate.selectedItem.data;
+						//var archiveno:String  = keyValue.text;
+						
+						var operatetype:String=hidden_operate.text;
+						var archiveno:String=hidden_page.text;
+						
+						var index :String = logListGrid.dataProvider.getItemAt(0)["index"];
+						var http:HTTPService = new HTTPService();
+						//var i:int = Number(index);
+						http.addEventListener(ResultEvent.RESULT,parseObj);
+						http.addEventListener(FaultEvent.FAULT,myFaultErrorEvent);
+						
+						http.url="/companygroup/manage/companyoperation.jsp?method=getLogList"
+						http.method = "post";
+						http.resultFormat = "e4x";
+						
+						var val:URLVariables = new URLVariables;
+						//val.groupid = "166";
+						val.groupid = staticObj.groupid;
+						val.index = _page.text;
+						//Alert.show(i-1+"");
+						val.perpage = 10;
+						val.operate=operatetype;
+						val.archiveno=archiveno;
+						val.random = Math.random();
+						http.send(val);
+				}
+			
+			}
+			
+			public function search():void{
+				
+				_page.text="1";
+				var operatetype:String = operate.selectedItem.data;
+				var archiveno:String  = keyValue.text;
+				var http:HTTPService = new HTTPService();
+				var i:int = index as int;
+				http.addEventListener(ResultEvent.RESULT,parseObj);
+				http.addEventListener(FaultEvent.FAULT,myFaultErrorEvent);
+				
+				http.url="/companygroup/manage/companyoperation.jsp?method=getLogList"
+				http.method = "post";
+				http.resultFormat = "e4x";
+				
+				var val:URLVariables = new URLVariables;
+				//val.groupid = "166";
+				val.groupid = staticObj.groupid;
+				val.index = 1;
+				val.perpage = 10;
+				val.operate=operatetype;
+				val.archiveno=archiveno;
+				val.random = Math.random();
+				http.send(val);
+				
+				hidden_operate.text=operatetype;
+				hidden_page.text=archiveno;
+				
+			}
+			
+			
+		]]>
+	</mx:Script>
+</mx:TitleWindow>

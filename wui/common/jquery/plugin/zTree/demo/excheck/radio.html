@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> ZTREE DEMO - radio</TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../../css/demo.css" type="text/css">
+	<link rel="stylesheet" href="../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="../../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ztree.core-3.0.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ztree.excheck-3.0.js"></script>
+	<!--
+	<script type="text/javascript" src="../../js/jquery.ztree.exedit-3.0.js"></script>
+	-->
+	<SCRIPT LANGUAGE="JavaScript">
+		<!--
+		var setting = {
+			check: {
+				enable: true,
+				chkStyle: "radio",
+				radioType: "level"
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			}
+		};
+
+		var zNodes =[
+			{ id:1, pId:0, name:"闅忔剰鍕鹃€?鐖?1", open:true},
+			{ id:11, pId:1, name:"闅忔剰鍕鹃€?瀛?1", checked1:true},
+			{ id:12, pId:1, name:"娌℃湁 radio 1", nocheck:true, open:true},
+			{ id:121, pId:12, name:"闅忔剰鍕鹃€?瀛?1"},
+			{ id:122, pId:12, name:"闅忔剰鍕鹃€?瀛?2"},
+			{ id:123, pId:12, name:"娌℃湁 radio 2", nocheck:true},
+			{ id:13, pId:1, name:"闅忔剰鍕鹃€?瀛?2"},
+			{ id:2, pId:0, name:"闅忔剰鍕鹃€?鐖?2", open:true},
+			{ id:21, pId:2, name:"娌℃湁 radio 3", nocheck:true},
+			{ id:22, pId:2, name:"闅忔剰鍕鹃€?瀛?3", open:true},
+			{ id:221, pId:22, name:"闅忔剰鍕鹃€?瀛?3"},
+			{ id:222, pId:22, name:"闅忔剰鍕鹃€?瀛?4"},
+			{ id:223, pId:22, name:"娌℃湁 radio 4", nocheck:true},
+			{ id:23, pId:2, name:"闅忔剰鍕鹃€?瀛?4"}
+		];
+		
+		var code;		
+		function setCheck() {
+			var type = $("#level").attr("checked")? "level":"all";
+			setting.check.radioType = type;
+			showCode('setting.check.radioType = "' + type + '";');
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+		}
+		function showCode(str) {
+			if (!code) code = $("#code");
+			code.empty();
+			code.append("<li>"+str+"</li>");
+		}
+		
+		$(document).ready(function(){
+			setCheck();			
+			$("#level").bind("change", setCheck);
+			$("#all").bind("change", setCheck);
+		});
+		//-->
+	</SCRIPT>
+</HEAD>
+
+<BODY>
+<h1>radio 鍕鹃€夋搷浣?/h1>
+<h6>[ 鏂囦欢璺緞锛歞emo/excheck/radio.html ]</h6>
+<div class="content_wrap">
+	<div class="zTreeDemoBackground left">
+		<ul id="treeDemo" class="ztree"></ul>
+	</div>
+	<div class="right">
+		<ul class="info">
+			<li class="title"><h2>1銆乻etting 閰嶇疆淇℃伅璇存槑</h2>
+				<ul class="list">
+				<li class="highlight_red">浣跨敤 radio锛屽繀椤昏缃?setting.check 涓殑鍚勪釜灞炴€э紝璇︾粏璇峰弬瑙?API 鏂囨。涓殑鐩稿叧鍐呭</li>
+				<li><p>radio 鍒嗙粍鑼冨洿锛?input type="radio" id="level" class="radio first" name="radioGroup" checked /><span>鍚屼竴绾у唴</span>
+						<input type="radio" id="all" class="radio" name="radioGroup"/><span>鏁存５鏍戝唴</span><br/>
+						<ul id="code" class="log" style="height:20px;"></ul></p>
+				</li>
+				</ul>
+			</li>
+			<li class="title"><h2>2銆乼reeNode 鑺傜偣鏁版嵁璇存槑</h2>
+				<ul class="list">
+				<li class="highlight_red">1)銆佸鏋滈渶瑕佸垵濮嬪寲榛樿鑺傜偣琚嬀閫夛紝璇疯缃?treeNode.checked 灞炴€э紝璇︾粏璇峰弬瑙?API 鏂囨。涓殑鐩稿叧鍐呭</li>
+				<li class="highlight_red">2)銆佸鏋滄煇鑺傜偣涓嶆樉绀?radio锛岃璁剧疆 treeNode.nocheck 灞炴€э紝璇︾粏璇峰弬瑙?API 鏂囨。涓殑鐩稿叧鍐呭</li>
+				<li class="highlight_red">3)銆佸鏋滄洿鎹?checked 灞炴€э紝璇峰弬鑰?API 鏂囨。涓?setting.data.key.checked 鐨勮缁嗚鏄?/li>
+				<li>4)銆佸叾浠栬鍙傝€?API 鏂囨。涓?treeNode.checkedOld / getCheckStatus / check_Child_State / check_Focus 鐨勮缁嗚鏄?/li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+</BODY>
+</HTML>

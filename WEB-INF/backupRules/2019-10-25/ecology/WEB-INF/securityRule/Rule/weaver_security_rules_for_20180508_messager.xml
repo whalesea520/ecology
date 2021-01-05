@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<no-login-urls>
+		<url>/social/im/epcforword.jsp</url>
+	</no-login-urls>
+</root>

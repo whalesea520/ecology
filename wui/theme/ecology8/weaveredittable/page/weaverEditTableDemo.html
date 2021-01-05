@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <script src="/js/ecology8/jquery_wev8.js"></script>
+
+    <!--插件 -->
+    <!--checkbox-->
+    <link href="/js/ecology8/jNice/jNice/jNice_wev8.css" type=text/css rel=stylesheet>
+    <script language=javascript src="/js/ecology8/jNice/jNice/jquery.jNice_wev8.js"></script>
+
+    <link href="/js/ecology8/selectbox/css/jquery.selectbox_wev8.css" type=text/css rel=stylesheet>
+    <script language=javascript src="/js/ecology8/selectbox/js/jquery.selectbox-0.2_wev8.js"></script>
+
+   <!-- radio美化组件-->
+   <link href="/js/checkbox/jquery.tzCheckbox_wev8.css" type=text/css rel=stylesheet>
+   <script language=javascript src="/js/checkbox/jquery.tzRadio_wev8.js"></script>
+
+
+    <link rel="stylesheet" href="/wui/theme/ecology8/skins/default/wui_wev8.css">
+
+    <link rel="stylesheet" href="../css/WeaverEditTable_wev8.css">
+    <script  src="../js/WeaverEditTable_wev8.js"></script>
+</head>
+<body style="margin: 0;padding: 0">
+      <!--组一-->
+       <div class="groupmain" style="width:100%"></div>
+       <script>
+
+
+           var items=[
+           {width:"10%",tdclass:"desclass",colname:"描述信息",itemhtml:"<input type='text' name='descinfo' style='width: 50px'><span class='mustinput'></span>"},
+           {width:"15%",colname:"数据库字段",itemhtml:"<input type='text' name='datafield'>"},
+           {width:"15%",colname:"字段显示名",itemhtml:"<input type='text' name='datalabel'>"},
+           {width:"40%",colname:"字段类型",itemhtml:"<select name='datatype' style='width: 200px;height: 26px;display: none'><option value='0'>单行文本框</option><option value='1'>浏览框</option></select>" +
+                   "<span style='vertical-align: middle'>长度:</span><input name='datalength' type='text' style='width: 100px;vertical-align: middle' ><span class='mustinput'></span>" +
+                   "<span style='vertical-align: middle'>类型:</span><select name='ctype' style='width: 100px'><option value='0'>文本</option><option value='1'>数据</option></select>"},
+           {width:"15%",tdclass:"desclassone",colname:"顺序",itemhtml:"<input type='radio'tzCheckbox='true' name='dataorder' value='1' >"}];
+
+           var option= {
+                         navcolor:"#003399",
+                         basictitle:"主字段信息",
+                         toolbarshow:true,
+                         colItems:items,
+						 addAccesskey:"A",
+						 delAccesskey:"D",
+						 copyAccesskey:"C",
+                         addrowCallBack:function() {
+                            // alert("回调函数!!!");
+                         },
+                        configCheckBox:true,
+                        checkBoxItem:{"itemhtml":'<input class="groupselectbox" type="checkbox" >',width:"5%"}
+                       };
+
+           var group=new WeaverEditTable(option);
+           $(".groupmain").append(group.getContainer());
+           var params=group.getTableSeriaData();
+           console.log(params);
+
+
+
+       </script>
+
+      <input type="button" value="获取组一参数" class="getSeriedata">
+
+      <script>
+           $(".getSeriedata").click(function(){
+
+               alert(group.getTableSeriaData());
+
+           });
+
+      </script>
+
+
+      <!--组二-->
+      <div class="subgroupmain" style="width: 100%"></div>
+      <script>
+          items=[
+              {width:"10%",colname:"描述信息",itemhtml:"<input type='text'  style='width: 50px'>"},
+              {width:"15%",colname:"数据库字段",itemhtml:"<input type='text'>"},
+              {width:"15%",colname:"字段显示名",itemhtml:"<input type='text'>"},
+              {width:"40%",colname:"字段类型",itemhtml:"<select style='width: 200px;height: 26px'><option>单行文本框</option><option>浏览框</option></select>" +
+                      ""},
+              {width:"15%",colname:"顺序",itemhtml:"<input type='text'>"}];
+          var option= {navcolor:"#00cc00",basictitle:"明细字段信息",toolbarshow:true,colItems:items};
+          var group1=new WeaverEditTable(option);
+          $(".subgroupmain").append(group1.getContainer());
+      </script>
+
+</body>

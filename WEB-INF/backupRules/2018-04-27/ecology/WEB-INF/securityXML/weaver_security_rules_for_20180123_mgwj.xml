@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<webservice-list>
+		<webservice>/system/CreateDB.jsp</webservice>
+		<webservice>/system/CreateDBOperation.jsp</webservice>
+		<webservice>/system/MobileLicenseOperation.jsp</webservice>
+	</webservice-list>
+</root>

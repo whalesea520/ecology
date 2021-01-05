@@ -1,0 +1,353 @@
+.field_label{
+	font-family: 'Microsoft Yahei', Arial;
+	font-size: 14px;
+	vertical-align: middle;
+	padding: 0px 20px 0px 15px;
+	width: 70px;
+	height:40px;
+	position: relative;
+	color: #666;
+}
+.field_content{
+	padding-right: 15px;
+}
+.field_separater{
+	background-color: rgb(240,240,240);
+	width: 1px;
+	height:20px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+.field_content .field_inputText{
+	width: 100%;
+	border: none;
+	height: 38px;
+	font-family: 'Microsoft Yahei', Arial;
+	font-size: 14px;
+}
+.field_label_colspan{
+	font-family: 'Microsoft Yahei', Arial;
+	font-size: 14px;
+	padding: 15px 20px 5px 15px;
+	color: #666;
+	background-color: rgb(242,242,242);
+	border-bottom: 1px solid #eee;
+}
+td .field_textarea{
+	font-family: 'Microsoft Yahei', Arial;
+	font-size: 14px;
+	width: 100%;
+	padding: 5px 15px 5px 15px;
+	border: none;
+}
+td span.field_textarea{
+	width:auto;
+	display:block;
+}
+.field_browser{
+	/* height: 40px; */
+	padding-right: 55px;
+	position: relative;
+	line-height: 40px;
+}
+.field_browser .field_browser_img{
+	background-image: url("/mobilemode/images/field_browsebtn_wev8.png");
+	background-repeat: no-repeat;
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	top: 2px;
+	right: 0px;
+}
+.field_browser .browserName{
+	font-family: 'Microsoft Yahei', Arial;
+	font-size: 14px;
+	padding: 0px;
+	position: static;
+}
+.field_browser .browserName label{
+	min-height: 40px;
+	margin: 0;
+	word-break:break-all;
+}
+.field_browser .browserName .delBrowser{
+	top: 13px;
+	right: 40px;
+	background: url("/mobilemode/images/mec/lego_icon_del.png") no-repeat;
+}
+.field_styled_select{
+	width: 100%;
+   	height: 40px;
+   	overflow: hidden;
+   	background: url("/mobilemode/images/mec/arrow_right_wev8.png") no-repeat;
+   	background-position: right center;
+}
+.field_styled_select .field_select{
+	width: 100%;
+	border: none;
+	height: 40px;
+	font-family: 'Microsoft Yahei', Arial;
+	font-size: 14px;
+	background: transparent;
+   	-webkit-appearance: none; /*for chrome*/
+}
+.field_content .field_check{
+	float: right;
+}
+div.ui-slider-switch.ui-mini{
+	border-radius:  2.25em;
+}
+.ui-slider-switch.ui-mini .ui-slider-inneroffset .ui-slider-handle{
+     background-clip:padding-box !important;
+}
+
+.field_upload_container{
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+.field_upload_container .field_upload_entryWrap{
+	padding: 2px 0px 3px 15px;
+	overflow: hidden;
+}
+.field_upload_entryWrap > .field_upload_entry{
+	padding: 0 5px 5px 0;
+	position: relative;
+	float: left;
+}
+.field_upload_entry .field_upload_entryImg{
+	border-radius:3px;
+	position: relative;
+}
+.field_upload_entry .field_upload_entryImg img{
+	border-radius:3px;
+	border: 1px solid #ccc;
+}
+.field_upload_entry .field_upload_deleteBtn{
+	width: 16px;
+	height: 18px;
+	position: absolute;
+	top: 0px;
+	right: 2px;
+	background: url("/images/delete_wev8.gif") no-repeat;
+	background-position: -3px -3px;
+	z-index: 888;
+}
+.field_upload_entryWrap .field_upload_entryBtn{
+	background: url("/mobilemode/images/emobile/photo_wev8.png") no-repeat;
+	background-repeat: no-repeat;
+	width: 65px;
+	height: 65px;
+	float: left;
+}
+
+.field_upload_entryWrap .field_upload_entryBorder{
+	padding-top: 5px;
+	position: relative;
+	float: left;
+}
+.field_upload_entryWrap .field_upload_entryBorder .field_upload_entry{
+	margin-right: 8px;
+}
+.field_upload_entryWrap .field_upload_entryBorder .field_upload_entry img{
+	width: 53px;
+	height: 53px;
+	border-radius:3px;
+	border: 1px solid #ccc;
+}
+.field_upload_entryWrap .field_upload_entryBorder .field_upload_DeleteBtn{
+	width: 16px;
+	height: 18px;
+	position: absolute;
+	top: 0px;
+	right: 2px;
+	background: url("/images/delete_wev8.gif") no-repeat;
+	background-position: -3px -3px;
+	z-index: 888;
+}
+.field_upload_entryWrap .field_upload_entryBorder .field_upload_entryBtn{
+	margin-right: 8px;
+	background: url("/mobilemode/images/emobile/photo_wev8.png") no-repeat;
+	background-size: 54px 54px;
+}
+.field_upload_entryWrap .field_upload_entryBorder .field_upload_entryBtn .upLoadFile{
+	position: absolute;
+	font-size: 20px;
+	width: 61px;
+	height: 61px;
+	bottom: 0px;
+	left: 0px;
+	filter: alpha(opacity=0);
+	opacity: 0;
+	cursor: pointer;
+}
+
+.field_content .field_inputTime_container{
+	position: relative;
+	padding-right: 35px;
+	padding: 0px 35px 0 0;
+}
+.field_inputTime_container .field_inputTime{
+	width: 100%;
+	border: none;
+	height: 38px;
+	font-family: 'Microsoft Yahei', Arial;
+	font-size: 14px;
+}
+.field_inputTime_container .field_inputTime_sub{
+	background: url("/mobilemode/images/mec/lego_icon_del.png") no-repeat;
+	background-position: center;
+	background-size: 13px 12px;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 3px;
+	right: 0;
+	display: none;
+}
+.field_inputText, .field_textarea, .browserName, .field_select{
+	color: #000;
+}
+.ui-body-a, .ui-page-theme-a .ui-body-inherit, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit, html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a{
+	border: none;
+	box-shadow: none;
+}
+.footerBtnContainer{
+	height: 50px;
+	background-color: white;
+	padding: 15px 15px 0px 15px;
+}
+.form_buttonStyle{
+	float:left;
+	width: auto;
+	height: auto;
+	line-height: normal;
+	text-align:center;
+	font-size: 14px;
+	cursor:pointer;
+	padding: 8px 20px;
+	text-shadow: none;
+	margin-right: 5px;
+}
+.form_buttonStyle_edit{
+	background-color: #017afd;
+	color: #fff;
+}
+.form_buttonStyle_onsubmit{
+	background-color: #eee;
+	color: #444;
+}
+.form_buttonStyle_delete{
+	background-color: #eee;
+	color: #444;
+}
+.field_viewTable td{
+	background-color: white;
+	border-bottom: 1px solid #eee;
+}
+.field_viewTable{
+	width: 100%;
+	border-collapse: collapse;
+}
+.field_viewText{
+	font-family: 'Microsoft Yahei', Arial;
+	font-size: 14px;
+}
+.field_viewText.field_viewTextarea{
+	height: 80px;
+}
+.detailtitle {
+	background: #f0f8fe;
+	border: 1px solid #b0d6ff!important;
+	padding-left:5px;
+	height: 30px;
+}
+.tr_detail {
+	height: 40px;
+}
+.detaildiv{
+	background-color:white;
+	padding:10px 5px 0 5px;
+	/*width:100%;
+	 margin-top:10px;
+	overflow-x:auto;
+	-webkit-overflow-scrolling:touch; */
+}
+.detaildiv .tr_detail td{
+	border: 1px solid #eee;
+	padding-left:5px;
+}
+.detaildiv .field_textarea{
+	font-family: 'Microsoft Yahei', Arial;
+	font-size: 14px;
+	width: 100%;
+	padding: 0 0 0 0;
+	border: none;
+}
+
+.dwwr{
+	min-width: 245px !important;
+}
+.dw-i{
+	font-size: 18px !important;
+}
+
+.field_upload_entryWrap .attach_upload_entryborder{
+	padding-right: 15px;
+	position: relative;
+}
+.attach_upload_entryborder .attach_upload_entry{
+	padding: 10px 0px;
+	position: relative;
+	opacity: 0.7;
+}
+.attach_upload_entry td.icon{
+	width: 24px;
+}
+.attach_upload_entry td.name{
+	font-size: 10pt;
+	font-weight: bold;
+	width: 100px;
+	overflow: hidden;
+	display: inline-block;
+	white-space: nowrap;
+	word-break: break-all;
+	text-overflow: ellipsis;
+}
+.attach_upload_entry td.size{
+	width: 33px;
+	text-align: right;
+	color: #777;
+	font-size: 10pt;
+}
+.attach_upload_entry td.flag{
+	width: 20px;
+}
+.attach_upload_entry td{
+	border: none !important;
+}
+.attach_upload_entryborder .attach_upload_DeleteBtn{
+	width: 16px;
+	height: 18px;
+	position: absolute;
+	top: 16px;
+	right: 2px;
+	background: url("/mobilemode/images/mec/lego_icon_del.png") no-repeat;
+	background-position: 1px 1px;
+	z-index: 888;
+}
+.attach_add_entryBorder .attach_add_entryBtn{
+	position: relative;
+	background: url("/mobilemode/images/emobile/photo_wev8.png") no-repeat;
+	background-size: 54px 54px;
+}
+.attach_add_entryBorder .attach_add_entryBtn .upLoadFile{
+	position: absolute;
+	width: 61px;
+	height: 61px;
+	bottom: 0px;
+	left: 0px;
+	filter: alpha(opacity=0);
+	opacity: 0;
+	cursor: pointer;
+}

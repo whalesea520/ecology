@@ -1,0 +1,16 @@
+<module id="sms" version="1.0.0">
+    <service-point id="smssender" interface="weaver.sms.SmsService">
+        <invoke-factory>
+            <construct class="weaver.sms.JdbcSmsService">
+                <set property="type" value="sqlserver"/>
+                <set property="host" value="192.168.0.204"/>
+                <set property="port" value="1433"/>
+                <set property="dbname" value="ecology3802"/>
+                <set property="username" value="sa"/>
+                <set property="password" value="123"/>
+                <set property="sql" value="insert into OutBox(ReceiverMobileNo,Msg,SendTime,IsChinese,ExpressLevel,Sender) values(?,?,getDate(),1,1,1)"/>
+            </construct>
+        </invoke-factory>
+    </service-point>   
+</module>
+

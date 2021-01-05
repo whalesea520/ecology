@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<skip-any-check-list>
+		<url>/ReportServer</url>
+	</skip-any-check-list>
+</root>

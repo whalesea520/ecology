@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<special-non>
+		<urls>
+				  <url>
+					<value>/blog/saveBlogOperation.jsp</value>
+					<params>
+					   <param>
+						<is-dynamic-param>0</is-dynamic-param>
+						<value>content</value>
+						<rules>
+						  <rule>##CONST:FREEHTML##</rule>
+						</rules>
+					  </param>
+					</params>
+				 </url>
+				  <url>
+					<value>/workflow/exceldesign/excelPreView.jsp</value>
+					<params>
+					   <param>
+						<is-dynamic-param>0</is-dynamic-param>
+						<value>datajson</value>
+						<rules>
+						  <rule>##CONST:CODE##</rule>
+						</rules>
+					  </param>
+					   <param>
+						<is-dynamic-param>0</is-dynamic-param>
+						<value>pluginjson</value>
+						<rules>
+						  <rule>##CONST:CODE##</rule>
+						</rules>
+					  </param>
+					</params>
+				 </url>
+				
+		</urls>
+		</special-non>
+</root>

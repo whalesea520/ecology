@@ -1,0 +1,12 @@
+delete from HtmlLabelIndex where id=28406 
+GO
+delete from HtmlLabelInfo where indexid=28406 
+GO
+INSERT INTO HtmlLabelIndex values(28406,'Œ¥◊˜∑œ') 
+GO
+INSERT INTO HtmlLabelInfo VALUES(28406,'Œ¥◊˜∑œ',7) 
+GO
+INSERT INTO HtmlLabelInfo VALUES(28406,'Not invalidate',8) 
+GO
+INSERT INTO HtmlLabelInfo VALUES(28406,'Œ¥◊˜èU',9) 
+GO

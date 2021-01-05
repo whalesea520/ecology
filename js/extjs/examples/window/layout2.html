@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Window Layouts Example</title>
+    <link rel="stylesheet" type="text/css" href="../../resources/css/ext-all_wev8.css"/>
+
+    <!-- GC -->
+    <!-- LIBS -->
+    <script type="text/javascript" src="../../adapter/ext/ext-base_wev8.js"></script>
+    <!-- ENDLIBS -->
+
+    <script type="text/javascript" src="../../ext-all_wev8.js"></script>
+
+</head>
+<body>
+<div id="divLayout"></div>
+
+
+</body>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+
+Ext.onReady(function(){
+    
+   // Panel for the west
+	var nav = new Ext.Panel({
+		title: 'Navigation',
+		renderTo:'divLayout',
+		region: 'west',
+		split: true,
+		width: 200,
+		collapsible: true,
+		margins:'3 0 3 3',
+		cmargins:'3 3 3 3'
+	});
+
+	  
+});
+//-->
+</SCRIPT>
+</html>

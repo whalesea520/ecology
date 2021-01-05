@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> ZTREE DEMO - getChangeCheckedNodes / getCheckedNodes</TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../../../css/demo.css" type="text/css">
+	<link rel="stylesheet" href="../../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="../../../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../../js/jquery.ztree.core-3.5.js"></script>
+	<script type="text/javascript" src="../../../js/jquery.ztree.excheck-3.5.js"></script>
+	<!--
+	<script type="text/javascript" src="../../../js/jquery.ztree.exedit-3.5.js"></script>
+	-->
+	<SCRIPT type="text/javascript">
+		<!--
+		var setting = {
+			view: {
+				selectedMulti: false
+			},
+			check: {
+				enable: true
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			callback: {
+				onCheck: onCheck
+			}
+		};
+
+		var zNodes =[
+			{ id:1, pId:0, name:"闅忔剰鍕鹃€?1", open:true},
+			{ id:11, pId:1, name:"闅忔剰鍕鹃€?1-1"},
+			{ id:12, pId:1, name:"闅忔剰鍕鹃€? 1-2", open:true},
+			{ id:121, pId:12, name:"闅忔剰鍕鹃€?1-2-1", checked:true},
+			{ id:122, pId:12, name:"闅忔剰鍕鹃€?1-2-2"},
+			{ id:123, pId:12, name:"闅忔剰鍕鹃€?1-2-3"},
+			{ id:13, pId:1, name:"闅忔剰鍕鹃€?1-3"},
+			{ id:2, pId:0, name:"闅忔剰鍕鹃€?2", open:true},
+			{ id:21, pId:2, name:"闅忔剰鍕鹃€?2-1"},
+			{ id:22, pId:2, name:"闅忔剰鍕鹃€?2-2", open:true},
+			{ id:221, pId:22, name:"闅忔剰鍕鹃€?2-2-1", checked:true},
+			{ id:222, pId:22, name:"闅忔剰鍕鹃€?2-2-2"},
+			{ id:223, pId:22, name:"闅忔剰鍕鹃€?2-2-3"},
+			{ id:23, pId:2, name:"闅忔剰鍕鹃€?2-3", checked:true}
+		];
+
+		var clearFlag = false;
+		function onCheck(e, treeId, treeNode) {
+			count();
+			if (clearFlag) {
+				clearCheckedOldNodes();
+			}
+		}
+		function clearCheckedOldNodes() {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			nodes = zTree.getChangeCheckedNodes();
+			for (var i=0, l=nodes.length; i<l; i++) {
+				nodes[i].checkedOld = nodes[i].checked;
+			}
+		}
+		function count() {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			checkCount = zTree.getCheckedNodes(true).length,
+			nocheckCount = zTree.getCheckedNodes(false).length,
+			changeCount = zTree.getChangeCheckedNodes().length;
+			$("#checkCount").text(checkCount);
+			$("#nocheckCount").text(nocheckCount);
+			$("#changeCount").text(changeCount);
+
+		}
+		function createTree() {
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			count();
+			clearFlag = $("#last").attr("checked");
+		}
+
+		$(document).ready(function(){
+			createTree();			
+			$("#init").bind("change", createTree);
+			$("#last").bind("change", createTree);
+		});
+		//-->
+	</SCRIPT>
+</HEAD>
+
+<BODY>
+<h1>checkbox 鍕鹃€夌粺璁?/h1>
+<h6>[ 鏂囦欢璺緞: excheck/checkbox_count.html ]</h6>
+<div class="content_wrap">
+	<div class="zTreeDemoBackground left">
+		<ul id="treeDemo" class="ztree"></ul>
+	</div>
+	<div class="right">
+		<ul class="info">
+			<li class="title"><h2>1銆乬etChangeCheckedNodes / getCheckedNodes 鏂规硶鎿嶄綔璇存槑</h2>
+				<ul class="list">
+				<li class="highlight_red">浣跨敤 zTreeObj.getChangeCheckedNodes / getCheckedNodes 鏂规硶锛岃缁嗚鍙傝 API 鏂囨。涓殑鐩稿叧鍐呭</li>
+				<li><p>鍘诲嬀閫?checkbox 姣旇緝涓嬮潰鐨勬暟瀛楀彉鍖栵細<br/>
+					<ul id="log" class="log" style="height:110px;">
+						<li>褰撳墠琚嬀閫夌殑鑺傜偣鍏?<span id="checkCount" class="highlight_red"></span> 涓?/li>
+						<li>褰撳墠鏈鍕鹃€夌殑鑺傜偣鍏?<span id="nocheckCount" class="highlight_red"></span> 涓?/li>
+						<li>鍕鹃€夌姸鎬佸姣旇鍒欙細<input type="radio" id="init" name="stateType" class="radio first" checked /><span>涓?zTree 鍒濆鍖栨椂瀵规瘮</span><br/>
+							<input type="radio" id="last" name="stateType" class="radio first" style="margin-left:108px;"/><span>涓庝笂涓€娆″嬀閫夊悗瀵规瘮</span></li>
+						<li>褰撳墠琚慨鏀瑰嬀閫夌姸鎬佺殑鑺傜偣鍏?<span id="changeCount" class="highlight_red"></span> 涓?/li>
+					</ul></p>
+				</li>
+				</ul>
+			</li>
+			<li class="title"><h2>2銆乻etting 閰嶇疆淇℃伅璇存槑</h2>
+				<ul class="list">
+				<li>鍚?"checkbox 鍕鹃€夋搷浣? 涓殑璇存槑</li>
+				</ul>
+			</li>
+			<li class="title"><h2>3銆乼reeNode 鑺傜偣鏁版嵁璇存槑</h2>
+				<ul class="list">
+				<li>鍚?"checkbox 鍕鹃€夋搷浣? 涓殑璇存槑</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+</BODY>
+</HTML>

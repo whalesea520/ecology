@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<special-non>
+		<urls>
+			<url>
+				<value>/docs/docbrowsermain.jsp</value>
+				<params>
+					<param>
+						<value>url</value>
+						<rules>
+							<rule>##CONST:URL##</rule>
+						</rules>
+					</param>
+				</params>
+			</url>
+			<url>
+				<value>/workplan/data/workplanoperation.jsp</value>
+				<params>
+					<param>
+						<value>from</value>
+						<rules>
+							<rule>##CONST:LETTERS##</rule>
+						</rules>
+					</param>
+				</params>
+			</url>
+			<url>
+				<value>/wui/theme/ecology8/page/skinsetting.jsp</value>
+				<params>
+					<param>
+						<value>cssid</value>
+						<rules>
+							<rule>##CONST:LETTERS##</rule>
+						</rules>
+					</param>
+					<param>
+						<value>templateid</value>
+						<rules>
+							<rule>##CONST:MULTINUMBER##</rule>
+						</rules>
+					</param>
+				</params>
+			</url>
+			
+		</urls>
+	</special-non>
+	
+</root>

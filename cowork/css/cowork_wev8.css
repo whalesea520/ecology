@@ -1,0 +1,300 @@
+#divContent{
+	height: 100%;
+	width: 100%;
+}
+#listTitle{
+	width: 100%;
+	border-left: 1px solid #d8ecef
+}
+#divListContent{
+	overflow-y:auto; 
+	background-color: #ededed;
+	width:100%;height:100%;position: relative;
+}
+
+.checkBtn{
+	width:50px;
+	height: 23px;
+	padding:0px;
+	margin-top:4px;
+	float:left;
+}
+.operateBtn{
+	width:50px;
+	height: 23px;
+	float:right;
+	margin-top:4px;
+	margin-right:0px;
+}
+
+/*下拉框*/
+.dropDown{
+	left:10px;
+	top:10px;
+	width:100px;
+	color: #333333;
+	border: 1px solid #81b3cc;
+	background-color: #F7F7F7;
+	/*padding-left:2px;*/
+	/*padding-right:2px;*/
+	position:absolute;
+	display:none;
+	z-index: 2;
+}
+
+.dropDown .row{
+	width:100%;
+	height:24px;
+	padding-bottom:2px;
+	cursor: default;
+}
+
+.dropDown .check{
+	margin-left: 5px;
+	margin-top:3px;
+	width: 12px;
+	height:10px;
+	float: left;
+}
+
+.dropDown .remove{
+	background-image:url("/cowork/images/labelStatus_wev8.png");
+	background-position: -48px 50%;
+	background-repeat:no-repeat;
+}
+
+.dropDown .edit{
+	background-image:url("/cowork/images/labelStatus_wev8.png");
+	background-position: -72px 50%;
+	background-repeat:no-repeat;
+}
+
+.dropDown .add{
+	background-image:url("/cowork/images/labelStatus_wev8.png");
+	background-position: -60px 50%;
+	background-repeat:no-repeat;
+}
+.dropDown .check input{
+	height:14px;
+	width: 14px;
+	border: 0px solid #D2D2D2;
+	background-color: #F7F7F7;
+}
+
+.dropDown .operate{
+	height:15px;
+	float: left;
+	vertical-align:middle;
+	text-align:left !important;
+	width:none !important;
+	
+}
+
+.dropDown .row .operate{
+	height:15px;
+	float: left;
+	vertical-align:middle;
+	text-align:center;
+	width:none !important;
+}
+
+.lable{
+	font-size: 12;
+	color: #666666;
+	margin:5 0 0 10;
+	
+}
+
+.dropDown .operateOver{
+	
+	vertical-align:middle;
+	text-align:center;
+	height:15px;
+	float: left;
+	/*background-color: #b4c4d1;*/
+	cursor: pointer;
+	color:blue;
+}
+
+#title{
+	color: #606060;
+	font-weight: bolder;
+	font-size: 12px;
+	height: 100%;
+	float:left;
+}
+
+
+/*下拉操作选项鼠标移动背景*/
+.dropDown .rowOver{
+	width:100%;
+	height:24px;
+	/*float: left;*/
+	padding-bottom:2px;
+	background-color: #9cddff;
+	font-weight:bold;
+	cursor:pointer;
+}
+/*下拉操作选项标题*/
+.dropDown .row .title{
+	width: 90px;
+	float: left;
+	color: #333333;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	overflow: hidden;
+	padding-left:4px;
+	*margin-top:3px;
+}
+
+.dropDown .rowOver .title{
+	width: 90px;
+	float: left;
+	/*color: #ffffff;*/
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	overflow: hidden;
+	padding-left:4px;
+	color:#0b687a;
+	*margin-top:3px;
+}
+
+
+a.btnEcology  {
+		border:medium none;
+		cursor:pointer;
+		display:inline-block;
+		height:23px;
+		line-height:23px;
+		overflow:hidden;
+		text-align:center;
+		color:#5A5A5A;
+		text-decoration:none;
+		font-size:12px;
+	}
+a.btnEcology .left {
+		background-position:top left;
+		height:23px;
+		padding-left:5px;
+		float:left;
+	}
+a.btnEcology .right {
+		background-position:top right;			
+		height:23px;
+		width:5px;
+		float:left;
+	}
+a.btnEcology:hover{
+	    color:#5A5A5A;
+		text-decoration:none;
+	}
+a.btnEcology:hover .left {
+		background-position:bottom left;		
+	}
+
+a.btnEcology:hover .right {
+		background-position:bottom right;
+		
+	}
+
+
+/*协作区树形结构选中颜色*/
+.currentArea{color:blue}
+
+/*viewCowork中的样式*/
+/*
+.loading{
+	position: absolute;
+	top: 40%;
+	left: 50%;
+}
+#loading{
+    position:absolute;
+    left:25%;
+    background-image:url('/cowork/images/loading_bg_wev8.png');
+    background-repeat: no-repeat;
+    top:30%;
+    padding:8px;
+    z-index:20001;
+    height:auto;
+    display:none;
+    width:250px;
+    height:65px;
+}
+#bg { DISPLAY: none; Z-INDEX: 1; FILTER: alpha(opacity=20); LEFT: 0px; WIDTH: 100%; POSITION: absolute; TOP: 0px; opacity: 0.1 }
+*/
+.discuss_div{width: 100%;padding-top: 7px;padding-bottom: 3px;} 
+.discuss{width: 100%;}
+.discuss .userHead{
+	white-space: nowrap;vertical-align:top;background-repeat: no-repeat;float: left;width:35px;height:37px;padding-top:1px;
+	border-bottom-left-radius:3px;
+	border-bottom-right-radius:3px;
+	border-top-left-radius:3px;
+	border-top-right-radius:3px;
+}
+.coworkTitle{font-weight: bold;font-size: 13px;color:#034956;;margin-top:8px}
+.titleLine{border-top:1px solid #CEE1EE;width: 98%;line-height:1px;}
+.discussNewCount{background-color:#E0E0E0;width: 98%;padding-top: 8px;padding-bottom: 5px;text-align:center}
+.discussLline{width:100%;;border-top:1px solid  #c8ebfd;line-height:1px}
+a.replayLink:link{color:#999999;margin-right: 5px;text-decoration: none;font-size:12px}
+a.replayLink:visited{color:#999999;margin-right: 5px;text-decoration: none;;font-size:12px}
+a.replayLink:hover{color:#000000;margin-right: 5px;text-decoration: underline;;font-size:12px}
+/*.replayBtn{height: 20px;background: #2EB8E2;color:#ffffff;padding:2px 0 0 5px;cursor: pointer;border: 0px}*/
+.replayBtn{background: none repeat scroll 0 0 #2EB8E2;border: 0 none;color: #FFFFFF;cursor: pointer;margin-left: 3px;margin-top: 2px;height:20px;}
+a.cancelBtn:link,a.cancelBtn:visited,a.cancelBtn:hover{margin-left:5px}
+.replayContent{width: 100%;overflow-y:hidden;color:#000000;}
+.replaydiv{display: none;border: 1px solid #DCDCDC;padding: 5px 10px 5px 10px;margin: 2px 0px 5px 0px;background-color: #ffffff;color:#999999}
+.externalDiv{width: 99%;display: none;margin-top: 3px}
+a.externalBtn:link,a.externalBtn:visited,a.externalBtn:hover{
+	text-decoration: underline;
+	color:#5C5C5C;
+	margin-top: 4px;background:url('/cowork/images/blue/down_wev8.png') no-repeat right center;
+	padding-right:14px;
+	cursor: pointer;
+	height:30px;line-height:30px;vertical-align: middle;
+}
+a.highEditorBtn:link,a.highEditorBtn:visited,a.highEditorBtn:hover{text-decoration: underline;color:#5C5C5C;font-size: 13px;margin-left: 5px}
+.remarkContent{width: 99.8%;height: 60px;overflow-y:hidden;color:#000000;}
+a.relatedLink:link,a.relatedLink:visited{
+	color:#929393;
+	margin-right: 8px;
+	font-size:12px;
+}
+.btnSubmit{width: 81px;height: 26px;background:url('/cowork/images/submit-bg_wev8.png');border: 0px;letter-spacing:4px;cursor: pointer;font-weight:bold;color:#103984}
+.btnSubmit-hover{background-image:url('/cowork/images/submit-bg-hover_wev8.png');}
+/*附加功能div*/
+.externalDiv a:link,.externalDiv a:visited,.externalDiv a:hover{color:#0000FF;margin-right: 8px;text-decoration:underline}
+/*附件上传文件名称*/
+.progressName{color:#0000FF !important;font-weight:normal}
+/*分页*/
+.pagenav{background:#ffffff;color:#000;width: 100%;text-align:right;margin:5 0;vertical-align: middle;}
+.pagenav a.pageActive:link,.pagenav a.pageActive:visited{cursor:hand;TEXT-DECORATION:none;color:blue}
+.pagenav a.pageActive:hover{cursor:hand;TEXT-DECORATION:underline;color:blue}
+/*tab切换*/
+.navTab{margin-top: 5px;width: 99%;display: none;}
+.navTab .letf_tab{width:5px;height: 25px;border-bottom: 1px solid #c2e2e7;word-break: keep-all;}
+.navTab .normal_tab{background: url('/cowork/images/tab2_wev8.png');width: 79px;height: 25px;border-bottom: 1px solid #c2e2e7;cursor: pointer;word-break: keep-all;text-align: center;}
+.navTab .active_tab{background: url('/cowork/images/tab.active2_wev8.png');border-bottom: 0px solid #c2e2e7;cursor:normal}
+.navTab .line_tab{border-bottom: 1px solid #c2e2e7;width:100%}
+.navTab .seprator_tab{border-bottom: 1px solid #c2e2e7;width:2px}
+.navTab .related_div{padding-top: 5px;display: none}
+.navTab .related_active_div{padding-top: 5px}
+/*未读*/
+.norecord{width: 100%;text-align:center;border: 1px solid #dadada;background: #fff;height:60px;line-height:60px;}
+ 
+.discuss_content {
+  padding-bottom: 5px;word-break:break-all
+}
+.discuss_replayContent{padding-bottom: 5px;padding-top: 5px;word-break:break-all}
+.discuss_content table,.discuss_replayContent table,#showPart table,#showAll table{border-collapse:collapse;}
+#editdiv{width: 100%;}
+#editdiv .userHead{background-image:url('/cowork/images/head-bg_wev8.png');background-repeat: no-repeat;white-space: nowrap;float: left;width: 40px;height:37px;padding-top:1px;padding-left:2px;;}
+#editdiv .discussContent{float: left;}
+.discussOperation{margin-top: 3px;height:28px;}
+
+#uploadDiv{height:30px;padding-top: 5px;position:relative;}
+#edit_uploadDiv{height:30px;padding-top: 5px;position:relative;}
+
+
+
+

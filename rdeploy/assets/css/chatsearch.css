@@ -1,0 +1,215 @@
+* {
+	font-family:'Microsoft YaHei';
+	font-size:12px;
+}
+input {
+	outline:none;
+}
+.rowinput {
+	width:494px;height:35px;border:1px solid #e3e3e3;padding:0px 5px;color:#5d5d5d;
+}
+.rowbock {
+	height:35px;border:1px solid #e3e3e3;color:#99b2c6;line-height:35px;position:relative;
+}
+
+.rowbock2cell {
+	width:496px;height:45px;color:#99b2c6;line-height:35px;position:relative;
+}
+
+.rowwidth1 {
+	width:323px;
+}
+
+.rowbock .rowtitle {
+	padding:0px 10px;
+	color: #8e9598;
+}
+
+.rowinputblock {
+	position:absolute;right:0px;top:0px;height:35px;line-height:35px;font-size:14px;
+	overflow:hidden\9;
+}
+
+.rowinputblock-brow-ie8 {
+    overflow:inherit\9;
+}
+
+.rowinputblockleft1 {
+	left:50px;
+}
+
+.rowinputblockleft2 {
+	left:65px;
+}
+
+.rowinputblockleft3 {
+	left:45px;
+}
+
+.rowinputblockleft4 {
+	left:55px;
+}
+
+.rowinputblock .rowinputtext {
+	width:100%;border:none;font-size:14px;
+}
+
+.rowinputblock .rowinputselectblock {
+	width:100%;display:table-cell;height:35px;vertical-align:middle;font-size:14px;
+}
+.rowinputselectblock select {
+	width:100%;
+}
+
+.e8_os {
+	width:190px!important;
+	height:34px!important;
+}
+
+.rowinputblockleft4 .e8_os {
+	width:210px!important;
+	height:34px!important;
+}
+
+.rowwidth1 .rowinputblockleft2 .e8_os {
+	width:257px!important;
+}
+
+.rowwidth1 .rowinputblockleft4 .e8_os {
+	width:267px!important;
+}
+
+.e8_innerShowContent {
+/*	border: 1px solid #d7d9e0;*/
+}
+.e8_browserInputMore {
+	height:34px!important;;
+}
+.ac_input {
+	height: 34px !important;
+	display: inline!important;
+}
+
+.e8_innerShow {
+	min-height: 34px;
+	width: 15px;
+	margin-left: 0px;
+}
+
+.e8_innerShowContent div {
+	height: 34px;
+	font-size:14px;
+}
+
+.e8_spanFloat {
+	position: absolute;
+	top: 8px;
+}
+.e8_outScroll {
+	border:none;
+}
+
+.searchline {
+	height:10px!important;
+}
+
+.sbPerfectBar ol li a{
+	font-size:12px!important;
+}
+
+a {
+	text-decoration: none!important;
+	color:#000;
+}
+
+.e8_showNameClass a {
+	font-size:12px!important;
+}
+.e8_showNameClass {
+	margin:0px!important;
+	margin-top:-8px!important;
+}
+.e8_delClass {
+	height:34px!important;
+}
+.e8_showNameClass {
+	height:34px!important;
+}
+.searchbtn {
+	display:inline-block;height:35px;line-height:35px;width:153px;text-align:center;color:#fff;font-size:12px;
+	cursor:pointer;
+}
+
+.searchbtn_cl {
+	background:#99b3c5;
+}
+
+.searchbtn_rht {
+	background:#0582e4;float:right;
+}
+
+
+.searchbtn_cl:hover {
+	background:#adc7d9;
+}
+
+.searchbtn_rht:hover {
+	background:#339def;float:right;
+}
+.rowinputtext{
+	border:0px!important;
+	height:33px!important;
+}
+.e8_outScroll{
+	border:0px!important;
+}
+
+.e8_innerShow_button_right30{
+	height:33px;
+	right:10px;
+	z-index: 12;
+}
+.color-2{
+	font-size:12px;
+	font-family: '微软雅黑';
+	color: #8e9598;
+}
+
+.opensright{
+	left: 628px!important;
+}
+.daterangepicker.opensright:before {
+  position: absolute;
+  top: -7px;
+  left: 288px!important;
+  display: inline-block;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #ccc;
+  border-left: 7px solid transparent;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  content: '';
+}
+.daterangepicker.opensright:after {
+  position: absolute;
+  top: -6px;
+  left: 288px!important;
+  display: inline-block;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #fff;
+  border-left: 6px solid transparent;
+  content: '';
+}
+.weatable_wfstatu{
+	background:#ffffff;
+	height:35px;
+	margin-left:10px;
+}
+.advancedSearch .sbToggle{
+	margin-top:5px;
+	outline:none;
+}
+.advancedSearch .sbSelector{
+	height:35px;
+	line-height: 35px;
+	color: #3c4350;
+}

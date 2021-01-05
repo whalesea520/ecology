@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<special-non>
+		<urls>
+			<url>
+				<value>/mobilemode/buttonEntry.jsp</value>
+				<params>
+					<param>
+						<value>mecStyle</value>
+						<rules>
+							<rule>##CONST:CODE##</rule>
+						</rules>
+					</param>
+					<param>
+						<value>buttonEntry</value>
+						<rules>
+							<rule>##CONST:SQLWHERE##</rule>
+						</rules>
+					</param>
+				</params>
+			</url>
+		</urls>
+	</special-non>	
+</root>

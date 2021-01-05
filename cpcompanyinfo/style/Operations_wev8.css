@@ -1,0 +1,297 @@
+/*战略运营*/
+@charset "utf-8";
+/*---字体样式---*/
+.FontYahei{font-family:"Microsoft YaHei";}
+
+/*---共用---*/
+.OBoxW{margin:0 auto;}
+
+.OBoxWBg{background:url(../images/O_28_wev8.jpg) repeat-x top;}
+
+.OBoxWBg1{background:url(../images/O_47_wev8.jpg) repeat-x top;}
+
+.OTwxt{width:243px;height:108px;}
+
+/*---表单---*/
+.OInput{background:url(../images/O_30_wev8.jpg) no-repeat left top;border:#d0d0d0 1px solid;border-left:none;height:17px;line-height:17px; padding:0px 0px;}
+.OSelectse{background:url(../images/O_30_wev8.jpg) no-repeat left top;border:#d0d0d0 1px solid;border-left:none;height:20px;line-height:17px; }
+.OSelect{background:url(../images/O_30_wev8.jpg) no-repeat left top;border:#d0d0d0 1px solid;border-left:none;height:20px;line-height:17px; }
+
+.OSelect2{background:url(../images/O_50_wev8.jpg) top repeat-x;border:#d0d0d0 1px solid;border-left:none;height:19px;line-height:17px; }
+
+.OInput2{background:url(../images/O_43_wev8.jpg) top repeat-x;border:#d0d0d0 1px solid; padding:0px 0px;}
+
+.OInput3{background:url(../images/O_50_wev8.jpg) top repeat;border:#d0d0d0 1px solid; padding:0px 0px;}
+
+.OInput4{background:url(../images/O_51_wev8.jpg) top repeat-x;border:#d0d0d0 1px solid; padding:0px 0px;}
+
+/*---按钮样式---*/
+.OBtnUl li, .OBtnUl li em, .OBtnUl li em i, .OBtnUl li em i a{min-width:30px;width:auto!important;width:30px;float:left;white-space:nowrap;height:20px;line-height:20px;display:block;}
+
+.OBtnUl li{background:url(../images/O_29_wev8.gif) repeat-x   left -30px;margin-right:3px; display:inline}
+
+.OBtnUl li em{background:url(../images/O_29_wev8.gif) no-repeat left top;}
+
+.OBtnUl li em i{background:url(../images/O_29_wev8.gif) no-repeat right -60px;padding:0px 5px; text-align:center}
+
+/*---头部---*/
+.OHeadr{background:url(../images/O_02_wev8.jpg) repeat-x top;width:100%;height:49px;float:left;}
+
+.OHeadr h1{width:130px;height:42px;float:left;background:url(../images/OLogo_wev8.png) no-repeat 10px center;}
+
+.OHeadr h2{width:200px;padding-left:10px;float:left;height:42px;font-size:13px;line-height:42px;}
+
+.OHeadr ul{width:600px;float:right;padding-top:15px;}
+
+.OHeadr ul li{min-width:50px;width:auto!important;width:50px; white-space:nowrap;float:right;margin-left:15px;display:inline}
+
+.OHeadr ul li img{margin-bottom:-3px;margin-right:5px;}
+
+/*---导航---*/
+.ONav li{min-width:75px;width:auto!important;width:75px;height:26px;float:left;margin-right:2px;display:inline;background:url(../images/O_10_wev8.jpg) repeat-x; text-align:center;line-height:26px;}
+
+.ONav li a{min-width:75px;width:auto!important;width:75px;float:left;display:block;height:25px;border:1px solid #e0e0e0; border-bottom:none;}
+
+.ONav li a:hover,.ONav li a.hover{background:url(../images/O_08_wev8.jpg) repeat-x top center;color:#FFF !important;border:1px solid #0887c7; border-bottom:none;}
+
+.ONav li a:hover div,.ONav li a.hover div{min-width:75px;width:auto!important;width:75px;background:url(../images/O_06_wev8.jpg) no-repeat left top;}
+
+.ONav li a:hover div div,.ONav li a.hover div div{background:url(../images/O_07_wev8.jpg) no-repeat right top;}
+
+.liBtnStyle{min-width:50px;width:auto!important;width:50px; white-space:nowrap;float:right;margin-left:15px;display:inline}
+
+/*---导航子分类---*/
+
+.ONavSubnav li{min-width:50px;width:auto!important;width:50px;height:20px;line-height:20px;float:left;display:inline;text-align:center;margin:0 10px;}
+
+.ONavSubnav li a{min-width:50px;width:auto!important;width:50px;float:left;display:block;height:20px;line-height:20px;padding-left:3px; white-space:nowrap}
+
+.ONavSubnav li a div{padding-right:3px;}
+
+.ONavSubnav li a div,.ONavSubnav li a div div{min-width:50px;width:auto!important;width:50px;}
+
+.ONavSubnav li a div div{padding:0px;}
+
+.ONavSubnav li a:hover,.ONavSubnav li a.hover{background:url(../images/O_09_wev8.gif) no-repeat top left;color:#FFF  !important;}
+
+.ONavSubnav li a:hover div,.ONavSubnav li a.hover div{background:url(../images/O_09_wev8.gif) no-repeat right -60px;}
+
+.ONavSubnav li a:hover div div,.ONavSubnav li a.hover div div{background:url(../images/O_09_wev8.gif) repeat-x left -30px;}
+
+
+/*---主要内容---*/
+/*--左边--*/
+.OContLeft{width:385px;}
+
+.OContLeftTit{background:url(../images/O_12_wev8.jpg) no-repeat;width:158px;height:26px;line-height:26px;color:#FFF}
+
+.OContLeftTit .img{margin-bottom:-3px;margin-right:5px;margin-left:10px;}
+
+.OContLeftNav{height:405px;}
+
+.OContLeftNav li a{background:url(../images/OLeftSubnav_wev8.jpg) no-repeat;border-bottom:1px solid #d6d6d6;height:25px;line-height:25px;display:block;padding-left:8px;}
+
+.OContLeftNav li a .img{margin-bottom:-3px;}
+
+.OContLeftSubnav li a{background:#f2f2f2;padding-left:15px;}
+
+.OContLeftSubnav li a i{display:block;width:14px;height:14px;background:url(../images/O_16_wev8.png) no-repeat;line-height:14px;font-size:0px;}
+
+.OContLeftSubnav li a:hover i,.OContLeftSubnav li a.hover i{background:url(../images/O_17_wev8.png) no-repeat;}
+
+.OContLeftSubnav li ul li a{border-bottom:1px #d6d6d6 dashed;padding-left:40px;background:url(../images/O_19_wev8.png) no-repeat 20px 5px;}
+
+.OContLeftSubnav li ul li a:hover,.OContLeftSubnav li ul li a.hover{background:url(../images/O_18_wev8.png)  no-repeat 20px 5px;}
+
+/*--右边--*/
+.OContRight{width:561px;background:url(../images/O_27_wev8.jpg) no-repeat left center ;height:431px;margin-left:1px;display:inline;float:left;padding-left:3px;}
+
+.OContRightBox01{width:525px;}
+
+.OContRightBox02{width:254px;}
+
+.OContRightBox03{width:245px;}
+
+.OContRightBox04{background:url(../images/O_26_wev8.jpg) no-repeat left center}
+
+
+.OContRightBoxHeight{height:170px;}
+
+.OContRightBoxHeight2{height:137px;}
+
+
+
+.OContRight01Bg{background:url(../images/O_21_wev8.jpg) no-repeat;height:26px;width:525px;}
+
+.OContRightMsg li{min-width:20px;width:auto!important;width:20px;height:20px;line-height:17px;float:left;display:inline;text-align:center;margin-right:1px;}
+
+.OContRightMsg li a{min-width:20px;width:auto!important;width:20px;float:left;display:block;height:20px;line-height:17px;padding-left:5px; white-space:nowrap}
+
+.OContRightMsg li a div{padding-right:5px;height:20px;line-height:17px;}
+
+.OContRightMsg li a div,.OContRightMsg li a div div{min-width:20px;width:auto!important;width:20px;}
+
+.OContRightMsg li a:hover,.OContRightMsg li a.hover{background:url(../images/O_20_wev8.png) no-repeat top left;}
+
+.OContRightMsg li a:hover div,.OContRightMsg li a.hover div{background:url(../images/O_20_wev8.png) no-repeat right -60px;}
+
+.OContRightMsg li a:hover div div,.OContRightMsg li a.hover div div{background:url(../images/O_20_wev8.png) repeat-x left -30px;padding:0px;}
+
+/*--列表--*/
+.OContRightBoxListPAll{padding:15px 7px;}
+.OContRightBoxList li{background:url(../images/O_25_wev8.jpg) no-repeat 15px 7px; padding-left:35px; height:25px;line-height:25px;border-bottom:1px solid #edf0f1;}
+
+/*-滚动条-*/
+.OContRightScroll{overflow-y:scroll; overflow-x:hidden;color:#626262}
+
+.OContHiddenScroll{overflow-y:hidden; overflow-x:hidden;height:215px;}
+
+.OScrollHeight{height:223px;}
+
+.OScrollHeight2{height:193px;}
+
+.OScrollHeight3{height:243px;}
+
+.OScrollHeight4{height:378px;}
+
+/*-底部提醒-*/
+.OBottomMessage{
+	margin-top:8px;margin-bottom:8px; margin-left:10px; width:98%; height:25px; border-style:solid; border-color:#999999; border-width:thin; background-image:url(../images/O_49_wev8.png); background-repeat:repeat-x;
+}
+
+
+/*-按钮-*/
+.OSearch{right:4px; top:5px;}
+
+.OSearch2{right:1px; top:-1px;#top:2px;}
+
+
+.OContRightMsg2 li{min-width:30px;width:auto!important;width:30px;height:20px;line-height:17px;float:left;display:inline;text-align:center;margin-right:2px;}
+
+.OContRightMsg2 li a{min-width:30px;width:auto!important;width:30px;float:left;display:block;height:17px;line-height:20px;padding-left:5px; white-space:nowrap}
+
+.OContRightMsg2 li a div{padding-right:5px;}
+
+.OContRightMsg2 li a div,.OContRightMsg2 li a div div{min-width:30px;width:auto!important;width:30px;}
+
+.OContRightMsg2 li a div div{padding:0px;}
+
+.OContRightMsg2 li a:hover,.OContRightMsg2 li a.hover{background:url(../images/O_32_wev8.png) no-repeat top left;color:#FFF !important;}
+
+.OContRightMsg2 li a:hover div,.OContRightMsg2 li a.hover div{background:url(../images/O_32_wev8.png) no-repeat right -60px;}
+
+.OContRightMsg2 li a:hover div div,.OContRightMsg2 li a.hover div div{background:url(../images/O_32_wev8.png) repeat-x left -30px;}
+
+
+/*-表格-*/
+
+#OTable2 td, .OTable2{background:url(../images/OBg5_wev8.gif) repeat-x top;line-height:24px;height:24px;padding-top:0px;padding-bottom:0px;}
+
+#OTable3 td, .OTable3{background:url(../images/O_35_wev8.jpg) repeat-x top;line-height:14px;height:44px;padding-top:0px;padding-bottom:0px;}
+
+
+.OTable{background:#dde3e1}
+
+.OTable td{background:#fff; padding-top:4px; padding-bottom:3px;}
+
+.OTable tr.alt td {background:#f2f2f2;}
+
+.OTable tr.over td {background:#ccdfed;}
+
+
+/*---脚部---*/
+.Ofoot{ padding-top:5px;padding-bottom: 5px;background-color: #f4f4f4}
+
+
+/*--------------------------------------------------项目展示--------------------------------------------------------*/
+
+/*--------------------------------------------------项目展示--------------------------------------------------------*/
+.OBoxTit{background:url(../images/O_34_wev8.jpg) ;height:26px;}
+
+.OSubnavMsg li{min-width:50px;width:auto!important;width:50px;white-space:nowrap;float:left; margin-right:10px;display:inline}
+
+/*--------------------------------------------------项目展示-表头--------------------------------------------------------*/
+
+/*--------------------------------------------------项目展示-表头--------------------------------------------------------*/
+
+.OHeaderLayer{width:940px;height:540px; z-index:100; top:50%; left:50%; margin-left:-470px; margin-top:-202px;}
+
+.OHeaderLayer2{width:887px;height:440px; z-index:100; top:50%; left:50%; margin-left:-445px; margin-top:-220px;}
+
+.OHeaderLayer3{width:490px;height:400px; z-index:100; top:50%; left:50%; margin-left:-246px; margin-top:-202px;}
+
+.OHeaderLayer4{width:760px;height:400px; z-index:100; top:50%; left:50%; margin-left:-381px; margin-top:-200px;}
+
+.OHeaderLayer5{width:690px;height:400px; z-index:100; top:50%; left:50%; margin-left:-346px; margin-top:-202px;}
+
+.OHeaderLayer6{width:540px;height:400px; z-index:100; top:50%; left:50%; margin-left:-270px; margin-top:-200px;}
+
+.OHeaderLayer7{width:540px;height:550px; z-index:100; top:50%; left:50%; margin-left:-270px; margin-top:-202px;}
+
+.OHeaderLayer8{width:490px;height:550px; z-index:100; top:50%; left:50%; margin-left:-246px; margin-top:-202px;}
+
+
+.OHeaderLayerAB{width:490px;height:400px; z-index:100; top:50%; left:50%; margin-left:-246px; margin-top:-200px;}
+
+.OHeaderLayerW{width:887px;}
+
+.OHeaderLayerW2{width:810px;}
+
+.OHeaderLayerW3{width:490px;}
+
+.OHeaderLayerW4{width:431px;}
+
+.OHeaderLayerW5{width:690px;}
+
+.OHeaderLayerW6{width:631px;}
+
+.OHeaderLayerW51{width:760px;}
+
+.OHeaderLayerW61{width:701px;}
+
+.OHeaderLayerW7{width:540px;}
+
+.OHeaderLayerW8{width:475px;}
+
+.OHeaderLayerW9{width:480px;}
+
+.OHeaderLayerTit{background:url(../images/O_41_wev8.jpg) repeat-x top;height:38px;line-height:38px;}
+
+.OHeaderNaN{background:url(../images/O_42_wev8.png) no-repeat center;padding:6px;font-size:10px;font-family:'Arial';text-align:center;}
+
+.BtnLM {
+	background:none;
+	border:none;
+	BORDER-RIGHT: #2489d7 1px outset;
+    BORDER-TOP:  #2489d7 1px outset;
+    BORDER-LEFT:  #2489d7 1px outset;
+    BORDER-BOTTOM: #2489d7 1px outset;
+    PADDING-TOP: 1px;
+    PADDING-LEFT: 2px;
+    PADDING-BOTTOM: 1px;
+    PADDING-RIGHT: 2px;
+    FONT-SIZE: 12px;
+    BACKGROUND-IMAGE: url(btn_bg_wev8.jpg) ;
+    MARGIN: 3px 0px 1px 2px;
+    OVERFLOW: visible;
+    HEIGHT: 18px;
+    CURSOR: pointer;
+    COLOR: #444446;
+	BACKGROUND-REPEAT: repeat-x;
+    FONT-FAMILY: "Verdana";
+    BACKGROUND-COLOR: transparent;
+    TEXT-ALIGN: left;
+   	line-height:14px
+}
+
+
+BUTTON.btn { 	
+	border:none;BACKGROUND: url(button/btn_wev8.png) no-repeat;color:#333;WIDTH: 116px;height:23px;text-align:left;cursor:pointer;padding-left:10px;padding-top:2px;margin-right:5px;
+}
+
+BUTTON.btnAdvanced {
+	border:none;BACKGROUND: url(button/btnAdvanced_wev8.png) no-repeat;color:#333;WIDTH: 116px;height:23px;text-align:left;cursor:pointer;padding-left:20px;padding-top:2px;margin-right:5px;
+}
+BUTTON.btnCancel {
+	border:none;BACKGROUND: url(button/btnCancel_wev8.png) no-repeat;color:#333;WIDTH: 116px;height:23px;text-align:left;cursor:pointer;padding-left:20px;padding-top:2px;margin-right:5px;
+}

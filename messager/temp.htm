@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+ </HEAD>
+
+ <BODY>
+  
+ </BODY>
+</HTML>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+	function p(i){
+		this.side=i;
+	}
+	p.prototype.geti=function(){
+		alert(this.side)
+	}
+
+
+	function pChild(j,k){
+		p.call(this,3);
+		this.j=j;
+		this.k=k;
+	}
+	pChild.prototype=new p();
+	
+	pChild.prototype.getj=function(){
+	 alert(this.j)
+	}
+
+
+	var p1=new p(1);
+	p1.geti();
+
+	var p2=new pChild(2,3);
+	p2.getj();
+//-->
+</SCRIPT>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components>
+	<component ids="1,7,8,9,10" schema="WF" ignore="1">
+        <url><![CDATA[/mobile/plugin/1/view.jsp?fromES=true&detailid={ID}]]></url>  
+        <client><![CDATA[/mobile/plugin/1/client.jsp?fromES=true&detailid={ID} ]]></client> 
+	</component>
+	<component ids="2,3" schema="DOC" ignore="1">
+		<url><![CDATA[/mobile/plugin/2/view.jsp?fromES=true&detailid={ID}]]></url>
+	</component>
+	<component ids="4" schema="WKP">
+		<url><![CDATA[/mobile/plugin/4/view.jsp?fromES=true&detailid={ID}&id={ID}]]></url>
+	</component>
+	<component ids="6" schema="RSC">
+		<url><![CDATA[/mobile/plugin/6/view.jsp?fromES=true&detailid={ID}]]></url>
+	</component>
+	<component ids="13" schema="EMAIL">
+		<url><![CDATA[/mobile/plugin/email/EmailView.jsp?fromES=true&detailid={ID}&mailid={ID}]]></url>
+	</component>
+	<component ids="14" schema="COW">
+		<url><![CDATA[/mobile/plugin/cowork/view.jsp?fromES=true&module=16&detailid={ID}]]></url>
+	</component>
+	<component ids="15" schema="CRM">
+		<url><![CDATA[/mobile/plugin/crm/CrmView.jsp?fromES=true&detailid={ID}&customerid={ID}]]></url>
+	</component>
+	<component ids="" schema="FAQ" ignore="1">
+		<url><![CDATA[/mobile/plugin/fullsearch/ViewFaqDetailLib.jsp?faqId={ID}]]></url>
+	</component>
+	
+	<!-- 移动引擎邮件  在/mobile/plugin/plugin.xml中对应的ID -->
+	<component ids="" schema="EMAIL" refUrl="/mobilemode/apps/e-cology/email/appHomepage.jsp">
+		<url><![CDATA[/mobilemode/apps/e-cology/email/appHomepage.jsp?detailid={ID}]]></url>
+	</component>
+	<!-- 移动引擎协作  在/mobile/plugin/plugin.xml中对应的ID -->
+	<component ids="" schema="COW" refUrl="/mobilemode/apps/cowork2/appHomepage.jsp">
+		<url><![CDATA[/mobilemode/apps/cowork2/appHomepage.jsp?detailid={ID}]]> </url>
+	</component>
+	<!-- 移动引擎客户  在/mobile/plugin/plugin.xml中对应的ID -->
+	<component ids="" schema="CRM" refUrl="/mobilemode/apps/e-cology/crm/index.jsp">
+		<url><![CDATA[/mobilemode/apps/e-cology/crm/index.jsp#&/mobilemode/apps/e-cology/crm/customer.jsp?id={ID}]]></url>
+	</component>
+	
+	<!-- 云商店客户  在/mobile/plugin/plugin.xml中对应的ID -->
+	<component ids="" schema="CRM" refUrl="/cloudstore/app/no0000035/index.jsp">
+		<url><![CDATA[/cloudstore/app/no0000035/index.jsp#&/cloudstore/app/no0000035/customer.jsp?id={ID}]]></url>
+	</component>
+	
+</components>

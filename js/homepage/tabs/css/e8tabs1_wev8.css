@@ -1,0 +1,263 @@
+/* box */
+.e8_box {
+	height:100%;
+	width:100%;
+	background: #fff;
+	display:none;
+	overflow:hidden;
+}
+.tab_menu{
+	padding: 0px;
+	margin: 0px;
+	background:#fff;
+	float:left;
+	height: 40px;
+	line-height: 40px;
+	/*width:120px;*/
+	overflow-y:hidden;
+	white-space:nowrap;
+	clear:both;
+}
+
+.e8_rightBox {
+	overflow:hidden;
+	padding: 0px;
+	margin: 0px;
+	background: #fff;
+	float:right;
+	text-align:right;
+	height:40px;
+	visiblity:hidden;
+	white-space:nowrap;
+	position:absolute;
+	right:0;
+	line-height:40px;
+}
+
+.tab_menu li {
+	float: left;
+	height: 40px;
+	line-height: 43px;
+	text-align: center;
+	cursor: pointer;
+	list-style-type: none;
+	padding-left:5px;
+	padding-right:5px;
+	color:#B8B8B8;
+	font-size:12px;
+	font-weight:normal;
+}
+
+.tab_menu li a {
+	color:#B8B8B8;
+	display:inline-block;
+	overflow: hidden;
+    /*text-overflow: ellipsis;*/
+    vertical-align: middle;
+    white-space: nowrap;
+    word-break: keep-all;
+    height:100%;
+    *padding-top:5px;
+}
+
+.tab_menu li.firstLi{
+	/*margin-left:10px;*/
+}
+
+.e8_rightBorder{
+	padding-left:5px;
+	color:#B8B8B8;
+	display:inline-block;
+	height:100%;
+	vertical-align:middle;
+	font-size:12px;
+
+}
+
+.tab_menu li.current {
+	color:  rgb(13,147,246);
+	/*color:#000;*/
+}
+
+.tab_menu li a:hover{
+	color:  rgb(13,147,246) !important;
+}
+
+.tab_menu li.current a{
+	color: rgb(13,147,246) !important;
+}
+
+.tab_box {
+	height: 100%;
+	width:100%;
+	background:#fff;
+	visibility:hidden;
+	border-top:1px solid #DADADA;
+	clear:both;
+}
+.tab_box .hide,div.hide {
+	display: none;
+}
+
+div.e8_content{
+	float:right;
+	position:absolute;
+	background: #fff;
+	border-left:1px solid #D7D7D7;
+	border-bottom:1px solid #D7D7D7;
+	border-right:1px solid #D7D7D7;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	z-index:99999;
+}
+
+div.e8_content li{
+	float:none;
+	height:25px;
+	line-height:25px;
+	/*list-style-type:disc;*/
+	padding-left:25px;
+	padding-right:10px;
+	border-top:1px solid #FFF;
+	border-bottom:1px solid #FFF;
+	text-align:left;
+	left:0px;
+}
+
+div.e8_content li.e8_li_hover{
+	background: #FAFAFA;
+	border-top:1px solid #E6E6E6;
+	border-bottom:1px solid #E6E6E6;
+	color:#53A1E1;
+}
+
+div.e8_content li a:hover{
+	color:#53A1E1;
+}
+
+div.e8_content li a{
+	color:#B8B8B8;
+}
+
+li.e8_expand{
+	border-left:1px solid #F9F9F9;
+	border-right:1px solid #F9F9F9;
+	background-image:url(/js/tabs/images/uparrow_wev8.png);
+	background-position:50% 63%;
+	background-repeat:no-repeat;
+}
+
+li.e8_expand_selected{
+	background-color:#fff;
+	/*border-left:1px solid #D7D7D7;
+	border-right:1px solid #D7D7D7;*/
+}
+
+.magic-line {
+	position: absolute;
+	left: 0;
+	height: 19px!important;
+	line-height: 2px!important;
+	top:32px;
+	/*background: #7FB4E9;*/
+	background-image:url("/images/ecology8/angle_wev8.png");
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+}
+
+.e8_tablogo{
+	background-image:url("/js/tabs/images/nav/default_wev8.png");
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	width:43px;
+	height:60px;
+	line-height:60px;
+	margin-left:12px;
+	float:left;
+}
+
+.e8_tablogonew{
+	background-image:url("/js/tabs/images/nav/mnav0_wev8.png");
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	width:43px;
+	height:60px;
+	line-height:60px;
+	margin-left:12px;
+	float:left;
+}
+
+.e8_ultab{
+	height:60px;
+	float:left;
+	overflow:hidden;
+}
+
+.e8_navtab{
+	height:20px;
+	line-height:38px;
+	margin-left:5px;
+	font-size:16px;
+	font-weight:normal;
+}
+
+.e8_tree{
+	padding-left:5px !important;
+	display:none;
+}
+
+.e8_outbox{
+	position:fixed;
+	right:0;
+}
+
+.div_e8_xtree{
+	display:none;
+	float:left;
+	position:fixed;
+	top:0;
+	left:0;
+}
+
+.e8_boxhead{
+	background-color:#fff;
+	height:60px;
+	overflow:hidden;
+	visibility:hidden;
+}
+
+.defaultTab{
+	display:none!important;
+}
+
+div.e8_expandOrCollapseDiv {
+    background-color: #fff;
+    border: medium none;
+    cursor: pointer;
+    height: 48px;
+    left: 450px;
+    line-height: 32px;
+    position: absolute;
+    text-align: center;
+    top: 300px;
+    width: 15px;
+    background-image:url(/images/ecology8/openTree_wev8.png);
+}
+
+div.e8_expandOrCollapseDiv_tree{
+	height:39px;
+	width:10px;
+}
+
+div.e8_expandOrCollapseDiv:hover{
+	background-image:url(/images/ecology8/openTree_hover_wev8.png);
+}
+
+div.e8_expandOrCollapseDivCol{
+	background-image:url(/images/ecology8/closeTree_wev8.png)
+}
+
+div.e8_expandOrCollapseDivCol:hover{
+	background-image:url(/images/ecology8/closeTree_hover_wev8.png);
+}
+

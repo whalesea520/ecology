@@ -1,0 +1,1 @@
+start javaw -cp rtxserver.jar weaver.rtx.RTXRemoteServer

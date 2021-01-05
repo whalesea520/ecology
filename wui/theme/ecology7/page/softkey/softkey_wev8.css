@@ -1,0 +1,18 @@
+
+.btn_letter {
+	BORDER-LEFT-COLOR: #7b9ebd; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#ffffff, EndColorStr=#DDDCDC); 
+}
+.btn_num {
+	BORDER-LEFT-COLOR: #fff; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#AAAAAA); 
+}
+
+#CalcTable input {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: #333;
+	cursor: hand;
+	text-decoration: none;
+}

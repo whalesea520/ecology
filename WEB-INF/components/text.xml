@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components>
+	<component desc="单行" type="1" ptype="1" client="pc" name="text">
+	   <params>
+	      <p name="" />	   
+	   </params>
+		<template>
+			<edit><content><![CDATA[<INPUT style="WIDTH: 90%" id=field${id} class="Inputstyle styled input" onchange="checkinput2('field${id}','field${id}span',this.getAttribute('viewtype'));changeKeyword();" maxLength=200 size=60 value ="${value}" name=field${id} temptitle="${label}" viewtype="1" jQuery1384174822707="3"> 
+			<SPAN id=field${id}span><IMG align=absMiddle src="/images/BacoError_wev8.gif"></SPAN> 
+			               ]]></content></edit>
+			<view><content><![CDATA[<SPAN id=field${id}span>${value}</SPAN>]]></content></view>
+			<setting><content><![CDATA[<INPUT class="InputStyle" id="${fieldid}" name="field${id}" value="${label}">]]></content></setting>
+		</template>
+	</component>
+	<component desc="单行" name="text" type="1" ptype="1" client="mobile">
+		<params>
+		    <p name=""/>
+		</params>
+		<template>
+			<edit><content><![CDATA[
+			<input class="field_inputText" data-role="none" value ="${value}" name="field${id}" id="field${id}" lablename="${label}" type="text" ismust="${must}" datavaluetype="${datavaluetype}" datalength="${datalength}" ${componentEvent} fieldname="${fieldname}">
+			]]></content></edit>
+			<view><content><![CDATA[<SPAN id="field${id}span" class="field_viewText">${value}</SPAN><input value ="${value}" name=field${id} id=field${id} lablename="${label}" type="hidden">]]></content></view>
+			<setting><content><![CDATA[<INPUT class="InputStyle" id="${fieldid}" name="field${id}" value="${label}">]]></content></setting>
+			<hidden><content><![CDATA[<input value ="${value}" name=field${id} id=field${id} lablename="${label}" type="hidden">]]></content></hidden>
+		</template>
+	</component>
+</components>

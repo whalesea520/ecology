@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  -->
+<workflow workflowId="">
+	<!-- name. 传递的参数,name不能修改.   column="CrossDomain" 表示跨域.默认空  url对应的defaultV 是ajax请求页面 -->
+	<field name="url" column="" defaultV="/mobile/plugin/fullsearch/ajaxVoice.jsp?type=SelfWorking" defaultN="个人工作汇总"></field>
+	<!-- 开始日期 -->
+	<field name="fromDate" column="begindate"></field>
+	<!-- 结束日期 -->
+	<field name="toDate" column="enddate"></field>
+	
+	
+	<!--直接包含返回的json中. 返回值判断,默认空.即为msg. 0标识成功. -->
+	<field name="return_flag" column="SuccessF" defaultV="result" defaultN="成功标识"></field>
+	<field name="return_flag" column="SuccessV" defaultV="1" defaultN="成功值"></field>
+	<!-- 错误信息显示 -->
+	<field name="return_flag" column="ErrMsg" defaultV="" defaultN="错误信息"></field>
+	<!--默认,空.返回示例如下图.标准返回 空或者1: -->
+	<field name="return_flag" column="RetType" defaultV="2" defaultN="返回类型"></field>
+	<!-- 数据显示格式默认1 -->
+	<field name="return_flag" column="ShowStyle" defaultV="2" defaultN="列表展示样式"></field>
+	<!-- 有值显示结果上面的文字提示 -->
+	<field name="return_flag" column="DisplayStr" defaultV="{DisplayStr}" defaultN="有值个性化输出"></field>
+	
+	<!-- 点击事件 -->
+	<field name="return_flag" column="#EVENT_docCreate" defaultV="showCreateDocByDate"></field>
+	<!-- 返回查询条件字段 -->
+	<field name="return_flag" column="retQueryData" defaultV="retQueryData" defaultN=""></field>
+	
+	<!-- 返回统计值 -->
+	<!-- 以下都是返回参数,name值固定 return_, column为返回json key值 ,ID和NAME 按照以下顺序. 其他可以自由排序 -->
+	<field name="return_" column="id" defaultV="ID" defaultN=""></field>
+	<field name="return_" column="docCreate" defaultN="知识分享"></field>
+	<field name="return_" column="train" defaultN="培训主持与参与"></field>
+	<field name="return_" column="cowork" defaultN="协作"></field>
+	<field name="return_" column="meeting" defaultN="会议"></field>
+	<!-- 
+	<field name="return_" column="crmAdd" defaultN="新增客户"></field>
+	<field name="return_" column="crmRoll" defaultN="滚动客户"></field>
+	<field name="return_" column="task" defaultN="任务"></field>
+	<field name="return_" column="prj" defaultN="项目"></field>
+	 -->
+</workflow>

@@ -1,0 +1,10 @@
+alter table CRM_CONTRACTPRODUCT  add NUMBER_N_TEMP number
+/
+update  CRM_CONTRACTPRODUCT  set NUMBER_N_TEMP=NUMBER_N,NUMBER_N=null
+/
+alter table  CRM_CONTRACTPRODUCT  modify NUMBER_N number(17,2)
+/
+update  CRM_CONTRACTPRODUCT  set NUMBER_N=NUMBER_N_TEMP,NUMBER_N_TEMP=null
+/
+alter table  CRM_CONTRACTPRODUCT  drop column NUMBER_N_TEMP
+/

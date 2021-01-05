@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<no-x-frame-options-urls>
+		<url>/spa/coms/message/index-message.html</url>
+		<url>/spa/coms/index-emobile.html</url>
+		<url>/spa/coms/message/index-message.html#/message/</url>
+		<url>/spa/coms/message/index-message.html#/message/entrance</url>
+		<url>/spa/cube/index.html#/main/cube/search</url>
+		<url>/spa/cube/index.html</url>
+		<url>/spa/hrm/static4mobile/index.html</url>
+		<url>/spa/crm/static/index.html/#/main/crm/remindList</url>
+		<url>/spa/crm/static/index.html</url>
+		 <url>/spa/crm/static/index.html/</url>
+		  <url>/spa/crm/static/index.html#/main/crm/remindList</url>
+	</no-x-frame-options-urls>
+</root>

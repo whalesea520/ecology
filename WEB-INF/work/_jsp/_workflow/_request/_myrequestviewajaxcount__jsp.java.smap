@@ -1,0 +1,22 @@
+SMAP
+_myrequestviewajaxcount__jsp.java
+JSP
+*S JSP
+*F
++ 1 MyRequestViewAjaxCount.jsp
+workflow/request/MyRequestViewAjaxCount.jsp
+*L
+1#1:44
+16#1,2:45,7
+17#1,2:58
+18#1:60,6
+18#1,2:65
+19#1:67,6
+19#1,2:72
+20#1:74,6
+20#1,2:79
+21#1:81,6
+21#1,566:86
+586#1:652
+589#1:653
+*E

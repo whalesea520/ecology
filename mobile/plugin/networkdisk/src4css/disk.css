@@ -1,0 +1,902 @@
+*,body{
+	font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
+}
+body{
+		background-color:#ffffff;
+		overflow: hidden;
+	}
+	html,body,#root{
+		height: 100%;
+		-webkit-overflow-scrolling: touch;
+	}
+	#root{
+		position:relative;
+		overflow: hidden;
+	}
+	ul{
+		padding:0;
+		margin:0;
+	}
+	li{
+		list-style:none;
+	}
+	a{
+		color:inherit;
+	}
+	#content{
+		margin-top: 1px;
+	}
+	.diskUnit{
+		position:relative;
+		padding:0px 108px;
+		padding-bottom:10px;
+	}
+	.left.diskUnit{
+		padding-right:10px;
+		padding-left:186px;
+	}
+	.diskUnit.systemUnit{
+		padding-right: 28px;
+	}
+	.diskUnit.systemUnit .fileNoRead{
+		width: 28px;
+		height: 28px;
+		right: 0px;
+		top: -8px;
+		position: absolute;
+	}
+	.diskUnit.systemUnit .fileNoRead img{
+		width: 28px;
+		height: 28px;
+	    vertical-align: top;
+	}
+	.diskHeader{
+		padding:10px;
+		display:flex;
+		height: 56px;
+		background-color:#ffffff;
+	}
+	.DiskHeaderTab{
+		position: relative;
+	    padding-left: 1.14rem;
+	    padding-right: 1.2rem;
+	}
+
+	.shareTabDiv{
+		padding:10px 80px 0px 24px;
+		position: relative;
+	}
+	.shareHeader .shareTabView{
+		width:49%;
+		display: inline-block;
+		text-align: center;
+		line-height: 60px;
+		border:1px solid #dadada;
+	}
+	.searchIcon{
+		position: absolute;
+		right: 20px;
+		top:8px;
+		width:60px;
+		height: 60px;
+		background-size:40px 40px;
+		background-repeat:no-repeat;
+		background-position:5px 5px;
+		background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath fill='%23ccc' d='M5 1c2.2 0 4 1.8 4 4S7.2 9 5 9 1 7.2 1 5s1.8-4 4-4m0-1C2.2 0 0 2.2 0 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5z'/%3E%3Cpath stroke='%23ccc' stroke-miterlimit='10' d='M12.6 12.6L8.2 8.2'/%3E%3C/svg%3E");
+	}
+
+	.shareHeader .shareTab{
+		color:#017afd;
+		background-color: #f7f7f7;
+	}
+	.diskAddFolder{
+		padding-left:14px;
+		padding-top: 3px;
+		position: absolute;
+	    left: 0px;
+	    top: 0px;
+	}
+	.diskAddFolder .empty,.diskAddFolder img{
+		width:50px;
+		height:50px;
+	}
+	
+	.diskYline{
+		border-left:1px solid #d6d6d6;
+		width:1px;
+		height:56px;
+		margin-left:20px;
+	}
+	.shareHeader .diskSearch{
+		width: auto;
+		padding: 10px 30px 10px 30px;
+	}
+	.diskSearch{
+		width:100%;
+		padding-left: 20px;
+		height: 58px;
+	}
+
+
+	.searchBox{
+		height: 100%;
+		background-color: #E9EDEE;
+	}
+	.searchBox .diskSearch{
+		background-color: #fafafa;
+		height: auto;
+		width: auto;
+		padding:10px 0px 10px 0px;
+		border-bottom: 1px solid #bfbfbf;
+	}
+	
+
+	.searchBar{
+		height: 56px;
+		line-height: 56px;
+		padding-left: 72px;
+		padding-right: 72px;
+		background-repeat:no-repeat;
+		background-position:30px 16px;
+		background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath fill='%23ccc' d='M5 1c2.2 0 4 1.8 4 4S7.2 9 5 9 1 7.2 1 5s1.8-4 4-4m0-1C2.2 0 0 2.2 0 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5z'/%3E%3Cpath stroke='%23ccc' stroke-miterlimit='10' d='M12.6 12.6L8.2 8.2'/%3E%3C/svg%3E");
+		background-size:30px auto;
+		border-radius:6px;
+		background-color: #ffffff;
+		border: 1px solid #d9d9d9;
+	}
+	.searchBar.placeholder{
+		color:#cccccc;
+	}
+	.historyTitle{
+		height: 70px;
+		line-height: 70px;
+		padding-left: 30px;
+		font-size:28px;
+		border-bottom: 1px solid #bfbfbf;
+	}
+	.historyList{
+		background-color: #ffffff;
+	}
+	.historyList div{
+		height:85px;
+		line-height: 85px;
+		border-bottom: 1px solid #bfbfbf;
+		padding-left: 70px;
+		font-size:28px;
+		background-repeat:no-repeat;
+		background-position:30px 28px;
+		background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath fill='%23ccc' d='M5 1c2.2 0 4 1.8 4 4S7.2 9 5 9 1 7.2 1 5s1.8-4 4-4m0-1C2.2 0 0 2.2 0 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5z'/%3E%3Cpath stroke='%23ccc' stroke-miterlimit='10' d='M12.6 12.6L8.2 8.2'/%3E%3C/svg%3E");
+		background-size:30px auto;
+	}
+
+	.historyList div.clearHistory{
+		background-image:none;
+		text-align: center;
+		padding-left:0px;
+		border-bottom: 0px;
+		height: 80px;
+		line-height: 80px;
+	}
+
+	.bindEvent{
+		display:inline-block;
+	}
+	
+	.diskIcon{
+		position:absolute;
+		left : 18px;
+		top: 0px;
+		width:90px;
+		height:90px;
+		text-align:center;
+	}
+	.diskIcon img{
+		width:90px;
+		height:90px;
+	}
+	.diskIcon.cycleImg img{
+		margin-top:22px;
+		border-radius: 50%;
+	}
+	.diskUnit.left .diskIcon{
+		left:78px;
+	}
+	.diskUnit.left .diskIcon.cycleImg{
+		left:90px;	
+	}
+	.diskOpeate,.diskCheck{
+		position:absolute;
+		width:90px;
+		height:90px;
+		top:0px;
+		right:0px;
+		text-align:center;
+	}
+	.diskOpeate img{
+		width:45px;
+		height:45px;
+		margin-top:22px;
+	}
+	.diskCheck{
+		left:0px;
+	}
+	.diskCheck img{
+		width:40px;
+		height:40px;
+		margin-top:25px;
+	}
+	.diskCheck.shareObjectChoose img{
+		margin-top:47px;
+	}
+	.diskCheck.shareObjectChoose,.diskUnit .diskIcon.cycleImg{
+		height:100%;
+	}
+	
+
+	.diskName{
+		height:45px;
+		line-height:45px;
+		width: 100%;
+		overflow: hidden;
+		text-overflow:ellipsis;
+		white-space:nowrap;
+		color:#181818;
+	}
+
+	.line_1 .diskName{
+		height:80px;
+		line-height: 80px;
+	}
+	.line_1 .diskTime,.folder .diskSize{
+		height: 10px;
+		line-height: 10px;
+	}
+	.line_1 .diskIcon img{
+		width:75px;
+		height:75px;
+		margin-top: 5px;
+	}
+
+	.diskTime,.diskContent .username{
+		float:left;
+	}
+	.diskContent .username{
+		margin-right: 30px;
+	}
+	.diskSize{
+		float:right;
+	}
+	.sharefrom,.diskTime,.diskSize,.diskContent .username{
+		height:45px;
+		line-height:45px;
+		color:#6c6c6c;
+		font-size: 28px;
+	}
+	.sharefrom{
+		height:30px;
+		line-height:30px;
+	}
+	.clearBoth{
+		clear:both
+	}
+	.operateContent{
+		text-align:center;
+		background-color:#E9EDEE;
+		padding:5px 0px;
+		display:flex;
+	}
+	.operateContent > div{
+		width:25%;
+		text-align:center;
+		padding:10px 0;
+	}
+	.operateContent.myShare > div,.operateContent.shareMy > div{
+		width:100%;
+	}
+	
+	.operateContent img{
+		width:50px;
+		height:50px;
+	}
+	.operateContent font{
+		display:inline-block;
+		line-height:24px;
+		height:24px;
+		color:#3f4c54;
+	}
+	.diskFoot{
+		background-color:#F6F6F6;
+		padding-top:5px;
+		padding-bottom:5px;
+		border-top:1px solid #E4E4E4;
+	}
+	.diskFoot img{
+		width:50px;
+		height:50px;
+	}
+
+	.diskFoot .diskTab,.diskFoot .diskFootOperate{
+		display:flex;
+		text-align:center;
+	}
+	.diskFoot .diskTab > div{
+		width:33.3%;
+	}
+	.diskFoot .diskFootOperate > div{
+		width:25%;
+	}
+	.diskFoot .add{
+		padding-top: 8px;
+	}
+	.diskFoot .add img{
+		width:70px;
+		height:70px;
+	}
+
+	.chooseFileFoot.diskFoot{
+		background-color: #ffffff;
+
+	}
+
+	.chooseFileFoot .chooseFileBtn{
+		height: 60px;
+		line-height: 60px;
+		padding: 0px 30px;
+		margin:18px 15px 10px 0;
+		color: #3395FD;
+		display: inline-block;
+		border:2px solid #E4E4E4;
+		border-radius: 8px;
+
+	}
+	.chooseFileFoot .chooseFileBtn span{
+		color: #3395FD;
+	}
+
+	.checkAll,.delete{
+		height: 70px;
+		line-height: 70px;
+		text-align: left;
+	}
+	.delete{
+		text-align: right;
+	}
+	.checkAll font{
+		display: inline-block;
+		margin-left:30px;
+	}
+	.delete font{
+		display: inline-block;
+		margin-right:30px;
+	}
+	.diskFoot .diskTab.shareObject > div{
+		width:50%;
+	}
+
+	.diskFoot .diskTab.shareObject font{
+		font-size: 32px;
+		color:#000000;
+	}
+
+	.diskFoot .footImg{
+		height: 55px;
+	}
+	.diskFoot .footFont,.diskFoot .footFont font{
+		margin:0px;
+		padding:0px;
+		font-size: 24px;
+	}
+	
+	.dialog-content{
+		border: 1px solid #d8d8d8;
+		padding:10px;
+		border-radius: 5px;
+	}
+	#folderName,#renameTxt{
+		width:100%;
+		height: 60px;
+		line-height: 60px;
+		border: 0px;
+		padding:0px;
+	}
+	.creatDialog .modal-dialog-content{
+		padding:10px 0;
+	}
+	
+	.am-list-item .am-list-line{
+		padding-right:0px;
+	}
+	.am-list-item{
+		padding-left:0px;
+		border-bottom: 1px solid #bfbfbf;
+		background-color:inherit;
+	}
+	.am-list-item .am-list-line .am-list-content{
+		padding-bottom:0px;
+	}
+	.am-search{
+		background-color:inherit;
+		height: auto;
+		padding-left: 0px;
+	}
+	.am-search-input{
+		border:1px solid #dedede;
+		border-radius:3px;
+	}
+	.am-list-item,.am-list-item .am-list-line{
+		position: static;
+	}
+	.am-list-item .am-list-line .am-list-content, .am-list-item .am-list-line .am-list-extra{
+		padding-top: 10px;
+	}
+	.am-list-body{
+		border-top: 0;
+	}
+	.am-list-body:after{
+		border-bottom: 0;
+	}
+	.am-search .am-search-cancel{
+		height: 56px;
+		line-height: 56px;
+	}
+	
+	.publicContent{
+		display: block;
+		-webkit-overflow-scrolling: touch;
+	}
+	.publicContent li{
+		display:flex;
+	}
+	li.folderEmpty{
+		display:block;
+		text-align:center;
+	}
+
+	li.folderEmpty img{
+		width:107px;
+		height:81px;
+		margin-top: 100px;
+	}
+	li.folderEmpty img.diskEmpty{
+		width:160px;
+		height:140px;
+	}
+	li.folderEmpty img.myShareEmpty{
+		width:220px;
+		height:300px;
+	}
+	li.folderEmpty img.shareMyEmpty{
+		width:220px;
+		height:300px;
+	}
+
+	li.folderEmpty .selectBtn{
+		border:2px solid #d2d2d2;
+		padding: 15px 40px;
+		color:#3395FD;
+		font-size: 28px;
+	}
+	li.folderEmpty .EmptyBtn{
+		margin-top: 30px;
+	}
+	li.folderEmpty .uploadFile{
+		margin-right: 50px;
+	}
+	li.folderEmpty .shareBtn{
+		color:#6c6c6c;
+	}
+	li.folderEmpty .emptyInfo{
+		margin-top:50px;
+	}
+
+
+	.publicContent li .categoryFolder{
+		padding:14px;
+		padding-top:0px
+	}
+	.publicContent li .categoryName{
+		line-height:90px;
+	}
+	.publicContent .categoryFolder img{
+		width:90px;
+		height:90px;
+	}
+	.publicHeader{
+		padding:5px;
+		background-color:#FAFAFA;
+	}
+	.publicNav{
+		overflow: auto;
+		border-top: 1px solid #bfbfbf;
+		border-bottom: 1px solid #bfbfbf;
+		background-color: #fafafa;
+		-webkit-overflow-scrolling: touch;
+	}
+	.publicNav::-webkit-scrollbar {
+	   width: 0;
+	}
+
+	.publicNav::-webkit-scrollbar:horizontal 
+	{
+	   height: 0;
+	}
+
+	#pathSpace{
+		width: 100%;
+	}
+	.publicContent .am-list .am-list-body{
+		border-top-color:#BEBEBE;
+	}
+	.publicFoot{
+		position:fixed;
+		left:0px;
+		bottom:0px;
+		width:100%;
+		text-align:center;
+		line-height:90px;
+		background-color:#D9D9D9;
+	}
+	.publicFoot.canSelect{
+		background-color:#5B95FF;
+		color:#ffffff;
+	}
+	
+	.am-popup{
+		background-color:inherit;
+	}
+	.moreProp div{
+		line-height:90px;
+		border-radius:10px;
+		text-align:center;
+		margin:10px;
+		background-color:#ffffff;
+	}
+
+	
+	
+	.leftOpStyle{
+		text-align : left;
+		line-height : 50px;
+		width : 25%;
+	}
+	.rightOpStyle{
+		text-align : right;
+		line-height : 70px;
+		width : 25%;
+	}
+	.titleStyle{
+		text-align : center;
+		line-height : 70px;
+		width : 50%
+	}
+	.firstInPage{
+		position: fixed;
+		bottom: 0px;
+		left:0px;
+		width: 100%
+	}
+	.publicNav div{
+		display: inline-block;
+		float: left;
+	}
+
+	.pathName{
+		max-width:200px;
+		overflow: hidden;
+		text-overflow:ellipsis;
+		white-space:nowrap;
+	}
+	.publicNav div.clearBoth{
+		float: none;
+	}
+	.pathSpace{
+		padding: 0 5px;
+	}
+
+
+	.am-toast-text{
+		background-color: inherit;
+	}
+
+
+	.mue-load-bounce {
+		  width: 100%;
+		  padding-top: 8px;
+		  padding-bottom: 2px;
+		  text-align: center;
+	}
+	.mue-load-bounce .mue-load-bounce-child {
+	  width: 30px;
+	  height: 30px;
+	  background-color: #2a7ee7;
+	  border-radius: 100%;
+	  display: inline-block;
+	  -webkit-animation: mue-load-bounce 1.4s ease-in-out 0s infinite both;
+	  animation: mue-load-bounce 1.4s ease-in-out 0s infinite both;
+	}
+	.mue-load-bounce .mue-load-bounce1 {
+	  -webkit-animation-delay: -0.32s;
+	  animation-delay: -0.32s;
+	}
+	.mue-load-bounce .mue-load-bounce2 {
+	  -webkit-animation-delay: -0.16s;
+	  animation-delay: -0.16s;
+	}
+	@-webkit-keyframes mue-load-bounce {
+	  0%,
+	  80%,
+	  100% {
+	    -webkit-transform: scale(0);
+	    transform: scale(0);
+	  }
+	  40% {
+	    -webkit-transform: scale(1);
+	    transform: scale(1);
+	  }
+	}
+	@keyframes mue-load-bounce {
+	  0%,
+	  80%,
+	  100% {
+	    -webkit-transform: scale(0);
+	    transform: scale(0);
+	  }
+	  40% {
+	    -webkit-transform: scale(1);
+	    transform: scale(1);
+	  }
+	}
+
+.successInfo{
+	position: fixed;
+	bottom:120px;
+	width: 100%;
+	text-align: center;
+}
+.successMsg{
+	background:rgba(0,0,0,.8);
+	color:#ffffff;
+	padding: 10px 30px;
+	display: inline-block;
+	font-size: 26px;
+	border-radius: 6px;
+}
+
+
+
+ul{
+	padding:0px;
+}
+#breadcrumbs-one{
+  overflow: hidden;
+  width: 100%;
+  min-width: 100%;
+}
+ 
+#breadcrumbs-one li{
+  float: left;
+}
+ 
+#breadcrumbs-one a{
+  padding: .3em .5em .3em 1.5em;
+  float: left;
+  text-decoration: none;
+  color: #8e9598;
+  position: relative;
+  background-color: #f3f3f3;
+  font-size: 24px;
+  height: 46px;
+  line-height: 46px;
+}
+ 
+#breadcrumbs-one li:first-child a{
+  padding-left: 1em;
+}
+
+#breadcrumbs-one a::after,
+#breadcrumbs-one a::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -1.5em;  
+  border-top: 1.5em solid transparent;
+  border-bottom: 1.5em solid transparent;
+  border-left: 0.6em solid;
+  right: -0.59em;
+}
+ 
+#breadcrumbs-one a::after{
+  z-index: 2;
+  border-left-color: #f3f3f3; 
+}
+ 
+#breadcrumbs-one a::before{
+  border-left-color: #d6d6d6; 
+  right: -0.63em;
+  z-index: 1;
+}
+
+
+
+ 
+#breadcrumbs-one_bak a::after,
+#breadcrumbs-one_bak a::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;  
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 16px solid;
+}
+ 
+#breadcrumbs-one_bak a::after{
+  z-index: 2;
+  border-left-color: #f3f3f3 ; 
+  right: -14px;
+  margin-top: -19px;  
+  border-top-width: 19px;
+  border-bottom-width: 19px;
+  border-left-width: 14px;
+}
+ 
+#breadcrumbs-one_bak a::before{
+  border-left-color: #d6d6d6 ; 
+  right: -16px;
+  z-index: 1;
+}
+
+
+.systemHeader{
+	border-bottom: 1px solid #DDDDDD;
+}
+.diskSystemTab{
+	text-align: center;
+}
+.shareTabDiv .diskSystemTab{
+	padding-right:50px;
+	padding-left: 40px;
+}
+.diskSystemTab .myDiskTab,.diskSystemTab .systemTab{
+	display: inline-block;
+	height: 56px;
+	line-height: 56px;
+	width: 50%;
+}
+.diskSystemTab .myDiskTab > div,.diskSystemTab .systemTab > div{
+	text-align: center;
+	border:1px solid #e1e1e1;
+	background-color: #ebebeb;
+	border-radius: 8px;
+}
+.diskSystemTab .myDiskTab > div{
+	border-right-width: 0px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+.diskSystemTab .systemTab > div{
+	border-left-width:0px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+.diskSystemTab .select > div{
+	color:#017afd;
+	background-color: #ffffff;
+}
+.myShareTab,.shareMyTab{
+	position:absolute;
+	left:4px;
+	padding-left: 4px;
+}
+.myShareTab img,.shareMyTab img{
+	height: 60px;
+	width: 60px;
+}
+
+
+.systemDocTab{
+	border-bottom: 1px solid #DDDDDD
+}
+.systemDocTab ul{
+	display: flex;
+}
+.systemDocTab ul .docTab{
+	width:33%;
+}
+.systemDocTab ul .docTab > div{
+	position: relative;
+}
+.systemDocTab ul .docTab div{
+	padding:15px 0;
+	text-align: center;
+	line-height: 30px;
+	height: 30px;
+}
+.systemDocTab ul .docTab.select div{
+	color:#017afd;
+}
+
+.systemDocTab ul .docTab div.blueLine{
+	height: 0px;
+	padding: 0px;
+	line-height: 0px;
+	position: absolute;
+	bottom: -1px
+}	
+.systemDocTab ul .docTab.select div.blueLine{
+	height: 3px;
+	line-height: 3px;
+	border-bottom: 3px solid #017AFD;
+}
+
+.systemDocTab ul li .yLine{
+	width: 1px;
+	border-left: 1px solid #EEEEEE;
+	height: 30px;
+	float: left;
+	margin-top: 15px;
+}
+
+
+
+#docDetail,#docReply,#attrDetail{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left:100%;
+	top:0;
+	z-index: 99;
+	transition : left 0.5s;
+	-moz-transition: left 0.5s;
+	-webkit-transition: left 0.5s;
+	-o-transition: left 0.5s;
+	background-color: #ffffff;
+}
+#docReply{
+	z-index: 100;
+}
+#attrDetail{
+	z-index: 101;
+}
+#docDetail.show,#docReply.show,#attrDetail.show{
+	left:0;
+}
+
+#content .isDelete{
+	display: none;
+}
+
+.systemSearch{
+	padding:0 20px;
+}
+.systemSearch .searchIn{
+	height: 56px;
+	line-height: 56px;
+	font-size:28px;
+	color: #e4e4e4;
+	border:1px solid #d5d5d5;
+	text-indent: 70px;
+}
+.systemSearch .searchIn .searchIcon{
+	left: 55px;
+	top:22px;
+	background-size:30px 30px;
+	width:30px;
+	height: 30px;
+}
+
+.systemUnit .folderNoRead{
+	position: absolute;
+	height: 44px;
+	line-height: 44px;
+	font-size: 28px;
+	color:#8d8d8d;
+	right: 20px;
+	top: 20px;
+	border:1px solid #d5d5d5;
+	padding: 2px;
+	padding-bottom: 4px;
+}
+.flexClass{
+	display:flex;
+}

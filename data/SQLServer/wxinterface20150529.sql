@@ -1,0 +1,4 @@
+ALTER TABLE WX_SENDMSGLOG ADD sendtype int
+go
+ALTER TABLE WX_SENDMSGLOG ADD docids varchar(1000)
+go

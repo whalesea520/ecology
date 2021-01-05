@@ -1,0 +1,22 @@
+.horiListContainer > ul{
+	width: 100%;	
+}
+
+.MADHL_StyleWrap .MADL_Style{
+	display: block !important;
+	background-position: 300px center !important;
+}
+.MADHL_StyleWrap .MADL_Style_L{
+	float: none !important;
+	margin-left: 115px !important;
+}
+.MADHL_StyleWrap .MADL_Style_R{
+	float: none !important;
+	width: 231px !important;
+	margin-left: 45px !important;
+}
+.MADHL_Select{
+	border: 1px solid rgb(223, 223, 223);
+	height: 26px;
+	padding-left: 5px;
+}

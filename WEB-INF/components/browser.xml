@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components>
+	<component desc="浏览框" type="3" ptype="3" client="pc" name="browser">
+	   <params>
+	      <p name="burl" />	   
+	   </params>
+		<template>
+			<edit><content><![CDATA[<BUTTON class=Browser title=选择 onclick="onShowBrowser2('${id}','/systeminfo/BrowserMain.jsp?url=${browserurl}','${resourceid}','${browserid}',field${id}.getAttribute('viewtype'))"></BUTTON>
+			               <INPUT onpropertychange="checkLengthbrow('field${id}','field${id}span','4000','${label}','文本长度不能超过','1个中文字符等于2个长度',field${id}.getAttribute('viewtype'))" 
+						   value="${value}" type=hidden name=field${id} temptitle="${label}" viewtype="0">
+						   <SPAN id=field${id}span>${vtext}</SPAN>
+			               ]]></content></edit>
+			<view><content><![CDATA[<SPAN id=field${id}span>${vtext}</SPAN>]]></content></view>
+			<setting><content><![CDATA[<INPUT id="${fieldid}" class="InputStyle"  name="field${id}" value="${label}">]]></content></setting>
+		</template>
+	</component>
+	<component desc="浏览框" type="3" ptype="3"  client="mobile" name="browser">
+		<params>
+		    <p name=""/>
+		</params>
+		<template>
+			<edit><content><![CDATA[
+			<div class="field_browser">
+				<input id="field${id}" lablename="${label}" name="field${id}" value="${value}" type="hidden" ismust="${must}" fieldname="${fieldname}" bid="${browserid}">
+				<span id="field${id}span" name="field${id}span" class="browserName">
+					<label>${vtext}</label>
+					<span class="delBrowser" onclick="javascript:onBrowserCancel('${id}');" style="display:${delBrowserDisplay};"></span>
+				</span>
+				<div class="field_browser_img" onclick="javascript:openBrowser('${id}','${browserid}','${browserName}');"></div>
+			</div>
+			]]></content></edit>
+			<view><content><![CDATA[<SPAN id="field${id}span" class="field_viewText">${vtext}</SPAN><input id="field${id}" lablename="${label}" name="field${id}" value="${value}" type="hidden" fieldname="${fieldname}" bid="${browserid}">]]></content></view>
+			<setting><content><![CDATA[<INPUT id="${fieldid}" class="InputStyle"  name="field${id}" value="${label}">]]></content></setting>
+			<hidden><content><![CDATA[<input type="hidden" id="field${id}" name="field${id}" value="${value}" bid="${browserid}"/>]]></content></hidden>
+		</template>
+	</component>
+</components>

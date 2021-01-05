@@ -1,0 +1,126 @@
+#content{
+	height: 465px;
+}
+#content .warn{
+	width: 165px;
+	height: 44px;
+	line-height: 44px;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin-left: -58px;
+	margin-top: -20px;
+	z-index: 100000;
+	background-color: #FFF;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	box-shadow: 0 0 6px rgba(0,0,0,0.25);
+	display:none;
+}
+#content .warn .title{
+	background: url('/social/images/public/favourite_success_wev8.png') no-repeat left center;
+	margin-left: 17px;
+	padding-left: 32px;
+	color: #7d7c7c;
+	font-size: 14px;
+}
+#bcSendForm {
+	text-align: center;
+	width: 92%;
+	margin: 0 auto;
+	padding-top: 8px;
+}
+#receiveBrowser{
+	margin-top: 10px;
+}
+#receiveBrowser .receiveTitle{
+	float: left;
+	width: 12%;
+	font-size: 12px;
+	line-height: 24px;
+	color: #333;
+}
+#bcSendForm{
+	font-size: 12px;
+	line-height: 24px;
+	color: #333;
+}
+#bcSendForm .clear{
+	clear: both;
+}
+#bcSendForm .greycolor{
+	color: #999;
+}
+#plaintextarea{
+	margin-top: 10px;
+	width: 100%;
+	height: 188px;
+}
+#imagearea{
+	border-bottom: 2px dashed #e4e4e4;
+	text-align: left;
+}
+#imagearea .errorSpan {
+	color: red;
+	margin-left: 30px;
+}
+
+#oaresourcearea{}
+#oaresourcearea .icobtngroup{
+	text-align: left;
+	margin-top: 4px;
+}
+#oaresourcearea .chatapp{
+	position: relative;
+	overflow: hidden;
+	width: 18px;
+	height: 18px;
+	display:inline-block;
+}
+#oaresourcearea .uploadAccFiles{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+#oaresourcearea .uploadAccLayer{
+	background-image: url('/social/images/broadcast_acc_wev8.png');
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-position: center center;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	cursor: pointer;
+}
+
+#oaresourcearea .accList,
+#oaresourcearea .wfList,
+#oaresourcearea .docList {
+	display: none;
+}
+#oaresourcearea .resourcelist .titleHead{
+	vertical-align: top;
+}
+#oaresourcearea .resourcelist .titleBody{
+	text-align: left;
+	vertical-align: top;
+}
+#oaresourcearea .resourcelist .itemCloseSpan{
+	margin-left: 10px;
+	cursor: pointer;
+	display: none;
+}
+#oaresourcearea .titleBody>div:hover .itemCloseSpan{
+	display: inline;
+}
+.arrowsblock1>img{
+	position: absolute;
+	right: 21px;
+}
+._browcommgroupblock{
+	left: 444.203px !important;
+	font-size: 12px;
+}

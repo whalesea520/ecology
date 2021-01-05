@@ -1,0 +1,3 @@
+alter PROCEDURE hrmroles_selectall 
+ @flag integer output, @msg varchar(30) output as begin set nocount on create table #temp( id int, rolesmark varchar(60), rolesname varchar(200), cnt int null ) insert into #temp(id,rolesmark,rolesname) select id,rolesmark,rolesname from hrmroles  declare roles_cursor cursor for select id from hrmroles open roles_cursor declare  @id int,@cnt int fetch next from roles_cursor into @id while @@fetch_status=0 begin select @cnt=count(id) from HrmRoleMembers where roleid=@id update  #temp set cnt=@cnt where id=@id fetch next from roles_cursor into @id end   select id,rolesmark,rolesname,cnt from #temp order by rolesmark close roles_cursor deallocate roles_cursor end 
+GO

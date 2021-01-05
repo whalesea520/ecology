@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	
+	<!--special rule-->
+	<special-non>
+		<urls>
+			
+			 <url>
+				<value>/api/integration/datashow/getDataShowOperation</value>
+				<params>
+				 <param>
+				  <value>sqltext</value>
+				  <rules>
+				  	<rule>##sqlkeyword1##</rule>
+				  </rules>
+				 </param>
+				  <param>
+				  <value>searchById</value>
+				  <rules>
+				  	<rule>##sqlkeyword1##</rule>
+				  </rules>
+				 </param>
+				</params>
+			 </url>
+			
+			
+				
+		</urls>
+	</special-non>
+	
+</root>

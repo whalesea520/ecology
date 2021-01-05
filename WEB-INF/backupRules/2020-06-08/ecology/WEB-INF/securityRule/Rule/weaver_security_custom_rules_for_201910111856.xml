@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<special-non>
+		<urls>
+			<url>
+				<value>/weaver/com.weaver.update.PackageDownload</value>
+				<method>POST</method>
+				<params>
+					<param>
+						<value>downloadid</value>
+						<rules>
+							<rule>##CONST:MULTINUMBER##</rule>
+						</rules>
+					</param>
+					<param>
+						<value>packagetype</value>
+						<rules>
+							<rule>##CONST:MULTINUMBER##</rule>
+						</rules>
+					</param>
+				</params>
+			</url>
+		</urls>
+	</special-non>
+	<need-login-urls>
+		<url>com.weaver.update.PackageDownload</url>
+	</need-login-urls>
+</root>

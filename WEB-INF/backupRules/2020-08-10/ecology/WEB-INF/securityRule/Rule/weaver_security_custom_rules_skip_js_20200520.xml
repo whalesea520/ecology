@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<skip-any-check-list>
+		<url>/mobilemode/mobile/dist/js/api/mobilemode.api.sql_wev8.js</url>
+	</skip-any-check-list>
+	
+</root>

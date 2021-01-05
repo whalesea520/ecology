@@ -1,0 +1,548 @@
+2020-11-09 17:22:03 time=16382:count=1:select * from compatibleOldADGuid 
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.ldap.LdapUtil.getLdapSet(LdapUtil.java:194)
+	at weaver.ldap.LdapUtil.getInstance(LdapUtil.java:177)
+	at weaver.system.LdapThreadManager.doThreadWork(LdapThreadManager.java:48)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:21:49 time=30055:count=0:select * from hrsyncset
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetTransAop.executeSql_after(RecordSetTransAop.java:23)
+	at weaver.conn.RecordSetTrans.executeSql(RecordSetTrans.java:472)
+	at weaver.hrm.resource.HrmSynDAO.loadSyncSet(HrmSynDAO.java:470)
+	at weaver.system.HrmSyncThreadManager.doThreadWork(HrmSyncThreadManager.java:39)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:21:38 time=41736:count=0:update worktask_requestbase set status=7 where status=6 and istemplate=0 and ((planstartdate < '2020-11-09' and planstartdate is not null and planstartdate<>'') or (planstartdate = '2020-11-09' and planstarttime <= '17:21' and planstarttime<>'' and planstarttime is not null))
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at weaver.worktask.request.WorktaskThreadManager.doThreadWork(WorktaskThreadManager.java:51)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:22:18 time=15340:count=0:SELECT * FROM HrmPerformancePlanModul WHERE planType = '3' AND timeModul <> '9' AND ((timeModul = '3') OR (timeModul = '0' AND frequency = 1) OR (timeModul = '1' AND ((createType = '0' AND frequency = 9) OR (createType = '1' AND (30 + 1 - frequency = 9)))) OR (timeModul = '2' AND ((createType = '0' AND frequency = 11 AND frequencyy = 9) OR (createType = '1' AND frequency = 11 AND 30 + 1 - frequencyy = 9)))) AND (availableBeginDate <= '2020-11-09' OR availableBeginDate IS null OR availableBeginDate = '') AND (availableEndDate >= '2020-11-09' OR availableEndDate IS null OR availableEndDate = '') and immediatetouch = 0 
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.system.WorkPlanMuduleThreadManager.doThreadWork(WorkPlanMuduleThreadManager.java:200)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:22:20 time=15428:count=0:select * from ldapset
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.ldap.LdapUtil.getLdapSet(LdapUtil.java:200)
+	at weaver.ldap.LdapUtil.getInstance(LdapUtil.java:177)
+	at weaver.system.LdapThreadManager.doThreadWork(LdapThreadManager.java:48)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:22:20 time=17644:count=0:update worktask_operator set optstatus=8 where optstatus in (-1, 0, 7) and requestid in (select requestid from worktask_requestbase where status=8 )
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at weaver.worktask.request.WorktaskThreadManager.doThreadWork(WorktaskThreadManager.java:60)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:22:19 time=19079:count=0: select id, resourceid, sendfrom, subject, wdremindtime, waitdealway, waitdealnote from MailResource  where waitdeal = 1 and (wdremindtime >= '2020-11-09 17:22')  and (wdremindtime < '2020-11-09 17:23' )
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at weaver.email.timer.MailWaitDealTimer.scannMail(MailWaitDealTimer.java:72)
+	at weaver.email.timer.MailWaitDealTimer.doThreadWork(MailWaitDealTimer.java:37)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:22:23 time=15708:count=0:SELECT * FROM voting WHERE ( remindtype='2' or remindtype='3') AND remindtimebeforeend <>'' and  remindtimebeforeend is not null  AND (hasremindedbeforeend is null OR hasremindedbeforeend = '') AND status = '1' 
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.system.VotingThreadManager.doThreadWork(VotingThreadManager.java:227)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:21:30 time=75303:count=0:SELECT * FROM WorkPlan WHERE remindType <> '1' AND remindBeforeStart = '1'  AND (hasremindedBeforeStart <> '1' or hasremindedBeforeStart is null ) AND remindDateBeforeStart = '2020-11-09' AND (remindTimeBeforeStart <= '17:21' or remindTimeBeforeStart <= '17:21:00')  AND ((begindate>'2020-11-09') or (begindate='2020-11-09' and (beginTime >= '17:21' or beginTime >= '17:21:00'))) 
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.system.WorkPlanThreadManager.doThreadWork(WorkPlanThreadManager.java:164)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:22:17 time=60506:count=0:select id,enddate,endtime from voting where enddate <= '2020-11-09' and enddate <> '' and status = 1
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.voting.FinishVotingTimer.doThreadWork(FinishVotingTimer.java:44)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:21:39 time=99085:count=0:update WX_MsgRuleSetting set lastscantime='2020-11-09 17:21' where id =2
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at weaver.wxinterface.MeettingSendMsg.scanAndSend(MeettingSendMsg.java:45)
+	at weaver.wxinterface.MeettingSendMsg.run(MeettingSendMsg.java:31)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-11-09 17:21:30 time=107960:count=0:SELECT id FROM MailResource WHERE isInternal = 1 AND timingdatestate = 0  AND timingdate <>'' AND timingdate is not null  AND timingdate <= '2020-11-09 17:21:30' order by id asc
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at weaver.email.MailTimingDateSend.doThreadWork(MailTimingDateSend.java:35)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:22:38 time=40059:count=0:update worktask_requestbase set status=7 where status=8 and istemplate=0 and ((planenddate > '2020-11-09' and planenddate is not null and planenddate<>'') or (planenddate = '2020-11-09' and planendtime > '17:21' and planendtime<>'' and planendtime is not null))
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at weaver.worktask.request.WorktaskThreadManager.doThreadWork(WorktaskThreadManager.java:65)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:20:41 time=156320:count=1:SELECT  COUNT(*) FROM    HrmResource WHERE   status IN ( 0, 1, 2, 3 ) AND loginid IS NOT NULL AND loginid <> ''  AND ( Accounttype IS NULL  OR Accounttype != 1) AND NOT EXISTS ( SELECT 1    FROM   HrmResourceVirtual a, customresourceout b WHERE  HrmResource.id = a.resourceid AND a.virtualtype = -10000  AND NOT EXISTS ( SELECT 1 FROM   customresourceout WHERE  a.departmentid = crmmanagerdeptid ) )
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at ln.LN.reloadLicenseInfo(LN.java:395)
+	at ln.LnTimer.doThreadWork(LnTimer.java:14)
+	at ln.ThreadWorkTimer.run(ThreadWorkTimer.java:35)
+
+2020-11-09 17:21:43 time=94486:count=40:SELECT DISTINCT fielddbtype FROM (  SELECT c.fielddbtype FROM mode_customdspfield a,workflow_billfield c WHERE   c.fieldhtmltype=3 AND c.type IN (161,162) AND a.isshow=1 AND a.fieldid=c.id AND EXISTS ( 	SELECT 1 FROM datashowset m,datashowparam n WHERE m.id=n.mainid AND m.browserfrom IN(0,2) AND n.isshowname=1 AND showtype=1 AND datafrom=1 AND n.searchname IS NOT null	AND c.fielddbtype='browser.' + m.showname  	UNION 	SELECT 1 FROM datashowset m, mode_Custombrowser n WHERE m.customid=n.id AND m.browserfrom=1 and c.fielddbtype='browser.' + showname   )   union  SELECT c.fielddbtype FROM mode_CustombrowserDspField a,workflow_billfield c WHERE   c.fieldhtmltype=3 AND c.type IN (161,162) AND a.isshow=1 AND a.fieldid=c.id AND EXISTS ( 	SELECT 1 FROM datashowset m,datashowparam n WHERE m.id=n.mainid AND m.browserfrom IN(0,2) AND n.isshowname=1 AND showtype=1 AND datafrom=1 AND n.searchname IS NOT null	AND c.fielddbtype='browser.' + m.showname  	UNION 	SELECT 1 FROM datashowset m, mode_Custombrowser n WHERE m.customid=n.id AND m.browserfrom=1 and c.fielddbtype='browser.' + showname   )   ) t
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at weaver.formmode.excel.ModeCacheManager.loadBrowserBase(ModeCacheManager.java:112)
+	at weaver.formmode.excel.ModeCacheManager.run(ModeCacheManager.java:81)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-11-09 17:31:18 time=10766:count=0:select id,enddate,endtime from voting where enddate <= '2020-11-09' and enddate <> '' and status = 1
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.voting.FinishVotingTimer.doThreadWork(FinishVotingTimer.java:44)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:31:20 time=10801:count=0:select * from meeting_remind where remindTime<='2020-11-09 17:31:20'
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at weaver.meeting.remind.MeetingRemindThread.doThreadWork(MeetingRemindThread.java:28)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:31:20 time=11121:count=0:select * from hrsyncset
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetTransAop.executeSql_after(RecordSetTransAop.java:23)
+	at weaver.conn.RecordSetTrans.executeSql(RecordSetTrans.java:472)
+	at weaver.hrm.resource.HrmSynDAO.loadSyncSet(HrmSynDAO.java:470)
+	at weaver.system.HrmSyncThreadManager.doThreadWork(HrmSyncThreadManager.java:39)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:31:16 time=14357:count=0:INSERT INTO HrmOnlineCount(online_date,online_time,online_year,online_month,online_num,serverip) VALUES('2020-11-09','17:31',2020,11,0,'192.168.56.1')
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at weaver.hrm.report.RpOnlineTask.run(RpOnlineTask.java:70)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+
+2020-11-09 17:30:48 time=42689:count=1:SELECT  COUNT(*) FROM    HrmResource WHERE   status IN ( 0, 1, 2, 3 ) AND loginid IS NOT NULL AND loginid <> ''  AND ( Accounttype IS NULL  OR Accounttype != 1) AND NOT EXISTS ( SELECT 1    FROM   HrmResourceVirtual a, customresourceout b WHERE  HrmResource.id = a.resourceid AND a.virtualtype = -10000  AND NOT EXISTS ( SELECT 1 FROM   customresourceout WHERE  a.departmentid = crmmanagerdeptid ) )
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at ln.LN.reloadLicenseInfo(LN.java:395)
+	at ln.LnTimer.doThreadWork(LnTimer.java:14)
+	at ln.ThreadWorkTimer.run(ThreadWorkTimer.java:35)
+
+2020-11-09 17:31:20 time=10806:count=0:select * from wfec_outdatawfset where status=1 and periodvalue>0 order by id asc
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.workflow.exchange.rdata.WorkflowExchangeOutDataTimer.doThreadWork(WorkflowExchangeOutDataTimer.java:31)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:31:34 time=15179:count=0:SELECT * FROM HrmPerformancePlanModul WHERE planType = '3' AND timeModul <> '9' AND ((timeModul = '3') OR (timeModul = '0' AND frequency = 1) OR (timeModul = '1' AND ((createType = '0' AND frequency = 9) OR (createType = '1' AND (30 + 1 - frequency = 9)))) OR (timeModul = '2' AND ((createType = '0' AND frequency = 11 AND frequencyy = 9) OR (createType = '1' AND frequency = 11 AND 30 + 1 - frequencyy = 9)))) AND (availableBeginDate <= '2020-11-09' OR availableBeginDate IS null OR availableBeginDate = '') AND (availableEndDate >= '2020-11-09' OR availableEndDate IS null OR availableEndDate = '') and immediatetouch = 0 
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.system.WorkPlanMuduleThreadManager.doThreadWork(WorkPlanMuduleThreadManager.java:200)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:31:31 time=18292:count=1:select avg(online_num) as avg_num  from HrmOnlineCount where online_date='2020-11-09' and online_time>='17:00' and online_time<='17:59' and serverip = '192.168.56.1' 
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at weaver.hrm.report.RpOnlineTask.run(RpOnlineTask.java:83)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+
+2020-11-09 17:31:49 time=18004:count=1:select id from HrmOnlineAvg where online_date='2020-11-09' and point_time=17 and serverip = '192.168.56.1' 
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at weaver.hrm.report.RpOnlineTask.run(RpOnlineTask.java:89)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+
+2020-11-09 17:32:01 time=22903:count=0:select * from hrsyncset
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetTransAop.executeSql_after(RecordSetTransAop.java:23)
+	at weaver.conn.RecordSetTrans.executeSql(RecordSetTrans.java:472)
+	at weaver.hrm.resource.HrmSynDAO.loadSyncSet(HrmSynDAO.java:470)
+	at weaver.system.HrmSyncThreadManager.doThreadWork(HrmSyncThreadManager.java:39)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:32:22 time=13974:count=1:SELECT  COUNT(*) FROM    HrmResource WHERE   status IN ( 0, 1, 2, 3 ) AND loginid IS NOT NULL AND loginid <> ''  AND ( Accounttype IS NULL  OR Accounttype != 1) AND NOT EXISTS ( SELECT 1    FROM   HrmResourceVirtual a, customresourceout b WHERE  HrmResource.id = a.resourceid AND a.virtualtype = -10000  AND NOT EXISTS ( SELECT 1 FROM   customresourceout WHERE  a.departmentid = crmmanagerdeptid ) )
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at ln.LN.reloadLicenseInfo(LN.java:395)
+	at ln.LnTimer.doThreadWork(LnTimer.java:14)
+	at ln.ThreadWorkTimer.run(ThreadWorkTimer.java:35)
+
+2020-11-09 17:32:07 time=28976:count=1:update HrmOnlineAvg set online_num=0 where online_date='2020-11-09' and point_time=17 and serverip = '192.168.56.1' 
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at weaver.hrm.report.RpOnlineTask.run(RpOnlineTask.java:96)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+
+2020-11-09 17:32:28 time=10925:count=0:select id,enddate,endtime from voting where enddate <= '2020-11-09' and enddate <> '' and status = 1
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.voting.FinishVotingTimer.doThreadWork(FinishVotingTimer.java:44)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:32:36 time=27173:count=1:select * from compatibleOldADGuid 
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.ldap.LdapUtil.getLdapSet(LdapUtil.java:194)
+	at weaver.ldap.LdapUtil.getInstance(LdapUtil.java:177)
+	at weaver.system.LdapThreadManager.doThreadWork(LdapThreadManager.java:48)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:31:18 time=105168:count=0:update worktask_requestbase set status=7 where status=6 and istemplate=0 and ((planstartdate < '2020-11-09' and planstartdate is not null and planstartdate<>'') or (planstartdate = '2020-11-09' and planstarttime <= '17:31' and planstarttime<>'' and planstarttime is not null))
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at weaver.worktask.request.WorktaskThreadManager.doThreadWork(WorktaskThreadManager.java:51)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:32:36 time=27098:count=1:select avg(online_num) as avg_num  from HrmOnlineCount where online_date='2020-11-09' and online_time>='17:00' and online_time<='17:59' and serverip='ALL' 
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at weaver.hrm.report.RpOnlineTask.run(RpOnlineTask.java:99)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+
+2020-11-09 17:33:03 time=17086:count=1:select id from HrmOnlineAvg where online_date='2020-11-09' and point_time=17 and serverip='ALL' 
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at weaver.hrm.report.RpOnlineTask.run(RpOnlineTask.java:105)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+
+2020-11-09 17:30:45 time=154901:count=0:SELECT * FROM WorkPlan WHERE remindType <> '1' AND remindBeforeStart = '1'  AND (hasremindedBeforeStart <> '1' or hasremindedBeforeStart is null ) AND remindDateBeforeStart = '2020-11-09' AND (remindTimeBeforeStart <= '17:30' or remindTimeBeforeStart <= '17:30:00')  AND ((begindate>'2020-11-09') or (begindate='2020-11-09' and (beginTime >= '17:30' or beginTime >= '17:30:00'))) 
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.system.WorkPlanThreadManager.doThreadWork(WorkPlanThreadManager.java:164)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:32:38 time=41973:count=0: select id, resourceid, sendfrom, subject, wdremindtime, waitdealway, waitdealnote from MailResource  where waitdeal = 1 and (wdremindtime >= '2020-11-09 17:32')  and (wdremindtime < '2020-11-09 17:33' )
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at weaver.email.timer.MailWaitDealTimer.scannMail(MailWaitDealTimer.java:72)
+	at weaver.email.timer.MailWaitDealTimer.doThreadWork(MailWaitDealTimer.java:37)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:33:06 time=14185:count=1:SELECT  COUNT(*) FROM    HrmResource WHERE   status IN ( 0, 1, 2, 3 ) AND loginid IS NOT NULL AND loginid <> ''  AND ( Accounttype IS NULL  OR Accounttype != 1) AND NOT EXISTS ( SELECT 1    FROM   HrmResourceVirtual a, customresourceout b WHERE  HrmResource.id = a.resourceid AND a.virtualtype = -10000  AND NOT EXISTS ( SELECT 1 FROM   customresourceout WHERE  a.departmentid = crmmanagerdeptid ) )
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at ln.LN.reloadLicenseInfo(LN.java:395)
+	at ln.LnTimer.doThreadWork(LnTimer.java:14)
+	at ln.ThreadWorkTimer.run(ThreadWorkTimer.java:35)
+
+2020-11-09 17:31:18 time=122405:count=0:SELECT id FROM MailResource WHERE isInternal = 1 AND timingdatestate = 0  AND timingdate <>'' AND timingdate is not null  AND timingdate <= '2020-11-09 17:31:18' order by id asc
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at weaver.email.MailTimingDateSend.doThreadWork(MailTimingDateSend.java:35)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:33:03 time=17090:count=0:update worktask_requestbase set status=8 where status in (6, 7,11) and istemplate=0 and ((planenddate < '2020-11-09' and planenddate is not null and planenddate<>'') or (planenddate = '2020-11-09' and planendtime < '17:31' and planendtime<>'' and planendtime is not null))
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at weaver.worktask.request.WorktaskThreadManager.doThreadWork(WorktaskThreadManager.java:58)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:33:03 time=17095:count=0:select * from ldapset
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.ldap.LdapUtil.getLdapSet(LdapUtil.java:200)
+	at weaver.ldap.LdapUtil.getInstance(LdapUtil.java:177)
+	at weaver.system.LdapThreadManager.doThreadWork(LdapThreadManager.java:48)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:31:39 time=101732:count=0:select m.* from Meeting m where m.meetingstatus = 2 and (m.createdate+' '+m.createtime) > '2016-01-01 00:00:00' and (m.enddate+' '+m.endtime)>='2020-11-09 17:31' and m.repeatType = 0 and not exists (select 1 from WX_SCANLOG l where  m.id = l.reourceid and l.type = 6 and l.othertypes=1)
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at weaver.wxinterface.MeettingSendMsg.scanAndSend(MeettingSendMsg.java:72)
+	at weaver.wxinterface.MeettingSendMsg.run(MeettingSendMsg.java:31)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-11-09 17:31:18 time=122224:count=40:SELECT DISTINCT fielddbtype FROM (  SELECT c.fielddbtype FROM mode_customdspfield a,workflow_billfield c WHERE   c.fieldhtmltype=3 AND c.type IN (161,162) AND a.isshow=1 AND a.fieldid=c.id AND EXISTS ( 	SELECT 1 FROM datashowset m,datashowparam n WHERE m.id=n.mainid AND m.browserfrom IN(0,2) AND n.isshowname=1 AND showtype=1 AND datafrom=1 AND n.searchname IS NOT null	AND c.fielddbtype='browser.' + m.showname  	UNION 	SELECT 1 FROM datashowset m, mode_Custombrowser n WHERE m.customid=n.id AND m.browserfrom=1 and c.fielddbtype='browser.' + showname   )   union  SELECT c.fielddbtype FROM mode_CustombrowserDspField a,workflow_billfield c WHERE   c.fieldhtmltype=3 AND c.type IN (161,162) AND a.isshow=1 AND a.fieldid=c.id AND EXISTS ( 	SELECT 1 FROM datashowset m,datashowparam n WHERE m.id=n.mainid AND m.browserfrom IN(0,2) AND n.isshowname=1 AND showtype=1 AND datafrom=1 AND n.searchname IS NOT null	AND c.fielddbtype='browser.' + m.showname  	UNION 	SELECT 1 FROM datashowset m, mode_Custombrowser n WHERE m.customid=n.id AND m.browserfrom=1 and c.fielddbtype='browser.' + showname   )   ) t
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at weaver.formmode.excel.ModeCacheManager.loadBrowserBase(ModeCacheManager.java:112)
+	at weaver.formmode.excel.ModeCacheManager.run(ModeCacheManager.java:81)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-11-09 17:44:21 time=61417:count=1:select * from compatibleOldADGuid 
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.ldap.LdapUtil.getLdapSet(LdapUtil.java:194)
+	at weaver.ldap.LdapUtil.getInstance(LdapUtil.java:177)
+	at weaver.system.LdapThreadManager.doThreadWork(LdapThreadManager.java:48)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:45:21 time=14747:count=0:SELECT id FROM MailResource WHERE isInternal = 1 AND timingdatestate = 0  AND timingdate <>'' AND timingdate is not null  AND timingdate <= '2020-11-09 17:45:21' order by id asc
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at weaver.email.MailTimingDateSend.doThreadWork(MailTimingDateSend.java:35)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:45:23 time=12570:count=0:select * from ldapset
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.ldap.LdapUtil.getLdapSet(LdapUtil.java:200)
+	at weaver.ldap.LdapUtil.getInstance(LdapUtil.java:177)
+	at weaver.system.LdapThreadManager.doThreadWork(LdapThreadManager.java:48)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:45:31 time=10833:count=0:select * from wfec_outdatawfset where status=1 and periodvalue>0 order by id asc
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.workflow.exchange.rdata.WorkflowExchangeOutDataTimer.doThreadWork(WorkflowExchangeOutDataTimer.java:31)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:45:31 time=10862:count=0:select * from meeting_remind where remindTime<='2020-11-09 17:45:31'
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at weaver.meeting.remind.MeetingRemindThread.doThreadWork(MeetingRemindThread.java:28)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:45:39 time=11687:count=0:select id,enddate,endtime from voting where enddate <= '2020-11-09' and enddate <> '' and status = 1
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.voting.FinishVotingTimer.doThreadWork(FinishVotingTimer.java:44)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:45:24 time=27332:count=0:select * from hrsyncset
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetTransAop.executeSql_after(RecordSetTransAop.java:23)
+	at weaver.conn.RecordSetTrans.executeSql(RecordSetTrans.java:472)
+	at weaver.hrm.resource.HrmSynDAO.loadSyncSet(HrmSynDAO.java:470)
+	at weaver.system.HrmSyncThreadManager.doThreadWork(HrmSyncThreadManager.java:39)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:45:49 time=12904:count=0:SELECT * FROM HrmPerformancePlanModul WHERE planType = '3' AND timeModul <> '9' AND ((timeModul = '3') OR (timeModul = '0' AND frequency = 1) OR (timeModul = '1' AND ((createType = '0' AND frequency = 9) OR (createType = '1' AND (30 + 1 - frequency = 9)))) OR (timeModul = '2' AND ((createType = '0' AND frequency = 11 AND frequencyy = 9) OR (createType = '1' AND frequency = 11 AND 30 + 1 - frequencyy = 9)))) AND (availableBeginDate <= '2020-11-09' OR availableBeginDate IS null OR availableBeginDate = '') AND (availableEndDate >= '2020-11-09' OR availableEndDate IS null OR availableEndDate = '') and immediatetouch = 0 
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.system.WorkPlanMuduleThreadManager.doThreadWork(WorkPlanMuduleThreadManager.java:200)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:45:38 time=23773:count=0:SELECT * FROM voting WHERE ( remindtype='2' or remindtype='3') AND remindtimebeforestart <>'' and  remindtimebeforestart is not null  AND (hasremindedbeforestart is null OR hasremindedbeforestart = '') AND status = '1' 
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.system.VotingThreadManager.doThreadWork(VotingThreadManager.java:123)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:45:35 time=26770:count=0:SELECT id from  MailAccount where sendStatus = 1 AND id in (SELECT mailAccountId FROM MailResource WHERE (isInternal <>1 OR isInternal IS NULL OR isInternal ='') AND timingdatestate = 0  AND timingdate <>'' AND timingdate is not null  AND timingdate <= '2020-11-09 17:45:21') order by id desc
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at weaver.email.MailTimingDateSend.doThreadWork(MailTimingDateSend.java:56)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:46:02 time=12042:count=0:SELECT * FROM voting WHERE ( remindtype='2' or remindtype='3') AND remindtimebeforeend <>'' and  remindtimebeforeend is not null  AND (hasremindedbeforeend is null OR hasremindedbeforeend = '') AND status = '1' 
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.system.VotingThreadManager.doThreadWork(VotingThreadManager.java:227)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:45:21 time=56885:count=0:SELECT * FROM WorkPlan WHERE remindType <> '1' AND remindBeforeStart = '1'  AND (hasremindedBeforeStart <> '1' or hasremindedBeforeStart is null ) AND remindDateBeforeStart = '2020-11-09' AND (remindTimeBeforeStart <= '17:45' or remindTimeBeforeStart <= '17:45:00')  AND ((begindate>'2020-11-09') or (begindate='2020-11-09' and (beginTime >= '17:45' or beginTime >= '17:45:00'))) 
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.system.WorkPlanThreadManager.doThreadWork(WorkPlanThreadManager.java:164)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:45:21 time=149869:count=0:update worktask_requestbase set status=7 where status=6 and istemplate=0 and ((planstartdate < '2020-11-09' and planstartdate is not null and planstartdate<>'') or (planstartdate = '2020-11-09' and planstarttime <= '17:45' and planstarttime<>'' and planstarttime is not null))
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at weaver.worktask.request.WorktaskThreadManager.doThreadWork(WorktaskThreadManager.java:51)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:46:17 time=94015:count=0:select * from MailSendMain t1,MailSendRecord t2 where t1.id=t2.id and  isfinished<>'1' and (senddate<='2020-11-09' or (senddate='2020-11-09' and sendtime<='17:46:17'))
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.sendmail.SendMailTimer.doThreadWork(SendMailTimer.java:57)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:45:21 time=149920:count=1:SELECT  COUNT(*) FROM    HrmResource WHERE   status IN ( 0, 1, 2, 3 ) AND loginid IS NOT NULL AND loginid <> ''  AND ( Accounttype IS NULL  OR Accounttype != 1) AND NOT EXISTS ( SELECT 1    FROM   HrmResourceVirtual a, customresourceout b WHERE  HrmResource.id = a.resourceid AND a.virtualtype = -10000  AND NOT EXISTS ( SELECT 1 FROM   customresourceout WHERE  a.departmentid = crmmanagerdeptid ) )
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at ln.LN.reloadLicenseInfo(LN.java:395)
+	at ln.LnTimer.doThreadWork(LnTimer.java:14)
+	at ln.ThreadWorkTimer.run(ThreadWorkTimer.java:35)
+
+2020-11-09 17:46:16 time=94271:count=0:INSERT INTO HrmOnlineCount(online_date,online_time,online_year,online_month,online_num,serverip) VALUES('2020-11-09','17:46',2020,11,0,'192.168.56.1')
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at weaver.hrm.report.RpOnlineTask.run(RpOnlineTask.java:70)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+
+2020-11-09 17:46:17 time=93205:count=0:SELECT * FROM WorkPlan WHERE remindType <> '1' AND status = '0' AND remindBeforeEnd = '1'  AND ( hasremindedBeforeEnd <> '1' or hasremindedBeforeEnd is null ) AND remindDateBeforeEnd = '2020-11-09' AND (remindTimeBeforeEnd <= '17:45' or remindTimeBeforeEnd <= '17:45:00') AND ((endDate>'2020-11-09') or (endDate='2020-11-09' AND (endTime >= '17:45' or endTime >= '17:45:00'))) 
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.system.WorkPlanThreadManager.doThreadWork(WorkPlanThreadManager.java:275)
+	at weaver.system.ThreadWorkTimer.run(ThreadWorkTimer.java:67)
+
+2020-11-09 17:45:21 time=149891:count=40:SELECT DISTINCT fielddbtype FROM (  SELECT c.fielddbtype FROM mode_customdspfield a,workflow_billfield c WHERE   c.fieldhtmltype=3 AND c.type IN (161,162) AND a.isshow=1 AND a.fieldid=c.id AND EXISTS ( 	SELECT 1 FROM datashowset m,datashowparam n WHERE m.id=n.mainid AND m.browserfrom IN(0,2) AND n.isshowname=1 AND showtype=1 AND datafrom=1 AND n.searchname IS NOT null	AND c.fielddbtype='browser.' + m.showname  	UNION 	SELECT 1 FROM datashowset m, mode_Custombrowser n WHERE m.customid=n.id AND m.browserfrom=1 and c.fielddbtype='browser.' + showname   )   union  SELECT c.fielddbtype FROM mode_CustombrowserDspField a,workflow_billfield c WHERE   c.fieldhtmltype=3 AND c.type IN (161,162) AND a.isshow=1 AND a.fieldid=c.id AND EXISTS ( 	SELECT 1 FROM datashowset m,datashowparam n WHERE m.id=n.mainid AND m.browserfrom IN(0,2) AND n.isshowname=1 AND showtype=1 AND datafrom=1 AND n.searchname IS NOT null	AND c.fielddbtype='browser.' + m.showname  	UNION 	SELECT 1 FROM datashowset m, mode_Custombrowser n WHERE m.customid=n.id AND m.browserfrom=1 and c.fielddbtype='browser.' + showname   )   ) t
+java.lang.Throwable
+	at weaver.monitor.monitor.SQLExeMonitor.logCount(SQLExeMonitor.java:49)
+	at weaver.conn.aop.RecordSetAop.executeSql_after(RecordSetAop.java:23)
+	at weaver.conn.RecordSet.executeSql(RecordSet.java:336)
+	at weaver.conn.RecordSet.execute(RecordSet.java:1121)
+	at weaver.formmode.excel.ModeCacheManager.loadBrowserBase(ModeCacheManager.java:112)
+	at weaver.formmode.excel.ModeCacheManager.run(ModeCacheManager.java:81)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+

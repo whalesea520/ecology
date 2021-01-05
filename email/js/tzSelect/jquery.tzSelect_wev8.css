@@ -1,0 +1,131 @@
+﻿/*-------------------------------
+*	Default dropdown styles
+--------------------------------*/
+
+.tzSelect{
+	
+	/* This is the container of the new select element */
+	
+	height:23px;
+	min-width:80px;
+	position:relative;
+	font-size: 12px;
+	/* Preloading the background image for the dropdown */
+	background:url("/email/images/selectGray_wev8.png") right center ;
+	
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #bbbbbb;
+	text-align: left;
+}
+
+.tzSelect .selectBox{
+	position:absolute;
+	
+	height:100%;
+	width:100%;
+	
+	/* Font settings */
+	
+	text-align:left;
+	color:#555555;
+	padding-left:5px;
+	line-height:20px;
+
+	/* Using CSS3 multiple backgrounds and a fallback */
+   
+	cursor:pointer;
+	
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+}
+
+.tzSelect .selectBox:hover,
+.tzSelect .selectBox.expanded{
+		
+	color:#555555;
+}
+
+.tzSelect .dropDown{
+	position:absolute;
+	top:25px;
+	left:0;
+	width:100%;
+	border:1px solid #DADADA;	
+	list-style:none;
+	z-index:1000;
+	/*
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	
+	
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	*/
+}
+
+.tzSelect li{
+	background-color:#f8f8f8;
+	cursor:pointer;
+	text-align:left;
+	font-size: 12px;
+	padding-left:5px;
+	padding-top: 2px;
+	color:#555555;
+	height: 20px;
+	
+}
+
+.tzSelect li:hover{
+	background-color:#cccccc;
+}
+
+
+/*-----------------------------------------------------
+*	Additional styles for the apple product dropdown
+------------------------------------------------------*/
+
+
+.tzSelect .hasDetails{
+	border-width:0 1px 1px;
+}
+
+.tzSelect .hasDetails li{
+	height:85px;
+	position:relative;
+	padding:0;
+	text-align:left;
+	
+	/* Again, using CSS3 multiple backgrounds with a fallback */
+	
+	background:url('img/dropdown_slice_wev8.png') repeat-x #222;
+	background-image:url('img/dropdown_slice_wev8.png'),url('img/dropdown_slice_wev8.png'),url('img/dropdown_slice_wev8.png');
+	background-position: 50% -171px, 0 -85px, 0 0;
+	background-repeat: no-repeat, no-repeat, repeat-x;
+}
+
+.tzSelect .hasDetails li:hover{
+	background-position: 50% -256px, 0 -85px, 0 0;
+}
+
+.tzSelect .hasDetails li span{
+	left:88px;
+	position:absolute;
+	top:27px;
+}
+
+.tzSelect .hasDetails li i{
+	color:#555555;
+	display:block;
+	font-size:12px;
+}
+
+.tzSelect .hasDetails li img{
+	left:9px;
+	position:absolute;
+	top:13px;
+}

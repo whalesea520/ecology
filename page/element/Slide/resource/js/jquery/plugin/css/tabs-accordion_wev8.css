@@ -1,0 +1,55 @@
+
+/* root element for accordion. decorated with rounded borders and gradient background image */
+.tabs-accordion {
+  
+}
+
+/* accordion header */
+.tabs-accordion h2 {
+	
+	margin:0;
+	padding:5px 15px;
+	font-size:14px;
+	font-weight:normal;
+	border:1px solid #fff;
+	border-bottom:1px solid #ddd;
+	cursor:pointer;		
+	
+	margin: 0 0 0;
+    padding: 0;
+    height: 25px;
+    line-height: 25px;
+    /*background: url(images/tabs/bg_menu.v1294139936_wev8.png) 0 -25px no-repeat; */
+    background: #F8F8F8;
+}
+
+/* currently active header */
+.tabs-accordion h2.current {
+	margin: 0 0 0;
+	padding: 0;
+	height: 25px;
+	line-height: 25px;
+	/*background: url(images/tabs/bg_menu.v1294139936_wev8.png) 0 -25px no-repeat;*/
+	background: #F8F8F8;
+}
+
+/* accordion pane */
+.tabs-accordion .pane {
+	border:1px solid #f8f8f8;
+	border-width:0 2px;
+	display:none;
+	height:0px;
+	padding:15px;
+	font-size:12px;
+  	zoom: 1;
+  	color: #555;
+	background: #fff;
+}
+
+/* a title inside pane */
+.tabs-accordion .pane h3 {
+	font-weight:normal;
+	margin:0 0 -5px 0;
+	font-size:16px;
+	color:#999;
+}

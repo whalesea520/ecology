@@ -1,0 +1,20 @@
+错误时间
+  19:38:02
+错误位置
+  sql201708160403.sql第2行:
+错误语句
+ alter table SqlFileLogInfo add packageno VARCHAR(20) NULL
+错误原因
+  com.microsoft.sqlserver.jdbc.SQLServerException: 各表中的列名必须唯一。在表 'SqlFileLogInfo' 中多次指定了列名 'packageno'。
+
+
+错误时间
+  19:38:02
+错误位置
+  sql201708161503.sql第2行:
+错误语句
+ alter table SqlFileLogInfo  add exectime VARCHAR(100)
+错误原因
+  com.microsoft.sqlserver.jdbc.SQLServerException: 各表中的列名必须唯一。在表 'SqlFileLogInfo' 中多次指定了列名 'exectime'。
+
+

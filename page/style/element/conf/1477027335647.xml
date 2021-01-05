@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conf>
+	<id>1477027335647</id>
+<!--id与文件名需保持一至-->
+	<title>豫园新门户-无标题</title>
+	<desc/>
+
+	<!--书写时请保证每行以下分号结尾-->
+	<css>.item {&#13;
+ background-color: rgb(255&amp;#44; 255&amp;#44; 255);&#13;
+ }&#13;
+ .header {&#13;
+ border-width: medium 1px medium medium;&#13;
+ border-color: rgb(233&amp;#44; 233&amp;#44; 233) rgb(233&amp;#44; 233&amp;#44; 233) rgb(229&amp;#44; 229&amp;#44; 229) rgb(229&amp;#44; 229&amp;#44; 229);&#13;
+ background-image: none;&#13;
+ background-color: rgb(244&amp;#44; 244&amp;#44; 244);&#13;
+ height: 30px !important;&#13;
+ background-position: 0% 50%;&#13;
+ background-repeat: repeat no-repeat;&#13;
+ }&#13;
+ .toolbar {&#13;
+ top: 5px;&#13;
+ right: 5px;&#13;
+ }&#13;
+ .toolbar ul {&#13;
+ margin: 0px;&#13;
+ padding: 0px;&#13;
+ list-style-type: none;&#13;
+ }&#13;
+ .toolbar ul li a {&#13;
+ padding: 0px 3px;&#13;
+ text-decoration: none;&#13;
+ float: left;&#13;
+ display: block;&#13;
+ }&#13;
+ .toolbar ul li {&#13;
+ height: 1px;&#13;
+ float: left;&#13;
+ }&#13;
+ .toolbar ul li a {&#13;
+ height: 0px;&#13;
+ }&#13;
+ .icon {&#13;
+ left: 0px;&#13;
+ top: 0px;&#13;
+ }&#13;
+ .title {&#13;
+ font-size: 12px;&#13;
+ font-style: normal;&#13;
+ font-weight: bold;&#13;
+ position: absolute;&#13;
+ left: 5px !important;&#13;
+ top: 5px !important;&#13;
+ color: rgb(0&amp;#44; 0&amp;#44; 0) !important;&#13;
+ font-family: 宋体 !important;&#13;
+ }&#13;
+ .content {&#13;
+ border-width: medium 1px 1px;&#13;
+ border-style: none solid solid;&#13;
+ border-color: rgb(229&amp;#44; 229&amp;#44; 229);&#13;
+ overflow: auto;&#13;
+ background-image: none;&#13;
+ background-color: transparent;&#13;
+ padding: 0px 0px 5px !important;&#13;
+ background-position-x: 0% !important;&#13;
+ background-position-y: 100%;&#13;
+ background-repeat: repeat repeat !important;&#13;
+ }&#13;
+ .font {&#13;
+ font-size: 12px;&#13;
+ font-style: normal;&#13;
+ font-weight: normal;&#13;
+ text-decoration: none;&#13;
+ color: rgb(0&amp;#44; 0&amp;#44; 0) !important;&#13;
+ font-family: 微软雅黑 !important;&#13;
+ }&#13;
+ .sparator {&#13;
+ background-image: url(/page/resource/userfile/image/elementstyle/gzdh/split.jpg);&#13;
+ }&#13;
+ .tab2 {&#13;
+ background-image: url(/page/resource/userfile/image/tab3.png) !important;&#13;
+ }&#13;
+ .tab2unselected {&#13;
+ width: 77px;&#13;
+ text-align: center;&#13;
+ padding-top: 0px;&#13;
+ font-size: 12px;&#13;
+ font-style: normal;&#13;
+ font-weight: normal;&#13;
+ vertical-align: middle;&#13;
+ cursor: pointer;&#13;
+ color: rgb(102&amp;#44; 102&amp;#44; 102) !important;&#13;
+ font-family: 微软雅黑 !important;&#13;
+ background-image: url(/page/resource/userfile/image/tab2.png) !important;&#13;
+ background-repeat: no-repeat no-repeat;&#13;
+ }&#13;
+ .tab2selected {&#13;
+ width: 77px;&#13;
+ text-align: center;&#13;
+ padding-top: 0px;&#13;
+ font-size: 12px;&#13;
+ font-style: normal;&#13;
+ font-weight: normal;&#13;
+ vertical-align: middle;&#13;
+ cursor: pointer;&#13;
+ color: rgb(51&amp;#44; 51&amp;#44; 51) !important;&#13;
+ font-family: 宋体 !important;&#13;
+ background-image: url(/page/resource/userfile/image/ture1.png) !important;&#13;
+ background-repeat: no-repeat no-repeat;&#13;
+ }&#13;
+ .font:hover {&#13;
+ color: rgb(0&amp;#44; 0&amp;#44; 0) !important;&#13;
+ }&#13;
+</css>
+	 <cornerTop>Round</cornerTop>
+	 <cornerBottom>Round</cornerBottom>	 
+	 <cornerTopRadian>15px</cornerTopRadian>
+	 <cornerBottomRadian>15px</cornerBottomRadian>	 
+	 <imgMode>flash</imgMode>
+<!--flash page-->	 
+	 <titleState>hidden</titleState>
+<!--show hidden-->
+	 <settingState>hidden</settingState>
+<!--show hidden-->
+ <refreshIconState>hidden</refreshIconState>
+<!--show hidden-->
+ <settingIconState>hidden</settingIconState>
+<!--show hidden-->
+ <closeIconState>hidden</closeIconState>
+<!--show hidden-->
+	 <moreLocal>title</moreLocal>
+<!--show hidden-->
+
+	 <iconLogo/>
+	 <iconMenu/>
+	 <iconLock>/images/homepage/style/style1/lock1.gif</iconLock>
+	 <iconUnLock>/images/homepage/style/style1/unlock1.gif</iconUnLock>
+	 <iconRefresh>/images/homepage/style/style1/refresh1.gif</iconRefresh>
+	 <iconSetting>/images/homepage/style/style1/setting1.gif</iconSetting>
+	 <iconClose>/images/homepage/style/style1/close1.gif</iconClose>
+	 <iconMore>/page/resource/userfile/image/moreend2.png</iconMore>
+	 <iconEsymbol/>
+</conf>

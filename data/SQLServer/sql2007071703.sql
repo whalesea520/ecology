@@ -1,0 +1,2 @@
+INSERT INTO workflow_browserurl (id,labelid,fielddbtype,browserurl,tablename,columname,keycolumname,linkurl) VALUES ( 160,20570,'varchar(2000)','/systeminfo/BrowserMain.jsp?url=/hrm/resource/RoleResourceBrowser.jsp?roleid=','hrmresource','lastname','id','/hrm/resource/HrmResource.jsp?id=')
+go

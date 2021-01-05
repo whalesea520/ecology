@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  -->
+<workflow workflowId="">
+	<!-- name. 传递的参数,name不能修改.   column="CrossDomain" 表示跨域.默认空  url对应的defaultV 是ajax请求页面 -->
+	<field name="url" column="" defaultV="/mobile/plugin/hrm/hrminterface4E.jsp?type=getResourceEnter" defaultN="新员工入职情况报表"></field>
+	<!-- 开始日期 -->
+	<field name="fromDate" column="createdatefrom"></field>
+	<!-- 结束日期 -->
+	<field name="toDate" column="createdateto"></field>
+	
+	<!--直接包含返回的json中. 返回值判断,默认空.即为msg. 0标识成功. -->
+	<field name="return_flag" column="SuccessF" defaultV="msg" defaultN="成功标识"></field>
+	<field name="return_flag" column="SuccessV" defaultV="true" defaultN="成功值"></field>
+	<!-- 错误信息显示 -->
+	<field name="return_flag" column="ErrMsg" defaultV="" defaultN="错误信息"></field>
+	<!--默认,空.返回示例如下图.标准返回 空或者1: -->
+	<field name="return_flag" column="RetType" defaultV="3" defaultN="返回类型"></field>
+	<!-- 数据显示格式默认1 -->
+	<field name="return_flag" column="ShowStyle" defaultV="4" defaultN="列表展示样式"></field>
+	<!-- 每条数据是否显示序号(1开始),类似排名 -->
+	<field name="return_flag" column="DisplayRanking" defaultV="0" defaultN="是否显示序号"></field>
+	<!-- 每条数据是否小图片,默认未空.不需要.defaultV 可以设置默认图标  -->
+	<field name="return_flag" column="DisplayIcon" defaultV="RSC" defaultN="显示小图标"></field>
+	<!-- 点击跳转URL  -->
+	<field name="return_flag" column="ClickURL" defaultV="/mobile/plugin/6/view.jsp?fromVoice=true&amp;detailid={ID}" defaultN="跳转URL"></field>
+	
+	<!-- 返回统计值 -->
+	<field name="return_" column="id" defaultV="ID" defaultN=""></field>
+	<field name="return_" column="icon" defaultV="ICON" defaultN=""></field>
+	<field name="return_" column="name" defaultV="NAME" defaultN="名称"></field>
+	<field name="return_" column="job" defaultN="岗位"></field>
+	<field name="return_" column="subcomp" defaultN="分部"></field>
+	<field name="return_" column="dept" defaultN="部门"></field>
+	
+</workflow>

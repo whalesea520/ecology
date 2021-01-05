@@ -1,0 +1,35 @@
+/*左侧菜单效果用css*/
+.lavaLampNoImage {
+  overflow: hidden;
+}
+
+.lavaLampNoImage li.back {
+  background-color: #e6e8ea;
+  width: 180px;
+  /* 特效框高度，根据实际调整 */
+  height: 27px;
+  z-index: 9;
+  position: absolute; 
+  border: 1px solid gray;
+  filter:alpha(opacity=30);
+}
+.lavaLampNoImage li a {
+  /*font: bold 14px arial;*/
+  text-decoration: none;
+  color: #000;
+  outline: none;
+  text-align: left;
+  top: 7px;
+  left:17px;
+  /*text-transform: uppercase;*/
+  letter-spacing: 0;
+  z-index: 10;   
+  position: relative; 
+  width:180px;
+  height:27px;
+  margin-bottom:1px;
+  font-size:11px;     
+}   
+.lavaLampWithImage li a:hover, .lavaLampWithImage li a:active, .lavaLampWithImage li a:visited {
+	border: none;
+} 

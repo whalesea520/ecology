@@ -1,0 +1,51 @@
+DELETE FROM HtmlLabelIndex WHERE id=126145 
+GO
+DELETE FROM HtmlLabelInfo WHERE indexid=126145 
+GO
+INSERT INTO HtmlLabelIndex VALUES(126145,'设置') 
+GO
+INSERT INTO HtmlLabelInfo VALUES(126145,'设置',7) 
+GO
+INSERT INTO HtmlLabelInfo VALUES(126145,'Settings',8) 
+GO
+INSERT INTO HtmlLabelInfo VALUES(126145,'設置',9) 
+GO
+
+DELETE FROM HtmlLabelIndex WHERE id=126146 
+GO
+DELETE FROM HtmlLabelInfo WHERE indexid=126146 
+GO
+INSERT INTO HtmlLabelIndex VALUES(126146,'记忆门户标签') 
+GO
+INSERT INTO HtmlLabelInfo VALUES(126146,'记忆门户标签',7) 
+GO
+INSERT INTO HtmlLabelInfo VALUES(126146,'Remember Portal Tags',8) 
+GO
+INSERT INTO HtmlLabelInfo VALUES(126146,'記憶門戶标簽',9) 
+GO
+
+DELETE from HtmlLabelIndex WHERE id=126151 
+GO
+DELETE from HtmlLabelInfo WHERE indexid=126151 
+GO
+INSERT INTO HtmlLabelIndex VALUES(126151,'是') 
+GO
+INSERT INTO HtmlLabelInfo VALUES(126151,'是',7) 
+GO
+INSERT INTO HtmlLabelInfo VALUES(126151,'YES',8) 
+GO
+INSERT INTO HtmlLabelInfo VALUES(126151,'是',9) 
+GO
+
+DELETE from HtmlLabelIndex WHERE id=126152 
+GO
+DELETE from HtmlLabelInfo WHERE indexid=126152 
+GO
+INSERT INTO HtmlLabelIndex VALUES(126152,'否') 
+GO
+INSERT INTO HtmlLabelInfo VALUES(126152,'否',7) 
+GO
+INSERT INTO HtmlLabelInfo VALUES(126152,'NO',8) 
+GO
+INSERT INTO HtmlLabelInfo VALUES(126152,'否',9) 
+GO

@@ -1,0 +1,136 @@
+/** Timelinr **/
+.timelinrContainer{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	background-color:#E7ECF2;
+}
+.timelinrContainer{
+	border-spacing: 0px;
+}
+.timelinrContainer .timePart{
+	width: 40px;
+	padding: 0px 6px 0px 0px;
+	margin: -1px;
+	font-family: 'Microsoft Yahei', Arial, sans-serif;
+	font-size: 12px;
+	color: #647BB4;
+	vertical-align: top;
+	text-align: right;
+	border-right: 3px solid #C3CAE4;
+}
+.timelinrContainer .timePart .timearraw{
+	float: right;
+	width: 18px;
+	height: 13px;
+	margin: 22px -18px 0px 0px;
+	bottom: -1px;
+	background:  url("/images/ecology8/imgarraw_wev8.jpg") no-repeat;
+	z-index: 99999;
+}
+.timelinrContainer .timePart .timeRowWrap{
+	margin: 0;
+	padding: 11px 0px 0px 0px;
+}
+.timelinrContainer .timePart .timeRowWrap .year{
+	font-family: 'Microsoft Yahei', Arial, sans-serif;
+	font-size: 8px;
+	color: #5B84C1;
+	vertical-align: top;
+	text-align: right;
+}
+.timelinrContainer .timePart .timeRowWrap .monthday{
+	font-family: 'Microsoft Yahei', Arial, sans-serif;
+	font-size: 12px;
+	vertical-align: top;
+	color: #657BB4;
+	text-align: right;
+}
+.timelinrContainer .fieldPart{
+	padding: 10px 0px 0px 0px;
+	vertical-align: top;
+	/**background: url("/mobilemode/images/mec/arrow_right_wev8.png") no-repeat;**/
+	background-position: right center;
+	background-color:#E7ECF2;
+}
+.timelinrContainer .fieldPart .arrow{
+	float: left;
+	width: 10px;
+	height: 19px;
+	margin: 8px 0px 0px 10px;
+	bottom: -1px;
+	background:  url("/images/ecology8/angle-left_wev8.png") no-repeat;
+	z-index: 99999;
+}
+.timelinrContainer .fieldPart .contentPart{
+	list-style: none;
+	margin: 0px 10px 10px 20px;
+	padding: 0px 0px 0px 0px;
+	background-color:#FFFFFF;
+	-moz-border-radius: 5;
+	-webkit-border-radius: 5;
+	border-radius: 5;
+}
+.timelinrContainer .fieldPart .contentPart .timelinrGroupWrap {
+	padding: 5px 5px 5px 10px;
+}
+.timelinrContainer .fieldPart .contentPart .timelinrGroupWrap .titleRowWrap{
+	font-family: 'Microsoft Yahei', Arial, sans-serif;
+	font-size: 15px;
+	color: #647BB4;
+}
+.timelinrContainer .fieldPart .contentPart .timelinrGroupWrap .rowWrap{
+	font-family: 'Microsoft Yahei', Arial, sans-serif;
+	font-size: 8pt;
+	padding: 0px 0px 0px 0px;
+	line-height: 18px;
+	color: #333;
+}
+.timelinrContainer .fieldPart .contentPart .timelinrGroupWrap .rowWrap .colWrap{
+	display: inline;
+	/**margin-right: 3px;**/
+}
+.timelinrContainer .fieldPart .contentPart .line {
+	margin: 5px 5px 5px 10px;
+	border-bottom:1px dashed #E7ECF2;
+}
+.timelinrContainer .fieldPart .contentPart > .line:last-child {
+	display: none;
+}
+.moreDatas_btn{
+	margin: .5em 0;
+	padding: .7em 1em;
+	background: #f6f6f6;
+	cursor: pointer;
+	border: 1px solid #ddd;
+	border-radius: .3125em;
+	color: #333;
+	font-size: 16px;
+	text-align: center;
+	line-height: 1.3;
+	text-decoration: none!important;
+	display: block;
+}
+.nodatas_border{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-shadow: 0 1px 0 #f3f3f3;
+}
+.nodatas_content{
+	text-align: center;
+	font-size: 14px;
+	color: #ccc;
+}
+.timelinrWarn{
+	font-family: Microsoft YaHei;
+	font-size: 18px;
+	background: url("/mobilemode/images/tip_wev8.png") no-repeat;
+	padding: 5px 5px 5px 45px;
+	line-height: 35px;
+	color: #bbb;
+	background-size: 30px;
+	background-position: 10px center;
+	margin: 0px auto;
+	text-align: left;
+}

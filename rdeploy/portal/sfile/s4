@@ -1,0 +1,51 @@
+update hpinfo set infoname='工作门户',infodesc='',styleid='',layoutid=4,subcompanyid=1,isuse='1',islocked='0',creatortype='3',creatorid=1,hpcreatorid=1,menuStyleid='' where id=4
+insert into hpElement(title,logo,islocked,strsqlwhere,ebaseid,isSysElement,hpid,isFixationRowHeight,background,styleid,marginTop,shareuser,scrolltype,isRemind,fromModule,isuse) values('幻灯片','/page/element/Slide/resource/image/slide_wev8.gif','0','','Slide','1',4,'0','','1413740040168',10,'1_^^2_^^3_^^5_1^^6_^^7_','','','Portal','1')__oldeid__=1
+insert into hpElement(title,logo,islocked,strsqlwhere,ebaseid,isSysElement,hpid,isFixationRowHeight,background,styleid,marginTop,shareuser,scrolltype,isRemind,fromModule,isuse) values('日历日程','/page/element/MyCalendar/resource/image/CalendarSchedule.png','0','','MyCalendar','1',4,'0','','1390381555293',10,'5_1','None','isnew','Portal','1')__oldeid__=2
+insert into hpElement(title,logo,islocked,strsqlwhere,ebaseid,isSysElement,hpid,isFixationRowHeight,background,styleid,marginTop,shareuser,scrolltype,isRemind,fromModule,isuse) values('流程中心','/page/element/8/resource/image/8_wev8.gif','0','','8','1',4,'0','','1413740040168',10,'1_^^2_^^3_^^5_1^^6_^^7_','None','','Portal','1')__oldeid__=3
+insert into hpElement(title,logo,islocked,strsqlwhere,ebaseid,isSysElement,hpid,isFixationRowHeight,background,styleid,marginTop,shareuser,scrolltype,isRemind,fromModule,isuse) values('未读文档','/page/element/6/resource/image/6_wev8.gif','0','7|0|0','6','1',4,'0','','1390381555293',10,'1_^^2_^^3_^^5_1^^6_^^7_','','','Portal','1')__oldeid__=4
+insert into hpElement(title,logo,islocked,strsqlwhere,ebaseid,isSysElement,hpid,isFixationRowHeight,background,styleid,marginTop,shareuser,scrolltype,isRemind,fromModule,isuse) values('新建流程','/page/element/addwf/resource/image/addwf_wev8.gif','0','','addwf','1',4,'0','','1390381555293',10,'1_^^2_^^3_^^5_1^^6_^^7_','','','Portal','1')__oldeid__=5
+delete from hplayout where usertype=3 and  hpid=4
+insert into hplayout(hpid,layoutbaseid,areaflag,areasize,areaElements,userid,usertype) values(4,'4','A','70','getNewHpLayoutAreaElements1,3,4,',1,3)
+insert into hplayout(hpid,layoutbaseid,areaflag,areasize,areaElements,userid,usertype) values(4,'4','B','30','getNewHpLayoutAreaElements2,5,',1,3)
+insert into hplayout(hpid,layoutbaseid,areaflag,areasize,areaElements,userid,usertype) values(4,'4','C','50','getNewHpLayoutAreaElements',1,3)
+insert into hplayout(hpid,layoutbaseid,areaflag,areasize,areaElements,userid,usertype) values(4,'4','D','50','getNewHpLayoutAreaElements',1,3)
+delete from hpElementImg where eid in(1,2,3,4,5,-1)
+delete from hpElementSetting where eid in(1,2,3,4,5,-1)
+insert into hpElementSetting(id,eid,name,value) values(7,oldeid_1,'slide_t_AutoChangeTime','')
+insert into hpElementSetting(id,eid,name,value) values(8,oldeid_1,'slide_t_changeStyle','uncover')
+insert into hpElementSetting(id,eid,name,value) values(9,oldeid_1,'slide_t_changeTime','')
+insert into hpElementSetting(id,eid,name,value) values(10,oldeid_1,'slide_t_changeStyleBar','null')
+insert into hpElementSetting(id,eid,name,value) values(11,oldeid_1,'slide_t_position','3')
+insert into hpElementSetting(id,eid,name,value) values(12,oldeid_5,'displayLayout','1')
+delete from hpElementSettingDetail where eid in(1,2,3,4,5,-1)
+insert into hpElementSettingDetail(userid,usertype,eid,perpage,linkmode,showfield,sharelevel,hpid,currentTab,isremind) values(1,3,oldeid_1,5,3,'','2',4,'','')
+insert into hpElementSettingDetail(userid,usertype,eid,perpage,linkmode,showfield,sharelevel,hpid,currentTab,isremind) values(1,3,oldeid_2,-1,-1,'','2',4,'','')
+insert into hpElementSettingDetail(userid,usertype,eid,perpage,linkmode,showfield,sharelevel,hpid,currentTab,isremind) values(1,3,oldeid_3,5,2,'12,87,13,85,86,14,15','2',4,'','')
+insert into hpElementSettingDetail(userid,usertype,eid,perpage,linkmode,showfield,sharelevel,hpid,currentTab,isremind) values(1,3,oldeid_4,5,2,'4,5,6,55','2',4,'','')
+insert into hpElementSettingDetail(userid,usertype,eid,perpage,linkmode,showfield,sharelevel,hpid,currentTab,isremind) values(1,3,oldeid_5,5,3,'','2',4,'','')
+delete from hpNewsTabInfo where eid in(1,2,3,4,5,-1)
+delete from hpOutDataSettingAddr where eid in(1,2,3,4,5,-1)
+delete from hpOutDataSettingDef where eid in(1,2,3,4,5,-1)
+delete from hpOutDataSettingField where eid in(1,2,3,4,5,-1)
+delete from hpOutDataTabSetting where eid in(1,2,3,4,5,-1)
+delete from hpcurrenttab where eid in(1,2,3,4,5,-1)
+insert into hpcurrenttab(userid,usertype,eid,currenttab) values(1,3,oldeid_3,'1')
+delete from hpcurrentuse where hpid =4
+insert into hpcurrentuse(userid,usertype,hpid) values(1,3,4)
+delete from hpsetting_wfcenter where eid in(1,2,3,4,5,-1)
+insert into hpsetting_wfcenter(eid,tabid,viewType,typeids,flowids,nodeids,isExclude,tabTitle,showCopy,completeflag) values(oldeid_3,1,1,'','','','1','待办','1',0)
+insert into hpsetting_wfcenter(eid,tabid,viewType,typeids,flowids,nodeids,isExclude,tabTitle,showCopy,completeflag) values(oldeid_3,4,4,'','','','1','跟踪','0',0)
+insert into hpsetting_wfcenter(eid,tabid,viewType,typeids,flowids,nodeids,isExclude,tabTitle,showCopy,completeflag) values(oldeid_3,3,3,'','','','1','办结','0',0)
+insert into hpsetting_wfcenter(eid,tabid,viewType,typeids,flowids,nodeids,isExclude,tabTitle,showCopy,completeflag) values(oldeid_3,2,2,'','','','0','已办','0',0)
+delete from hpsysremind where eid in(1,2,3,4,5,-1)
+delete from hpFieldLength where eid in(1,2,3,4,5,-1)
+insert into hpFieldLength(userid,usertype,eid,efieldid,charnum,imgsize,newstemplate,imgtype,imgsrc) values(1,3,oldeid_4,4,8,'','','0','')
+insert into hpFieldLength(userid,usertype,eid,efieldid,charnum,imgsize,newstemplate,imgtype,imgsrc) values(1,3,oldeid_3,12,8,'','','0','')
+delete from hpareaelement where hpid=4
+insert into hpareaelement(hpid,eid,ebaseid,userid,usertype,module,modelastdate,modelasttime,ordernum) values(4,1,'Slide',1,3,'Portal','2015-07-06','14:17:47',0)
+insert into hpareaelement(hpid,eid,ebaseid,userid,usertype,module,modelastdate,modelasttime,ordernum) values(4,2,'MyCalendar',1,3,'Portal','2015-07-06','14:39:40',0)
+insert into hpareaelement(hpid,eid,ebaseid,userid,usertype,module,modelastdate,modelasttime,ordernum) values(4,3,'8',1,3,'Portal','2015-07-06','14:40:15',0)
+insert into hpareaelement(hpid,eid,ebaseid,userid,usertype,module,modelastdate,modelasttime,ordernum) values(4,4,'6',1,3,'Portal','2015-07-06','14:43:15',0)
+insert into hpareaelement(hpid,eid,ebaseid,userid,usertype,module,modelastdate,modelasttime,ordernum) values(4,5,'addwf',1,3,'Portal','2015-07-06','14:43:45',0)
+delete from slideElement where eid in(1,2,3,4,5,-1)
+insert into slideElement(id,eid,title,description,url1,link,url2,url3) values(21,oldeid_1,'','','/page/resource/userfile/image/Image4.png','','','')

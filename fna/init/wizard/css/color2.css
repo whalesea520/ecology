@@ -1,0 +1,63 @@
+/**绿色*/
+body{background:none !important;}
+.logo{background:url(/wui/theme/office/page/images/logo3.png) center no-repeat !important;width:246px !important;}
+
+#top,#btn_more{background:#2B4711 !important;}/**顶部工具条背景*/
+#foot{background:#6FA53C !important;}/**底部背景*/
+#menu{background:#6FA53C !important;}/**logo及一级菜单区域背景*/
+
+#searchBlockTBL{background:#42671E !important;height:27px !important;}/**搜索部分背景*/
+#basicSearchrTypeText{color:#fff !important;margin-left:5px !important;}
+#searchvalue{background:#fff !important;margin:0px !important;margin-right:5px !important;}
+#searchdiv{width:214px !important;}
+.searchkeywork{width:131px !important;}
+#searchpoint{background:url(/wui/theme/office/page/images/btn/menu_point.png) center no-repeat !important;}
+#searchbt{margin-right:5px !important;background:url('/wui/theme/office/page/images/toolbar/icon_search.png') center no-repeat !important;}
+
+#sign_dispan{background:#324E16 !important;height:27px !important;color:#fff !important;margin-top:0px !important;padding:0px !important;}/**签到签退*/
+.menucon{width:64px !important;margin-right: 0px !important;background:url('/wui/theme/office/page/images/toolbar/down.png') center no-repeat #324E16 !important;}/**收缩按钮背景色*/
+.menucon_up{background:url('/wui/theme/office/page/images/toolbar/up.png') center no-repeat #324E16 !important;}/**收缩按钮背景色*/
+
+.blank{width:0px !important;}
+
+.btn_left{width:16px;height:20px;margin-top:5px;background:url('/wui/theme/office/page/images/btn/btn_left.png') center no-repeat;}
+.btn_left_hover{background:url('/wui/theme/office/page/images/btn/btn_left.png') center no-repeat #50871C;}/**一级菜单左右按钮移上颜色*/
+.btn_right{width:16px;height:20px;margin-top:5px;background:url('/wui/theme/office/page/images/btn/btn_right.png') center no-repeat;}
+.btn_right_hover{background:url('/wui/theme/office/page/images/btn/btn_right.png') center no-repeat #50871C;}/**一级菜单左右按钮移上颜色*/
+
+.menubtn_img1,.nav_btn,#nav{background:#50871C !important;}/**一级菜单选中及二级菜单背景*/
+.text2,.text3{color:#fff !important;}
+.menubtn_img2{background:none !important;}/**一级菜单未选中背景*/
+
+#nav{height:32px !important;}
+#nav li{height:32px !important;}
+#nav div{color:#fff !important;}
+#nav img{width:0px !important;}
+.line{background:none !important;}
+.nav_btn{height:32px !important;}
+.nav_left{height:28px !important;}
+.nav_right{height:28px !important;}
+
+.menu1:hover{background:#46711C !important;}/**二级菜单移上背景*/
+.mainMenuParentBtnFocused .menu1{background:#46711C !important;}/**二级菜单移上背景*/
+
+#subMenusContainer img{width:0px !important;}
+#subMenusContainer li{background: #46711C !important;}/**子菜单背景*/
+#subMenusContainer a{
+	color:#B7CAA4 !important;/**子菜单字体颜色*/
+	-webkit-border-radius:0px !important;
+}
+#subMenusContainer a:hover, 
+#subMenusContainer a:focus,
+#subMenusContainer a.subMenuParentBtnFocused{
+	background-color:#375816 !important;/**子菜单移上背景*/
+	color:#FFF !important;
+}
+#nav ol, #nav ul, #subMenusContainer ul, #subMenusContainer ol {border:0px !important;}
+
+.menu1{position:relative;}
+.menu_point{display:block;}
+.subMenuParentBtn{background: url(/wui/theme/office/page/images/btn/arrow_right_over.png) right center no-repeat;}
+#scrollBar{height:0px;overflow:hidden;}
+
+.blank_top{height:8px;}

@@ -1,0 +1,87 @@
+.menuh{
+	font: bold 12px Verdana;
+	heigth:25px;
+	text-align:left;
+}
+.menuh ul{
+	z-index:100;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+/*Top level list items*/
+.menuh ul li{
+	position: relative;
+	display: inline;
+	margin: 0;
+	float: left;
+	white-space: nowrap;
+	
+}
+/*Top level menu link items style*/
+.menuh ul li a{
+	display: block;
+	background: #414141;
+	color: white;		
+	color: #2d2b2b;
+	text-decoration: none;
+}
+* html .menuh ul li a{ /*IE6 hack to get sub menu links to behave correctly*/
+	display: inline-block;
+}
+.menuh ul li a:link, .menuh ul li a:visited{
+	color: white;
+	text-decoration: none;
+}
+.menuh ul li a.selected{ /*CSS class that's dynamically added to the currently active menu items' LI A element*/
+	background: black; 
+	color: white;
+	text-decoration: none;
+}
+.menuh ul li a:hover{
+	background: black; /*background of menu items during onmouseover (hover state)*/
+	color: white;
+}
+/*1st sub level menu*/
+.menuh ul ul{
+	position: absolute;
+	left: 0;
+	display: none; /*collapse all sub menus to begin with*/
+	visibility: hidden;
+}
+.menuh ul ul ul{
+		left:170px;
+}
+
+/*Sub level menu list items (undo style from Top level List Items)*/
+.menuh ul li ul li{
+	display: list-item;
+	float: none;
+	
+}
+/*All subsequent sub menu levels vertical offset after 1st level sub menu */
+.menuh ul li ul li ul{
+	
+}
+/* Sub level menu links style */
+.menuh ul li ul li a{
+	font: normal 13px Verdana;
+	width: 160px; /*width of sub menus*/	
+	margin: 0;
+	border-top-width: 0;
+	border-bottom: 1px solid gray;
+}
+.downarrowclass{
+	position: relative;
+	right: 0px;
+}
+.rightarrowclass{
+	position: absolute;
+	top: 6px;
+	right: 5px;
+}
+.menuh ul li:hover>ul { 
+	display:block;	
+	visibility: visible;
+}
+html .menuh{height: 1%;} /*Holly Hack for IE7 and below*/

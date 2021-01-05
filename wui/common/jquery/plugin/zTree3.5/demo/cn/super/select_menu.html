@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> ZTREE DEMO - select menu</TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../../../css/demo.css" type="text/css">
+	<link rel="stylesheet" href="../../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="../../../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../../js/jquery.ztree.core-3.5.js"></script>
+	<!--  <script type="text/javascript" src="../../../js/jquery.ztree.excheck-3.5.js"></script>
+	  <script type="text/javascript" src="../../../js/jquery.ztree.exedit-3.5.js"></script>-->
+	<SCRIPT type="text/javascript">
+		<!--
+		var setting = {
+			view: {
+				dblClickExpand: false
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			callback: {
+				beforeClick: beforeClick,
+				onClick: onClick
+			}
+		};
+
+		var zNodes =[
+			{id:1, pId:0, name:"鍖椾含"},
+			{id:2, pId:0, name:"澶╂触"},
+			{id:3, pId:0, name:"涓婃捣"},
+			{id:6, pId:0, name:"閲嶅簡"},
+			{id:4, pId:0, name:"娌冲寳鐪?, open:true},
+			{id:41, pId:4, name:"鐭冲搴?},
+			{id:42, pId:4, name:"淇濆畾"},
+			{id:43, pId:4, name:"閭兏"},
+			{id:44, pId:4, name:"鎵垮痉"},
+			{id:5, pId:0, name:"骞夸笢鐪?, open:true},
+			{id:51, pId:5, name:"骞垮窞"},
+			{id:52, pId:5, name:"娣卞湷"},
+			{id:53, pId:5, name:"涓滆帪"},
+			{id:54, pId:5, name:"浣涘北"},
+			{id:6, pId:0, name:"绂忓缓鐪?, open:true},
+			{id:61, pId:6, name:"绂忓窞"},
+			{id:62, pId:6, name:"鍘﹂棬"},
+			{id:63, pId:6, name:"娉夊窞"},
+			{id:64, pId:6, name:"涓夋槑"}
+		 ];
+
+		function beforeClick(treeId, treeNode) {
+			var check = (treeNode && !treeNode.isParent);
+			if (!check) alert("鍙兘閫夋嫨鍩庡競...");
+			return check;
+		}
+		
+		function onClick(e, treeId, treeNode) {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			nodes = zTree.getSelectedNodes(),
+			v = "";
+			nodes.sort(function compare(a,b){return a.id-b.id;});
+			for (var i=0, l=nodes.length; i<l; i++) {
+				v += nodes[i].name + ",";
+			}
+			if (v.length > 0 ) v = v.substring(0, v.length-1);
+			var cityObj = $("#citySel");
+			cityObj.attr("value", v);
+		}
+
+		function showMenu() {
+			var cityObj = $("#citySel");
+			var cityOffset = $("#citySel").offset();
+			$("#menuContent").css({left:cityOffset.left + "px", top:cityOffset.top + cityObj.outerHeight() + "px"}).slideDown("fast");
+
+			$("body").bind("mousedown", onBodyDown);
+		}
+		function hideMenu() {
+			$("#menuContent").fadeOut("fast");
+			$("body").unbind("mousedown", onBodyDown);
+		}
+		function onBodyDown(event) {
+			if (!(event.target.id == "menuBtn" || event.target.id == "menuContent" || $(event.target).parents("#menuContent").length>0)) {
+				hideMenu();
+			}
+		}
+
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+		});
+		//-->
+	</SCRIPT>
+	<style type="text/css">
+	</style>
+ </HEAD>
+
+<BODY>
+<h1>涓嬫媺鑿滃崟</h1>
+<h6>[ 鏂囦欢璺緞: super/select_menu.html ]</h6>
+<div class="content_wrap">
+	<div class="zTreeDemoBackground left">
+		<ul class="list">
+			<li class="title">&nbsp;&nbsp;<span class="highlight_red">閫夋嫨鍩庡競鏃讹紝鎸変笅 Ctrl 閿彲浠ヨ繘琛屽閫?/span></li>
+			<li class="title">&nbsp;&nbsp;鍩庡競锛?input id="citySel" type="text" readonly value="" style="width:120px;"/>
+		&nbsp;<a id="menuBtn" href="#" onclick="showMenu(); return false;">閫夋嫨</a></li>
+		</ul>
+	</div>
+	<div class="right">
+		<ul class="info">
+			<li class="title"><h2>瀹炵幇鏂规硶璇存槑</h2>
+				<ul class="list">
+				<li>鐢?zTree 瀹炵幇杩欑涓嬫媺鑿滃崟锛屽簲璇ヨ鏄瘮杈冨鏄撶殑锛屼綘鍙渶瑕佹帶鍒?zTree 鎵€鍦ㄥ鍣ㄧ殑闅愯棌/鏄剧ず锛屼互鍙婁綅缃嵆鍙€?/li>
+				<li class="highlight_red">zTree v3.x 瀹炵幇浜嗗鐐归€変腑鍔熻兘锛屽洜姝ゅ浜庨渶瑕佸閫夌殑涓嬫媺鑿滃崟涔熸槗濡傚弽鎺屻€?/li>
+				<li class="highlight_red">鍒╃敤 setting 鐨勫悇椤归厤缃弬鏁帮紝瀹屽叏鍙互婊¤冻澶ч儴鍒嗙殑鍔熻兘闇€姹傘€?/li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div id="menuContent" class="menuContent" style="display:none; position: absolute;">
+	<ul id="treeDemo" class="ztree" style="margin-top:0; width:160px;"></ul>
+</div>
+</BODY>
+</HTML>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> ZTREE DEMO - one path</TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../../css/demo.css" type="text/css">
+	<link rel="stylesheet" href="../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="../../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ztree.core-3.0.js"></script>
+	<!--  <script type="text/javascript" src="../../js/jquery.ztree.excheck-3.0.js"></script>
+	  <script type="text/javascript" src="../../js/jquery.ztree.exedit-3.0.js"></script>-->
+	<SCRIPT LANGUAGE="JavaScript">
+		<!--
+		var setting = {
+			view: {
+				dblClickExpand: false,
+				showLine: false
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			callback: {
+				beforeExpand: beforeExpand,
+				onExpand: onExpand,
+				onClick: onClick
+			}
+		};
+
+		var zNodes =[
+			{ id:1, pId:0, name:"鏍? Root"},
+			{ id:11, pId:1, name:"鐖惰妭鐐?1"},
+			{ id:111, pId:11, name:"鍙跺瓙鑺傜偣111"},
+			{ id:1111, pId:111, name:"鍙跺瓙鑺傜偣1111"},
+			{ id:1112, pId:111, name:"鍙跺瓙鑺傜偣1112"},
+			{ id:1113, pId:111, name:"鍙跺瓙鑺傜偣1113"},
+			{ id:112, pId:11, name:"鍙跺瓙鑺傜偣112"},
+			{ id:1121, pId:112, name:"鍙跺瓙鑺傜偣1121"},
+			{ id:1122, pId:112, name:"鍙跺瓙鑺傜偣1122"},
+			{ id:1123, pId:112, name:"鍙跺瓙鑺傜偣1123"},
+			{ id:113, pId:11, name:"鍙跺瓙鑺傜偣113"},
+			{ id:114, pId:11, name:"鍙跺瓙鑺傜偣114"},
+			{ id:12, pId:1, name:"鐖惰妭鐐?2"},
+			{ id:121, pId:12, name:"鍙跺瓙鑺傜偣121"},
+			{ id:1211, pId:121, name:"鍙跺瓙鑺傜偣1211"},
+			{ id:1212, pId:121, name:"鍙跺瓙鑺傜偣1212"},
+			{ id:1213, pId:121, name:"鍙跺瓙鑺傜偣1213"},
+			{ id:122, pId:12, name:"鍙跺瓙鑺傜偣122"},
+			{ id:1221, pId:122, name:"鍙跺瓙鑺傜偣1221"},
+			{ id:1222, pId:122, name:"鍙跺瓙鑺傜偣1222"},
+			{ id:1223, pId:122, name:"鍙跺瓙鑺傜偣1223"},
+			{ id:123, pId:12, name:"鍙跺瓙鑺傜偣123"},
+			{ id:124, pId:12, name:"鍙跺瓙鑺傜偣124"},
+			{ id:2, pId:0, name:"鏍? Root"},
+			{ id:21, pId:2, name:"鐖惰妭鐐?1"},
+			{ id:211, pId:21, name:"鍙跺瓙鑺傜偣211"},
+			{ id:212, pId:21, name:"鍙跺瓙鑺傜偣212"},
+			{ id:213, pId:21, name:"鍙跺瓙鑺傜偣213"},
+			{ id:214, pId:21, name:"鍙跺瓙鑺傜偣214"},
+			{ id:22, pId:2, name:"鐖惰妭鐐?2"},
+			{ id:221, pId:22, name:"鍙跺瓙鑺傜偣221"},
+			{ id:222, pId:22, name:"鍙跺瓙鑺傜偣222"},
+			{ id:223, pId:22, name:"鍙跺瓙鑺傜偣223"},
+			{ id:224, pId:22, name:"鍙跺瓙鑺傜偣224"}
+		];
+
+		var curExpandNode = null;
+		function beforeExpand(treeId, treeNode) {
+			var pNode = curExpandNode ? curExpandNode.getParentNode():null;
+			while (pNode) {
+				if (pNode === treeNode) {
+					break;
+				}
+				pNode = pNode.getParentNode();
+			}
+			if (!pNode) {
+				singlePath(treeNode);
+			}
+		}
+		function singlePath(newNode) {
+			if (newNode === curExpandNode) return;
+			if (curExpandNode && curExpandNode.open==true) {
+				var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+				if (newNode.parentTId === curExpandNode.parentTId) {
+					zTree.expandNode(curExpandNode, false, true);
+				} else {
+					var newParents = [];
+					while (newNode) {
+						newNode = newNode.getParentNode();
+						if (newNode === curExpandNode) {
+							newParents = null;
+							break;
+						} else if (newNode) {
+							newParents.push(newNode);
+						}
+					}
+					if (newParents!=null) {
+						var oldNode = curExpandNode;
+						var oldParents = [];
+						while (oldNode) {
+							oldNode = oldNode.getParentNode();
+							if (oldNode) {
+								oldParents.push(oldNode);
+							}
+						}
+						if (newParents.length>0) {
+							for (var i = Math.min(newParents.length, oldParents.length)-1; i>=0; i--) {
+								if (newParents[i] !== oldParents[i]) {
+									zTree.expandNode(oldParents[i], false, true);
+									break;
+								}
+							}
+						} else {
+							zTree.expandNode(oldParents[oldParents.length-1], false, true);
+						}
+					}
+				}
+			}
+			curExpandNode = newNode;
+		}
+
+		function onExpand(event, treeId, treeNode) {
+			curExpandNode = treeNode;
+		}
+
+		function onClick(e,treeId, treeNode) {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+			zTree.expandNode(treeNode);
+		}
+
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+		});
+		//-->
+	</SCRIPT>
+	<style type="text/css">
+.ztree li button.switch {visibility:hidden; width:1px;}
+.ztree li button.switch.roots_docu {visibility:visible; width:16px;}
+.ztree li button.switch.center_docu {visibility:visible; width:16px;}
+.ztree li button.switch.bottom_docu {visibility:visible; width:16px;}
+	</style>
+ </HEAD>
+
+<BODY>
+<h1>淇濇寔灞曞紑鍗曚竴璺緞</h1>
+<h6>[ 鏂囦欢璺緞锛歞emo/super/onepath.html ]</h6>
+<div class="content_wrap">
+	<div class="zTreeDemoBackground left">
+		<ul id="treeDemo" class="ztree"></ul>
+	</div>
+	<div class="right">
+		<ul class="info">
+			<li class="title"><h2>瀹炵幇鏂规硶璇存槑</h2>
+				<ul class="list">
+				<li>姝?Demo 鏄湪 "鍗曞嚮灞曞紑/鎶樺彔鑺傜偣" 鍩虹涓婃敼閫犺€屾潵锛屾爲鑺傜偣淇濇寔濮嬬粓鍙睍寮€涓€鏉¤矾寰勩€?/li>
+				<li class="highlight_red">鍒╃敤 setting.callback.beforeExpand / onExpand 浜嬩欢鍥炶皟鍑芥暟瀹炵幇灞曞紑瑙勫垯</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+</BODY>
+</HTML>

@@ -1,0 +1,9 @@
+<module id="hrmsyn" version="1.0.0">
+    <service-point id="hrmsynimp" interface="weaver.interfaces.hrm.HrmSynService">
+        <invoke-factory>                            
+            <construct class="weaver.interfaces.hrm.HrmSynDAO">                        
+            </construct>
+        </invoke-factory>
+    </service-point>   
+</module>
+

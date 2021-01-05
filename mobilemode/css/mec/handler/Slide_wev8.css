@@ -1,0 +1,266 @@
+/*设计的时候幻灯片显示相比在手机上有个性化样式*/
+.swipe{
+	visibility: visible;	
+}
+.slide .desc{
+	background-color: rgba(0, 0, 0, 0.498039);
+	width: 100%;
+	font-weight: bold;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	height: 37px; 
+	line-height: 37px;
+}
+.slide .slide-point b.currPoint{
+	background-color: rgb(34, 42, 46);
+}
+
+.MADS_Title{
+	border-bottom: 1px solid rgb(223, 223, 223);
+	font-size: 12px;
+	color: rgb(164, 169, 174);
+	font-weight: bold;
+	padding: 0px 0px 6px 10px;	
+	margin-bottom: 10px;
+}
+
+.MADS_Title span{
+	color: rgb(164, 169, 174);
+	cursor: pointer;
+	display: inline-block;
+	font-size: 12px;
+	height: 17px;
+	line-height: 17px;
+}
+.MADS_Title span.leftBtnSpan{
+	border-right: 1px solid rgb(164, 169, 174);
+	padding-right: 13px;
+}
+.MADS_Title span.rightBtnSpan{
+	padding-left: 13px;
+	padding-right: 13px;
+}
+.MADS_Title span.checked{
+	color: rgb(93, 156, 236);
+	font-weight: bold;
+}
+
+.MADS_Silde_Container{
+		display: none;
+}
+.MADS_Silde_URLContainer{
+	display: none;
+	margin-bottom: 5px;
+}
+.MADS_Silde_URLContainer .MADS_Silde_URLBorder{
+	line-height: 20px;
+	padding-left: 9px;
+	padding-right: 9px;
+	padding-top: 0px;
+	padding-bottom: 10px;
+	position: relative;	
+}
+.MADS_BaseUrlInfo{
+	font-size: 12px;
+	color: rgb(164, 169, 174);
+	padding: 0px 0px 6px 10px;
+}
+.MADS_BaseUrlInfo .MADS_InfoText{
+	padding-left: 25px;
+}
+.MADS_Silde_Item{
+	line-height: 20px;
+	padding-left: 9px;
+	padding-right: 9px;
+	padding-top: 10px;	
+	padding-bottom: 10px;
+	border: 1px solid #fff;	
+	position: relative;	
+}
+
+.MADS_Silde_Item .del_btn{
+	-webkit-background-clip: border-box;
+	-webkit-background-origin: padding-box;
+	-webkit-background-size: auto;
+	background-attachment: scroll;
+	background-clip: border-box;
+	background-color: rgba(0, 0, 0, 0);
+	background-image: url("/mobilemode/images/mec/lego_icon_d5b6388_wev8.png");
+	background-origin: padding-box;
+	background-position: 0px -111px;
+	background-size: auto;
+	cursor: pointer !important;
+	display: none;
+	font-family: 'Microsoft Yahei', Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	height: 13px;
+	line-height: 18px;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	width: 13px;
+	z-index: 1;
+}
+
+.MADS_Silde_Item:HOVER{
+	border: 1px dashed rgb(52, 152, 219);	
+}
+
+.MADS_Silde_Item:HOVER .del_btn{
+	display: block;	
+}
+
+.MADS_Silde_Item_Img{
+	border: 1px solid rgb(204, 204, 204);
+	cursor: pointer;
+	float: left;
+	height: 58px;
+	padding-bottom: 1px;
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	position: relative;
+	width: 112px;
+	text-align: center;
+}
+
+.MADS_Silde_Item_Img img{
+	width: 100%;
+	height: 100%;	
+}
+.MADS_Silde_Item_Addbtn{
+	width: 24px;
+	height: 24px;
+	background: url("/mobilemode/images/mec/add-img-btn_wev8.png") no-repeat;
+	position: absolute;
+	top: 15px;
+	left: 43px;
+}
+
+.MADS_Silde_Item_Detail{
+	box-sizing: border-box;
+	color: rgb(51, 51, 51);
+	display: block;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	height: 61px;
+	line-height: 20px;
+	margin-left: 127px;
+	position: relative;
+	width: 215px;
+	zoom: 1;	
+}
+
+.MADS_Text{
+	-webkit-appearance: none;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+	-webkit-rtl-ordering: logical;
+	-webkit-user-select: text;
+	-webkit-writing-mode: horizontal-tb;
+	border: 1px solid rgb(223, 223, 223);
+	background-color: rgb(255, 255, 255);
+	border-image-outset: 0px;
+	border-image-repeat: stretch;
+	border-image-slice: 100%;
+	border-image-source: none;
+	border-image-width: 1;
+	box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+	box-sizing: border-box;
+	cursor: auto;
+	display: inline-block;
+	font-family: 'Microsoft Yahei',Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	height: 26px;
+	letter-spacing: normal;
+	line-height: 19px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	outline-color: rgb(0, 0, 255);
+	outline-style: none;
+	outline-width: 0px;
+	padding-bottom: 3px;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-top: 3px;
+	text-align: start;
+	text-indent: 7px;
+	text-shadow: none;
+	text-transform: none;
+	width: 205px;
+	word-spacing: 0px;
+	writing-mode: lr-tb;
+	zoom: 1;	
+}
+
+.MADS_Silde_Item_Detail2{
+	box-sizing: border-box;
+	color: rgb(51, 51, 51);
+	display: block;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	margin-top: 9px;
+	zoom: 1;	
+}
+
+.MADS_Select{
+	border: 1px solid rgb(204, 204, 204);
+	height: 25px;
+}
+
+#MADS_Silde_Add{
+	text-align: right;
+	padding: 5px 3px;
+	margin: 3px 0px 3px 0px;
+	position: relative;
+}
+
+.MADS_Silde_Addbtn{
+	padding-left: 16px;
+	padding-right: 14px;
+	background:url('/mobilemode/images/blue_add_wev8.png') no-repeat left center;
+	color: #5d9cec;
+	cursor: pointer;
+	font-size: 12px;	
+}
+
+.MADS_BaseInfo{
+	padding-left: 12px;
+	margin-bottom: 15px;	
+}
+.MADS_BaseInfo .desc{
+	color: rgb(164, 169, 174);	
+	margin-left: 3px;
+}
+
+.MADS_Bottom{
+	padding: 5px 0px 0px 0px;
+	margin-bottom: 5px;		
+}
+.MADS_SaveBtn{
+	background-color: rgb(107, 163, 237);
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	box-sizing: border-box;
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+	display: block;
+	font-family: 'Microsoft Yahei', Arial, sans-serif;
+	font-size: 14px;
+	height: 28px;
+	line-height: 28px;
+	margin: 0px;
+	text-align: center;
+	width: 100%
+	zoom: 1;	
+}
+.Design_MecHandler_Slide .slide-overlay{
+	display: none;
+}

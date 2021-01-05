@@ -1,0 +1,59 @@
+
+	.divOver{
+		background: url(/images/ecology8/images/product/trOver_wev8.png);
+		cursor: pointer;
+	}
+	.toMenuTargetImg{
+		cursor: pointer;
+	}
+	.selectDownSelected{
+		background: url("/images/ecology8/images/select/selected_wev8.png");
+	}
+
+	.toptabitem{
+		line-height:60px;vertical-align:bottom;font-size:16px;color:#E1F4FF;text-align:center;bottom:0px;padding-top:0px
+	}
+	
+	.subMenu{
+		cursor:hand;
+		/*background-color:#A6A6A6;*/
+		font-size:12px;
+		padding:4px;
+		padding-left:16px;
+		padding-right:16px;
+		line-height:10px;
+	}
+	
+	.color-6d{
+		color:#6d6d6d;
+	}
+	
+	.subMenuSelected{
+		/*background-color:#92D050;*/
+		color:#0783c5;
+	}
+	
+	
+A:hover {
+ COLOR: black; TEXT-DECORATION: none
+}
+
+
+.cornerMenu{
+	left:0;height:170;width:189;z-index:100; text-align:center;background: url(/images/ecology8/images/select/bg_click_wev8.png);background-position: center;
+}
+
+body{
+background:url('/images/ecology8/images/bg_wev8.png') repeat-x
+}
+
+.selectItem{
+	height: 50;
+}
+
+.h-24{
+	height:24px;
+}
+.h-35{
+	height:35px;
+}

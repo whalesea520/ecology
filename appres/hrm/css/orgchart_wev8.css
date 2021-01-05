@@ -1,0 +1,168 @@
+html,body{ 
+	margin:0px; 
+	height:100%; 
+}
+.box_org_tree{width:100%;height:100%;}
+.box_org_tree .org_td{vertical-align:top}
+.box_org_tree .org_table{border-collapse:collapse;}
+.box_org_tree .line_table{border-collapse:collapse;}
+.box_org_tree .line_in_table{border-collapse:collapse;}
+.box_org_tree .line_parent{border-collapse:collapse;height:100%;}
+.box_org_tree .line_in_parent{border-collapse:collapse;height:100%;}
+
+.box_org_tree .org_line_bm{background:url(/appres/hrm/image/chart/m_wev8.png) no-repeat bottom center;-background-image:url(/appres/hrm/image/chart/ie6/m_wev8.gif)}
+.box_org_tree .org_line_tm{background:url(/appres/hrm/image/chart/m_wev8.png) no-repeat 61px top;-background-image:url(/appres/hrm/image/chart/ie6/m_wev8.gif)}
+.box_org_tree .org_line_tm_e{background:url(/appres/hrm/image/chart/m_wev8.png) no-repeat 60px top;-background-image:url(/appres/hrm/image/chart/ie6/m_wev8.gif)}
+.box_org_tree .org_line_tm_tc{background:url(/appres/hrm/image/chart/m_wev8.png) no-repeat 59px top;-background-image:url(/appres/hrm/image/chart/ie6/m_wev8.gif)}
+.box_org_tree .org_line_rm{background:url(/appres/hrm/image/chart/h_wev8.png) no-repeat right center;-background-image:url(/appres/hrm/image/chart/ie6/h_wev8.gif)}
+.box_org_tree .org_line_lm{background:url(/appres/hrm/image/chart/h_wev8.png) no-repeat left center;-background-image:url(/appres/hrm/image/chart/ie6/h_wev8.gif)}
+.box_org_tree .org_line_lr{background:url(/appres/hrm/image/chart/lr_wev8.png) repeat-x top center;-background-image:url(/appres/hrm/image/chart/ie6/lr_wev8.gif)}
+.box_org_tree .org_line_l{background:url(/appres/hrm/image/chart/l_wev8.png) no-repeat top center;-background-image:url(/appres/hrm/image/chart/ie6/l_wev8.gif)}
+.box_org_tree .org_line_r{background:url(/appres/hrm/image/chart/r_wev8.png) no-repeat top center;-background-image:url(/appres/hrm/image/chart/ie6/r_wev8.gif)}
+
+.box_org_tree .org_table_col .org_node_c{margin:0}
+.box_org_tree .org_table_col .org_line_bm{background:url(/appres/hrm/image/chart/m_wev8.png) no-repeat 15px bottom;-background-image:url(/appres/hrm/image/chart/ie6/m_wev8.gif)}
+.box_org_tree .org_table_col .org_line_tm{background:url(/appres/hrm/image/chart/b_wev8.png) no-repeat 15px -660px;-background-image:url(/appres/hrm/image/chart/ie6/b_wev8.gif)}
+.box_org_tree .org_table_col .org_line_rm{background:url(/appres/hrm/image/chart/h_wev8.png) no-repeat right;-background-image:url(/appres/hrm/image/chart/ie6/h_wev8.gif)}
+.box_org_tree .org_table_col .org_line_lm{background:url(/appres/hrm/image/chart/h_wev8.png) no-repeat left;-background-image:url(/appres/hrm/image/chart/ie6/h_wev8.gif)}
+.box_org_tree .org_table_col .org_line_lr{background:url(/appres/hrm/image/chart/tb_wev8.png) repeat-x;-background-image:url(/appres/hrm/image/chart/ie6/tb_wev8.gif)}
+.box_org_tree .org_table_col .org_line_l{background:url(/appres/hrm/image/chart/b_wev8.png) no-repeat 15px -660px;-background-image:url(/appres/hrm/image/chart/ie6/b_wev8.gif)}
+.box_org_tree .org_table_col .org_line_r{background:url(/appres/hrm/image/chart/tb_wev8.png) no-repeat 15px -660px;-background-image:url(/appres/hrm/image/chart/ie6/tb_wev8.gif)}
+.box_org_tree .org_table_col .org_td_col{padding-left:0px;text-align:left}
+
+.clearfix:after{content:".";height:0;display:block;visibility:hidden;clear:both}
+.clearfix{zoom:1}
+.org_table_col .org_line_bm{background:url(/appres/hrm/image/chart/m_wev8.png) no-repeat 39px bottom;-background-image:url(/appres/hrm/image/chart/ie6/m_wev8.gif)}
+.org_table_col .org_line_tm{background:url(/appres/hrm/image/chart/b_wev8.png) no-repeat 39px -660px;-background-image:url(/appres/hrm/image/chart/ie6/b_wev8.gif)}
+.org_table_col .org_line_lr{background:url(/appres/hrm/image/chart/tb_wev8.png) no-repeat 39px -660px;-background-image:url(/appres/hrm/image/chart/ie6/tb_wev8.gif)}
+.org_table_col .org_line_l{background:url(/appres/hrm/image/chart/b_wev8.png) no-repeat 39px -660px;-background-image:url(/appres/hrm/image/chart/ie6/b_wev8.gif)}
+.org_table_col .org_line_r{background:url(/appres/hrm/image/chart/tb_wev8.png) no-repeat 39px -660px;-background-image:url(/appres/hrm/image/chart/ie6/tb_wev8.gif)}
+
+.org_td_col{padding-left:39px}
+.org_td_line{border-top:2px solid #6C6C6C;}
+.org_td_line_left{border-left:2px solid #6C6C6C;}
+.org_td_line_left_F{border:1px solid #6C6C6C;}
+.org_td_line_left_C{border-left:2px solid #6C6C6C;}
+.org_td_n{padding-left:61px}
+.org_td_e{padding-left:60px}
+.org_td_zh{height:42px;border:1px solid #6C6C6C;float:left}
+
+.org_node_c{width:103px; height:66px; padding:10px;border-radius:5px;font:12px/14px Verdana,'微软雅黑','宋体',sans-serif}
+.org_node_c .img_nci img{width:50px;height:50px;border:none}
+.org_node_c_inner{width:176px;height:86px;overflow:hidden;border-radius:5px;
+
+	border:2px solid #2599e2;
+    background:#64c0f1; 
+    background:-moz-linear-gradient(top, #64c0f1, #2599e2);
+    background:-webkit-gradient(linear, 0 0, 0 bottom, from(#64c0f1), to(#2599e2));
+    background:-o-linear-gradient(top, #64c0f1, #2599e2);
+}
+.org_node_c_inner_company{
+	width:103px;height:66px;overflow:hidden;border-radius:5px;
+	border:0px solid #2599e2;
+    background:#64c0f1; 
+    background:-moz-linear-gradient(top, #64c0f1, #2599e2);
+    background:-webkit-gradient(linear, 0 0, 0 bottom, from(#64c0f1), to(#2599e2));
+    background:-o-linear-gradient(top, #64c0f1, #2599e2);
+	background:url(/appres/hrm/image/company_wev8.png);
+}
+.org_node_c_inner_subcompany{
+	width:103px;height:66px;overflow:hidden;border-radius:5px;
+	border:0px solid #2599e2;
+    background:#64c0f1; 
+    background:-moz-linear-gradient(top, #64c0f1, #2599e2);
+    background:-webkit-gradient(linear, 0 0, 0 bottom, from(#64c0f1), to(#2599e2));
+    background:-o-linear-gradient(top, #64c0f1, #2599e2);
+	background:url(/appres/hrm/image/subcompany_wev8.png);
+}
+.org_node_c_inner_dept{
+	width:103px;height:66px;overflow:hidden;border-radius:5px;
+	border:0px solid #2599e2;
+    background:#64c0f1; 
+    background:-moz-linear-gradient(top, #64c0f1, #2599e2);
+    background:-webkit-gradient(linear, 0 0, 0 bottom, from(#64c0f1), to(#2599e2));
+    background:-o-linear-gradient(top, #64c0f1, #2599e2);
+	background:url(/appres/hrm/image/department_wev8.png);
+}
+.over_org_nci{
+	border:2px solid #7ccff1;
+    background:#d7fefd; 
+    background:-moz-linear-gradient(top, #d7fefd, #7fc6f0);
+    background:-webkit-gradient(linear, 0 0, 0 bottom, from(#d7fefd), to(#7fc6f0));
+    background:-o-linear-gradient(top, #d7fefd, #7fc6f0);
+}
+.info_nci{padding:5px}
+.info_nci a{text-decoration:none;cursor:pointer}
+.img_nci{float:left;display:inline}
+.detail_nci{float:left;display:inline;margin-left:10px}
+.detail_nci span{display:block;padding:2px 0;color:#333}
+.ops_nci{padding:0 5px 5px 5px;text-align:right;}
+.ops_nci .fold_nci {display:none;}
+.ops_nci a{font-size:12px;color:#eee;cursor:pointer}
+.ops_nci .main_table_company a{font-size:12px;color:#ADADAD;cursor:pointer}
+.ops_nci .main_table_subcompany a{font-size:12px;color:#eee;cursor:pointer}
+.ops_nci .main_table_department a{font-size:12px;color:#eee;cursor:pointer}
+.ops_nci .unfold_nci {font-size:15px;display:none;}
+.ops_nci .fold_nci {font-size:15px;}
+.main_name_nci{height:100%;text-align:center;}
+.main_name_nci a{text-decoration:none;font-size:12px;color:#eee}
+.main_name_nci td{width:100%;height:100%}
+
+.small_ort_nci{width:90px; height:45px;}
+.small_ort_nci .img_nci img{width:50px;height:50px;}
+.small_ort_nci .org_node_c_inner{width:86px;height:41px;}
+
+.nobackground{background:none !important}
+
+@-webkit-keyframes flashborder {
+	0% {
+		border-color: #e35b1d;
+	}
+	20% {
+		border-color: #fff;
+	}
+	40% {
+		border-color: #e35b1d;
+	}
+	60% {
+		border-color: #fff;
+	}
+	80% {
+		border-color: #e35b1d;
+	}
+	90% {
+		border-color: #fff;
+	}
+	100% {
+		border-color: #e35b1d;
+	}
+}
+@-moz-keyframes flashborder{  
+	0% {
+		border-color: #e35b1d;
+	}
+	20% {
+		border-color: #fff;
+	}
+	40% {
+		border-color: #e35b1d;
+	}
+	60% {
+		border-color: #fff;
+	}
+	80% {
+		border-color: #e35b1d;
+	}
+	90% {
+		border-color: #fff;
+	}
+	100% {
+		border-color: #e35b1d;
+	}
+}  
+
+.org_flashborder {
+	border-color: #e35b1d;
+    -moz-animation:flashborder 3s infinite;  
+    -webkit-animation:flashborder 3s linear 1;  
+}

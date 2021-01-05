@@ -1,0 +1,40 @@
+.btstyle01{
+	display:block;
+	width:90px;
+	height:30px;
+	text-align:center;
+	line-height:30px;
+	cursor:pointer;
+	background:#70a9ff;
+	color:#FFFFFF;
+}
+.btstyle02{
+	display:block;
+	width:90px;
+	height:30px;
+	text-align:center;
+	line-height:30px;
+	cursor:pointer;
+	background:#4891ff;
+	color:#FFFFFF;
+}
+.operateimages0{
+	width:32px; 
+	height:32px;
+	background:url('/images/ecology8/workflow/permissionc_wev8.png');
+	margin:0 auto;
+}
+.operateimages1{
+	width:32px; 
+	height:32px;
+	background:url('/images/ecology8/workflow/permissionr_wev8.png');
+	margin:0 auto;
+}
+.operateimages2{
+	width:32px; 
+	height:32px;
+	background:url('/images/ecology8/workflow/permissiond_wev8.png');
+	margin:0 auto;
+}
+.messageBox{ margin:10px auto;width:90%;height:30px;color:gray;border-collapse:collapse;}
+.messageBox td{ height:30px;border:1px solid #BEBEBE;}

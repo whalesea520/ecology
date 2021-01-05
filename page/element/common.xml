@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<common>
+		<jsList>
+			
+			
+			<js desc="Jquery weavertabs">
+				<id>jquery.weavertabs</id>
+				<src>/js/jquery/plugins/weavertabs/jquery.weavertabs_wev8.js</src>
+			</js>	
+			<js desc="Jquery filetree">
+				<id>jquery.filetree</id>
+				<src>/js/jquery/plugins/filetree/jquery.filetree_wev8.js</src>
+			</js>	
+			<js desc="Jquery Corner">
+				<id>jquery.corner</id>
+				<src>/js/jquery/plugins/corner/jquery.corner_wev8.js</src>
+			</js>
+			<js desc="Jquery cycle">
+				<id>jquery.cycle</id>
+				<src>/page/element/Slide/resource/js/jquery.cycle.all_wev8.js</src>
+			</js>
+			<js desc="Page Drag">
+				<id>drag</id> 
+				<src>/js/homepage/drag_wev8.js</src>				
+			</js>	
+				
+			<js desc="提供XMLHTTP对象">
+				<id>xmlextras</id>
+				<src>/js/xmlextras_wev8.js</src>
+			</js>
+			<js desc="为视频元素做准备">
+				<id>swfobject</id>
+				<src>/FCKEditor/swfobject_wev8.js</src>
+			</js>	
+			<js desc="横条菜单">
+				<id>menuh</id>
+				<src>/js/jquery/plugins/menu/menuh/menuh_wev8.js</src>
+			</js>
+			<js desc="纵条菜单">
+				<id>menuv</id>
+				<src>/js/jquery/plugins/menu/menuv/menuv_wev8.js</src>
+			</js>
+			<js desc="jquery ui core">
+				<id>jquery.form</id>
+				<src>/js/jquery/ui/ui.core_wev8.js</src>
+			</js>
+			<js desc="jquery ui dialog">
+				<id>jquery.form</id>
+				<src>/js/jquery/ui/ui.dialog_wev8.js</src>
+			</js>
+			<js desc="highslide">
+				<id>highslide</id>
+				<src>/page/element/share/highslide/highslide-with-gallery_wev8.js</src>
+			</js>
+			<js desc="tooltip提示插件">
+				<id>tooltip</id>
+				<src>/js/jquery/plugins/tooltip/jquery.tooltip_wev8.js</src>
+			</js>
+			<js desc="bgiframe">
+				<id>bgiframe</id>
+				<src>/js/jquery/plugins/bgiframe/jquery.bgiframe.pack_wev8.js</src>
+			</js>
+			<js desc="tmTask">
+				<id>tmTaskShadowbox</id>
+				<src>/page/element/Task/resource/js/shadowbox/shadowbox.js</src>
+			</js>		
+			<js desc="tmTask">
+				<id>tmTaskShowLoading</id>
+				<src>/page/element/Task/resource/js/showLoading/js/jquery.showLoading.js</src>
+			</js>	
+			<js desc="tmTask">
+				<id>tmTaskCommon</id>
+				<src>/page/element/Task/resource/js/common.js</src>
+			</js>
+			<js desc="jcarousellite">
+				<id>jcarousellite</id>
+				<src>/js/jquery/plugins/jcarousellite/jcarousellite.js</src>
+			</js>
+
+			<js desc="fancyBox">
+				<id>jcarousellite</id>
+				<src>/js/jquery/plugins/fancyBox/jquery.fancybox.js</src>
+			</js>
+			
+			<js desc="spectrum">
+				<id>spectrum</id>
+				<src>/js/ecology8/spectrum/spectrum_wev8.js</src>
+			</js>
+						
+		</jsList>
+		<cssList>
+			<css desc="Page">		
+				<id>weaver</id>
+				<src>/css/Weaver_wev8.css</src>
+			</css>
+			<css desc="Page">		
+				<id>page</id>
+				<src>/css/page_wev8.css</src>
+			</css>
+			<css desc="weavertabs控件">		
+				<id>weavertabs</id>
+				<src>/js/jquery/plugins/weavertabs/weavertabs_wev8.css</src>
+			</css>	
+			<css desc="横条菜单">		
+				<id>menuh</id>
+				<src>/js/jquery/plugins/menu/menuh/menuh_wev8.css</src>
+			</css>
+			<css desc="纵条菜单">		
+				<id>menuv</id>
+				<src>/js/jquery/plugins/menu/menuv/menuv_wev8.css</src>
+			</css>	
+			<css desc="jquery ui dialog">		
+				<id>dialog</id>
+				<src>/js/jquery/ui/ui.dialog_wev8.css</src>
+			</css>
+			<css desc="jquery ui theme">		
+				<id>theme</id>
+				<src>/js/jquery/ui/ui.theme_wev8.css</src>
+			</css>	
+			<css desc="jquery ui core">		
+				<id>core</id>
+				<src>/js/jquery/ui/ui.core_wev8.css</src>
+			</css>	
+			<css desc="highslide">		
+				<id>highslide</id>
+				<src>/page/element/share/highslide/highslide_wev8.css</src>
+			</css>	
+			<css desc="tooltip提示插件">
+				<id>tooltip</id>
+				<src>/js/jquery/plugins/tooltip/simpletooltip_wev8.css</src>
+			</css>
+			<css desc="task">
+				<id>task</id>
+				<src>/page/element/Task/resource/css/task.css</src>
+			</css>
+			<css desc="task">
+				<id>showLoading</id>
+				<src>/page/element/Task/resource/js/showLoading/css/showLoading.css</src>
+			</css>
+			<css desc="task">
+				<id>shadowbox</id>
+				<src>/page/element/Task/resource/js/shadowbox/shadowbox.css</src>
+			</css>
+			<css desc="hdpanel">
+				<id>hdpaneldefault</id>
+				<src>/page/element/hdpanel/resource/css/default.css</src>
+			</css>
+			<css desc="fancyBoxcss">
+				<id>fancyBoxcss</id>
+				<src>/js/jquery/plugins/fancyBox/jquery.fancybox.css</src>
+			</css>
+			<css desc="spectrum">
+				<id>spectrum</id>
+				<src>/js/ecology8/spectrum/spectrum_wev8.css</src>
+			</css>
+		</cssList>
+	</common>
+	<public>
+		<jsList>
+		</jsList>
+		<cssList>
+		</cssList>
+	</public>
+</root>

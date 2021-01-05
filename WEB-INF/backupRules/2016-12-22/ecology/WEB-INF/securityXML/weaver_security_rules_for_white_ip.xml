@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!--white client ip list-->
+	<ip-check>
+		<ip-list>
+			<ip>^localhost$</ip>
+			<ip>^127\.0\.0\.1$</ip>
+			<ip>^192\.168\.\d{1,3}\.\d{1,3}$</ip>
+			<ip>^10\.\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$</ip>
+			<ip>^172\.(16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31)\.\d{1,3}\.\d{1,3}$</ip>
+		</ip-list>
+		<page-list>
+			<page>^/{1,}page/maint/layout/Operate.jsp</page>
+			<page>^/{1,}admincenter/portalEngine/ElementRegisterUpload.jsp</page>
+			<page>^/{1,}album/ImageUploadDealN.jsp</page>
+			<page>^/{1,}email/MailContacterImportCSV.jsp</page>
+			<page>^/{1,}js/swfupload/upload.jsp</page>
+			<page>^/{1,}page/maint/common/UserResourceUpload.jsp</page>
+			<page>^/{1,}rte/uploader.jsp</page>
+			<page>^/{1,}systeminfo/template/templateOperation.jsp</page>
+			<page>^/{1,}tools/SWFUpload/upload.jsp</page>
+		</page-list>
+	</ip-check>
+</root>

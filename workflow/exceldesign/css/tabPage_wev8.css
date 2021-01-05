@@ -1,0 +1,40 @@
+@CHARSET "UTF-8";
+
+.t_area{
+	height:30px; border:none; background-repeat:repeat-x;
+}
+.t_area div{
+	height:30px; border:none; float:left;
+}
+.t_area .lineheight30{
+	line-height:30px;
+}
+.t_area .norepeat{
+	background-repeat:no-repeat;
+}
+.t_area .xrepeat{
+	background-repeat:repeat-x;
+}
+.t_area .t_sel_middle,.t_unsel_middle{
+	letter-spacing:1px; padding-left:2px; padding-right:2px;
+}
+.t_area .t_sel,.t_unsel{
+	cursor:pointer;
+}
+
+
+.tab_top{
+	height:32px;
+}
+.tab_top .tab_head{
+	height:100%; float:left; overflow:hidden;
+}
+.tab_movebtn{
+	height:100%; float:left; width:20px; cursor:pointer;
+}
+.tab_turnleft{
+	background: url("/workflow/exceldesign/image/shortBtn/tab/turnleft_wev8.png") no-repeat 6px 12px;
+}
+.tab_turnright{
+	background: url("/workflow/exceldesign/image/shortBtn/tab/turnright_wev8.png") no-repeat 6px 12px;
+}

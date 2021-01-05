@@ -1,0 +1,144 @@
+.MADCdar_Title{
+	color: rgb(164, 169, 174);
+	border-bottom: 1px solid rgb(223, 223, 223);
+	font-family: 'Microsoft Yahei',Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 0px 0px 6px 10px;
+}
+.MADCdar_Content{
+	padding: 10px 0px 0px 10px;	
+}
+.MADCdar_Bottom{
+	padding: 10px 0px 0px 10px;
+	margin-bottom: 20px;		
+}
+.MADCdar_SaveBtn{
+	background-color: rgb(107, 163, 237);
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	box-sizing: border-box;
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+	display: block;
+	font-family: 'Microsoft Yahei', Arial, sans-serif;
+	font-size: 14px;
+	height: 28px;
+	line-height: 28px;
+	margin: 0px;
+	text-align: center;
+	width: 345px;
+	zoom: 1;	
+}
+.MADCdar_BaseInfo_Entry{
+	margin-bottom: 8px;	
+}
+.MADCdar_BaseInfo_Entry_Label{
+	display: inline-block;
+	color: rgb(166,167,171);
+	margin-right: 3px;
+	text-align: right;
+	width: 85px;
+}
+.MADCdar_BaseInfo_Entry_Label_style8{
+	display: block;
+	color: rgb(166,167,171);
+	text-align: left;
+	width: 200px;
+}
+.MADCdar_BaseInfo_Entry_Label1_style8{
+	display: inline-block;
+	color: rgb(166,167,171);
+	text-align: left;
+	width: 153px;
+}
+.MADCdar_BaseInfo_Entry_Label2_style8{
+	display: inline-block;
+	color: rgb(166,167,171);
+	text-align: left;
+	width: 50px;
+}
+.MADCdar_BaseInfo_Entry_Content{
+	
+}
+.MADCdar_Title_Content{
+	float: right;
+}
+.MADCdar_Title_Content .cbboxEntry{
+	display: inline-block;
+	position: relative;
+}
+.MADCdar_Title_Content .cbboxLabel{
+	color: #999;
+	font-weight: normal;
+	font-size: 12px;
+	top:2px;
+	left:20px;
+}
+.MADCdar_Textarea{
+	border: 1px solid rgb(223, 223, 223);
+	width: 331px;
+	height: 110px;
+	font-family: 'Microsoft Yahei',Arial, Helvetica, sans-serif;
+	padding: 3px;
+	font-size: 12px;
+	overflow: auto;
+}
+.MADCdar_Select{
+	border: 1px solid rgb(223, 223, 223);
+	height: 23px;
+	width: 190px;
+}
+.MADCdar_Text{
+	-webkit-appearance: none;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+	-webkit-rtl-ordering: logical;
+	-webkit-user-select: text;
+	-webkit-writing-mode: horizontal-tb;
+	border: 1px solid rgb(223, 223, 223);
+	background-color: rgb(255, 255, 255);
+	border-image-outset: 0px;
+	border-image-repeat: stretch;
+	border-image-slice: 100%;
+	border-image-source: none;
+	border-image-width: 1;
+	box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+	box-sizing: border-box;
+	cursor: auto;
+	display: inline-block;
+	font-family: 'Microsoft Yahei',Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	height: 26px;
+	letter-spacing: normal;
+	line-height: 19px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	outline-color: rgb(0, 0, 255);
+	outline-style: none;
+	outline-width: 0px;
+	padding-bottom: 3px;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-top: 3px;
+	text-align: start;
+	text-indent: 7px;
+	text-shadow: none;
+	text-transform: none;
+	width: 205px;
+	word-spacing: 0px;
+	writing-mode: lr-tb;
+	zoom: 1;	
+}
+.btn_click_describe{
+	width:16px;
+	height:22px;
+	margin-left: 0px;
+}
+.MADCdar_Tip{
+	color: rgb(166, 167, 171);
+	line-height: 20px;	
+}

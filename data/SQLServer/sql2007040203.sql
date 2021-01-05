@@ -1,0 +1,4 @@
+ALTER TABLE DirAccessPermission 
+ADD CONSTRAINT DF_DirAccessPermission_DocSecCategoryTemplateId
+DEFAULT -1 FOR DocSecCategoryTemplateId
+GO

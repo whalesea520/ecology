@@ -1,0 +1,33 @@
+﻿.jvectormap-label {
+    position: absolute;
+    display: none;
+    border: solid 1px #EEEEEE;
+    -moz-border-radius: 3px;
+    background: #EEEEEE;
+    color: white;
+    font-family: Arial,宋体;
+    font-size: 12px;
+    padding: 0px;
+}
+
+.jvectormap-zoomin, .jvectormap-zoomout {
+    position: absolute;
+    -moz-border-radius: 3px;
+    padding: 0px;
+    color: white;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.jvectormap-zoomin {
+    right: 10px;
+    top: 10px;
+    background: url('../images/btn_out_wev8.png');
+}
+
+.jvectormap-zoomout {
+    right: 10px;
+    top: 35px;
+    background: url('../images/btn_in_wev8.png');
+}

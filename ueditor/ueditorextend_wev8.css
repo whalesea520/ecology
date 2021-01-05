@@ -1,0 +1,19 @@
+.edui-default .edui-editor{
+  border-radius: 0px;
+  border:none;
+}
+.edui-default .edui-editor-bottomContainer td{
+border:none;
+}
+.e8_weavertab .x-tab-panel-footer{
+width:100% !important;
+}
+.edui-default .edui-editor-bottomContainer {
+display: none;
+}
+#divContent .hideuploaditem{
+ display: none !important;
+}
+#texteditoritem {
+ padding-left:0px !important;
+}

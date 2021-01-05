@@ -1,0 +1,265 @@
+###[2019-03-28 12:14:43]:upgreadStatus:2--pagestatus:1
+###[2019-03-28 12:14:43]:正在执行sql201604110803.sql,第(1)个脚本，共(14)个。
+###[2019-03-28 12:14:43]:正在执行sql201604110803_4app.sql,第(2)个脚本，共(14)个。
+###[2019-03-28 12:14:43]:正在执行sql201605250201.sql,第(3)个脚本，共(14)个。
+###[2019-03-28 12:14:43]:正在执行sql201610180802.sql,第(4)个脚本，共(14)个。
+###[2019-03-28 12:14:44]:正在执行sql201611230402.sql,第(5)个脚本，共(14)个。
+###[2019-03-28 12:14:44]:正在执行sql201706070301.sql,第(6)个脚本，共(14)个。
+###[2019-03-28 12:14:44]:正在执行sql201706080203.sql,第(7)个脚本，共(14)个。
+###[2019-03-28 12:14:44]:正在执行sql201707050203.sql,第(8)个脚本，共(14)个。
+###[2019-03-28 12:14:45]:upgreadStatus:1--pagestatus:1
+###[2019-03-28 12:14:45]:#####
+错误位置
+  sql201707050203.sql第2行:
+错误语句
+ delete from wf_browser_config where type ='wf'
+错误原因
+  com.microsoft.sqlserver.jdbc.SQLServerException: 对象名   wf_browser_config   无效。
+
+#####
+###[2019-03-28 12:16:02]:ThreadPool size :3
+###[2019-03-28 12:16:02]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:16:02]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:16:14]:ThreadPool size :3
+###[2019-03-28 12:16:14]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:16:14]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:16:28]:ThreadPool size :3
+###[2019-03-28 12:16:28]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:16:28]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:16:40]:ThreadPool size :3
+###[2019-03-28 12:16:40]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:16:40]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:16:49]:upgreadStatus:0--pagestatus:1
+###[2019-03-28 12:16:49]:ThreadPool size :3
+###[2019-03-28 12:16:49]:upgreadStatus:0--pagestatus:1--currentFile:0
+###[2019-03-28 12:16:49]:SystemUpgrade Thread isinrunnable:true
+###[2019-03-28 12:16:49]:-------##########------
+###[2019-03-28 12:16:49]:upgreadStatus:2--pagestatus:1
+###[2019-03-28 12:16:49]:正在执行sql201707050203.sql,第(1)个脚本，共(7)个。
+###[2019-03-28 12:16:50]:upgreadStatus:1--pagestatus:1
+###[2019-03-28 12:16:50]:#####
+错误位置
+  sql201707050203.sql第4行:
+错误语句
+ insert into wf_browser_config(type,clazz,description) values('-99991','com.api.browser.service.impl.WorkflowBrowserService','路径')
+错误原因
+  com.microsoft.sqlserver.jdbc.SQLServerException: 对象名   wf_browser_config   无效。
+
+#####
+###[2019-03-28 12:20:42]:ThreadPool size :3
+###[2019-03-28 12:20:42]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:20:42]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:20:52]:ThreadPool size :3
+###[2019-03-28 12:20:52]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:20:52]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:21:02]:ThreadPool size :3
+###[2019-03-28 12:21:02]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:21:02]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:21:13]:ThreadPool size :3
+###[2019-03-28 12:21:13]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:21:13]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:21:23]:ThreadPool size :3
+###[2019-03-28 12:21:23]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:21:23]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:20:51]:ThreadPool size :3
+###[2019-03-28 12:20:51]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:20:51]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:21:02]:ThreadPool size :3
+###[2019-03-28 12:21:02]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:21:02]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:21:12]:ThreadPool size :3
+###[2019-03-28 12:21:12]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:21:12]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:21:22]:ThreadPool size :3
+###[2019-03-28 12:21:22]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:21:22]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:21:33]:ThreadPool size :3
+###[2019-03-28 12:21:33]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:21:33]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:21:39]:ThreadPool size :3
+###[2019-03-28 12:21:39]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:21:39]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:21:43]:ThreadPool size :3
+###[2019-03-28 12:21:43]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:21:43]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:21:45]:ThreadPool size :3
+###[2019-03-28 12:21:45]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:21:45]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:21:47]:ThreadPool size :3
+###[2019-03-28 12:21:47]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:21:47]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:21:50]:ThreadPool size :3
+###[2019-03-28 12:21:50]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:21:50]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:21:54]:ThreadPool size :3
+###[2019-03-28 12:21:54]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:21:54]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:21:55]:ThreadPool size :3
+###[2019-03-28 12:21:56]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:21:56]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:22:00]:ThreadPool size :3
+###[2019-03-28 12:22:00]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:22:00]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:22:00]:ThreadPool size :3
+###[2019-03-28 12:22:00]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:22:00]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:22:04]:ThreadPool size :3
+###[2019-03-28 12:22:04]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:22:04]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:22:06]:ThreadPool size :3
+###[2019-03-28 12:22:06]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:22:06]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:22:10]:ThreadPool size :3
+###[2019-03-28 12:22:10]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:22:10]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:22:14]:ThreadPool size :3
+###[2019-03-28 12:22:14]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:22:14]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:22:25]:ThreadPool size :3
+###[2019-03-28 12:22:25]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:22:25]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:22:44]:ThreadPool size :3
+###[2019-03-28 12:22:44]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:22:44]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:22:49]:ThreadPool size :3
+###[2019-03-28 12:22:49]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:22:49]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:29:29]:ThreadPool size :3
+###[2019-03-28 12:29:29]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:29:29]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:29:32]:ThreadPool size :3
+###[2019-03-28 12:29:32]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:29:32]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:29:38]:ThreadPool size :3
+###[2019-03-28 12:29:38]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:29:38]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:29:55]:ThreadPool size :3
+###[2019-03-28 12:29:55]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:29:55]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:30:13]:ThreadPool size :3
+###[2019-03-28 12:30:13]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:30:13]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:33:12]:ThreadPool size :3
+###[2019-03-28 12:33:12]:upgreadStatus:1--pagestatus:1--currentFile:0
+###[2019-03-28 12:33:12]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:33:18]:upgreadStatus:0--pagestatus:1
+###[2019-03-28 12:33:18]:ThreadPool size :3
+###[2019-03-28 12:33:18]:upgreadStatus:0--pagestatus:1--currentFile:0
+###[2019-03-28 12:33:18]:SystemUpgrade Thread isinrunnable:true
+###[2019-03-28 12:33:18]:-------##########------
+###[2019-03-28 12:33:19]:upgreadStatus:2--pagestatus:1
+###[2019-03-28 12:33:19]:正在执行sql201707050203.sql,第(1)个脚本，共(7)个。
+###[2019-03-28 12:33:19]:upgreadStatus:1--pagestatus:1
+###[2019-03-28 12:33:19]:#####
+错误位置
+  sql201707050203.sql第6行:
+错误语句
+ delete from wf_browser_config where type ='22'
+错误原因
+  com.microsoft.sqlserver.jdbc.SQLServerException: 对象名   wf_browser_config   无效。
+
+#####
+###[2019-03-28 12:33:23]:ThreadPool size :3
+###[2019-03-28 12:33:23]:upgreadStatus:1--pagestatus:1--currentFile:1
+###[2019-03-28 12:33:23]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:34:14]:ThreadPool size :3
+###[2019-03-28 12:34:14]:upgreadStatus:1--pagestatus:1--currentFile:1
+###[2019-03-28 12:34:14]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:34:17]:ThreadPool size :3
+###[2019-03-28 12:34:17]:upgreadStatus:1--pagestatus:1--currentFile:1
+###[2019-03-28 12:34:17]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:42:10]:ThreadPool size :3
+###[2019-03-28 12:42:10]:upgreadStatus:1--pagestatus:1--currentFile:1
+###[2019-03-28 12:42:10]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:42:10]:ThreadPool size :3
+###[2019-03-28 12:42:10]:upgreadStatus:1--pagestatus:1--currentFile:1
+###[2019-03-28 12:42:10]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:42:19]:ThreadPool size :3
+###[2019-03-28 12:42:19]:upgreadStatus:1--pagestatus:1--currentFile:1
+###[2019-03-28 12:42:19]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:42:26]:ThreadPool size :3
+###[2019-03-28 12:42:26]:upgreadStatus:1--pagestatus:1--currentFile:1
+###[2019-03-28 12:42:26]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:42:29]:ThreadPool size :3
+###[2019-03-28 12:42:29]:upgreadStatus:1--pagestatus:1--currentFile:1
+###[2019-03-28 12:42:29]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:42:34]:upgreadStatus:0--pagestatus:1
+###[2019-03-28 12:42:34]:ThreadPool size :3
+###[2019-03-28 12:42:34]:upgreadStatus:0--pagestatus:1--currentFile:0
+###[2019-03-28 12:42:34]:SystemUpgrade Thread isinrunnable:true
+###[2019-03-28 12:42:34]:-------##########------
+###[2019-03-28 12:42:34]:upgreadStatus:2--pagestatus:1
+###[2019-03-28 12:42:34]:正在执行sql201707050203.sql,第(1)个脚本，共(7)个。
+###[2019-03-28 12:42:35]:upgreadStatus:1--pagestatus:1
+###[2019-03-28 12:42:35]:#####
+错误位置
+  sql201707050203.sql第8行:
+错误语句
+ insert into wf_browser_config(type,clazz,description) values('22','com.api.browser.service.impl.BudgetfeeTypeBrowserService','报销费用类型')
+错误原因
+  com.microsoft.sqlserver.jdbc.SQLServerException: 对象名   wf_browser_config   无效。
+
+#####
+###[2019-03-28 12:42:39]:ThreadPool size :3
+###[2019-03-28 12:42:39]:upgreadStatus:1--pagestatus:1--currentFile:1
+###[2019-03-28 12:42:39]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:42:41]:upgreadStatus:0--pagestatus:1
+###[2019-03-28 12:42:41]:ThreadPool size :3
+###[2019-03-28 12:42:41]:upgreadStatus:0--pagestatus:1--currentFile:0
+###[2019-03-28 12:42:41]:SystemUpgrade Thread isinrunnable:true
+###[2019-03-28 12:42:41]:-------##########------
+###[2019-03-28 12:42:42]:upgreadStatus:2--pagestatus:1
+###[2019-03-28 12:42:42]:正在执行sql201707050203.sql,第(1)个脚本，共(7)个。
+###[2019-03-28 12:42:42]:upgreadStatus:1--pagestatus:1
+###[2019-03-28 12:42:42]:#####
+错误位置
+  sql201707050203.sql第10行:
+错误语句
+ delete from wf_browser_config where type ='251'
+错误原因
+  com.microsoft.sqlserver.jdbc.SQLServerException: 对象名   wf_browser_config   无效。
+
+#####
+###[2019-03-28 12:42:47]:ThreadPool size :3
+###[2019-03-28 12:42:47]:upgreadStatus:1--pagestatus:1--currentFile:1
+###[2019-03-28 12:42:47]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:42:48]:upgreadStatus:0--pagestatus:1
+###[2019-03-28 12:42:49]:ThreadPool size :3
+###[2019-03-28 12:42:49]:upgreadStatus:0--pagestatus:1--currentFile:0
+###[2019-03-28 12:42:49]:SystemUpgrade Thread isinrunnable:true
+###[2019-03-28 12:42:49]:-------##########------
+###[2019-03-28 12:42:49]:upgreadStatus:2--pagestatus:1
+###[2019-03-28 12:42:49]:正在执行sql201707050203.sql,第(1)个脚本，共(7)个。
+###[2019-03-28 12:42:50]:upgreadStatus:1--pagestatus:1
+###[2019-03-28 12:42:50]:#####
+错误位置
+  sql201707050203.sql第12行:
+错误语句
+ insert into wf_browser_config(type,clazz,description) values('251','com.api.browser.service.impl.CostCenterBrowserService','成本中心')
+错误原因
+  com.microsoft.sqlserver.jdbc.SQLServerException: 对象名   wf_browser_config   无效。
+
+#####
+###[2019-03-28 12:42:54]:ThreadPool size :3
+###[2019-03-28 12:42:54]:upgreadStatus:1--pagestatus:1--currentFile:1
+###[2019-03-28 12:42:54]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:42:56]:upgreadStatus:0--pagestatus:1
+###[2019-03-28 12:42:56]:ThreadPool size :3
+###[2019-03-28 12:42:56]:upgreadStatus:0--pagestatus:1--currentFile:0
+###[2019-03-28 12:42:56]:SystemUpgrade Thread isinrunnable:true
+###[2019-03-28 12:42:56]:-------##########------
+###[2019-03-28 12:42:56]:upgreadStatus:2--pagestatus:1
+###[2019-03-28 12:42:56]:正在执行sql201707050203.sql,第(1)个脚本，共(7)个。
+###[2019-03-28 12:42:56]:正在执行sql201709150103.sql,第(2)个脚本，共(7)个。
+###[2019-03-28 12:42:56]:正在执行sql201709190601.sql,第(3)个脚本，共(7)个。
+###[2019-03-28 12:42:56]:正在执行sql201709190800.sql,第(4)个脚本，共(7)个。
+###[2019-03-28 12:42:56]:正在执行sql201709290202.sql,第(5)个脚本，共(7)个。
+###[2019-03-28 12:42:56]:正在执行sql201710180102.sql,第(6)个脚本，共(7)个。
+###[2019-03-28 12:42:56]:正在执行sql201801100202.sql,第(7)个脚本，共(7)个。
+###[2019-03-28 12:42:57]:upgreadStatus:0--pagestatus:0
+###[2019-03-28 12:42:57]:&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&自动配置开始 : 2019-03-28 12:42:57&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+###[2019-03-28 12:43:00]:&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&自动配置结束 : 2019-03-28 12:43:00&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+###[2019-03-28 12:43:11]:ThreadPool size :3
+###[2019-03-28 12:43:11]:upgreadStatus:0--pagestatus:0--currentFile:7
+###[2019-03-28 12:43:11]:SystemUpgrade Thread isinrunnable:false
+###[2019-03-28 12:43:11]:-------##########------

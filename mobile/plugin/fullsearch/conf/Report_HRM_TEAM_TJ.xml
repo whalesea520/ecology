@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  -->
+<workflow workflowId="">
+	<!-- name. 传递的参数,name不能修改.   column="CrossDomain" 表示跨域.默认空  url对应的defaultV 是ajax请求页面 -->
+	<field name="url" column="" defaultV="/mobile/plugin/fullsearch/ajaxVoice.jsp?type=TeamWorking" defaultN="团队工作情况"></field>
+	<!-- 团队或下属 -->
+	<field name="who" column="who"></field>
+	<!-- 开始日期 -->
+	<field name="fromDate" column="begindate"></field>
+	<!-- 结束日期 -->
+	<field name="toDate" column="enddate"></field>
+	<!-- 考勤.计算慢,报表中如果不需要,defaultV 改成0  -->
+	<field name="kq" column="kq" defaultV="0"></field>
+	
+	
+	<!--直接包含返回的json中. 返回值判断,默认空.即为msg. 0标识成功. -->
+	<field name="return_flag" column="SuccessF" defaultV="result" defaultN="成功标识"></field>
+	<field name="return_flag" column="SuccessV" defaultV="1" defaultN="成功值"></field>
+	<!-- 错误信息显示 -->
+	<field name="return_flag" column="ErrMsg" defaultV="" defaultN="错误信息"></field>
+	<!--返回list对应的key值. -->
+	<field name="return_flag" column="RetList" defaultV="list" defaultN="返回列表key值"></field>
+	<!--默认,空.返回示例如下图.标准返回 空或者1: -->
+	<field name="return_flag" column="RetType" defaultV="3" defaultN="返回类型"></field>
+	<!-- 数据显示格式默认1 -->
+	<field name="return_flag" column="ShowStyle" defaultV="1" defaultN="列表展示样式"></field>
+	<!-- 有值显示结果上面的文字提示 -->
+	<field name="return_flag" column="DisplayStr" defaultV="{DisplayStr}" defaultN="有值个性化输出"></field>
+	<!-- 返回统计值 -->
+	<!-- 以下都是返回参数,name值固定 return_, column为返回json key值 ,ID和NAME 按照以下顺序. 其他可以自由排序 -->
+	<field name="return_" column="id" defaultV="ID" defaultN=""></field>
+	<field name="return_" column="name" defaultV="NAME" defaultN="名称"></field>
+	<field name="return_" column="train" defaultN="培训参与"></field>
+	<!-- 
+	<field name="return_" column="belate,leaveearly,absent" defaultV="{belate}#x20;/#x20;{leaveearly}#x20;/#x20;{absent}" defaultN="迟到/早退/旷工"></field>
+	 -->
+	<field name="return_" column="docCreate" defaultN="知识贡献"></field>
+	<field name="return_" column="docRead" defaultN="知识阅读"></field>
+	<field name="return_" column="blog" defaultN="工作微博"></field>
+	<!-- 
+	<field name="return_" column="crm" defaultN="客户滚动"></field>
+	<field name="return_" column="sell" defaultN="商机滚动"></field>
+	 -->
+	 
+</workflow>

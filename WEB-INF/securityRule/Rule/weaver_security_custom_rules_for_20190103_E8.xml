@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<special-non>
+		<urls>
+			<url>
+				<value>/docs/docs/saveforupload.jsp</value>
+				<params>
+					<param>
+						<value>secid</value>
+						<rules>
+							<rule>##CONST:MULTINUMBER##</rule>
+						</rules>
+					</param>
+				</params>
+			</url>
+		</urls>
+	</special-non>
+</root>

@@ -1,0 +1,60 @@
+.row{
+	border-bottom:1px dashed #E0E0E0;	
+	padding:3 5 0 5;
+	width:95%
+}
+.left{
+	vertical-align:top;
+	width:20%;
+}
+
+.center{
+	width:50px;
+}
+
+.right{		
+	width:50%;
+	text-align:right;
+}
+.right2{		
+	width:77%;
+	text-align:left;
+}
+.left_sub{
+	width:40%;
+	text-align:left;
+}
+fieldset {
+	padding:5px;
+	margin:0px;
+	width:100%;
+	color:#333; 
+} 
+legend {
+	padding:5px;
+	color:#06c;
+	font-weight:800; 
+	background:#fff;
+} 
+.inputstyle_1{
+	BORDER-LEFT-STYLE: none; 
+	BORDER-RIGHT-STYLE: none;
+	BORDER-TOP-STYLE: none ;
+	BORDER-BOTTOM: gray 1px solid;
+}
+.spin{
+	BORDER-LEFT-STYLE: none; 
+	BORDER-RIGHT-STYLE: none;
+	BORDER-TOP-STYLE: none ;
+	BORDER-BOTTOM: gray 1px solid;
+	width:45px;
+}
+
+.width{
+	width:20px;
+}
+.colorblock{
+	height:20px;
+	width:50px;
+	border:1px solid gray;
+}

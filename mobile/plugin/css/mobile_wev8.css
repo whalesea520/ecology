@@ -1,0 +1,146 @@
+html,body {
+	height:100%;
+	margin:0;
+	padding:0;
+	font-size:9pt;
+	/*background:url("/images/bg_w_35_wev8.png");*/
+}
+a {
+	text-decoration: none;
+}
+table {
+	border-collapse: separate;
+	border-spacing: 0px;
+}
+#view_page {
+	width:100%;
+	/*
+	background:url("/images/bg_w_75_wev8.png");
+	
+	height:100%;
+	background: -moz-linear-gradient(top, #C8E8F5, #00538D);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#C8E8F5', endColorstr='#00538D');
+	background: -webkit-gradient(linear, left top, left bottom, from(#C8E8F5), to(#00538D));
+	*/
+}
+#view_header {
+	width: 100%;
+	height:40px;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF',endColorstr='#ececec' );
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF),to(#ECECEC) );
+	background: -moz-linear-gradient(top, white, #ECECEC);
+	border-bottom: #CCC solid 1px;
+	font-size:9pt;
+	position:relative;
+}
+#view_title {
+	color: #336699;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+#loading {
+	width:250px;
+	height:65px;
+	line-height:65px;
+	position:absolute;
+	background:url("/mobile/plugin/images/loading_bg_wev8.png");
+	top:50%;
+	left:50%;
+	display:block;
+	text-align:center;
+	margin-top: -32px;
+	margin-left: -125px;
+	z-index: 1002;
+  	}
+#loadingmask {
+	width: 100%;
+	height: 100%;
+	z-index: 1001;
+	display:block;
+}
+.text-ellipsis {
+	text-overflow:ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+/**如下样式表用于控制语音附件的手机端展示使用*/
+	.voicebox {
+		width:95%;
+	}
+	.voicebox .outBox {
+		height:25px;
+		border: 1px solid #7BBCE2;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		-webkit-box-shadow: #7BBCE2 0px 2px 3px;
+		-moz-box-shadow: #7BBCE2 0px 2px 3px;
+		box-shadow: #7BBCE2 0px 2px 3px;
+		background: #ECF3F9;
+		background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ECF3F9), to(#D6E6F3));
+		background: -webkit-linear-gradient(#ECF3F9, #D6E6F3);
+		background: -moz-linear-gradient(#ECF3F9, #D6E6F3);
+		background: -ms-linear-gradient(#ECF3F9, #D6E6F3);
+		background: -o-linear-gradient(#ECF3F9, #D6E6F3);
+		background: linear-gradient(#ECF3F9, #D6E6F3);
+  }
+  .voicebox .outBox .innerBox {
+		height:23px;
+		border: 1px solid #EAF3F8;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		background: #ECF3F9;
+		background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ECF3F9), to(#D6E6F3));
+		background: -webkit-linear-gradient(#ECF3F9, #D6E6F3);
+		background: -moz-linear-gradient(#ECF3F9, #D6E6F3);
+		background: -ms-linear-gradient(#ECF3F9, #D6E6F3);
+		background: -o-linear-gradient(#ECF3F9, #D6E6F3);
+		background: linear-gradient(#ECF3F9, #D6E6F3);
+  }
+  .voicebox .outBox .innerBox .outBoxSchedule{
+		margin-right:30px;height:100%;text-align:center;
+  }
+  .voicebox .outBox .innerBox .schedule{
+	height:5px;
+	margin-top:7px;
+	border: 1px solid #B6D7EA;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background: #7CBCE2;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#7CBCE2), to(#7BBCE2));
+	background: -webkit-linear-gradient(#7CBCE2, #7BBCE2);
+	background: -moz-linear-gradient(#7CBCE2, #7BBCE2);
+	background: -ms-linear-gradient(#7CBCE2, #7BBCE2);
+	background: -o-linear-gradient(#7CBCE2, #7BBCE2);
+	background: linear-gradient(#7CBCE2, #7BBCE2);
+  }
+  .voicebox .outBox .innerBox .scheduleBottom{
+	height:1px!important;
+	margin-left:3px;
+	margin-right:3px;
+	background-color:#FFFFFF;
+  }
+  .playButtonStyle {
+	width:18px;height:18px;margin-left:7px;margin-top:2px;background:url(/images/videoPlay_wev8.png) -0 -0 no-repeat;
+  }
+ .voiceLengthStyle {
+	line-height:23px;;font-size:11px;padding-left:10px;
+  }
+  .playbox {
+	float:right;width:30px;height:100%;
+  }
+  .voiceBox2 {
+	float:left;width:30px;height:100%;
+  }
+  
+  .divSpeechDisplay{
+  	width:299px;
+  }
+/**以上样式表用于控制语音附件的手机端展示使用*/

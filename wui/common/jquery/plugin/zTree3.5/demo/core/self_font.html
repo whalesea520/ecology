@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> ZTREE DEMO - DIY Font</TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../../css/demo.css" type="text/css">
+	<link rel="stylesheet" href="../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="../../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ztree.core-3.0.js"></script>
+	<!--  <script type="text/javascript" src="../../js/jquery.ztree.excheck-3.0.js"></script>
+	  <script type="text/javascript" src="../../js/jquery.ztree.exedit-3.0.js"></script>-->
+	<SCRIPT LANGUAGE="JavaScript">
+		<!--
+		var setting = {
+			view: {
+				fontCss: getFont
+			}
+		};
+
+		var zNodes =[
+			{ name:"绮椾綋瀛?, font:{'font-weight':'bold'} },
+			{ name:"鏂滀綋瀛?, font:{'font-style':'italic'}},
+			{ name:"鏈夎儗鏅殑瀛?, font:{'background-color':'black', 'color':'white'}},
+			{ name:"绾㈣壊瀛?, font:{'color':'red'}},
+			{ name:"钃濊壊瀛?, font:{'color':'blue'}},
+			{ name:"zTree 榛樿鏍峰紡"}
+
+		];
+
+		function getFont(treeId, node) {
+			return node.font ? node.font : {};
+		}
+
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+		});
+		//-->
+	</SCRIPT>
+</HEAD>
+
+<BODY>
+<h1>鏄剧ず涓€у寲瀛椾綋鐨勬爲</h1>
+<h6>[ 鏂囦欢璺緞锛歞emo/core/self_font.html ]</h6>
+<div class="content_wrap">
+	<div class="zTreeDemoBackground left">
+		<ul id="treeDemo" class="ztree"></ul>
+	</div>
+	<div class="right">
+		<ul class="info">
+			<li class="title"><h2>1銆乻etting 閰嶇疆淇℃伅璇存槑</h2>
+				<ul class="list">
+				<li class="highlight_red">璁剧疆鑺傜偣涓€у寲瀛椾綋璇疯缃?setting.view.fontCss 灞炴€э紝璇︾粏璇峰弬瑙?API 鏂囨。涓殑鐩稿叧鍐呭</li>
+				</ul>
+			</li>
+			<li class="title"><h2>2銆乼reeNode 鑺傜偣鏁版嵁璇存槑</h2>
+				<ul class="list">
+				<li>璁剧疆瀛椾綋涓嶉渶瑕?treeNode 璁剧疆鐗规畩鏁版嵁锛屼絾濡傛灉鐢ㄤ簬涓轰簡鍖哄埆涓嶅悓绫诲瀷鐨勮妭鐐癸紝璁剧疆涓嶅悓鐨勬牱寮忥紝鍙互瀵圭浉搴旂殑鏁版嵁璁剧疆鑷畾涔夊睘鎬?/li>
+				<li>姝?Demo 鍒╃敤 treeNode 淇濆瓨鏍峰紡瀹氫箟</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+</BODY>
+</HTML>

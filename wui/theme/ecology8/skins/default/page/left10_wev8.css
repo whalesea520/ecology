@@ -1,0 +1,1086 @@
+/**自定义内容  start **/
+
+/*导入菜单图标样式*/
+@import url('/wui/theme/ecology8/page/images/menuicon/bright/menuicon_wev8.css');
+
+.num_0_portal { background-image: url(/wui/theme/ecology8/page/images/menuicon/bright/portal00_wev8.png)!important; }
+.num_1_portal { background-image: url(/wui/theme/ecology8/page/images/menuicon/bright/portal01_wev8.png)!important; }
+.num_2_portal { background-image: url(/wui/theme/ecology8/page/images/menuicon/bright/portal02_wev8.png)!important; }
+.num_3_portal { background-image: url(/wui/theme/ecology8/page/images/menuicon/bright/portal03_wev8.png)!important; }
+.num_4_portal { background-image: url(/wui/theme/ecology8/page/images/menuicon/bright/portal04_wev8.png)!important; }
+.num_5_portal { background-image: url(/wui/theme/ecology8/page/images/menuicon/bright/portal05_wev8.png)!important; }
+.num_6_portal { background-image: url(/wui/theme/ecology8/page/images/menuicon/bright/portal06_wev8.png)!important; }
+.num_7_portal { background-image: url(/wui/theme/ecology8/page/images/menuicon/bright/portal07_wev8.png)!important; }
+.num_8_portal { background-image: url(/wui/theme/ecology8/page/images/menuicon/bright/portal08_wev8.png)!important; }
+.num_9_portal { background-image: url(/wui/theme/ecology8/page/images/menuicon/bright/portal09_wev8.png)!important; }
+.num_10_portal { background-image: url(/wui/theme/ecology8/page/images/menuicon/bright/portal10_wev8.png)!important; }
+.num_11_portal { background-image: url(/wui/theme/ecology8/page/images/menuicon/bright/portal11_wev8.png)!important; }
+.num_12_portal { background-image: url(/wui/theme/ecology8/page/images/menuicon/bright/portal12_wev8.png)!important; }
+.num_13_portal { background-image: url(/wui/theme/ecology8/page/images/menuicon/bright/portal13_wev8.png)!important; }
+.num_14_portal { background-image: url(/wui/theme/ecology8/page/images/menuicon/bright/portal14_wev8.png)!important; }
+.toolbarmore { background-image: url(/wui/theme/ecology8/page/images/menuicon/bright/more_wev8.png)!important; }
+.back-end { background-image: url(/wui/theme/ecology8/page/images/menuicon/bright/back-end_wev8.png)!important; }
+.fav { background-image: url(/wui/theme/ecology8/page/images/menuicon/bright/fav_wev8.png)!important; }
+.logout { background-image: url(/wui/theme/ecology8/page/images/menuicon/bright/logout_wev8.png)!important; }
+.elink { background-image: url(/wui/theme/ecology8/page/images/menuicon/bright/elink_wev8.png)!important; }
+.rtx { background-image: url(/wui/theme/ecology8/page/images/menuicon/bright/rtx_wev8.png)!important; }
+.resourcesetting { background-image: url(/wui/theme/ecology8/page/images/menuicon/bright/setting_wev8.png) }
+.resourcesettingOver { background-image: url(/wui/theme/ecology8/page/images/menuicon/bright/settingOver_wev8.png)!important; }
+.skinsetting { background-image: url(/wui/theme/ecology8/page/images/menuicon/bright/skinsetting_wev8.png) }
+.skinsettingOver { background-image: url(/wui/theme/ecology8/page/images/menuicon/bright/skinsettingOver_wev8.png)!important; }
+.passwordsetting { background-image: url(/wui/theme/ecology8/page/images/menuicon/bright/passwordsetting_wev8.png) }
+.passwordsettingOver { background-image: url(/wui/theme/ecology8/page/images/menuicon/bright/passwordsettingOver_wev8.png)!important; }
+.remindsetting { background-image: url(/wui/theme/ecology8/page/images/menuicon/bright/remind_wev8.png) }
+.remindsettingOver { background-image: url(/wui/theme/ecology8/page/images/menuicon/bright/remindOver_wev8.png)!important; }
+.emessage{ background-image: url(/wui/theme/ecology8/page/images/menuicon/bright/emessage_wev8.png)!important; }
+.emobile{ background-image: url(/wui/theme/ecology8/page/images/menuicon/bright/emobile_wev8.png)!important; }
+
+/*邮件菜单中，写信、收信的ul背景色*/
+.isUl{
+    background-color:#4c6268;
+}
+
+.mailLiOver{
+    background-color:#596e74;
+}
+
+.mailBtnOver{
+	background-color:#596e74!important;
+}
+
+
+
+.logocolor{
+	background-color:#fd9273!important;
+}
+
+.logobordercolor{
+	border-color: #fd9273!important;
+}
+
+
+.hrmcolor{
+	background-color:#2ac5c0;
+}
+
+.leftcolor{
+	background-color:#627f7e!important;
+}
+
+.topcolor{
+	background-color:#40555b;
+}
+
+
+
+/*顶部logo背景色*/
+#lftop{
+	/*background-color:#fd9273;*/
+}
+
+/*顶部菜单栏样式*/
+.leftMenuTop{
+	/*background-color:#2ac5c0;*/
+}
+
+/*左侧菜单*/
+.leftMenuItemCenter {
+	color:#cccccc;
+	
+}
+
+/*左侧菜单选中背景*/
+.liSelected{
+	background:#ffffff;
+	background: rgba(255, 255, 255, 0.2);
+    filter: alpha(opacity=10);
+}
+
+/*左侧区域背景颜色及边框颜色*/
+#leftmenucontainer{
+	/*background-color:#627f7e;*/
+}
+
+
+/*左侧菜单一级导航*/
+.leftMenuTopNavDiv {
+	border-bottom:1px solid #c5c5c4;
+	color:#ffffff;
+}
+
+/*左侧菜单底部 工具栏 按钮*/
+.lfootitem{	
+	border-right:1px solid #cccccc;
+}
+
+
+/**顶部功能区域整体背景*/
+#mainTopBlockTr{
+	/*background-color:#40555b;*/
+}
+
+/*顶部按钮样式*/
+.leftMenuTopBtn{
+	background:#ffffff;
+	color:#fff;
+	background: rgba(255, 255, 255, 0.1);
+	filter: alpha(opacity=10);
+}
+
+/*顶部菜单下拉按钮选中背景*/
+.menuNavSpan_Contraction {
+	/*background:#627f7e!important;*/
+	filter:alpha(opacity=100)important;
+	opacity:1!important;
+	
+}
+
+
+/**顶部菜单展开背景**/
+.topMenuDivOver{
+	/*background:#627f7e;*/
+}
+
+/*常用菜单下拉菜单选中*/
+.over .icon{
+	/*background:#fd9273!important;*/
+}
+
+/*常用菜单顶部选中*/
+.freqUseOver{
+	/*background:#627f7e!important;*/
+}
+
+/*常用菜单下拉样式*/
+.commonmenu{
+	/*background:#627f7e;*/
+	color:#cbcaca;
+}
+
+.searchkeywork{
+	color:#cacaca;
+}
+
+
+.lfFoot{
+	background:url(/wui/theme/ecology8/skins/default/page/f_wev8.png)
+}
+
+
+
+
+/*搜索框背景色*/
+.searchBlockBgDiv{
+	background-color:#ffffff;
+	background-color:rgba(255,255,255,0.1);
+	filter: alpha(opacity=10);
+}
+
+.keywordsearchbtn{
+	background:#ffffff;
+	background-color:rgba(255,255,255,0.2);
+	filter: alpha(opacity=20);
+}
+
+
+.toolbarSpace{
+	background:#000000;
+	opacity:0.2;
+	filter: alpha(opacity=20);
+	width:1px;
+}
+
+
+
+/**自定义内容  end **/
+
+/*邮件菜单样式定义*/
+.color333{
+	color:#A19E9E;
+}
+
+.p-l-5{
+	padding-left:10px;
+}
+
+.m-r-30{
+	margin-right:10px;
+}
+
+.m-l-15{
+	margin-left:10px;
+}
+
+.mail{
+	color:#A19E9E;
+}
+
+/*左侧区域背景颜色及边框颜色*/
+#leftmenu-bottom {
+	background-color:rgb(64,64,64);
+	/*BACKGROUND-COLOR:#CFE8EC;
+	BORDER-LEFT:1PX SOLID #85B9C0;BORDER-RIGHT:1PX SOLID #85B9C0;*/
+	border:none;
+}
+
+#drillcrumb {
+	/*BACKGROUND:#52C6DE;*/
+	background:transparent;
+	/*BORDER-TOP:1PX SOLID #6DD8E9;
+	BORDER-LEFT:1PX SOLID #4DBBD1;
+	BORDER-BOTTOM:1PX SOLID #4DBBD1;
+	BORDER-RIGHT:1PX SOLID #4DBBD1;*/
+	border:none;
+}
+/*左侧菜单底部导航*/
+.LEFTMENUBOTTOMNAVDIV{
+/*	BORDER-TOP:1PX SOLID #4DBBD1;
+	BACKGROUND:#52C6DE;*/
+	background: rgb(64,64,64);
+	border:none;
+}
+.LEFTMENUBOTTOMNAVTBL {
+	/*BORDER-TOP:1PX SOLID #6DD8E9;
+	BORDER-LEFT:1PX SOLID #4DBBD1;
+	BORDER-BOTTOM:1PX SOLID #4DBBD1;
+	BORDER-RIGHT:1PX SOLID #4DBBD1;*/
+	border:none;
+}
+
+
+
+span.e8_number{
+	border-radius: 8px; 
+	display:inline-block;
+	text-align:right;
+	width:110px;
+	/*margin-left: 95px;
+	background-color: #3F3F3F;*/ 
+}
+
+.aSelected span.e8_number{
+	/*background-color: #3F3F3F;*/
+}
+
+/*左侧菜单默认样式*/
+.divCss{
+	/*border-bottom: #efefef 1px solid;*/
+	/*background-color: rgb(29,27,17);*/
+}
+
+/*顶部菜单被选中时的样式*/
+.topItemSelect{
+	color:#fdffff!important;
+}
+
+/*需要修改*/
+.topItemSelectBorder{  
+	border-bottom:2px solid;
+}
+
+/*顶部菜单被经过时的样式*/
+.topItemOver{
+	color:#fdffff!important;
+}
+
+/*左侧菜单+/-号的样式*/
+.bzCls{
+	/*color: #656565;*/
+	padding-right:41px;
+	display:inline-block;
+	height:40px;
+	float:left;
+	background-repeat:no-repeat;
+	background-position:0 50%;
+	opacity:0.5;
+}
+
+
+.bzCls_close{
+	background-image:url(/images/ecology8/menuicon/close_wev8.png);
+	background-repeat:no-repeat;
+	background-position:0 50%;
+}
+
+.bzCls_open{
+	background-image:url(/images/ecology8/menuicon/opened_wev8.png);
+	background-repeat:no-repeat;
+	background-position:0 50%;
+}
+
+/*logo区域的样式*/
+.logoArea{
+	height:50px;
+	overflow:hidden;
+	text-align:left;
+	line-height:50px;
+	width:225px;
+}
+
+/*logo区域文字部分的样式*/
+.logoArea span{
+	font-size:15px;
+	font-weight:normal;
+    padding-left:10px;
+	padding-left:10px;
+	color:#ffffff;
+}
+
+/*整个页面的body样式*/
+#mainBody{
+	
+}
+
+/*【更多】菜单的样式*/
+.moreText{
+	cursor:pointer;
+	width:40px;
+	height:35px;
+	float:left;
+	position:relative;
+	/*top:5px;*/
+	/*left:15px;
+	margin-right:10px;*/
+	color:#fff;
+	text-align:center;
+}
+
+/*【更多】菜单的文字样式*/
+.add{
+	font-size:18pt;
+	width:25px;
+	color:#8DB4E3;
+}
+
+.absoluteCss{
+	position:absolute;
+	float:left;
+	margin-left:730px;
+}
+
+.liCss, .liCss2{
+	
+}
+
+
+
+.nameDiv{
+	width:197px;
+	height:39px;
+	line-height:40px;
+	display:inline-block;
+	overflow:hidden;
+	/*border-bottom:1px solid #515151;*/
+}
+
+.liSelected .nameDiv{
+	border:none;
+}
+
+.hrminfo_fontcolor{
+	position:relative;
+	left:10px;
+	margin-top:12px;
+	display:inline-block;
+	font-size:12px;	
+	max-width:140px;	
+}
+
+
+.leftColor{
+	color:#ffffff;
+}
+
+/*12号字体大小样式*/
+.f12{
+	font-size: 12px;
+}
+
+
+.quickImg{
+	cursor:pointer;
+	height:24px;
+	width:24px;
+	display:block;
+	overflow:hidden;
+}
+
+#tblHrmToolbr td{
+	width:36px;
+}
+
+/*个性化设置和系统设置的样式*/
+.lfFoot{
+	position:absolute;
+	width:225px;
+	
+	
+	color:#000000;
+	height:50px;
+	vertical-align:middle;
+	line-height:50px;
+	bottom:48px;
+}
+
+ .lf0{
+	padding-left:20px;
+	float:left;
+	position:relative;
+	color:#fff;
+	cursor:pointer;
+	text-align:center;
+}
+
+ .lf1{
+	padding-right:20px;
+	float:right;
+	position:relative;
+	color:#fff;
+	cursor:pointer;
+}
+
+/*弹出层菜单样式*/
+.lf11{
+	position:absolute;
+	float:right;
+	left:205px;
+	width:206px;
+	background-color:#003764;
+	height:30px;
+	display:none;
+}
+
+.lf110{
+	background-color: rgb(123,210,30);
+	width:103px;
+	padding-left:0px;
+	height:30px;
+	line-height:30px;
+}
+
+.lf111{
+	width:103px;
+	padding-left:0px;
+	height:30px;
+	line-height:30px;
+}
+
+.lfootitem{
+	position:absolute;
+	width:68px;
+	height:30px;
+	text-align:center;
+	line-height:30px;
+	cursor:pointer;
+	margin-top:10px;
+	background-repeat:no-repeat;
+	background-position:center center;
+}
+
+.lfootitemlast{
+	border:none!important;
+}
+
+/*签退或者退出按钮样式*/
+.quit{
+	width:46px;
+	height:50px!important;
+	line-height:46px;
+	text-align:center;
+}
+
+
+
+
+
+.leftMenuBottom{
+
+}
+
+/*左侧菜单栏部门样式*/
+.leftBlockHrmDep{
+	position:relative;
+	display:inline-block;
+	margin-left:15px;
+	margin-top:12px;
+	font-size:11px;
+	cursor:pointer;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	max-width:110px;
+}
+
+
+
+
+
+.freqUse{
+	height:100%;
+	line-height:32px;
+}
+
+
+/*background-image: url(/wui/theme/ecology8/skins/<%=skin %>/page/ecologyShellImg_wev8.png);background-position: 0 -75 ;background-repeat:no-repeat;*/
+.searchBlockBgDiv{
+	float:left;
+	padding-top:20px;
+	width:210px;
+	height:35px;
+	margin-left:30px;
+	padding:0;
+	margin-top:7px!important;
+	
+}
+
+
+.keywordsearchbtn{
+	float:right;
+	
+	height:35px;
+	width:30px;
+	
+	
+}
+
+.searchTxt{
+	color:#fff;
+}
+
+.searchTxtSplit{
+	color:#fff;
+	font-size:16px;
+}
+
+.toolbarItemDiv{
+	float:left;
+	height:50px;
+	line-height:50px;
+	margin-left:20px;
+}
+
+.toolbarItem{
+	float:left;
+	height:100%;
+	line-height:100%;
+	cursor:pointer;
+	margin-top:8px;
+}
+
+.slideItemTextExpand{
+	color:#000000;
+	
+}
+
+.qzhNavSpanImg{
+	background-image:url(/wui/theme/ecology8/page/images/down_wev8.png);
+	background-position:90% 50%;
+	background-repeat:no-repeat;
+}
+
+.qzhNavSpanImgup{
+	background-image:url(/wui/theme/ecology8/page/images/up_wev8.png)!important;
+}
+
+.e8NavDH{
+	background-image:url(/wui/theme/ecology8/page/images/navDH_wev8.png);
+	background-repeat:no-repeat;
+	width:193px;
+	height:129px;
+	display:none;
+	position:absolute;
+	top:50px;
+	right:130px;
+}
+
+.optionSelect{
+	background-color:#989898;
+}
+
+.colorfff{color:#fff!important;}
+
+.optionNormal{
+	height:40px;
+	line-height:40px;
+	cursor:pointer;
+	padding-left:10px;
+	color:#969696;
+}
+
+.optionSpan{
+	padding-right:10px;
+}
+
+.moreBtn{
+	background-color:#fff;
+	border-left:1px solid #d0d0d0;
+	border-right:1px solid #d0d0d0;
+	border-bottom:1px solid #d0d0d0;
+	display:none;
+	position:absolute;
+	top:10px;
+	right:26px;
+	z-index:1;
+}
+
+.moreBtnSel{
+	background-color:#d4edfe!important;
+	background-image:url(/wui/theme/ecology8/page/images/more_sel_wev8.png)!important;
+}
+
+.favBtnSel{
+	background-color:#d4edfe!important;
+	background-image:url(/wui/theme/ecology8/page/images/favorite_sel_wev8.png)!important;
+}
+
+.moreBtn_optionSelect{
+	background-color:#e5e5e5;
+}
+
+.moreBtn_option{
+	height:30px;
+	line-height:30px;
+	cursor:pointer;
+	padding-left:10px;
+	color:#656565;
+}
+
+.moreBtn_optionSpan{
+	padding-right:10px;
+}
+
+.e8_leftToggle{
+	position:absolute;
+	height:48px;
+	width:15px;
+	bottom:0px;
+	left:210px;
+	cursor:pointer;
+	/*display:none;*/
+	background-image:url("/wui/theme/ecology8/page/images/leftHideDefault_wev8.png");
+}
+
+.e8_leftToggleHover{
+	background-image:url("/wui/theme/ecology8/page/images/leftHide_wev8.png");
+}
+
+.e8_leftToggleShow{
+	background-image:url("/wui/theme/ecology8/page/images/leftShowDefault_wev8.png");
+	left:0px;
+	display:block;
+}
+
+.e8_leftToggleShowHover{
+	background-image:url("/wui/theme/ecology8/page/images/leftShow_wev8.png");
+}
+
+.e8_topToggle{
+	position:absolute;
+	width:165px;
+	height:19px;
+	top:49px;
+	cursor:pointer;
+	display:none;
+	background-image:url("/wui/theme/ecology8/page/images/topHideDefault_wev8.png");
+}
+
+.e8_topToggleHover{
+	background-image:url("/wui/theme/ecology8/page/images/topHide_wev8.png");
+}
+
+.e8_topToggleShow{
+	background-image:url("/wui/theme/ecology8/page/images/topShowDefault_wev8.png");
+	top:0px;
+	display:block;
+}
+.e8_topToggleShowHover{
+	background-image:url("/wui/theme/ecology8/page/images/topShow_wev8.png");
+}
+
+.e8comLevel1{
+	padding-left:20px!important;
+}
+.drillmenu { /* main DIV container of menu */
+	/*border: 2px solid black;*/
+	margin-left: 1px;
+	width: 175px; /*width of menu*/
+	height:0px; /*Height of DIV for those with JavaScript disabled*/
+	/*overflow-y: auto;*/
+	overflow:hidden;
+	height:350px;
+	width:225px;
+	/*Scrollable DIV for those with JavaScript disabled*/
+}
+
+.drillmenu ul { /*menu ULs*/
+	font: normal 12px;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	/*background: lightyellow; background of menu*/
+}
+
+.drillmenu li {
+}
+
+.drillmenu li .lfMenuItem { /*menu links*/
+	position: relative;
+	display: block;
+	text-decoration: none;
+	font-size: 11px;
+	height: 40px;
+	line-height:30px;
+	cursor:pointer;
+	font-family: "微软雅黑", "verdana";
+	z-index: 1;
+	vertical-align:middle;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+	width:100%;
+}
+
+#drillcrumb li a {
+	text-decoration: none;
+	color: #333!important;
+}
+
+* html .drillmenu li { /*IE6 CSS hack*/
+	display: inline-block;
+	height: 27px;
+}
+
+li.backcontroltitle { /*style of top level menu title*/
+	background: black;
+	color: white;
+	padding: 4px;
+}
+
+li.backcontrol {
+	/*style of back button control that gets added to the top of each sub UL*/
+	background: #011054;
+	color: white;
+	padding: 4px;
+	cursor: pointer;
+}
+.leftMenuTopNavDiv {
+	min-height: 40px;
+	*height: 40px;
+	/*margin-bottom:2px;
+	margin-top:10px;*/
+}
+#drillcrumb {
+	/*custom, user defined DIV that contains breadcrumb trail*/
+	font-size: 14px;
+	
+	/*font-weight:bold;*/
+	width: 170px;
+	min-height: 30px;
+	*height: 30px;
+	font-family: '微软雅黑', 'verdana';
+	padding-left: 0px;
+	padding-top:4px;
+}
+
+#drillcrumb a{
+	color:rgb(154,141,111) !important;
+}
+
+.navclass {
+	width: 180px;
+	margin-bottom: 5px;
+	margin-top: 10px;
+	height: 27px;
+}
+
+
+.leftMenuItemLeft {
+float:left;
+	height: 27px;
+	width: 11px;
+	display:none;
+	/*background: url(/wui/theme/ecology8/skins/<%=lskin%>/page/left/leftMenuItemLeft_wev8.png) no-repeat;*/
+}
+
+.leftMenuItemCenter {
+	float:left;
+	height: 40px;
+	line-height:30px;
+	/*background: url(/wui/theme/ecology8/skins/<%=lskin%>/page/left/leftMenuItemCenter_wev8.png) repeat-x;*/
+	/*text-indent:10px;*/
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	/*overflow:hidden;*/
+	/*color:rgb(154,141,111);*/
+	
+}
+
+#leftMenu{
+	overflow:hidden;
+	height:100%;
+}
+
+.leftMenuItemRight {
+	float:left;
+	width: 5px;
+	height: 27px;
+	/*background: url(/wui/theme/ecology8/skins/<%=lskin%>/page/left/leftMenuItemRight_wev8.png) 0 0 no-repeat;*/
+
+}
+
+.leftMenuItemNavLeft {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 27px;
+	width: 11px;
+	/*background:url(/wui/theme/ecology8/skins/<%=lskin%>/page/left/leftMenuItemNavLeft_wev8.png) no-repeat;*/
+	background-position:0 -28;
+	z-index:-1;
+}
+
+.leftMenuItemNavCenter {
+	position: absolute;
+	/*left: 11px;*/
+	top: 0;
+	height: 27px;
+	line-height:27px;
+	text-indent:18px;
+	color:white;
+	/*background: url(/wui/theme/ecology8/skins/<%=lskin%>/page/left/leftMenuItemNavCenter_wev8.png) repeat-x;*/
+	/*background-position:0 -28;*/
+	z-index:-1;
+	text-overflow:ellipsis;white-space:nowrap;overflow:hidden;
+}
+
+.leftMenuItemNavRight {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 27px;
+	width: 10px;
+	/*background: url(/wui/theme/ecology8/skins/<%=lskin%>/page/left/leftMenuNavRight_wev8.png) no-repeat;*/
+	background-position:0 -28;
+	z-index:-1;
+}
+
+.leftMenuItemNavCenter a {
+	display:inline-block;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+	width:100%;
+	color:#fff;
+}
+
+#LeftmenuPrev img,#LeftmenuNext img {
+	border: 0 none;
+}
+.drillcrumbUrlLeft {
+	background: url(/wui/theme/ecology8/skins/<%=lskin%>/page/left/leftMenuUrlLeft_wev8.png) no-repeat;
+}
+.drillcrumbUrlCenter {
+	background: url(/wui/theme/ecology8/skins/<%=lskin%>/page/left/leftMenuUrlCenter_wev8.png) repeat-x;
+}
+.drillcrumbUrlRight {
+	background: url(/wui/theme/ecology8/skins/<%=lskin%>/page/left/leftMenuUrlRight_wev8.png) no-repeat;
+}
+
+
+
+
+
+
+
+
+
+#divFloatBg{
+	width:63px;
+	height:70px;
+	position:absolute;
+	left:3px;
+	top:1px;
+	background-repeat: no-repeat;
+	cursor:pointer;
+}  
+	
+.topMenuDiv {
+	position:absolute;
+	height:40px;
+	overflow:visible;
+	top:0px;
+}
+.topMenuDiv_top {
+	position:relative;
+	width:300px;
+	top:0;
+	overflow:hidden;
+	height:40px;
+	float:left;
+	left:0px;
+	padding-top:5px;
+	
+}
+	
+.menuItem{
+	width:45px;
+	height:35px;
+	line-height:35px;
+	background:none;
+	float:left;
+	position:relative;
+	margin-left:12px;
+	cursor:pointer;
+}
+.menuItemIcon{
+	width:32px;
+	height:32px;
+	margin-left:15px;
+	margin-top:6px;
+	cursor:pointer;
+}
+.slideItemText{
+	padding-left:0px;
+	padding-right:0px;
+	text-align:center;
+	font-family:"微软雅黑","verdana";
+	font-size:14px;
+	color:#cbcaca;
+	height:35px;
+	margin-top:0px;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;}
+.menuItemEnd{
+	clear:left
+}  
+.menuNavSpan_Expand {
+	background-position:-287 -0;
+	background-repeat:no-repeat;
+}
+.menuNavSpan_Contraction {
+	background-position:-259 0; 
+	background-repeat:no-repeat;
+}
+	
+
+
+.commonmenu{
+				
+	position:absolute;
+	list-style: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 120px;
+	text-align: left;
+	
+}
+
+.commonmenuul{			
+	padding:0px;	
+}
+
+.commonmenu li{
+	list-style: none;
+	height:30px;
+	line-height: 30px;
+	cursor: pointer;
+	position: relative;
+	
+	 
+}
+.commonmenu li span{
+	padding-left:20px;
+}
+.over{
+	background:#ffffff;
+	background-color: rgba(255, 255, 255, 0.1);
+	filter: alpha(opacity=10);
+	*opacity:0.1;
+
+}
+.commonmenu li .icon{
+	position:absolute;
+}
+.over .icon{
+	width: 3px;
+	height:30px;
+	display:inline-block;
+}
+
+.addMenu{
+	background-color: rgba(255, 255, 255, 0.2);
+	
+	padding-left:20px!important;
+	height: 25px!important;
+	line-height: 25px!important;
+	color:#ebebeb!important;
+}
+.closemenu{
+	position: absolute;
+	background: url("/images/homepage/close_wev8.png");
+	width: 12px;
+	height: 12px;
+	top:8px;
+	right:10px;
+	cursor: pointer;
+	display: none;
+}
+
+.menuname{
+	position:absolute;
+}
+
+
+#leftmenucontainer{
+	border:none;
+	height:100%;
+}
+
+.leftMenuTopNavDiv {
+	border-top:none;
+	margin-top:0px;
+	margin-bottom:0px;
+	margin-left:10px;
+	height:40px;
+	line-height:30px;
+	
+}
+
+.leftMenuItemCenter {
+	float:left;
+	height: 40px;
+	line-height:30px;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+
+
+
+
+.freqUse{
+	width:100%;
+	position:absolute;
+	color:#ffffff;
+}
+
+.mailMenu .receiveMail{
+	background:#4c6268;
+}
+.mailMenu .receiveMail .mailLiOver{
+    background-color:#596e74;
+}
+.mailMenu .receiveMail .mailBtnOver{
+	background-color:#596e74 !important;
+}
+
+.mailMenu .addMail{
+	background:#40555b;	
+}	
+.mailMenu .addMail .mailLiOver{
+	background:#4c6268;
+}
+
+.mailMenu .addMail .mailBtnOver{
+	background-color:#596e74 !important;
+}
+

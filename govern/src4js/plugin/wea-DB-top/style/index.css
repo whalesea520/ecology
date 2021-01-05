@@ -1,0 +1,22 @@
+.wea-top-req-wapper{
+  height: 100%;
+  padding-left: 13px;
+  position: relative;
+}
+.wea-top-req{
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.wea-top-req-content {
+    width: 100%;
+    overflow: auto;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.wea-top-req-wapper .ant-tabs-bar{
+    margin-bottom: 2px;
+}

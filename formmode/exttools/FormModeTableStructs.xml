@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module id="formmodeimpexp" version="1.0.0">
+	<tables>
+		<table name="htmllabelindex" desc="字典索引表" ignore="true" pkauto="false"></table>
+		<table name="htmllabelinfo" desc="字典信息表" ignore="true" pk="indexid,languageid" pkauto="false">
+			<column name="indexid" foreigntable="htmllabelindex"></column>
+		</table>
+		<table name="workflow_bill" desc="工作流单据信息表" ignore="true" pkauto="false">
+			<column name="namelabel" foreigntable="htmllabelindex"></column>
+			<column name="tablename" istablename="true"></column>
+		</table>
+		<table name="workflow_billfield" desc="工作流单据字段表" ignore="true">
+			<column name="billid" foreigntable="workflow_bill"></column>
+			<column name="fieldlabel" foreigntable="htmllabelindex"></column>
+			<column name="detailtable" istablename="true"></column>
+		</table>
+		<table name="workflow_formdetailinfo" desc="工作流单据行列规则表" forcedelete="true" pkauto="false">
+			<column name="formid" foreigntable="workflow_bill" datawhere="true"></column>
+		</table>
+		<table name="modetreefield" desc="应用基本信息表" >
+			<!-- <column name="superfieldid" foreigntable="modetreefield"></column> -->
+			<!-- <column name="subcompanyid" foreigntable="hrmsubcompany"></column> -->
+			<!-- <column name="allsuperfieldid" foreigntable=""></column> -->
+			<column name="isdelete" defaultvalue="0"></column>
+		</table>
+		<table name="modeinfo" desc="模块基本信息表" isapp="true" >
+			<column name="modetype" foreigntable="modetreefield" appwhere="true"></column>
+			<column name="formid" foreigntable="workflow_bill"></column>
+		</table>
+		<table name="modehtmllayout" desc="模块布局基本信息" ismode="true">
+			<column name="modeid" foreigntable="modeinfo" modewhere="true"></column>
+			<column name="formid" foreigntable="workflow_bill"></column>
+			<!-- <column name="cssfile" foreigntable="workflow_crmcssfile"></column> -->
+		</table>
+		<table name="appdatacount" desc="应用统计信息表" isapp="true">
+			<column name="appid" foreigntable="modetreefield" appwhere="true"></column>
+		</table>
+		<table name="appforminfo" desc="应用表单关系表" isapp="true" pk="appid,formid" pkauto="false">
+			<column name="appid" foreigntable="modetreefield" appwhere="true"></column>
+			<column name="formid" foreigntable="workflow_bill"></column>
+		</table>
+		<table name="defaultvalue" desc="默认值基本信息" ismode="true">
+			<column name="modeid" foreigntable="modeinfo" modewhere="true"></column>
+			<column name="fieldid" foreigntable="workflow_billfield"></column>
+			<column name="formid" foreigntable="workflow_bill"></column>
+		</table>
+		<table name="moderightinfo" desc="模块权限设置表" ismode="true" candelete="true">
+			<column name="modeid" foreigntable="modeinfo" modewhere="true"></column>
+			<column name="layoutid" foreigntable="modehtmllayout"></column>
+			<column name="layoutid1" foreigntable="modehtmllayout"></column>
+			<column name="rolefield" foreigntable="workflow_billfield"></column>
+		</table>
+		<table name="formengineset" desc="表单引擎设置信息表" ismode="true" isapp="true">
+			<column name="modeid" foreigntable="modeinfo" modewhere="true"></column>
+			<column name="appid" foreigntable="modetreefield" appwhere="true"></column>
+		</table>
+		<table name="mode_barcode" desc="条形码设置" ismode="true">
+			<column name="modeid" foreigntable="modeinfo" modewhere="true"></column>
+		</table>
+		<table name="mode_batchmodify" desc="批量修改主表" ismode="true">
+			<column name="modeid" foreigntable="modeinfo" modewhere="true"></column>
+			<column name="formid" foreigntable="workflow_bill"></column>
+		</table>
+		<table name="mode_custombrowser" desc="模块自定义浏览按钮" ismode="true" isapp="true">
+			<column name="modeid" foreigntable="modeinfo" modewhere="true"></column>
+			<column name="formid" foreigntable="workflow_bill"></column>
+			<column name="appid" foreigntable="modetreefield" appwhere="true"></column>
+			<column name="customname" isbrowsername="true"></column>
+		</table>
+		<table name="mode_custompage" desc="模块自定义页面" isapp="true">
+			<!-- <column name="creater" foreigntable="hrmresource"></column> -->
+			<column name="appid" foreigntable="modetreefield" appwhere="true"></column>
+		</table>
+		<table name="mode_customsearch" desc="模块自定义搜索" ismode="true" isapp="true">
+			<column name="modeid" foreigntable="modeinfo" modewhere="true"></column>
+			<column name="appid" foreigntable="modetreefield" appwhere="true"></column>
+			<column name="formid" foreigntable="workflow_bill"></column>
+			<column name="detailtable" istablename="true"></column>
+			<column name="defaultsql" issql="true"></column>
+		</table>
+		<table name="mode_expressionbase" desc="权限条件关系详细表" pkauto="false">
+			<column name="fieldid" foreigntable="workflow_billfield"></column>
+			<column name="rightid" foreigntable="moderightinfo" datawhere="true"></column>
+		</table>
+		<table name="mode_selectitempage" desc="公共选择项信息表" isapp="true" >
+			<!-- <column name="creater" foreigntable="hrmresource"></column> -->
+			<column name="appid" foreigntable="modetreefield" appwhere="true"></column>
+			<column name="formids" containtable="workflow_bill"></column>
+		</table>
+		<table name="mode_dataapprovalinfo" desc="数据审批记录表" ignore="true" ismode="true">
+			<column name="modeid" foreigntable="modeinfo" modewhere="true"></column>
+			<column name="formid" foreigntable="workflow_bill"></column>
+			<!-- <column name="operator" foreigntable="hrmresource"></column> -->
+		</table>
+		<table name="mode_excelfield" desc="批量导入条件设置表" ismode="true">
+			<column name="modeid" foreigntable="modeinfo" modewhere="true"></column>
+			<column name="formid" foreigntable="workflow_bill"></column>
+		</table>
+		<table name="mode_DataBatchImport" desc="批量导入设置" ismode="true">
+			<column name="modeid" foreigntable="modeinfo" modewhere="true"></column>
+			<column name="validateid" foreigntable="mode_excelfield"></column>
+		</table>
+		<table name="mode_customtree" desc="树形基本信息" ismode="true" isapp="true">
+			<column name="modeid" foreigntable="modeinfo" modewhere="true"></column>
+			<!-- <column name="creater" foreigntable="hrmresource"></column> -->
+			<column name="appid" foreigntable="modetreefield" appwhere="true"></column>
+			<column name="rooticon" isfile="true"></column>
+		</table>
+		<table name="mode_customtreedetail" desc="树形节点基本信息">
+			<column name="mainid" foreigntable="mode_customtree" datawhere="true"></column>
+			<column name="sourceid" foreigntable="modeinfo"></column>
+			<column name="nodeicon" isfile="true"></column>
+		</table>
+		<table name="customfieldshowchange" desc="显示转换基本信息">
+			<column name="customid" foreigntable="mode_customsearch" datawhere="true"></column>
+			<column name="fieldid" foreigntable="workflow_billfield"></column>
+		</table>
+		<table name="datashowset" desc="浏览框信息(建模部分)">
+			<column name="customid" foreigntable="mode_custombrowser" datawhere="true"></column>
+		</table>
+		<table name="mode_expangroup" desc="扩展页面组" ismode="true" >
+			<column name="modeid" foreigntable="modeinfo" modewhere="true"></column>
+		</table>
+		<table name="mode_pageexpand" desc="页面扩展基本信息" ismode="true">
+			<column name="modeid" foreigntable="modeinfo" modewhere="true"></column>
+			<column name="groupid" foreigntable="mode_expangroup"></column>
+		</table>
+		<table name="expandbaserightinfo" desc="页面扩展权限信息" >
+			<column name="modeid" foreigntable="modeinfo"></column>
+			<column name="expandid" foreigntable="mode_pageexpand" datawhere="true"></column>
+		</table>
+		<table name="mode_batchSet" desc="批量修改设置表">
+			<column name="customsearchid" foreigntable="mode_customsearch"></column>
+			<column name="expandid" foreigntable="mode_pageexpand" datawhere="true"></column>
+		</table>
+		<table name="mode_CustombrowserDspField" desc="模块自定义浏览按钮显示字段">
+			<column name="customid" foreigntable="mode_custombrowser" datawhere="true"></column>
+			<column name="fieldid" foreigntable="workflow_billfield"></column>
+		</table>
+		<table name="mode_CustomDspField" desc="查询列表字段信息" candelete="true">
+			<column name="customid" foreigntable="mode_customsearch" datawhere="true"></column>
+			<column name="fieldid" foreigntable="workflow_billfield"></column>
+		</table>
+		<table name="mode_customResource" desc="资源面板基本信息" isapp="true">
+			<column name="appid" foreigntable="modetreefield" appwhere="true"></column>
+			<column name="customsearchid" foreigntable="mode_customsearch"></column>
+			<column name="titlefieldid" foreigntable="workflow_billfield"></column>
+			<column name="startdatefieldid" foreigntable="workflow_billfield"></column>
+			<column name="enddatefieldid" foreigntable="workflow_billfield"></column>
+			<column name="starttimefieldid" foreigntable="workflow_billfield"></column>
+			<column name="endtimefieldid" foreigntable="workflow_billfield"></column>
+			<column name="contentfieldid" foreigntable="workflow_billfield"></column>
+			<column name="resourcefieldid" foreigntable="workflow_billfield"></column>
+			<column name="resourceshowfieldid" foreigntable="workflow_billfield"></column>
+		</table>
+		<table name="mode_customSearchButton" desc="查询列表自定义按钮">
+			<column name="objid" foreigntable="mode_customsearch" datawhere="true"></column>
+			<column name="jsmethodbody" encrypt="true"></column>
+		</table>
+		<table name="expandbaserightexpressionbase" desc="页面扩展权限条件关系详细表">
+			<column name="fieldid" foreigntable="workflow_billfield"></column>
+			<column name="rightid" foreigntable="expandbaserightinfo" datawhere="true"></column>
+		</table>
+		<table name="expandbaserightexpressions" desc="页面扩展权限条件关系表">
+			<column name="rightid" foreigntable="expandbaserightinfo" datawhere="true"></column>
+			<column name="expbaseid" foreigntable="expandbaserightexpressionbase"></column>
+		</table>
+		<table name="mode_batchmodifydetail" desc="批量修改明细表">
+			<column name="mainid" foreigntable="mode_batchmodify" datawhere="true"></column>
+			<column name="feildid" foreigntable="workflow_billfield"></column>
+		</table>
+		<table name="mode_custompagedetail" desc="模块自定义页面详细设置">
+			<column name="mainid" foreigntable="mode_custompage" datawhere="true"></column>
+		</table>
+		<table name="mode_dmlactionset" desc="DML接口动作基本信息" ismode="true">
+			<column name="modeid" foreigntable="modeinfo" modewhere="true"></column>
+			<column name="expandid" foreigntable="mode_pageexpand"></column>
+		</table>
+		<table name="mode_dmlactionsqlset" desc="DML接口动作详细信息">
+			<column name="actionid" foreigntable="mode_dmlactionset" datawhere="true"></column>
+			<column name="dmlformid" foreigntable="workflow_bill"></column>
+			<column name="actiontable" istablename="true"></column>
+			<column name="dmltablename" istablename="true"></column>
+		</table>
+		<table name="mode_dmlactionfieldmap" desc="DML配置字段映射表" candelete="true">
+			<column name="actionsqlsetid" foreigntable="mode_dmlactionsqlset" datawhere="true"></column>
+		</table>
+		<table name="mode_expressions" desc="权限条件关系表" pkauto="false">
+			<column name="rightid" foreigntable="moderightinfo" datawhere="true"></column>
+			<!-- <column name="expids" foreigntable="mode_expressions"></column> -->
+			<column name="expbaseid" foreigntable="mode_expressionbase"></column>
+		</table>
+		<table name="mode_layout_querySql" desc="布局中查询条件信息表" ismode="true">
+			<column name="modeid" foreigntable="modeinfo" modewhere="true"></column>
+			<column name="formid" foreigntable="workflow_bill"></column>
+			<column name="layoutid" foreigntable="modehtmllayout"></column>
+		</table>
+		<table name="mode_layout_sortfield" desc="布局中排序字段信息表" ismode="true">
+			<column name="modeid" foreigntable="modeinfo" modewhere="true"></column>
+			<column name="formid" foreigntable="workflow_bill"></column>
+			<column name="layoutid" foreigntable="modehtmllayout"></column>
+			<column name="fieldid" foreigntable="workflow_billfield"></column>
+		</table>
+		<table name="mode_pageexpanddetail" desc="页面扩展详细信息">
+			<column name="mainid" foreigntable="mode_pageexpand" datawhere="true"></column>
+		</table>
+		<table name="mode_pagerelatefield" desc="页面扩展相关字段信息" ismode="true">
+			<column name="modeid" foreigntable="modeinfo" modewhere="true"></column>
+			<column name="pageexpandid" foreigntable="mode_pageexpand"></column>
+		</table>
+		<table name="mode_pagerelatefielddetail" desc="页面扩展相关字段详细设置">
+			<column name="mainid" foreigntable="mode_pagerelatefield" datawhere="true"></column>
+			<column name="modefieldname" foreigntable="workflow_billfield"></column>
+		</table>
+		<table name="mode_remindjob" desc="提醒基本信息" isapp="true" ismode="true">
+			<column name="formid" foreigntable="workflow_bill"></column>
+			<column name="modeid" foreigntable="modeinfo" modewhere="true"></column>
+			<column name="appid" foreigntable="modetreefield" appwhere="true"></column>
+			<!-- <column name="creator" foreigntable="hrmresource"></column> -->
+			<column name="reminddatefield" foreigntable="workflow_billfield"></column>
+			<column name="remindtimefield" foreigntable="workflow_billfield"></column>
+			<column name="incrementfield" foreigntable="workflow_billfield"></column>
+			<column name="senderfield" foreigntable="workflow_billfield"></column>
+			<column name="receiverfield" foreigntable="workflow_billfield"></column>
+		</table>
+		<table name="mode_reminddata" desc="提醒数据信息表">
+			<column name="modeid" foreigntable="modeinfo"></column>
+			<column name="remindjobid" foreigntable="mode_remindjob" datawhere="true"></column>
+		</table>
+		<table name="mode_reminddata_log" desc="提醒日志表" ignore="true">
+			<column name="remindjobid" foreigntable="mode_remindjob" datawhere="true"></column>
+		</table>
+		<table name="mode_report" desc="报表基本信息" ismode="true" isapp="true">
+			<column name="formid" foreigntable="workflow_bill"></column>
+			<column name="modeid" foreigntable="modeinfo" modewhere="true"></column>
+			<column name="appid" foreigntable="modetreefield" appwhere="true"></column>
+		</table>
+		<table name="mode_reportdspField" desc="报表字段信息表">
+			<column name="reportid" foreigntable="mode_report" datawhere="true"></column>
+			<column name="fieldid" foreigntable="workflow_billfield"></column>
+		</table>
+		<table name="mode_reportshareinfo" desc="报表权限信息表" >
+			<column name="reportid" foreigntable="mode_report" datawhere="true"></column>
+		</table>
+		<table name="mode_templateinfo" desc="查询模板信息表">
+			<column name="customid" foreigntable="mode_customsearch" datawhere="true"></column>
+			<!-- <column name="createrid" foreigntable="hrmresource"></column> -->
+		</table>
+		<table name="mode_searchpageshareinfo" desc="查询列表权限信息表" >
+			<column name="pageid" foreigntable="mode_customsearch" datawhere="true"></column>
+		</table>
+		<table name="mode_templatedspfield" desc="查询模板明细表">
+			<column name="templateid" foreigntable="mode_templateinfo" datawhere="true"></column>
+		</table>
+		<table name="mode_toolbar_search" desc="工具栏查询信息表">
+			<column name="mainid" foreigntable="mode_customsearch" datawhere="true"></column>
+			<column name="searchField" foreigntable="workflow_billfield"></column>
+			<column name="imageid" isfile="true"></column>
+		</table>
+		<table name="mode_triggerworkflowset" desc="数据审批基本信息" ismode="true">
+			<column name="modeid" foreigntable="modeinfo" modewhere="true"></column>
+			<!-- <column name="workflowid" foreigntable="workflow_base"></column> -->
+			<!-- <column name="wfcreater" foreigntable="hrmresource"></column> -->
+			<column name="wfcreaterfieldid" foreigntable="workflow_billfield"></column>
+		</table>
+		<table name="mode_triggerworkflowsetdetail" desc="数据审批详细信息">
+			<column name="mainid" foreigntable="mode_triggerworkflowset" datawhere="true"></column>
+			<column name="modefieldid" foreigntable="workflow_billfield"></column>
+			<column name="wffieldid" foreigntable="workflow_billfield"></column>
+		</table>
+		<table name="mode_workflowtomodeset" desc="流程转数据基本信息" ismode="true">
+			<column name="modeid" foreigntable="modeinfo" modewhere="true"></column>
+			<!-- <column name="workflowid" foreigntable="workflow_base"></column> -->
+			<!-- <column name="modecreater" foreigntable="hrmresource"></column> -->
+			<column name="modecreaterfieldid" foreigntable="workflow_billfield"></column>
+			<!-- <column name="triggerNodeId" foreigntable="workflow_nodebase"></column> -->
+			<!-- <column name="actionid" foreigntable="workflowactionset"></column> -->
+		</table>
+		<table name="mode_workflowtomodesetdetail" desc="流程转数据详细表">
+			<column name="mainid" foreigntable="mode_workflowtomodeset" datawhere="true"></column>
+			<column name="modefieldid" foreigntable="workflow_billfield"></column>
+			<column name="wffieldid" foreigntable="workflow_billfield"></column>
+		</table>
+		<table name="mode_workflowtomodesetopt" desc="流程转数据子表操作设置">
+			<column name="mainid" foreigntable="mode_workflowtomodeset" datawhere="true"></column>
+		</table>
+		<table name="modeattrlinkage" desc="属性联动基本信息表" ismode="true" candelete="true">
+			<column name="modeid" foreigntable="modeinfo" modewhere="true"></column>
+			<!-- <column name="selectfieldid" foreigntable="workflow_billfield"></column>
+			<column name="selectfieldvalue" foreigntable=""></column>
+			<column name="changefieldids" foreigntable="workflow_billfield"></column> -->
+			<column name="layoutid" foreigntable="modehtmllayout"></column>
+		</table>
+		<table name="modecode" desc="字段编码基本信息" ismode="true">
+			<column name="modeid" foreigntable="modeinfo" modewhere="true"></column>
+			<column name="codefieldid" foreigntable="workflow_billfield"></column>
+		</table>
+		<table name="modecodedetail" desc="字段编码详细信息">
+			<column name="codemainid" foreigntable="modecode" datawhere="true"></column>
+		</table>
+		<table name="modedatainputentry" desc="字段联动设置基本信息" ismode="true" candelete="true">
+			<column name="modeid" foreigntable="modeinfo" modewhere="true"></column>
+			<!-- <column name="triggerfieldname" foreigntable="workflow_billfield"></column> -->
+		</table>
+		<table name="modedatainputmain" desc="字段联动设置主信息" candelete="true">
+			<column name="entryid" foreigntable="modedatainputentry" datawhere="true"></column>
+		</table>
+		<table name="modedatainputtable" desc="字段联动引用数据库表名" candelete="true">
+			<column name="datainputid" foreigntable="modedatainputmain" datawhere="true"></column>
+			<column name="formid" foreigntable="workflow_bill"></column>
+		</table>
+		<table name="modedatainputfield" desc="字段联动字段信息" candelete="true">
+			<column name="datainputid" foreigntable="modedatainputmain" datawhere="true"></column>
+			<column name="tableid" foreigntable="modedatainputtable"></column>
+			<!-- <column name="pagefieldname" foreigntable="workflow_billfield"></column> -->
+		</table>
+		<table name="modefieldattr" desc="布局字段属性表" ismode="true">
+			<column name="modeid" foreigntable="modeinfo" modewhere="true"></column>
+			<column name="formid" foreigntable="workflow_bill"></column>
+			<column name="fieldid" foreigntable="workflow_billfield"></column>
+			<column name="layoutid" foreigntable="modehtmllayout"></column>
+		</table>
+		<table name="modefieldauthorize" desc="数据关联授权基本信息表" ismode="true">
+			<column name="modeid" foreigntable="modeinfo" modewhere="true"></column>
+			<column name="formid" foreigntable="workflow_bill"></column>
+			<column name="fieldid" foreigntable="workflow_billfield"></column>
+			<column name="layoutid" foreigntable="modehtmllayout"></column>
+		</table>
+		<table name="modeformextend" desc="虚拟表单信息表" pk="appid,formid" pkauto="false">
+			<column name="formid" foreigntable="workflow_bill" datawhere="true"></column>
+			<column name="appid" foreigntable="modetreefield"></column>
+		</table>
+		<table name="modeformfield" desc="模块布局字段信息表" ismode="true" pk="modeid,layoutid,fieldid,type" pkauto="false" candelete="true">
+			<column name="modeid" foreigntable="modeinfo" modewhere="true"></column>
+			<column name="fieldid" foreigntable="workflow_billfield"></column>
+			<column name="layoutid" foreigntable="modehtmllayout"></column>
+		</table>
+		<table name="modeformfieldextend" desc="表单字段扩展表" pk="fieldid,formid" pkauto="false">
+			<column name="formid" foreigntable="workflow_bill" datawhere="true"></column>
+			<column name="fieldid" foreigntable="workflow_billfield"></column>
+		</table>
+		<table name="modeformgroup" desc="布局明细组属性表" ismode="true" pk="modeid,formid,layoutid,type,groupid" pkauto="false">
+			<column name="modeid" foreigntable="modeinfo" modewhere="true"></column>
+			<column name="formid" foreigntable="workflow_bill"></column>
+			<column name="layoutid" foreigntable="modehtmllayout"></column>
+		</table>
+		<table name="modeqrcode" desc="二维码配置信息表" ismode="true">
+			<column name="modeid" foreigntable="modeinfo" modewhere="true"></column>
+		</table>
+		<table name="mode_newserialnum" desc="单独流水号信息表">
+			<column name="codemainid" foreigntable="modecode" datawhere="true"></column>
+		</table>
+		<table name="workflow_selectitem" desc="流程选择框选项">
+			<column name="fieldid" foreigntable="workflow_billfield" datawhere="true"></column>
+		</table>
+		<table name="Workflow_billdetailtable" desc="流程明细表">
+			<column name="billid" foreigntable="workflow_bill" datawhere="true"></column>
+			<column name="tablename" istablename="true"></column>
+		</table>
+		<table name="mode_excelfielddetail" desc="批量导入条件设置明细表">
+			<column name="mainid" foreigntable="mode_excelfield" datawhere="true"></column>
+			<column name="selectids" foreigntable="workflow_billfield"></column>
+			<column name="fieldid" containtable="workflow_billfield"></column>
+		</table>
+		<table name="mode_selectitempagedetail" desc="公共选择项明细表">
+			<column name="mainid" foreigntable="mode_selectitempage" datawhere="true"></column>
+			<!-- <column name="pid" foreigntable="mode_selectitempagedetail"></column> -->
+		</table>
+		<table name="formmodelog" desc="后台操作日志表" ignore="true">
+		</table>
+		<table name="modelogfielddetail" desc="日志字段明细表" ignore="true" ismode="true">
+			<column name="viewlogid" foreigntable="formmodelog"></column>
+			<column name="fieldid" foreigntable="workflow_billfield"></column>
+			<column name="modeid" foreigntable="modeinfo" modewhere="true"></column>
+		</table>
+		<table name="mode_fieldtype" desc="字段类型信息表" ignore="true">
+			<column name="namelabel" foreigntable="htmllabelinfo"></column>
+		</table>
+		<table name="mode_pageexpandtemplate" desc="模块页面扩展初始化数据" ignore="true">
+		</table>
+		<table name="mode_sapactionset" desc="无" ignore="true">
+		</table>
+		<table name="mode_sapactionsetdetail" desc="无" ignore="true">
+		</table>
+		<table name="mode_wsactionset" desc="无" ignore="true">
+		</table>
+	</tables>
+</module>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> ZTREE DEMO - Other Mouse Event</TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../../css/demo.css" type="text/css">
+	<link rel="stylesheet" href="../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="../../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ztree.core-3.0.js"></script>
+	<!--  <script type="text/javascript" src="../../js/jquery.ztree.excheck-3.0.js"></script>
+	  <script type="text/javascript" src="../../js/jquery.ztree.exedit-3.0.js"></script>-->
+	<SCRIPT LANGUAGE="JavaScript">
+		<!--
+		var setting = {
+			data: {
+				key: {
+					title:"t"
+				},
+				simpleData: {
+					enable: true
+				}
+			},
+			callback: {
+				beforeMouseDown: beforeMouseDown,
+				beforeMouseUp: beforeMouseUp,
+				beforeRightClick: beforeRightClick,
+				onMouseDown: onMouseDown,
+				onMouseUp: onMouseUp,
+				onRightClick: onRightClick
+			}
+		};
+
+		var zNodes =[
+			{ id:1, pId:0, name:"涓嶈兘 鍙抽敭 0", t:"璇曡瘯鍙抽敭锛屾病鏈?onRightClick 鍚э紵", open:true, right:false},
+			{ id:11, pId:1, name:"涓嶈兘 鍙抽敭 1", t:"璇曡瘯鍙抽敭锛屾病鏈?onRightClick 鍚э紵", right:false},
+			{ id:12, pId:1, name:"涓嶈兘 鍙抽敭 2", t:"璇曡瘯鍙抽敭锛屾病鏈?onRightClick 鍚э紵", right:false},
+			{ id:13, pId:1, name:"涓嶈兘 鍙抽敭 3", t:"璇曡瘯鍙抽敭锛屾病鏈?onRightClick 鍚э紵", right:false},
+			{ id:2, pId:0, name:"涓嶈兘 Down 0", t:"璇曡瘯 MouseDown 锛屾病鏈?onMouseDown 鍚э紵", open:true, down:false},
+			{ id:21, pId:2, name:"涓嶈兘 Down 1", t:"璇曡瘯 MouseDown 锛屾病鏈?onMouseDown 鍚э紵", down:false},
+			{ id:22, pId:2, name:"涓嶈兘 Down 2", t:"璇曡瘯 MouseDown 锛屾病鏈?onMouseDown 鍚э紵", down:false},
+			{ id:23, pId:2, name:"涓嶈兘 Down 3", t:"璇曡瘯 MouseDown 锛屾病鏈?onMouseDown 鍚э紵", down:false},
+			{ id:3, pId:0, name:"涓嶈兘 Up 0", t:"璇曡瘯 MouseUp 锛屾病鏈?onMouseUp 鍚э紵", open:true, up:false},
+			{ id:31, pId:3, name:"涓嶈兘 Up 1", t:"璇曡瘯 MouseUp 锛屾病鏈?onMouseUp 鍚э紵", up:false},
+			{ id:32, pId:3, name:"涓嶈兘 Up 2", t:"璇曡瘯 MouseUp 锛屾病鏈?onMouseUp 鍚э紵", up:false},
+			{ id:33, pId:3, name:"涓嶈兘 Up 3", t:"璇曡瘯 MouseUp 锛屾病鏈?onMouseUp 鍚э紵", up:false}
+		];
+
+		var log, className = {down:"dark", up:"dark", right:"dark"};
+		function beforeMouseDown(treeId, treeNode) {
+			className.down = (className.down === "dark" ? "":"dark");
+			showLog("[ "+getTime()+" beforeMouseDown ]&nbsp;&nbsp;" + (treeNode?treeNode.name:"root"), "down" );
+			return (!treeNode || treeNode.down != false);
+		}
+		function onMouseDown(event, treeId, treeNode) {
+			showLog("[ "+getTime()+" onMouseDown ]&nbsp;&nbsp;" + (treeNode?treeNode.name:"root"), "down" );
+		}
+		function beforeMouseUp(treeId, treeNode) {
+			className.up = (className.up === "dark" ? "":"dark");
+			showLog("[ "+getTime()+" beforeMouseUp ]&nbsp;&nbsp;" + (treeNode?treeNode.name:"root"), "up" );
+			return (!treeNode || treeNode.up != false);
+		}
+		function onMouseUp(event, treeId, treeNode) {
+			showLog("[ "+getTime()+" onMouseUp ]&nbsp;&nbsp;" + (treeNode?treeNode.name:"root"), "up" );
+		}
+		function beforeRightClick(treeId, treeNode) {
+			className.right = (className.right === "dark" ? "":"dark");
+			showLog("[ "+getTime()+" beforeRightClick ]&nbsp;&nbsp;" + (treeNode?treeNode.name:"root"), "right" );
+			return (!treeNode || treeNode.right != false);
+		}
+		function onRightClick(event, treeId, treeNode) {
+			showLog("[ "+getTime()+" onRightClick ]&nbsp;&nbsp;" + (treeNode?treeNode.name:"root"), "right" );
+		}
+		function showLog(str, logType) {
+			log = $("#log" + "_" + logType);
+			log.append("<li class='"+className[logType]+"'>"+str+"</li>");
+			if(log.children("li").length > 2) {
+				log.get(0).removeChild(log.children("li")[0]);
+			}
+		}
+		function getTime() {
+			var now= new Date(),
+			h=now.getHours(),
+			m=now.getMinutes(),
+			s=now.getSeconds(),
+			ms=now.getMilliseconds();
+			return (h+":"+m+":"+s+ " " +ms);
+		}
+
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+		});
+		//-->
+	</SCRIPT>
+</HEAD>
+
+<BODY>
+<h1>鍏朵粬榧犳爣浜嬩欢鐩戝惉</h1>
+<h6>[ 鏂囦欢璺緞锛歞emo/core/otherMouse.html ]</h6>
+<div class="content_wrap">
+	<div class="zTreeDemoBackground left">
+		<ul id="treeDemo" class="ztree"></ul>
+	</div>
+	<div class="right">
+		<ul class="info">
+			<li class="title"><h2>1銆乵ousedown / mouseup / rightClick 浜嬩欢鍥炶皟鍑芥暟鎺у埗</h2>
+				<ul class="list">
+				<li>zTree 鎻愪緵 杩欏嚑绉嶉紶鏍囦簨浠跺搷搴旓紝涓昏鏄负浜嗕究浜庣敤鎴烽拡瀵逛竴浜涚壒娈婇渶姹傝繘琛屾墿灞曞紑鍙戯紝涓嶄細瀵?zTree 閫犳垚浠讳綍褰卞搷锛岃繖閲岀畝鍗曟紨绀哄浣曠洃鎺ф浜嬩欢</li>
+				<li><p><span class="highlight_red">璇峰皾璇曢紶鏍囧湪 zTree 涓婅儭涔辩偣鍑伙紙宸﹂敭銆佸彸閿級鍚э紝椤轰究鐪嬬湅 log</span><br/>
+					mousedown event log:<br/>
+					<ul id="log_down" class="log small"></ul>
+					mouseup event log:<br/>
+					<ul id="log_up" class="log small"></ul>
+					rightClick event log:<br/>
+					<ul id="log_right" class="log small"></ul></p>
+				</li>
+				</ul>
+			</li>
+			<li class="title"><h2>2銆乻etting 閰嶇疆淇℃伅璇存槑</h2>
+				<ul class="list">
+				<li class="highlight_red">浜嬩欢鍥炶皟鍑芥暟鐨勪娇鐢紝璇︾粏璇峰弬瑙?API 鏂囨。涓?setting.callback 鐨勭浉鍏冲唴瀹?/li>
+				</ul>
+			</li>
+			<li class="title"><h2>3銆乼reeNode 鑺傜偣鏁版嵁璇存槑</h2>
+				<ul class="list">
+				<li>瀵?鑺傜偣鏁版嵁 娌℃湁鐗规畩瑕佹眰锛岀敤鎴峰彲浠ユ牴鎹嚜宸辩殑闇€姹傛坊鍔犺嚜瀹氫箟灞炴€?/li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+</BODY>
+</HTML>

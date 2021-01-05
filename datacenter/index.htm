@@ -1,0 +1,23 @@
+<script language="javascript1.1">
+
+function window.onload()
+{
+  var redirectUrl = "/datacenter/maintenance/user/Login.jsp" ;
+  var width = screen.width ;
+  var height = screen.height ;
+  if (height == 768 ) height -= 75 ;
+  if (height == 600 ) height -= 60 ;
+  var szFeatures = "top=0," ; 
+  szFeatures +="left=0," ;
+  szFeatures +="width="+width+"," ;
+  szFeatures +="height="+height+"," ;
+  szFeatures +="directories=no," ;
+  szFeatures +="status=yes," ;
+  szFeatures +="menubar=no," ;
+  szFeatures +="scrollbars=no," ;
+  szFeatures +="resizable=yes" ; //channelmode
+  window.open(redirectUrl,"ecologydatacenter",szFeatures) ;
+}
+
+</script>	
+

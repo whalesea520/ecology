@@ -1,0 +1,38 @@
+.editBox,#workPlanViewSplash{
+	/*position:absolute;top:0;*/
+	height:100%;width:100%;background:#fff;overflow-y:scroll;overflow-x:hidden;
+}
+.colorBox{
+	
+}
+
+.colorBox .colorBoxItem{
+	float:left;
+	width:18px;
+	height:18px;
+	border:1px solid #ddd;
+	margin-right:4px;
+	cursor:pointer;
+	padding:1px;
+	background:#fff;
+}
+.colorBlock{
+	height:100%;
+	width:100%;
+	
+}
+.color0{
+	background:red;
+}
+.color1{
+	background:silver;
+}
+.color2{
+	background:orange;
+}
+.calLine{
+	height:30px;
+}
+#currentUserSpan{
+	vertical-align:top;
+}

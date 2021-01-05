@@ -1,0 +1,2 @@
+create PROCEDURE workflow_NodeLink_Select_ND @workflowid int , @nodeid	int, @isreject	char(1),@requestid int, @flag integer output , @msg varchar(80) output AS if @isreject<>'1'  set @isreject='' select * from workflow_nodelink where workflowid=@workflowid and nodeid=@nodeid and isreject=@isreject and EXISTS (select 1 from workflow_nodebase b where workflow_nodelink.destnodeid=b.id and ((b.requestid=@requestid and b.IsFreeNode='1') or (b.IsFreeNode is null or b.IsFreeNode!='1'))) order by nodepasstime ,id
+GO

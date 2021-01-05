@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <name>app0000001</name>
+    <desc>app0000001</desc>
+    <appImg></appImg>
+    <code></code>
+    <version>v0.0.1</version>
+    <pages>
+        <page>
+            <key>1</key>
+            <name>app0000001</name>
+            <url></url>
+        </page>
+    </pages>
+</root>

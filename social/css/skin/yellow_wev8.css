@@ -1,0 +1,61 @@
+.imMainbox .imRightdiv,
+.imMainbox .imDiscussSetting .dsTitle,
+.opItem .savebtn,
+.titlebar .btnGroup .sendBtn:hover{
+	background-color: #e6a872 !important;
+}
+
+.imMainbox .imSearchdiv{
+	background: #d79a61 !important;
+	border-bottom: 1px solid #d79a61 !important;
+}
+
+.imRightdiv .adddiscussDiv{
+	background: #d79a61 url('/social/images/im_add_group_wev8.png') no-repeat 10px center !important;
+}
+.imRightdiv .adddiscussDiv:hover{
+    background: #DE832D url('/social/images/im_add_group_wev8.png') no-repeat 10px center !important;
+}
+
+#recentListdiv,#searchResultListDiv,.imMainbox .imLeftdiv,
+.imToptab,.imSearchInputdiv,.conTabs,.conTabs,.imMainbox .imDiscussSetting .dsBody,
+#contactListdiv,#discussListdiv,.arrow-up,#imDefaultdiv{
+	background-color:#fffef4 !important;
+}
+
+.chatIMTabs .chatIMTabActiveItem {
+	background-color: #f3ddc3 !important;
+}
+
+.leftMenudiv .activeChatItem{
+	background-color: #e7ecee !important;
+}
+
+.chatdiv .chatbottom .chatSend:hover,
+.imDiscussSetting .dsBody .dsBottom .dsDelToQuit:hover{
+	background:#DE832D !important;
+}
+.chatdiv .chatbottom .chatSendType:hover{
+	background:#DE832D !important;
+	background-image : url('/social/images/arrow_up_wev8.png')!important;
+	background-repeat : no-repeat!important;
+	background-position :center !important
+}
+.pcontop .pcontopItme:hover,.chatdiv .chatbottom .sendtypeItme:hover,.chatdiv .chatbottom .screenshotItme:hover {
+    background-color: #DE832D !important;
+}
+.headtoolbar .toolbar-right .nav-group-box{
+	background-color:#e6a872 !important;
+	border: 1px solid #d89862 !important;
+}
+
+.pc-imOnTopBtn:hover,.pc-imMinBtn:hover,.pc-imMaxBtn:hover,.pc-imMaxBtn-re:hover,
+.btn-radius-small,.chatdiv .chatbottom .chatSend,.chatdiv .chatbottom .chatSendType,
+.imRightdiv .rightNavbox:hover,.imMainbox .imInputdiv,
+#sysMenuRoot li:hover,.imDiscussSetting .dsBody .dsBottom .dsDelToQuit{
+    background-color:#d79a61 !important;
+}
+.chatdiv .chatbottom .chatSend:active,.chatdiv .chatbottom .chatSendType:active,.imRightdiv .adddiscussDiv:active,.imRightdiv .rightNavbox:active,
+.opItem .savebtn:active,.imDiscussSetting .dsBody .dsBottom .dsDelToQuit:active,.pc-imOnTopBtn:active,.pc-imMinBtn:active,.pc-imMaxBtn:active,.pc-imMaxBtn-re:active {
+    background-color: #be8555 !important;
+}

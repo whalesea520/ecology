@@ -1,0 +1,412 @@
+#divTitle{
+	background-image:url('/cowork/images/topToolBar_wev8.jpg');
+	background-repeat:repeat-x;
+	border:1px solid #B6B6B6;
+	width: 100%;
+	height:32px;
+
+}
+#title{
+	color: #606060;
+	font-weight: bolder;
+	font-size: 12px;
+	height: 100%;
+	padding:10 50 0 10;
+	float:left;
+}
+#divTab{
+	margin-top:3;
+	float:left;
+}
+
+#divTab .tab{
+	height: 29px;	
+	float:left;
+	margin-bottom: -1px;
+}
+
+#divTab .lefttab{
+	width:4px;
+	background-image: url("/cowork/images/tabLeft_wev8.jpg");
+}
+
+#divTab .righttab{
+	width:4px;
+	background-image: url("/cowork/images/tabRight_wev8.jpg");
+}
+
+#divTab .item{
+	font-weight:bolder;
+	color:#333333;
+	text-align:center;
+	padding:0 10 0 10;
+	background-image: url("/cowork/images/itemBg_wev8.jpg");
+	background-repeat: repeat-x;
+	position:relative;
+	cursor: pointer;
+}
+#divTab .itemSelected{
+	background-image: url("/cowork/images/itemSelected_wev8.jpg");
+	
+}
+
+#divTab .item img{
+	margin-top:-1;
+	margin-right: 2;
+}
+#divTab .item div{
+	padding-top:9px;
+}
+#divTab .separator{
+	width:4px;
+	background-image: url("/cowork/images/tabSeparator_wev8.jpg");
+}
+
+#divTab .selected{
+	background-image: url("/cowork/images/tabSeparator_wev8.jpg");
+}
+#divTitle .system{
+	padding-top:8px;
+	padding-right:5px;
+	float:right;
+}
+
+#divContent{
+	height: 100%;
+	width: 100%;
+}
+
+#divSearch{
+	width:100%;
+	background-image:url("/cowork/images/divSearchBg_wev8.jpg");
+	background-repeat:repeat-x;
+	height:44px;
+	float:left;
+	margin-right:10px;
+
+}
+
+#divSearchKeyword{
+	background-image: url("/cowork/images/searchInput_wev8.jpg");
+	background-repeat:no-repeat;
+	width:150px;
+	margin-top:5px;
+	height:25px;
+	margin-left: 10px;
+	padding-left: 20px;
+	padding-top:3px;
+	float: left;
+}
+
+.button{
+	height:23px;
+}
+
+.doSearch{
+	margin-top:4px;
+	margin-left:5px;
+	float:left;
+}
+
+
+
+
+#listTitle{
+	height: 30px;
+	background-image: url("/cowork/images/listTitleBg_wev8.jpg");
+	background-repeat: repeat-x;
+	width: 100%;
+}
+#divListContent{
+	overflow-y:auto; 
+	background-color: #ededed;
+	width: 300px;
+}
+
+#divListContent #list tr{
+	height:50px;
+	background-image: url("/cowork/images/trBg_wev8.jpg");
+}
+
+#divListContent #list .selected{
+	height:50px;
+	background-image: url("/cowork/images/trSelectedBg_wev8.jpg");
+}
+
+#divListContent #list .title{
+	font-size: 12;
+	color: #003333;
+	margin:0 10;
+	cursor: pointer;
+
+}
+#divListContent #list{
+	table-layout: fixed;
+}
+
+
+#divListContent #list .normal{
+	background-image: url("/cowork/images/notimportent_wev8.gif");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#divListContent #list .important{
+	background-image: url("/cowork/images/importent_wev8.gif");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#divListContent #list .operate{
+	cursor: pointer;
+}
+#divListContent #list .lable{
+	font-size: 12;
+	color: #666666;
+	margin:5 0 0 10;
+	
+}
+
+#divListContent #list img{
+	margin-right:3px;
+	
+}
+
+.checkBtn{
+	width:50px;
+	height: 23px;
+	padding:0px;
+	margin-top:4px;
+	float:left;
+}
+.operateBtn{
+	width:60px;
+	height: 23px;
+	float:right;
+	margin-top:4px;
+	margin-right:0px;
+}
+
+.jspContainer{
+	background-color: #ededed;
+}
+.jspTrack {
+	width:20px;
+	padding-left:1px;
+	background: url(/cowork/images/scroll-track_wev8.gif) repeat-y;
+}
+.jspDrag {
+	background: url(/cowork/images/scroll-drag-middle_wev8.gif) repeat-y;
+	position: relative;
+	
+}
+.jspDragTop {
+	background: url(/cowork/images/scroll-drag-top_wev8.gif) no-repeat;
+	height: 6px;
+	
+}
+.jspDragBottom {
+	background: url(/cowork/images/scoll-drag-bottom_wev8.gif) no-repeat;
+	background-position : center bottom;
+	height: 6px;	
+}
+a.jspArrowUp {
+	width:20px;
+	height: 20px;
+	background: url(/cowork/images/icon-scroll-top_wev8.gif) no-repeat;
+}
+
+a.jspArrowDown {
+	width:20px;
+	height: 20px;
+	background: url(/cowork/images/icon-scroll-bottom_wev8.gif) no-repeat;
+}
+
+
+
+
+.dropDown{
+	left:10px;
+	top:10px;
+	width:150px;
+	color: #333333;
+	border: 1px solid #848484;
+	background-color: #F7F7F7;
+	padding-left:2px;
+	padding-right:2px;
+	position:absolute;
+	display:none;
+	z-index: 2;
+}
+
+.dropDown .row{
+	width:100%;
+	height:15px;
+	padding-top:5px;
+	cursor: default;
+}
+.dropDown .rowOver{
+	width:100%;
+	height:15px;
+	float: left;
+	padding-top:5px;
+	background-color: #b4c4d1;
+	cursor: default;
+}
+
+.dropDown .check{
+	
+	margin-left: 5px;
+	width: 12px;
+	height:10px;
+	float: left;
+}
+.dropDown .remove{
+	background-image:url("/cowork/images/labelStatus_wev8.png");
+	background-position: -48px 50%;
+	background-repeat:no-repeat;
+}
+
+.dropDown .edit{
+	background-image:url("/cowork/images/labelStatus_wev8.png");
+	background-position: -72px 50%;
+	background-repeat:no-repeat;
+}
+
+.dropDown .add{
+	background-image:url("/cowork/images/labelStatus_wev8.png");
+	background-position: -60px 50%;
+	background-repeat:no-repeat;
+}
+.dropDown .check input{
+	height:14px;
+	width: 14px;
+	border: 0px solid #D2D2D2;
+	background-color: #F7F7F7;
+}
+.dropDown .row .title{
+	width: 120px;
+	float: left;
+	color: #333333;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	overflow: hidden;
+}
+
+.dropDown .rowOver .title{
+	width: 120px;
+	float: left;
+	color: #ffffff;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	overflow: hidden;
+}
+
+
+.dropDown .operate{
+	padding-left:2px;
+	height:15px;
+	float: left;
+	vertical-align:middle;
+	text-align:center;
+}
+
+.dropDown .operateOver{
+	
+	vertical-align:middle;
+	text-align:center;
+	background-color: #b4c4d1;
+	cursor: default;
+}
+.editable{
+	width:100%;
+}
+
+#manageLabelsDiv{
+	display: none;
+}
+
+#manageLabelsDiv .createLabel{
+	height:20px;
+	width:100%;	
+	text-align:left;
+	vertical-align:middle;
+}
+
+#manageLabelsDiv .createLabelOver{
+	height:20px;
+	width:100%;	
+	text-align:left;
+	vertical-align:middle;
+	background-color: #C2D3E1;	
+}
+
+#manageLabelsDiv .editLabel{
+	text-align:left;
+	vertical-align:middle;
+	height:20px;
+	width:100%;
+}
+
+#manageLabelsDiv .editLabelOver{
+	text-align:left;
+	vertical-align:middle;
+	width:100%;
+	height:20px;
+	background-color: #C2D3E1;	
+}
+
+
+
+
+
+	a.btnEcology  {
+		border:medium none;
+		cursor:pointer;
+		display:inline-block;
+		height:23px;
+		line-height:23px;
+		overflow:hidden;
+		text-align:center;
+		color:#5A5A5A;
+		text-decoration:none;
+		font-size:12px;
+	}
+	a.btnEcology .left {
+		background:url("/cowork/images/btn_wev8.png")    no-repeat transparent;
+		background-position:top left;
+		height:23px;
+		padding-left:5px;
+		float:left;
+	}
+
+	a.btnEcology .right {
+		background:url("/cowork/images/btn_wev8.png")    no-repeat transparent;		
+		background-position:top right;			
+		height:23px;
+		width:5px;
+		float:left;
+	}
+
+	a.btnEcology:hover{
+	    color:#5A5A5A;
+		text-decoration:none;
+	}
+
+	a.btnEcology:hover .left {
+		background-position:bottom left;
+		
+		
+	}
+
+	a.btnEcology:hover .right {
+		background-position:bottom right;
+		
+	}
+.loading{
+	position: absolute;
+	margin-top: 80%;
+	margin-left: 50%;
+}
+
+

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	
+	<!--special rule-->
+	<special-non>
+		<urls>
+			
+			
+			<url>
+				<value>/api/integration/datashow/getDataShowOperation</value>
+				<params>
+					<param>
+						<value>searchById1</value>
+						<rules>
+							<rule>##CONST:DML##</rule>
+						</rules>
+					</param>
+					<param>
+						<value>sqltext1</value>
+						<rules>
+							<rule>##CONST:DML##</rule>
+						</rules>
+					</param>
+				</params>
+			</url>
+
+			<url>
+				<value>/workflow/search/WFSearchResult.jsp</value>
+				<params>
+					<param>
+						<value>createrid2</value>
+						<rules>
+							<rule>##CONST:MULTINUMBER##</rule>
+						</rules>
+					</param>
+				</params>
+			</url>
+			<url>
+				<value>/CRM/data/MutiCustomerBrowser.jsp</value>
+				<params>
+					<param>
+						<value>country1</value>
+						<rules>
+							<rule>##CONST:MULTINUMBER##</rule>
+						</rules>
+					</param>
+				</params>
+			</url>
+			<url>
+				<value>/cpt/capital/CptCapitalMaintenance.jsp</value>
+				<params>
+					<param>
+						<value>subcompanyid1</value>
+						<rules>
+							<rule>##CONST:MULTINUMBER##</rule>
+						</rules>
+					</param>
+				</params>
+			</url>
+
+			<url>
+				<value>__someCommonParamsRule__</value>
+				<params>
+					<param>
+						<value>subcompanyid1</value>
+						<rules>
+							<rule>##CONST:MULTINUMBER##</rule>
+						</rules>
+					</param>
+				</params>
+			</url>
+			
+				
+		</urls>
+	</special-non>
+
+</root>

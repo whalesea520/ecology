@@ -1,0 +1,24 @@
+CREATE TABLE ofuploadfiles ( 
+    id INT IDENTITY PRIMARY KEY,
+	filedigest VARCHAR(100) NOT NULL,
+	filesize VARCHAR(100) NOT NULL,
+	filepath VARCHAR(1000) NOT NULL
+)
+GO
+
+ALTER TABLE ofMucRoomFiles ADD isnew CHAR(1)
+GO
+
+ALTER TABLE ofMucRoomFiles ADD filename VARCHAR(1000)
+GO
+
+CREATE TABLE ofofflinefiles (
+    id INT IDENTITY PRIMARY KEY,
+	loginid VARCHAR(1000) NOT NULL,
+	sendto VARCHAR(1000) NOT NULL,
+	filename VARCHAR(1000) NOT NULL,
+	fileid INT NOT NULL,
+	isdoc CHAR(1) NOT NULL,
+	doc INT
+)
+GO

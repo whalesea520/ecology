@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> ZTREE DEMO - Async</TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../../css/demo.css" type="text/css">
+	<link rel="stylesheet" href="../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="../../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ztree.core-3.0.js"></script>
+	<!--  <script type="text/javascript" src="../../js/jquery.ztree.excheck-3.0.js"></script>
+	  <script type="text/javascript" src="../../js/jquery.ztree.exedit-3.0.js"></script>-->
+	<SCRIPT LANGUAGE="JavaScript">
+		<!--
+		var setting = {
+			async: {
+				enable: true,
+				url:"../asyncData/getNodes.php",
+				autoParam:["id", "name=n"],
+				otherParam:{"otherParam":"zTreeAsyncTest"},
+				dataFilter: filter
+			},
+			callback: {
+				beforeAsync: beforeAsync
+			}
+		};
+
+		function filter(treeId, parentNode, childNodes) {
+			if (!childNodes) return null;
+			for (var i=0, l=childNodes.length; i<l; i++) {
+				childNodes[i].name = childNodes[i].name.replace(/\.n/g, '.');
+			}
+			return childNodes;
+		}
+		function beforeAsync(treeId, treeNode) {
+			return treeNode ? treeNode.level < 5 : true;
+		}
+
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting);
+		});
+		//-->
+	</SCRIPT>
+</HEAD>
+
+<BODY>
+<h1>寮傛鍔犺浇鑺傜偣鏁版嵁鐨勬爲</h1>
+<h6>[ 鏂囦欢璺緞锛歞emo/core/async.html ]</h6>
+<div class="content_wrap">
+	<div class="zTreeDemoBackground left">
+		<ul id="treeDemo" class="ztree"></ul>
+	</div>
+	<div class="right">
+		<ul class="info">
+			<li class="title"><h2>1銆乻etting 閰嶇疆淇℃伅璇存槑</h2>
+				<ul class="list">
+				<li class="highlight_red">浣跨敤寮傛鍔犺浇锛屽繀椤昏缃?setting.async 涓殑鍚勪釜灞炴€э紝璇︾粏璇峰弬瑙?API 鏂囨。涓殑鐩稿叧鍐呭</li>
+				</ul>
+			</li>
+			<li class="title"><h2>2銆乼reeNode 鑺傜偣鏁版嵁璇存槑</h2>
+				<ul class="list">
+				<li>寮傛鍔犺浇鍔熻兘瀵逛簬 treeNode 鑺傜偣鏁版嵁娌℃湁鐗瑰埆瑕佹眰锛屽鏋滈噰鐢ㄧ畝鍗?JSON 鏁版嵁锛岃璁剧疆 setting.data.simple 涓殑灞炴€?/li>
+				<li>濡傛灉寮傛鍔犺浇姣忔閮藉彧杩斿洖鍗曞眰鐨勮妭鐐规暟鎹紝閭ｄ箞鍙互涓嶈缃畝鍗?JSON 鏁版嵁妯″紡</li>
+				</ul>
+			</li>
+			<li class="title"><h2>3銆佸叾浠栬鏄?/h2>
+				<ul class="list">
+				<li class="highlight_red">瑙傚療 autoParam 鍜?otherParam 璇蜂娇鐢?firebug 鎴?娴忚鍣ㄧ殑寮€鍙戜汉鍛樺伐鍏?/li>
+				<li class="highlight_red">姝?Demo 鍒╃敤 beforeAsync 闄愬埗鍙湁绗?5 绾т互鍐呯殑鐖惰妭鐐瑰睍寮€鏃舵墠杩涜寮傛鍔犺浇</li>
+				<li class="highlight_red">姝?Demo 鍒╃敤 dataFilter 瀵硅妭鐐圭殑 name 杩涜浜嗕慨鏀?/li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+</BODY>
+</HTML>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<noempty-refer-list>
+		<url>/weaver/weaver.common.util.taglib.SplitPageXmlServlet</url>
+		<url>/wui/common/page/changeLanguageInfo.jsp</url>
+	</noempty-refer-list>
+</root>

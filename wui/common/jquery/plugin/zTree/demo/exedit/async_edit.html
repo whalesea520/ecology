@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> ZTREE DEMO - async & edit</TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../../css/demo.css" type="text/css">
+	<link rel="stylesheet" href="../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="../../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ztree.core-3.0.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ztree.excheck-3.0.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ztree.exedit-3.0.js"></script>
+	<SCRIPT LANGUAGE="JavaScript">
+		<!--
+		var setting = {
+			async: {
+				enable: true,
+				url:"../asyncData/getNodes.php",
+				autoParam:["id", "name=n"],
+				otherParam:{"otherParam":"zTreeAsyncTest"},
+				dataFilter: filter
+			},
+			view: {expandSpeed:"",
+				addHoverDom: addHoverDom,
+				removeHoverDom: removeHoverDom,
+				selectedMulti: false
+			},
+			edit: {
+				enable: true
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			callback: {
+				beforeAsync: beforeAsync,
+				beforeRemove: beforeRemove,
+				beforeRename: beforeRename
+			}
+		};
+
+		function filter(treeId, parentNode, childNodes) {
+			if (!childNodes) return null;
+			for (var i=0, l=childNodes.length; i<l; i++) {
+				childNodes[i].name = childNodes[i].name.replace(/\.n/g, '.');
+			}
+			return childNodes;
+		}
+		function beforeAsync(treeId, treeNode) {
+			return treeNode ? treeNode.level < 5 : true;
+		}
+		function beforeRemove(treeId, treeNode) {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+			zTree.selectNode(treeNode);
+			return confirm("纭鍒犻櫎 鑺傜偣 -- " + treeNode.name + " 鍚楋紵");
+		}		
+		function beforeRename(treeId, treeNode, newName) {
+			if (newName.length == 0) {
+				alert("鑺傜偣鍚嶇О涓嶈兘涓虹┖.");
+				return false;
+			}
+			return true;
+		}
+
+		var newCount = 1;
+		function addHoverDom(treeId, treeNode) {
+			var sObj = $("#" + treeNode.tId + "_span");
+			if ($("#addBtn_"+treeNode.id).length>0) return;
+			var addStr = "<button type='button' class='add2' id='addBtn_" + treeNode.id
+				+ "' title='add node' onfocus='this.blur();'></button>";
+			sObj.append(addStr);
+			var btn = $("#addBtn_"+treeNode.id);
+			if (btn) btn.bind("click", function(){
+				var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+				zTree.addNodes(treeNode, {id:(100 + newCount), pId:treeNode.id, name:"new node" + (newCount++)});
+			});
+		};
+		function removeHoverDom(treeId, treeNode) {
+			$("#addBtn_"+treeNode.id).unbind().remove();
+		};
+
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting);
+		});
+		//-->
+	</SCRIPT>
+	<style type="text/css">
+.ztree li button.add {margin-left:2px; margin-right: -1px; background-position:-112px 0; vertical-align:top; *vertical-align:middle}
+.ztree li button.add2 {margin-left:2px; margin-right: -1px; background-position:-112px -16px; vertical-align:top; *vertical-align:middle}
+	</style>
+</HEAD>
+
+<BODY>
+<h1>寮傛鍔犺浇 & 缂栬緫鍔熻兘 鍏卞瓨</h1>
+<h6>[ 鏂囦欢璺緞锛歞emo/exedit/async_edit.html ]</h6>
+<div class="content_wrap">
+	<div class="zTreeDemoBackground left">
+		<ul id="treeDemo" class="ztree"></ul>
+	</div>
+	<div class="right">
+		<ul class="info">
+			<li class="title"><h2>1銆佸紓姝ュ姞杞?& 缂栬緫鍔熻兘 鍏卞瓨璇存槑</h2>
+				<ul class="list">
+				<li>1)銆佹 Demo 鏄熀浜?"楂樼骇 澧?/ 鍒?/ 鏀?鑺傜偣" 淇敼鐨勶紝骞朵笖寮€鏀句簡鎷栨嫿鍔熻兘锛屽彲涓庡叾杩涜瀵规瘮</li>
+				<li>2)銆佸彧闇€瑕佸悓鏃跺紑鍚紪杈戞ā寮忓拰寮傛鍔犺浇妯″紡鍗冲彲瀹炵幇鍏卞瓨</li>
+				<li class="highlight_red">3)銆亃Tree 瀹屽杽浜嗗紓姝ュ姞杞芥ā寮忎笅鐨勭紪杈戝姛鑳斤紝瀵逛簬鏈姞杞藉瓙鑺傜偣鐨勭埗鑺傜偣锛屽鍔犲瓙鑺傜偣鏃讹紝浼氶鍏堣繘琛屽紓姝ュ姞杞姐€?/li>
+				</ul>
+			</li>
+			<li class="title"><h2>2銆乻etting 閰嶇疆淇℃伅璇存槑</h2>
+				<ul class="list">
+				<li class="highlight_red">1)銆佷娇鐢?缂栬緫鍔熻兘锛岃鍙傝€?"" Demo 涓叧浜?setting 鐨勯厤缃姹?/li>
+				<li class="highlight_red">2)銆佷娇鐢?寮傛鍔犺浇鍔熻兘锛岃鍙傝€?"" Demo 涓叧浜?setting 鐨勯厤缃姹?/li>
+				</ul>
+			</li>
+			<li class="title"><h2>3銆乼reeNode 鑺傜偣鏁版嵁璇存槑</h2>
+				<ul class="list">
+				<li>涓ょ妯″紡鍏卞瓨锛屽鏁版嵁鏃犵壒娈婅姹傦紝璇峰垎鍒弬鑰?"寮傛鍔犺浇 鑺傜偣鏁版嵁" & "鎷栨嫿 鑺傜偣 鍩烘湰鎺у埗" & "鍩烘湰 澧?/ 鍒?/ 鏀?鑺傜偣" 涓殑鐩稿叧璇存槑</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+</BODY>
+</HTML>

@@ -1,0 +1,29 @@
+$(document).ready(function(){
+		   $("#local").click(function(){   
+			   iframe1.document.location="/verifyBeforeForward.do?type=local";
+		   });
+	       $("#remote").click(function(){
+			   iframe1.document.location="/verifyBeforeForward.do?type=remote";
+		   });
+	    
+	      $("#recover").click(function(){
+			  iframe1.document.location="/prepareToRecover.do";
+		   });
+		   $("#changepath").click(function(){ 
+			  iframe1.document.location="/jsp/selectdirectory.jsp";
+		   });
+		   $("#updatePW").click(function(){
+			   iframe1.document.location="/jsp/updatepassword.jsp";
+		   });
+		   $("#logout").click(function(){
+		   		if(confirm("是否确认退出?"))
+				{
+			   		document.location="/jsp/LoginOut.jsp";
+			    }
+		   });
+		   
+		   if(operation=="changepassword")
+		   {
+		   	$("#updatePW").click();
+		   }
+	  });

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<rewrite-res-urls>
+		<url>/index.htm</url>
+		<url>/login/</url>
+		<url>/social/VerifyLogin.jsp</url>
+		<url>/wui/</url>
+		<url>/rsa/</url>
+	</rewrite-res-urls>
+</root>

@@ -1,0 +1,46 @@
+.leftmainmenu{
+	height:35px;
+	background-image:url('../images/leftmainbg_wev8.png');
+	line-height:35px;
+	font-family:"微软雅黑","Arial"; 
+	color:#e5f6ff;
+	font-size:10pt;
+	font-weight:bold;
+	padding-left:20px;
+	vertical-align:middle;
+}
+
+.leftmainmenuselected {
+	height:35px;
+	background-image:url('../images/leftmainselectedbgportal_wev8.png');
+	line-height:35px;
+	font-family:"微软雅黑","Arial"; 
+	color:#e5f6ff;
+	font-size:10pt;
+	font-weight:bold;
+	padding-left:20px;
+	vertical-align:middle;
+}
+.leftsubmenu{
+	height:22px;
+	line-height:22px;
+	font-family:"微软雅黑","Arial"; 
+	color:#e5f6ff;
+	font-size:12px;
+	font-weight:bold;
+	padding-left:30px;
+	vertical-align:middle;
+}
+.leftsubmenuselected {
+	height:22px;
+	background-image:url('../images/leftsubselectedbg_wev8.png');
+	line-height:22px;
+	font-family:"微软雅黑","Arial"; 
+	color:#e5f6ff;
+	font-size:12px;
+	font-weight:bold;
+	padding-left:30px;
+	vertical-align:middle;
+}
+a{color:#e5f6ff;text-decoration:none;}
+a:hover{text-decoration:none;}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<id>weather</id>  <!--只能是唯一的英文字母-->
+	<title>天气元素</title>
+	<titleEN>Weather</titleEN>	
+	<desc>天气元素</desc>
+	<icon>resource/image/weather_wev8.gif</icon>
+	<linkMode>-1</linkMode>
+	<loginView>1</loginView>
+	<type>2</type>
+	<perpage>-1</perpage>
+	<private>
+		<jsList> 
+		</jsList>
+	</private>
+	<public>
+		<jsIdList>  
+			<jsId>jquery</jsId>
+		</jsIdList>
+		<cssIdList>
+		</cssIdList>
+	</public>
+	<view>
+		<url>View.jsp</url>
+		<method></method>
+	</view>
+	<setting>
+		<url>Setting.jsp</url>
+		<method></method>
+	</setting>
+	<more>
+		<url></url>
+		<method></method>
+	</more>
+	<operation>Operation.jsp</operation>
+</root> 
